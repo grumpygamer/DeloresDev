@@ -1,0 +1,192 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+=== init ===
+{ YACK(knows_about_invicted) <- NO
+  YACK(heard_about_job) <- NO }
+-> exit
+
+== start ===
+-> bankteller [GLOBAL(hired_lenore_state) == 2]
+
+delores: SAY(12035,"Hi Lenore.")
+
+if [once]
+	delores: SAY(12036,"What are you doing here? Hanging out by a burning trash can like a bum.")
+	lenore: SAY(12037,"Oh enough with the wise-cracks and “I'm so much better than you” remarks.")
+	delores: SAY(12038,"I wasn't mocking you, it was a real...")
+	lenore: SAY(12039,"This is all your doing.")
+
+	1 SAY(12040,"What is all my doing?") -> doing
+	2 SAY(12041,"We're sisters, can't we be friends?") -> doing
+	3 SAY(12042,"I suddenly have a craving for s'mores.") -> doing
+
+	=== doing ===
+	lenore: SAY(12043,"Enough with the wise-cracks!")
+	lenore: SAY(12044,"If you'd left Uncle Chuck in the computer, he would have died and I'd have gotten my inheritance.")
+	lenore: SAY(12045,"But he's still alive and in a sanitarium and legally out-of-reach.")
+endif
+
+=== main ===
+1 SAY(12046,"You got evicted from the Mansion mansion?") -> invicted [once]
+1 SAY(12047,"You have no place to go?") -> no_place [once]
+1 SAY(12048,"You could bunk with me?") -> bunk_with [showonce]
+##2 "I have a photo of a job opening at the bank." -> photo_proof1 [!YACK(heard_about_job) && MainStreet.bankDoorSign.took_photo]
+2 SAY(12049,"I have a photo that shows a job opening at the bank.") -> photo_proof [YACK(heard_about_job) && MainStreet.bankDoorSign.took_photo]
+2 SAY(12050,"I have a photo that shows a job opening at the bank.") -> photo_proof [YACK(heard_about_job) && MainStreet.bankDoorSign.took_photo]
+2 SAY(12051,"There is a job opening at the bank.") -> job_opening [YACK(knows_about_invicted) and !Bank.open and MainStreet.bankDoorSign.seen]
+2 SAY(12052,"Have you tried to get a job?") -> job [YACK(knows_about_invicted)]
+3 SAY(12053,"I thought you loved little Chuckie?") -> chuckie [YACK(knows_about_invicted)] [once]
+7 SAY(12054,"Nice weather.") -> weather [yackChoices() == 0]
+8 SAY(12055,"Seen the new Ransome show yet?") -> ransome [once]
+9 SAY(12056,"See ya around, sis.") -> done
+
+=== weather ===
+lenore: SAY(12057,"Get lost.")
+-> main
+
+=== invicted ===
+{ YACK(knows_about_invicted) = YES }
+lenore: SAY(12058,"Yes!")
+lenore: SAY(12059,"If you hadn't been so preoccupied with making murder simulators, you'd have known.")
+lenore: SAY(12060,"The bank repossessed the Edmund Mansion mansion and evicted me and the little brat and my worthless husband Peter.")
+peter: SAY(12061,"Hey.")
+lenore: SAY(12062,"All I got to take was that crappy chair from the library.")
+-> main
+
+=== no_place ===
+lenore: SAY(12063,"None! I've been blacklisted by all the high society places in the tri-county area.")
+-> main
+
+=== chuckie ===
+lenore: SAY(12064,"I named him after Uncle Chuck and everything...")
+lenore: SAY(12065,"...what good did it do?")
+lenore: SAY(12066,"Nothing! Evicted!")
+-> main
+
+=== bunk_with ===
+lenore: SAY(12067,"Sure! Me and all your nerdy friends can play D&E together.")
+
+parrot OFF
+1 SAY(12068,"We're not nerds!") -> nerds
+2 SAY(12069,"It's called D&D. For Dungeons and Dragons.") -> nerds
+3 SAY(12070,"We're not nerds!") -> nerds
+4 SAY(12071,"I'm thinking you play chaotic evil?") -> nerds
+5 SAY(12072,"We're not nerds!") -> nerds
+
+=== nerds ===
+parrot ON
+delores: SAY(12073,"Love you too sis.")
+-> main
+
+=== job_opening ===
+lenore: SAY(12074,"Bank teller?") [once]
+lenore: SAY(12075,"You've got to be kidding! An Edmund from the prestigious Thimbleweed Edmunds taking a teller job?") [once]
+lenore: SAY(12076,"Even if I was to stoop that low, I don't believe you.")
+{ YACK(heard_about_job) = YES }
+-> main
+
+=== job ===
+lenore: SAY(12077,"Like what!?!")
+
+1 SAY(12078,"Barista. I hear it's going to be big.") -> job2
+2 SAY(12079,"NASA Space Shuttle mission specialist?") -> job2
+3 SAY(12080,"Streetwalker?") -> job2
+4 SAY(12081,"Weekend waitress at the S&D Diner?") -> job2
+5 SAY(12082,"Bank teller?") -> job_opening [MainStreet.bankDoorSign.seen || GLOBAL(hired_lenore_state)]
+6 SAY(12083,"Ransome the Clown show ticket taker.") -> job2
+
+=== job2 ===
+lenore: SAY(12084,"Yeah, that's an interesting...")
+lenore: SAY(12085,"NO IT'S NOT!")
+lenore: SAY(12086,"Edmunds don't work!")
+lenore: SAY(12087,"That's why you're such a disgrace to the family name.")
+-> main
+
+=== show_photo ===
+if [!YACK(heard_about_job)]
+	lenore: SAY(12088,"What?  You're showing me a job opening? You think I need a job! Like a common person!")
+	lenore: SAY(12089,"Well... I never... Yeah... I'll... I... I might stop by...")
+{ 	GLOBAL(hired_lenore_state) = 1
+  	Bank.open = YES
+  	YACK(heard_about_job) = YES }
+	-> exit
+endif
+
+if [once]
+	lenore: SAY(12090,"A job opening? Well... I never... Yeah... I'll... I... I might stop by...")
+else
+	lenore: SAY(12091,"Yeah, you already showed me that! I'll think about it.")
+endif
+{ GLOBAL(hired_lenore_state) = 1
+  Bank.open = YES }
+-> exit
+
+=== photo_proof ===
+if [once]
+	lenore: SAY(12092,"Interesting... Yeah... Maybe I'll... No... I... I might stop by... Might.")
+else
+	lenore: SAY(12093,"Yeah, you already said that! I'll think about it.")
+endif
+{ GLOBAL(hired_lenore_state) = 1
+  Bank.open = YES }
+-> main
+
+=== ransome ===
+lenore: SAY(12094,"Oh my! It is the best!")
+lenore: SAY(12095,"Seeing Ransome is the only joy left in my life.")
+-> main
+
+//
+// If Lenore has been hired at the bank
+//
+
+=== bankteller ===
+delores: SAY(12096,"Hi Lenore.")
+
+if [once]
+	delores: SAY(12097,"Congrats on the new job!")
+	lenore: SAY(12098,"Shhhhh... don't say my name out loud. Someone might hear.")
+	peter: SAY(12099,"I hear.")
+endif
+
+=== bankteller_main ===
+1 SAY(12100,"Can you check my bank balance?") -> balance [once]
+1 SAY(12101,"Can you check my bank balance again?") -> balance
+2 SAY(12102,"Nice weather.") -> weather
+3 SAY(12103,"So...") -> so [Vista.mansion.sploded] [once]
+4 SAY(12104,"How is Chuckie?") -> chuckie [once]
+8 SAY(12105,"Goodbye and thanks.") -> bankteller_done
+
+=== balance ===
+lenore: SAY(12106,"Let me see...")
+{ breakwhilesound(playSound(SOUNDID(keyboard_typing_short))) }
+
+lenore: SAY(12107,"You have...")
+{ _ <- randomfrom(SAY(12108,"NOTHING!"), SAY(12109,"Zip squat!"), SAY(12110,"Zero dollars and zero cents."), SAY(12111,"Nada!"), SAY(12112,"A big zero point zero zero dollars.") ) }
+lenore: $_
+-> bankteller_main
+
+=== weather ===
+lenore: SAY(12113,"Like I care anymore.")
+lenore: SAY(12114,"About anything...") [once]
+-> bankteller_main
+
+=== so ===
+delores: SAY(12115,"Good and bad news about the Mansion mansion... never mind.")
+-> bankteller_main
+
+=== chuckie ===
+lenore: SAY(12116,"Who cares.")
+-> bankteller_main
+
+=== bankteller_done ===
+lenore: SAY(12117,"Get lost.")
+-> done
+
+=== done ===
+-> exit

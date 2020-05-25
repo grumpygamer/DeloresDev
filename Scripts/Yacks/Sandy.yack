@@ -1,0 +1,147 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+=== init ===
+-> exit
+
+== start_first_time ===
+pause 0.2
+{ actorWalkTo(delores, Diner.spotPlayerSandyTalk) }
+sandy: SAY(12242,"Welcome to the S&D Diner, Delores!") [once]
+sandy: SAY(12243,"Long time since I've seen you here.") [once]
+-> skip_opening [once]
+
+=== returning ===
+if [Alleyway.valve.position != "normal"]
+	sandy: SAY(12244,"Can't talk right now, things are crazy in the kitchen!")
+	-> exit
+endif
+
+sandy: SAY(12245,"Welcome back, Delores!")
+
+=== skip_opening ===
+sandy: SAY(12246,"What can I do for ya?")
+
+
+
+=== main ===
+1 SAY(12247,"How has life been treating you, Sandy?") -> life [once]
+2 SAY(12248,"You seen Ransome lately?") -> ransome [once]
+3 SAY(12249,"I'm starving. What are your specials today?") -> eat_start
+9 SAY(12250,"See ya!") -> done
+
+
+// ------------------------------------------------------------------------------------------------
+=== life ===
+sandy: SAY(12251,"Can't complain. Dave and I just came back from our third honeymoon.") [once]
+dave: SAY(12252,"You talking about me?")
+sandy: SAY(12253,"Yes, snuggle cakes, who else would I be talking about?")
+dave: SAY(12254,"Ah, love muffin.")
+-> main
+
+// ------------------------------------------------------------------------------------------------
+=== ransome ===
+sandy: SAY(12255,"Dave and I see his show every Saturday on our date-night.")
+sandy: SAY(12256,"He never fails to make us laugh. Such a good guy.")
+-> main
+
+// ------------------------------------------------------------------------------------------------
+=== eat_start ===
+sandy: SAY(12257,"Everything is on the menu board, what do you want?")
+
+=== eat ===
+1 SAY(12258,"I'll have a Kobe beef hot dog.") -> still_cooking [once]
+1 SAY(12259,"I'll have a Swiss pork hot dog.") -> still_cooking [once]
+1 SAY(12260,"I'll have a herb and chicken hot dog.") -> still_cooking [once]
+1 SAY(12261,"I'll have a French mustard and kale veggie dog.") -> still_cooking [once]
+2 SAY(12262,"I'll have the Guinea chicken sauté with wild mushrooms.") -> mushrooms [once]
+2 SAY(12263,"I'll have the kale salad with chutney sauce.") -> kale [once]
+3 SAY(12264,"I'll have the fried frogs' legs, sauce tartare.") -> frogs [once]
+3 SAY(12265,"I'll have the cherry pie.") -> cherrypie [once]
+4 SAY(12266,"I'll have the glass of water with chipped ice.") -> water [once]
+9 SAY(12267,"I changed my mind. I'm not hungry.") -> main
+
+
+// ------------------------------------------------------------------------------------------------
+=== still_cooking ===
+dave: SAY(12268,"Sorry, I just put those on the grill. They haven't come up to the proper safe eating temperature yet.")
+-> eat
+
+// ------------------------------------------------------------------------------------------------
+=== mushrooms ===
+dave: SAY(12269,"Sorry, the mushrooms I gathered today look to be of the poisonous variety.")
+-> eat
+
+// ------------------------------------------------------------------------------------------------
+=== kale ===
+dave: SAY(12270,"Sorry, forgot to update the board. We're all out of kale...")
+dave: SAY(12271,"...and chutney.")
+-> eat
+
+// ------------------------------------------------------------------------------------------------
+=== frogs ===
+dave: SAY(12272,"No can do, I forgot to go frog hunting this morning.")
+-> eat
+
+// ------------------------------------------------------------------------------------------------
+=== cherrypie ===
+dave: SAY(12273,"Sorry, some tall guy just ate the last slice with a cup of joe.")
+-> eat
+
+// ------------------------------------------------------------------------------------------------
+=== water ===
+sandy: SAY(12274,"Sure thing! Coming right up.")
+{
+	actorWalkTo(sandy, Diner.sandySpot)
+	breakwhilewalking(sandy)
+	objectOffsetTo(sandy, point(0,-10), 0.25 )
+	water_sid <- playSoundAt(SOUNDID(water_running), sandy)
+	breaktime(2.5)
+	stopSound(water_sid)
+	objectOffsetTo(sandy, point(0,0), 0.25 )
+	breaktime(0.3)
+	actorWalkTo(sandy, Diner.sandyCashRegisterSpot)
+	breakwhilewalking(sandy)
+	sayLine(sandy, SAY(12275,"Here you go."))
+	playAnimation(sandy, "reach_med")
+	breaktime(0.2)
+	playAnimation(delores, "reach_med")
+	breaktime(0.5)
+	pickupObject(Inventory.glass)
+	playAnimation(sandy, "stand")
+	breaktime(0.2)
+	playAnimation(delores, "stand")
+}
+sandy: SAY(12276,"Filled with our fancy filtered water. And you can keep the glass as part of our promotion.")
+delores: SAY(12277,"Thanks! Excuse me.")
+{
+	breakwhiletalking(delores)
+	actorTurnTo(delores, DIR_BACK)
+	breaktime(0.1)
+	playAnimation(delores, "drinking_start")
+	breakwhileanimating(delores)
+	delores.sid <- playSoundAt(SOUNDID(drinking), delores)
+	playAnimation(delores, "drinking_loop", LOOPING)
+	breakwhilesound(delores.sid)
+	breaktime(4.7)
+	playAnimation(delores, "drinking_end")
+	breakwhileanimating(delores)
+	actorTurnTo(delores, DIR_RIGHT)
+}
+delores: SAY(12278,"I guess I was really thirsty!")
+
+-> main
+
+
+=== done ===
+sandy: SAY(12279,"Later, Delores.")
+
+-> exit
+
+
+
+

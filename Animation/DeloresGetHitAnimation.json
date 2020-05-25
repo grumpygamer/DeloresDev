@@ -1,0 +1,109 @@
+sheet: "DeloresGetHit"
+animations: [
+    {
+        name: "stand_right"
+ 		frames: [ ]
+    }
+    {
+        name: "stand_left"
+ 		frames: [ ]
+    }
+    {
+        name: "get_hit"
+        offset: "{0,-5}"
+        layers: [
+            {
+                name: "body"
+                frames: [
+                    "hit1"
+					"hit2"
+					"hit3"
+					"hit4"
+					"hit5"
+					"hit6"
+					"hit7"
+					"hit8"
+					"hit9"
+					"hit10"
+					"hit11"
+					"hit12"
+					"hit13"
+					"hit15"
+					"hit16"
+					"hit15"
+					"hit13"
+					"hit12"
+					"hit13"
+					"hit15"
+					"hit16"
+					"hit15"
+					"hit13"
+					"hit12"
+					"hit13"
+					"hit15"
+					"hit16"
+					"hit17"
+					"hit18"
+					"hit19"
+					"hit20"
+					"hit21"
+					"hit22"
+					"hit23"
+					"hit24"
+					"hit25"
+					"hit26"
+					"hit27"
+					"hit28"
+					"hit29"
+					"hit30"
+					"hit31"
+                ]
+				triggers: [
+					"low_boom"
+					NULL
+					NULL
+					NULL
+					NULL
+					NULL
+					NULL
+					NULL
+					NULL
+					NULL
+					NULL
+					NULL
+					NULL
+					NULL
+					NULL
+					NULL
+					NULL
+					NULL
+					NULL
+					NULL
+					NULL
+					NULL
+					NULL
+					NULL
+					NULL
+					NULL
+					NULL
+					NULL
+					NULL
+					"low_boom"
+					NULL
+					NULL
+					NULL
+					NULL
+					NULL
+					NULL
+					NULL
+					NULL
+					NULL
+					NULL
+					NULL
+					"low_boom"
+					NULL
+				]
+            }
+        ]
+    }
+]

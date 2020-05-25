@@ -1,0 +1,1669 @@
+sheet: "PostalWorker"
+animations: [
+    {
+        name: "reach_high_back"
+        layers: [
+            {
+                name: "body"
+                frames: [
+                    "breach_high_body1"
+                ]
+            }
+            {
+                flags: 1
+                name: "head1"
+                frames: [
+                    "bstand_head1"
+                ]
+                offsets: [
+                    "{0,1}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head2"
+                frames: [
+                    "bstand_head1"
+                ]
+                offsets: [
+                    "{0,1}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head3"
+                frames: [
+                    "bstand_head1"
+                ]
+                offsets: [
+                    "{0,1}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head4"
+                frames: [
+                    "bstand_head2"
+                ]
+                offsets: [
+                    "{0,1}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head5"
+                frames: [
+                    "bstand_head2"
+                ]
+                offsets: [
+                    "{0,1}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head6"
+                frames: [
+                    "bstand_head2"
+                ]
+                offsets: [
+                    "{0,1}"
+                ]
+            }
+        ]
+    }
+    {
+        name: "reach_high_front"
+        layers: [
+            {
+                name: "body"
+                frames: [
+                    "freach_high_body1"
+                ]
+            }
+            {
+                flags: 1
+                name: "head1"
+                frames: [
+                    "fstand_head1"
+                ]
+                offsets: [
+                    "{0,1}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head2"
+                frames: [
+                    "fstand_head2"
+                ]
+                offsets: [
+                    "{0,1}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head3"
+                frames: [
+                    "fstand_head3"
+                ]
+                offsets: [
+                    "{0,1}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head4"
+                frames: [
+                    "fstand_head4"
+                ]
+                offsets: [
+                    "{0,1}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head5"
+                frames: [
+                    "fstand_head5"
+                ]
+                offsets: [
+                    "{0,1}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head6"
+                frames: [
+                    "fstand_head6"
+                ]
+                offsets: [
+                    "{0,1}"
+                ]
+            }
+        ]
+    }
+    {
+        name: "reach_high_mail_back"
+        layers: [
+            {
+                fps: 15
+                name: "body"
+                frames: [
+                    "breach_mid_mail_body1"
+                    "breach_mid_high_mail_body1"
+                    "breach_high_mail_body1"
+                    "breach_high_body1"
+                ]
+                triggers: [
+                    NULL
+                    NULL
+                    NULL
+                   "package"
+                 ]
+            }
+            {
+                flags: 1
+                name: "head1"
+                frames: [
+                    "bstand_head1"
+                    "bstand_head1"
+                    "bstand_head1"
+                    "bstand_head1"
+                ]
+                offsets: [
+                    "{0,0}"
+                    "{0,0}"
+                    "{0,1}"
+                    "{0,1}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head2"
+                frames: [
+                    "bstand_head1"
+                    "bstand_head1"
+                    "bstand_head1"
+                    "bstand_head1"
+                ]
+                offsets: [
+                    "{0,0}"
+                    "{0,0}"
+                    "{0,1}"
+                    "{0,1}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head3"
+                frames: [
+                    "bstand_head1"
+                    "bstand_head1"
+                    "bstand_head1"
+                    "bstand_head1"
+                ]
+                offsets: [
+                    "{0,0}"
+                    "{0,0}"
+                    "{0,1}"
+                    "{0,1}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head4"
+                frames: [
+                    "bstand_head2"
+                    "bstand_head2"
+                    "bstand_head2"
+                    "bstand_head2"
+                ]
+                offsets: [
+                    "{0,0}"
+                    "{0,0}"
+                    "{0,1}"
+                    "{0,1}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head5"
+                frames: [
+                    "bstand_head2"
+                    "bstand_head2"
+                    "bstand_head2"
+                    "bstand_head2"
+                ]
+                offsets: [
+                    "{0,0}"
+                    "{0,0}"
+                    "{0,1}"
+                    "{0,1}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head6"
+                frames: [
+                    "bstand_head2"
+                    "bstand_head2"
+                    "bstand_head2"
+                    "bstand_head2"
+                ]
+                offsets: [
+                    "{0,0}"
+                    "{0,0}"
+                    "{0,1}"
+                    "{0,1}"
+                ]
+            }
+        ]
+    }
+    {
+        name: "reach_high_right"
+        layers: [
+            {
+                name: "body"
+                frames: [
+                    "rreach_high_body1"
+                ]
+            }
+            {
+                flags: 1
+                name: "head1"
+                frames: [
+                    "rstand_head1"
+                ]
+                offsets: [
+                    "{0,1}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head2"
+                frames: [
+                    "rstand_head2"
+                ]
+                offsets: [
+                    "{0,1}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head3"
+                frames: [
+                    "rstand_head3"
+                ]
+                offsets: [
+                    "{0,1}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head4"
+                frames: [
+                    "rstand_head4"
+                ]
+                offsets: [
+                    "{0,1}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head5"
+                frames: [
+                    "rstand_head5"
+                ]
+                offsets: [
+                    "{0,1}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head6"
+                frames: [
+                    "rstand_head6"
+                ]
+                offsets: [
+                    "{0,1}"
+                ]
+            }
+        ]
+    }
+    {
+        name: "reach_low_back"
+        layers: [
+            {
+                name: "body"
+                frames: [
+                    "breach_low_body1"
+                ]
+            }
+            {
+                flags: 1
+                name: "head1"
+                frames: [
+                    "bstand_head1"
+                ]
+                offsets: [
+                    "{0,-10}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head2"
+                frames: [
+                    "bstand_head1"
+                ]
+                offsets: [
+                    "{0,-10}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head3"
+                frames: [
+                    "bstand_head1"
+                ]
+                offsets: [
+                    "{0,-10}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head4"
+                frames: [
+                    "bstand_head2"
+                ]
+                offsets: [
+                    "{0,-10}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head5"
+                frames: [
+                    "bstand_head2"
+                ]
+                offsets: [
+                    "{0,-10}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head6"
+                frames: [
+                    "bstand_head2"
+                ]
+                offsets: [
+                    "{0,-10}"
+                ]
+            }
+        ]
+    }
+    {
+        name: "reach_low_front"
+        layers: [
+            {
+                name: "body"
+                frames: [
+                    "freach_low_body1"
+                ]
+            }
+            {
+                flags: 1
+                name: "head1"
+                frames: [
+                    "fstand_head1"
+                ]
+                offsets: [
+                    "{0,-15}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head2"
+                frames: [
+                    "fstand_head2"
+                ]
+                offsets: [
+                    "{0,-15}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head3"
+                frames: [
+                    "fstand_head3"
+                ]
+                offsets: [
+                    "{0,-15}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head4"
+                frames: [
+                    "fstand_head4"
+                ]
+                offsets: [
+                    "{0,-15}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head5"
+                frames: [
+                    "fstand_head5"
+                ]
+                offsets: [
+                    "{0,-15}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head6"
+                frames: [
+                    "fstand_head6"
+                ]
+                offsets: [
+                    "{0,-15}"
+                ]
+            }
+        ]
+    }
+    {
+        name: "reach_low_mail_back"
+        layers: [
+            {
+                name: "body"
+                frames: [
+                    "breach_low_body1"
+                    "breach_low_body1"
+                    "breach_low_body1"
+                ]
+                triggers: [
+                    NULL
+                    NULL
+                    "package"
+                ]
+            }
+            {
+                flags: 1
+                name: "head1"
+                frames: [
+                    "bstand_head1"
+                ]
+                offsets: [
+                    "{0,-10}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head2"
+                frames: [
+                    "bstand_head1"
+                ]
+                offsets: [
+                    "{0,-10}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head3"
+                frames: [
+                    "bstand_head1"
+                ]
+                offsets: [
+                    "{0,-10}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head4"
+                frames: [
+                    "bstand_head2"
+                ]
+                offsets: [
+                    "{0,-10}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head5"
+                frames: [
+                    "bstand_head2"
+                ]
+                offsets: [
+                    "{0,-10}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head6"
+                frames: [
+                    "bstand_head2"
+                ]
+                offsets: [
+                    "{0,-10}"
+                ]
+            }
+        ]
+    }
+    {
+        name: "reach_low_right"
+        layers: [
+            {
+                name: "body"
+                frames: [
+                    "rreach_low_body1"
+                ]
+            }
+            {
+                flags: 1
+                name: "head1"
+                frames: [
+                    "rstand_head1"
+                ]
+                offsets: [
+                    "{2,-16}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head2"
+                frames: [
+                    "rstand_head2"
+                ]
+                offsets: [
+                    "{2,-16}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head3"
+                frames: [
+                    "rstand_head3"
+                ]
+                offsets: [
+                    "{2,-16}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head4"
+                frames: [
+                    "rstand_head4"
+                ]
+                offsets: [
+                    "{2,-16}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head5"
+                frames: [
+                    "rstand_head5"
+                ]
+                offsets: [
+                    "{2,-16}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head6"
+                frames: [
+                    "rstand_head6"
+                ]
+                offsets: [
+                    "{2,-16}"
+                ]
+            }
+        ]
+    }
+    {
+        name: "reach_med_back"
+        layers: [
+            {
+                name: "body"
+                frames: [
+                    "breach_mid_body1"
+                ]
+            }
+            {
+                flags: 1
+                name: "head1"
+                frames: [
+                    "bstand_head1"
+                ]
+            }
+            {
+                flags: 1
+                name: "head2"
+                frames: [
+                    "bstand_head1"
+                ]
+            }
+            {
+                flags: 1
+                name: "head3"
+                frames: [
+                    "bstand_head1"
+                ]
+            }
+            {
+                flags: 1
+                name: "head4"
+                frames: [
+                    "bstand_head2"
+                ]
+            }
+            {
+                flags: 1
+                name: "head5"
+                frames: [
+                    "bstand_head2"
+                ]
+            }
+            {
+                flags: 1
+                name: "head6"
+                frames: [
+                    "bstand_head2"
+                ]
+            }
+        ]
+    }
+    {
+        name: "reach_med_front"
+        layers: [
+            {
+                name: "body"
+                frames: [
+                    "freach_mid_body1"
+                ]
+            }
+            {
+                flags: 1
+                name: "head1"
+                frames: [
+                    "fstand_head1"
+                ]
+            }
+            {
+                flags: 1
+                name: "head2"
+                frames: [
+                    "fstand_head2"
+                ]
+            }
+            {
+                flags: 1
+                name: "head3"
+                frames: [
+                    "fstand_head3"
+                ]
+            }
+            {
+                flags: 1
+                name: "head4"
+                frames: [
+                    "fstand_head4"
+                ]
+            }
+            {
+                flags: 1
+                name: "head5"
+                frames: [
+                    "fstand_head5"
+                ]
+            }
+            {
+                flags: 1
+                name: "head6"
+                frames: [
+                    "fstand_head6"
+                ]
+            }
+        ]
+    }
+    {
+        name: "reach_med_high_mail_back"
+        layers: [
+            {
+                fps: 10
+                name: "body"
+                frames: [
+                    "breach_mid_mail_body1"
+                    "breach_mid_high_mail_body1"
+                    "breach_mid_high_body1"
+                ]
+                triggers: [
+                    NULL
+                    NULL
+                   "package"
+                 ]
+            }
+            {
+                flags: 1
+                name: "head1"
+                frames: [
+                    "bstand_head1"
+                    "bstand_head1"
+                    "bstand_head1"
+                ]
+            }
+            {
+                flags: 1
+                name: "head2"
+                frames: [
+                    "bstand_head1"
+                    "bstand_head1"
+                    "bstand_head1"
+                ]
+            }
+            {
+                flags: 1
+                name: "head3"
+                frames: [
+                    "bstand_head1"
+                    "bstand_head1"
+                    "bstand_head1"
+                ]
+            }
+            {
+                flags: 1
+                name: "head4"
+                frames: [
+                    "bstand_head2"
+                    "bstand_head2"
+                    "bstand_head2"
+                ]
+            }
+            {
+                flags: 1
+                name: "head5"
+                frames: [
+                    "bstand_head2"
+                    "bstand_head2"
+                    "bstand_head2"
+                ]
+            }
+            {
+                flags: 1
+                name: "head6"
+                frames: [
+                    "bstand_head2"
+                    "bstand_head2"
+                    "bstand_head2"
+                ]
+            }
+        ]
+    }
+    {
+        name: "reach_med_mail_back"
+        layers: [
+            {
+                fps: 8
+                name: "body"
+                frames: [
+                    "breach_mid_mail_body1"
+                    "breach_mid_mail_body1"
+                    "breach_mid_body1"
+                ]
+                triggers: [
+                    NULL
+                    NULL
+                   "package"
+                 ]
+            }
+            {
+                flags: 1
+                name: "head1"
+                frames: [
+                    "bstand_head1"
+                ]
+            }
+            {
+                flags: 1
+                name: "head2"
+                frames: [
+                    "bstand_head1"
+                 ]
+            }
+            {
+                flags: 1
+                name: "head3"
+                frames: [
+                    "bstand_head1"
+                ]
+            }
+            {
+                flags: 1
+                name: "head4"
+                frames: [
+                    "bstand_head2"
+                ]
+            }
+            {
+                flags: 1
+                name: "head5"
+                frames: [
+                    "bstand_head2"
+                 ]
+            }
+            {
+                flags: 1
+                name: "head6"
+                frames: [
+                    "bstand_head2"
+                 ]
+            }
+        ]
+    }
+    {
+        name: "reach_med_right"
+        layers: [
+            {
+                name: "body"
+                frames: [
+                    "rreach_mid_body1"
+                ]
+            }
+            {
+                flags: 1
+                name: "head1"
+                frames: [
+                    "rstand_head1"
+                ]
+            }
+            {
+                flags: 1
+                name: "head2"
+                frames: [
+                    "rstand_head2"
+                ]
+            }
+            {
+                flags: 1
+                name: "head3"
+                frames: [
+                    "rstand_head3"
+                ]
+            }
+            {
+                flags: 1
+                name: "head4"
+                frames: [
+                    "rstand_head4"
+                ]
+            }
+            {
+                flags: 1
+                name: "head5"
+                frames: [
+                    "rstand_head5"
+                ]
+            }
+            {
+                flags: 1
+                name: "head6"
+                frames: [
+                    "rstand_head6"
+                ]
+            }
+        ]
+    }
+    {
+        name: "stand_back"
+        layers: [
+            {
+                name: "body"
+                frames: [
+                    "bstand_body1"
+                ]
+            }
+            {
+                flags: 1
+                name: "head1"
+                frames: [
+                    "bstand_head1"
+                ]
+            }
+            {
+                flags: 1
+                name: "head2"
+                frames: [
+                    "bstand_head1"
+                ]
+            }
+            {
+                flags: 1
+                name: "head3"
+                frames: [
+                    "bstand_head1"
+                ]
+            }
+            {
+                flags: 1
+                name: "head4"
+                frames: [
+                    "bstand_head2"
+                ]
+            }
+            {
+                flags: 1
+                name: "head5"
+                frames: [
+                    "bstand_head2"
+                ]
+            }
+            {
+                flags: 1
+                name: "head6"
+                frames: [
+                    "bstand_head2"
+                ]
+            }
+        ]
+    }
+    {
+        name: "stand_front"
+        layers: [
+            {
+                name: "body"
+                frames: [
+                    "fstand_body1"
+                ]
+            }
+            {
+                flags: 1
+                name: "head1"
+                frames: [
+                    "fstand_head1"
+                ]
+            }
+            {
+                flags: 1
+                name: "head2"
+                frames: [
+                    "fstand_head2"
+                ]
+            }
+            {
+                flags: 1
+                name: "head3"
+                frames: [
+                    "fstand_head3"
+                ]
+            }
+            {
+                flags: 1
+                name: "head4"
+                frames: [
+                    "fstand_head4"
+                ]
+            }
+            {
+                flags: 1
+                name: "head5"
+                frames: [
+                    "fstand_head5"
+                ]
+            }
+            {
+                flags: 1
+                name: "head6"
+                frames: [
+                    "fstand_head6"
+                ]
+            }
+        ]
+    }
+    {
+        name: "stand_right"
+        layers: [
+            {
+                name: "body"
+                frames: [
+                    "rstand_body1"
+                ]
+            }
+            {
+                flags: 1
+                name: "head1"
+                frames: [
+                    "rstand_head1"
+                ]
+            }
+            {
+                flags: 1
+                name: "head2"
+                frames: [
+                    "rstand_head2"
+                ]
+            }
+            {
+                flags: 1
+                name: "head3"
+                frames: [
+                    "rstand_head3"
+                ]
+            }
+            {
+                flags: 1
+                name: "head4"
+                frames: [
+                    "rstand_head4"
+                ]
+            }
+            {
+                flags: 1
+                name: "head5"
+                frames: [
+                    "rstand_head5"
+                ]
+            }
+            {
+                flags: 1
+                name: "head6"
+                frames: [
+                    "rstand_head6"
+                ]
+            }
+        ]
+    }
+    {
+        name: "walk_back"
+        layers: [
+            {
+                name: "body"
+                frames: [
+                    "bwalk_body1"
+                    "bwalk_body2"
+                    "bwalk_body3"
+                    "bwalk_body4"
+                    "bwalk_body5"
+                    "bwalk_body6"
+                    "bwalk_body7"
+                    "bwalk_body8"
+                ]
+                triggers: [
+                    NULL
+                    "step"
+                    NULL
+                    NULL
+                    NULL
+                    "step"
+                    NULL
+                    NULL
+                ]
+            }
+            {
+                flags: 1
+                name: "head1"
+                frames: [
+                    "bstand_head1"
+                    "bstand_head1"
+                    "bstand_head1"
+                    "bstand_head1"
+                    "bstand_head1"
+                    "bstand_head1"
+                    "bstand_head1"
+                    "bstand_head1"
+                ]
+                offsets: [
+                    "{0,-1}"
+                    "{0,-2}"
+                    "{0,-3}"
+                    "{0,-2}"
+                    "{0,-1}"
+                    "{0,-2}"
+                    "{0,-3}"
+                    "{0,-2}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head2"
+                frames: [
+                    "bstand_head1"
+                    "bstand_head1"
+                    "bstand_head1"
+                    "bstand_head1"
+                    "bstand_head1"
+                    "bstand_head1"
+                    "bstand_head1"
+                    "bstand_head1"
+                ]
+                offsets: [
+                    "{0,-1}"
+                    "{0,-2}"
+                    "{0,-3}"
+                    "{0,-2}"
+                    "{0,-1}"
+                    "{0,-2}"
+                    "{0,-3}"
+                    "{0,-2}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head3"
+                frames: [
+                    "bstand_head1"
+                    "bstand_head1"
+                    "bstand_head1"
+                    "bstand_head1"
+                    "bstand_head1"
+                    "bstand_head1"
+                    "bstand_head1"
+                    "bstand_head1"
+                ]
+                offsets: [
+                    "{0,-1}"
+                    "{0,-2}"
+                    "{0,-3}"
+                    "{0,-2}"
+                    "{0,-1}"
+                    "{0,-2}"
+                    "{0,-3}"
+                    "{0,-2}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head4"
+                frames: [
+                    "bstand_head2"
+                    "bstand_head2"
+                    "bstand_head2"
+                    "bstand_head2"
+                    "bstand_head2"
+                    "bstand_head2"
+                    "bstand_head2"
+                    "bstand_head2"
+                ]
+                offsets: [
+                    "{0,-1}"
+                    "{0,-2}"
+                    "{0,-3}"
+                    "{0,-2}"
+                    "{0,-1}"
+                    "{0,-2}"
+                    "{0,-3}"
+                    "{0,-2}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head5"
+                frames: [
+                    "bstand_head2"
+                    "bstand_head2"
+                    "bstand_head2"
+                    "bstand_head2"
+                    "bstand_head2"
+                    "bstand_head2"
+                    "bstand_head2"
+                    "bstand_head2"
+                ]
+                offsets: [
+                    "{0,-1}"
+                    "{0,-2}"
+                    "{0,-3}"
+                    "{0,-2}"
+                    "{0,-1}"
+                    "{0,-2}"
+                    "{0,-3}"
+                    "{0,-2}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head6"
+                frames: [
+                    "bstand_head2"
+                    "bstand_head2"
+                    "bstand_head2"
+                    "bstand_head2"
+                    "bstand_head2"
+                    "bstand_head2"
+                    "bstand_head2"
+                    "bstand_head2"
+                ]
+                offsets: [
+                    "{0,-1}"
+                    "{0,-2}"
+                    "{0,-3}"
+                    "{0,-2}"
+                    "{0,-1}"
+                    "{0,-2}"
+                    "{0,-3}"
+                    "{0,-2}"
+                ]
+            }
+        ]
+    }
+    {
+        name: "walk_front"
+        layers: [
+            {
+                name: "body"
+                frames: [
+                    "fwalk_body1"
+                    "fwalk_body2"
+                    "fwalk_body3"
+                    "fwalk_body4"
+                    "fwalk_body5"
+                    "fwalk_body6"
+                    "fwalk_body7"
+                    "fwalk_body8"
+                ]
+                triggers: [
+                    NULL
+                    "step"
+                    NULL
+                    NULL
+                    NULL
+                    "step"
+                    NULL
+                    NULL
+                ]
+            }
+            {
+                flags: 1
+                name: "head1"
+                frames: [
+                    "fstand_head1"
+                    "fstand_head1"
+                    "fstand_head1"
+                    "fstand_head1"
+                    "fstand_head1"
+                    "fstand_head1"
+                    "fstand_head1"
+                    "fstand_head1"
+                ]
+                offsets: [
+                    "{0,0}"
+                    "{0,-1}"
+                    "{0,-2}"
+                    "{0,-1}"
+                    "{0,0}"
+                    "{0,-1}"
+                    "{0,-2}"
+                    "{0,-1}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head2"
+                frames: [
+                    "fstand_head2"
+                    "fstand_head2"
+                    "fstand_head2"
+                    "fstand_head2"
+                    "fstand_head2"
+                    "fstand_head2"
+                    "fstand_head2"
+                    "fstand_head2"
+                ]
+                offsets: [
+                    "{0,0}"
+                    "{0,-1}"
+                    "{0,-2}"
+                    "{0,-1}"
+                    "{0,0}"
+                    "{0,-1}"
+                    "{0,-2}"
+                    "{0,-1}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head3"
+                frames: [
+                    "fstand_head3"
+                    "fstand_head3"
+                    "fstand_head3"
+                    "fstand_head3"
+                    "fstand_head3"
+                    "fstand_head3"
+                    "fstand_head3"
+                    "fstand_head3"
+                ]
+                offsets: [
+                    "{0,0}"
+                    "{0,-1}"
+                    "{0,-2}"
+                    "{0,-1}"
+                    "{0,0}"
+                    "{0,-1}"
+                    "{0,-2}"
+                    "{0,-1}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head4"
+                frames: [
+                    "fstand_head4"
+                    "fstand_head4"
+                    "fstand_head4"
+                    "fstand_head4"
+                    "fstand_head4"
+                    "fstand_head4"
+                    "fstand_head4"
+                    "fstand_head4"
+                ]
+                offsets: [
+                    "{0,0}"
+                    "{0,-1}"
+                    "{0,-2}"
+                    "{0,-1}"
+                    "{0,0}"
+                    "{0,-1}"
+                    "{0,-2}"
+                    "{0,-1}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head5"
+                frames: [
+                    "fstand_head5"
+                    "fstand_head5"
+                    "fstand_head5"
+                    "fstand_head5"
+                    "fstand_head5"
+                    "fstand_head5"
+                    "fstand_head5"
+                    "fstand_head5"
+                ]
+                offsets: [
+                    "{0,0}"
+                    "{0,-1}"
+                    "{0,-2}"
+                    "{0,-1}"
+                    "{0,0}"
+                    "{0,-1}"
+                    "{0,-2}"
+                    "{0,-1}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head6"
+                frames: [
+                    "fstand_head6"
+                    "fstand_head6"
+                    "fstand_head6"
+                    "fstand_head6"
+                    "fstand_head6"
+                    "fstand_head6"
+                    "fstand_head6"
+                    "fstand_head6"
+                ]
+                offsets: [
+                    "{0,0}"
+                    "{0,-1}"
+                    "{0,-2}"
+                    "{0,-1}"
+                    "{0,0}"
+                    "{0,-1}"
+                    "{0,-2}"
+                    "{0,-1}"
+                ]
+            }
+        ]
+    }
+    {
+        name: "walk_right"
+        layers: [
+            {
+                name: "body"
+                frames: [
+                    "rwalk_body1"
+                    "rwalk_body2"
+                    "rwalk_body3"
+                    "rwalk_body4"
+                    "rwalk_body5"
+                    "rwalk_body6"
+                    "rwalk_body7"
+                    "rwalk_body8"
+                ]
+                triggers: [
+                    NULL
+                    NULL
+                    NULL
+                    "step"
+                    NULL
+                    NULL
+                    NULL
+                    "step"
+                ]
+            }
+            {
+                name: "splash"
+                frames: [
+                    "splash2"
+                    "splash3"
+                    "null"
+                    "splash1"
+                    "splash2"
+                    "splash3"
+                    "null"
+                    "splash1"
+                ]
+                offsets: [
+                    "{0,0}"
+                    "{-4,0}"
+                    "{-6,0}"
+                    "{9,0}"
+                    "{5,0}"
+                    "{-4,0}"
+                    "{-9,0}"
+                    "{7,0}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head1"
+                frames: [
+                    "rstand_head1"
+                    "rstand_head1"
+                    "rstand_head1"
+                    "rstand_head1"
+                    "rstand_head1"
+                    "rstand_head1"
+                    "rstand_head1"
+                    "rstand_head1"
+                ]
+                offsets: [
+                    "{2,1}"
+                    "{2,0}"
+                    "{2,-1}"
+                    "{2,0}"
+                    "{2,1}"
+                    "{2,0}"
+                    "{2,-1}"
+                    "{2,0}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head2"
+                frames: [
+                    "rstand_head2"
+                    "rstand_head2"
+                    "rstand_head2"
+                    "rstand_head2"
+                    "rstand_head2"
+                    "rstand_head2"
+                    "rstand_head2"
+                    "rstand_head2"
+                ]
+                offsets: [
+                    "{2,1}"
+                    "{2,0}"
+                    "{2,-1}"
+                    "{2,0}"
+                    "{2,1}"
+                    "{2,0}"
+                    "{2,-1}"
+                    "{2,0}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head3"
+                frames: [
+                    "rstand_head3"
+                    "rstand_head3"
+                    "rstand_head3"
+                    "rstand_head3"
+                    "rstand_head3"
+                    "rstand_head3"
+                    "rstand_head3"
+                    "rstand_head3"
+                ]
+                offsets: [
+                    "{2,1}"
+                    "{2,0}"
+                    "{2,-1}"
+                    "{2,0}"
+                    "{2,1}"
+                    "{2,0}"
+                    "{2,-1}"
+                    "{2,0}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head4"
+                frames: [
+                    "rstand_head4"
+                    "rstand_head4"
+                    "rstand_head4"
+                    "rstand_head4"
+                    "rstand_head4"
+                    "rstand_head4"
+                    "rstand_head4"
+                    "rstand_head4"
+                ]
+                offsets: [
+                    "{2,1}"
+                    "{2,0}"
+                    "{2,-1}"
+                    "{2,0}"
+                    "{2,1}"
+                    "{2,0}"
+                    "{2,-1}"
+                    "{2,0}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head5"
+                frames: [
+                    "rstand_head5"
+                    "rstand_head5"
+                    "rstand_head5"
+                    "rstand_head5"
+                    "rstand_head5"
+                    "rstand_head5"
+                    "rstand_head5"
+                    "rstand_head5"
+                ]
+                offsets: [
+                    "{2,1}"
+                    "{2,0}"
+                    "{2,-1}"
+                    "{2,0}"
+                    "{2,1}"
+                    "{2,0}"
+                    "{2,-1}"
+                    "{2,0}"
+                ]
+            }
+            {
+                flags: 1
+                name: "head6"
+                frames: [
+                    "rstand_head6"
+                    "rstand_head6"
+                    "rstand_head6"
+                    "rstand_head6"
+                    "rstand_head6"
+                    "rstand_head6"
+                    "rstand_head6"
+                    "rstand_head6"
+                ]
+                offsets: [
+                    "{2,1}"
+                    "{2,0}"
+                    "{2,-1}"
+                    "{2,0}"
+                    "{2,1}"
+                    "{2,0}"
+                    "{2,-1}"
+                    "{2,0}"
+                ]
+            }
+        ]
+    }
+    {
+        name: "give_envelope_right"
+        layers: [
+            {
+                flags: 0
+                name: "body"
+                frames: [
+                    "rgive_letter"
+                ]
+            }
+            {
+                flags: 1
+                name: "head1"
+                frames: [
+                    "rstand_head1"
+                ]
+            }
+            {
+                flags: 1
+                name: "head2"
+                frames: [
+                    "rstand_head2"
+                ]
+            }
+            {
+                flags: 1
+                name: "head3"
+                frames: [
+                    "rstand_head3"
+                ]
+            }
+            {
+                flags: 1
+                name: "head4"
+                frames: [
+                    "rstand_head4"
+                ]
+            }
+            {
+                flags: 1
+                name: "head5"
+                frames: [
+                    "rstand_head5"
+                ]
+            }
+            {
+                flags: 1
+                name: "head6"
+                frames: [
+                    "rstand_head6"
+                ]
+            }
+        ]
+    }
+]

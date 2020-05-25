@@ -1,0 +1,42 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+// Define all global variables in here using the GLOBAL() macro
+
+function heardAbout(subject, state=YES, force=NO) {
+	if (state && (force || (subject !in GLOBAL(heard_about)))) {
+		GLOBAL(heard_about_count)++
+//		if (GLOBAL(heard_about_count) >= 2) {
+			overlayFlashColor(0x80FFFFFF, 0.5)
+			playSound(SOUNDID(learn_clue))
+//		}
+	}
+	GLOBAL(heard_about)[subject] <- state
+}
+
+function hasHeardAbout(subject) {
+	return (subject in GLOBAL(heard_about)) ? GLOBAL(heard_about)[subject] : NO
+}
+
+selectedActor <- null
+currentRoom <- null
+verbActor <- null	// Actor who is executing the verb, or null of it's no one.
+
+ROOT(music_tid) <- 0
+
+ROOT(master_room_list) <- []
+
+GLOBAL(heard_about) <- {}
+GLOBAL(heard_about_count) <- 0
+
+GLOBAL(talked_to_lenore) <- NO
+GLOBAL(hired_lenore_state) <- 0 // 1 = thinking about job, 2 = working at bank
+
+GLOBAL(no_idle_animations) <- NO 	// Don't play any idle animations.
+
+GLOBAL(taking_photo) <- NO
+GLOBAL(letter_mailed) <- NO

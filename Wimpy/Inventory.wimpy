@@ -1,0 +1,7 @@
+background: "background"
+name: "Inventory"
+sheet: "Inventory"
+room_scale: 3
+room_bounds: "{{10,10},{300,200}}"
+objects: [
+]

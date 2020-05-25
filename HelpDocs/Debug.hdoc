@@ -1,0 +1,31 @@
+/*{{
+
+@section game_debug
+@title Game Debugger
+
+## Setting up
+
+## Keys
+
+While running the game the follow debug keyboard commands are available:
+	ctrl-tab - Show the debugger console
+	cmd-J - Jump to a room
+	cmd-P - Pickup an object
+	ctrl-J - Set the start-up room and position
+	ctrl-option-J Clear the start-up room
+
+	backtick - Stop execution and break into the debugger
+Jumping to the line of an error is possible by adding the following to the `Prefs.json` file...
+
+(mac)
+	debugEditor: "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl %s:%d"
+(windows)
+	TBD
+The format may change depending on the editor you using.
+
+When the game gets an error:
+	cmd-E - jump to line of error in the editor
+## General key commands:
+	[ - Volume down
+	] - Volume up
+}}*/

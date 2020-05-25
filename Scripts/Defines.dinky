@@ -1,0 +1,311 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+#define DEBUGGING 1
+
+#macro log($_)  printlog(0,$_)
+#macro log1($_) printlog(1,$_)
+#macro log2($_) printlog(2,$_)
+#macro log3($_) printlog(3,$_)
+
+#macro printlogfile($a) printlog(-99, $a)
+
+#macro warning($_) { if (::_s_error_on_warning) { error($_) } else { printlog(-1,$_+" ("+__LINE__+")") } }
+
+#macro dprint($a) print("$a = ", $a,"    ---> ",__LOC__)
+#macro dprintx($a) print(format("$a = 0x%08x",$a),"    ---> ",__LOC__)
+
+#macro GLOBAL($a) ::_g_$a
+#macro SETTING($a) ::_s_$a
+#macro SETTING_FUNC($a) ::_f_$a
+#macro ROOT($a) ::_r_$a
+#macro SOUNDID($a) ::_sid_$a
+#macro YACK($a) ::_y_$a
+
+// For keyboard remapping (WIP)
+//#macro KEY($a) ::_k_$a
+
+#macro DEBUG($a) ::_d_$a
+
+#macro FLIPCOIN($a,$b) (randomodds(0.5)?($a):($b))
+
+#macro DEFAULT_VERB($a) default_verb = "verb_$a"
+#macro VERB($a) verb_$a <- function(noun2=null)
+#macro VERB_OK($a) okverb_$a <- function(noun2=null)
+#macro VERB_PRE($a) preverb_$a <- function(noun2=null)
+#macro DEFINE_ROOM _defineRoom
+#macro DEFINE_ACTOR _defineActor
+#macro DEFINE_OBJECT ::_defineObject
+#macro DEFINE_INVENTORY _defineInventory
+
+#macro IS_BACK_BUTTON($a) (($a) == 27 || ($a) == BUTTON_B || ($a) == BUTTON_BACK || ($a) == KEY_DELETE || ($a) == KEY_BACKSPACE)
+
+#macro ONCE($a) _once(__LOC__, ($a))
+
+#macro UNIQUE_THREAD($a) 		if ("$a" !in roottable()) { ::$a <- 0 }; $a = stopthread($a); $a = threadid()
+#macro LAZY_DEFINE($a,$b) 		if ("$b" !in $a) $a.$b
+#macro LAZY_FUNCTION($a,$b) 	if ("$b" !in $a) $a.$b
+#macro OFFSET($a,$b)			point($a,$b)
+
+#macro is_entity($a) (is_table($a) && ($a)?._id)
+#macro quickDelay($a,$b) startthread(@() { breaktime($a); $b; })
+#macro breakwhile($a) { while($a) { breaktime(0.5) } }
+#macro MOD_NONE($a) (!(($a)&(MOD_SHIFT|MOD_CONTROL|MOD_ALT|MOD_COMMAND)))
+
+#define UI_SHEET 			"GameSheet"
+
+// Wrap spoken lines using the following macro
+//    SAY(11882,"Hi, were did you learn to program?")
+// See TranslationHelpers.dinky for more info.
+
+// Only for spoken text (sayLines)
+#macro SAY($a,$b) "$a:$b"
+
+// For all other text that is just displayed. verbs, cursor sentence, dialog boxes.
+#macro TEXT($a,$b) "$a:$b"
+
+const YES 					= true
+const NO 					= false
+const TRUE 					= true
+const FALSE 				= false
+
+const REACH_TIME 			= 0.25
+const MIN_USE_DIST			= 5
+const MIN_TALK_DIST			= 60
+
+const REACH_NONE			= null
+const REACH_LOW				= 1
+const REACH_MED				= 2
+const REACH_HIGH			= 3
+
+const INSTANT				= 1
+const PUSH 					= 0x00001000
+const POP 					= 0x00002000
+
+const COLOR_NONE 		= 0x00000000
+const COLOR_BLACK 		= 0xFF000000
+const COLOR_WHITE 		= 0xFFFFFFFF
+const COLOR_RED			= 0xFFFF0000
+const COLOR_BROWN		= 0xFF805000
+const COLOR_GREEN		= 0xFF00FF00
+const COLOR_BLUE		= 0xFF0000FF
+const COLOR_YELLOW		= 0xFFFFFF00
+const COLOR_CYAN		= 0xFF00FFFF
+const COLOR_PURPLE		= 0xFFFF00FF
+const COLOR_LIGHTGRAY	= 0xFFB0B0B0
+const COLOR_GRAY		= 0xFF808080
+const COLOR_ORANGE		= 0xFFFF8000
+const COLOR_LIGHTPURPLE	= 0xFFFF80FF
+const COLOR_DARKRED		= 0xFF040000
+const COLOR_DARKGREEN	= 0xFF004000
+const COLOR_LIGHTGREEN	= 0xFF80FF80
+const COLOR_DARKBLUE	= 0xFF000040
+const COLOR_DARKGRAY	= 0xFF404040
+
+const EXIT_BUTTON_COLOR 	= 0xe492ff
+const EXIT_BUTTON_HICOLOR 	= 0xdb6cff
+
+/*{{ ------------------------------------------------------------------------------------------------------------------------------
+@section defines
+@title Defines and other const values
+
+# Colors
+
+	COLOR_NONE
+	COLOR_BLACK
+	COLOR_WHITE
+	COLOR_RED
+	COLOR_BROWN
+	COLOR_GREEN
+	COLOR_BLUE
+	COLOR_YELLOW
+	COLOR_CYAN
+	COLOR_PURPLE
+	COLOR_LIGHTGRAY
+	COLOR_GRAY
+	COLOR_ORANGE
+	COLOR_LIGHTPURPLE
+	COLOR_DARKRED
+	COLOR_DARKGREEN
+	COLOR_LIGHTGREE
+	COLOR_DARKBLUE
+	COLOR_DARKGRAY
+Colors can also be specified by `0xAARRGGBB` or `0xRRGGBB`
+
+# Reaches
+
+	REACH_NONE
+	REACH_LOW
+	REACH_MED
+	REACH_HIGH
+# Input states
+
+	INPUT_ON              // Keyboard, Mouse, Cursor is all ON
+	INPUT_OFF             // Mouse, Cursor is OFF, but Keyboard is ON
+	_INPUT_ALL_OFF        // Keyboard, Mouse, Cursor is OFF
+	_INPUT_YACK_CHOICES   // Keyboard, Cursor is ON. Mouse is OFF
+	_INPUT_CURSOR         // Cursor is ON
+	_INPUT_MOUSE          // TBD
+	_INPUT_KEYS           // Keyboard is read
+	_INPUT_BUTTONS        // Buttons (`createButton()`) are active
+	_INPUT_PUSH           // Current input state is push before new state is set
+	_INPUT_POP            // Input stack state is popped
+
+# Images alignment
+
+Passed to `createImage()` and `createTextImage()`
+
+Aligning to top and bottom is buggy.
+
+	ALIGN_LEFT
+	ALIGN_CENTER
+	ALIGN_RIGHT
+	ALIGN_TOP
+	ALIGN_BOTTOM
+# System macros
+
+The following macros are automaticaly created by the compiler.
+
+	__LINE__            // The current line number
+	__FUNC__            // The name of the current function
+	__LOC__             // The function:line
+	__FILE__			// The filename currently being compiled
+	__COMPILETIME__     // The unixtime the file was being compiled
+# TBD
+}}*/
+
+
+// The following must match what the engine uses... do not change or add to these!
+// Do not use the values directly, always use the symbols as the values might change in the future.
+
+const MAC = 1
+const WIN = 2
+const LINUX = 3
+const XBOX = 4
+const IOS = 5
+const ANDROID = 6
+const SWITCH = 7
+const PS4 = 8
+const BUTTON_EVENT_ENTER = 1
+const BUTTON_EVENT_LOITER = 2
+const BUTTON_EVENT_LEAVE = 3
+const BUTTON_EVENT_DOWN = 4
+const BUTTON_EVENT_UP = 5
+const BUTTON_EVENT_DRAG = 6
+const BUTTON_EVENT_DRAG_OVER = 7
+const BUTTON_EVENT_DROP = 8
+const HANDLED = 1
+const PASS = 0
+const ABORT = 1
+const GLOBAL_SOUND = 0x00000001
+const LOCAL_SOUND = 0x00000000
+const HOVER_ENTER = 1
+const HOVER_LEAVE = 2
+const HOVER_LOITER = 3
+const TRIGGER_OFF = 0
+const TRIGGER_ON = 1
+const TRIGGER_ENTER = 2
+const TRIGGER_LEAVE = 4
+const OBJECT_ACTOR = 1
+const OBJECT_OBJECT = 2
+const OBJECT_PROP = 3
+const OBJECT_TRIGGER = 5
+const OBJECT_SPOT = 4
+const MOUSE = 1
+const CONTROLLER = 2
+const DIRECTDRIVE = 3
+const TOUCH = 4
+const ALL = -1
+const DIR_RIGHT = 0x00000001
+const DIR_LEFT = 0x00000002
+const DIR_FRONT = 0x00000004
+const DIR_BACK = 0x00000008
+const DIR_UP = 0x00000008
+const DIR_DOWN = 0x00000004
+const DIR_FLIP = 0x00000010
+const INPUT_ON = 0x0000000f
+const INPUT_OFF = 0x00000002
+const _INPUT_ALL_OFF = 0x00000000
+const _INPUT_YACK_CHOICES = 0x0000000e
+const _INPUT_CURSOR = 0x00000008
+const _INPUT_MOUSE = 0x00000001
+const _INPUT_KEYS = 0x00000002
+const _INPUT_BUTTONS = 0x00000004
+const INPUT_PUSH = 0x01000000
+const INPUT_POP = 0x02000000
+const INPUT_OPTIONS = 0x0000000e
+const SWING = 512
+const LOOPING = 256
+const STOP_LOOPING = 1024
+const EASE_IN = 8
+const EASE_OUT = 7
+const EASE_INOUT = 9
+const SLOW_EASE_IN = 11
+const SLOW_EASE_OUT = 10
+const LINEAR = 1
+const SIN_INOUT = 2
+const COS_INOUT = 3
+const BOUNCE = 18
+const SHAKE = 6
+const ALIGN_LEFT = 0x10000000
+const ALIGN_CENTER = 0x20000000
+const ALIGN_RIGHT = 0x40000000
+const ALIGN_TOP = 0x80000000
+const ALIGN_BOTTOM = 0x01000000
+const LESS_SPACING = 2097152
+const DROP_SHADOW = 4194304
+const KEY_RETURN = 13
+const KEY_SPACE = 32
+const KEY_PERIOD = 46
+const KEY_ESC = 27
+const KEY_DELETE = 127
+const KEY_BACKSPACE = 8
+const KEY_UP = 1073741906
+const KEY_RIGHT = 1073741903
+const KEY_DOWN = 1073741905
+const KEY_LEFT = 1073741904
+const KEY_PAD1 = 1073741913
+const KEY_PAD2 = 1073741914
+const KEY_PAD3 = 1073741915
+const KEY_PAD4 = 1073741916
+const KEY_PAD5 = 1073741917
+const KEY_PAD6 = 1073741918
+const KEY_PAD7 = 1073741919
+const KEY_PAD8 = 1073741920
+const KEY_PAD9 = 1073741921
+const KEY_SHIFT_LEFT = 1073742049
+const KEY_SHIFT_RIGHT = 1073742053
+const KEY_CONTROL_LEFT = 1073742048
+const KEY_CONTROL_RIGHT = 1073742052
+const KEY_COMMAND_LEFT = 1073742051
+const KEY_COMMAND_RIGHT = 1073742055
+const KEY_ALT_LEFT = 1073742050
+const KEY_ALT_RIGHT = 1073742054
+const BUTTON_A = 16384
+const BUTTON_B = 16385
+const BUTTON_X = 16386
+const BUTTON_Y = 16387
+const BUTTON_TL = 16401
+const BUTTON_TR = 16400
+const BUTTON_BL = 16393
+const BUTTON_BR = 16394
+const BUTTON_START = 16390
+const BUTTON_BACK = 16388
+const BUTTON_HATRIGHT = 16398
+const BUTTON_HATLEFT = 16397
+const BUTTON_HATUP = 16395
+const BUTTON_HATDOWN = 16396
+const BUTTON_MOUSE_LEFT = 0x00000001
+const BUTTON_MOUSE_RIGHT = 0x00000002
+const BUTTON_MOUSE_MIDDLE = 0x00000004
+const BUTTON_MOUSE_DOUBLECLICK = 0x00000080
+const MOD_CAPSLOCK = 8192
+const MOD_NUMLOCK = 4096
+const MOD_SHIFT = 8195
+const MOD_CONTROL = 192
+const MOD_ALT = 768
+const MOD_COMMAND = 3072

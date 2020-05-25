@@ -1,0 +1,11 @@
+/*{{
+
+@section camera
+@title Camera Functions
+
+ The camera in a `room` is centered on the `point`, `actor`, or `object` it is tracking and
+ is bound by the room bounds defined in the `.wimpy` file.
+
+ Each `actor` can have a `camera_offset` that offsets the camera focal point from their feet.
+
+}}*/

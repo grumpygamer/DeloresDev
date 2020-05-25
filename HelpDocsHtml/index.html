@@ -1,0 +1,359 @@
+<html><head><link rel='stylesheet' href='../HelpDocs/help.css'><link href='https://fonts.googleapis.com/css?family=Roboto:300|Ubuntu:300' rel='stylesheet'></head><body><span class='button'><a href='home.html'>Home</a></span><span class='button'><a href='index.html'>Index</a></span><html><head><link rel='stylesheet' href='help.css'>
+		<script>
+			function search() {
+				var name = document.getElementById("search-item").value;
+				var pattern = name.toLowerCase();
+				var divs = document.getElementsByClassName("search-div");
+				for (var i = 0; i < divs.length; i++) {
+					var div = divs[i]
+					var func = div.id.toLowerCase()
+					if (pattern == "") {
+						div.style.display = 'block'
+					} else {
+						if (func.indexOf(pattern) == -1) {
+							div.style.display = 'none'
+						} else {
+							div.style.display = 'block'
+						}
+					}
+				}
+			}
+		</script>
+		</head><body><h1>index</h1><div class='section text'></div>
+	   	<div class="search">
+	    	<input type="text" id="search-item" class="search-input" placeholder="Search" oninput=javascript:search();>
+		</div>
+		<div class='index'>
+<div class='search-div' id=''><a href='dinky_expressions.html#6'>&&, ||&nbsp;-&nbsp;Logical operators</a></div>
+<div class='search-div' id=''><a href='dinky_expressions.html#2'>+, -, *, /, %&nbsp;-&nbsp;Math operators</a></div>
+<div class='search-div' id=''><a href='dinky_expressions.html#7'>+=, -=, *=, /=, |=, &=, ++, --&nbsp;-&nbsp;Assignment operators</a></div>
+<div class='search-div' id=''><a href='dinky_expressions.html#4'>==, !=, <, >, <=, >=&nbsp;-&nbsp;Comparison operators</a></div>
+<div class='search-div' id='TR'><a href='translation_comands.html#3'>TR(text)&nbsp;-&nbsp;Translates a raw line of text</a></div>
+<div class='search-div' id='_actorArrived'><a href='gamesystem_callbacks.html#12'>_actorArrived(actor)&nbsp;-&nbsp;Called when an actor reaches their final destination.</a></div>
+<div class='search-div' id='_addYackChoice'><a href='yacks.html#14'>_addYackChoice(index, text, label)&nbsp;-&nbsp;Called for each yack choice.</a></div>
+<div class='search-div' id='_beginYackChoices'><a href='yacks.html#11'>_beginYackChoices()&nbsp;-&nbsp;Called before choices are displayed.</a></div>
+<div class='search-div' id='_clickedDownAt'><a href='gamesystem_callbacks.html#18'>_clickedDownAt(screen_pos, flags)&nbsp;-&nbsp;Called when the screen is clicked or touched.</a></div>
+<div class='search-div' id='_clickedDragAt'><a href='gamesystem_callbacks.html#20'>_clickedDragAt(screen_pos, flags)&nbsp;-&nbsp;Called when the mouse is moved with the button down.</a></div>
+<div class='search-div' id='_clickedUpAt'><a href='gamesystem_callbacks.html#19'>_clickedUpAt(screen_pos, flags)&nbsp;-&nbsp;Called when the mouse button is let up.</a></div>
+<div class='search-div' id='_doneSayline'><a href='gamesystem_callbacks.html#22'>_doneSayline(actor)&nbsp;-&nbsp;Called when the actor's sayLine is done.</a></div>
+<div class='search-div' id='_endCuscene'><a href='cutscenes.html#3'>_endCuscene()&nbsp;-&nbsp;Called after the cutscene code has been stopped.</a></div>
+<div class='search-div' id='_endYack'><a href='yacks.html#10'>_endYack()&nbsp;-&nbsp;Called when a yack conversation is ending.</a></div>
+<div class='search-div' id='_endYackChoices'><a href='yacks.html#12'>_endYackChoices()&nbsp;-&nbsp;Called when yack choices need to be cleaned up.</a></div>
+<div class='search-div' id='_enterObject'><a href='gamesystem_callbacks.html#7'>_enterObject(object)&nbsp;-&nbsp;Called for each object when entering a room.</a></div>
+<div class='search-div' id='_enterObject'><a href='gamesystem_callbacks.html#8'>_enterObject(object)&nbsp;-&nbsp;Called for each actor when entering a room.</a></div>
+<div class='search-div' id='_enterRoom'><a href='gamesystem_callbacks.html#5'>_enterRoom(room, stage)&nbsp;-&nbsp;Called when the room is entered.</a></div>
+<div class='search-div' id='_exitObject'><a href='gamesystem_callbacks.html#9'>_exitObject(room, stage)&nbsp;-&nbsp;Called for each object or actor when exiting a room.</a></div>
+<div class='search-div' id='_exitRoom'><a href='gamesystem_callbacks.html#6'>_exitRoom(room, stage)&nbsp;-&nbsp;Called when exiting a room</a></div>
+<div class='search-div' id='_gameFocus'><a href='gamesystem_callbacks.html#28'>_gameFocus(state)&nbsp;-&nbsp;Called when the game gains or looses focus.</a></div>
+<div class='search-div' id='_hoverObject'><a href='gamesystem_callbacks.html#17'>_hoverObject(state, object, room_pos)&nbsp;-&nbsp;Called when an object is hovered over.</a></div>
+<div class='search-div' id='_initObject'><a href='gamesystem_callbacks.html#4'>_initObject(object)&nbsp;-&nbsp;Called only once when the object is inited.</a></div>
+<div class='search-div' id='_initRoom'><a href='gamesystem_callbacks.html#3'>_initRoom(room)&nbsp;-&nbsp;Called only once when the room is inited.</a></div>
+<div class='search-div' id='_keyDown'><a href='gamesystem_callbacks.html#10'>_keyDown(key, flags)&nbsp;-&nbsp;Called when a key goes down.</a></div>
+<div class='search-div' id='_keyUp'><a href='gamesystem_callbacks.html#11'>_keyUp(key, flags)&nbsp;-&nbsp;Called when a key comes up.</a></div>
+<div class='search-div' id='_overrideCuscene'><a href='cutscenes.html#4'>_overrideCuscene(state)&nbsp;-&nbsp;Called after the cutscene is overriden.</a></div>
+<div class='search-div' id='_pauseGame'><a href='gamesystem_callbacks.html#27'>_pauseGame(state)&nbsp;-&nbsp;Called when the game is paused by the window going out of focus</a></div>
+<div class='search-div' id='_quitGame'><a href='gamesystem_callbacks.html#29'>_quitGame()&nbsp;-&nbsp;Called when the game wants to quit.</a></div>
+<div class='search-div' id='_selectedActorChanged'><a href='gamesystem_comands.html#23'>_selectedActorChanged(actor)&nbsp;-&nbsp;Called when the selected actor changes</a></div>
+<div class='search-div' id='_showYackChoices'><a href='yacks.html#13'>_showYackChoices()&nbsp;-&nbsp;Called after all the choices have been added and when they are ready to be displayed.</a></div>
+<div class='search-div' id='_startCutscene'><a href='cutscenes.html#2'>_startCutscene()&nbsp;-&nbsp;Called right before the cut-scene code is called.</a></div>
+<div class='search-div' id='_startSayline'><a href='gamesystem_callbacks.html#21'>_startSayline(actor, text)&nbsp;-&nbsp;Called when sayLine text needs to be displayed.</a></div>
+<div class='search-div' id='_startYack'><a href='yacks.html#9'>_startYack(actor1, actor2)&nbsp;-&nbsp;Called when a yack conversation is started.</a></div>
+<div class='search-div' id='_triggerCallback'><a href='gamesystem_comands.html#24'>_triggerCallback(trigger, actor, code, state)(actor)&nbsp;-&nbsp;Called when an actor enters or leaves a trigger.</a></div>
+<div class='search-div' id='_triggerSound'><a href='gamesystem_callbacks.html#26'>_triggerSound(actor,sound)&nbsp;-&nbsp;Called when an actor or object animation triggers a sound</a></div>
+<div class='search-div' id='a'><a href='dinky_expressions.html#8'>a?b:c | a?:c&nbsp;-&nbsp;Trinary operators</a></div>
+<div class='search-div' id='abs'><a href='math_functions.html#12'>abs(num)&nbsp;-&nbsp;Returns the absolute value of <span class='inline_code'>num</span></a></div>
+<div class='search-div' id='actorAlpha'><a href='actor_functions.html#35'>actorAlpha(actor,alpha) | actorAlphaTo(object,alpha,time[,curve])&nbsp;-&nbsp;Sets the actors alpha.</a></div>
+<div class='search-div' id='actorAt'><a href='actor_functions.html#16'>actorAt(actor,[room,]pos|object|actor)&nbsp;-&nbsp;TBD</a></div>
+<div class='search-div' id='actorColor'><a href='actor_functions.html#26'>actorColor(actor[,color])&nbsp;-&nbsp;Sets or returns the actor's color.</a></div>
+<div class='search-div' id='actorCostume'><a href='object_functions.html#4'>actorCostume() | actorCostume(actor,costume)&nbsp;-&nbsp;TBD</a></div>
+<div class='search-div' id='actorDistanceTo'><a href='actor_functions.html#20'>actorDistanceTo(actor)&nbsp;-&nbsp;Returns the positon of an actor. If you want to set the position of an actor, use <span class='inline_code'>actorAt</span></a></div>
+<div class='search-div' id='actorFace'><a href='actor_functions.html#28'>actorFace(actor,pos|dir|object|actor)&nbsp;-&nbsp;Instantly turn to the <span class='inline_code'>pos</span>, <span class='inline_code'>dir</span>, <span class='inline_code'>object</span> or <span class='inline_code'>actor</span></a></div>
+<div class='search-div' id='actorFacing'><a href='actor_functions.html#29'>actorFacing(actor)&nbsp;-&nbsp;Returns the direction an actor is facing.</a></div>
+<div class='search-div' id='actorFastWalk'><a href='actor_functions.html#25'>actorFastWalk(actor,state)&nbsp;-&nbsp;Returns or turns on and off fast walking.</a></div>
+<div class='search-div' id='actorHideLayer'><a href='actor_functions.html#21'>actorHideLayer(actor,layer[,state=true])&nbsp;-&nbsp;TBD</a></div>
+<div class='search-div' id='actorLockFacing'><a href='actor_functions.html#30'>actorLockFacing(actor,ok_dirs)&nbsp;-&nbsp;Locks the facing of an actor to the direction bits in ok_dirs.</a></div>
+<div class='search-div' id='actorOffset'><a href='actor_functions.html#32'>actorOffset(actor,point) | actorOffsetTo(object,point,time) | actorOffsetTo(object,point,time,curve)&nbsp;-&nbsp;Sets the actors offset. The offset does not change render or sorting order.</a></div>
+<div class='search-div' id='actorPos'><a href='actor_functions.html#42'>actorPos(actor)&nbsp;-&nbsp;Returns the position of the actor in the room</a></div>
+<div class='search-div' id='actorPosition'><a href='actor_functions.html#19'>actorPosition(actor)&nbsp;-&nbsp;Returns the positon of an actor. If you want to set the position of an actor, use <span class='inline_code'>actorAt</span></a></div>
+<div class='search-div' id='actorRemapAnimation'><a href='actor_functions.html#46'>actorRemapAnimation(actor,remap_table|null)&nbsp;-&nbsp;Remaps animatons names based on the remap_table</a></div>
+<div class='search-div' id='actorScale'><a href='actor_functions.html#33'>actorScale(actor,scale) | actorScaleTo(object,scale,time) | actorScaleTo(object,scale,time,curve)&nbsp;-&nbsp;Sets the actors scale.</a></div>
+<div class='search-div' id='actorShowLayer'><a href='actor_functions.html#22'>actorShowLayer(actor,layer[,state=true])&nbsp;-&nbsp;TBD</a></div>
+<div class='search-div' id='actorStopWalking'><a href='actor_functions.html#23'>actorStopWalking(actor)&nbsp;-&nbsp;Stops an actor that is walking.</a></div>
+<div class='search-div' id='actorTurnTo'><a href='actor_functions.html#37'>actorTurnTo(actor,pos|dir|object|actor)&nbsp;-&nbsp;Turn to the <span class='inline_code'>pos</span>, <span class='inline_code'>dir</span>, <span class='inline_code'>object</span> or <span class='inline_code'>actor</span> over 2 frames.</a></div>
+<div class='search-div' id='actorUseLighting'><a href='actor_functions.html#51'>actorUseLighting(actor|object, state)&nbsp;-&nbsp;Sets an <span class='inline_code'>actor</span> to be lit by <span class='inline_code'>room</span> lighting.</a></div>
+<div class='search-div' id='actorUsePos'><a href='actor_functions.html#39'>actorUsePos(actor,pos[,facing]) | actorUsePos(actor[,facing])&nbsp;-&nbsp;Sets or returns the use position for an actor.</a></div>
+<div class='search-div' id='actorUsePos2'><a href='actor_functions.html#41'>actorUsePos2(actor,pos) | actorUsePos2(actor)&nbsp;-&nbsp;Sets or returns the use position for an actor.</a></div>
+<div class='search-div' id='actorUseWalkboxSet'><a href='actor_functions.html#11'>actorUseWalkboxSet(actor,set)&nbsp;-&nbsp;Assigns the walkboxes <span class='inline_code'>set number</span> for the actor use. <span class='inline_code'>Zero</span> will disable using walkboxes.</a></div>
+<div class='search-div' id='actorWalkForward'><a href='actor_functions.html#24'>actorWalkForward(actor,dist)&nbsp;-&nbsp;Walks an actor forward <span class='inline_code'>dist</span> pixels.</a></div>
+<div class='search-div' id='actorWalkTo'><a href='actor_functions.html#27'>actorWalkTo(actor,pos|object|actor[,dir])&nbsp;-&nbsp;Walks an actor to the <span class='inline_code'>pos</span>, <span class='inline_code'>object</span> or <span class='inline_code'>actor</span> and then faces <span class='inline_code'>dir</span>.</a></div>
+<div class='search-div' id='addTrigger'><a href='room_functions.html#12'>addTrigger(trigger, func)&nbsp;-&nbsp;Returns the id of the new trigger added to the room.</a></div>
+<div class='search-div' id='addconsolebutton'><a href='debug_functions.html#15'>addconsolebutton(color, title, command)&nbsp;-&nbsp;Adds a button to the debug console to execute a command when pressed</a></div>
+<div class='search-div' id='addprivatepref'><a href='prefs.html#82'>addprivatepref(key, value)&nbsp;-&nbsp;Adds <span class='inline_code'>value</span> to the private pref with <span class='inline_code'>key</span></a></div>
+<div class='search-div' id='ambientLight'><a href='room_functions.html#20'>ambientLight([room,]color)&nbsp;-&nbsp;Set the ambient light for a room.</a></div>
+<div class='search-div' id='appendfile'><a href='system.html#72'>appendfile(filename, string)&nbsp;-&nbsp;Appends the <span class='inline_code'>filename</span> with a <span class='inline_code'>string</span></a></div>
+<div class='search-div' id='areChoicesShowing'><a href='yacks.html#7'>areChoicesShowing()&nbsp;-&nbsp;Returns <span class='inline_code'>true</span> if yack choices are showing and waiting for input.</a></div>
+<div class='search-div' id='array'><a href='dinky_types.html#8'>array&nbsp;-&nbsp;An array of values.</a></div>
+<div class='search-div' id='array'><a href='arrays.html#52'>array() | array(size,value=null)&nbsp;-&nbsp;Returns a new array of <span class='inline_code'>size</span> elements filled with 'value'</a></div>
+<div class='search-div' id='arrayadd'><a href='arrays.html#55'>arrayadd(array, value)&nbsp;-&nbsp;Appended <span class='inline_code'>value</span> to the end only if it doesn't already exist in the array.</a></div>
+<div class='search-div' id='arrayappend'><a href='arrays.html#53'>arrayappend(array, value)&nbsp;-&nbsp;Appends <span class='inline_code'>value</span> to the end of an array.</a></div>
+<div class='search-div' id='arrayapply'><a href='arrays.html#69'>arrayapply(array, function)&nbsp;-&nbsp;Returns an array after applying <span class='inline_code'>function</span> to each element</a></div>
+<div class='search-div' id='arraycount'><a href='arrays.html#70'>arraycount(array) | arraycount(array,value)&nbsp;-&nbsp;Returns the number of <span class='inline_code'>non-null</span> elements in the <span class='inline_code'>array</span></a></div>
+<div class='search-div' id='arrayextend'><a href='arrays.html#57'>arrayextend(array, array2)&nbsp;-&nbsp;Appends <span class='inline_code'>array2</span> to the end of <span class='inline_code'>array</span>.</a></div>
+<div class='search-div' id='arrayfilter'><a href='arrays.html#68'>arrayfilter(array, function)&nbsp;-&nbsp;Returns a new array that has been filtered with <span class='inline_code'>function</span></a></div>
+<div class='search-div' id='arrayfind'><a href='arrays.html#58'>arrayfind(array, value)&nbsp;-&nbsp;Returns the index of <span class='inline_code'>value</span> in <span class='inline_code'>array</span></a></div>
+<div class='search-div' id='arrayfindremove'><a href='arrays.html#60'>arrayfindremove(array, value)&nbsp;-&nbsp;Removes <span class='inline_code'>value</span> from an array.</a></div>
+<div class='search-div' id='arrayfirst'><a href='arrays.html#63'>arrayfirst(array)&nbsp;-&nbsp;Returns the first element of an array</a></div>
+<div class='search-div' id='arrayinsertafter'><a href='arrays.html#62'>arrayinsertafter(array, index, value)&nbsp;-&nbsp;Insert <span class='inline_code'>value</span> into an array after <span class='inline_code'>index</span></a></div>
+<div class='search-div' id='arrayinsertbefore'><a href='arrays.html#61'>arrayinsertbefore(array, index, value)&nbsp;-&nbsp;Insert <span class='inline_code'>value</span> into an array before <span class='inline_code'>index</span></a></div>
+<div class='search-div' id='arraylast'><a href='arrays.html#64'>arraylast(array)&nbsp;-&nbsp;Returns the last element of an array</a></div>
+<div class='search-div' id='arrayprepend'><a href='arrays.html#54'>arrayprepend(array, value)&nbsp;-&nbsp;Prepends <span class='inline_code'>value</span> to the beginning of an array.</a></div>
+<div class='search-div' id='arrayremovefirst'><a href='arrays.html#65'>arrayremovefirst(array)&nbsp;-&nbsp;Removes the first element of an array</a></div>
+<div class='search-div' id='arrayremoveindex'><a href='arrays.html#59'>arrayremoveindex(array, index)&nbsp;-&nbsp;Removes <span class='inline_code'>index</span> from an array.</a></div>
+<div class='search-div' id='arrayremovelast'><a href='arrays.html#66'>arrayremovelast(array)&nbsp;-&nbsp;Removes the last element of an array</a></div>
+<div class='search-div' id='arrayresize'><a href='arrays.html#56'>arrayresize(array,size,value=null)&nbsp;-&nbsp;Resizes an array to <span class='inline_code'>size</span> elements</a></div>
+<div class='search-div' id='arrayshuffle'><a href='arrays.html#67'>arrayshuffle(array)&nbsp;-&nbsp;Randomly shuffles an array</a></div>
+<div class='search-div' id='arraysort'><a href='arrays.html#71'>arraysort(array[,func=null]) | arrayrsort(array[,func=null)&nbsp;-&nbsp;Sorts an array in place</a></div>
+<div class='search-div' id='as_float'><a href='built_in_functions.html#17'>as_float(value)&nbsp;-&nbsp;Returns the <span class='inline_code'>value</span> as a <span class='inline_code'>float</span></a></div>
+<div class='search-div' id='as_int'><a href='built_in_functions.html#18'>as_int(value)&nbsp;-&nbsp;Returns the <span class='inline_code'>value</span> as a <span class='inline_code'>int</span></a></div>
+<div class='search-div' id='as_point'><a href='built_in_functions.html#20'>as_point(x,y) | point(x,y)&nbsp;-&nbsp;Returns a <span class='inline_code'>point</span> with <span class='inline_code'>x</span> and <span class='inline_code'>y</span> coordinates`</a></div>
+<div class='search-div' id='as_string'><a href='built_in_functions.html#19'>as_string(value)&nbsp;-&nbsp;Returns the <span class='inline_code'>value</span> as a <span class='inline_code'>string</span></a></div>
+<div class='search-div' id='assetexists'><a href='system.html#87'>assetexists(assetname) | assetexists(sheet, image)&nbsp;-&nbsp;Returns <span class='inline_code'>true</span> if the asset exists.</a></div>
+<div class='search-div' id='bounceInventory'><a href='gamesystem_comands.html#4'>bounceInventory(object)&nbsp;-&nbsp;Bounces an object in the inventory</a></div>
+<div class='search-div' id='break__continue'><a href='dinky_statements.html#10'>break, continue&nbsp;-&nbsp;breaks out of or continues a <span class='inline_code'>for</span>, <span class='inline_code'>foreach</span>, <span class='inline_code'>while</span>, or <span class='inline_code'>until</span> loop</a></div>
+<div class='search-div' id='breakhere'><a href='debug_functions.html#10'>breakhere(frames=1)&nbsp;-&nbsp;Breaks (or yelds) a thread until the next frame.</a></div>
+<div class='search-div' id='breaktime'><a href='debug_functions.html#11'>breaktime(duration) | breaktime(from,to)&nbsp;-&nbsp;Breaks (or yelds) a thread for <span class='inline_code'>duration</span> seconds.</a></div>
+<div class='search-div' id='breakwhileanimating'><a href='threads.html#8'>breakwhileanimating()&nbsp;-&nbsp;Breaks while an actor or object is animating.</a></div>
+<div class='search-div' id='breakwhileinputoff'><a href='threads.html#6'>breakwhileinputoff(sound_id)&nbsp;-&nbsp;Breaks a thread while the input is off.</a></div>
+<div class='search-div' id='breakwhilerunning'><a href='debug_functions.html#12'>breakwhilerunning(thread_id)&nbsp;-&nbsp;Breaks while the thread with <span class='inline_code'>thread_id</span> is running.</a></div>
+<div class='search-div' id='breakwhilesound'><a href='threads.html#3'>breakwhilesound(sound_id)&nbsp;-&nbsp;Breaks a thread while a sound is playing</a></div>
+<div class='search-div' id='breakwhiletalking'><a href='threads.html#4'>breakwhiletalking(actor)&nbsp;-&nbsp;Breaks a thread while an actor is talking.</a></div>
+<div class='search-div' id='breakwhilewalking'><a href='threads.html#5'>breakwhilewalking(actor)&nbsp;-&nbsp;Breaks a thread while an actor is walking.</a></div>
+<div class='search-div' id='breakwhileyacking'><a href='threads.html#7'>breakwhileyacking()&nbsp;-&nbsp;Breaks while a Yack dialog is running.</a></div>
+<div class='search-div' id='cameraAt'><a href='camera.html#9'>cameraAt(point|object|actor)&nbsp;-&nbsp;The camera is positioned at a <span class='inline_code'>point</span>, <span class='inline_code'>object</span>, or <span class='inline_code'>actor</span></a></div>
+<div class='search-div' id='cameraFollow'><a href='camera.html#8'>cameraFollow(actor[,snap_camera)&nbsp;-&nbsp;The camera starts following an actor</a></div>
+<div class='search-div' id='cameraOffset'><a href='actor_functions.html#50'>cameraOffset(actor, point)&nbsp;-&nbsp;Offset from the actor the camera uses when following the actor.</a></div>
+<div class='search-div' id='cameraZoom'><a href='camera.html#10'>cameraZoom(factor)&nbsp;-&nbsp;The zooms the camera around the screen center.</a></div>
+<div class='search-div' id='cameraZoomFromTo'><a href='camera.html#11'>cameraZoomFromTo([type,]time,start,end)&nbsp;-&nbsp;Smoothly zooms the camera from <span class='inline_code'>start</span> to <span class='inline_code'>end</span> over <span class='inline_code'>time</span> seconds.</a></div>
+<div class='search-div' id='cancelAllInteractions'><a href='gamesystem_callbacks.html#16'>cancelAllInteractions()&nbsp;-&nbsp;Cancels all drags and sentences.</a></div>
+<div class='search-div' id='cancelSentence'><a href='gamesystem_callbacks.html#14'>cancelSentence(actor)&nbsp;-&nbsp;Cancels any sentence queued for the actor</a></div>
+<div class='search-div' id='chr'><a href='math_functions.html#8'>chr(ch)&nbsp;-&nbsp;Converts an ascii <span class='inline_code'>int</span> to a <span class='inline_code'>string</span> char.</a></div>
+<div class='search-div' id='clamp'><a href='math_functions.html#15'>clamp(num,lower,upper)&nbsp;-&nbsp;Clamps <span class='inline_code'>num</span> between <span class='inline_code'>lower</span> and <span class='inline_code'>upper</span></a></div>
+<div class='search-div' id='clampInWalkbox'><a href='room_functions.html#23'>clampInWalkbox(pos[,pos2])&nbsp;-&nbsp;Finds a point that is clamped in walkboxes.</a></div>
+<div class='search-div' id='clone'><a href='core.html#2'>clone(table|array)&nbsp;-&nbsp;Returns a shallow clone of the <span class='inline_code'>table</span> or <span class='inline_code'>array</span></a></div>
+<div class='search-div' id='compilestring'><a href='strings.html#16'>compilestring(string)&nbsp;-&nbsp;Compiles a string into a callable function.</a></div>
+<div class='search-div' id='cos'><a href='math_functions.html#10'>cos(angle)&nbsp;-&nbsp;Returns the <span class='inline_code'>cos</span> of an angle.</a></div>
+<div class='search-div' id='createActor'><a href='actor_functions.html#2'>createActor(key, actor_table[,anim_file)&nbsp;-&nbsp;TBD</a></div>
+<div class='search-div' id='createActor'><a href='actor_functions.html#3'>createActor(key, actor_table[,anim_file)&nbsp;-&nbsp;TBD</a></div>
+<div class='search-div' id='createButton'><a href='image_functions.html#29'>createButton(id,image,parent,code)&nbsp;-&nbsp;Creates a button based on an <span class='inline_code'>image</span> parented to <span class='inline_code'>parent</span> calling <span class='inline_code'>code</span> when clicked/touched.</a></div>
+<div class='search-div' id='createFont'><a href='game_functions.html#5'>createFont(name,size)&nbsp;-&nbsp;Creates and returns a font from a .ttf at the given <span class='inline_code'>size</span></a></div>
+<div class='search-div' id='createImage'><a href='image_functions.html#2'>createImage(sheet,image[,point])|createImage(image)|createImage()&nbsp;-&nbsp;Creates and optionally positions an image.</a></div>
+<div class='search-div' id='createObject'><a href='object_functions.html#5'>createObject() | createObject(image) | createObject(sheet,image)&nbsp;-&nbsp;TBD</a></div>
+<div class='search-div' id='createTextImage'><a href='image_functions.html#3'>createTextImage(font,text,flags)&nbsp;-&nbsp;Creates a text image</a></div>
+<div class='search-div' id='cutscene'><a href='cutscenes.html#18'>cutscene(func[,override])&nbsp;-&nbsp;Starts a cut-scene with an option override function.</a></div>
+<div class='search-div' id='cutsceneDoOverride'><a href='cutscenes.html#20'>cutsceneDoOverride()&nbsp;-&nbsp;Causes the override code to be called.</a></div>
+<div class='search-div' id='defineRoom'><a href='room_functions.html#2'>defineRoom(table)&nbsp;-&nbsp;Defines a room using <span class='inline_code'>table</span> as it's code.</a></div>
+<div class='search-div' id='defineSound'><a href='sounds.html#4'>defineSound(path)&nbsp;-&nbsp;defines a sounds based on a FMOD sound path <span class='inline_code'>string</span></a></div>
+<div class='search-div' id='defineYack'><a href='yacks.html#5'>defineYack(name)&nbsp;-&nbsp;Call once from defineYacks.dinky</a></div>
+<div class='search-div' id='deleteImage'><a href='image_functions.html#8'>deleteImage(image)&nbsp;-&nbsp;Deletes an <span class='inline_code'>image</span> and return <span class='inline_code'>null</span></a></div>
+<div class='search-div' id='deleteImagesChildren'><a href='image_functions.html#9'>deleteImagesChildren(image)&nbsp;-&nbsp;Deletes the children of <span class='inline_code'>image</span>, but not the <span class='inline_code'>image</span></a></div>
+<div class='search-div' id='distance'><a href='math_functions.html#6'>distance(p1,p2)&nbsp;-&nbsp;Returns the distance between two numbers or <span class='inline_code'>points</span></a></div>
+<div class='search-div' id='do'><a href='dinky_statements.html#4'>do{ ... }until(expr) | do{ ... }&nbsp;-&nbsp;</a></div>
+<div class='search-div' id='dumpstack'><a href='debug_functions.html#8'>dumpstack()&nbsp;-&nbsp;Dumps the call stack to the debug console</a></div>
+<div class='search-div' id='dumpvar'><a href='debug_functions.html#9'>dumpvar()&nbsp;-&nbsp;Dumps a variable to the debug console</a></div>
+<div class='search-div' id='enableTrigger'><a href='room_functions.html#14'>enableTrigger(trigger_id, state)&nbsp;-&nbsp;Enable or disables a trigger based on <span class='inline_code'>state</span></a></div>
+<div class='search-div' id='endYack'><a href='yacks.html#16'>endYack()&nbsp;-&nbsp;Ends a .yack file conversation.</a></div>
+<div class='search-div' id='enterRoom'><a href='room_functions.html#3'>enterRoom(room|object[,door])&nbsp;-&nbsp;Causes the game to enter a new room</a></div>
+<div class='search-div' id='error'><a href='core.html#5'>error([value, ...])&nbsp;-&nbsp;Throws an error and prints the <span class='inline_code'>string</span></a></div>
+<div class='search-div' id='execSentence'><a href='gamesystem_callbacks.html#13'>execSentence(actor, verb, noun1, noun2=null)&nbsp;-&nbsp;Called to execute a sentence and, if needed, start the actor walking.</a></div>
+<div class='search-div' id='exitRoomFromDoor'><a href='gamesystem_comands.html#25'>exitRoomFromDoor(from_door, to_door)&nbsp;-&nbsp;Call when you need to leave a room from one door to another door.</a></div>
+<div class='search-div' id='findActorAt'><a href='room_functions.html#16'>findActorAt(pos)&nbsp;-&nbsp;Returns a touchable actor at the room cordinates.</a></div>
+<div class='search-div' id='findActorObjectAt'><a href='room_functions.html#17'>findActorObjectAt(pos)&nbsp;-&nbsp;Returns a touchable actor or object at the room cordinates.</a></div>
+<div class='search-div' id='findButtonAt'><a href='image_functions.html#30'>findButtonAt(screen_pos)&nbsp;-&nbsp;Finds a button created with createButton and returns the <span class='inline_code'>id</span> or null if not found</a></div>
+<div class='search-div' id='findObjectAt'><a href='room_functions.html#15'>findObjectAt(pos)&nbsp;-&nbsp;Returns a touchable object at the room cordinates.</a></div>
+<div class='search-div' id='findRoom'><a href='room_functions.html#4'>findRoom(name|id|room)&nbsp;-&nbsp;Returns a room from it's name, id or table.</a></div>
+<div class='search-div' id='flipDir'><a href='game_functions.html#9'>flipDir(dir)&nbsp;-&nbsp;Returns a 180 deg flip of a direction.</a></div>
+<div class='search-div' id='float'><a href='dinky_types.html#4'>float&nbsp;-&nbsp;A 32 bit floating point number</a></div>
+<div class='search-div' id='fontProps'><a href='game_functions.html#6'>fontProps(font,props_table)&nbsp;-&nbsp;Alter various properties of a font.</a></div>
+<div class='search-div' id='for'><a href='dinky_statements.html#5'>for(assignment, expr, expr)&nbsp;-&nbsp;This standard c-style <span class='inline_code'>for</span></a></div>
+<div class='search-div' id='for'><a href='dinky_statements.html#6'>for(var = start .. end)&nbsp;-&nbsp;Loops <span class='inline_code'>var</span> from <span class='inline_code'>start</span> to <span class='inline_code'>end</span></a></div>
+<div class='search-div' id='foreach'><a href='dinky_statements.html#9'>foreach(key, var in table)&nbsp;-&nbsp;Loops through all the keys and values in <span class='inline_code'>table</span></a></div>
+<div class='search-div' id='foreach'><a href='dinky_statements.html#7'>foreach(var in array)&nbsp;-&nbsp;Loops though all the elements of <span class='inline_code'>array</span></a></div>
+<div class='search-div' id='foreach'><a href='dinky_statements.html#8'>foreach(var in table)&nbsp;-&nbsp;Loops through all the keys of <span class='inline_code'>table</span></a></div>
+<div class='search-div' id='format'><a href='strings.html#77'>format(format, ...)&nbsp;-&nbsp;Returns a formatted string</a></div>
+<div class='search-div' id='freezeGame'><a href='game_functions.html#13'>freezeGame([state])&nbsp;-&nbsp;Freezes the game or returns the freeze state.</a></div>
+<div class='search-div' id='function'><a href='dinky_types.html#9'>function&nbsp;-&nbsp;A value that is a pointer to a function</a></div>
+<div class='search-div' id='gameFullscreen'><a href='game_functions.html#22'>gameFullscreen([state])&nbsp;-&nbsp;If passed <span class='inline_code'>state</span> changes fullscreen mode, otherwises returns screen state.</a></div>
+<div class='search-div' id='gametime'><a href='system.html#73'>gametime()&nbsp;-&nbsp;Returns the number of seconds the game has been running.</a></div>
+<div class='search-div' id='getInventory'><a href='gamesystem_comands.html#3'>getInventory(actor=null)&nbsp;-&nbsp;Returns the inventory array for an <span class='inline_code'>actor</span>, or <span class='inline_code'>null</span> if they don't have one.</a></div>
+<div class='search-div' id='getValue'><a href='gamesystem_comands.html#2'>getValue(value)&nbsp;-&nbsp;Returns a <span class='inline_code'>value</span> that is <span class='inline_code'>value</span> or <span class='inline_code'>value()</span></a></div>
+<div class='search-div' id='getprivatepref'><a href='prefs.html#80'>getprivatepref(key, default=null)&nbsp;-&nbsp;Returns a private pref for <span class='inline_code'>key</span>.</a></div>
+<div class='search-div' id='getuserpref'><a href='prefs.html#78'>getuserpref(key, default=null)&nbsp;-&nbsp;Returns a user pref for <span class='inline_code'>key</span>.</a></div>
+<div class='search-div' id='if__else'><a href='dinky_statements.html#2'>if, else&nbsp;-&nbsp;</a></div>
+<div class='search-div' id='imageAlign'><a href='image_functions.html#17'>imageAlign(image,alignment)&nbsp;-&nbsp;Aligns an <span class='inline_code'>image</span> by <span class='inline_code'>alignment</span></a></div>
+<div class='search-div' id='imageAlpha'><a href='image_functions.html#24'>imageAlpha(image,alpha)&nbsp;-&nbsp;Sets the <span class='inline_code'>alpha</span> of an image and all it's children.</a></div>
+<div class='search-div' id='imageAlphaFromTo'><a href='image_functions.html#25'>imageAlphaFromTo(image,time,from,to)&nbsp;-&nbsp;Changes <span class='inline_code'>alpha</span> over <span class='inline_code'>time</span> seconds.</a></div>
+<div class='search-div' id='imageAt'><a href='image_functions.html#21'>imageAt(image,pos) | imageAt(image)&nbsp;-&nbsp;Positions or returns the position of an image</a></div>
+<div class='search-div' id='imageColor'><a href='image_functions.html#23'>imageColor(image,color)&nbsp;-&nbsp;Set an image and it's children to a color.</a></div>
+<div class='search-div' id='imageFilter'><a href='image_functions.html#15'>imageFilter(image,filter)&nbsp;-&nbsp;Turns on or off nearest neighbor filtering</a></div>
+<div class='search-div' id='imageHide'><a href='image_functions.html#18'>imageHide(image,state)&nbsp;-&nbsp;Hides or shows an image based on <span class='inline_code'>state</span></a></div>
+<div class='search-div' id='imageMoveFromTo'><a href='image_functions.html#22'>imageMoveFromTo(image,type,time,start,end)&nbsp;-&nbsp;Moves an <span class='inline_code'>image</span> from <span class='inline_code'>start</span> to <span class='inline_code'>end</span> points</a></div>
+<div class='search-div' id='imageParentChild'><a href='image_functions.html#28'>imageParentChild(parent_image,child_image)"&nbsp;-&nbsp;Makes <span class='inline_code'>child_image</span> a render child of <span class='inline_code'>parent_image</span></a></div>
+<div class='search-div' id='imagePushPopFrozen'><a href='image_functions.html#20'>imagePushPopFrozen(state)&nbsp;-&nbsp;Pushes or pops the frozen state of all images.</a></div>
+<div class='search-div' id='imageQuickPop'><a href='image_functions.html#12'>imageQuickPop(image,time,amount)&nbsp;-&nbsp;Does a quick pop of the <span class='inline_code'>image</span> over <span class='inline_code'>time</span> seconds by <span class='inline_code'>amount</span></a></div>
+<div class='search-div' id='imageReplaceText'><a href='image_functions.html#4'>imageReplaceText(image,text)&nbsp;-&nbsp;Replaces the text of a text image</a></div>
+<div class='search-div' id='imageRotate'><a href='image_functions.html#14'>imageRotate(image,angle)&nbsp;-&nbsp;Rotates an image by <span class='inline_code'>angle</span> degrees</a></div>
+<div class='search-div' id='imageScale'><a href='image_functions.html#10'>imageScale(image,scale) | imageScale(image,point)&nbsp;-&nbsp;Scales an <span class='inline_code'>image</span> by <span class='inline_code'>scale</span> or with <span class='inline_code'>point.x</span> and <span class='inline_code'>point.y</span></a></div>
+<div class='search-div' id='imageScaleFromTo'><a href='image_functions.html#11'>imageScaleFromTo(image,time,from,to)&nbsp;-&nbsp;Scales an <span class='inline_code'>image</span> over <span class='inline_code'>time</span> seconds</a></div>
+<div class='search-div' id='imageScissor'><a href='image_functions.html#27'>imageScissor(image,x,y,dx,dy)&nbsp;-&nbsp;Scissor (crop for display) an image based on screen coordinates.</a></div>
+<div class='search-div' id='imageSize'><a href='image_functions.html#16'>imageSize(image)&nbsp;-&nbsp;Returns the size of an image as a <span class='inline_code'>point</span></a></div>
+<div class='search-div' id='imageSort'><a href='image_functions.html#26'>imageSort(image,sort) | imageSort(image)&nbsp;-&nbsp;Sets or returns an image sorting order</a></div>
+<div class='search-div' id='imageTextClip'><a href='image_functions.html#5'>imageTextClip(image,clip)&nbsp;-&nbsp;Sets the clipping (in characters) of a text image.</a></div>
+<div class='search-div' id='imageTextDropShadow'><a href='image_functions.html#6'>imageTextDropShadow(image,offset,color)&nbsp;-&nbsp;Sets the drop shadow offset and color of a text image.</a></div>
+<div class='search-div' id='imageTextOutline'><a href='image_functions.html#7'>imageTextOutline(image,color)&nbsp;-&nbsp;Sets the outline color of a text image.</a></div>
+<div class='search-div' id='imageTouchable'><a href='image_functions.html#19'>imageTouchable(image,state)&nbsp;-&nbsp;The button of this image is set to touchable <span class='inline_code'>state</span></a></div>
+<div class='search-div' id='imageWiggle'><a href='image_functions.html#13'>imageWiggle(image,time,amount,loops)&nbsp;-&nbsp;Wiggles an <span class='inline_code'>image</span> over <span class='inline_code'>time</span> seconds <span class='inline_code'>loop</span> times.</a></div>
+<div class='search-div' id='inCutscene'><a href='cutscenes.html#19'>inCutscene()&nbsp;-&nbsp;Returns <span class='inline_code'>true</span> or <span class='inline_code'>false</span> if there is a cutscene running.</a></div>
+<div class='search-div' id='inInventory'><a href='gamesystem_comands.html#2'>inInventory(object, actor=null)&nbsp;-&nbsp;Returns <span class='inline_code'>true</span> if the object is in the <span class='inline_code'>actors</span> inventory.</a></div>
+<div class='search-div' id='inputOff'><a href='gamesystem_callbacks.html#15'>inputOff(code)&nbsp;-&nbsp;Turns the input off, runs the code, and then back on</a></div>
+<div class='search-div' id='inputState'><a href='game_functions.html#12'>inputState([state])&nbsp;-&nbsp;Set or get the current input state.</a></div>
+<div class='search-div' id='int'><a href='dinky_types.html#3'>int&nbsp;-&nbsp;A 32 bit integer value from <span class='inline_code'>2,147,483,648</span> to <span class='inline_code'>-2,147,483,644</span></a></div>
+<div class='search-div' id='isActor'><a href='actor_functions.html#44'>isActor(actor|object)&nbsp;-&nbsp;Returns <span class='inline_code'>true</span> if the object is an actor.</a></div>
+<div class='search-div' id='isActorInRoom'><a href='actor_functions.html#48'>isActorInRoom(actor[,room])&nbsp;-&nbsp;Returns <span class='inline_code'>true</span> if the <span class='inline_code'>actor</span> is in <span class='inline_code'>room</span> or the selected actor and current room if ommited.</a></div>
+<div class='search-div' id='isActorInTrigger'><a href='actor_functions.html#49'>isActorInTrigger(actor, trigger)&nbsp;-&nbsp;Returns <span class='inline_code'>true</span> if the <span class='inline_code'>actor</span> is in the <span class='inline_code'>trigger</span>.</a></div>
+<div class='search-div' id='isActorTalking'><a href='actor_functions.html#45'>isActorTalking(actor)&nbsp;-&nbsp;Returns <span class='inline_code'>true</span> if the actor is talking.</a></div>
+<div class='search-div' id='isActorWalking'><a href='actor_functions.html#43'>isActorWalking(actor)&nbsp;-&nbsp;Returns <span class='inline_code'>true</span> if the actor is walking.</a></div>
+<div class='search-div' id='isSoundPlaying'><a href='sounds.html#9'>isSoundPlaying(sound_uid)&nbsp;-&nbsp;returns <span class='inline_code'>true</span> or <span class='inline_code'>false</span> if the sound is playing</a></div>
+<div class='search-div' id='isYacking'><a href='yacks.html#2'>isYacking()&nbsp;-&nbsp;Returns <span class='inline_code'>true</span> if a yack conversation is happening.</a></div>
+<div class='search-div' id='is_array'><a href='built_in_functions.html#22'>is_array(value)&nbsp;-&nbsp;Returns <span class='inline_code'>true</span> if <span class='inline_code'>value</span> is a <span class='inline_code'>array</span></a></div>
+<div class='search-div' id='is_float'><a href='built_in_functions.html#25'>is_float(value)&nbsp;-&nbsp;Returns <span class='inline_code'>true</span> if <span class='inline_code'>value</span> is a <span class='inline_code'>table</span></a></div>
+<div class='search-div' id='is_function'><a href='built_in_functions.html#28'>is_function(value) | is_function(value, param_count)&nbsp;-&nbsp;Returns <span class='inline_code'>true</span> if <span class='inline_code'>value</span> is a <span class='inline_code'>function</span> and takes <span class='inline_code'>param_count</span> parameters (if supplied).</a></div>
+<div class='search-div' id='is_int'><a href='built_in_functions.html#24'>is_int(value)&nbsp;-&nbsp;Returns <span class='inline_code'>true</span> if <span class='inline_code'>value</span> is a <span class='inline_code'>int</span></a></div>
+<div class='search-div' id='is_number'><a href='built_in_functions.html#27'>is_number(value)&nbsp;-&nbsp;Returns <span class='inline_code'>true</span> if <span class='inline_code'>value</span> is a <span class='inline_code'>float</span> or <span class='inline_code'>int</span></a></div>
+<div class='search-div' id='is_point'><a href='built_in_functions.html#26'>is_point(value)&nbsp;-&nbsp;Returns <span class='inline_code'>true</span> if <span class='inline_code'>value</span> is a <span class='inline_code'>point</span></a></div>
+<div class='search-div' id='is_string'><a href='built_in_functions.html#23'>is_string(value)&nbsp;-&nbsp;Returns <span class='inline_code'>true</span> if <span class='inline_code'>value</span> is a <span class='inline_code'>string</span></a></div>
+<div class='search-div' id='is_table'><a href='built_in_functions.html#21'>is_table(value)&nbsp;-&nbsp;Returns <span class='inline_code'>true</span> if <span class='inline_code'>value</span> is a <span class='inline_code'>table</span></a></div>
+<div class='search-div' id='iskeydown'><a href='game_functions.html#11'>iskeydown(key)&nbsp;-&nbsp;Returns <span class='inline_code'>true</span> if the <span class='inline_code'>key</span> is being held down.</a></div>
+<div class='search-div' id='lerp'><a href='math_functions.html#16'>lerp(v1,v2,time)&nbsp;-&nbsp;Returns the linear interpolation between <span class='inline_code'>v1</span> and <span class='inline_code'>v2</span> base on <span class='inline_code'>time</span></a></div>
+<div class='search-div' id='loadSoundBank'><a href='sounds.html#6'>loadSoundBank(name)&nbsp;-&nbsp;Loads a FMOD sound bank.</a></div>
+<div class='search-div' id='loadarray'><a href='system.html#86'>loadarray(assetname)&nbsp;-&nbsp;Returns an <span class='inline_code'>array</span> of <span class='inline_code'>strings</span> from a file.</a></div>
+<div class='search-div' id='loadtsvarray'><a href='system.html#85'>loadtsvarray(assetname)&nbsp;-&nbsp;Returns an array of a .tsv file.</a></div>
+<div class='search-div' id='loadtsvtable'><a href='system.html#84'>loadtsvtable(assetname,percents=false)&nbsp;-&nbsp;Returns a table of a <span class='inline_code'>.tsv</span> file.</a></div>
+<div class='search-div' id='loglevel'><a href='debug_functions.html#13'>loglevel(level)&nbsp;-&nbsp;Sets the current logging output level.</a></div>
+<div class='search-div' id='max'><a href='math_functions.html#14'>max(num1, num2)&nbsp;-&nbsp;Returns the highest of <span class='inline_code'>num1</span> and <span class='inline_code'>num2</span></a></div>
+<div class='search-div' id='microtime'><a href='system.html#74'>microtime()&nbsp;-&nbsp;Returns the number of milliseconds seconds the game has been running.</a></div>
+<div class='search-div' id='min'><a href='math_functions.html#13'>min(num1, num2)&nbsp;-&nbsp;Returns the lowest of <span class='inline_code'>num1</span> and <span class='inline_code'>num2</span></a></div>
+<div class='search-div' id='null'><a href='dinky_types.html#2'>null&nbsp;-&nbsp;A null or empty value.</a></div>
+<div class='search-div' id='objectAlpha'><a href='object_functions.html#36'>objectAlpha(actor,alpha) | objectAlphaTo(object,alpha,time[,curve])&nbsp;-&nbsp;Sets the objects alpha.</a></div>
+<div class='search-div' id='objectAt'><a href='actor_functions.html#17'>objectAt(object,pos)&nbsp;-&nbsp;TBD</a></div>
+<div class='search-div' id='objectAttachToLayer'><a href='object_functions.html#47'>objectAttachToLayer(object,layer)&nbsp;-&nbsp;Attaches an object to a parallax layer.</a></div>
+<div class='search-div' id='objectForID'><a href='game_functions.html#8'>objectForID(id)&nbsp;-&nbsp;Returns a object <span class='inline_code'>table</span> for the given <span class='inline_code'>int</span> id.</a></div>
+<div class='search-div' id='objectHidden'><a href='object_functions.html#9'>objectHidden(object,state)| objectHidden(object)&nbsp;-&nbsp;Sets or returns an objects hidden state.</a></div>
+<div class='search-div' id='objectHotspot'><a href='object_functions.html#14'>objectHotspot(object, lower_left, upper_right) | actorHotspot(actor, lower_left, upper_right)&nbsp;-&nbsp;Sets to rect for the actor or object hotspot centered on the position.</a></div>
+<div class='search-div' id='objectOffset'><a href='object_functions.html#31'>objectOffset(object,point) | objectOffsetTo(object,point,time) | objectOffsetTo(object,point,time,curve)&nbsp;-&nbsp;Sets the objects offset. The offset does not change render or sorting order.</a></div>
+<div class='search-div' id='objectPosition'><a href='object_functions.html#18'>objectPosition(object,point|object|actor)&nbsp;-&nbsp;Returns of sets the position of an objct</a></div>
+<div class='search-div' id='objectScale'><a href='object_functions.html#34'>objectScale(actor,scale) | objectScaleTo(object,scale,time) | objectScaleTo(object,scale,time,curve)&nbsp;-&nbsp;Sets the objects scale.</a></div>
+<div class='search-div' id='objectState'><a href='object_functions.html#6'>objectState(object,state[,instant])| objectState(object)&nbsp;-&nbsp;Plays the animation <span class='inline_code'>state</span> and sets the internal <span class='inline_code'>state</span> to that.</a></div>
+<div class='search-div' id='objectTouchable'><a href='object_functions.html#10'>objectTouchable(object,state)| objectTouchable(object)&nbsp;-&nbsp;Sets or returns an objects hidden state.</a></div>
+<div class='search-div' id='objectUseDir'><a href='object_functions.html#12'>objectUseDir(object)&nbsp;-&nbsp;Returns the use direction, as defined in Wimpy.</a></div>
+<div class='search-div' id='objectUseDir2'><a href='object_functions.html#13'>objectUseDir2(object)&nbsp;-&nbsp;Returns the secondary use direction, as defined in Wimpy.</a></div>
+<div class='search-div' id='objectUseLighting'><a href='object_functions.html#52'>objectUseLighting(actor|object, state)&nbsp;-&nbsp;Sets an <span class='inline_code'>object</span> to be lit by <span class='inline_code'>room</span> lighting.</a></div>
+<div class='search-div' id='objectUsePos'><a href='object_functions.html#38'>objectUsePos(actor,pos[,facing]) | objectUsePos(actor[,facing])&nbsp;-&nbsp;Sets or returns the use position for an objct.</a></div>
+<div class='search-div' id='objectUsePos2'><a href='object_functions.html#40'>objectUsePos2(actor,pos) | objectUsePos2(actor)&nbsp;-&nbsp;Sets or returns the use position for an objct.</a></div>
+<div class='search-div' id='onKeyYack'><a href='yacks.html#8'>onKeyYack(key, flags)&nbsp;-&nbsp;Called when a key is pressed while yack choices are showing.</a></div>
+<div class='search-div' id='ord'><a href='math_functions.html#7'>ord(string)&nbsp;-&nbsp;Converts the first character of a <span class='inline_code'>string</span> into an ascii <span class='inline_code'>int</span></a></div>
+<div class='search-div' id='overlayColor'><a href='game_functions.html#2'>overlayColor(color)&nbsp;-&nbsp;Sets the screen overlay color.</a></div>
+<div class='search-div' id='overlayColorTo'><a href='game_functions.html#4'>overlayColorTo&nbsp;-&nbsp;Changes the overlay to <span class='inline_code'>color</span> over <span class='inline_code'>time</span> seconds.</a></div>
+<div class='search-div' id='overlayFlashColor'><a href='game_functions.html#3'>overlayFlashColor(color,time)&nbsp;-&nbsp;Flashes an overlay <span class='inline_code'>color</span> for <span class='inline_code'>time</span> seconds.</a></div>
+<div class='search-div' id='pauseAllSounds'><a href='sounds.html#12'>pauseAllSounds(group="master", state)&nbsp;-&nbsp;pauses all sounds in the <span class='inline_code'>group</span></a></div>
+<div class='search-div' id='pauseGame'><a href='game_functions.html#14'>pauseGame([state])&nbsp;-&nbsp;pauses the game or returns the pause state.</a></div>
+<div class='search-div' id='pickupObject'><a href='gamesystem_comands.html#6'>pickupObject(object, actor=null)&nbsp;-&nbsp;Picks up an inventory object.</a></div>
+<div class='search-div' id='playAnimation'><a href='actor_functions.html#7'>playAnimation(actor,animation[,loop])&nbsp;-&nbsp;Plays the animation <span class='inline_code'>animation</span> and loops is set.</a></div>
+<div class='search-div' id='playAnimation'><a href='object_functions.html#8'>playAnimation(object,animation[,loop])&nbsp;-&nbsp;Plays the animation <span class='inline_code'>animation</span> and loops is set.</a></div>
+<div class='search-div' id='playSound'><a href='sounds.html#13'>playSound(name|sound_id[,global])&nbsp;-&nbsp;plays a sound given a <span class='inline_code'>name</span> or <span class='inline_code'>sound_id</span></a></div>
+<div class='search-div' id='playSoundAt'><a href='sounds.html#15'>playSoundAt(sound_uid,point)&nbsp;-&nbsp;Plays a sounds at a location.</a></div>
+<div class='search-div' id='playSoundVolume'><a href='sounds.html#14'>playSoundVolume(sound_uid,volume)&nbsp;-&nbsp;Plays a sound at a specified <span class='inline_code'>volume</span></a></div>
+<div class='search-div' id='point'><a href='dinky_types.html#6'>point&nbsp;-&nbsp;A point value of two floats.</a></div>
+<div class='search-div' id='pow'><a href='math_functions.html#11'>pow(num1,num2)&nbsp;-&nbsp;Returns <span class='inline_code'>num1</span> to the power of <span class='inline_code'>num2</span></a></div>
+<div class='search-div' id='print'><a href='core.html#6'>print([value, ...])&nbsp;-&nbsp;Prints a string or list of values to the debug console.</a></div>
+<div class='search-div' id='printlog'><a href='debug_functions.html#14'>printlog(level, value, [value, ...])&nbsp;-&nbsp;Prints to the debug console at a log level of <span class='inline_code'>level</span></a></div>
+<div class='search-div' id='quitGame'><a href='game_functions.html#21'>quitGame()&nbsp;-&nbsp;Quits the game and saves all Pref files.</a></div>
+<div class='search-div' id='quitgame'><a href='system.html#2'>quitgame()&nbsp;-&nbsp;Quits the game cleanly.</a></div>
+<div class='search-div' id='random'><a href='random.html#2'>random(start,end)&nbsp;-&nbsp;Returns a random number between <span class='inline_code'>start</span> and <span class='inline_code'>end</span> inclusively.</a></div>
+<div class='search-div' id='randomfrom'><a href='random.html#5'>randomfrom(array|table) | randomfrom(item, item, ...)&nbsp;-&nbsp;Returns a random element from a <span class='inline_code'>table</span> or <span class='inline_code'>array</span> or a item from a list.</a></div>
+<div class='search-div' id='randomodds'><a href='random.html#4'>randomodds(odds)&nbsp;-&nbsp;Returns <span class='inline_code'>true</span> or <span class='inline_code'>false</span> based on the <span class='inline_code'>odds</span></a></div>
+<div class='search-div' id='randomseed'><a href='random.html#3'>randomseed(seed) | randomseed()&nbsp;-&nbsp;Seeds the random number generator with 'seed' or returns the current seed</a></div>
+<div class='search-div' id='refreshUI'><a href='game_functions.html#10'>refreshUI(state)&nbsp;-&nbsp;Causes the game UI to refresh.</a></div>
+<div class='search-div' id='regexcapture'><a href='regular_expressions.html#31'>regexcapture&nbsp;-&nbsp;Captures matches in a previously compiled regex</a></div>
+<div class='search-div' id='regexcaptureall'><a href='regular_expressions.html#32'>regexcaptureall&nbsp;-&nbsp;Capture all the matches in a string to an array</a></div>
+<div class='search-div' id='regexcompile'><a href='regular_expressions.html#29'>regexcompile&nbsp;-&nbsp;Compiles a regular expression for future use</a></div>
+<div class='search-div' id='regexfree'><a href='regular_expressions.html#33'>regexfree&nbsp;-&nbsp;Release a previously compiled regex</a></div>
+<div class='search-div' id='regexmatch'><a href='regular_expressions.html#30'>regexmatch&nbsp;-&nbsp;Returns the number of matches found.</a></div>
+<div class='search-div' id='registerVerbs'><a href='gamesystem_comands.html#2'>registerVerbs(object)&nbsp;-&nbsp;Call if you add or remove verbs outside of room.preEnter()</a></div>
+<div class='search-div' id='removeInventory'><a href='gamesystem_comands.html#5'>removeInventory(object, actor=null)&nbsp;-&nbsp;Removes an object from the actors inventory and refreshes the UI</a></div>
+<div class='search-div' id='removeTrigger'><a href='room_functions.html#13'>removeTrigger(object|id)&nbsp;-&nbsp;Removed a trigger from the room</a></div>
+<div class='search-div' id='return_'><a href='dinky_statements.html#11'>return | return `expr`&nbsp;-&nbsp;Returns from a <span class='inline_code'>function</span> passing an optional value</a></div>
+<div class='search-div' id='roomForID'><a href='game_functions.html#7'>roomForID(id)&nbsp;-&nbsp;Returns a room <span class='inline_code'>table</span> for the given <span class='inline_code'>int</span> id.</a></div>
+<div class='search-div' id='roomLayer'><a href='room_functions.html#18'>roomLayer(room, layer, state)&nbsp;-&nbsp;Show or hide a room layer.</a></div>
+<div class='search-div' id='roomLightEnable'><a href='room_functions.html#22'>roomLightEnable(id, state)&nbsp;-&nbsp;Enables or disables a room light.</a></div>
+<div class='search-div' id='roomLightPosition'><a href='room_functions.html#21'>roomLightPosition(id, pos|object)&nbsp;-&nbsp;Set the position of a light for a room.</a></div>
+<div class='search-div' id='roomSize'><a href='room_functions.html#5'>roomSize(room)&nbsp;-&nbsp;Returns the size of a room based on it's image size.</a></div>
+<div class='search-div' id='roomToScreen'><a href='room_functions.html#6'>roomToScreen(point)&nbsp;-&nbsp;Returns the screen coordinates of a <span class='inline_code'>point</span> in the current room.</a></div>
+<div class='search-div' id='roottable'><a href='core.html#3'>roottable()&nbsp;-&nbsp;Returns the root table</a></div>
+<div class='search-div' id='sayLine'><a href='actor_functions.html#15'>sayLine() | sayLine(text) | sayLine(actor,text)&nbsp;-&nbsp;Causes the actor to start talking using <span class='inline_code'>text</span>.</a></div>
+<div class='search-div' id='screenToRoom'><a href='room_functions.html#7'>screenToRoom(point)&nbsp;-&nbsp;Returns the room coordinates of a <span class='inline_code'>point</span> on the screen.</a></div>
+<div class='search-div' id='setdelegate'><a href='core.html#4'>setdelegate(table, table2)&nbsp;-&nbsp;Sets a delegate for the table for when a <span class='inline_code'>key</span> doesn't exist.</a></div>
+<div class='search-div' id='setprivatepref'><a href='prefs.html#81'>setprivatepref(key, value)&nbsp;-&nbsp;Sets the private pref for <span class='inline_code'>key</span> to <span class='inline_code'>value</span></a></div>
+<div class='search-div' id='setuserpref'><a href='prefs.html#79'>setuserpref(key, value)&nbsp;-&nbsp;Sets the user pref for <span class='inline_code'>key</span> to <span class='inline_code'>value</span></a></div>
+<div class='search-div' id='sin'><a href='math_functions.html#9'>sin(angle)&nbsp;-&nbsp;Returns the <span class='inline_code'>sin</span> of an angle.</a></div>
+<div class='search-div' id='sizeof'><a href='core.html#7'>sizeof(value)&nbsp;-&nbsp;Returns the size of a <span class='inline_code'>string</span>, <span class='inline_code'>array</span> or <span class='inline_code'>table</span></a></div>
+<div class='search-div' id='slideInventory'><a href='gamesystem_comands.html#2'>slideInventory(object)&nbsp;-&nbsp;slides an inventory item on and off screen is the inventory is not showing.</a></div>
+<div class='search-div' id='soundListenerAt'><a href='sounds.html#16'>soundListenerAt(point)&nbsp;-&nbsp;Sets the sound listener position.</a></div>
+<div class='search-div' id='soundMixVolume'><a href='sounds.html#2'>soundMixVolume(name,volume) | soundMixVolume(name)&nbsp;-&nbsp;Sets or gets the mix volume for a group of sounds.</a></div>
+<div class='search-div' id='soundParam'><a href='sounds.html#7'>soundParam(sound_uid,name,value)&nbsp;-&nbsp;Sets a FMOD sounds parameter for a given playing <span class='inline_code'>sound_uid</span>.</a></div>
+<div class='search-div' id='soundVolume'><a href='sounds.html#3'>soundVolume(name,volume) | soundMixVolume(name)&nbsp;-&nbsp;Sets or gets the volume for a group of sounds.</a></div>
+<div class='search-div' id='startYack'><a href='yacks.html#15'>startYack(actor1,actor1,filename)&nbsp;-&nbsp;Starts a .yack file conversation between 2 actors.</a></div>
+<div class='search-div' id='startglobalthread'><a href='debug_functions.html#3'>startglobalthread/startthread([this_table, ]function, [param, ... ])&nbsp;-&nbsp;Starts a new thread using <span class='inline_code'>function</span> and passing the <span class='inline_code'>params</span></a></div>
+<div class='search-div' id='stopAllSounds'><a href='sounds.html#11'>stopAllSounds(group="master")&nbsp;-&nbsp;Stops all sounds in a given <span class='inline_code'>group</span>.</a></div>
+<div class='search-div' id='stopLocalSounds'><a href='sounds.html#10'>stopLocalSounds()&nbsp;-&nbsp;Stops all sounds not started with GLOBAL flag.</a></div>
+<div class='search-div' id='stopSound'><a href='sounds.html#8'>stopSound(sound_uid)&nbsp;-&nbsp;Stops a playing sound given a <span class='inline_code'>sound_uid</span>.</a></div>
+<div class='search-div' id='stopthread'><a href='debug_functions.html#4'>stopthread(thread_id)&nbsp;-&nbsp;Stops a thread based on a unique thread id.</a></div>
+<div class='search-div' id='strcount'><a href='strings.html#41'>strcount(string, needle)&nbsp;-&nbsp;Returns the number of times <span class='inline_code'>needle</span> is found in <span class='inline_code'>string</span>.</a></div>
+<div class='search-div' id='strendswith'><a href='strings.html#36'>strendswith(string, tail)&nbsp;-&nbsp;Returns <span class='inline_code'>true</span> if <span class='inline_code'>string</span> ends with <span class='inline_code'>tail</span></a></div>
+<div class='search-div' id='strfind'><a href='strings.html#39'>strfind(string, needle)&nbsp;-&nbsp;Returns zero based index of <span class='inline_code'>needle</span> in <span class='inline_code'>string</span></a></div>
+<div class='search-div' id='strfindi'><a href='strings.html#40'>strfindi(string, needle)&nbsp;-&nbsp;Returns zero based index of case insensitive <span class='inline_code'>needle</span> in <span class='inline_code'>string</span></a></div>
+<div class='search-div' id='strfirst'><a href='strings.html#37'>strfirst(string)&nbsp;-&nbsp;Returns the first character of a <span class='inline_code'>string</span></a></div>
+<div class='search-div' id='strguid'><a href='strings.html#51'>strguid(type, length=32)&nbsp;-&nbsp;Returns a random GUID of <span class='inline_code'>type</span> and <span class='inline_code'>length</span></a></div>
+<div class='search-div' id='strhash'><a href='strings.html#46'>strhash(string)&nbsp;-&nbsp;Returns 32-bit hash of the string</a></div>
+<div class='search-div' id='string'><a href='dinky_types.html#5'>string&nbsp;-&nbsp;a string of characters</a></div>
+<div class='search-div' id='stringreplace'><a href='strings.html#34'>stringreplace(string, find, replace)&nbsp;-&nbsp;Returns a copy of string with <span class='inline_code'>find</span> replaced with <span class='inline_code'>replace</span></a></div>
+<div class='search-div' id='strjoin'><a href='strings.html#49'>strjoin(array, glue)&nbsp;-&nbsp;Returns a <span class='inline_code'>string</span> of an array of <span class='inline_code'>strings</span> joined with the <span class='inline_code'>glue</span></a></div>
+<div class='search-div' id='strlast'><a href='strings.html#38'>strlast(string)&nbsp;-&nbsp;Returns the last character of a string</a></div>
+<div class='search-div' id='strlen'><a href='strings.html#43'>strlen(string)&nbsp;-&nbsp;Returns the length of the string</a></div>
+<div class='search-div' id='strlines'><a href='strings.html#50'>strlines(string)&nbsp;-&nbsp;Returns an <span class='inline_code'>array</span> of <span class='inline_code'>strings</span> seperated by cr or lf.</a></div>
+<div class='search-div' id='strlower'><a href='strings.html#44'>strlower(string)&nbsp;-&nbsp;Returns a new string in all lowercase.</a></div>
+<div class='search-div' id='strseperate'><a href='strings.html#48'>strseperate(string, markers)&nbsp;-&nbsp;Returns an <span class='inline_code'>array</span> of <span class='inline_code'>strings</span> seperated by any characters in <span class='inline_code'>markers</span></a></div>
+<div class='search-div' id='strslice'><a href='strings.html#42'>strslice(string, start, end)&nbsp;-&nbsp;Returns a <span class='inline_code'>string</span> sliced from index <span class='inline_code'>start</span> to index <span class='inline_code'>end</span> inclusivly.</a></div>
+<div class='search-div' id='strsplit'><a href='strings.html#47'>strsplit(string, marker)&nbsp;-&nbsp;Splits a <span class='inline_code'>string</span> into an array of <span class='inline_code'>strings</span></a></div>
+<div class='search-div' id='strstartswith'><a href='strings.html#35'>strstartswith(string, head)&nbsp;-&nbsp;Returns <span class='inline_code'>true</span> if <span class='inline_code'>string</span> starts with <span class='inline_code'>head</span></a></div>
+<div class='search-div' id='strtime'><a href='system.html#76'>strtime(format, unixtime)&nbsp;-&nbsp;Returns a string of <span class='inline_code'>unixtime</span> using <span class='inline_code'>format</span></a></div>
+<div class='search-div' id='strupper'><a href='strings.html#45'>strupper(string)&nbsp;-&nbsp;Returns a new string in all uppercase.</a></div>
+<div class='search-div' id='syncprefs'><a href='prefs.html#83'>syncprefs()&nbsp;-&nbsp;Syncs user and private prefs to the disk or cloud (if supported).</a></div>
+<div class='search-div' id='systemtime'><a href='system.html#75'>systemtime()&nbsp;-&nbsp;Returns the unix time for the device running the game.</a></div>
+<div class='search-div' id='table'><a href='dinky_types.html#7'>table&nbsp;-&nbsp;A table contains multiple <span class='inline_code'>key</span> and <span class='inline_code'>value</span> entries.</a></div>
+<div class='search-div' id='threadid'><a href='debug_functions.html#6'>threadid()&nbsp;-&nbsp;Returns the unique thread id of the currently running thread.</a></div>
+<div class='search-div' id='threadpausable'><a href='debug_functions.html#9'>threadpausable(thread_id, state)&nbsp;-&nbsp;Marks a thread as pausable to unpausebale based on <span class='inline_code'>state</span></a></div>
+<div class='search-div' id='threadpause'><a href='debug_functions.html#7'>threadpause(thread_id, state)&nbsp;-&nbsp;Pauses or unpauses a thread based on 'state'.</a></div>
+<div class='search-div' id='threadpauseglobal'><a href='debug_functions.html#8'>threadpauseglobal(state)&nbsp;-&nbsp;Pauses or unpauses all global threads</a></div>
+<div class='search-div' id='threadrunning'><a href='debug_functions.html#5'>threadrunning(thread_id)&nbsp;-&nbsp;Returns <span class='inline_code'>true</span> if the thread is running.</a></div>
+<div class='search-div' id='trace'><a href='debug_functions.html#2'>trace(state)&nbsp;-&nbsp;Turns on or off the tracing of source code.</a></div>
+<div class='search-div' id='useTranslation'><a href='translation_comands.html#2'>useTranslation(language)&nbsp;-&nbsp;Change languages</a></div>
+<div class='search-div' id='validateSound'><a href='sounds.html#5'>validateSound(path)&nbsp;-&nbsp;Returns <span class='inline_code'>true</span> if the sound <span class='inline_code'>path</span> exists in the FMOD project.</a></div>
+<div class='search-div' id='walkboxHidden'><a href='room_functions.html#19'>walkboxHidden(name, state)&nbsp;-&nbsp;Sets a walkbox hidden state to <span class='inline_code'>state</span></a></div>
+<div class='search-div' id='watchvar'><a href='debug_functions.html#17'>watchvar(var)&nbsp;-&nbsp;Opens up a debug window that live-watches the variable allowing values to be changed.</a></div>
+<div class='search-div' id='while'><a href='dinky_statements.html#3'>while(expr) { ... }&nbsp;-&nbsp;</a></div>
+<div class='search-div' id='yackActor1'><a href='yacks.html#3'>yackActor1()&nbsp;-&nbsp;Returns the first party in a yack conversation.</a></div>
+<div class='search-div' id='yackActor2'><a href='yacks.html#4'>yackActor2()&nbsp;-&nbsp;Returns the second party in a yack conversation.</a></div>
+<div class='search-div' id='yackChoice'><a href='yacks.html#17'>yackChoice()&nbsp;-&nbsp;Call when the player makes a choice in a .yack file.</a></div>
+<div class='search-div' id='yackChoices'><a href='yacks.html#6'>yackChoices()&nbsp;-&nbsp;Returns the number of yack choices showing</a></div>
+<div class='search-div' id=''><a href='dinky_expressions.html#5'>|, &&nbsp;-&nbsp;Bit-wise</a></div>
+<div class='search-div' id=''><a href='dinky_expressions.html#3'>~, !&nbsp;-&nbsp;Unary operators</a></div></div><p class='copyright'>Copyright 2020 Terrible Toybox, Inc. All Rights Reserved.</p></body></html>

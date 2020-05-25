@@ -1,0 +1,20 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+=== init ===
+-> exit
+
+== start ===
+
+delores: SAY(11998,"Hi there")
+other: SAY(11999,"Hi back")
+
+=== main ===
+
+=== done ===
+-> exit
+

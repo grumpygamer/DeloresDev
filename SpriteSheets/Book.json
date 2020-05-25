@@ -1,0 +1,20 @@
+{"frames": {
+
+"background":
+{
+	"frame": {"x":3,"y":3,"w":640,"h":360},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":640,"h":360},
+	"sourceSize": {"w":640,"h":360}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "Book.png",
+	"format": "RGBA8888",
+	"size": {"w":646,"h":366},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:3f62445e0d4afb98d4a2e8597d03e3ac:39e4011f5eedb50656dfa2bc5829cb8f:454da985140f4760c3a17fcd24a550fc$"
+}
+}

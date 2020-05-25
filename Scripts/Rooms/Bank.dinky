@@ -1,0 +1,203 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+DEFINE_ROOM("Bank", {
+	music_pool = "town"
+	ambient_sound = SOUNDID(ambient_inside)
+	open = NO
+
+	// --------------------------------------------------------------------------------------------
+	// General room functions
+
+	// --------------------------------------------------------------------------------------------
+	// Enter/Exit code
+
+	enter = function(from_door=null) {
+
+		if (GLOBAL(hired_lenore_state) >= 1) {
+			GLOBAL(hired_lenore_state) =  2
+			actorAt(lenore, Bank, bankTellerSpot)
+			actorUsePos(lenore, Bank.bankTellerTalkSpot)
+			actorUsePos2(lenore, Bank.bankTellerPhotoSpot)
+			actorAt(peter, Bank, PeterSpot)
+			actorUsePos(peter, Bank.PeterTalkSpot)
+			actorLockFacing(peter, DIR_LEFT)
+			playAnimation(peter, "sit")
+			actorAt(chuckie, Bank, ChuckieSpot)
+			actorUsePos(chuckie, Bank.ChuckieTalkSpot)
+			playAnimation(chuckie, "sit")
+			objectState(leatherChair, "here")
+			objectState(guestChair, "gone")
+			objectState(trashcan, "fire")
+			objectState(trashcanFire, "fire")
+			objectTouchable(trashcan, YES)
+			objectUseLighting(leatherChair, YES)
+		} else {
+			objectState(guestChair, "here")
+			objectState(leatherChair, "gone")
+			objectState(trashcan, "gone")
+			objectState(trashcanFire, "gone")
+		}
+
+		local star = 0
+		local starOffset = 114
+		for (local i = 1; i <= 2; i += 1) {
+			star = this["star"+i]
+			objectOffset(star,point(starOffset,0))
+			// obj, fadeRange1, fadeRange2, alphaRange1, alphaRange2
+			twinkleStar(star, 0.01, 0.1, random(0,0.3), random(0.6, 1))
+		}
+		for (local i = 1; i <= 1; i += 1) {
+			star = this["starB"+i]
+			objectOffset(star,point(starOffset,0))
+			// obj, fadeRange1, fadeRange2, alphaRange1, alphaRange2
+			twinkleStar(star, 0.05, 0.3, 0, 1)
+		}
+	}
+
+	exit = function() {
+	}
+
+	// --------------------------------------------------------------------------------------------
+	// Objects
+
+	// --------------------------------------------------------------------------------------------
+	wallClock = DEFINE_OBJECT({
+		name = TEXT(11668,"clock")
+		photo_reach = REACH_HIGH
+		bad_story = [ "tiny_clock", TEXT(11669,"I don't think that clock is tiny enough.") ]
+
+		VERB(lookat) {
+			sayLine(SAY(11655,"It's just after five o'clock."))
+		}
+
+
+	})
+
+	// --------------------------------------------------------------------------------------------
+	bankPainting = DEFINE_OBJECT({
+		name = TEXT(11670,"painting")
+		photo_reach = REACH_HIGH
+
+		VERB(lookat) {
+			sayLine(SAY(11656,"I think I've seen this painting somewhere before."))
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	bankSign = DEFINE_OBJECT({
+		name = TEXT(11671,"sign")
+		photo_reach = REACH_HIGH
+
+		VERB(lookat) {
+			sayLine(SAY(11657,"Impressive!"))
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	frontDoor = DEFINE_OBJECT({
+		name = TEXT(11672,"door")
+		photo_name = TEXT(11673,"the bank door")
+		door_verbs = YES
+		verb_use_text = TEXT(11674,"Leave")
+		verb_use_desc = TEXT(11675,"Leave the bank")
+		to_door = @MainStreet.bankDoor
+	})
+
+	// --------------------------------------------------------------------------------------------
+	flyerHolder = DEFINE_OBJECT({
+		name = TEXT(11676,"bank flyers")
+		photo_name = TEXT(11677,"bank flyers")
+		photo_reach = REACH_HIGH
+
+		VERB(lookat) {
+			if (state == "full") {
+				sayLine(SAY(11658,"It's a promotional bank flyer."))
+			} else {
+				sayLine(SAY(11659,"No bank flyers left."))
+			}
+		}
+//		VERB(pickup) {
+//			objectState(this, "gone")
+//		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	strangeDevice = DEFINE_OBJECT({
+		name = TEXT(11678,"“Philipp's Dangerous Dövice”")
+		looked_at = NO
+		bad_story = [ "mansion", TEXT(11679,"The demolition photo needs to be way more dramatic.") ]
+
+		VERB(lookat) {
+			looked_at = YES
+			sayLine(SAY(11660,"It's Uncle Chuck's “Philipp's Dangerous Dövice.”"))
+			breakwhiletalking()
+			sayLine(SAY(11661,"I guess the banker is keeping it safe so his repossession doesn't turn to radioactive dust."))
+		}
+
+		VERB(pickup) {
+			pickupObject(Inventory.strangeDevice)
+			objectState(this, "gone")
+			if (!looked_at) verb_lookat()
+		}
+	})
+
+	leatherChair = {}
+	guestChair = {}
+	// --------------------------------------------------------------------------------------------
+	phone = DEFINE_OBJECT({
+		name = TEXT(11680,"bank phone")
+		for_story = "history_of_phone"
+		default_verb = "verb_dial"
+
+		VERB(lookat) {
+			sayLine(SAY(11662,"It's an official bank phone."))
+		}
+
+		VERB(dial) {
+			sayLine(SAY(11663,"I probably shouldn't, someone with important bank business might call."))
+		}
+	})
+
+
+	trashcan = DEFINE_OBJECT({
+		for_story = "trash"
+		name = TEXT(11681,"trash can")
+		is_trash = YES
+		bad_story = [ "disgusting", TEXT(11682,"It's a bit scary, but not really disgusting.") ]
+
+		function stateChange() {
+			if (state == "fire") {
+				this._soundid <- playSoundAt(SOUNDID(trashFire), this)
+				roomLightEnable(4, YES)
+			} else {
+				stopSound(this?._soundid)
+				roomLightEnable(4, NO)
+			}
+		}
+
+		VERB(lookat) {
+			sayLine(SAY(11664,"It's a burning trash can!"), ONCE(SAY(11665,"In a bank!")))
+		}
+		VERB(kick) {
+			inputOff(@{
+				playAnimation(delores,"kick")
+				breaktime(0.5)
+				sayLine(SAY(11666,"Ouch! My toe!"))
+			})
+		}
+		VERB(pickup) {
+			sayLine(SAY(11667,"That's too hot to put in my inventory-hole."))
+		}
+	})
+	trashcanFire = {}
+	star1 = {}
+	star2 = {}
+	starB1 = {}
+
+// NEW_OBJECT_HERE
+})

@@ -1,0 +1,197 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+addfolder("Scripts")
+addfolder("Scripts/Rooms")
+addfolder("Scripts/Defines")
+addfolder("Scripts/Helpers")
+addfolder("Scripts/Yacks")
+addfolder("Animation")
+addfolder("Wimpy")
+addfolder("Data")
+
+import("Settings.dinky")
+import("Globals.dinky")
+import("DefineSounds.dinky")
+import("DefineRooms.dinky")
+import("DefineYacks.dinky")
+import("TranslationHelpers.dinky")
+import("SystemHelpers.dinky")
+import("VerbHelpers.dinky")
+import("ActorHelpers.dinky")
+import("DefineActors.dinky")
+import("UIHelpers.dinky")
+import("InventoryHelpers.dinky")
+import("DebugHelpers.dinky")
+import("YackHelpers.dinky")
+import("KeyHelpers.dinky")
+import("CutsceneHelpers.dinky")
+import("Helpers.dinky")
+import("SoundHelpers.dinky")
+import("Options.dinky")
+import("DustHelpers.dinky")
+import("IdleHelpers.dinky")
+
+addconsolebutton(0xFF0000, "Trace", "trace")
+addconsolebutton(0x0040FF, "Threads", "show threads")
+addconsolebutton(0x808080, "inventory", "watch _g_inventory")
+
+function clickedAt(screen_pos) {
+}
+
+function keyDown(key, flags) {
+	if (key == 'i') {
+		if (isInventoryShowing()) {
+			collapesInventory()
+		} else {
+			expandInventory()
+		}
+	}
+}
+
+// Name must remain the same so the engine can read it.
+SETTING(debugScenarioList) <- [
+   	"Opening"
+   	"Nickel w/Camera"
+   	"Bathroom Power On"
+   	"Photograph Ransome Poster"
+   	"Rotate Valve"
+   	"Blow up mansion"
+   	"Lenore in bank"
+]
+
+local last_font = -1
+function setFont() {
+	if (SETTING(small_font) == last_font) return
+	last_font = SETTING(small_font)
+
+	if (SETTING(small_font)) {
+		SAYLINE_FONT <- SMALL_SAYLINE_FONT
+		YACK_FONT <- SMALL_YACK_FONT
+		SETTING(yackSpacing) = point(0,32)
+	} else {
+		SAYLINE_FONT <- BIG_SAYLINE_FONT
+		YACK_FONT <- BIG_YACK_FONT
+		SETTING(yackSpacing) = point(0,48)
+	}
+}
+
+function main() {
+	defineAllRooms()
+	defineAllActors()
+	defineAllYacks()
+
+	// Create new Translations_de.tsv, Translations_fr.tsv, Translations_it.tsv, etc files and switch to them using useTranslation("de")
+	// For extra credit, add an option to Options.dinky and switch on the fly.
+
+	useTranslation("en")		// Uncomment to start using Translations_en.tsv
+
+	randomseed(null)
+	print("Running boot.dinky...")
+
+	FONT_OPTIONS <- createFont("Savior1.ttf", 16)
+	// fontAddImage(FONT_OPTIONS, "●", UI_SHEET+":text_rarrow", point(0,1), 1)
+	// fontAddImage(FONT_OPTIONS, "™", UI_SHEET+":text_tm", point(0,0), 2)
+
+	FONT_SYSTEM <- createFont("Savior1.ttf", 16)
+	HOVER_FONT <- createFont("Savior1.ttf", 16)
+	fontProps(HOVER_FONT, { "baseLine": -3 })
+
+	SMALL_SAYLINE_FONT <- createFont("NokiaSmallBold.ttf", 16)
+	SMALL_YACK_FONT <- createFont("NokiaSmallBold.ttf", 16)
+	fontProps(SMALL_YACK_FONT, { "baseLine": -3 })
+
+	// BIG_SAYLINE_FONT <- createFont("Pixellari-twp.ttf", 16)
+	// BIG_YACK_FONT <- createFont("Pixellari-twp.ttf", 16)
+	// fontProps(BIG_YACK_FONT, { "baseLine": -3 })
+
+	BIG_SAYLINE_FONT <- createFont("makoFontBold.ttf", 16)
+	BIG_YACK_FONT <- createFont("makoFontBold.ttf", 16)
+	fontProps(BIG_YACK_FONT, { "baseLine": -3 })
+
+	setFont()
+
+	NOTE_FONT <- createFont("Savior1.ttf", 48)
+	fontAddImage(NOTE_FONT, "●", UI_SHEET+":text_rarrow", point(0,0), 1)
+	fontAddImage(NOTE_FONT, "✓", UI_SHEET+":text_checkmark_big", point(0,0), 1)
+
+	DEBUG_FONT <- createFont("Savior1.ttf", 16)
+	fontProps(DEBUG_FONT, { "baseLine": -3 })
+
+	NEWSPAPER_FONT <- createFont("SpecialElite.ttf", 16)
+
+	setSelectedActor(delores)
+
+	Note.createStories()
+
+	inputState(INPUT_ON)
+
+	showGearIcon(YES)
+
+	if (SETTING(debug)) {
+		expandInventory(YES)
+		if (DEBUG(scenario) == "Opening") {
+			startglobalthread(doOpening)
+			return
+		} else
+		if (DEBUG(scenario) == "Nickel w/Camera") {
+			pickupObject(Inventory.camera, YES)
+			pickupObject(Inventory.assignment, YES)
+			actorAt(selectedActor, Nickel, debugJumpSpot(Nickel))
+			cameraFollow(selectedActor)
+			return
+		} else
+		if (DEBUG(scenario) == "Bathroom Power On") {
+			Bathroom.has_power = YES
+			Bathroom.tried_switch = YES
+			// objectState(Bathroom.lightswitch, "on")
+			// objectState(Bathroom.bathroomDoor, "open")
+			YACK(received_stamps) = YES
+		} else
+		if (DEBUG(scenario) == "Photograph Ransome Poster") {
+			Bathroom.has_power = YES
+			Bathroom.tried_switch = YES
+			objectState(Bathroom.lightswitch, "on")
+			objectState(Bathroom.bathroomDoor, "open")
+			pickupObject(Inventory.glass, YES)
+			Inventory.glass.filledWith("water")
+		} else
+		if (DEBUG(scenario) == "Rotate Valve") {
+			pickupObject(Inventory.screwdriver, YES)
+			Diner.first_time = NO
+		} else
+		if (DEBUG(scenario) == "Blow up mansion") {
+			pickupObject(Inventory.strangeDevice, YES)
+			Inventory.strangeDevice.has_power = YES
+		} else
+		if (DEBUG(scenario) == "Lenore in bank") {
+			GLOBAL(hired_lenore_state) = 1
+		}
+		// Scenarios with no 'return' will fall through to here.
+		// Otherwise you need to put Delores in a room and do a cameraFollow(selectedActor), etc.
+		local room_name = getDebugSetting("startRoom", null)
+		if (room_name) {
+			local room = findRoom(room_name)
+			if (room) {
+				print("Starting in room ",room_name)
+				local start_pos = getDebugSetting("startPos", null)
+				actorAt(selectedActor, room, start_pos ? start_pos : debugJumpSpot(room))
+				cameraFollow(selectedActor)
+				pickupObject(Inventory.camera, YES)
+				pickupObject(Inventory.assignment, YES)
+				return
+			}
+		}
+	}
+
+	if (DEBUG(skip_intro)) {
+		startglobalthread(doOpening)
+	} else {
+		StartScreen.start()
+	}
+
+}

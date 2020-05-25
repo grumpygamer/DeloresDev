@@ -1,0 +1,1075 @@
+ambient_light: "{0.378749,0.593415,0.696078,1}"
+background: "background"
+name: "QuickiePalOutside"
+room_scale: 3
+sheet: "QuickiePalOutside"
+layers: [
+    {
+        name: "foreground"
+        parallax: 1.25
+        zsort: -2
+    }
+    {
+        name: "hills"
+        parallax: 0.75
+        zsort: 1
+    }
+    {
+        name: "sky"
+        parallax: 0.25
+        zsort: 2
+    }
+]
+lights: [
+    {
+        color1: "{0.847059,0.780392,0.552941,0}"
+        color2: "{0,0,0,0}"
+        id: 0
+        iradius: 36
+        oradius: 72
+        rate: 0
+        clipping: ((0,0),(0,0))
+        pos: (26,107)
+    }
+    {
+        color1: "{0.848039,0.781885,0.552888,0}"
+        color2: "{0,0,0,0}"
+        id: 1
+        iradius: 43
+        oradius: 81
+        rate: 0
+        clipping: ((0,0),(0,0))
+        pos: (473,119)
+    }
+    {
+        color1: "{0.777946,0.857843,0.848764,0}"
+        color2: "{0,0,0,0}"
+        id: 2
+        iradius: 18
+        oradius: 36
+        rate: 0
+        clipping: ((-46,-38),(11,0))
+        pos: (190,122)
+    }
+    {
+        color1: "{0.784314,0.456642,0.399846,0}"
+        color2: "{0,0,0,0}"
+        id: 3
+        iradius: 48
+        oradius: 67
+        rate: 0
+        clipping: ((-54,-51),(48,0))
+        pos: (255,146)
+    }
+    {
+        color1: "{0.783953,0.882353,0.549308,0}"
+        color2: "{0,0,0,0}"
+        id: 4
+        iradius: 27
+        oradius: 46
+        rate: 0
+        clipping: ((0,0),(0,0))
+        pos: (335,128)
+    }
+    {
+        color1: "{0.95098,0.598176,0.433535,0}"
+        color2: "{0,0,0,0}"
+        id: 5
+        iradius: 17
+        oradius: 55
+        rate: 0
+        clipping: ((0,0),(0,0))
+        pos: (774,210)
+    }
+    {
+        color1: "{0.867647,0.777026,0.467849,0}"
+        color2: "{0,0,0,0}"
+        id: 6
+        iradius: 20
+        oradius: 31
+        rate: 0
+        clipping: ((0,0),(0,0))
+        pos: (302,122)
+    }
+]
+objects: [
+    {
+        name: "mainStreetDoor"
+        usedir: "DIR_LEFT"
+        zsort: 114
+        hotspot: ((-32,-154),(22,96))
+        pos: (9,147)
+        usepos: (14,-71)
+    }
+    {
+        name: "quickiePalEntrance"
+        usedir: "DIR_BACK"
+        zsort: 110
+        hotspot: ((-31,-30),(27,31))
+        pos: (337,140)
+        usepos: (0,-32)
+    }
+    {
+        name: "quickiePalDoor"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 111
+        animations: [
+            {
+                name: "closed"
+                frames: [
+                    "sliding_door_4"
+                    "sliding_door_3"
+                    "sliding_door_2"
+                    "sliding_door_1"
+                ]
+            }
+            {
+                name: "open"
+                frames: [
+                    "sliding_door_1"
+                    "sliding_door_2"
+                    "sliding_door_3"
+                    "sliding_door_4"
+                ]
+            }
+        ]
+        hotspot: ((-26,-29),(27,30))
+        pos: (337,141)
+        usepos: (0,-30)
+        usepos2: (-1,-55)
+    }
+    {
+        name: "bathroomDoor"
+        usedir: "DIR_RIGHT"
+        usedir2: "DIR_RIGHT"
+        zsort: 115
+        animations: [
+            {
+                name: "closed"
+                frames: [
+                ]
+            }
+            {
+                name: "open"
+                frames: [
+                    "bathroom_door"
+                ]
+            }
+        ]
+        hotspot: ((-8,-30),(13,34))
+        pos: (198,142)
+        usepos: (-2,-27)
+        usepos2: (-35,-31)
+    }
+    {
+        name: "vistaDoor"
+        usedir: "DIR_BACK"
+        zsort: 113
+        hotspot: ((158,82),(200,130))
+        pos: (596,115)
+        usepos: (168,87)
+    }
+    {
+        name: "quickiePalMovietron"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 113
+        hotspot: ((-19,-25),(20,21))
+        pos: (403,138)
+        usepos: (-2,-29)
+        usepos2: (0,-64)
+    }
+    {
+        name: "quickiePalOutsideBuilding"
+        prop: 1
+        zsort: 112
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "building"
+                ]
+            }
+        ]
+        pos: (337,172)
+    }
+    {
+        name: "quickiePalOutsideMainSign"
+        prop: 1
+        zsort: 104
+        animations: [
+            {
+                name: "sign1"
+                frames: [
+                    "sign1"
+                ]
+            }
+            {
+                name: "sign2"
+                frames: [
+                    "sign2"
+                ]
+            }
+            {
+                name: "sign3"
+                frames: [
+                    "sign3"
+                ]
+            }
+            {
+                name: "sign4"
+                frames: [
+                    "sign4"
+                ]
+            }
+            {
+                name: "sign5"
+                frames: [
+                    "sign5"
+                ]
+            }
+            {
+                name: "sign6"
+                frames: [
+                    "sign6"
+                ]
+            }
+            {
+                name: "sign7"
+                frames: [
+                    "sign7"
+                ]
+            }
+            {
+                name: "sign8"
+                frames: [
+                    "sign8"
+                ]
+            }
+            {
+                name: "sign0"
+                frames: [
+                ]
+            }
+            {
+                name: "default"
+                frames: [
+                ]
+            }
+        ]
+        pos: (310,212)
+    }
+    {
+        name: "openSign"
+        prop: 1
+        zsort: 108
+        animations: [
+            {
+                name: "on"
+                frames: [
+                    "front_signs_neon_text_en"
+                ]
+            }
+            {
+                name: "off"
+                frames: [
+                ]
+            }
+        ]
+        pos: (424,120)
+    }
+    {
+        name: "quickiePalOpenUnlitText"
+        prop: 1
+        zsort: 109
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "front_signs_text_en"
+                ]
+            }
+        ]
+        pos: (424,120)
+    }
+    {
+        name: "quickiePalStreetLights"
+        prop: 1
+        zsort: 98
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "street_lights"
+                ]
+            }
+        ]
+        pos: (263,159)
+    }
+    {
+        name: "quickiePalOutsideBadTube"
+        usedir: "DIR_BACK"
+        zsort: 109
+        animations: [
+            {
+                name: "gone"
+                frames: [
+                    "vacuum_tube_off"
+                ]
+            }
+        ]
+        hotspot: ((-8,-7),(7,10))
+        pos: (393,165)
+        usepos: (8,-56)
+    }
+    {
+        name: "quickiePalOutsideGoodTube"
+        usedir: "DIR_BACK"
+        zsort: 109
+        animations: [
+            {
+                name: "gone"
+                frames: [
+                    "vacuum_tube_on"
+                ]
+            }
+        ]
+        hotspot: ((-13,-7),(2,10))
+        pos: (399,166)
+        usepos: (2,-57)
+    }
+    {
+        name: "quickiePalOutsideGrate"
+        usedir: "DIR_RIGHT"
+        zsort: 111
+        hotspot: ((64,-30),(103,-16))
+        pos: (357,120)
+        usepos: (58,-23)
+    }
+    {
+        name: "quickiePalOutsideDoorLamp"
+        prop: 1
+        zsort: 105
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "door_lamp"
+                ]
+            }
+        ]
+        pos: (303,142)
+    }
+    {
+        name: "quickiePalOutsideBathroomSign"
+        usedir: "DIR_BACK"
+        zsort: 113
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "bathroom_sign"
+                ]
+            }
+        ]
+        hotspot: ((-2,14),(20,32))
+        pos: (182,148)
+        usepos: (9,-36)
+    }
+    {
+        name: "quickiePalOutsideRightStreetlight"
+        prop: 1
+        zsort: 98
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "right_street_light_lit"
+                ]
+            }
+        ]
+        pos: (472,159)
+    }
+    {
+        name: "quickiePalWallLit"
+        prop: 1
+        zsort: 109
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "wall_lit"
+                ]
+            }
+        ]
+        pos: (374,149)
+    }
+    {
+        name: "quickiePalGroundLit"
+        prop: 1
+        zsort: 221
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "landscape_lit"
+                ]
+            }
+        ]
+        pos: (425,118)
+    }
+    {
+        name: "quickiePalOutsideOilStains"
+        prop: 1
+        zsort: 51
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "oil_stains"
+                ]
+            }
+        ]
+        pos: (493,32)
+    }
+    {
+        name: "movieTronLights"
+        prop: 1
+        zsort: 109
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "movietron_lightOff"
+                ]
+            }
+            {
+                fps: 12
+                name: "state1"
+                frames: [
+                    "movietron_light1"
+                    "movietron_light2"
+                    "movietron_light3"
+                    "movietron_light4"
+                    "movietron_light5"
+                    "movietron_light6"
+                ]
+            }
+            {
+                fps: 12
+                name: "state2"
+                frames: [
+                    "movietron_light6"
+                    "movietron_light5"
+                    "movietron_light4"
+                    "movietron_light3"
+                    "movietron_light2"
+                    "movietron_light1"
+                ]
+            }
+            {
+                fps: 12
+                name: "state3"
+                frames: [
+                    "movietron_light1"
+                    "movietron_light4"
+                    "movietron_light6"
+                    "movietron_light2"
+                    "movietron_light5"
+                    "movietron_light4"
+                    "movietron_light3"
+                    "movietron_light1"
+                    "movietron_light5"
+                    "movietron_light2"
+                    "movietron_light4"
+                    "movietron_light6"
+                ]
+            }
+            {
+                fps: 12
+                name: "state5"
+                frames: [
+                    "movietron_light1"
+                    "movietron_light4"
+                    "movietron_light2"
+                    "movietron_light5"
+                    "movietron_light3"
+                    "movietron_light6"
+                ]
+            }
+            {
+                name: "state6"
+                frames: [
+                    "movietron_light1"
+                ]
+            }
+            {
+                name: "state7"
+                frames: [
+                    "movietron_light2"
+                ]
+            }
+            {
+                name: "state8"
+                frames: [
+                    "movietron_light3"
+                ]
+            }
+            {
+                name: "state9"
+                frames: [
+                    "movietron_light4"
+                ]
+            }
+            {
+                name: "state10"
+                frames: [
+                    "movietron_light5"
+                ]
+            }
+            {
+                name: "state11"
+                frames: [
+                    "movietron_light6"
+                ]
+            }
+            {
+                name: "state12"
+                frames: [
+                    "movietron_all_lights"
+                ]
+            }
+            {
+                fps: 3
+                name: "state13"
+                frames: [
+                    "movietron_all_lights"
+                    "movietron_lightOff"
+                ]
+            }
+        ]
+        pos: (401,132)
+    }
+    {
+        name: "movieTronScreen"
+        prop: 1
+        zsort: 109
+        animations: [
+            {
+                name: "default"
+                frames: [
+                ]
+            }
+            {
+                name: "state1"
+                frames: [
+                    "screen_on"
+                ]
+            }
+        ]
+        pos: (413,137)
+    }
+    {
+        name: "quickiePalOutsideMapsBanner"
+        prop: 1
+        zsort: 106
+        animations: [
+            {
+                name: "gone"
+                frames: [
+                    "maps_banner_text_en"
+                ]
+            }
+            {
+                name: "state1"
+                frames: [
+                    "maps_banner_lit_text_en"
+                ]
+            }
+        ]
+        pos: (254,145)
+    }
+    {
+        name: "quickiePalHintFlyer"
+        usedir: "DIR_BACK"
+        zsort: 95
+        hotspot: ((-20,1),(-2,20))
+        pos: (386,146)
+        usepos: (-12,-37)
+    }
+    {
+        name: "doorTrigger"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 120
+        hotspot: ((-119,-21),(-56,-5))
+        pos: (425,120)
+        usepos: (0,-30)
+    }
+    {
+        layer: 2
+        name: "star1"
+        prop: 1
+        zsort: 108
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (5,234)
+    }
+    {
+        layer: 2
+        name: "star2"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (59,219)
+    }
+    {
+        layer: 2
+        name: "star3"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (95,232)
+    }
+    {
+        layer: 2
+        name: "star4"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (123,216)
+    }
+    {
+        layer: 2
+        name: "star5"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (267,213)
+    }
+    {
+        layer: 2
+        name: "star6"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (181,191)
+    }
+    {
+        layer: 2
+        name: "star7"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (243,184)
+    }
+    {
+        layer: 2
+        name: "star8"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (484,211)
+    }
+    {
+        layer: 2
+        name: "star9"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (354,220)
+    }
+    {
+        layer: 2
+        name: "star10"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (128,177)
+    }
+    {
+        layer: 2
+        name: "star11"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (47,185)
+    }
+    {
+        layer: 2
+        name: "star12"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (242,190)
+    }
+    {
+        layer: 2
+        name: "star13"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (242,190)
+    }
+    {
+        layer: 2
+        name: "star14"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (366,199)
+    }
+    {
+        layer: 2
+        name: "star15"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (499,216)
+    }
+    {
+        layer: 2
+        name: "star16"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (460,206)
+    }
+    {
+        layer: 2
+        name: "star17"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (448,196)
+    }
+    {
+        layer: 2
+        name: "star18"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (474,239)
+    }
+    {
+        layer: 2
+        name: "star19"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (279,234)
+    }
+    {
+        layer: 2
+        name: "star20"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (442,223)
+    }
+    {
+        layer: 2
+        name: "star21"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (92,164)
+    }
+    {
+        layer: 2
+        name: "star22"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (192,164)
+    }
+    {
+        layer: 2
+        name: "starB1"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+        pos: (15,179)
+    }
+    {
+        layer: 2
+        name: "starB2"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+        pos: (56,197)
+    }
+    {
+        layer: 2
+        name: "starB3"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+        pos: (284,226)
+    }
+    {
+        layer: 2
+        name: "starB4"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_cross2"
+                ]
+            }
+        ]
+        pos: (325,199)
+    }
+    {
+        layer: 2
+        name: "starB5"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_cross3"
+                ]
+            }
+        ]
+        pos: (520,198)
+    }
+    {
+        layer: 2
+        name: "starB6"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_cross2"
+                ]
+            }
+        ]
+        pos: (93,150)
+    }
+    {
+        name: "openSignSound"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (252,134)
+    }
+]
+room_bounds: ((0,0),(850,240))
+room_size: (850,240)
+scaling: [
+    "1.0@75"
+    ".75@107"
+    ".30@158"
+]
+walkboxes: [
+    {
+        polygon: "(91,113);(173,113);(186,104);(329,104);(331,109);(412,109);(416,102);(494,102);(506,97);(532,94);(554,90);(660,66);(7,70);(8,86);(25,90);(19,104)"
+    }
+    {
+        polygon: "(730,114);(732,109);(554,90);(532,94)"
+    }
+    {
+        polygon: "(730,114);(731,121);(737,125);(750,120);(746,114);(732,109)"
+    }
+    {
+        polygon: "(693,130);(695,132);(737,125);(731,121)"
+    }
+    {
+        polygon: "(639,136);(695,132);(693,130);(638,134)"
+    }
+    {
+        polygon: "(198,116);(197,113);(190,112);(186,104);(173,113)"
+    }
+    {
+        polygon: "(699,164);(706,164);(636,153);(625,151);(616,147);(609,148);(620,152);(633,154)"
+    }
+    {
+        polygon: "(609,148);(616,147);(621,142);(639,136);(638,134);(613,143)"
+    }
+    {
+        polygon: "(658,185);(663,184);(666,181);(679,177);(699,170);(706,164);(699,164);(696,168);(675,175);(664,178)"
+    }
+    {
+        polygon: "(747,198);(761,203);(766,203);(747,196);(721,195);(682,190);(663,184);(658,185);(679,192);(720,197)"
+    }
+]

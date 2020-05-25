@@ -1,0 +1,213 @@
+ambient_light: "{0.343135,0.343134,0.343137,1}"
+background: "background"
+name: "Alleyway"
+room_scale: 4
+roomsize: "{320,180}"
+sheet: "Alleyway"
+layers: [
+    {
+        name: "foreground"
+        parallax: 1
+        zsort: -2
+    }
+]
+lights: [
+    {
+        color1: "{0.598926,0.383795,0.647059,0}"
+        color2: "{0,0,0,0}"
+        id: 0
+        iradius: 0
+        oradius: 190
+        rate: 0
+        clipping: ((-198,-42),(24,5))
+        pos: (298,67)
+    }
+    {
+        color1: "{0.609539,0.507497,0.941176,0}"
+        color2: "{0,0,0,0}"
+        id: 1
+        iradius: 0
+        oradius: 190
+        rate: 0
+        clipping: ((-198,-42),(24,5))
+        pos: (298,67)
+    }
+    {
+        color1: "{0.389273,0.529412,0.393394,0}"
+        color2: "{0,0,0,0}"
+        id: 2
+        iradius: 14
+        oradius: 36
+        rate: 0
+        clipping: ((-36,-17),(33,6))
+        pos: (150,89)
+    }
+]
+objects: [
+    {
+        name: "thimbleconPoster"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 85
+        animations: [
+            {
+                name: "on"
+                frames: [
+                    "thimblecon_poster"
+                ]
+            }
+            {
+                name: "off"
+                frames: [
+                ]
+            }
+        ]
+        hotspot: ((-19,-26),(19,26))
+        pos: (292,135)
+        usepos: (1,-68)
+        usepos2: (5,-80)
+    }
+    {
+        name: "MainStreetDoor"
+        usedir: "DIR_RIGHT"
+        zsort: 53
+        hotspot: ((5,-159),(24,26))
+        pos: (299,156)
+        usepos: (15,-95)
+    }
+    {
+        name: "abductionTrigger"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 90
+        hotspot: ((-36,-31),(37,2))
+        pos: (67,83)
+        usepos: (0,-30)
+    }
+    {
+        name: "trashCan"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 90
+        hotspot: ((-21,-17),(3,22))
+        pos: (78,99)
+        usepos: (-11,-23)
+        usepos2: (-9,-42)
+    }
+    {
+        name: "dinerBackDoor"
+        usedir: "DIR_RIGHT"
+        usedir2: "DIR_RIGHT"
+        zsort: 75
+        hotspot: ((-20,-56),(7,20))
+        pos: (164,140)
+        usepos: (-22,-52)
+        usepos2: (-70,-59)
+    }
+    {
+        name: "boxStack"
+        usedir: "DIR_BACK"
+        zsort: 79
+        hotspot: ((-20,-17),(11,14))
+        pos: (107,115)
+        usepos: (6,-24)
+    }
+    {
+        name: "box"
+        usedir: "DIR_BACK"
+        zsort: 74
+        hotspot: ((-14,-7),(4,11))
+        pos: (96,94)
+        usepos: (-4,-12)
+    }
+    {
+        name: "blueNeon"
+        prop: 1
+        zsort: 90
+        animations: [
+            {
+                name: "off"
+                frames: [
+                ]
+            }
+            {
+                name: "on"
+                frames: [
+                    "blue_neon_on"
+                ]
+            }
+        ]
+        pos: (270,171)
+    }
+    {
+        name: "rats"
+        prop: 1
+        zsort: 42
+        pos: (16,116)
+    }
+    {
+        name: "RansomePoster"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 96
+        hotspot: ((112,16),(145,63))
+        pos: (153,96)
+        usepos: (128,-27)
+        usepos2: (129,-41)
+    }
+    {
+        name: "valve"
+        usedir: "DIR_BACK"
+        zsort: 97
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "valve"
+                ]
+            }
+        ]
+        hotspot: ((-5,-6),(6,6))
+        pos: (126,109)
+        usepos: (-2,-22)
+    }
+    {
+        name: "coveredRansomePoster"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 90
+        hotspot: ((104,22),(113,69))
+        pos: (160,90)
+        usepos: (106,-21)
+        usepos2: (113,-27)
+    }
+    {
+        name: "pinkNeonLight"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (298,67)
+    }
+    {
+        name: "blueNeonLight"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (298,67)
+    }
+    {
+        name: "doorLight"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (150,89)
+    }
+]
+room_bounds: ((0,0),(320,180))
+room_size: (320,180)
+scaling: [
+    "0.90@54"
+    "0.80@93"
+]
+walkboxes: [
+    {
+        polygon: "(3,76);(27,76);(28,69);(39,70);(50,67);(64,77);(83,75);(91,81);(109,86);(111,93);(128,94);(190,69);(318,69);(318,54);(4,54)"
+    }
+]

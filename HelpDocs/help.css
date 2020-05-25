@@ -1,0 +1,256 @@
+body {
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  xmargin: 30px;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 100;
+  color: #000000;
+  line-height: 150%
+  font-size: 16px;
+}
+
+h1 {
+	font-size: 30px;
+	margin-bottom: 10px;
+	margin-right: 0px;
+	margin-left: 0px;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 18px;
+	margin-top: 8px;
+	margin-bottom: 4px;
+	margin-right: 0px;
+	margin-left: 0px;
+	font-weight: 400;
+}
+
+h3 {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+	font-weight: bold;
+}
+
+a {
+	color: black;
+	_transition-duration: 0.20s;
+	text-decoration: none;
+}
+
+a:visted a:link {
+	xcolor: black;
+}
+
+a:hover, a:active {
+	color: #999;
+}
+
+.button {
+	border: none;
+	padding: 10px 25px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 20px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-right: 15px;
+	margin-left: 5px;
+	background-color: #ddd;
+	color: black;
+	transition-duration: 0.4s;
+	border-radius: 10px;
+}
+
+.button:hover {
+  background-color: #aaa;
+  color: white;
+}
+
+.button a:link, .button a:visited {
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.button a:hover, .button a:active {
+}
+
+.button .a
+
+.search {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	padding-left: 10px;
+	background-color: #eeeeee
+}
+
+.search-input {
+	font-size: 16px;
+}
+
+.line_break {
+	margin-top: 4px;
+	margin-bottom: 8px;
+}
+
+.blank_line {
+	padding-top: 8px;
+	padding-bottom: 8px;
+}
+.code_block {
+	font-family: "Courier", monospace;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	padding: 5px;
+	display: block;
+	white-space: pre;
+	color: #202020;
+  	border-style: solid;
+	border-width: thin;
+	border-color: #D0D0D0;
+	background-color: #E0E0E0;
+	line-height: 130%
+}
+
+.code_block .comment {
+	  color: #008000;
+}
+
+.code_block .comment .string {
+	  color: #008000;
+}
+
+.code_block .comment .string .keyword {
+	  color: #008000;
+}
+
+.code_block .comment .keyword {
+	  color: #008000;
+}
+
+.code_block .string {
+	  color: #909000;
+}
+
+.code_block .string .keyword {
+	  color: #909000;
+}
+
+.code_block .keyword {
+	  color: #000080;
+}
+
+.inline_code {
+	font-family: "Courier", monospace;
+	color: #800000;
+	padding: 1px;
+}
+
+.section .text {
+	font-weight: 100;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	margin-left: 20px;
+}
+
+.section h1 {
+	font-size: 22px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	margin-right: 0px;
+	font-weight: bold;
+}
+
+.section h2 {
+	font-size: 18px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	margin-right: 0px;
+	font-weight: bold;
+}
+
+.section h3 {
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	font-weight: bold;
+}
+
+.function_list {
+	margin-top: 30px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.function {
+	font-family: "Courier", monospace;
+	font-weight: bold;
+	font-size: 18px;
+	margin-top: 10px;
+	margin-bottom: 0px;
+	margin-right: 0px;
+	margin-left: 5px;
+	padding: 5px;
+	padding-left: 10px;
+	background-color: #F0F0F0;
+	border-radius: 10px;
+}
+
+.function .desc {
+  	font-family: "Ubuntu", sans-serif;
+	font-weight: 100;
+	font-size: 16px;
+	margin-top: 4px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+}
+
+.function .text {
+  	font-family: "Ubuntu", sans-serif;
+	font-weight: 100;
+	font-size: 16px;
+	margin-top: 5px;
+	margin-bottom: 0px;
+	margin-left: 10px;
+}
+
+.toc {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+
+.index {
+  	font-family: "Ubuntu", sans-serif;
+	font-weight: 100;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+	margin-left: 10px;
+	line-height: 130%
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #888;
+
+}

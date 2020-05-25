@@ -1,0 +1,258 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+DEFINE_ROOM("QuickiePal", {
+	music_pool = "quickiepal"
+	ambient_sound = SOUNDID(ambient_inside)
+
+	// ------------------------------------------------------------------------
+	// General room functions
+
+	leonard_rambleTID = NO
+	leonard_greeting = YES
+
+	script leonardGreeting() {
+		leonard_rambleTID = stopthread(leonard_rambleTID)	// Safety
+		leonard_rambleTID = threadid()
+		// if (actorRoom(leonard) != QuickiePal) return
+		breaktime(0.5)
+		if (QuickiePal.leonard_greeting) {
+			sayLine(leonard, SAY(11198,"Welcome to Quickie Pal. Can I help you find anything?"))
+			QuickiePal.leonard_greeting = NO
+			breakwhiletalking(leonard)
+		}
+		do {
+			breaktime(random(2,3))
+			breaktime(random(8,12))
+			if (!isActorTalking()) {
+				// breakwhiledialog()	// Safety
+				local line = randomfrom(SAY(11199,"I personally am really fond of the chocolate bon bons."),
+										SAY(11200,"Let me know if I can help you find anything."),
+										SAY(11201,"Let me know if I can help you find anything."),
+										SAY(11202,"Let me know if I can help you find anything."),
+										SAY(11203,"Let me know if I can help you find anything."),
+										SAY(11204,"Let me know if I can help you find anything."),
+										SAY(11205,"Let me know if I can help you with anything."),
+										SAY(11206,"Let me know if I can help you with anything."),
+										SAY(11207,"I'm here to serve."),
+										SAY(11208,"I'm here to serve."),
+										SAY(11209,"I'm here to serve."),
+										SAY(11210,"How about that sunset?"),
+										SAY(11211,"How about that Ransome the Clown? He's so funny."),
+										SAY(11212,"Don't forget to get your flu shot."),
+										SAY(11213,"Want some expired milk? 50% off normal price."),
+										SAY(11214,"Sure glad the Pigeon Sisters got rid of our rat problem!"),
+										SAY(11215,"Want to buy a Fine Leather Jacket™?"))
+				sayLine(leonard, line)
+				breakwhiletalking(leonard)
+			}
+			actorWalkTo(leonard, randomfrom(QuickiePal.leonardSpot, QuickiePal.leonardSpot2, QuickiePal.leonardSpot3, QuickiePal.leonardSpot4))
+		}
+	}
+
+
+	// ------------------------------------------------------------------------
+	// Enter/Exit code
+
+	enter = function(from_door=null) {
+		startthread(flashFlourescentLight)
+		startthread(leonardGreeting)
+
+		local star = 0
+		local starOffset = 0
+		for (local i = 1; i <= 2; i += 1) {
+			star = this["star"+i]
+			objectOffset(star,point(starOffset,0))
+			// obj, fadeRange1, fadeRange2, alphaRange1, alphaRange2
+			twinkleStar(star, 0.01, 0.1, random(0,0.3), random(0.6, 1))
+		}
+		for (local i = 1; i <= 1; i += 1) {
+			star = this["starB"+i]
+			objectOffset(star,point(starOffset,0))
+			// obj, fadeRange1, fadeRange2, alphaRange1, alphaRange2
+			twinkleStar(star, 0.05, 0.3, 0, 1)
+		}
+	}
+
+	exit = function() {
+	}
+
+	script flashFlourescentLight() {
+		objectState(flickerLight, "off")
+		do {
+			breaktime(0.05,0.2)
+			objectState(flickerLight, "on")
+			ambientLight(0xFF97B3A5)
+			playSound(SOUNDID(flicker_fluorescent_quick))
+			breaktime(0.1,1)
+			objectState(flickerLight, "off")
+			ambientLight(0xFFCBFAE3)
+		}
+	}
+
+	// ------------------------------------------------------------------------
+	// Objects
+
+	doorTrigger = {}
+	quickiePalDoor = DEFINE_OBJECT({
+		name = TEXT(11232,"Quickie Pal door")
+		photo_name = TEXT(11233,"the Quickie Pal door")
+		door_verbs = YES
+		door_trigger = @doorTrigger
+		verb_use_text = TEXT(11234,"Leave")
+		verb_use_desc = TEXT(11235,"Leave the Quickie Pal")
+		to_door = @QuickiePalOutside.quickiePalDoor
+		door_sound = { open=SOUNDID(slidingDoorOpen), close=SOUNDID(slidingDoorClose) }
+	})
+
+	// --------------------------------------------------------------------------------------------
+
+	plantTrigger = {
+		function triggerEnter(actor) {
+			if (plant.state != "start_snapping") {
+				objectState(plant, "start_snapping")
+				if (actor == delores && !isActorTalking()) sayLine(ONCE(SAY(11216,"Yikes!")))
+			}
+		}
+		function triggerLeave(actor) {
+			if (!plant.poisoned) {	objectState(plant, "stop_snapping") }
+		}
+	}
+	plant = DEFINE_OBJECT({
+		photo_no_move = YES
+		state = "stop_snapping"
+		poisoned = NO
+		function stateChange() {
+			if (state == "start_snapping") {
+				_snapping_sid <- stopSound(this?._snapping_sid)
+				_snapping_sid <- playSound(SOUNDID(plant_snapping))
+			} else {
+				_snapping_sid <- stopSound(this?._snapping_sid)
+			}
+		}
+
+		name =@ state=="start_snapping"?"snapping plant":"plant"
+		for_story =@ state=="start_snapping"?"wildlife":null
+		photo_dir =@ state=="start_snapping"?DIR_BACK:this
+
+		VERB(lookat) {
+			sayLine(SAY(11217,"Yikes!"))
+		}
+		VERB_OK(empty) { return noun2 == Inventory.glass && Inventory.glass.filled_with && !poisoned}
+		VERB(empty) {
+			if (noun2 == Inventory.glass) {
+				poisoned = YES
+				Inventory.glass.filledWith(null)
+				playSoundAt(SOUNDID(water_pour), this)
+				sayLine(SAY(11218,"Drink up!"))
+			}
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	mailBox = DEFINE_OBJECT({
+		name = TEXT(11236,"mail drop")
+		accepts_mail = YES
+
+		VERB(lookat) {
+			sayLine(SAY(11219,"It's a mail drop."))
+		}
+	})
+
+	quickiePalTextNoteCard = {}
+	flickerLight = {}
+	// // --------------------------------------------------------------------------------------------
+	// tShirt = DEFINE_OBJECT({
+	// 	name = TEXT(11237,"T-shirt")
+
+	// 	VERB(lookat) {
+	// 		sayLine(SAY(11220,"It's a souvenir Thimbleweed Park T-shirt!"))
+	// 	}
+	// })
+
+	// --------------------------------------------------------------------------------------------
+	quickiPalTextBottleRedeem = DEFINE_OBJECT({
+		name = TEXT(11238,"sign")
+		default_verb = "verb_read"
+
+		VERB(read) {
+			sayLine(SAY(11221,"It says “Redeem bottles here, 5¢.”"))
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	pillowBearBoxes = DEFINE_OBJECT({
+		name = TEXT(11239,"boxes")
+		photo_name = TEXT(11240,"boxes")
+		bad_story = [ "pillow_bears", SAY(11222,"No one cares about a bunch of boxes.")]
+
+		VERB(lookat) {
+			sayLine(SAY(11223,"They all say, “1 Dozen PillowBears™.”"), ONCE(SAY(11224,"I'm so proud of Dad for thinking up this idea!")))
+		}
+	})
+
+	// // --------------------------------------------------------------------------------------------
+	// rat = DEFINE_OBJECT({
+	// 	name = TEXT(11241,"rat")
+
+	// 	VERB(lookat) {
+	// 		sayLine(SAY(11225,"It's Ratastic!"))
+	// 	}
+	// })
+
+	// --------------------------------------------------------------------------------------------
+
+	ransomeCandy = {}
+	ransomeCandyDisplay = DEFINE_OBJECT({
+		name = TEXT(11242,"Ransome candy dispensers")
+		taken_one = NO
+		looked_at = NO
+		bad_story = [[ "pillow_bears", SAY(11226,"Definitely not a new toy craze. I had one when I was a kid.")],
+					 [ "ransome", SAY(11227,"It's a celebrity's head, but kind of demeaning being a candy dispenser. I need a better photo.")] ]
+
+		VERB(lookat) {
+			if (taken_one) {
+				Inventory.ransomeCandy.verb_lookat()
+			} else {
+				cutscene(@{
+					sayLine(SAY(11228,"That's a lot of Ransome candy dispensers."))
+					breakwhiletalking()
+					sayLine(leonard, SAY(11229,"Giving them away as a promotion for the Ransome the Clown House for Wayward Kids. Take one."))
+					looked_at = YES
+					default_verb = "verb_take"
+				})
+			}
+		}
+		VERB_OK(take) { return looked_at }
+		VERB(take) {
+			if (taken_one) {
+				sayLine(leonard, SAY(11230,"It's one per customer. Corporate policy."))
+			} else {
+				pickupObject(Inventory.ransomeCandy)
+				objectState(ransomeCandy, "gone")
+				taken_one = YES
+			}
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	quickiePalLotto = DEFINE_OBJECT({
+		name = TEXT(11243,"Lotto")
+		photo_name = TEXT(11244,"the Lotto sign")
+		for_story = "gambling"
+
+		VERB(lookat) {
+			sayLine(SAY(11231,"I'd play if it were a sure thing."))
+		}
+	})
+
+	star1 = {}
+	star2 = {}
+	starB1 = {}
+
+// NEW_OBJECT_HERE
+})

@@ -1,0 +1,61 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+DEFINE_ROOM("TitleCards", {
+
+	// --------------------------------------------------------------------------------------------
+	// General room functions
+
+	script showTitles() {
+		enterRoom(TitleCards)
+		local tid = startthread(@{
+			local hum_sid = playSound(SOUNDID(title_hum))
+			breaktime(2.0)
+			overlayColor(COLOR_BLACK)
+			objectState(date, "show")
+			overlayColorTo(COLOR_NONE, 2.0)
+			breaktime(4.0)
+			overlayColorTo(COLOR_BLACK, 2.0)
+			breaktime(4.0)
+			objectState(date, "hide")
+
+			objectState(title, "show")
+			objectState(line, "show")
+			objectState(text, "show")
+			overlayColor(COLOR_NONE)
+			playSound(SOUNDID(title_stab))
+			stopSound(hum_sid)
+			breaktime(5.0)
+			overlayColorTo(COLOR_BLACK, 2.0)
+			breaktime(4.0)
+			objectState(title, "hide")
+			objectState(line, "hide")
+			objectState(text, "hide")
+			overlayColor(COLOR_NONE)
+		})
+		return tid
+	}
+
+	// --------------------------------------------------------------------------------------------
+	// Enter/Exit code
+
+	enter = function() {
+	}
+
+	exit = function() {
+	}
+
+	// --------------------------------------------------------------------------------------------
+	// Objects
+
+	date = {}
+	title = {}
+	line = {}
+	text = {}
+
+// NEW_OBJECT_HERE
+})

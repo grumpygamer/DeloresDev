@@ -1,0 +1,85 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+=== init ===
+{ YACK(a_who_counter) <- 0
+  YACK(asked_for_coroner_time) <- 0
+  YACK(told_coroner_time) <- 0 }
+-> exit
+
+== start ===
+delores: SAY(12004,"Hi Coroner!")
+coroner: SAY(12005,"Hello-a-who Delores.")
+
+=== main ===
+1 SAY(12006,"When did you start adding 'a-who' after everything?") -> a_who [once]
+1 SAY(12007,"Right there! You just did it again!") -> a_who [YACK(a_who_counter) == 1] [showonce]
+1 SAY(12008,"Whatever-a-who.") -> a_who [YACK(a_who_counter) == 2] [showonce]
+1 SAY(12009,"You and the Sheriff should form a comedy team.") -> comedy_team [YACK(a_who_counter) == 3] [showonce]
+2 SAY(12010,"Not a lot of deaths in Thimbleweed Park, are there?") -> deaths
+3 SAY(12011,"Did I read about someone named Boris being murdered?") -> boris [hasHeardAbout("boris")]
+4 SAY(12012,"Sheriff wants to see you.") -> sheriff [once] [YACK(asked_for_coroner_time)]
+4 SAY(12013,"Sheriff wants to see you again.") -> sheriff [YACK(asked_for_coroner_time)]
+5 SAY(12014,"Got to run... bye.") -> done
+
+=== deaths ===
+coroner: SAY(12015,"Not really.")
+coroner: SAY(12016,"I'm not sure why I still have a job.") [once]
+-> main
+
+=== a_who ===
+coroner: SAY(12017,"I don't understand-a-who what you're talking about!") [YACK(a_who_counter) == 0]
+coroner: SAY(12018,"Have you been drinking formaldehyde? Trust me, just say-no-a-who.") [YACK(a_who_counter) == 1]
+coroner: SAY(12019,"Hey, the 'a-who' bit is mine!") [YACK(a_who_counter) == 2]
+delores: SAY(12020,"Ha! Got ya!") [YACK(a_who_counter) == 2]
+{ YACK(a_who_counter)++ }
+-> main
+
+=== comedy_team ===
+delores: SAY(12021,"You two could open for Ransome the Clown.")
+coroner: SAY(12022,"I'll talk to him-a-who about it.")
+coroner: SAY(12023,"I have some great material about extracting a brain.")
+delores: SAY(12024,"I bet you do.")
+-> main
+
+=== boris ===
+coroner: SAY(12025,"What-a-who!")
+coroner: SAY(12026,"Where did you read that? We've never had a murder in Thimbleweed Park, and I don't know anyone named Boris.")
+
+parrot NO
+1 SAY(12027,"I read it in your confidential coroner files.") -> rumor
+2 SAY(12028,"I read it in that trash-rag the Nickel News.")  -> rumor
+3 SAY(12029,"I read it on an on-line BBS.")  -> rumor
+
+=== rumor ==
+delores: SAY(12030,"I don't know. I can't remember.")
+parrot YES
+-> main
+
+=== sheriff ===
+coroner: SAY(12031,"Really? Me-a-who? That's exciting.")
+waitfor coroner
+{
+	YACK(asked_for_coroner_time) = gametime()	// TESTING
+	inputOff(@{
+		actorFastWalk(coroner, YES)
+		actorWalkTo(coroner, CoronersOffice.door)
+		breaktime(0.5)
+		actorTurnTo(delores, DIR_LEFT)
+		breakwhilewalking(coroner)
+		actorAt(coroner, SheriffsOffice, SheriffsOffice.coronerSpot)
+		actorFastWalk(coroner, NO)
+		playSound(SOUNDID(doorOpen))
+		breaktime(0.5)
+		playSound(SOUNDID(doorClose))
+		YACK(told_coroner_time) = gametime()
+	})
+}
+
+=== done ===
+-> exit
+

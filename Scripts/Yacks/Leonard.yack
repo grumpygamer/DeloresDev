@@ -1,0 +1,61 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+=== init ===
+{ YACK(dont_call_D) = NO }
+-> exit
+
+== start ===
+{
+	QuickiePal.leonard_rambleTID = stopthread(QuickiePal.leonard_rambleTID)
+	actorWalkTo(leonard, QuickiePal.leonardSpot)
+	breakwhilewalking(leonard)
+}
+leonard: SAY(12118,"What's up D!") [!YACK(dont_call_D)]
+leonard: SAY(12119,"What's up Delores!") [YACK(dont_call_D)]
+
+if [GLOBAL(letter_mailed)]
+	leonard: SAY(12120,"Thanks for mailing that letter.") [once]
+endif
+
+=== main ===
+1 SAY(12121,"Don't call me D.") -> no_D [!YACK(dont_call_D)]
+2 SAY(12122,"Hey Leonard.") -> hey
+3 SAY(12123,"Bathroom light switch doesn't work.") -> light_switch [Bathroom.tried_switch] [once]
+3 SAY(12124,"Bathroom light switch still doesn't work.") -> light_switch2 [Bathroom.tried_switch and not Bathroom.has_power]
+9 SAY(12125,"See ya!") -> done
+
+=== no_D ===
+{ YACK(dont_call_D) = YES }
+leonard: SAY(12126,"OK, sure thing D... I mean Delores.")
+-> main
+
+=== hey ===
+leonard: SAY(12127,"Hey back at ya!")
+-> main
+
+=== light_switch ===
+leonard: SAY(12128,"Yeah. About that.")
+leonard: SAY(12129,"Management forgot to pay the power bill, so they cut power to the bathroom.")
+leonard: SAY(12130,"If it doesn't get paid soon, the whole building will lose power, man.")
+delores: SAY(12131,"Did management forget, or did you forget to mail the payment?")
+leonard: SAY(12132,"I don't think this is the time to be pointing fingers!")
+leonard: SAY(12133,"Here is the payment, can you drop it in a mailbox for me... I mean management?")
+delores: SAY(12134,"Sure.")
+{ pickupObject(Inventory.letter) }
+-> done
+
+=== light_switch2 ===
+leonard: SAY(12135,"Management forgot to pay the power bill I gave you.")
+leonard: SAY(12136,"If it doesn't get paid soon, the whole building will lose power, man.")
+leonard: SAY(12137,"Can you drop the payment in a mailbox for me... I mean management?")
+delores: SAY(12138,"Sure.")
+
+=== done ===
+{ QuickiePal.leonard_rambleTID = startthread(QuickiePal.leonardGreeting) }
+-> exit
+

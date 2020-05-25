@@ -1,0 +1,620 @@
+ambient_light: "{0.631373,0.537255,0.576471,1}"
+background: "background"
+name: "Bank"
+room_scale: 4
+sheet: "Bank"
+layers: [
+    {
+        name: "near_foreground"
+        parallax: 1.35
+        zsort: -2
+    }
+    {
+        name: "foreground"
+        parallax: 1.2
+        zsort: -1
+    }
+    {
+        name: "sky"
+        parallax: 0.25
+        zsort: 2
+    }
+    {
+        name: "hills"
+        parallax: 0.75
+        zsort: 1
+    }
+]
+lights: [
+    {
+        color1: "{1,0.985294,0.568627,0}"
+        color2: "{0,0,0,0}"
+        id: 0
+        iradius: 41
+        oradius: 60
+        rate: 0
+        clipping: ((0,0),(0,0))
+        pos: (64,113)
+    }
+    {
+        color1: "{1,0.985294,0.568627,0}"
+        color2: "{0,0,0,0}"
+        id: 1
+        iradius: 50
+        oradius: 73
+        rate: 0
+        clipping: ((0,0),(0,0))
+        pos: (305,133)
+    }
+    {
+        color1: "{1,0.985294,0.568627,0}"
+        color2: "{0,0,0,0}"
+        id: 2
+        iradius: 46
+        oradius: 60
+        rate: 0
+        clipping: ((0,0),(0,0))
+        pos: (449,127)
+    }
+    {
+        color1: "{1,0.985294,0.568627,0}"
+        color2: "{0,0,0,0}"
+        id: 3
+        iradius: 53
+        oradius: 79
+        rate: 0
+        clipping: ((0,0),(0,0))
+        pos: (574,127)
+    }
+    {
+        color1: "{1,0.95963,0.656863,0}"
+        color2: "{1,0.668972,0.196078,0}"
+        id: 4
+        iradius: 35
+        oradius: 88
+        rate: 0.0105
+        clipping: ((0,0),(0,0))
+        pos: (417,92)
+    }
+]
+objects: [
+    {
+        name: "wallClock"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 142
+        animations: [
+            {
+                name: "closed"
+                frames: [
+                    "bank_clock3"
+                    "bank_clock2"
+                    "bank_clock1"
+                ]
+            }
+            {
+                name: "open"
+                frames: [
+                    "bank_clock1"
+                    "bank_clock2"
+                    "bank_clock3"
+                ]
+            }
+        ]
+        hotspot: ((-14,-12),(13,13))
+        pos: (218,149)
+        usepos: (-4,-79)
+        usepos2: (9,-90)
+    }
+    {
+        name: "flyerHolder"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 118
+        animations: [
+            {
+                name: "full"
+                frames: [
+                    "flyer_holder_full"
+                ]
+            }
+            {
+                name: "gone"
+                frames: [
+                ]
+            }
+        ]
+        hotspot: ((-9,-10),(8,11))
+        pos: (219,122)
+        usepos: (-5,-52)
+        usepos2: (8,-63)
+    }
+    {
+        name: "bankPainting"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 49
+        hotspot: ((-7,-24),(71,14))
+        pos: (483,154)
+        usepos: (40,-85)
+        usepos2: (40,-103)
+    }
+    {
+        name: "bankRope"
+        prop: 1
+        zsort: 62
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "bank_rope"
+                ]
+            }
+        ]
+        pos: (271,120)
+    }
+    {
+        name: "frontDoor"
+        usedir: "DIR_LEFT"
+        usedir2: "DIR_LEFT"
+        zsort: 168
+        animations: [
+            {
+                name: "closed"
+                frames: [
+                    "door_opening2"
+                    "door_opening1"
+                    "door_closed"
+                ]
+            }
+            {
+                name: "open"
+                frames: [
+                    "door_opening1"
+                    "door_opening2"
+                    "door_open"
+                ]
+            }
+        ]
+        hotspot: ((-21,-57),(20,60))
+        pos: (16,108)
+        usepos: (5,-53)
+        usepos2: (55,-55)
+    }
+    {
+        name: "bankSign"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 88
+        hotspot: ((-25,-26),(37,24))
+        pos: (132,149)
+        usepos: (5,-83)
+        usepos2: (5,-95)
+    }
+    {
+        name: "bankKeySlot"
+        usedir: "DIR_BACK"
+        zsort: 99
+        hotspot: ((-8,-8),(8,8))
+        pos: (360,138)
+        usepos: (0,-58)
+    }
+    {
+        name: "clockGears"
+        usedir: "DIR_BACK"
+        zsort: 136
+        hotspot: ((-7,59),(7,74))
+        pos: (218,84)
+        usepos: (1,-15)
+    }
+    {
+        name: "bankTeller"
+        prop: 1
+        zsort: 77
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "teller"
+                ]
+            }
+        ]
+        pos: (317,116)
+    }
+    {
+        name: "bankBankVaultDoor"
+        prop: 1
+        zsort: 95
+        pos: (359,151)
+    }
+    {
+        name: "triggerTest"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 90
+        hotspot: ((127,-33),(234,-15))
+        pos: (160,90)
+        usepos: (185,-30)
+    }
+    {
+        name: "bankTellerSpot"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (306,84)
+    }
+    {
+        name: "bankManagerSpot"
+        spot: 1
+        usedir: "DIR_LEFT"
+        pos: (541,63)
+    }
+    {
+        name: "bankKey"
+        usedir: "DIR_BACK"
+        zsort: 82
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "key"
+                ]
+            }
+        ]
+        hotspot: ((-4,-5),(4,7))
+        pos: (486,112)
+        usepos: (-12,-45)
+    }
+    {
+        name: "bankDesk"
+        prop: 1
+        zsort: 66
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "desk"
+                ]
+            }
+        ]
+        pos: (522,72)
+    }
+    {
+        name: "phone"
+        usedir: "DIR_BACK"
+        zsort: 66
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "phone_receiver_on"
+                ]
+            }
+            {
+                name: "state1"
+                frames: [
+                    "phone_receiver_off"
+                ]
+            }
+        ]
+        hotspot: ((-7,-7),(14,8))
+        pos: (495,94)
+        usepos: (4,-44)
+    }
+    {
+        name: "guestChair"
+        prop: 1
+        zsort: 59
+        animations: [
+            {
+                name: "here"
+                frames: [
+                    "guest_chair"
+                ]
+            }
+            {
+                name: "gone"
+                frames: [
+                ]
+            }
+        ]
+        pos: (455,81)
+    }
+    {
+        name: "bankManagerChair"
+        prop: 1
+        zsort: 66
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "desk_chair"
+                ]
+            }
+        ]
+        pos: (565,79)
+    }
+    {
+        name: "bankKeyHolder"
+        usedir: "DIR_BACK"
+        zsort: 85
+        hotspot: ((-28,31),(-6,38))
+        pos: (504,85)
+        usepos: (-28,-17)
+    }
+    {
+        name: "banktellerPanSpot"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (418,59)
+    }
+    {
+        name: "bankTellerTalkSpot"
+        spot: 1
+        usedir: "DIR_BACK"
+        pos: (296,73)
+    }
+    {
+        name: "bankTellerSpot2"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (366,82)
+    }
+    {
+        name: "bankTelephoneManagerUseSpot"
+        spot: 1
+        usedir: "DIR_RIGHT"
+        pos: (553,54)
+    }
+    {
+        name: "bankmanagerGiveSpot"
+        spot: 1
+        usedir: "DIR_RIGHT"
+        pos: (480,60)
+    }
+    {
+        name: "bankDeskClipping"
+        prop: 1
+        zsort: 44
+        pos: (530,73)
+    }
+    {
+        name: "bankAnimalFigurine"
+        usedir: "DIR_RIGHT"
+        zsort: 53
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "animal_figurine"
+                ]
+            }
+        ]
+        hotspot: ((-6,-5),(6,4))
+        pos: (507,90)
+        usepos: (-23,-33)
+    }
+    {
+        name: "jumpSpot"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (327,52)
+    }
+    {
+        name: "strangeDevice"
+        usedir: "DIR_BACK"
+        zsort: 59
+        animations: [
+            {
+                name: "here"
+                frames: [
+                    "strange_device"
+                ]
+            }
+            {
+                name: "gone"
+                frames: [
+                ]
+            }
+        ]
+        hotspot: ((-9,-7),(10,7))
+        pos: (515,87)
+        usepos: (1,-37)
+    }
+    {
+        name: "leatherChair"
+        prop: 1
+        zsort: 64
+        animations: [
+            {
+                name: "here"
+                frames: [
+                    "chair"
+                ]
+            }
+            {
+                name: "gone"
+                frames: [
+                ]
+            }
+        ]
+        pos: (455,86)
+    }
+    {
+        name: "PeterSpot"
+        spot: 1
+        usedir: "DIR_LEFT"
+        pos: (454,61)
+    }
+    {
+        name: "ChuckieSpot"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (394,72)
+    }
+    {
+        name: "PeterTalkSpot"
+        spot: 1
+        usedir: "DIR_RIGHT"
+        pos: (401,60)
+    }
+    {
+        name: "ChuckieTalkSpot"
+        spot: 1
+        usedir: "DIR_BACK"
+        pos: (386,59)
+    }
+    {
+        name: "bankTellerPhotoSpot"
+        spot: 1
+        usedir: "DIR_BACK"
+        pos: (303,55)
+    }
+    {
+        name: "trashcan"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 91
+        animations: [
+            {
+                name: "gone"
+                frames: [
+                ]
+            }
+            {
+                name: "here"
+                frames: [
+                    "trash_can_off"
+                ]
+            }
+            {
+                name: "fire"
+                frames: [
+                    "trash_can_on"
+                ]
+            }
+        ]
+        hotspot: ((-10,-34),(12,-2))
+        pos: (414,115)
+        usepos: (1,-38)
+        usepos2: (-5,-54)
+    }
+    {
+        name: "trashcanFire"
+        prop: 1
+        zsort: 91
+        animations: [
+            {
+                name: "gone"
+                frames: [
+                ]
+            }
+            {
+                loop: 1
+                name: "fire"
+                frames: [
+                    "fire_1"
+                    "fire_2"
+                    "fire_3"
+                    "fire_4"
+                ]
+            }
+        ]
+        pos: (413,126)
+    }
+    {
+        layer: 2
+        name: "star1"
+        prop: 1
+        zsort: 108
+        animations: [
+            {
+                layer: 2
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (9,142)
+    }
+    {
+        layer: 2
+        name: "star2"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                layer: 2
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (395,144)
+    }
+    {
+        layer: 2
+        name: "starB1"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                layer: 2
+                name: "default"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+        pos: (383,152)
+    }
+    {
+        name: "light1"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (64,113)
+    }
+    {
+        name: "light2"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (305,133)
+    }
+    {
+        name: "light3"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (449,127)
+    }
+    {
+        name: "light4"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (574,127)
+    }
+    {
+        name: "firelight"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (417,92)
+    }
+]
+room_bounds: ((0,0),(624,180))
+room_size: (624,180)
+scaling: [
+    "1.2@0"
+    "1.0@58"
+    ".85@78"
+]
+walkboxes: [
+    {
+        polygon: "(266,75);(363,75);(387,70);(402,70);(411,71);(413,78);(420,78);(427,73);(444,70);(528,70);(528,67);(469,67);(444,66);(422,63);(383,64);(173,64);(169,58);(163,50);(0,50);(32,58);(42,59);(72,66);(169,66);(176,71);(266,71)"
+    }
+    {
+        polygon: "(274,86);(373,86);(369,81);(271,81)"
+    }
+    {
+        polygon: "(169,58);(381,58);(383,64);(422,63);(455,53);(482,58);(503,52);(594,55);(604,30);(331,32);(163,50)"
+    }
+]

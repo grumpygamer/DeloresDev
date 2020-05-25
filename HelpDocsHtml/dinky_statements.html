@@ -1,0 +1,48 @@
+<html><head><link rel='stylesheet' href='../HelpDocs/help.css'><link href='https://fonts.googleapis.com/css?family=Roboto:300|Ubuntu:300' rel='stylesheet'></head><body><span class='button'><a href='home.html'>Home</a></span><span class='button'><a href='index.html'>Index</a></span><html><head><link rel='stylesheet' href='help.css'></head><body><h1>Dinky Statements</h1><div class='section text'><div class='line_break'></div> </div><div class='function_list'><div id='2' class='function'>if, else<div class='desc'></div><div class='function text'><div class='line_break'></div> If the <span class='inline_code'>expr</span> is true, the statement or statements are executed, otherwise the <span class='inline_code'>else</span> statements are executed.  The 'else' block is optional. <div class='line_break'></div> <span class='inline_code'>if (expr) statement</span><div class='line_break'></div> <span class='inline_code'>if (expr) statement else statement</span><div class='line_break'></div> <span class='inline_code'>if (expr) { statements }</span><div class='line_break'></div> <span class='inline_code'>if (expr) { statements } else { statements }</span><div class='line_break'></div> <div class='line_break'></div> For the most part, end of lines are optional. <div class='line_break'></div> <div class='code_block'><span class='keyword'>if</span> (a) doFoo()
+
+<span class='keyword'>if</span> (a)
+    doFoo()
+
+<span class='keyword'>if</span> (a) { doFoo() }
+
+<span class='keyword'>if</span> (a) {
+    doFoo()
+} <span class='keyword'>else</span> {
+    doBar()
+}
+
+<span class='keyword'>if</span> (a) {
+    doFoo()
+} <span class='keyword'>else</span>
+<span class='keyword'>if</span> (b) {
+    doBar()
+}
+
+</div></div></div><div id='3' class='function'>while(expr) { ... }<div class='desc'></div><div class='function text'><div class='code_block'><span class='keyword'>while</span>(expr) { statements }
+<span class='keyword'>while</span>(expr) statement
+</div>While <span class='inline_code'>expr</span> is <span class='inline_code'>true</span> executes <span class='inline_code'>statements</span> <div class='line_break'></div> </div></div><div id='4' class='function'>do{ ... }until(expr) | do{ ... }<div class='desc'></div><div class='function text'><div class='code_block'><span class='keyword'>do</span> {
+    statements
+} <span class='keyword'>until</span>(expr)
+</div>Much like <span class='inline_code'>while</span> except <span class='inline_code'>expr</span> is checked at the end. <div class='code_block'><span class='keyword'>do</span> {
+    statements
+}
+</div>Continually loops through <span class='inline_code'>statements</span>.  Exclusively used in a <a href='threads.html'>threads</a> where they need to run until killed externally. <div class='line_break'></div> </div></div><div id='5' class='function'>for(assignment, expr, expr)<div class='desc'>This standard c-style <span class='inline_code'>for</span></div><div class='function text'>Initializes a variable then checks a condition, runs the statements, then increments the variable. <div class='code_block'><span class='keyword'>for</span> (<span class='keyword'>local</span> i = 1; i < 100; i++) { ... }
+</div></div></div><div id='6' class='function'>for(var = start .. end)<div class='desc'>Loops <span class='inline_code'>var</span> from <span class='inline_code'>start</span> to <span class='inline_code'>end</span></div><div class='function text'>for (local i = 1 .. 100) { ... } for (local i = 100 .. 1) { ... }    // Decrements i as it loops for (local i = a .. b) { ... }      // Increments i since it doesn't the values of a or b at compile time. </div></div><div id='7' class='function'>foreach(var in array)<div class='desc'>Loops though all the elements of <span class='inline_code'>array</span></div><div class='function text'><div class='code_block'><span class='keyword'>foreach</span>(<span class='keyword'>local</span> name <span class='keyword'>in</span> [<span class='string'>"Alice"</span>, <span class='string'>"Bob"</span>, <span class='string'>"Cindy"</span>, <span class='string'>"Ted"</span>]) {
+    <span class='keyword'>print</span>(name)
+}
+</div></div></div><div id='8' class='function'>foreach(var in table)<div class='desc'>Loops through all the keys of <span class='inline_code'>table</span></div><div class='function text'><div class='code_block'>t = { ted = <span class='string'>"Ted"</span>, alice = <span class='string'>"Alice"</span> }
+<span class='keyword'>foreach</span> (<span class='keyword'>local</span> key <span class='keyword'>in</span> t) {
+    <span class='keyword'>print</span>(t[key])
+}
+</div></div></div><div id='9' class='function'>foreach(key, var in table)<div class='desc'>Loops through all the keys and values in <span class='inline_code'>table</span></div><div class='function text'><div class='code_block'>t = { ted = <span class='string'>"Ted"</span>, alice = <span class='string'>"Alice"</span> }
+<span class='keyword'>foreach</span> (key, value <span class='keyword'>in</span> t) {
+    <span class='keyword'>print</span>(<span class='string'>"id = "</span>,key, <span class='string'>"name = "</span>,value)
+}
+</div></div></div><div id='10' class='function'>break, continue<div class='desc'>breaks out of or continues a <span class='inline_code'>for</span>, <span class='inline_code'>foreach</span>, <span class='inline_code'>while</span>, or <span class='inline_code'>until</span> loop</div><div class='function text'><div class='code_block'><span class='keyword'>for</span> (i = 1 .. 100) {
+    <span class='keyword'>if</span> (i == 50) <span class='keyword'>break</span>         <span class='comment'>// exit loop when reaching 50</span>
+}
+<span class='keyword'>for</span> (i = 1 .. 100) {
+    <span class='keyword'>if</span> (i > 50) <span class='keyword'>continue</span>
+    <span class='keyword'>print</span>(i)                <span class='comment'>// Only prints numbers from 1 to 50</span>
+}
+</div></div></div><div id='11' class='function'>return | return `expr`<div class='desc'>Returns from a <span class='inline_code'>function</span> passing an optional value</div><div class='function text'>If a function fails to return an expected value, a <span class='inline_code'>null</span> is returned. If the function returns a value when none is expected, it is discarded. <div class='line_break'></div> </div></div></div><p class='copyright'>Copyright 2020 Terrible Toybox, Inc. All Rights Reserved.</p></body></html>

@@ -1,0 +1,81 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+// Called when entering a closeup
+function startCloseup() {
+	hideInventory(PUSH|YES)
+}
+
+// Called when leaving a closeup
+function endCloseup() {
+	hideInventory(POP)
+}
+
+local exit_button_image = 0
+function createExitButton(param1,param2=null,param3=null) {
+	local color = EXIT_BUTTON_COLOR
+	local hilight_color = EXIT_BUTTON_HICOLOR
+	local code = param1
+	if (is_function(param3)) {
+		color = param1
+		hilight_color = param2
+		code = param3
+	}
+	exit_button_image = createImage(UI_SHEET, "exit_cu")
+	imageAt(exit_button_image, point(SCREEN_LEFT+60, SCREEN_TOP-60))
+	imageScale(exit_button_image, 3.0)
+	imageColor(exit_button_image, color)
+	createButton({"image": exit_button_image "code": code }, exit_button_image, null, @(user, event, pos, flags) {
+		if (event == BUTTON_EVENT_ENTER) {
+			imageWiggle(user.image, 0.25, 2, 1)
+			imageColor(user.image, hilight_color)
+		} else
+		if (event == BUTTON_EVENT_LEAVE) {
+			imageColor(user.image, color)
+		} else
+		if (event == BUTTON_EVENT_DOWN) {
+			code()
+		}
+	})
+}
+function deleteExitButton() {
+	exit_button_image = deleteImage(exit_button_image)
+}
+
+function playRadio(radio) {
+	if (radio.state == "on") {
+		soundVolume("music", 0.0)
+		stopSound(radio?._radio_sid)
+		radio._radio_sid <- playSoundAt(SOUNDID(kscum_music), radio)
+		radio.exit <- @{
+			soundVolume("music", 1.0)
+		}
+		return "on"
+	} else
+	if (radio.state == "off") {
+		soundVolume("music", 1.0)
+		stopSound(radio?._radio_sid)
+		return "off"
+	}
+}
+
+function twinkleStar(obj, fadeRange1, fadeRange2, alphaRange1, alphaRange2) {
+	local timeOff, timeOn, fadeIn, fadeOut
+	objectAlpha(obj, randomfrom(alphaRange1, alphaRange2))
+	startthread(@{
+		if (randomodds(1.0)) {		// settings.starTwinkleRate
+			do {
+				fadeIn = random(fadeRange1, fadeRange2)
+				objectAlphaTo(obj, alphaRange2, fadeIn, LINEAR)
+				breaktime(fadeIn)
+				fadeOut = random(fadeRange1, fadeRange2)
+				objectAlphaTo(obj, alphaRange1, fadeOut, LINEAR)
+				breaktime(fadeOut)
+			}
+		}
+	})
+}

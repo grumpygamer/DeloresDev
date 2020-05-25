@@ -1,0 +1,109 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+DEFINE_ROOM("CityHall", {
+
+	music_pool = "cityhall"
+	ambient_sound = SOUNDID(ambient_cityhall)
+
+	// ------------------------------------------------------------------------
+	// General room functions
+
+	// ------------------------------------------------------------------------
+	// Enter/Exit code
+
+	enter = function(from_door=null) {
+		if (YACK(asked_for_coroner_time) && gametime() < YACK(told_coroner_time)+10) {
+			objectState(sheriffDoor, "open", INSTANT)
+			quickDelay(0.5, sheriffDoor.verb_close())
+		}
+	}
+
+	exit = function() {
+	}
+
+	// ------------------------------------------------------------------------
+	// Objects
+
+	// --------------------------------------------------------------------------------------------
+	mainStreetDoor = DEFINE_OBJECT({
+		name = TEXT(11288,"door")
+		door_verbs = YES
+		verb_use_text = TEXT(11289,"Leave")
+		verb_use_desc = TEXT(11290,"Leave City Hall")
+		to_door = @MainStreet.cityHallDoor
+	})
+
+	// --------------------------------------------------------------------------------------------
+	waterFountain = DEFINE_OBJECT({
+		name = TEXT(11291,"drinking fountain")
+
+		VERB(lookat) {
+			sayLine(SAY(11281,"It's been shut off."), ONCE(SAY(11282,"Even if it was working, I wouldn't drink from it.")))
+		}
+
+		VERB_OK(fill) { return noun2 == Inventory.glass }
+		VERB(fill) {
+			if (noun2 == Inventory.glass) {
+				verb_lookat()
+			}
+		}
+
+	})
+
+	// --------------------------------------------------------------------------------------------
+	seal = DEFINE_OBJECT({
+		name = TEXT(11292,"seal")
+		for_story = "thimbleweed_county"
+
+		VERB(lookat) {
+			sayLine(SAY(11283,"It's the Thimbleweed tri-county seal!"), ONCE(SAY(11284,"It's majestic!")))
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	sheriffDoor = DEFINE_OBJECT({
+		name = TEXT(11293,"Sheriff's Office door")
+		photo_name = TEXT(11294,"the Sheriff's Office door")
+		door_verbs = YES
+		verb_use_text = TEXT(11295,"Enter")
+		verb_use_desc = TEXT(11296,"Enter the Sheriff's Office")
+		to_door = @SheriffsOffice.cityHallDoor
+	})
+
+	// --------------------------------------------------------------------------------------------
+	coronerDoor = DEFINE_OBJECT({
+		name = TEXT(11297,"Coroner's Office door")
+		photo_name = TEXT(11298,"the Coroner's Office door")
+		door_verbs = YES
+		verb_use_text = TEXT(11299,"Enter")
+		verb_use_desc = TEXT(11300,"Enter the Coroner's Office")
+		to_door = @CoronersOffice.door
+	})
+
+	// --------------------------------------------------------------------------------------------
+	pictureLeft = DEFINE_OBJECT({
+		name = TEXT(11301,"painting")
+		bad_story = [ "jefferson", "He's definitely not an ex-president." ]
+
+		VERB(lookat) {
+			sayLine(SAY(11285,"That's some old dude who I'm pretty sure is dead. "))
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	pictureRight = DEFINE_OBJECT({
+		name = TEXT(11302,"painting")
+		bad_story = [ "jefferson", SAY(11286,"I don't know who he is, but he doesn't look very presidential.") ]
+
+		VERB(lookat) {
+			sayLine(SAY(11287,"Pretty sure that came with the frame."))
+		}
+	})
+
+// NEW_OBJECT_HERE
+})

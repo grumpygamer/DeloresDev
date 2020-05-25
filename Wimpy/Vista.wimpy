@@ -1,0 +1,389 @@
+ambient_light: "{0.552941,0.32549,0.403922,1}"
+background: "background"
+name: "Vista"
+room_scale: 3
+roomsize: "{900,240}"
+sheet: "Vista"
+layers: [
+    {
+        name: "foreground"
+        parallax: 1.25
+        zsort: -1
+    }
+    {
+        name: "background1"
+        parallax: 1
+        zsort: 1
+    }
+    {
+        name: "valley"
+        parallax: 0.75
+        zsort: 2
+    }
+    {
+        name: "distant_hills"
+        parallax: 0.5
+        zsort: 3
+    }
+    {
+        name: "sky"
+        parallax: 0.25
+        zsort: 4
+    }
+]
+lights: [
+    {
+        color1: "{0.848039,0.490532,0.646942,0}"
+        color2: "{0,0,0,0}"
+        id: 0
+        iradius: 364
+        oradius: 445
+        rate: 0
+        clipping: ((0,0),(0,0))
+        pos: (456,0)
+    }
+]
+objects: [
+    {
+        name: "quickiePalDoor1"
+        usedir: "DIR_LEFT"
+        zsort: 118
+        hotspot: ((-219,-131),(-161,124))
+        pos: (213,118)
+        usepos: (-193,-99)
+    }
+    {
+        name: "quickiePalDoor2"
+        usedir: "DIR_LEFT"
+        zsort: 76
+        hotspot: ((-164,-88),(61,5))
+        pos: (215,76)
+        usepos: (-195,-57)
+    }
+    {
+        name: "countyExit"
+        usedir: "DIR_BACK"
+        zsort: 90
+        hotspot: ((-70,19),(15,177))
+        pos: (707,67)
+        usepos: (-32,13)
+    }
+    {
+        name: "vistaRightBush"
+        prop: 1
+        zsort: 64
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "bush"
+                ]
+            }
+        ]
+        pos: (856,144)
+    }
+    {
+        name: "triggerPath"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 118
+        hotspot: ((596,-55),(701,124))
+        pos: (213,118)
+        usepos: (554,-40)
+    }
+    {
+        name: "spotSheriff1"
+        spot: 1
+        usedir: "DIR_LEFT"
+        pos: (919,82)
+    }
+    {
+        name: "spotSheriff2"
+        spot: 1
+        usedir: "DIR_LEFT"
+        pos: (767,78)
+    }
+    {
+        name: "spotPlayer"
+        spot: 1
+        usedir: "DIR_RIGHT"
+        pos: (726,78)
+    }
+    {
+        name: "vistaGrass"
+        prop: 1
+        zsort: 66
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "grass"
+                ]
+            }
+        ]
+        pos: (444,36)
+    }
+    {
+        name: "trafficCone"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_RIGHT"
+        zsort: 89
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "traffic_cone"
+                ]
+            }
+        ]
+        hotspot: ((-13,-15),(14,18))
+        pos: (679,101)
+        usepos: (-4,-21)
+        usepos2: (-87,-31)
+    }
+    {
+        layer: 2
+        name: "radioTowerLight"
+        prop: 1
+        zsort: 177
+        animations: [
+            {
+                fps: 2
+                loop: 1
+                name: "default"
+                frames: [
+                    "radio_tower_light_on"
+                    "null"
+                ]
+            }
+        ]
+        pos: (313,219)
+    }
+    {
+        layer: 2
+        name: "radioStationArrow"
+        prop: 1
+        zsort: 156
+        animations: [
+            {
+                fps: 1
+                loop: 1
+                name: "default"
+                frames: [
+                    "neon_arrow"
+                    "neon_arrow"
+                    "null"
+                    "neon_arrow"
+                    "neon_arrow"
+                    "null"
+                    "neon_arrow"
+                    "neon_arrow"
+                    "null"
+                    "neon_arrow"
+                    "neon_arrow"
+                    "null"
+                ]
+            }
+        ]
+        pos: (279,170)
+    }
+    {
+        layer: 2
+        name: "radioStationSign"
+        prop: 1
+        zsort: 155
+        animations: [
+            {
+                fps: 1
+                loop: 1
+                name: "default"
+                frames: [
+                    "call_letters"
+                    "null"
+                    "call_letters"
+                    "null"
+                    "call_letters"
+                    "null"
+                    "call_letters"
+                    "null"
+                ]
+            }
+        ]
+        pos: (278,167)
+    }
+    {
+        layer: 2
+        name: "hotelO"
+        prop: 1
+        zsort: 123
+        animations: [
+            {
+                fps: 0.5
+                loop: 1
+                name: "default"
+                frames: [
+                    "letter_o"
+                    "null"
+                ]
+            }
+        ]
+        pos: (482,159)
+    }
+    {
+        layer: 2
+        name: "vistaFactoryLights"
+        prop: 1
+        zsort: 123
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                ]
+            }
+            {
+                name: "default"
+                frames: [
+                    "factory_lights_on"
+                ]
+            }
+        ]
+        pos: (711,135)
+    }
+    {
+        layer: 2
+        name: "mansion"
+        usedir: "DIR_BACK"
+        zsort: 235
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "mansion_explosion1"
+                ]
+            }
+            {
+                fps: 10
+                name: "explode"
+                frames: [
+                    "mansion_explosion1"
+                    "mansion_explosion1"
+                    "mansion_explosion2"
+                    "mansion_explosion3"
+                    "mansion_explosion4"
+                    "mansion_explosion5"
+                    "mansion_explosion6"
+                    "mansion_explosion7"
+                    "mansion_explosion8"
+                    "mansion_explosion9"
+                    "mansion_explosion10"
+                    "mansion_explosion11"
+                    "mansion_explosion12"
+                    "mansion_explosion13"
+                    "mansion_explosion14"
+                    "mansion_explosion15"
+                    "mansion_explosion16"
+                    "mansion_explosion17"
+                    "mansion_explosion18"
+                    "mansion_explosion19"
+                    "mansion_explosion20"
+                    "mansion_explosion21"
+                    "mansion_explosion22"
+                    "mansion_explosion23"
+                    "mansion_explosion24"
+                    "mansion_explosion25"
+                    "mansion_explosion26"
+                    "mansion_explosion27"
+                ]
+            }
+            {
+                loop: 1
+                name: "smoking"
+                frames: [
+                    "mansion_explosion21"
+                    "mansion_explosion22"
+                    "mansion_explosion23"
+                    "mansion_explosion24"
+                    "mansion_explosion25"
+                    "mansion_explosion26"
+                    "mansion_explosion27"
+                    "mansion_explosion27"
+                    "mansion_explosion27"
+                    "mansion_explosion27"
+                ]
+            }
+        ]
+        hotspot: ((-17,-9),(31,16))
+        pos: (754,218)
+        usepos: (-19,-139)
+    }
+    {
+        layer: 2
+        name: "circus"
+        usedir: "DIR_BACK"
+        zsort: 85
+        hotspot: ((-162,41),(-137,85))
+        pos: (388,85)
+        usepos: (-187,-6)
+    }
+    {
+        layer: 2
+        name: "circus2"
+        usedir: "DIR_BACK"
+        zsort: 85
+        hotspot: ((-247,41),(-162,67))
+        pos: (388,85)
+        usepos: (-187,-6)
+    }
+    {
+        layer: 2
+        name: "hotel"
+        usedir: "DIR_BACK"
+        zsort: 120
+        hotspot: ((-7,-27),(92,7))
+        pos: (450,120)
+        usepos: (32,-45)
+    }
+    {
+        layer: 2
+        name: "hotelTop"
+        usedir: "DIR_BACK"
+        zsort: 120
+        hotspot: ((17,1),(58,47))
+        pos: (450,120)
+        usepos: (32,-45)
+    }
+    {
+        layer: 2
+        name: "factory"
+        usedir: "DIR_BACK"
+        zsort: 120
+        hotspot: ((221,-15),(329,54))
+        pos: (450,120)
+        usepos: (271,-43)
+    }
+    {
+        layer: 2
+        name: "radioStation"
+        usedir: "DIR_BACK"
+        zsort: 120
+        hotspot: ((-176,40),(-129,108))
+        pos: (450,120)
+        usepos: (-149,-31)
+    }
+]
+room_bounds: ((0,0),(890,240))
+room_size: (900,240)
+walkboxes: [
+    {
+        polygon: "(161,67);(222,67);(1,1);(-1,22)"
+    }
+    {
+        polygon: "(231,90);(276,95);(290,71);(222,67);(161,67)"
+    }
+    {
+        polygon: "(276,95);(386,80);(530,72);(532,67);(290,71)"
+    }
+    {
+        polygon: "(530,72);(603,72);(639,77);(659,81);(693,81);(897,87);(898,69);(532,67)"
+    }
+]

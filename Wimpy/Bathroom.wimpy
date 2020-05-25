@@ -1,0 +1,473 @@
+background: "background"
+name: "Bathroom"
+room_scale: 4
+sheet: "Bathroom"
+layers: [
+    {
+        name: "foreground_light"
+        parallax: 1
+        zsort: -1
+    }
+    {
+        name: "foreground_dim"
+        parallax: 1
+        zsort: -2
+    }
+    {
+        name: "foreground_dark"
+        parallax: 1
+        zsort: -3
+    }
+]
+objects: [
+    {
+        name: "bathroomDoor"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 100
+        animations: [
+            {
+                name: "closed"
+                frames: [
+                    "door_opening"
+                    "door_closed"
+                ]
+            }
+            {
+                name: "open"
+                frames: [
+                    "door_opening"
+                    "door_open"
+                ]
+            }
+        ]
+        hotspot: ((-18,-39),(18,39))
+        pos: (102,115)
+        usepos: (-4,-42)
+        usepos2: (-2,-63)
+    }
+    {
+        name: "sink"
+        usedir: "DIR_BACK"
+        zsort: 88
+        hotspot: ((4,2),(40,24))
+        pos: (160,88)
+        usepos: (22,-19)
+    }
+    {
+        name: "quickieDryer"
+        usedir: "DIR_BACK"
+        zsort: 88
+        hotspot: ((-39,23),(-11,46))
+        pos: (169,84)
+        usepos: (-22,-14)
+    }
+    {
+        name: "mirror"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 88
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "mirror_frown"
+                ]
+            }
+            {
+                name: "smile"
+                frames: [
+                    "null"
+                ]
+            }
+        ]
+        hotspot: ((-24,-12),(10,21))
+        pos: (191,124)
+        usepos: (-9,-55)
+        usepos2: (-5,-64)
+    }
+    {
+        name: "toilet"
+        usedir: "DIR_RIGHT"
+        usedir2: "DIR_RIGHT"
+        zsort: 64
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "toilet"
+                ]
+            }
+        ]
+        hotspot: ((-32,-25),(18,32))
+        pos: (258,88)
+        usepos: (-47,-29)
+        usepos2: (-83,-23)
+    }
+    {
+        name: "toiletPaper"
+        usedir: "DIR_RIGHT"
+        usedir2: "DIR_RIGHT"
+        zsort: 55
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "toilet_paper"
+                ]
+            }
+            {
+                name: "under"
+                frames: [
+                    "toilet_paper"
+                ]
+            }
+            {
+                name: "over"
+                frames: [
+                    "toilet_paper_over"
+                ]
+            }
+            {
+                fps: 12
+                name: "under_spin"
+                frames: [
+                    "toilet_paper1"
+                    "toilet_paper2"
+                    "toilet_paper3"
+                    "toilet_paper4"
+                    "toilet_paper5"
+                    "toilet_paper3"
+                    "toilet_paper4"
+                    "toilet_paper5"
+                    "toilet_paper3"
+                    "toilet_paper4"
+                    "toilet_paper5"
+                    "toilet_paper3"
+                    "toilet_paper4"
+                    "toilet_paper5"
+                    "toilet_paper6"
+                    "toilet_paper7"
+                    "toilet_paper8"
+                    "toilet_paper9"
+                    "toilet_paper"
+                ]
+            }
+            {
+                fps: 12
+                name: "over_spin"
+                frames: [
+                    "toilet_paper_over1"
+                    "toilet_paper_over2"
+                    "toilet_paper_over3"
+                    "toilet_paper_over4"
+                    "toilet_paper_over5"
+                    "toilet_paper_over3"
+                    "toilet_paper_over4"
+                    "toilet_paper_over5"
+                    "toilet_paper_over3"
+                    "toilet_paper_over4"
+                    "toilet_paper_over5"
+                    "toilet_paper_over3"
+                    "toilet_paper_over4"
+                    "toilet_paper_over5"
+                    "toilet_paper_over6"
+                    "toilet_paper_over7"
+                    "toilet_paper_over8"
+                    "toilet_paper_over9"
+                    "toilet_paper_over"
+                ]
+            }
+        ]
+        hotspot: ((114,-23),(132,-3))
+        pos: (160,90)
+        usepos: (104,-31)
+        usepos2: (23,-32)
+    }
+    {
+        name: "trashCan"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_LEFT"
+        zsort: 66
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "trashcan"
+                ]
+            }
+        ]
+        hotspot: ((-2,-23),(19,29))
+        pos: (54,85)
+        usepos: (2,-27)
+        usepos2: (68,-22)
+    }
+    {
+        name: "quickiePalBathroomDime"
+        usedir: "DIR_RIGHT"
+        zsort: 102
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "dime"
+                ]
+            }
+        ]
+        hotspot: ((-7,-4),(6,6))
+        pos: (164,56)
+        usepos: (-17,0)
+    }
+    {
+        name: "quickieToiletTubLit"
+        parent: "quickieToilet"
+        prop: 1
+        zsort: 61
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "toilet_tube_lit"
+                ]
+            }
+        ]
+        pos: (262,127)
+    }
+    {
+        name: "light"
+        prop: 1
+        zsort: 51
+        animations: [
+            {
+                name: "off"
+                frames: [
+                    "lamp_off"
+                ]
+            }
+            {
+                name: "on"
+                frames: [
+                    "lamp_on"
+                ]
+            }
+        ]
+        pos: (167,112)
+    }
+    {
+        name: "lightswitch"
+        usedir: "DIR_BACK"
+        zsort: 76
+        animations: [
+            {
+                name: "off"
+                frames: [
+                ]
+            }
+            {
+                name: "on"
+                frames: [
+                    "switch_on"
+                ]
+            }
+        ]
+        hotspot: ((-6,-6),(7,7))
+        pos: (76,117)
+        usepos: (0,-44)
+    }
+    {
+        name: "quickieSeatLiners"
+        usedir: "DIR_RIGHT"
+        zsort: 76
+        hotspot: ((-21,-1),(-2,21))
+        pos: (281,124)
+        usepos: (-35,-50)
+    }
+    {
+        name: "toiletHandle"
+        usedir: "DIR_RIGHT"
+        usedir2: "DIR_RIGHT"
+        zsort: 60
+        hotspot: ((11,3),(20,11))
+        pos: (239,103)
+        usepos: (-7,-30)
+        usepos2: (-48,-34)
+    }
+    {
+        name: "sinkFaucet"
+        usedir: "DIR_BACK"
+        zsort: 77
+        animations: [
+            {
+                name: "off"
+                frames: [
+                ]
+            }
+            {
+                loop: 1
+                name: "on"
+                frames: [
+                    "faucet_wayer_frame1"
+                    "faucet_water_frame2"
+                ]
+            }
+        ]
+        hotspot: ((-12,-3),(12,8))
+        pos: (182,106)
+        usepos: (0,-37)
+    }
+    {
+        name: "doorLightingOverlay"
+        prop: 1
+        zsort: 46
+        animations: [
+            {
+                name: "door_open"
+                frames: [
+                    "door_open_mask"
+                ]
+            }
+            {
+                name: "state2"
+                frames: [
+                    "toilet_on_mask"
+                ]
+            }
+            {
+                name: "state3"
+                frames: [
+                    "toilet_on_door_open_mask"
+                ]
+            }
+            {
+                name: "door_closed"
+                frames: [
+                    "door_closed_mask"
+                ]
+            }
+            {
+                name: "lights_on"
+                frames: [
+                ]
+            }
+        ]
+        pos: (160,90)
+    }
+    {
+        name: "quickiePalEyes"
+        prop: 1
+        zsort: 45
+        animations: [
+            {
+                name: "no_eyes"
+                frames: [
+                ]
+            }
+            {
+                name: "eyes"
+                frames: [
+                    "eyes"
+                ]
+            }
+        ]
+        pos: (238,142)
+    }
+    {
+        name: "quickieToiletTube"
+        usedir: "DIR_BACK"
+        zsort: 71
+        hotspot: ((32,39),(42,52))
+        pos: (234,80)
+        usepos: (20,-13)
+    }
+    {
+        name: "quickiePalBathroomStar1"
+        prop: 1
+        zsort: 101
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (98,140)
+    }
+    {
+        name: "quickiePalBathroomGraffiti"
+        prop: 1
+        zsort: 177
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "graffiti"
+                ]
+            }
+            {
+                name: "state1"
+                frames: [
+                ]
+            }
+        ]
+        pos: (30,129)
+    }
+    {
+        name: "quickiePalBathroomHintFlyer"
+        usedir: "DIR_BACK"
+        zsort: 74
+        hotspot: ((-20,2),(-4,20))
+        pos: (157,129)
+        usepos: (-14,-60)
+    }
+    {
+        name: "screwdriver"
+        usedir: "DIR_LEFT"
+        usedir2: "DIR_LEFT"
+        zsort: 63
+        animations: [
+            {
+                name: "here"
+                frames: [
+                    "screwdriver"
+                ]
+            }
+            {
+                name: "gone"
+                frames: [
+                ]
+            }
+        ]
+        hotspot: ((-9,-6),(9,5))
+        pos: (45,60)
+        usepos: (20,-3)
+        usepos2: (81,-1)
+    }
+    {
+        name: "star1"
+        prop: 1
+        zsort: 101
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (98,140)
+    }
+]
+room_bounds: ((0,0),(320,240))
+room_size: (320,180)
+walkboxes: [
+    {
+        polygon: "(70,74);(123,74);(128,70);(165,70);(165,63);(81,63);(86,69);(67,69)"
+    }
+    {
+        polygon: "(58,62);(81,63);(165,63);(227,61);(267,61);(275,52);(38,52)"
+    }
+    {
+        polygon: "(165,70);(213,70);(218,75);(249,75);(252,70);(224,70);(227,61);(165,63)"
+    }
+]

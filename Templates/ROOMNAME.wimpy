@@ -1,0 +1,7 @@
+background: "background"
+name: "__ROOMNAME__"
+sheet: "__ROOMNAME__"
+room_scale: 3
+room_bounds: "{{0,0},{428,240}}"
+objects: [
+]

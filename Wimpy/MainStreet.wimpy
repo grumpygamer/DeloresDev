@@ -1,0 +1,2258 @@
+ambient_light: "{0.378749,0.593415,0.696078,1}"
+name: "MainStreet"
+room_scale: 3
+sheet: "MainStreet"
+background: [
+    "background_left"
+    "background_right"
+]
+layers: [
+    {
+        name: "sky"
+        parallax: 0.25
+        zsort: 2
+    }
+    {
+        parallax: 0.75
+        zsort: 1
+        name: [
+            "hills_left"
+            "hills_right"
+        ]
+    }
+    {
+        parallax: 1.1
+        zsort: -2
+        name: [
+            "foreground_left"
+            "foreground_right"
+        ]
+    }
+]
+lights: [
+    {
+        color1: "{0.828431,0.82843,0.527922,0}"
+        color2: "{0,0,0,0}"
+        id: 0
+        iradius: 23
+        oradius: 100
+        rate: 0
+        clipping: ((0,0),(0,0))
+        pos: (832,84)
+    }
+    {
+        color1: "{0.828431,0.82843,0.527922,0}"
+        color2: "{0,0,0,0}"
+        id: 1
+        iradius: 23
+        oradius: 100
+        rate: 0
+        clipping: ((0,0),(0,0))
+        pos: (1327,85)
+    }
+    {
+        color1: "{0.828431,0.82843,0.527922,0}"
+        color2: "{0,0,0,0}"
+        id: 2
+        iradius: 23
+        oradius: 100
+        rate: 0
+        clipping: ((0,0),(0,0))
+        pos: (1752,84)
+    }
+    {
+        color1: "{0.828431,0.82843,0.527922,0}"
+        color2: "{0,0,0,0}"
+        id: 3
+        iradius: 23
+        oradius: 100
+        rate: 0
+        clipping: ((0,0),(0,0))
+        pos: (2171,81)
+    }
+    {
+        color1: "{0.828431,0.82843,0.527922,0}"
+        color2: "{0,0,0,0}"
+        id: 4
+        iradius: 23
+        oradius: 100
+        rate: 0
+        clipping: ((0,0),(0,0))
+        pos: (2586,83)
+    }
+    {
+        color1: "{0.828431,0.82843,0.527922,0}"
+        color2: "{0,0,0,0}"
+        id: 5
+        iradius: 64
+        oradius: 106
+        rate: 0
+        clipping: ((0,0),(0,0))
+        pos: (1060,179)
+    }
+    {
+        color1: "{0.828431,0.82843,0.527922,0}"
+        color2: "{0,0,0,0}"
+        id: 6
+        iradius: 37
+        oradius: 83
+        rate: 0
+        clipping: ((0,0),(0,0))
+        pos: (1976,157)
+    }
+    {
+        color1: "{0.828431,0.527922,0.828431,0}"
+        color2: "{0,0,0,0}"
+        id: 7
+        iradius: 119
+        oradius: 198
+        rate: 0
+        clipping: ((0,0),(0,0))
+        pos: (2472,133)
+    }
+    {
+        color1: "{0.698849,0.457516,0.784314,0}"
+        color2: "{0,0,0,0}"
+        id: 8
+        iradius: 27
+        oradius: 32
+        rate: 0
+        clipping: ((0,0),(0,0))
+        pos: (2305,116)
+    }
+]
+objects: [
+    {
+        name: "highwayDoor"
+        usedir: "DIR_LEFT"
+        zsort: 120
+        hotspot: ((-172,-124),(-140,123))
+        pos: (166,120)
+        usepos: (-120,-46)
+    }
+    {
+        name: "AStreetDoor"
+        usedir: "DIR_BACK"
+        zsort: 114
+        hotspot: ((92,-5),(151,150))
+        pos: (1342,98)
+        usepos: (105,-10)
+    }
+    {
+        name: "electronicsDoor"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 116
+        hotspot: ((22,-51),(93,30))
+        pos: (1596,140)
+        usepos: (57,-55)
+        usepos2: (58,-71)
+    }
+    {
+        name: "dinerDoor"
+        usedir: "DIR_BACK"
+        zsort: 118
+        animations: [
+            {
+                name: "closed"
+                frames: [
+                    "diner_door_open"
+                    "diner_door_opening2"
+                    "diner_door_opening1"
+                    "diner_door_closed"
+                ]
+            }
+            {
+                name: "open"
+                frames: [
+                    "diner_door_closed"
+                    "diner_door_opening1"
+                    "diner_door_opening2"
+                    "diner_door_open"
+                ]
+            }
+        ]
+        hotspot: ((-22,-38),(20,39))
+        pos: (2407,140)
+        usepos: (4,-42)
+    }
+    {
+        name: "alleywayDoor"
+        usedir: "DIR_BACK"
+        zsort: 122
+        hotspot: ((-21,-19),(11,64))
+        pos: (2316,124)
+        usepos: (-18,-16)
+    }
+    {
+        name: "BStreetDoor"
+        usedir: "DIR_BACK"
+        zsort: 114
+        hotspot: ((-17,-29),(94,129))
+        pos: (2637,117)
+        usepos: (42,-38)
+    }
+    {
+        name: "bankDoor"
+        usedir: "DIR_BACK"
+        zsort: 124
+        animations: [
+            {
+                name: "closed"
+                frames: [
+                    "bank_door_opening"
+                    "bank_door_closed"
+                ]
+            }
+            {
+                name: "open"
+                frames: [
+                    "bank_door_opening"
+                    "bank_door_open"
+                ]
+            }
+        ]
+        hotspot: ((-25,-37),(26,28))
+        pos: (1975,152)
+        usepos: (1,-36)
+    }
+    {
+        name: "quickiePalDoor"
+        usedir: "DIR_RIGHT"
+        zsort: 114
+        hotspot: ((92,-117),(132,130))
+        pos: (2928,112)
+        usepos: (114,-29)
+    }
+    {
+        name: "cityHallDoor"
+        usedir: "DIR_BACK"
+        zsort: 121
+        animations: [
+            {
+                name: "closed"
+                frames: [
+                    "city_hall_door_open"
+                    "city_hall_door_opening2"
+                    "city_hall_door_opening1"
+                    "city_hall_door_closed"
+                ]
+            }
+            {
+                name: "open"
+                frames: [
+                    "city_hall_door_closed"
+                    "city_hall_door_opening1"
+                    "city_hall_door_opening2"
+                    "city_hall_door_open"
+                ]
+            }
+        ]
+        hotspot: ((-22,-21),(20,38))
+        pos: (1060,140)
+        usepos: (0,-22)
+    }
+    {
+        name: "thimbleweedSign"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 88
+        hotspot: ((-296,-11),(-183,38))
+        pos: (322,125)
+        usepos: (-239,-44)
+        usepos2: (-223,-75)
+    }
+    {
+        name: "mainStreetDime"
+        usedir: "DIR_RIGHT"
+        zsort: 112
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "dime"
+                ]
+            }
+            {
+                name: "state1"
+                frames: [
+                ]
+            }
+        ]
+        hotspot: ((-7,-3),(5,4))
+        pos: (1886,85)
+        usepos: (-17,0)
+    }
+    {
+        name: "mainStreetPizzaFlyer"
+        usedir: "DIR_RIGHT"
+        zsort: 100
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "pizza_flyer"
+                ]
+            }
+        ]
+        hotspot: ((-20,-11),(17,9))
+        pos: (2803,83)
+        usepos: (-23,-2)
+    }
+    {
+        name: "mainStreetE_storeLit"
+        prop: 1
+        zsort: 238
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "e_store_lit"
+                ]
+            }
+        ]
+        pos: (1689,158)
+    }
+    {
+        name: "mainStreetSignsLamps"
+        prop: 1
+        zsort: 82
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "fixed_foreground"
+                ]
+            }
+        ]
+        pos: (1734,160)
+    }
+    {
+        name: "mainStreetE_storeLampost"
+        prop: 1
+        zsort: 81
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "e_store_lamp_lit"
+                ]
+            }
+        ]
+        pos: (1752,160)
+    }
+    {
+        name: "dinerSign"
+        prop: 1
+        zsort: 118
+        animations: [
+            {
+                name: "on"
+                frames: [
+                    "diner_lit"
+                ]
+            }
+            {
+                name: "off"
+                frames: [
+                ]
+            }
+        ]
+        pos: (2408,209)
+    }
+    {
+        name: "mainStreetAlleyMask"
+        prop: 1
+        zsort: 88
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "alley_left_mask"
+                ]
+            }
+        ]
+        pos: (2283,141)
+    }
+    {
+        name: "mainStreetDinerMask"
+        prop: 1
+        zsort: 91
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "diner_right_mask"
+                ]
+            }
+        ]
+        pos: (2594,151)
+    }
+    {
+        name: "mainStreetParkTreesBack"
+        prop: 1
+        zsort: 107
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "crths_back_tree_left"
+                ]
+            }
+        ]
+        pos: (878,156)
+    }
+    {
+        name: "mainStreetParkTrees"
+        prop: 1
+        zsort: 102
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "crths_trees"
+                ]
+            }
+        ]
+        pos: (1081,167)
+    }
+    {
+        name: "mainStreetParkBushes"
+        prop: 1
+        zsort: 91
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "bushes"
+                ]
+            }
+        ]
+        pos: (848,103)
+    }
+    {
+        name: "mainStretBStSign"
+        usedir: "DIR_BACK"
+        zsort: 112
+        hotspot: ((-8,43),(26,67))
+        pos: (2636,112)
+        usepos: (-3,-29)
+    }
+    {
+        name: "mainSreetAStSign"
+        usedir: "DIR_RIGHT"
+        zsort: 105
+        hotspot: ((-4,60),(29,87))
+        pos: (1332,105)
+        usepos: (-15,-12)
+    }
+    {
+        name: "mainStreetMainStSign"
+        usedir: "DIR_BACK"
+        zsort: 111
+        hotspot: ((-22,57),(14,70))
+        pos: (333,111)
+        usepos: (7,-26)
+    }
+    {
+        name: "watchRepairDoor"
+        usedir: "DIR_BACK"
+        zsort: 114
+        hotspot: ((-23,-14),(20,48))
+        pos: (490,114)
+        usepos: (1,-22)
+    }
+    {
+        name: "watchRepairShopSign"
+        usedir: "DIR_BACK"
+        zsort: 112
+        hotspot: ((-57,9),(-15,38))
+        pos: (628,112)
+        usepos: (-40,-28)
+    }
+    {
+        name: "realtorDoor"
+        usedir: "DIR_BACK"
+        zsort: 112
+        hotspot: ((20,-14),(56,59))
+        pos: (628,112)
+        usepos: (33,-19)
+    }
+    {
+        name: "flowerShopDoor"
+        usedir: "DIR_BACK"
+        zsort: 114
+        hotspot: ((35,-25),(76,57))
+        pos: (2210,114)
+        usepos: (50,-29)
+    }
+    {
+        name: "scalingBank"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 80
+        hotspot: ((-100,-28),(89,163))
+        pos: (1980,80)
+        usepos: (0,-30)
+    }
+    {
+        name: "alleyBlueNeon"
+        prop: 1
+        zsort: 136
+        animations: [
+            {
+                name: "on"
+                frames: [
+                    "diner_side_blue_neon_on"
+                ]
+            }
+            {
+                name: "off"
+                frames: [
+                ]
+            }
+        ]
+        pos: (2321,167)
+    }
+    {
+        name: "scalingCityHall"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 73
+        hotspot: ((-72,-8),(49,168))
+        pos: (1069,73)
+        usepos: (0,-30)
+    }
+    {
+        name: "scalingParkLeft"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 123
+        hotspot: ((-227,-33),(-45,73))
+        pos: (1056,122)
+        usepos: (0,-30)
+    }
+    {
+        name: "scalingParkRight"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 124
+        hotspot: ((-16,-41),(171,49))
+        pos: (1134,132)
+        usepos: (0,-30)
+    }
+    {
+        name: "bankDoorSign"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 118
+        animations: [
+            {
+                name: "here"
+                frames: [
+                    "bank_door_sign"
+                ]
+            }
+            {
+                name: "gone"
+                frames: [
+                ]
+            }
+        ]
+        hotspot: ((-10,-9),(8,10))
+        pos: (1975,150)
+        usepos: (1,-35)
+        usepos2: (-18,-67)
+    }
+    {
+        name: "trafficCone1"
+        usedir: "DIR_LEFT"
+        usedir2: "DIR_LEFT"
+        zsort: 76
+        animations: [
+            {
+                name: "here"
+                frames: [
+                    "traffic_cone"
+                ]
+            }
+            {
+                name: "gone"
+                frames: [
+                ]
+            }
+        ]
+        hotspot: ((-10,-15),(9,18))
+        pos: (29,96)
+        usepos: (26,-15)
+        usepos2: (69,-14)
+    }
+    {
+        name: "trafficCone2"
+        usedir: "DIR_FRONT"
+        usedir2: "DIR_FRONT"
+        zsort: 58
+        animations: [
+            {
+                name: "here"
+                frames: [
+                    "traffic_cone"
+                ]
+            }
+            {
+                name: "gone"
+                frames: [
+                ]
+            }
+        ]
+        hotspot: ((-10,-15),(10,15))
+        pos: (48,70)
+        usepos: (2,0)
+        usepos2: (11,12)
+    }
+    {
+        name: "trafficCone3"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 92
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "traffic_cone"
+                ]
+            }
+        ]
+        hotspot: ((-10,-14),(10,10))
+        pos: (2678,103)
+        usepos: (-2,-20)
+        usepos2: (-3,-31)
+    }
+    {
+        name: "fireHydrant"
+        usedir: "DIR_BACK"
+        zsort: 89
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "red_hydrant"
+                ]
+            }
+            {
+                name: "state1"
+                frames: [
+                    "red_hydrant"
+                ]
+            }
+        ]
+        hotspot: ((-13,-19),(10,19))
+        pos: (1362,106)
+        usepos: (-4,-29)
+    }
+    {
+        name: "greenFireHydrant"
+        prop: 1
+        zsort: 89
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "green_hydrant"
+                ]
+            }
+        ]
+        pos: (1362,107)
+    }
+    {
+        name: "fireHydrantWater"
+        prop: 1
+        zsort: 102
+        animations: [
+            {
+                name: "closed"
+                frames: [
+                ]
+            }
+            {
+                loop: 1
+                name: "open"
+                frames: [
+                    "hydrant_water_off_15"
+                    "hydrant_water_off_16"
+                    "hydrant_water_off_17"
+                    "hydrant_water_off_18"
+                    "hydrant_water_off_17"
+                ]
+            }
+        ]
+        pos: (1656,122)
+    }
+    {
+        name: "hydrantTube"
+        usedir: "DIR_RIGHT"
+        zsort: 88
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "vacuum_tube_off"
+                ]
+            }
+            {
+                name: "state1"
+                frames: [
+                    "vacuum_tube_on"
+                ]
+            }
+        ]
+        hotspot: ((-7,4),(4,19))
+        pos: (1362,117)
+        usepos: (-22,-31)
+    }
+    {
+        name: "wrench"
+        usedir: "DIR_BACK"
+        zsort: 83
+        animations: [
+            {
+                fps: 2
+                name: "state0"
+                frames: [
+                    "wrench_off"
+                    "wrench_on"
+                ]
+            }
+        ]
+        hotspot: ((-9,-5),(8,6))
+        pos: (1308,97)
+        usepos: (-8,-23)
+    }
+    {
+        name: "toolbag"
+        usedir: "DIR_RIGHT"
+        zsort: 84
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "tool_bag"
+                ]
+            }
+        ]
+        hotspot: ((-14,-9),(12,11))
+        pos: (1298,92)
+        usepos: (-27,-6)
+    }
+    {
+        name: "cricketsArea1"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 51
+        hotspot: ((-222,-19),(184,24))
+        pos: (215,51)
+        usepos: (0,-30)
+    }
+    {
+        name: "cricketsArea2"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 56
+        hotspot: ((-179,-20),(228,5))
+        pos: (2832,56)
+        usepos: (0,-30)
+    }
+    {
+        name: "thimbleweedSignText"
+        prop: 1
+        zsort: 162
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "city_limit_sign_text_en"
+                ]
+            }
+        ]
+        pos: (1525,120)
+    }
+    {
+        name: "willieSignText"
+        prop: 1
+        zsort: 162
+        pos: (1525,120)
+    }
+    {
+        name: "fireHydrantTrigger"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 75
+        hotspot: ((-1,-22),(68,20))
+        pos: (1327,75)
+        usepos: (0,-30)
+    }
+    {
+        name: "gasOffTrigger"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 70
+        hotspot: ((-280,-22),(887,59))
+        pos: (2338,70)
+        usepos: (0,-30)
+    }
+    {
+        name: "bulletHole"
+        prop: 1
+        zsort: 111
+        animations: [
+            {
+                name: "gone"
+                frames: [
+                ]
+            }
+            {
+                name: "here"
+                frames: [
+                    "bullet_hole"
+                ]
+            }
+        ]
+        pos: (48,136)
+    }
+    {
+        name: "bulletTrigger"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 120
+        hotspot: ((-1656,-175),(-1445,121))
+        pos: (1598,141)
+        usepos: (0,-30)
+    }
+    {
+        name: "willieNewShop"
+        prop: 1
+        zsort: 95
+        animations: [
+            {
+                name: "here"
+                frames: [
+                    "new_willy"
+                ]
+            }
+            {
+                name: "gone"
+                frames: [
+                ]
+            }
+        ]
+        pos: (491,154)
+    }
+    {
+        name: "willieTrigger"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 120
+        hotspot: ((-1231,-141),(-874,144))
+        pos: (1525,120)
+        usepos: (0,-30)
+    }
+    {
+        name: "willieSpot1"
+        spot: 1
+        usedir: "DIR_BACK"
+        pos: (496,93)
+    }
+    {
+        name: "willieSpot2"
+        spot: 1
+        usedir: "DIR_RIGHT"
+        pos: (781,71)
+    }
+    {
+        name: "WillieMeetTrigger"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 65
+        hotspot: ((-71,-42),(38,72))
+        pos: (526,65)
+        usepos: (0,-30)
+    }
+    {
+        name: "willieTalkSpot"
+        spot: 1
+        usedir: "DIR_BACK"
+        pos: (509,69)
+    }
+    {
+        name: "willieWatchSign"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 144
+        hotspot: ((-83,-10),(-61,27))
+        pos: (526,144)
+        usepos: (-74,-61)
+        usepos2: (-72,-97)
+    }
+    {
+        name: "pillowStore"
+        prop: 1
+        zsort: 110
+        animations: [
+            {
+                name: "here"
+                frames: [
+                    "pillow_store"
+                ]
+            }
+            {
+                name: "gone"
+                frames: [
+                ]
+            }
+        ]
+        pos: (1653,161)
+    }
+    {
+        layer: 2
+        name: "star1"
+        prop: 1
+        zsort: 108
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (22,162)
+    }
+    {
+        layer: 2
+        name: "star2"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (82,171)
+    }
+    {
+        layer: 2
+        name: "star3"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (27,221)
+    }
+    {
+        layer: 2
+        name: "star4"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (94,189)
+    }
+    {
+        layer: 2
+        name: "star5"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (167,229)
+    }
+    {
+        layer: 2
+        name: "star6"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (116,209)
+    }
+    {
+        layer: 2
+        name: "star7"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (336,182)
+    }
+    {
+        layer: 2
+        name: "star8"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (409,234)
+    }
+    {
+        layer: 2
+        name: "star9"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (380,201)
+    }
+    {
+        layer: 2
+        name: "star10"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_blue"
+                ]
+            }
+        ]
+        pos: (362,224)
+    }
+    {
+        layer: 2
+        name: "star11"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_blue"
+                ]
+            }
+        ]
+        pos: (416,209)
+    }
+    {
+        layer: 2
+        name: "star12"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_blue"
+                ]
+            }
+        ]
+        pos: (206,236)
+    }
+    {
+        layer: 2
+        name: "star13"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_blue"
+                ]
+            }
+        ]
+        pos: (185,234)
+    }
+    {
+        layer: 2
+        name: "star14"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_blue"
+                ]
+            }
+        ]
+        pos: (261,201)
+    }
+    {
+        layer: 2
+        name: "star15"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (205,184)
+    }
+    {
+        layer: 2
+        name: "star16"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (264,229)
+    }
+    {
+        layer: 2
+        name: "star17"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (301,213)
+    }
+    {
+        layer: 2
+        name: "star18"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (404,175)
+    }
+    {
+        layer: 2
+        name: "star19"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (475,178)
+    }
+    {
+        layer: 2
+        name: "star20"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (480,206)
+    }
+    {
+        layer: 2
+        name: "star21"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (535,170)
+    }
+    {
+        layer: 2
+        name: "star22"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (624,203)
+    }
+    {
+        layer: 2
+        name: "star23"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (485,167)
+    }
+    {
+        layer: 2
+        name: "star24"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (636,224)
+    }
+    {
+        layer: 2
+        name: "star25"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (451,232)
+    }
+    {
+        layer: 2
+        name: "star26"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (643,191)
+    }
+    {
+        layer: 2
+        name: "star27"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (706,232)
+    }
+    {
+        layer: 2
+        name: "star28"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (599,180)
+    }
+    {
+        layer: 2
+        name: "star29"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_blue"
+                ]
+            }
+        ]
+        pos: (169,206)
+    }
+    {
+        layer: 2
+        name: "star30"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_blue"
+                ]
+            }
+        ]
+        pos: (34,196)
+    }
+    {
+        layer: 2
+        name: "star31"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_blue"
+                ]
+            }
+        ]
+        pos: (77,194)
+    }
+    {
+        layer: 2
+        name: "star32"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_blue"
+                ]
+            }
+        ]
+        pos: (97,226)
+    }
+    {
+        layer: 2
+        name: "star33"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_blue"
+                ]
+            }
+        ]
+        pos: (440,193)
+    }
+    {
+        layer: 2
+        name: "star34"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_blue"
+                ]
+            }
+        ]
+        pos: (469,226)
+    }
+    {
+        layer: 2
+        name: "star35"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_blue"
+                ]
+            }
+        ]
+        pos: (568,231)
+    }
+    {
+        layer: 2
+        name: "star36"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_blue"
+                ]
+            }
+        ]
+        pos: (860,217)
+    }
+    {
+        layer: 2
+        name: "star37"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (771,186)
+    }
+    {
+        layer: 2
+        name: "star38"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (600,174)
+    }
+    {
+        layer: 2
+        name: "star39"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_blue"
+                ]
+            }
+        ]
+        pos: (812,235)
+    }
+    {
+        layer: 2
+        name: "star40"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_blue"
+                ]
+            }
+        ]
+        pos: (923,234)
+    }
+    {
+        layer: 2
+        name: "star41"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_blue"
+                ]
+            }
+        ]
+        pos: (1036,231)
+    }
+    {
+        layer: 2
+        name: "star42"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (538,181)
+    }
+    {
+        layer: 2
+        name: "star43"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (711,210)
+    }
+    {
+        layer: 2
+        name: "star44"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (805,186)
+    }
+    {
+        layer: 2
+        name: "star45"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (799,213)
+    }
+    {
+        layer: 2
+        name: "star46"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_blue"
+                ]
+            }
+        ]
+        pos: (778,220)
+    }
+    {
+        layer: 2
+        name: "star47"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (723,189)
+    }
+    {
+        layer: 2
+        name: "star48"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (872,155)
+    }
+    {
+        layer: 2
+        name: "star49"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (1057,212)
+    }
+    {
+        layer: 2
+        name: "star50"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (944,210)
+    }
+    {
+        layer: 2
+        name: "star51"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (1025,218)
+    }
+    {
+        layer: 2
+        name: "star52"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (1061,168)
+    }
+    {
+        layer: 2
+        name: "star53"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (980,197)
+    }
+    {
+        layer: 2
+        name: "star54"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (817,196)
+    }
+    {
+        layer: 2
+        name: "star55"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (841,201)
+    }
+    {
+        layer: 2
+        name: "star56"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (891,224)
+    }
+    {
+        layer: 2
+        name: "star57"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (831,229)
+    }
+    {
+        layer: 2
+        name: "star58"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (866,163)
+    }
+    {
+        layer: 2
+        name: "star59"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (880,197)
+    }
+    {
+        layer: 2
+        name: "star60"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (890,192)
+    }
+    {
+        layer: 2
+        name: "star61"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (938,183)
+    }
+    {
+        layer: 2
+        name: "star62"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (770,230)
+    }
+    {
+        layer: 2
+        name: "star63"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (973,167)
+    }
+    {
+        layer: 2
+        name: "star64"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (827,175)
+    }
+    {
+        layer: 2
+        name: "star65"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (853,166)
+    }
+    {
+        layer: 2
+        name: "star66"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_white"
+                ]
+            }
+        ]
+        pos: (721,177)
+    }
+    {
+        layer: 2
+        name: "starB1"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_cross1"
+                ]
+            }
+        ]
+        pos: (641,216)
+    }
+    {
+        layer: 2
+        name: "starB2"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_cross1"
+                ]
+            }
+        ]
+        pos: (31,174)
+    }
+    {
+        layer: 2
+        name: "starB3"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_cross1"
+                ]
+            }
+        ]
+        pos: (134,185)
+    }
+    {
+        layer: 2
+        name: "starB4"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_cross1"
+                ]
+            }
+        ]
+        pos: (56,226)
+    }
+    {
+        layer: 2
+        name: "starB5"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_cross1"
+                ]
+            }
+        ]
+        pos: (372,169)
+    }
+    {
+        layer: 2
+        name: "starB6"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_cross1"
+                ]
+            }
+        ]
+        pos: (413,187)
+    }
+    {
+        layer: 2
+        name: "starB7"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_cross1"
+                ]
+            }
+        ]
+        pos: (682,189)
+    }
+    {
+        layer: 2
+        name: "starB8"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_cross3"
+                ]
+            }
+        ]
+        pos: (877,188)
+    }
+    {
+        layer: 2
+        name: "starB9"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_cross1"
+                ]
+            }
+        ]
+        pos: (1016,230)
+    }
+    {
+        layer: 2
+        name: "starB10"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_cross1"
+                ]
+            }
+        ]
+        pos: (747,232)
+    }
+    {
+        layer: 2
+        name: "starB11"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_cross2"
+                ]
+            }
+        ]
+        pos: (979,183)
+    }
+    {
+        layer: 2
+        name: "starB12"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "star_cross2"
+                ]
+            }
+        ]
+        pos: (1024,157)
+    }
+    {
+        name: "streetLight1"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (832,84)
+    }
+    {
+        name: "streetLight2"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (1327,85)
+    }
+    {
+        name: "streetLight3"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (1752,84)
+    }
+    {
+        name: "streetLight4"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (2171,81)
+    }
+    {
+        name: "streetLight5"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (2586,83)
+    }
+    {
+        name: "cityHallLight"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (1060,179)
+    }
+    {
+        name: "bankLight"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (1976,157)
+    }
+    {
+        name: "dinerLight"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (2472,133)
+    }
+    {
+        name: "alleyLight"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (2305,116)
+    }
+    {
+        name: "pillowBearsSign"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 120
+        hotspot: ((-14,-21),(72,44))
+        pos: (1525,120)
+        usepos: (14,-36)
+        usepos2: (24,-51)
+    }
+    {
+        name: "ransomePoster"
+        prop: 1
+        zsort: 121
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "thimbleConPoster"
+                ]
+            }
+            {
+                name: "here"
+                frames: [
+                    "ransomePoster"
+                ]
+            }
+        ]
+        pos: (2311,143)
+    }
+    {
+        name: "greenFireHydrantTrigger"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 120
+        hotspot: ((-217,-99),(-27,37))
+        pos: (1525,120)
+        usepos: (0,-30)
+    }
+]
+room_bounds: ((0,0),(3050,240))
+room_size: (3050,240)
+scaling: [
+    {
+        scaling: [
+            "1.0@89"
+            "0.8@100"
+            "0.60@110"
+        ]
+    }
+    {
+        trigger: "scalingParkLeft"
+        scaling: [
+            "1.0@89"
+            "0.7@100"
+            "0.60@110"
+        ]
+    }
+    {
+        trigger: "scalingParkRight"
+        scaling: [
+            "1.0@89"
+            "0.7@100"
+            "0.60@110"
+        ]
+    }
+    {
+        trigger: "scalingCityHall"
+        scaling: [
+            "1.0@89"
+            "0.7@100"
+            "0.65@115"
+            "0.50@118"
+        ]
+    }
+    {
+        trigger: "scalingBank"
+        scaling: [
+            "1.0@89"
+            ".80@118"
+        ]
+    }
+]
+walkboxes: [
+    {
+        polygon: "(45,82);(324,82);(337,86);(475,86);(479,94);(496,94);(508,86);(644,86);(650,95);(673,95);(680,86);(811,86);(822,88);(899,88);(896,95);(830,96);(827,101);(834,101);(892,100);(927,110);(835,111);(828,110);(831,118);(940,113);(933,108);(904,96);(917,94);(1010,94);(1017,98);(1041,101);(1053,119);(1064,119);(1071,101);(1108,101);(1125,108);(1151,110);(1301,110);(1299,104);(1134,104);(1119,103);(1101,97);(1104,95);(1250,93);(1333,93);(1339,92);(1347,91);(1354,79);(1357,74);(1377,74);(1472,87);(1485,87);(1491,84);(1601,84);(1611,87);(1670,87);(1681,86);(1891,86);(1903,87);(1970,87);(1972,116);(1981,116);(1986,87);(2311,87);(2284,109);(2306,109);(2330,98);(2359,98);(2368,97);(2384,97);(2395,99);(2421,99);(2430,97);(2438,96);(2450,98);(2468,98);(2494,90);(2627,90);(2667,84);(3145,85);(3168,69);(2657,69);(2658,77);(2658,85);(2634,85);(2634,77);(2633,69);(2598,69);(2599,77);(2599,83);(2569,83);(2569,77);(2570,69);(2188,69);(2188,76);(2188,83);(2154,83);(2154,76);(2154,69);(1769,69);(1769,76);(1769,83);(1733,83);(1731,76);(1731,69);(1348,69);(1346,77);(1345,86);(1281,86);(1286,77);(1308,77);(1308,69);(848,69);(845,76);(843,83);(818,83);(814,76);(811,69);(45,69)"
+    }
+    {
+        polygon: "(940,113);(990,114);(994,106);(1006,102);(1041,101);(1017,98);(997,99);(974,105);(933,108)"
+    }
+    {
+        polygon: "(828,110);(835,111);(834,101);(827,101)"
+    }
+    {
+        polygon: "(814,76);(845,76);(848,69);(811,69)"
+    }
+    {
+        polygon: "(1308,77);(1346,77);(1348,69);(1308,69)"
+    }
+    {
+        polygon: "(1731,76);(1769,76);(1769,69);(1731,69)"
+    }
+    {
+        polygon: "(2154,76);(2188,76);(2188,69);(2154,69)"
+    }
+    {
+        polygon: "(2569,77);(2599,77);(2598,69);(2570,69)"
+    }
+    {
+        polygon: "(2634,77);(2658,77);(2657,69);(2633,69)"
+    }
+    {
+        name: "hydrant"
+        polygon: "(1339,92);(1412,98);(1472,87);(1377,74);(1376,81);(1376,91);(1347,91)"
+    }
+    {
+        name: "hydrant_front"
+        polygon: "(1354,79);(1376,81);(1377,74);(1357,74)"
+    }
+]

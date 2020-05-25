@@ -1,0 +1,369 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+DEFINE_ROOM("Nickel", {
+	music_pool = "town"
+	ambient_sound = SOUNDID(ambient_inside)
+
+	_newspaper_headlines = null
+	seen_story = NO
+
+	// ------------------------------------------------------------------------
+	// General room functions
+
+	script startTyping(speed=3.0) {
+		_typing_sid <- playSound(SOUNDID(typing))
+		playAnimation(natalie, "typing", YES)
+		natalie.typing <- YES
+		_typing_tid = stopthread(_typing_tid)
+		_typing_tid <- startthread(@{
+			do {
+				for (local frame = 1..6) {
+					objectState(typewriterPaper, "paper"+frame)
+					breaktime(speed,speed*2)
+					playSound(SOUNDID(typing_return))
+				}
+				playSound(SOUNDID(typing_roll))
+				for (local frame = 5..2) {
+					objectState(typewriterPaper, "paper"+frame)
+					breaktime(0.05)
+				}
+			}
+		})
+	}
+
+	script stopTyping() {
+		_typing_sid = stopSound(_typing_sid)
+		_typing_tid = stopthread(_typing_tid)
+		playAnimation(natalie, "stand_front", NO)
+	}
+
+	function _prime_headlines() {
+		if (_newspaper_headlines) return
+		_newspaper_headlines = [
+			[
+			SAY(11043,"Chuck Edmund committed to sanitarium...")
+			SAY(11044,"Chuck committed after a psychotic breakdown due to believing he was part of a computer.")
+			],[
+			SAY(11045,"Willie's violin repair posts record profits...")
+			SAY(11046,"Willie's violin repair business is booming due to new BBS ordering and advertising.")
+			],[
+			SAY(11047,"KSCUM to change music styles...")
+			SAY(11048,"Long standing KSCUM radio set to change formats from eclectic rock to esoteric rock.")
+			],[
+			SAY(11049,"S&D Diner nets another award...")
+			SAY(11050,"S&D Diner received another award for their amazing food. Critics all agree, it's the best place to eat in the county.")
+			],[
+			SAY(11051,"Free commemorative glass at S&D diner...")
+			SAY(11052,"In celebration of their latest award, the S&D Diner is giving a free commemorative glass with every purchase.")
+			],[
+			SAY(11053,"Art by Eltron to re-open as PillowBear™ store...")
+			SAY(11054,"The store referred to by locals as Art by Eltron will re-open as a PillowBear™ factory outlet in early May.")
+			],[
+			SAY(11055,"Quickie Pal bathroom a toxic site...")
+			SAY(11056,"Federal agencies have designated the Quickie Pal bathroom a Class 5 toxic site. Clean-up should begin soon.")
+			],[
+			SAY(11057,"Lenore Edmund evicted...")
+			SAY(11058,"After the bank repossessed Chuck Edmund's mansion, Lenore Edmund was evicted while screaming “Do you know who I am!”")
+			],[
+			SAY(11059,"Occult oddball Madame Morena tells town...")
+			SAY(11060,"I would never curse anyone, that would go beyond even my black magic. Come for the big blow-out sale!")
+			],[
+			SAY(11061,"Local nets prestigious job at MmucasFlem Games...")
+			SAY(11062,"Delores Edmund seems to have shaken recent family turmoil and is on her way to the top of the game industry!")
+			],[
+			SAY(11063,"Mime applauds silently for Ransome...")
+			SAY(11064,"While miming that it was the best show he'd ever seen, local Mime stands in line for 4th Ransome show in a row.")
+			],[
+			SAY(11065,"Local groundskeeper wins White House post...")
+			SAY(11066,"Local groundskeeper Doug Braverman is hired by the White House to dig holes in the rose garden.")
+			],[
+			SAY(11067,"No headline today...")
+			SAY(11068,"The Nickel News ran out of ink and cannot publish today's pap")		// <- don't fix the missing period
+			],[
+			SAY(11069,"Factory security guard Reyes promoted again...")
+			SAY(11070,"After five promotions, security guard and proud father Reyes has been made head of security at the new PillowBear™ factory.")
+			],[
+			SAY(11071,"Ghost of Franklin haunts Edmund Hotel...")
+			SAY(11072,"The ghost of Franklin, Chuck Edmund's brother, is said to haunt the local Edmund Hotel. Pigeon Brothers are on the case.")
+			],[
+			SAY(11073,"Ransome to receive philanthropy award...")
+			SAY(11074,"Citing his various projects benefiting children around the world, the award will be bestowed on Ransome.")
+			]
+		]
+	}
+
+	function assignHeadline(obj, headline) {
+		_prime_headlines()
+		--headline
+		if (headline < 0 || headline >= sizeof(_newspaper_headlines)) {
+			return
+		}
+		local note = _newspaper_headlines[headline]
+		obj.name <- strupper(note[0])
+		obj.note <- note
+		obj.photo_name <- "a newspaper headline"
+		obj.photo_reach <- REACH_LOW
+		obj.verb_read <- function(use_with=null)
+		{
+			if (headline == 14) seen_story = 1
+			Newspaper.genericNewspaper(strupper(this.note[1]))
+		}
+	}
+
+	script checkPhotos() {
+		sayLine(natalie, randomfrom(SAY(11075,"Let's see what you've got..."),
+		                            SAY(11076,"Let's take a look at your photos..."),
+		                            SAY(11077,"Why don't we take a quick look at your photos...")))
+		breakwhiletalking()
+		stopTyping()
+		actorQuickReach(delores, REACH_MED)
+		local good_count = 0
+		local bad_count = 0
+		foreach (local photo in getInventory(selectedActor)) {
+			if (photo?.is_photo) {
+				playSound(SOUNDID(flip_photo))
+				breaktime(0.25)
+				if (Note.isActiveStory(photo?.photo_for_story)) {
+					good_count++
+					if (Note.isStoryIn("videogames", photo?.photo_for_story) && photo?.photo_of_key == "thimbleweedSign") {
+						sayLine(natalie, SAY(11078,"Funny! Very meta! I like this one."))
+					} else
+					if (photo?.photo_for_story == "editor") {
+						sayLine(natalie, SAY(11079,"I'm very photogenic. Nice one of me."))
+					} else {
+						sayLine(natalie, randomfrom(SAY(11080,"Good one!"),
+						                            SAY(11081,"This is nice!"),
+						                            SAY(11082,"Perfect for the story!"),
+						                            SAY(11083,"Amazing!")))
+					}
+				} else {
+					bad_count++
+					sayLine(natalie, randomfrom(SAY(11084,"Blurry..."),
+					                            SAY(11085,"Poor lighting..."),
+					                            SAY(11086,"Not framed well..."),
+					                            SAY(11087,"Uninteresting..."),
+					                            SAY(11088,"Mundane..."),
+					                            SAY(11089,"Amateurish...")))
+				}
+				breakwhiletalking()
+			}
+		}
+		if (good_count == 0 and bad_count == 0) {
+			sayLine(natalie, SAY(11090,"Get out there kid and take some photos."))
+		} else
+		if (bad_count > good_count) {
+			sayLine(natalie, SAY(11091,"Don't feel too bad. It takes a while to master photojournalism."))
+		} else
+		if (good_count==1 && bad_count==0) {
+			sayLine(natalie, SAY(11092,"That's a good shot!"))
+		} else {
+			sayLine(natalie, SAY(11093,"There are some good shots in there!"))
+		}
+		breakwhiletalking()
+		setInventory(selectedActor, arrayfilter(getInventory(selectedActor), @(index, photo) {
+			return !photo?.is_photo || Note.isActiveStory(photo?.photo_for_story) || getValue(photo?.keep_photo)
+		}))
+		refreshInventory()
+		if (bad_count) {
+			playSound(SOUNDID(discard_photos))
+			sayLine(natalie, SAY(11094,"Let me get rid of the bad ones."))
+			breakwhiletalking()
+			if (good_count) {
+				sayLine(natalie, SAY(11095,"You keep the good ones until you've finished today's work."))
+				breakwhiletalking()
+			}
+		}
+		breakwhiletalking()
+		if (good_count != 0 or bad_count != 0) {
+			sayLine(natalie, SAY(11096,"Better get out there and take some more photos, we've got a deadline."))
+		}
+		startTyping()
+	}
+
+	// ------------------------------------------------------------------------
+	// Enter/Exit code
+
+	_typing_tid = 0
+
+	enter = function(from_door=null) {
+		walkboxHidden("desk_path", YES)
+		startTyping()
+		if (seen_story == 1) {
+			seen_story = 2
+			heardAbout("franklin")
+			sayLine(SAY(11097,"Dad? Dead? A ghost?"), SAY(11098,"That can't be, I had breakfast with him this morning."))
+		}
+
+		local star = 0
+		local starOffset = 30
+		for (local i = 1; i <= 4; i += 1) {
+			star = this["star"+i]
+			objectOffset(star,point(starOffset,0))
+			// obj, fadeRange1, fadeRange2, alphaRange1, alphaRange2
+			twinkleStar(star, 0.01, 0.1, random(0,0.3), random(0.6, 1))
+		}
+		for (local i = 1; i <= 1; i += 1) {
+			star = this["starB"+i]
+			objectOffset(star,point(starOffset,0))
+			// obj, fadeRange1, fadeRange2, alphaRange1, alphaRange2
+			twinkleStar(star, 0.05, 0.3, 0, 1)
+		}
+	}
+
+	exit = function() {
+	}
+
+	// ------------------------------------------------------------------------
+	// Objects
+
+	// --------------------------------------------------------------------------------------------
+	door = DEFINE_OBJECT({
+		name = TEXT(11117,"door")
+		photo_name = TEXT(11118,"the Nickel News door")
+		door_verbs = YES
+		verb_use_text = TEXT(11119,"Leave")
+		verb_use_desc = TEXT(11120,"Leave the Nickel")
+		to_door = @AStreet.nickelDoor
+
+		VERB_PRE(open) {
+			if (not inInventory(Inventory.camera)) {
+				sayLine(SAY(11099,"I should find the camera before setting out. Natalie said it is in the file cabinet."))
+				return NO
+			}
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	nickelSign = DEFINE_OBJECT({
+		name = TEXT(11121,"sign")
+
+		VERB(lookat) {
+			sayLine(SAY(11100,"That sign must be as old as the Nickel News!"))
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	printingPress = DEFINE_OBJECT({
+		name = TEXT(11122,"printing press")
+		seen = NO
+		photo_reach = REACH_HIGH
+
+		VERB(lookatfar) {
+			if (seen++) {
+				sayLine(SAY(11101,"It's an old relic of a bygone era."))
+			} else {
+				sayLine(SAY(11102,"Print is dead."),
+				        SAY(11103,"Someday it will all be on computers."),
+				        SAY(11104,"And Natalie will be out of business."),
+				        SAY(11105,"But that's OK because social media will take over as the trusted source of news."))
+			}
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	thimbleweedMap = DEFINE_OBJECT({
+		name = TEXT(11123,"map")
+		seen_house = NO
+		photo_reach = REACH_HIGH
+		for_story = "thimbleweed_county"
+		bad_story = [ "birdeye_view", SAY(11106,"This is not how the town would look to a bird.") ]
+
+		VERB(lookat) {
+			sayLine(SAY(11107,"It's a map of Thimbleweed County."), !(seen_house++)?SAY(11108,"I think I can see my house."):null)
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	historicPhotos = DEFINE_OBJECT({
+		name = TEXT(11124,"old news photos")
+		photo_name = TEXT(11125,"the old news photos")
+		seen = NO
+		for_story = "thimbleweed_county,old_timey"
+
+		VERB(lookat) {
+			sayLine(SAY(11109,"Those are old photos from the Nickel News."), (seen++)?null:SAY(11110,"There is a lot of history in those."))
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	typewriterPaper = DEFINE_OBJECT({
+	})
+
+	// --------------------------------------------------------------------------------------------
+	fileDrawer = DEFINE_OBJECT({
+		name = TEXT(11126,"file cabinet")
+		default_verb = "verb_open"
+		reach = REACH_HIGH
+		open_count = 0
+
+
+		VERB_OK(lookin) { return state == "open" }
+		VERB(lookin) {
+			if (inInventory(Inventory.camera)) {
+				sayLine(SAY(11111,"It's empty."))
+			} else {
+				sayLine(SAY(11112,"There's the camera."))
+				pickupObject(Inventory.camera, delores)
+				actorQuickReach(REACH_MED)
+			}
+		}
+		VERB_OK(lookat) { return state == "closed" }
+		VERB(lookat) {
+			if (inInventory(Inventory.camera)) {
+				// Change the 0 to a 1 to see translations at work.
+				sayLine(SAY(11113,"This is where I found the camera. The cabinet is empty now."))
+			} else {
+				sayLine(SAY(11114,"This is where Natalie said the camera should be."), ONCE(SAY(11115,"Must be a treasure trove of old stories in there.")))
+			}
+		}
+
+		VERB_OK(open) { return state == "closed" }
+		VERB(open) {
+			playSound(SOUNDID(drawerOpen))
+			objectState(this, "open")
+			default_verb = "verb_close"
+			if (open_count++ % 4 == 0 && !inInventory(Inventory.camera)) {
+				sayLine(delores, SAY(11116,"I should look in the drawer and see if the camera is here, like Natalie said."))
+			}
+		}
+		VERB_OK(close) { return state == "open" }
+		VERB(close) {
+			playSound(SOUNDID(drawerClose))
+			objectState(this, "closed")
+			default_verb = "verb_open"
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	newspaper1  = DEFINE_OBJECT({ function enter() { assignHeadline(this,  1) } })
+	newspaper2  = DEFINE_OBJECT({ function enter() { assignHeadline(this,  2) } })
+	newspaper3  = DEFINE_OBJECT({ function enter() { assignHeadline(this,  3) } })
+	newspaper4  = DEFINE_OBJECT({ function enter() { assignHeadline(this,  4) } })
+	newspaper5  = DEFINE_OBJECT({ function enter() { assignHeadline(this,  5) } })
+	newspaper6  = DEFINE_OBJECT({ function enter() { assignHeadline(this,  6) } })
+	newspaper7  = DEFINE_OBJECT({ function enter() { assignHeadline(this,  7) } })
+	newspaper8  = DEFINE_OBJECT({ function enter() { assignHeadline(this,  8) } })
+	newspaper9  = DEFINE_OBJECT({ function enter() { assignHeadline(this,  9) } })
+	newspaper10 = DEFINE_OBJECT({ function enter() { assignHeadline(this,  10) } })
+	newspaper11 = DEFINE_OBJECT({ function enter() { assignHeadline(this,  11) } })
+	newspaper12 = DEFINE_OBJECT({ function enter() { assignHeadline(this,  12) } })
+	newspaper13 = DEFINE_OBJECT({ function enter() { assignHeadline(this,  13) } })
+	newspaper14 = DEFINE_OBJECT({ function enter() { assignHeadline(this,  14) } })
+	newspaper15 = DEFINE_OBJECT({ function enter() { assignHeadline(this,  15) } })
+	newspaper16 = DEFINE_OBJECT({ function enter() { assignHeadline(this,  16) } })
+
+//	newspaper17 = DEFINE_OBJECT({ function enter() { assignHeadline(this,  17) } })
+
+	star1 = {}
+	star2 = {}
+	star3 = {}
+	star4 = {}
+	starB1 = {}
+
+// NEW_OBJECT_HERE
+})

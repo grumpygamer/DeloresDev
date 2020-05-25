@@ -1,0 +1,42 @@
+background: "background"
+name: "Newspaper"
+room_scale: 2
+sheet: "Newspaper"
+objects: [
+    {
+        name: "masthead"
+        prop: 1
+        zsort: 106
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "generic_paper"
+                ]
+            }
+        ]
+        pos: (322,173)
+    }
+    {
+        name: "marginLeft"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (139,236)
+    }
+    {
+        name: "marginRight"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (503,252)
+    }
+    {
+        name: "textSpot"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (319,227)
+    }
+]
+room_bounds: ((0,0),(640,360))
+room_size: (640,360)
+walkboxes: [
+]

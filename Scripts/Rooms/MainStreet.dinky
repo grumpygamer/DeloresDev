@@ -1,0 +1,601 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+DEFINE_ROOM("MainStreet", {
+	music_pool = "town"
+	ambient_sound = SOUNDID(ambient_town)
+
+	// ------------------------------------------------------------------------
+	// General room functions
+
+	function flickerNeonLight() {
+		objectState(alleyBlueNeon, "off")
+		startthread(@{
+			do {
+				breaktime(0.01, 0.2)
+				objectState(alleyBlueNeon, "on")
+				playSoundAt(SOUNDID(flicker_fluorescent), alleyBlueNeon)
+				breaktime(1.0, 4.0)
+				objectState(alleyBlueNeon, "off")
+			}
+		})
+	}
+
+	function flashDinerSign() {
+		objectState(dinerSign, "off")
+		startthread(@{
+			local sid = NO
+			do {
+				breaktime(0.3)
+				objectState(dinerSign, "on")
+				sid = playSoundAt(SOUNDID(neon_light2), dinerSign)
+				breaktime(1.5)
+				objectState(dinerSign, "off")
+				stopSound(sid)
+			}
+		})
+	}
+	// ------------------------------------------------------------------------
+	// Enter/Exit code
+
+	enter = function(from_door=null) {
+		SheriffsOffice.resetSheriffCoronerPuzzle()
+		flickerNeonLight()
+		flashDinerSign()
+		if (Alleyway.thimbleconPoster.state == "off") {
+			objectState(ransomePoster, "here")
+		}
+
+		local star = 0
+		local starOffset = 983
+		for (local i = 1; i <= 66; i += 1) {
+			star = this["star"+i]
+			objectOffset(star,point(starOffset,0))
+			// obj, fadeRange1, fadeRange2, alphaRange1, alphaRange2
+			twinkleStar(star, 0.01, 0.1, random(0,0.3), random(0.6, 1))
+		}
+		for (local i = 1; i <= 12; i += 1) {
+			star = this["starB"+i]
+			objectOffset(star,point(starOffset,0))
+			// obj, fadeRange1, fadeRange2, alphaRange1, alphaRange2
+			twinkleStar(star, 0.05, 0.3, 0, 1)
+		}
+
+		objectHidden(greenFireHydrant, YES)
+	}
+
+	exit = function() {
+	}
+
+	// ------------------------------------------------------------------------
+	// Objects
+
+	// --------------------------------------------------------------------------------------------
+	AStreetDoor = DEFINE_OBJECT({
+		name = TEXT(11163,"A Street")
+		no_photo = YES
+
+		VERB(walkto) {
+			exitRoomFromDoor(this, AStreet.mainStreetDoor)
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	BStreetDoor = DEFINE_OBJECT({
+		name = TEXT(11164,"B Street")
+		no_photo = YES
+
+		VERB(walkto) {
+			sayLine(SAY(11127,"The street looks blocked off."))
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	fireHydrantWater = {}
+	fireHydrant = DEFINE_OBJECT({
+		reach = REACH_NONE
+		function enter() {
+			if (isWaterSource) {
+				objectState(MainStreet.fireHydrantWater, "open")
+				dripping_sid = playSoundAt(SOUNDID(water_dripping), this)
+			} else {
+				objectState(MainStreet.fireHydrantWater, "closed")
+				stopSound(dripping_sid)
+				// this.bad_story = [ "disgusting", SAY(11128,"It's really smelly, but I don't think this looks disgusting enough for Natalie.") ]
+			}
+		}
+
+		name = TEXT(11165,"fire hydrant")
+		smell_count = 0
+		isWaterSource = YES
+		dripping_sid = NO
+		work_count = 0
+		bad_story = [	[ "disgusting", SAY(11129,"It's really smelly, but I don't think this looks disgusting enough for Natalie.") ],
+						[ "bad_water", SAY(11130,"Photo needs to be better than water dripping from a fire hydrant.") ] ]
+
+
+		VERB(lookatfar) {
+			if (isWaterSource) {
+				sayLine(SAY(11131,"It's a very leaky fire hydrant."))
+			} else {
+				sayLine(SAY(11132,"No more leaks!"), ONCE(SAY(11133,"I could get a summer job with the Pigeon Sisters!")))
+			}
+		}
+
+		VERB_OK(loosen) { return !isWaterSource && noun2 == Inventory.screwdriver }
+		VERB(loosen) {
+			isWaterSource = YES
+			bad_story = [	[ "disgusting", SAY(11134,"It's really smelly, but I don't think this looks disgusting enough for Natalie.") ],
+							[ "bad_water",  SAY(11135,"Photo needs to be better than water dripping from a fire hydrant.") ] ]
+
+			work_count = 0
+			inputOff(@{
+				local sid = playSound(SOUNDID(rusty_metal_scrape))
+				while(isSoundPlaying(sid)) {
+					actorQuickReach(selectedActor, REACH_LOW)
+					breaktime(0.5,0.75)
+					work_count++
+					if (work_count == 2) {
+						dripping_sid = playSoundAt(SOUNDID(water_dripping), this)
+						objectState(MainStreet.fireHydrantWater, "open")
+					}
+				}
+			})
+		}
+		VERB_OK(tighten) { return isWaterSource && noun2 == Inventory.screwdriver }
+		VERB(tighten) {
+			isWaterSource = NO
+			bad_story = [ "disgusting", SAY(11136,"It's really smelly, but I don't think this looks disgusting enough for Natalie.") ]
+
+			work_count = 0
+			inputOff(@{
+				local sid = playSound(SOUNDID(rusty_metal_scrape))
+				while(isSoundPlaying(sid)) {
+					actorQuickReach(selectedActor, REACH_LOW)
+					breaktime(0.5,0.75)
+					work_count++
+					if (work_count == 2) {
+						objectState(MainStreet.fireHydrantWater, "closed")
+						soundParam(dripping_sid, "done", YES)
+					}
+				}
+			})
+		}
+
+		VERB_OK(smell) { return smell_count && isWaterSource}
+		VERB(smell) {
+			if (smell_count++ < 4) {
+				sayLine(randomfrom(SAY(11137,"Yikes! That really stinks."),
+				                   SAY(11138,"Gads! That smells!"),
+				                   SAY(11139,"That sure is some stink!")))
+			} else {
+				sayLine(SAY(11140,"Why do I keep smelling that!"))
+			}
+		}
+
+		VERB_OK(fill) {
+			return noun2 == Inventory.glass && !Inventory.glass.filled_with && isWaterSource
+		}
+		VERB(fill) {
+			if (noun2 == Inventory.glass) {
+				inputOff(@{
+					playAnimation(delores, "reach_med")
+					breaktime(0.25)
+					playSoundAt(SOUNDID(water_fill_glass), this)
+					breaktime(1.5)
+					Inventory.glass.filledWith("water")
+					refreshInventory()
+					playAnimation(delores, "stand")
+					sayLine(SAY(11141,"That should do it."))
+				})
+			}
+		}
+	})
+
+	fireHydrantTrigger = {
+		function triggerEnter(actor) {
+			if (fireHydrant.smell_count == 0) {
+				sayLine(SAY(11142,"Wow! Something smells really bad."))
+				fireHydrant.smell_count = 1
+			}
+		}
+	}
+	// --------------------------------------------------------------------------------------------
+	greenFireHydrant = {}
+	greenFireHydrantTrigger = {
+		function triggerLeave(actor) {
+			if (randomodds(SETTING(flashback_odds))) return
+	 		heardAbout("hydrant", YES, YES)
+	 		startthread(@{
+				playSoundAt(SOUNDID(quiet_glitch), greenFireHydrant)
+				for (local i = 1..7) {
+					objectHidden(fireHydrant, randomfrom(YES, NO))
+					objectHidden(fireHydrantWater, randomfrom(YES, NO))
+					actorHidden(greenFireHydrant, randomfrom(YES, NO))
+					breaktime(0.10)
+				}
+				objectHidden(fireHydrant, NO)
+				objectHidden(fireHydrantWater, NO)
+				actorHidden(greenFireHydrant, YES)
+			})
+		}
+	}
+
+	// --------------------------------------------------------------------------------------------
+	alleywayDoor = DEFINE_OBJECT({
+		name = TEXT(11166,"alley")
+		photo_name = TEXT(11167,"an alley")
+		default_verb = "verb_walkto"
+
+		VERB(lookat) {
+			sayLine(SAY(11143,"Looks pretty dark down there."))
+		}
+		VERB(walkto) {
+			exitRoomFromDoor(this, Alleyway.MainStreetDoor)
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	dinerDoor = DEFINE_OBJECT({
+		name = TEXT(11168,"door")
+		photo_name = TEXT(11169,"the Diner door")
+		door_verbs = YES
+		verb_use_text = TEXT(11170,"Enter")
+		verb_use_desc = TEXT(11171,"Enter Diner")
+		to_door = @Diner.MainStreetDoor
+
+		VERB(lookat) {
+			sayLine(SAY(11144,"The Diner is open for business."), ONCE(SAY(11145,"They have amazing food, and a perfect health record!")))
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	bankDoor = DEFINE_OBJECT({
+		name = TEXT(11172,"bank door")
+		photo_name = TEXT(11173,"the bank door")
+		door_verbs = YES
+		verb_use_text = TEXT(11174,"Enter")
+		verb_use_desc = TEXT(11175,"Enter bank")
+		to_door =@ Bank.frontDoor
+
+		function enter() {
+			objectTouchable(this, Bank.open ? YES : NO)
+		}
+
+		VERB(lookat) {
+			if (!Bank.open) return bankDoorSign.verb_lookat()
+			sayLine(SAY(11146,"That is an impressive door."))
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	bankDoorSign = DEFINE_OBJECT({
+		name = TEXT(11176,"sign")
+		seen = NO
+		photo_name = TEXT(11177,"a job posting")
+		took_photo = NO
+		keep_photo = YES 	// Natalie won't throw it away.
+		default_verb = "verb_read"
+
+		function enter() {
+			objectState(this, Bank.open?"gone":"here")
+			objectTouchable(this, Bank.open?NO:YES)
+		}
+
+		function doneTakingPhoto(photo) {
+			took_photo = YES
+			photo.bank_sign_photo <- YES
+		}
+
+		VERB(read) {
+			seen = YES
+			sayLine(SAY(11147,"Sign says: “Help Wanted: Bank Teller. Closed until we find one.”"))
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	thimbleweedSign = DEFINE_OBJECT({
+		name = TEXT(11178,"sign")
+		for_story = "thimbleweed_county,videogames"
+		photo_name = TEXT(11179,"the Thimbleweed Park sign")
+
+		VERB(lookat) {
+			sayLine(SAY(11148,"Thimbleweed Park was a great place to grow up."))
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	highwayDoor = DEFINE_OBJECT({
+		name = TEXT(11180,"the highway")
+		no_photo = YES
+
+		VERB(walkto) {
+			sayLine(SAY(11149,"The highway into town is closed."))
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	willieWatchSign = DEFINE_OBJECT({
+		name = TEXT(11181,"watch repair sign")
+		for_story = "tiny_clock"
+
+		VERB(read) {
+			sayLine(SAY(11150,"It says “Willie's Watch & Violin Repairs..."),
+			        SAY(11151,"“Repairing watches and violins since 1957.”"),
+			        ONCE(SAY(11152,"I think the little clock is fake.")))
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	willieNewShop = {}
+	watchRepairDoor = DEFINE_OBJECT({
+		name = TEXT(11182,"door")
+
+		VERB(lookat) {
+			sayLine(SAY(11153,"Looks like Willie's Watch & Violin Repairs is closed for the night."))
+		}
+	})
+
+	willieTrigger = {
+		seen_flash = NO
+		function triggerLeave(actor) {
+			if (isActorInRoom(willie, MainStreet)) return
+			if (randomodds(SETTING(flashback_odds)) && seen_flash) return
+			seen_flash = YES
+	 		heardAbout("willie2", YES, YES)
+	 		startthread(@{
+				playSoundAt(SOUNDID(quiet_glitch), willieNewShop)
+				for (local i = 1..7) {
+					objectState(willieNewShop, randomfrom("here","gone"))
+					breaktime(0.10)
+				}
+				objectState(willieNewShop, "here")
+			})
+		}
+	}
+
+	function meetWillie() {
+		inputOff(@{
+			breakwhile(GLOBAL(taking_photo))
+			actorTurnTo(willie, DIR_FRONT)
+			actorWalkTo(selectedActor, MainStreet.willieTalkSpot)
+			breakwhilewalking(delores)
+			startYack(selectedActor, willie, "Willie")
+			breakwhileyacking()
+			actorWalkTo(willie,MainStreet.willieSpot2)
+			breaktime(1.0)
+			actorTurnTo(delores, DIR_RIGHT)
+			breakwhiletalking(willie)
+			sayLine(delores, SAY(11154,"Night Willie!"))
+			breakwhilewalking(willie)
+			actorAt(willie,Void,point(0,0))
+		})
+	}
+
+	WillieMeetTrigger = {
+		once = YES
+		function triggerEnter(actor) {
+			startthread(meetWillie)
+		}
+	}
+
+	// --------------------------------------------------------------------------------------------
+	realtorDoor = DEFINE_OBJECT({
+		name = TEXT(11183,"realtor's office")
+		photo_name = TEXT(11184,"the realtor's office")
+		bad_story = ["mansion", SAY(11155,"There aren't any photos of demolished homes in there.") ]
+
+		VERB(lookat) {
+			sayLine(SAY(11156,"Who would want to move here."))
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	flowerShopDoor = DEFINE_OBJECT({
+		name = TEXT(11185,"flower shop")
+		photo_name = TEXT(11186,"the flower shop")
+
+		VERB(lookat) {
+			sayLine(SAY(11157,"One of the many casualties of the economy."))
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	electronicsDoor = DEFINE_OBJECT({
+		name = TEXT(11187,"Coming Soon")
+		photo_name = TEXT(11188,"the new PillowBear™ store")
+		for_story = "pillow_bears"
+
+		VERB(lookat) {
+			sayLine(SAY(11158,"I can't wait for the new PillowBear™ store to open."), ONCE(SAY(11159,"I'm so proud of Dad.")))
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	pillowBearsSign = DEFINE_OBJECT({
+		name = TEXT(11189,"PillowBear™ sign")
+		for_story = "pillow_bears"
+
+		VERB(lookat) {
+			sayLine(SAY(11160,"These PillowBears™ are so cute!"), ONCE(SAY(11161,"They were all Dad's idea.")))
+		}
+	})
+
+
+	pillowStore = {}
+
+	// --------------------------------------------------------------------------------------------
+	quickiePalDoor = DEFINE_OBJECT({
+		name = TEXT(11190,"outskirts")
+		no_photo = YES
+
+		VERB(walkto) {
+			exitRoomFromDoor(this, QuickiePalOutside.mainStreetDoor)
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	cityHallDoor = DEFINE_OBJECT({
+		name = TEXT(11191,"City Hall door")
+		photo_name = TEXT(11192,"the City Hall door")
+		door_verbs = YES
+		verb_use_text = TEXT(11193,"Enter")
+		verb_use_desc = TEXT(11194,"Enter City Hall")
+		to_door = @CityHall.mainStreetDoor
+	})
+
+	// --------------------------------------------------------------------------------------------
+	trafficCone1 = DEFINE_OBJECT({
+		name = TEXT(11195,"traffic cone")
+		seen = NO
+		for_story = "road_safety"
+		photo_reach = REACH_LOW
+
+		VERB(lookat) {
+			sayLine(SAY(11162,"It's a traffic cone. I'm going to leave it alone."))
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	trafficCone2 = DEFINE_OBJECT({
+		name = TEXT(11196,"traffic cone")
+		for_story = "road_safety"
+		photo_reach = REACH_LOW
+
+		VERB(lookat) {
+			trafficCone1.verb_lookat()
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	trafficCone3 = DEFINE_OBJECT({
+		name = TEXT(11197,"traffic cone")
+		for_story = "road_safety"
+		photo_reach = REACH_LOW
+
+		VERB(lookat) {
+			trafficCone1.verb_lookat()
+		}
+	})
+
+	gasOffTrigger = {
+		function triggerLeave(actor) {
+			Alleyway.valve.position = "normal"
+		}
+	}
+
+	function flashBulletHole() {
+		if (randomodds(SETTING(flashback_odds))) return
+ 		heardAbout("bullet_hole", YES, YES)
+		startthread(@{
+			playSoundAt(SOUNDID(quiet_glitch), bulletHole)
+			for (local i = 1..5) {
+				objectState(bulletHole, randomfrom("here","gone"))
+				objectState(trafficCone1, randomfrom("here","gone"))
+				objectState(trafficCone2, randomfrom("here","gone"))
+				breaktime(0.10)
+			}
+			objectState(bulletHole, randomfrom("gone"))
+			objectState(trafficCone1, randomfrom("here"))
+			objectState(trafficCone2, randomfrom("here"))
+			objectTouchable(trafficCone1, YES)
+			objectTouchable(trafficCone2, YES)
+		})
+	}
+
+	bulletHole = {}
+	bulletTrigger = {
+		function triggerLeave(actor) {
+			flashBulletHole()
+		}
+	}
+
+	alleyBlueNeon = {}
+	dinerSign = {}
+	star1 = {}
+	star2 = {}
+	star3 = {}
+	star4 = {}
+	star5 = {}
+	star6 = {}
+	star7 = {}
+	star8 = {}
+	star9 = {}
+	star10 = {}
+	star11 = {}
+	star12 = {}
+	star13 = {}
+	star14 = {}
+	star15 = {}
+	star16 = {}
+	star17 = {}
+	star18 = {}
+	star19 = {}
+  star20 = {}
+  star21 = {}
+  star22 = {}
+  star23 = {}
+  star24 = {}
+  star25 = {}
+  star26 = {}
+  star27 = {}
+  star28 = {}
+  star29 = {}
+  star30 = {}
+  star31 = {}
+  star32 = {}
+  star33 = {}
+  star34 = {}
+  star35 = {}
+  star36 = {}
+  star37 = {}
+  star38 = {}
+  star39 = {}
+  star40 = {}
+  star41 = {}
+  star42 = {}
+  star43 = {}
+  star44 = {}
+  star45 = {}
+  star46 = {}
+  star47 = {}
+  star48 = {}
+  star49 = {}
+  star50 = {}
+  star51 = {}
+  star52 = {}
+  star53 = {}
+  star54 = {}
+  star55 = {}
+  star56 = {}
+  star57 = {}
+  star58 = {}
+  star59 = {}
+  star60 = {}
+  star61 = {}
+  star62 = {}
+  star63 = {}
+  star64 = {}
+  star65 = {}
+  star66 = {}
+
+	starB1 = {}
+	starB2 = {}
+	starB3 = {}
+	starB4 = {}
+	starB5 = {}
+	starB6 = {}
+	starB7 = {}
+	starB8 = {}
+	starB9 = {}
+	starB10 = {}
+	starB11 = {}
+	starB12 = {}
+
+	ransomePoster = {}
+// NEW_OBJECT_HERE
+})

@@ -1,0 +1,13 @@
+<html><head><link rel='stylesheet' href='../HelpDocs/help.css'><link href='https://fonts.googleapis.com/css?family=Roboto:300|Ubuntu:300' rel='stylesheet'></head><body><span class='button'><a href='home.html'>Home</a></span><span class='button'><a href='index.html'>Index</a></span><html><head><link rel='stylesheet' href='help.css'></head><body><h1>Game Debugger</h1><div class='section text'><div class='line_break'></div> <h2>Setting up</h2><div class='line_break'></div> <h2>Keys</h2><div class='line_break'></div> While running the game the follow debug keyboard commands are available: <div class='code_block'>ctrl-tab - Show the debugger console
+cmd-J - Jump to a room
+cmd-P - Pickup an object
+ctrl-J - Set the start-up room and position
+ctrl-option-J Clear the start-up room
+
+backtick - Stop execution and <span class='keyword'>break</span> into the debugger
+</div>Jumping to the line of an error is possible by adding the following to the <span class='inline_code'>Prefs.json</span> file... <div class='line_break'></div> (mac) <div class='code_block'>debugEditor: <span class='string'>"/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl %s:%d"</span>
+</div>(windows) <div class='code_block'>TBD
+</div>The format may change depending on the editor you using. <div class='line_break'></div> When the game gets an error: <div class='code_block'>cmd-E - jump to line of <span class='keyword'>error</span> <span class='keyword'>in</span> the editor
+</div><h2>General key commands:</h2><div class='code_block'>[ - Volume down
+] - Volume up
+</div></div><div class='function_list'></div><p class='copyright'>Copyright 2020 Terrible Toybox, Inc. All Rights Reserved.</p></body></html>

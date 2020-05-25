@@ -1,0 +1,1022 @@
+ambient_light: "{0.583333,0.583333,0.354575,1}"
+background: "background"
+name: "Nickel"
+room_scale: 4
+sheet: "Nickel"
+layers: [
+    {
+        name: "sky"
+        parallax: 0.25
+        zsort: 2
+    }
+    {
+        name: "hills"
+        parallax: 0.75
+        zsort: 1
+    }
+    {
+        name: "foreground"
+        parallax: 1.25
+        zsort: -1
+    }
+]
+lights: [
+    {
+        color1: "{1,0.947638,0.539216,0}"
+        color2: "{0,0,0,0}"
+        id: 0
+        iradius: 33
+        oradius: 60
+        rate: 0
+        clipping: ((0,0),(0,0))
+        pos: (70,70)
+    }
+    {
+        color1: "{1,0.94902,0.541176,0}"
+        color2: "{0,0,0,0}"
+        id: 1
+        iradius: 42
+        oradius: 128
+        rate: 0
+        clipping: ((0,0),(0,0))
+        pos: (293,81)
+    }
+]
+objects: [
+    {
+        name: "door"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 88
+        animations: [
+            {
+                name: "closed"
+                frames: [
+                    "door_opening2"
+                    "door_opening1"
+                    "door_closed"
+                ]
+            }
+            {
+                name: "open"
+                frames: [
+                    "door_opening1"
+                    "door_opening2"
+                    "door_open"
+                ]
+            }
+        ]
+        hotspot: ((-19,-28),(19,37))
+        pos: (269,112)
+        usepos: (-3,-35)
+        usepos2: (1,-47)
+    }
+    {
+        name: "desk"
+        prop: 1
+        zsort: 67
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "desk"
+                ]
+            }
+        ]
+        pos: (56,76)
+    }
+    {
+        name: "copyTron"
+        usedir: "DIR_RIGHT"
+        zsort: 56
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "copytron"
+                ]
+            }
+        ]
+        hotspot: ((-28,-22),(16,26))
+        pos: (371,74)
+        usepos: (-34,-24)
+    }
+    {
+        name: "behindDeskSpot"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (51,68)
+    }
+    {
+        name: "spotTalk"
+        spot: 1
+        usedir: "DIR_BACK"
+        pos: (33,58)
+    }
+    {
+        name: "nickelCountyMap"
+        usedir: "DIR_BACK"
+        zsort: 149
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "map"
+                ]
+            }
+            {
+                fps: 12
+                name: "state1"
+                frames: [
+                    "map_anim1"
+                    "map_anim2"
+                    "map_anim3"
+                    "map_anim4"
+                    "map_anim5"
+                    "null"
+                ]
+            }
+            {
+                fps: 12
+                name: "state2"
+                frames: [
+                    "map_anim5"
+                    "map_anim4"
+                    "map_anim3"
+                    "map_anim2"
+                    "map_anim1"
+                ]
+            }
+        ]
+        hotspot: ((-35,28),(-4,53))
+        pos: (209,89)
+        usepos: (-22,-15)
+    }
+    {
+        name: "thimbleweedMap"
+        usedir: "DIR_BACK"
+        zsort: 117
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "map"
+                ]
+            }
+        ]
+        hotspot: ((-38,24),(1,57))
+        pos: (210,90)
+        usepos: (-18,-1)
+    }
+    {
+        name: "nickelMapOnCopytron"
+        usedir: "DIR_RIGHT"
+        zsort: 55
+        hotspot: ((-18,-8),(24,4))
+        pos: (363,96)
+        usepos: (-26,-46)
+    }
+    {
+        name: "nickelMapOnCopytronImageLidUp"
+        parent: "copyTron"
+        usedir: "DIR_RIGHT"
+        zsort: 53
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "map_on_copytron_lid_up"
+                ]
+            }
+            {
+                name: "state1"
+                frames: [
+                    "map_on_copytron_lit_lid_up"
+                ]
+            }
+        ]
+        hotspot: ((-16,-4),(20,6))
+        pos: (363,93)
+        usepos: (-26,-42)
+    }
+    {
+        name: "doorwayTrigger"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 90
+        hotspot: ((-121,-27),(-69,-20))
+        pos: (345,100)
+        usepos: (0,-30)
+    }
+    {
+        name: "nickelRadio"
+        usedir: "DIR_BACK"
+        zsort: 66
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "radiotron"
+                ]
+            }
+        ]
+        hotspot: ((-19,-20),(9,11))
+        pos: (20,109)
+        usepos: (-10,-51)
+    }
+    {
+        name: "nickelCopytronLidOpen"
+        parent: "copyTron"
+        usedir: "DIR_RIGHT"
+        zsort: 54
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "copytron_lid_open"
+                ]
+            }
+        ]
+        hotspot: ((-24,-14),(12,12))
+        pos: (365,108)
+        usepos: (-37,-53)
+    }
+    {
+        name: "nickelCopytronLidClosed"
+        parent: "copyTron"
+        prop: 1
+        zsort: 51
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "copytron_lid_closed"
+                ]
+            }
+        ]
+        pos: (364,105)
+    }
+    {
+        name: "typewriter"
+        usedir: "DIR_BACK"
+        zsort: 63
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "typewriter"
+                ]
+            }
+        ]
+        hotspot: ((-16,-9),(17,6))
+        pos: (52,97)
+        usepos: (-8,-40)
+    }
+    {
+        name: "typewriterPaper"
+        prop: 1
+        zsort: 66
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "typewriter_paper"
+                ]
+                offsets: [
+                    (0,0)
+                ]
+            }
+            {
+                name: "paper1"
+                frames: [
+                    "typewriter_paper"
+                ]
+                offsets: [
+                    (0,0)
+                ]
+            }
+            {
+                name: "paper2"
+                frames: [
+                    "typewriter_paper"
+                ]
+                offsets: [
+                    (-0.33,1)
+                ]
+            }
+            {
+                name: "paper3"
+                frames: [
+                    "typewriter_paper"
+                ]
+                offsets: [
+                    (-0.66,2)
+                ]
+            }
+            {
+                name: "paper4"
+                frames: [
+                    "typewriter_paper"
+                ]
+                offsets: [
+                    (-1,3)
+                ]
+            }
+            {
+                name: "paper5"
+                frames: [
+                    "typewriter_paper"
+                ]
+                offsets: [
+                    (-1.33,4)
+                ]
+            }
+            {
+                name: "paper6"
+                frames: [
+                    "typewriter_paper"
+                ]
+                offsets: [
+                    (-1.66,5)
+                ]
+            }
+            {
+                name: "paper7"
+                frames: [
+                    "typewriter_paper"
+                ]
+                offsets: [
+                    (-2,6)
+                ]
+            }
+        ]
+        pos: (52,96)
+    }
+    {
+        name: "fileCabinet"
+        usedir: "DIR_RIGHT"
+        usedir2: "DIR_RIGHT"
+        zsort: 68
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "file_cabinet"
+                ]
+            }
+        ]
+        hotspot: ((-13,-30),(15,34))
+        pos: (344,93)
+        usepos: (-31,-31)
+        usepos2: (-76,-29)
+    }
+    {
+        name: "beam"
+        prop: 1
+        zsort: 69
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "beam"
+                ]
+            }
+        ]
+        pos: (206,123)
+    }
+    {
+        name: "copyTronTubeProp"
+        parent: "copyTron"
+        prop: 1
+        zsort: 54
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "copytron_tube_lit"
+                ]
+            }
+        ]
+        pos: (349,106)
+    }
+    {
+        name: "copyTronTube"
+        usedir: "DIR_RIGHT"
+        zsort: 19
+        hotspot: ((-4,-6),(4,7))
+        pos: (349,106)
+        usepos: (-14,-53)
+    }
+    {
+        name: "printingPress"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 75
+        hotspot: ((41,26),(75,66))
+        pos: (102,75)
+        usepos: (37,-1)
+        usepos2: (29,-9)
+    }
+    {
+        name: "nickelSign"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 75
+        hotspot: ((-20,-13),(38,20))
+        pos: (113,118)
+        usepos: (13,-45)
+        usepos2: (4,-52)
+    }
+    {
+        name: "nickelFarPaperStack"
+        prop: 1
+        zsort: 74
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "far_paper_stack"
+                ]
+            }
+        ]
+        pos: (308,85)
+    }
+    {
+        name: "nickelMidPaperStack"
+        prop: 1
+        zsort: 69
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "mid_paper_stack"
+                ]
+            }
+        ]
+        pos: (258,104)
+    }
+    {
+        name: "nickelLeftPaperStack"
+        prop: 1
+        zsort: 71
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "left_paper_stack"
+                ]
+            }
+        ]
+        pos: (152,77)
+    }
+    {
+        name: "nickelNearPaperStack"
+        prop: 1
+        zsort: 59
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "near_paper_stack"
+                ]
+            }
+        ]
+        pos: (209,85)
+    }
+    {
+        name: "newspaper1"
+        usedir: "DIR_RIGHT"
+        zsort: 70
+        hotspot: ((-20,16),(8,20))
+        pos: (148,79)
+        usepos: (-28,-19)
+    }
+    {
+        name: "newspaper2"
+        usedir: "DIR_FRONT"
+        zsort: 70
+        hotspot: ((-1,-1),(24,2))
+        pos: (155,69)
+        usepos: (14,-8)
+    }
+    {
+        name: "newspaper3"
+        usedir: "DIR_FRONT"
+        zsort: 70
+        hotspot: ((-20,16),(8,20))
+        pos: (201,95)
+        usepos: (-11,-34)
+    }
+    {
+        name: "newspaper4"
+        usedir: "DIR_FRONT"
+        zsort: 70
+        hotspot: ((-16,-4),(9,0))
+        pos: (224,77)
+        usepos: (-5,-16)
+    }
+    {
+        name: "newspaper5"
+        usedir: "DIR_FRONT"
+        zsort: 70
+        hotspot: ((-20,16),(8,20))
+        pos: (254,70)
+        usepos: (-6,-10)
+    }
+    {
+        name: "newspaper6"
+        usedir: "DIR_FRONT"
+        zsort: 70
+        hotspot: ((-20,16),(5,20))
+        pos: (282,58)
+        usepos: (-5,3)
+    }
+    {
+        name: "newspaper7"
+        usedir: "DIR_LEFT"
+        zsort: 70
+        hotspot: ((1,16),(10,20))
+        pos: (156,69)
+        usepos: (19,-2)
+    }
+    {
+        name: "newspaper8"
+        usedir: "DIR_LEFT"
+        zsort: 70
+        hotspot: ((-7,16),(8,19))
+        pos: (165,78)
+        usepos: (17,-7)
+    }
+    {
+        name: "newspaper9"
+        usedir: "DIR_LEFT"
+        zsort: 70
+        hotspot: ((-2,16),(5,19))
+        pos: (173,77)
+        usepos: (15,-3)
+    }
+    {
+        name: "newspaper10"
+        usedir: "DIR_FRONT"
+        zsort: 70
+        hotspot: ((-1,16),(8,19))
+        pos: (211,68)
+        usepos: (3,7)
+    }
+    {
+        name: "newspaper11"
+        usedir: "DIR_FRONT"
+        zsort: 70
+        hotspot: ((-20,18),(3,20))
+        pos: (241,122)
+        usepos: (-9,-48)
+    }
+    {
+        name: "newspaper12"
+        usedir: "DIR_FRONT"
+        zsort: 70
+        hotspot: ((4,14),(11,17))
+        pos: (258,68)
+        usepos: (3,5)
+    }
+    {
+        name: "newspaper13"
+        usedir: "DIR_FRONT"
+        zsort: 70
+        hotspot: ((-20,16),(-3,20))
+        pos: (291,76)
+        usepos: (-12,-4)
+    }
+    {
+        name: "newspaper14"
+        usedir: "DIR_FRONT"
+        zsort: 70
+        hotspot: ((-20,14),(-6,17))
+        pos: (312,68)
+        usepos: (-13,3)
+    }
+    {
+        name: "newspaper15"
+        usedir: "DIR_FRONT"
+        zsort: 70
+        hotspot: ((-17,17),(0,20))
+        pos: (323,70)
+        usepos: (-8,0)
+    }
+    {
+        name: "newspaper16"
+        usedir: "DIR_FRONT"
+        zsort: 70
+        hotspot: ((-17,16),(-2,20))
+        pos: (305,80)
+        usepos: (-9,-5)
+    }
+    {
+        name: "newspaper17"
+        usedir: "DIR_FRONT"
+        zsort: 70
+        hotspot: ((-6,16),(-2,20))
+        pos: (333,70)
+        usepos: (-2,5)
+    }
+    {
+        name: "overseeMapReplacementSpot"
+        spot: 1
+        usedir: "DIR_BACK"
+        pos: (212,74)
+    }
+    {
+        name: "nickelCopytronLidLit"
+        parent: "copyTron"
+        usedir: "DIR_FRONT"
+        zsort: 54
+        animations: [
+            {
+                name: "state1"
+                frames: [
+                    "copytron_door_open_lit"
+                ]
+            }
+        ]
+        hotspot: ((-20,-20),(20,20))
+        pos: (362,109)
+        usepos: (0,-30)
+    }
+    {
+        name: "natalieDialogTrigger"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 71
+        hotspot: ((-49,-21),(1,-12))
+        pos: (125,71)
+        usepos: (0,-30)
+    }
+    {
+        name: "nickelFiveCentsSign"
+        usedir: "DIR_RIGHT"
+        zsort: 58
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "five_cent_sign"
+                ]
+            }
+        ]
+        hotspot: ((-7,-9),(7,13))
+        pos: (390,111)
+        usepos: (-53,-61)
+    }
+    {
+        name: "nickelCopytronMask"
+        prop: 1
+        zsort: 54
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "tray_copy_mask"
+                ]
+            }
+        ]
+        pos: (371,71)
+    }
+    {
+        name: "nickelMapCopy"
+        usedir: "DIR_RIGHT"
+        zsort: 55
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "tray_copy"
+                ]
+            }
+        ]
+        hotspot: ((-18,-3),(15,5))
+        pos: (377,73)
+        usepos: (-34,-25)
+    }
+    {
+        name: "nickelCopytronTonerDoor"
+        usedir: "DIR_RIGHT"
+        zsort: 47
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "copier_door_closed"
+                ]
+            }
+            {
+                name: "state1"
+                frames: [
+                    "copier_door_open"
+                ]
+            }
+        ]
+        hotspot: ((-17,-8),(10,7))
+        pos: (376,62)
+        usepos: (-32,-15)
+    }
+    {
+        name: "nickelTonerCartridge"
+        usedir: "DIR_RIGHT"
+        zsort: 45
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "copier_cartridge"
+                ]
+            }
+        ]
+        hotspot: ((-7,-4),(6,6))
+        pos: (371,61)
+        usepos: (-27,-14)
+    }
+    {
+        name: "nickelTonerSlot"
+        usedir: "DIR_RIGHT"
+        zsort: 46
+        hotspot: ((71,-19),(83,-11))
+        pos: (294,77)
+        usepos: (50,-32)
+    }
+    {
+        name: "redhandedSpot"
+        spot: 1
+        usedir: "DIR_RIGHT"
+        pos: (245,74)
+    }
+    {
+        name: "natalieRadioSpot"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (26,68)
+    }
+    {
+        name: "typewriterSpot"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (58,68)
+    }
+    {
+        name: "nickelRadioTube"
+        usedir: "DIR_BACK"
+        zsort: 64
+        hotspot: ((-20,6),(-10,20))
+        pos: (30,96)
+        usepos: (-20,-38)
+    }
+    {
+        name: "nickelPoliceRadioLight"
+        prop: 1
+        zsort: 64
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "radiotron_light_off"
+                ]
+            }
+            {
+                name: "state1"
+                frames: [
+                    "radiotron_light_on"
+                ]
+            }
+        ]
+        pos: (6,123)
+    }
+    {
+        name: "nickelStar1"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (213,133)
+    }
+    {
+        name: "nickelStar2"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (257,152)
+    }
+    {
+        name: "nickelStar3"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (293,160)
+    }
+    {
+        name: "nickelStar4"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (317,144)
+    }
+    {
+        name: "nickelStarB1"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+        pos: (290,138)
+    }
+    {
+        name: "historicPhotos"
+        usedir: "DIR_RIGHT"
+        usedir2: "DIR_RIGHT"
+        zsort: 151
+        hotspot: ((32,-3),(72,32))
+        pos: (327,129)
+        usepos: (11,-73)
+        usepos2: (-55,-75)
+    }
+    {
+        name: "fileDrawer"
+        usedir: "DIR_RIGHT"
+        usedir2: "DIR_RIGHT"
+        zsort: 62
+        animations: [
+            {
+                name: "closed"
+                frames: [
+                    "file_drawer3"
+                    "file_drawer2"
+                    "file_drawer1"
+                    "null"
+                ]
+            }
+            {
+                name: "open"
+                frames: [
+                    "file_drawer1"
+                    "file_drawer2"
+                    "file_drawer3"
+                ]
+            }
+        ]
+        hotspot: ((-4,-49),(30,14))
+        pos: (332,113)
+        usepos: (-19,-51)
+        usepos2: (-64,-49)
+    }
+    {
+        name: "natalieTalkSpot"
+        spot: 1
+        usedir: "DIR_BACK"
+        pos: (81,55)
+    }
+    {
+        name: "jumpSpot"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (199,52)
+    }
+    {
+        layer: 2
+        name: "star1"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (213,133)
+    }
+    {
+        layer: 2
+        name: "star2"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (257,152)
+    }
+    {
+        layer: 2
+        name: "star3"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (293,160)
+    }
+    {
+        layer: 2
+        name: "star4"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (317,144)
+    }
+    {
+        layer: 2
+        name: "starB1"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+        pos: (290,138)
+    }
+    {
+        name: "light1"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (70,70)
+    }
+    {
+        name: "light2"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (293,81)
+    }
+]
+room_bounds: ((1,1),(398,180))
+room_size: (400,180)
+scaling: [
+    "1.195@33"
+    ".85@77"
+]
+walkboxes: [
+    {
+        polygon: "(246,78);(290,78);(291,76);(335,76);(337,75);(282,75);(281,71);(340,71);(341,70);(278,70);(277,73);(192,73);(184,66);(317,66);(323,57);(336,56);(351,42);(303,33);(301,55);(300,60);(162,60);(188,75);(244,75)"
+    }
+    {
+        polygon: "(3,33);(0,59);(104,59);(124,70);(123,75);(144,76);(118,55);(301,55);(303,33)"
+    }
+    {
+        name: "natalie_desk"
+        polygon: "(26,77);(109,77);(108,73);(77,73);(60,67);(2,67)"
+    }
+    {
+        name: "desk_path"
+        polygon: "(109,77);(123,75);(124,70);(108,73)"
+    }
+]

@@ -1,0 +1,121 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+script doOpening() {
+	ROOT(music_tid) = stopSound(ROOT(music_tid))
+	inputState(INPUT_ON)
+	if (!SETTING(seen_opening)) {
+		cutsceneCanOverride(NO)
+	}
+	cutscene(@{
+		if (DEBUG(skip_intro)) {
+			cutsceneDoOverride()
+			return
+		}
+		overlayColorTo(COLOR_BLACK, 2.0)
+		breaktime(2.0)
+		breakwhilerunning(TitleCards.showTitles())
+		startMusicPool("town")
+		actorAt(delores, AStreet, AStreet.startSpot)
+		cameraFollow(delores)
+		startYack(delores, natalie, "Natalie:start_assignment")
+		breakwhileyacking()
+		pickupObject(Inventory.assignment, delores)
+		expandInventory(YES)
+		setuserpref("seen_opening", YES)
+		showGearIcon(YES)
+	}, @{
+		overlayColor(COLOR_NONE)
+		objectState(Nickel.door, "closed")
+		actorAt(delores, Nickel, Nickel.natalieTalkSpot)
+		cameraFollow(delores)
+		pickupObject(Inventory.assignment, delores)
+		if (DEBUG(skip_intro)) {
+			pickupObject(Inventory.camera, YES)
+		}
+		expandInventory(YES)
+		actorTurnTo(delores, DIR_FRONT)
+		if (!DEBUG(skip_intro)) {
+			sayLine(natalie, format(TR(SAY(11547,"^You need to turn in %d more photos before returning to your game developer job at MMucasFlem.")), Note.totalLeftToTurnin()))
+			breakwhiletalking()
+			sayLine(delores, SAY(11548,"I better find that camera, take a look at the list, and get cracking."))
+		}
+		showGearIcon(YES)
+	})
+}
+
+DEFINE_ROOM("StartScreen", {
+
+	music_sid = 0
+	continue_ok = NO
+
+	// --------------------------------------------------------------------------------------------
+	// General room functions
+
+	script showRefCard() {
+		breaktime(1.0)
+		ROOT(music_tid) = playSound(SOUNDID(startscreen_music))
+		overlayColor(COLOR_BLACK)
+		objectState(refcard, "show")
+		overlayColorTo(COLOR_NONE, 2.0)
+		if (!SETTING(seen_opening)) {
+			breaktime(5.0)
+		}
+		continue_ok = YES
+		do {
+			objectState(clickToContinue, "show")
+			breaktime(1.0)
+			objectState(clickToContinue, "default")
+			breaktime(1.0)
+		}
+	}
+
+	function start() {
+		stopSound(ROOT(music_tid))
+		enterRoom(StartScreen)
+		startthread(showRefCard)
+	}
+
+	// --------------------------------------------------------------------------------------------
+	// Enter/Exit code
+
+	enter = function(from_door=null) {
+		showGearIcon(NO)
+	}
+
+	exit = function() {
+		ROOT(music_tid) = stopSound(ROOT(music_tid))
+	}
+
+	function clickedAt(pos) {
+		if (continue_ok && !optionsShowing()) {
+			startglobalthread(doOpening)
+		}
+		return HANDLED
+	}
+
+	function keyDown(key, flags) {
+		if (key == 'o') {
+			openOptions(NO)
+			return HANDLED
+		} else
+		if (key == KEY_ESC) {
+			if (continue_ok && !optionsShowing()) {
+				startglobalthread(doOpening)
+			}
+			return HANDLED
+		}
+	}
+
+	// --------------------------------------------------------------------------------------------
+	// Objects
+
+	refcard = {}
+	clickToContinue = {}
+
+// NEW_OBJECT_HERE
+})

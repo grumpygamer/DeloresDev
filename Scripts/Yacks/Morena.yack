@@ -1,0 +1,110 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+=== init ===
+{ YACK(see_loop) <- 0 }
+-> exit
+
+== start ===
+delores: SAY(12139,"Hello Madame Morena.")
+
+=== main ===
+1 SAY(12140,"How have things been?") -> things_been [once]
+1 SAY(12141,"Got any eye-of-newt?") -> eye_of_newt [once]
+1 SAY(12142,"Yes, I see.") -> see_loop [YACK(see_loop) == 1] [showonce]
+1 SAY(12143,"Yes, I really see.") -> see_loop [YACK(see_loop) == 2] [showonce]
+1 SAY(12144,"I really really see!") -> see_loop [YACK(see_loop) == 3] [showonce]
+1 SAY(12145,"I can see!") -> see_loop [YACK(see_loop) == 4] [showonce]
+1 SAY(12146,"But I can see.") -> see_loop [YACK(see_loop) == 5] [showonce]
+1 SAY(12147,"Ok fine, I can't see.") -> see_loop [YACK(see_loop) == 6] [showonce]
+1 SAY(12148,"*sigh*") -> main [YACK(see_loop) == 7] [showonce]
+2 SAY(12149,"Have you heard about the circus being abandoned? ") -> abandoned_circus [hasHeardAbout("circus")]
+2 SAY(12150,"Seen Ransome the Clown's latest show yet?") -> ransome [once]
+3 SAY(12151,"You noticed anything odd?") -> odd [GLOBAL(heard_about_count) >= 2] [once]
+4 SAY(12152,"Sign out front says you're having a blow-out sale.") -> sale [not BookStore.fortranBook.seen] [once]
+9 SAY(12153,"See ya!") -> done
+
+=== things_been ===
+morena: SAY(12154,"Been a while since I've seen you around, Delores.")
+delores: SAY(12155,"That game designer job has kept me pretty busy.")
+delores: SAY(12156,"I'm on my post-crunch vacation, helping Natalie out.")
+-> main
+
+=== ransome ===
+morena: SAY(12157,"Yes! It's his best show yet. I go every week.")
+delores: SAY(12158,"I hope to see it before I leave.")
+-> main
+
+== abandoned_circus ===
+morena: SAY(12159,"Nothing...")
+morena: SAY(12160,"...And you should leave well enough alone my dear.")
+morena: SAY(12161,"Only misery lies down that path of thought.")
+morena: SAY(12162,"Besides, I don't know what I'd do without my weekly hit of Ransome!")
+-> main
+
+=== eye_of_newt ===
+morena: SAY(12163,"Please!")
+morena: SAY(12164,"Eye of Newt is right out of the back of comic books!")
+morena: SAY(12165,"It's not real magic.")
+delores: SAY(12166,"I see.")
+morena: SAY(12167,"Do you see?")
+{ YACK(see_loop) = 1 }
+-> morena_point
+
+=== see_loop ===
+{ YACK(see_loop)++ }
+morena: SAY(12168,"Do you really see?") [YACK(see_loop) == 2]
+-> morena_point [YACK(see_loop) == 2]
+morena: SAY(12169,"Do you really really see?") [YACK(see_loop) == 3]
+-> morena_point [YACK(see_loop) == 3]
+morena: SAY(12170,"I don't think you see.") [YACK(see_loop) == 4]
+-> morena_point [YACK(see_loop) == 4]
+morena: SAY(12171,"I wish you could see.") [YACK(see_loop) == 5]
+-> morena_point [YACK(see_loop) == 5]
+morena: SAY(12172,"I don't think you can see.") [YACK(see_loop) == 6]
+-> morena_point [YACK(see_loop) == 6]
+morena: SAY(12173,"I told you, you can't see.") [YACK(see_loop) == 7]
+
+=== morena_point ===
+{ playAnimation(morena, "curse_start")
+  breakwhileanimating(morena)
+  playAnimation(morena, "curse_loop", YES)
+  breakwhiletalking(morena)
+  playAnimation(morena, "curse_end") }
+-> main
+
+=== odd ===
+morena: SAY(12174,"In the last day I've noticed some odd ripples in the fabric of reality.")
+delores: SAY(12175,"If I believed that mumbo-jumbo, that would sound scary.")
+//morena: "Believe!"
+//{ cameraFollow(morena)
+//  cameraZoomFromTo(0.10, 1.0, 1.05) }
+//morena: "Believe!"
+//{ cameraZoomFromTo(0.10, 1.05, 1.25) }
+morena: SAY(12176,"BELIEVE!")
+//{ cameraZoomFromTo(0.10, 1.25, 1.55) }
+//pause 1.0
+//{ cameraFollow(delores)
+//  cameraZoomFromTo(2.0, 1.55, 1.0) }
+morena: SAY(12177,"Scary forces are at work.")
+morena: SAY(12178,"Many years ago, there was a tear that has gone unnoticed until a few days ago.")
+morena: SAY(12179,"I fear you might be connected.")
+delores: SAY(12180,"Take a chill-pill.")
+delores: SAY(12181,"And maybe some breath mints.")
+-> main
+
+=== sale ===
+{ BookStore.knows_about_Fortran_book = YES }
+delores: SAY(12182,"Got any books on Fortran?")
+morena: SAY(12183,"Might be one at the very top.")
+morena: SAY(12184,"If you find it, you can take it.")
+morena: SAY(12185,"The only dead languages we need books on is ancient capsipan.")
+-> main
+
+=== done ===
+-> exit
+

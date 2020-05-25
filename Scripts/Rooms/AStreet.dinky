@@ -1,0 +1,418 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+DEFINE_ROOM("AStreet", {
+	music_pool = "town"
+	ambient_sound = SOUNDID(ambient_town)
+
+	// CAUTION: Keep ThimbleCon ad at the top, since logic must be done when it is read out
+	_noteHeadlines = [
+		[ TEXT(11410,"ThimbleCon advertisement"), TEXT(11411,"a"), [
+			SAY(11361,"It's time to do the ThimbleCon with ThimbleCon '88!")
+			SAY(11362,"Sci-fi shows and movies, comic books, and the latest computer and video game technology!")
+			SAY(11363,"Get your tickets before they are all gone.") ] ]
+		[ TEXT(11412,"official notice"), TEXT(11413,"an"), [
+			SAY(11364,"Please stop throwing your old cans and bottles into the backyard of my bookstore.")
+			SAY(11365,"I know how to curse you!") ] ]
+		[ TEXT(11414,"personals advertisement"), TEXT(11415,"a"), [
+			SAY(11366,"Wanted - Clothes Donations")
+			SAY(11367,"Help Lenore out with some classy clothes.")
+			SAY(11368,"I'd rather you hadn't worn them, but I guess I can't be picky.") ] ]
+		[ TEXT(11416,"banking advertisement"), TEXT(11417,"a"), [
+			SAY(11369,"Safely First Savings - Where saving safely is saving smartly!"),
+			SAY(11370,"The stock market is soaring, we don't see it coming down anytime soon!") ] ]
+		[ TEXT(11418,"public service announcement"), TEXT(11419,"a"), [
+			SAY(11371,"Your sheriff wants you to be green and clean-a-reno!")
+			SAY(11372,"Don't litter on the highway or vandalize the storefronts!") ] ]
+		[ TEXT(11420,"PillowBear™ advertisement"), TEXT(11421,"a"), [
+			SAY(11373,"The latest PillowBears™ are almost here!")
+			SAY(11374,"New colors for 1988!") ] ]
+		[TEXT(11422,"plumbing advertisement"), TEXT(11423,"a"), [
+			SAY(11375,"Pigeon Sisters Plumbing")
+			SAY(11376,"'So let us fix your leaking waters'")
+			SAY(11377,"'Nothing is faster'")
+			SAY(11378,"'than the Pigeon daughters'") ] ]
+		[ TEXT(11424,"missed connection ad"), TEXT(11425,"a"), [
+			SAY(11379,"Looking for Love")
+			SAY(11380,"Seeking the person hanging out at the Vista last night.")
+			SAY(11381,"I think we might have a connection.") ] ]
+		[ TEXT(11426,"old advertisement"), TEXT(11427,"an"), [
+			SAY(11382,"Razor and the Scummettes playing live at The Hitchin' Post!")
+			SAY(11383,"Support by GT and the Suction Cups.")
+			SAY(11384,"Mechanical bull rides free all night!") ] ]
+		[ TEXT(11428,"weathered advertisement"), TEXT(11429,"a"), [
+			SAY(11385,"Stupendous Brothers Traveling Circus")
+			SAY(11386,"Headline Act - Ransome the Clown!")
+			SAY(11387,"Family show starts at 2pm.") ] ]
+		[ TEXT(11430,"radio advertisement"), TEXT(11431,"a"), [
+			SAY(11388,"Turn your dials to KSCUM 198.7 FM for the gnarliest hits from local artists!")
+			SAY(11389,"DJ Cassie says 'I hope you like Tuna Head!'") ] ]
+		[ TEXT(11432,"official announcement"), TEXT(11433,"an"), [
+			SAY(11390,"Ceremony at City Hall")
+			SAY(11391,"City Hall is being renamed the Chuck E. Edmund City Hall...")
+			SAY(11392,"...in honor of everything Chuck has done for the town.")
+			SAY(11393,"Get better Chuck. We miss you.") ] ]
+	]
+
+
+	function assignHeadline(obj, headline) {
+		--headline
+		if (headline < 0 || headline >= sizeof(_noteHeadlines)) {
+			return
+		}
+		local note = _noteHeadlines[headline]
+		obj.name <- note[0]
+		obj.article <- note[1]
+		obj.VERB(read) {
+			sayLine(note[2])
+		}
+	}
+
+	script saleSign() {
+		do {
+			objectState(bookStoreSaleSign, "on")
+			roomLightEnable(1, YES)
+			breaktime(0.5)
+			objectState(bookStoreSaleSign, "off")
+			roomLightEnable(1, NO)
+			breaktime(0.5)
+		}
+	}
+
+
+	function flashPhone() {
+		if (randomodds(SETTING(flashback_odds))) return
+ 		heardAbout("phone", YES, YES)
+ 		startthread(@{
+			playSoundAt(SOUNDID(quiet_glitch), phone)
+			for (local i = 1..5) {
+				objectState(phone, randomfrom("here","gone"))
+				objectState(phoneBook, randomfrom("here","gone"))
+				breaktime(0.10)
+			}
+			objectState(phone, randomfrom("gone"))
+			objectState(phoneBook, randomfrom("gone"))
+		})
+	}
+
+	// ------------------------------------------------------------------------
+	// Enter/Exit code
+
+
+    function preEnter(from_door=null) {
+		assignHeadline(nickelNote1,  1)
+		assignHeadline(nickelNote2,  2)
+		assignHeadline(nickelNote3,  3)
+		assignHeadline(nickelNote4,  4)
+		assignHeadline(nickelNote5,  5)
+		assignHeadline(nickelNote6,  6)
+		assignHeadline(nickelNote7,  7)
+		assignHeadline(nickelNote8,  8)
+		assignHeadline(nickelNote9,  9)
+		assignHeadline(nickelNote10, 10)
+		assignHeadline(nickelNote11, 11)
+		assignHeadline(nickelNote12, 12)
+    }
+
+	function enter() {
+		startthread(saleSign)
+		objectState(phoneBook, "gone")
+		objectState(phone, "gone")
+
+		if (GLOBAL(hired_lenore_state) == 0) {
+			objectState(trashcan, "fire")
+			objectState(trashcanFire, "fire")
+			actorAt(peter, AStreet, PeterSpot)
+			actorUsePos(peter, AStreet.PeterTalkSpot)
+			actorLockFacing(peter, DIR_LEFT)
+			playAnimation(peter, "sit")
+			actorAt(chuckie, AStreet, ChuckieSpot)
+			actorUsePos(chuckie, AStreet.ChuckieTalkSpot)
+			playAnimation(chuckie, "sit")
+			objectState(leatherChair, "here")
+		} else {
+			actorAt(lenore, Void, point(0,0))
+			actorAt(peter, Void, point(0,0))
+			actorAt(chuckie, Void, point(0,0))
+			objectState(leatherChair, "gone")
+			objectState(trashcan, "gone")
+			objectState(trashcanFire, "gone")
+		}
+
+		objectUseLighting(leatherChair, YES)
+
+		local star = 0
+		local starOffset = 815
+		for (local i = 1; i <= 43; i += 1) {
+			star = this["star"+i]
+			objectOffset(star,point(starOffset,0))
+			// obj, fadeRange1, fadeRange2, alphaRange1, alphaRange2
+			twinkleStar(star, 0.01, 0.1, random(0,0.3), random(0.6, 1))
+		}
+		for (local i = 1; i <= 10; i += 1) {
+			star = this["starB"+i]
+			objectOffset(star,point(starOffset,0))
+			// obj, fadeRange1, fadeRange2, alphaRange1, alphaRange2
+			twinkleStar(star, 0.05, 0.3, 0, 1)
+		}
+
+		objectState(phone, "gone")
+		objectState(willie, "gone")
+	}
+
+    function exit() {
+    }
+
+	// ------------------------------------------------------------------------
+	// Objects
+
+	postOfficeDoor = DEFINE_OBJECT({
+		name = TEXT(11434,"Post Office door")
+		photo_name = TEXT(11435,"the Post Office door")
+		door_verbs = YES
+		verb_use_text = TEXT(11436,"Enter")
+		verb_use_desc = TEXT(11437,"Enter Post Office")
+		to_door = @PostOffice.door
+		door_sound = { open=SOUNDID(slidingDoorOpen), close=SOUNDID(slidingDoorClose) }
+	})
+
+	nickelDoor = DEFINE_OBJECT({
+		name = TEXT(11438,"Nickel News door")
+		photo_name = TEXT(11439,"the Nickel News door")
+		door_verbs = YES
+		verb_use_text = TEXT(11440,"Enter")
+		verb_use_desc = TEXT(11441,"Enter Nickel News")
+		to_door = @Nickel.door
+		//door_sound = { open=SOUNDID(slidingDoorOpen), close=SOUNDID(slidingDoorClose) }
+	})
+
+	nickelNote1 =  { name = TEXT(11442,"note") bad_story = ["thimblecon", SAY(11394,"This is just text. I need something more impressive for a good photo.")]}
+	nickelNote2 =  { name = TEXT(11443,"note") for_story = "trash"}
+	nickelNote3 =  { name = TEXT(11444,"note") }
+	nickelNote4 =  { name = TEXT(11445,"note") }
+	nickelNote5 =  { name = TEXT(11446,"note") for_story = "trash"}
+	nickelNote6 =  { name = TEXT(11447,"note") bad_story = ["pillow_bears", SAY(11395,"I need something more photographic than a note.")]}
+	nickelNote7 =  { name = TEXT(11448,"note") for_story = "poetry"}
+	nickelNote8 =  { name = TEXT(11449,"note") }
+	nickelNote9 =  { name = TEXT(11450,"note") }
+	nickelNote10 = { name = TEXT(11451,"note") bad_story = ["ransome", SAY(11396,"It's too badly weathered for a good photo.")]}
+	nickelNote11 = { name = TEXT(11452,"note") }
+	nickelNote12 = { name = TEXT(11453,"note") }
+
+	trashcanFire = {}
+	trashcan = DEFINE_OBJECT({
+		for_story = "trash"
+		name = TEXT(11454,"trash can")
+		is_trash = YES
+		bad_story = [ "disgusting", SAY(11397,"It's a bit scary, but not really disgusting.") ]
+
+		function stateChange() {
+			if (state == "fire") {
+				this._soundid <- playSoundAt(SOUNDID(trashFire), this)
+				roomLightEnable(0, YES)
+			} else {
+				stopSound(this?._soundid)
+				roomLightEnable(0, NO)
+			}
+		}
+
+		VERB(lookat) {
+			sayLine(SAY(11398,"It's a burning trash can!"))
+		}
+		VERB(kick) {
+			inputOff(@{
+				playAnimation(delores,"kick")
+				breaktime(0.5)
+				sayLine(SAY(11399,"Ouch! My toe!"))
+			})
+		}
+		VERB(pickup) {
+			sayLine(SAY(11400,"That's too hot to put in my inventory-hole."))
+		}
+	})
+
+
+	// dime = DEFINE_OBJECT({
+	// 	name = TEXT(11455,"dime")
+	// 	reach = REACH_LOW
+	// 	photo_reach = REACH_LOW
+
+	// 	VERB(lookat) {
+	// 		Inventory.dime.verb_lookat()
+	// 	}
+
+	// 	VERB(pickup) {
+	// 		sayLine(SAY(11401,"I'm rich!"))
+	// 		pickupObject(Inventory.dime)
+	// 		objectHidden(this, YES)
+	// 	}
+	// })
+
+	// --------------------------------------------------------------------------------------------
+	mainStreetDoor = DEFINE_OBJECT({
+		name = TEXT(11456,"Main Street")
+		no_photo = YES
+
+		VERB(walkto) {
+			exitRoomFromDoor(this, MainStreet.AStreetDoor)
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	bottle = DEFINE_OBJECT({
+		name = TEXT(11457,"bottle")
+		reach = REACH_LOW
+		for_story = "trash"
+		photo_reach = REACH_LOW
+
+		VERB(lookat) {
+			sayLine(SAY(11402,"I wish people would recycle."), ONCE(SAY(11403,"I know any planet-wide ecological catastrophe is a hundred or more years away, but still.")))
+		}
+
+		VERB(pickup) {
+			pickupObject(Inventory.bottle)
+			objectState(this, "gone")
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	bookStoreSaleSign = DEFINE_OBJECT({
+		name = TEXT(11458,"sign")
+		photo_name = TEXT(11459,"the bookstore sale sign")
+		photo_reach = REACH_LOW
+		looked_at = NO
+
+		VERB(lookat) {
+			looked_at = YES
+			sayLine(SAY(11404,"Looks like Madame Morena is having one of her never ending occult sales."))
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	bookStoreDoor = DEFINE_OBJECT({
+		name = TEXT(11460,"bookstore door")
+		photo_name = TEXT(11461,"the bookstore door")
+		door_verbs = YES
+		verb_use_text = TEXT(11462,"Enter")
+		verb_use_desc = TEXT(11463,"Enter Occult Bookstore")
+		to_door = @BookStore.outsideDoor
+	})
+
+	bookStoreTrigger = {
+		function triggerEnter(actor) {
+			if (ONCE(YES)) {
+				sayLine(SAY(11405,"Looks like Madame Morena turned off her “spooky” motion sensors."), SAY(11406,"She wasn't fooling anyone with those."), SAY(11407,"And yes, I was using air-quotes."))
+			}
+		}
+	}
+
+	// --------------------------------------------------------------------------------------------
+	leatherChair  = {}
+	phone = {}
+	phoneBook = {}
+
+	phoneTrigger = {
+		function triggerLeave(actor) {
+			flashPhone()
+		}
+	}
+
+	// --------------------------------------------------------------------------------------------
+	dumpster = DEFINE_OBJECT({
+		name = TEXT(11464,"dumpster")
+		for_story = "trash"
+		photo_reach = REACH_HIGH
+		reach = REACH_HIGH
+		is_trash = YES
+		bad_story = [ "disgusting", SAY(11408,"I don't think this is disgusting enough for Natalie.") ]
+
+		VERB(lookat) {
+			sayLine(SAY(11409,"Filled to the brim with smelly trash."))
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	willie = {}
+	willieTrigger = {
+		function triggerLeave(actor) {
+			if (GLOBAL(hired_lenore_state) || randomodds(SETTING(flashback_odds))) return
+	 		heardAbout("willie1", YES, YES)
+	 		startthread(@{
+				playSoundAt(SOUNDID(quiet_glitch), willie)
+				for (local i = 1..7) {
+					actorHidden(lenore, randomfrom(YES, YES, YES, NO))
+					actorHidden(peter, randomfrom(YES, YES, YES, NO))
+					actorHidden(chuckie, randomfrom(YES, YES, YES, NO))
+					objectState(leatherChair, randomfrom("here","gone"))
+					objectState(willie, randomfrom("here","gone"))
+					breaktime(0.10)
+				}
+				actorHidden(lenore, NO)
+				actorHidden(peter, NO)
+				actorHidden(chuckie, NO)
+				objectState(leatherChair, "here")
+				objectState(willie, "gone")
+			})
+		}
+	}
+// NEW_OBJECT_HERE
+
+	star1 = {}
+	star2 = {}
+	star3 = {}
+	star4 = {}
+	star5 = {}
+	star6 = {}
+	star7 = {}
+	star8 = {}
+	star9 = {}
+	star10 = {}
+	star11 = {}
+	star12 = {}
+	star13 = {}
+	star14 = {}
+	star15 = {}
+	star16 = {}
+	star17 = {}
+	star18 = {}
+	star19 = {}
+  star20 = {}
+  star21 = {}
+  star22 = {}
+  star23 = {}
+  star24 = {}
+  star25 = {}
+  star26 = {}
+  star27 = {}
+  star28 = {}
+  star29 = {}
+  star30 = {}
+  star31 = {}
+  star32 = {}
+  star33 = {}
+  star34 = {}
+  star35 = {}
+  star36 = {}
+  star37 = {}
+  star38 = {}
+  star39 = {}
+  star40 = {}
+  star41 = {}
+  star42 = {}
+  star43 = {}
+
+	starB1 = {}
+	starB2 = {}
+	starB3 = {}
+	starB4 = {}
+	starB5 = {}
+	starB6 = {}
+	starB7 = {}
+	starB8 = {}
+	starB9 = {}
+	starB10 = {}
+})

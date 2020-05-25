@@ -1,0 +1,964 @@
+ambient_light: "{0.593137,0.555339,0.555339,1}"
+background: "background"
+name: "SheriffsOffice"
+room_scale: 4
+roomsize: "{600,180}"
+sheet: "SheriffsOffice"
+layers: [
+    {
+        name: "sky_dark"
+        parallax: 0.25
+        zsort: 2
+    }
+    {
+        name: "foreground"
+        parallax: 1.25
+        zsort: -1
+    }
+]
+lights: [
+    {
+        color1: "{0.995098,0.956905,0.736568,0}"
+        color2: "{0,0,0,0}"
+        id: 0
+        iradius: 56
+        oradius: 162
+        rate: 0
+        clipping: ((0,0),(0,0))
+        pos: (283,73)
+    }
+]
+objects: [
+    {
+        name: "cityHallDoor"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 87
+        animations: [
+            {
+                name: "closed"
+                frames: [
+                    "door_opening2"
+                    "door_opening1"
+                    "door_closed"
+                ]
+            }
+            {
+                name: "open"
+                frames: [
+                    "door_opening1"
+                    "door_opening2"
+                    "door_open"
+                ]
+            }
+        ]
+        hotspot: ((-20,-38),(18,40))
+        pos: (160,113)
+        usepos: (-1,-43)
+        usepos2: (-1,-65)
+    }
+    {
+        name: "cabinet1"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 87
+        hotspot: ((-11,-25),(16,29))
+        pos: (106,96)
+        usepos: (0,-30)
+        usepos2: (0,-45)
+    }
+    {
+        name: "cabinet1D1"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 69
+        animations: [
+            {
+                name: "closed"
+                frames: [
+                ]
+            }
+            {
+                name: "open"
+                frames: [
+                    "top_left_drawer_open"
+                ]
+            }
+        ]
+        hotspot: ((-10,-7),(12,9))
+        pos: (103,116)
+        usepos: (-5,-50)
+        usepos2: (2,-65)
+    }
+    {
+        name: "cabinet1D2"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 69
+        animations: [
+            {
+                name: "closed"
+                frames: [
+                ]
+            }
+            {
+                name: "open"
+                frames: [
+                    "mid_left_drawer_open"
+                ]
+            }
+        ]
+        hotspot: ((-10,-5),(12,11))
+        pos: (103,99)
+        usepos: (-5,-33)
+        usepos2: (4,-43)
+    }
+    {
+        name: "cabinet1D3"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 69
+        animations: [
+            {
+                name: "closed"
+                frames: [
+                ]
+            }
+            {
+                name: "open"
+                frames: [
+                    "bottom_left_drawer_open"
+                ]
+            }
+        ]
+        hotspot: ((-11,-7),(12,9))
+        pos: (103,83)
+        usepos: (-5,-17)
+        usepos2: (1,-28)
+    }
+    {
+        name: "cabinet2"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 86
+        hotspot: ((-21,-25),(8,29))
+        pos: (366,96)
+        usepos: (0,-30)
+        usepos2: (-3,-49)
+    }
+    {
+        name: "cabinet2D1"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 69
+        animations: [
+            {
+                name: "closed"
+                frames: [
+                ]
+            }
+            {
+                name: "open"
+                frames: [
+                    "top_right_drawer_open"
+                ]
+            }
+        ]
+        hotspot: ((-11,-7),(11,8))
+        pos: (363,117)
+        usepos: (-5,-50)
+        usepos2: (0,-69)
+    }
+    {
+        name: "cabinet2D2"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 69
+        animations: [
+            {
+                name: "closed"
+                frames: [
+                ]
+            }
+            {
+                name: "open"
+                frames: [
+                    "mid_right_drawer_open"
+                ]
+            }
+        ]
+        hotspot: ((-11,-7),(11,8))
+        pos: (363,101)
+        usepos: (-5,-34)
+        usepos2: (-1,-54)
+    }
+    {
+        name: "cabinet2D3"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 69
+        animations: [
+            {
+                name: "closed"
+                frames: [
+                ]
+            }
+            {
+                name: "open"
+                frames: [
+                    "bottom_right_drawer_open"
+                ]
+            }
+        ]
+        hotspot: ((-11,-8),(11,8))
+        pos: (363,84)
+        usepos: (-5,-17)
+        usepos2: (0,-28)
+    }
+    {
+        name: "poster1"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 88
+        hotspot: ((-10,6),(10,36))
+        pos: (205,105)
+        usepos: (-7,-34)
+        usepos2: (-14,-55)
+    }
+    {
+        name: "poster2"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 88
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "meteor_wanted_poster"
+                ]
+            }
+        ]
+        hotspot: ((-11,-15),(10,15))
+        pos: (248,126)
+        usepos: (2,-54)
+        usepos2: (-1,-74)
+    }
+    {
+        name: "poster3"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 88
+        hotspot: ((-10,3),(10,33))
+        pos: (274,108)
+        usepos: (1,-36)
+        usepos2: (1,-57)
+    }
+    {
+        name: "sheriffsOfficeDesk"
+        usedir: "DIR_FRONT"
+        zsort: 60
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "desk"
+                ]
+            }
+        ]
+        hotspot: ((-33,-14),(35,17))
+        pos: (228,76)
+        usepos: (6,-6)
+    }
+    {
+        name: "sheriffsOfficeBars"
+        prop: 1
+        zsort: 64
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "jail_bars"
+                ]
+            }
+        ]
+        pos: (458,117)
+    }
+    {
+        name: "jailDoor"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 61
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "jail_door"
+                ]
+            }
+        ]
+        hotspot: ((-33,-44),(30,46))
+        pos: (480,112)
+        usepos: (-25,-59)
+        usepos2: (-25,-78)
+    }
+    {
+        name: "arrestTron"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 69
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "arresttron"
+                ]
+            }
+        ]
+        hotspot: ((-30,-47),(23,27))
+        pos: (320,113)
+        usepos: (-1,-51)
+        usepos2: (-2,-76)
+    }
+    {
+        name: "arrestTronLight"
+        parent: "arrestTron"
+        prop: 1
+        zsort: 68
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "arresttron_light"
+                ]
+            }
+        ]
+        pos: (312,150)
+    }
+    {
+        name: "sheriffsOfficePoliceRadio"
+        usedir: "DIR_FRONT"
+        zsort: 60
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "radiotron"
+                ]
+            }
+        ]
+        hotspot: ((-21,-16),(10,-2))
+        pos: (215,108)
+        usepos: (3,-40)
+    }
+    {
+        name: "radioImage"
+        prop: 1
+        zsort: 90
+        animations: [
+            {
+                name: "off"
+                frames: [
+                    "radio_off"
+                ]
+            }
+            {
+                name: "on"
+                frames: [
+                    "radio_on"
+                ]
+            }
+        ]
+        pos: (425,108)
+    }
+    {
+        name: "arrestTronLabel"
+        usedir: "DIR_BACK"
+        zsort: 68
+        hotspot: ((-10,-8),(12,14))
+        pos: (315,103)
+        usepos: (4,-41)
+    }
+    {
+        name: "sheriffsOfficeLamp"
+        prop: 1
+        zsort: 59
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "ceiling_lamp"
+                ]
+            }
+        ]
+        pos: (281,116)
+    }
+    {
+        name: "sheriffsOfficePoliceRadioTube"
+        usedir: "DIR_FRONT"
+        zsort: 58
+        animations: [
+            {
+                name: "state1"
+                frames: [
+                    "radiotron_tube_on"
+                ]
+            }
+        ]
+        hotspot: ((-5,-9),(5,4))
+        pos: (212,115)
+        usepos: (3,-43)
+    }
+    {
+        name: "arrestTronTube"
+        usedir: "DIR_BACK"
+        zsort: 71
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "arrestron_tube"
+                ]
+            }
+            {
+                name: "state1"
+                frames: [
+                ]
+            }
+        ]
+        hotspot: ((-6,-8),(7,8))
+        pos: (303,148)
+        usepos: (13,-83)
+    }
+    {
+        name: "arrestTronLightHighlights"
+        prop: 1
+        zsort: 84
+        animations: [
+            {
+                name: "state1"
+                frames: [
+                    "arresttron_light_highlights"
+                ]
+            }
+        ]
+        pos: (367,142)
+    }
+    {
+        name: "arrestTronHalEyeLit"
+        parent: "arrestTron"
+        prop: 1
+        zsort: 68
+        animations: [
+            {
+                name: "state1"
+                frames: [
+                    "hal_eye_lit"
+                ]
+            }
+        ]
+        pos: (334,126)
+    }
+    {
+        name: "arrestTronFlashingLights"
+        parent: "arrestTron"
+        prop: 1
+        zsort: 67
+        animations: [
+            {
+                name: "state1"
+                frames: [
+                    "lights1"
+                    "lights2"
+                    "lights3"
+                    "lights4"
+                    "lights5"
+                    "lights6"
+                    "lights7"
+                    "lights8"
+                    "lights9"
+                    "lights10"
+                ]
+            }
+            {
+                name: "state2"
+                frames: [
+                    "lights10"
+                    "lights9"
+                    "lights8"
+                    "lights7"
+                    "lights6"
+                    "lights5"
+                    "lights4"
+                    "lights3"
+                    "lights2"
+                    "lights1"
+                ]
+            }
+            {
+                name: "state3"
+                frames: [
+                    "lights4"
+                    "lights1"
+                    "lights8"
+                    "lights3"
+                    "lights9"
+                    "lights6"
+                    "lights10"
+                    "lights5"
+                    "lights2"
+                    "lights7"
+                ]
+            }
+        ]
+        pos: (334,106)
+    }
+    {
+        name: "arrestTronReport"
+        usedir: "DIR_BACK"
+        zsort: 67
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "warrant"
+                ]
+            }
+        ]
+        hotspot: ((-9,-4),(10,7))
+        pos: (316,80)
+        usepos: (-4,-16)
+    }
+    {
+        name: "arrestTronLight1_On"
+        parent: "arrestTron"
+        usedir: "DIR_FRONT"
+        zsort: 65
+        animations: [
+            {
+                name: "state1"
+                frames: [
+                    "green_light_lit"
+                ]
+            }
+        ]
+        hotspot: ((-7,-3),(7,6))
+        pos: (300,113)
+        usepos: (0,-30)
+    }
+    {
+        name: "arrestTronLight2_On"
+        parent: "arrestTron"
+        usedir: "DIR_FRONT"
+        zsort: 65
+        animations: [
+            {
+                name: "state1"
+                frames: [
+                    "green_light_lit"
+                ]
+            }
+        ]
+        hotspot: ((-7,-3),(6,6))
+        pos: (300,106)
+        usepos: (0,-30)
+    }
+    {
+        name: "arrestTronLight3_On"
+        parent: "arrestTron"
+        usedir: "DIR_FRONT"
+        zsort: 65
+        animations: [
+            {
+                name: "state1"
+                frames: [
+                    "green_light_lit"
+                ]
+            }
+        ]
+        hotspot: ((-7,-4),(5,3))
+        pos: (300,99)
+        usepos: (0,-30)
+    }
+    {
+        name: "phone"
+        usedir: "DIR_FRONT"
+        zsort: 60
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "phone_handset"
+                ]
+            }
+            {
+                name: "just_phone"
+                frames: [
+                    "phone"
+                ]
+            }
+        ]
+        hotspot: ((-1,10),(17,23))
+        pos: (246,81)
+        usepos: (11,-12)
+    }
+    {
+        name: "sheriffsFingerprintBook1"
+        usedir: "DIR_BACK"
+        zsort: 67
+        hotspot: ((-66,26),(-44,36))
+        pos: (160,90)
+        usepos: (-57,-25)
+    }
+    {
+        name: "sheriffsFingerprintBook2"
+        usedir: "DIR_BACK"
+        zsort: 67
+        hotspot: ((-66,9),(-45,20))
+        pos: (160,90)
+        usepos: (-59,-25)
+    }
+    {
+        name: "sheriffsFingerprintBook3"
+        usedir: "DIR_BACK"
+        zsort: 67
+        hotspot: ((-66,-7),(-44,4))
+        pos: (160,90)
+        usepos: (-59,-25)
+    }
+    {
+        name: "sheriffsFingerprintBook4"
+        usedir: "DIR_BACK"
+        zsort: 67
+        hotspot: ((-62,24),(-41,35))
+        pos: (414,91)
+        usepos: (-57,-25)
+    }
+    {
+        name: "sheriffsFingerprintBook5"
+        usedir: "DIR_BACK"
+        zsort: 67
+        hotspot: ((-62,9),(-42,18))
+        pos: (415,91)
+        usepos: (-59,-25)
+    }
+    {
+        name: "sheriffsFingerprintBook6"
+        usedir: "DIR_BACK"
+        zsort: 67
+        hotspot: ((-59,-9),(-41,1))
+        pos: (413,92)
+        usepos: (-59,-25)
+    }
+    {
+        name: "detective1Spot1"
+        spot: 1
+        usedir: "DIR_RIGHT"
+        pos: (167,58)
+    }
+    {
+        name: "detective2Spot1"
+        spot: 1
+        usedir: "DIR_RIGHT"
+        pos: (119,59)
+    }
+    {
+        name: "detective1Spot2"
+        spot: 1
+        usedir: "DIR_RIGHT"
+        pos: (279,60)
+    }
+    {
+        name: "detective2Spot2"
+        spot: 1
+        usedir: "DIR_RIGHT"
+        pos: (239,57)
+    }
+    {
+        name: "sheriffSpot"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (224,69)
+    }
+    {
+        name: "scoldSpot"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (338,43)
+    }
+    {
+        name: "interrogationSpot1"
+        spot: 1
+        usedir: "DIR_BACK"
+        pos: (405,58)
+    }
+    {
+        name: "interrogationSpot2"
+        spot: 1
+        usedir: "DIR_BACK"
+        pos: (444,58)
+    }
+    {
+        name: "jailSpot1"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (425,68)
+    }
+    {
+        name: "fixWatchSpot"
+        spot: 1
+        usedir: "DIR_BACK"
+        pos: (400,58)
+    }
+    {
+        name: "sheriffsOfficePoliceRadioLight"
+        prop: 1
+        zsort: 59
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "radiotron_light_off"
+                ]
+            }
+            {
+                name: "state1"
+                frames: [
+                    "radiotron_light_on"
+                ]
+            }
+        ]
+        pos: (203,126)
+    }
+    {
+        name: "arrestTronMask"
+        prop: 1
+        zsort: 66
+        animations: [
+            {
+                name: "state1"
+                frames: [
+                    "arresttron_mask"
+                ]
+            }
+        ]
+        pos: (316,92)
+    }
+    {
+        name: "sheriffSpot3"
+        spot: 1
+        usedir: "DIR_LEFT"
+        pos: (383,55)
+    }
+    {
+        name: "sheriffSpot4"
+        spot: 1
+        usedir: "DIR_LEFT"
+        pos: (407,53)
+    }
+    {
+        name: "sheriffSpot5"
+        spot: 1
+        usedir: "DIR_LEFT"
+        pos: (430,53)
+    }
+    {
+        name: "sheriffsOfficeStar1"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (380,153)
+    }
+    {
+        name: "sheriffsOfficeStar2"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (382,130)
+    }
+    {
+        name: "arrestTronTubeEasyModeSpot"
+        spot: 1
+        usedir: "DIR_BACK"
+        pos: (290,65)
+    }
+    {
+        name: "jailKey"
+        usedir: "DIR_BACK"
+        zsort: 90
+        animations: [
+            {
+                name: "here"
+                frames: [
+                    "jail_key"
+                ]
+            }
+            {
+                name: "gone"
+                frames: [
+                ]
+            }
+        ]
+        hotspot: ((-4,-5),(6,8))
+        pos: (366,136)
+        usepos: (-8,-69)
+    }
+    {
+        name: "jumpSpot"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (291,46)
+    }
+    {
+        name: "radio"
+        usedir: "DIR_BACK"
+        zsort: 58
+        hotspot: ((110,-1),(139,22))
+        pos: (300,90)
+        usepos: (125,-18)
+    }
+    {
+        name: "fussyTriggerRight"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 90
+        hotspot: ((27,-34),(81,-2))
+        pos: (300,90)
+        usepos: (0,-30)
+    }
+    {
+        name: "fussyTriggerLeft"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 90
+        hotspot: ((-212,-38),(-158,-6))
+        pos: (300,90)
+        usepos: (0,-30)
+    }
+    {
+        name: "fussyTriggerRadio"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 90
+        hotspot: ((88,-81),(236,-7))
+        pos: (300,90)
+        usepos: (0,-30)
+    }
+    {
+        name: "jailSpot2"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (457,69)
+    }
+    {
+        name: "inJailTrigger"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 90
+        hotspot: ((96,-25),(206,-17))
+        pos: (300,90)
+        usepos: (0,-30)
+    }
+    {
+        name: "coronerSpot"
+        spot: 1
+        usedir: "DIR_LEFT"
+        pos: (218,47)
+    }
+    {
+        name: "coronerSpot2"
+        spot: 1
+        usedir: "DIR_RIGHT"
+        pos: (158,47)
+    }
+    {
+        name: "coronerJailSpot"
+        spot: 1
+        usedir: "DIR_RIGHT"
+        pos: (395,58)
+    }
+    {
+        name: "sheriffCoroner"
+        usedir: "DIR_BACK"
+        zsort: 51
+        hotspot: ((85,-30),(141,58))
+        pos: (300,90)
+        usepos: (126,-51)
+    }
+    {
+        layer: 2
+        name: "star1"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (380,153)
+    }
+    {
+        layer: 2
+        name: "star2"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (382,130)
+    }
+    {
+        name: "dance_spot"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (434,38)
+    }
+]
+room_bounds: ((1,1),(600,180))
+room_size: (600,180)
+walkboxes: [
+    {
+        polygon: "(88,63);(180,58);(267,58);(284,65);(349,65);(379,59);(475,59);(484,59);(520,59);(566,41);(46,41)"
+    }
+    {
+        polygon: "(100,68);(125,68);(192,67);(180,58);(88,63)"
+    }
+    {
+        polygon: "(132,72);(282,74);(282,70);(275,67);(192,67);(125,68)"
+    }
+    {
+        polygon: "(275,71);(282,70);(284,65);(267,58)"
+    }
+    {
+        name: "jail"
+        polygon: "(398,71);(460,71);(466,73);(488,73);(501,66);(481,66);(473,66);(398,66)"
+    }
+    {
+        name: "jail_door"
+        polygon: "(473,66);(481,66);(484,59);(475,59)"
+    }
+    {
+        polygon: "(352,68);(368,68);(379,59);(349,65)"
+    }
+]

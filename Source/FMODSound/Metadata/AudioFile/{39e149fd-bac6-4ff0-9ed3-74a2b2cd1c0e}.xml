@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{39e149fd-bac6-4ff0-9ed3-74a2b2cd1c0e}">
+        <property name="assetPath">
+            <value>GGError.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>11.0249996</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>0.25460317460317461</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{14fcd25f-489c-460f-adfb-cfb7d60888b4}</destination>
+        </relationship>
+    </object>
+</objects>

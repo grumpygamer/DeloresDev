@@ -1,0 +1,139 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+// This is the delegate for all actors. If a function or variable is not found in the
+// actor, Dinky tries to find it here.
+
+base_actor <- {
+	_tostring = function() {
+		if ("_key" in this) {
+			return ("_id" in this) ? this._key+"("+this._id+")" : this._key
+		} else {
+			return "(?actor?)"
+		}
+	}
+	function talkColor() {
+		return this?.talk_color ? this.talk_color : COLOR_WHITE
+	}
+	function hideDefaultLayers() {
+		actorHideLayer(this, "foil_hat")
+		actorHideLayer(this, "pirate_hat")
+		actorHideLayer(this, "splash")
+		actorHideLayer(this, "blink")
+		actorHideLayer(this, "eyes_left")
+		actorHideLayer(this, "eyes_right")
+		actorShowLayer(this, "head1")
+		actorHideLayer(this, "head2")
+		actorHideLayer(this, "head3")
+		actorHideLayer(this, "head4")
+		actorHideLayer(this, "head5")
+		actorHideLayer(this, "head6")
+	}
+	function hideLayers() {
+		this.hideDefaultLayers()
+	}
+	// Don't remove, they are needed.
+	function exit() {}
+	function enter() {}
+}
+
+function _defineActor(name, actor) {
+	if (!is_string(name)) {
+		error("Actor name isn't a string")
+	}
+	if (!is_table(actor)) {
+		error("Actor "+name+" isn't a valid table.")
+	}
+	if (name in roottable()) {
+		error("Actor "+name+" already defined.")
+	}
+	setdelegate(actor, base_actor)
+	roottable()[name] <- actor
+
+	if ("min_use_dist" !in actor) min_use_dist <- MIN_USE_DIST
+	if ("min_talk_dist" !in actor) min_talk_dist <- MIN_TALK_DIST
+	if ("cantReach" !in actor) {
+		actor.cantReach <- function() {
+			sayLine(SAY(11869,"I can't reach that."))
+		}
+	}
+	createActor(name, actor, actor?.default_costume)
+	actor.hideLayers()
+	actorHotspot(actor, point(-18,0), point(18,70))
+	if (is_function(actor?.init)) {
+		actor.init()
+	}
+	registerVerbs(actor)
+	return actor
+}
+
+function actorStopReach(actor=null) {
+	if (actor == null) actor = selectedActor
+	if (threadrunning(actor?.reach_tid)) {
+		stopthread(actor.reach_tid)
+		playAnimation(actor, "stand")
+	}
+	actor.reach_tid <- 0
+}
+
+function actorQuickReach(actor, reach_type=null) {
+	if (is_number(actor) and reach_type == null) {
+		reach_type = actor
+		actor = selectedActor
+	}
+
+	if (isActorWalking(actor)) return 0
+	if (is_table(reach_type)) reach_type = reach_type?.reach
+	if (reach_type == REACH_NONE) {
+	} else
+	if (reach_type == REACH_LOW) {
+		actor.reach_tid <- startthread(@{
+			playAnimation(actor, "reach_low")
+			breaktime(REACH_TIME)
+			if (!isActorWalking(actor)) playAnimation(actor, "stand")
+			actor.reach_tid = 0
+		})
+		return actor.reach_tid
+	} else
+	if (reach_type == REACH_MED) {
+		actor.reach_tid <- startthread(@{
+			playAnimation(actor, "reach_med")
+			breaktime(REACH_TIME)
+			if (!isActorWalking(actor)) playAnimation(actor, "stand")
+			actor.reach_tid = 0
+		})
+		return actor.reach_tid
+	} else
+	if (reach_type == REACH_HIGH) {
+		actor.reach_tid <- startthread(@{
+			playAnimation(actor, "reach_high")
+			breaktime(REACH_TIME)
+			if (!isActorWalking(actor)) playAnimation(actor, "stand")
+			actor.reach_tid = 0
+		})
+		return actor.reach_tid
+	}
+}
+
+function startBlinking(actor) {
+	stopthread(actor?.blink_tid)
+	actor.blink_tid <- startthread(watchBlink, actor)
+}
+
+function stopBlinking(actor) {
+	stopthread(actor?.blink_tid)
+	actor.blink_tid <- 0
+}
+script watchBlink(actor) {
+	actorHideLayer(actor, "blink")
+	do {
+		breaktime(3.0,4.0)
+		actorShowLayer(actor, "blink")
+		breaktime(0.25)
+		actorHideLayer(actor, "blink")
+	}
+}

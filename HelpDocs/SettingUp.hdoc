@@ -1,0 +1,30 @@
+/*{{
+@section setting_up
+@title Setting Up
+@sort 0
+
+The Dinky game development systems runs on Mac and Windows.
+.
+You will need to following tools and programs installed...\\
+   `Python`\\
+   `TexturePacker`\\
+   `psd-tools`\\
+...and some kind of text editor, it's not important which one but we recommend [[BBedit]](https://www.barebones.com/products/bbedit/index.html) (for Mac) or [[Sublime Text]](https://www.sublimetext.com/) (Mac and Windows).
+.
+`Python` comes installed on a Mac, but will need to be installed on Windows via the link [[https://www.python.org/downloads/]](https://www.python.org/downloads/)
+
+Install `Python` 2.7, not 3.X
+.
+If you're going to be building `sprite sheets`, you need to install `psd-tools`, `TexturePacker`, and `Photoshop`
+.
+Once `Python` is installed and working, install `psd-tools`\\
+`pip2 psd-tools`\\
+.
+`TexturePacker` can be purchased at [[https://www.codeandweb.com/texturepacker]](https://www.codeandweb.com/texturepacker)
+
+You will need to install the `TexturePacker` command line tools: [[https://www.codeandweb.com/texturepacker/documentation/installation-and-licensing]](https://www.codeandweb.com/texturepacker/documentation/installation-and-licensing)
+.
+A subscription to `Photoshop` will need to be purchased from `Adobe` at [[https://www.adobe.com/products/photoshop.html]](https://www.adobe.com/products/photoshop.html)
+.
+The internal tools `Wimpy` and `JoJo` (the game engine) will be in a shared Dropbox folder and `Slack` notification will be given when they update.  You will need to unzip them and place them in the appropriate place for Mac or Windows.  It is also recommended you update these tools each morning before working.
+}}*/

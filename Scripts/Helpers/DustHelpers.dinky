@@ -1,0 +1,75 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+local first_speck_of_dust = YES
+
+function _create_dust(pos) {
+	local dust = createObject("Inventory", "speck_of_dust_room")
+
+	objectAt(dust, pos)
+	objectTouchable(dust,YES)
+	objectHotspot(dust, point (-4,-4), point(4,4))
+	objectUsePos(dust, point(0,4), DIR_FRONT)
+	objectAlpha(dust, 0.5)
+	dust.name <- null
+	dust.name =@ currentRoom?.lights_off?TEXT(11874,"something"):TEXT(11875,"speck of dust")
+	dust.default_verb <- first_speck_of_dust ? "verb_lookat" : "verb_pickup"
+	dust.reach <- REACH_LOW
+	dust.photo_reach <- REACH_LOW
+	dust.bad_story <- [ "cleaning_up", SAY(11870,"I don't think this is enough dust for Natalie.") ]
+	dust.verb_lookat <- function(use_with=null) {
+		if (currentRoom?.lights_off) {
+			sayLine(SAY(11871,"It's too dark to see"))
+			return
+		}
+		sayLine(SAY(11872,"It's a speck of dust."))
+	}
+	dust.verb_pickup <- function(use_with=null) {
+		if (currentRoom?.lights_off) {
+			sayLine(SAY(11873,"It's too dark to see."))
+			return
+		}
+		currentRoom._speck_of_dust_pos <- null
+		objectHidden(this, YES)
+		first_speck_of_dust = NO
+		if (!inInventory(Inventory.specksOfDust)) pickupObject(Inventory.specksOfDust)
+		Inventory.specksOfDust.addDust()
+	}
+
+	registerVerbs(dust)
+	return dust
+}
+
+function createSpeckOfDust(room) {
+	if (not isActorInRoom(selectedActor)) return
+	if (room?.no_speck_of_dust) return			// Not in this room.
+
+	// Specks of dust respawn every X minutes.
+	if (gametime() > room?._speck_expire_time) {
+		local x, y, pos
+		local obj = null
+		for (local i = 0..10) {
+			pos = point(random(0,roomSize(room).x),random(0,roomSize(room).y/2))
+			pos = clampInWalkbox(selectedActor, pos)
+			obj = findObjectAt(pos)
+			if (obj == null) break
+		}
+		if (obj) {
+			// We can't create one that's not behind a object.
+			room._speck_expire_time <- 0
+			objectHidden(dust, YES)
+			objectTouchable(dust, NO)
+			return
+		}
+		room._speck_of_dust_pos <- pos
+		room._speck_expire_time <- gametime()+(60*5)		// 5 mins
+	}
+
+	if (room?._speck_of_dust_pos) {
+		if (SETTING(debug)) print("Speck of dust at ", room._speck_of_dust_pos)
+		_create_dust(room._speck_of_dust_pos)
+	}
+}

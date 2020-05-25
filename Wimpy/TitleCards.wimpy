@@ -1,0 +1,86 @@
+background: "background"
+name: "TitleCards"
+room_scale: 2
+sheet: "TitleCards"
+objects: [
+    {
+        name: "date"
+        prop: 1
+        zsort: 180
+        animations: [
+            {
+                name: "hide"
+                frames: [
+                ]
+            }
+            {
+                name: "show"
+                frames: [
+                    "1988"
+                ]
+            }
+        ]
+        pos: (320,180)
+    }
+    {
+        name: "line"
+        prop: 1
+        zsort: 180
+        animations: [
+            {
+                name: "hide"
+                frames: [
+                ]
+            }
+            {
+                name: "show"
+                frames: [
+                    "line"
+                ]
+            }
+        ]
+        pos: (320,180)
+    }
+    {
+        name: "title"
+        prop: 1
+        zsort: 180
+        animations: [
+            {
+                name: "hide"
+                frames: [
+                ]
+            }
+            {
+                name: "show"
+                frames: [
+                    "part10"
+                ]
+            }
+        ]
+        pos: (320,180)
+    }
+    {
+        name: "text"
+        prop: 1
+        zsort: 180
+        animations: [
+            {
+                name: "hide"
+                frames: [
+                ]
+            }
+            {
+                name: "show"
+                frames: [
+                    "part10_title"
+                ]
+            }
+        ]
+        pos: (320,180)
+    }
+]
+room_bounds: ((0,0),(640,360))
+room_size: (640,360)
+walkboxes: [
+]

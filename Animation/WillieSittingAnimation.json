@@ -1,0 +1,145 @@
+sheet: "WillieSitting"
+animations: [
+     {
+        name: "stand_front"
+        layers: [
+            {
+                name: "body"
+                frames: [
+                    "fsit_body1"
+                ]
+            }
+            {
+                name: "head1"
+				flags: 1
+                frames: [
+                    "fsit_head1"
+                ]
+            }
+            {
+                name: "head2"
+				flags: 1
+                frames: [
+                    "fsit_head2"
+                ]
+            }
+            {
+                name: "head3"
+				flags: 1
+                frames: [
+                    "fsit_head3"
+                ]
+            }
+            {
+                name: "head4"
+				flags: 1
+                frames: [
+                    "fsit_head4"
+                ]
+            }
+            {
+                name: "head5"
+				flags: 1
+                frames: [
+                    "fsit_head5"
+                ]
+            }
+            {
+                name: "head6"
+				flags: 1
+                frames: [
+                    "fsit_head6"
+                ]
+            }
+            {
+                name: "eyes_left"
+                frames: [
+                    "fsit_eyes_left"
+                ]
+            }
+            {
+                name: "eyes_right"
+                frames: [
+                    "fsit_eyes_right"
+                ]
+            }
+            {
+                name: "blink"
+                frames: [
+                    "fsit_blink"
+                ]
+            }
+        ]
+    }
+     {
+        name: "wave_front"
+        layers: [
+            {
+                name: "body"
+                frames: [
+                    "fwave_body1", "fwave_body2", "fwave_body3", "fwave_body2","fsit_body1"
+                ]
+            }
+            {
+                name: "head1"
+				flags: 1
+                frames: [
+                    "fsit_head1"
+                ]
+            }
+            {
+                name: "head2"
+				flags: 1
+                frames: [
+                    "fsit_head2"
+                ]
+            }
+            {
+                name: "head3"
+				flags: 1
+                frames: [
+                    "fsit_head3"
+                ]
+            }
+            {
+                name: "head4"
+				flags: 1
+                frames: [
+                    "fsit_head4"
+                ]
+            }
+            {
+                name: "head5"
+				flags: 1
+                frames: [
+                    "fsit_head5"
+                ]
+            }
+            {
+                name: "head6"
+				flags: 1
+                frames: [
+                    "fsit_head6"
+                ]
+            }
+            {
+                name: "eyes_left"
+                frames: [
+                    "fsit_eyes_left"
+                ]
+            }
+            {
+                name: "eyes_right"
+                frames: [
+                    "fsit_eyes_right"
+                ]
+            }
+            {
+                name: "blink"
+                frames: [
+                    "fsit_blink"
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,29 @@
+ambient_light: "{0.627451,0.54133,0.54133,1}"
+background: "background"
+name: "Ending"
+room_scale: 4
+sheet: "Ending"
+objects: [
+    {
+        name: "ransomeStartSpot"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (162,15)
+    }
+    {
+        name: "ransomeSpot"
+        spot: 1
+        usedir: "DIR_LEFT"
+        pos: (178,50)
+    }
+    {
+        name: "deloresSpot"
+        spot: 1
+        usedir: "DIR_RIGHT"
+        pos: (133,50)
+    }
+]
+room_bounds: ((0,0),(320,180))
+room_size: (320,180)
+walkboxes: [
+]
