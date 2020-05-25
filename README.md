@@ -92,6 +92,10 @@ Please keep in mind that these are in-house dev tools created to make a game and
 ## Animation
 Animation control files can be found in `DeloresDev/Animation` and are `.json` files. The tool that created these for Thimbleweed Park is long gone.
 
+## Translations
+The version of Delores that is on stores does not inlcude any translation.  This version has all the text stripped and wrapped and placed into `DeloresDev/Translations_en.tsv`.  See the help doc on Translations or look at `DeloresDev/Scripts/Helpers/TranslationHelpers.dinky` for more information.
+
+
 ## Wimpy
 The tool to add and position objects is called **Wimpy** and it can be download [here](https://thimbleweedpark.com/deloresdev)
 
