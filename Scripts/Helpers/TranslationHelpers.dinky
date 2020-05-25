@@ -93,7 +93,7 @@ function useTranslation(language) {
 function TR(text) {
 	if (!is_string(text)) return text
 	if (text?[0] == '^') return strslice(text,1)		// Strings that don't require translation start with '^'
-	if (text?[1] == ':') {							// TEXT(11880,"...")
+	if (text?[1] == ':') {							// TEXT(0,"...")
 		text = strslice(text,2)
 		if (!DEBUG(translation_markers)) return text
 		return "??"+text
