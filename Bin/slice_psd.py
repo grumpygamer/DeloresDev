@@ -114,15 +114,15 @@ def main(args):
 	parser.add_option("--verbose", action="store_true", dest="verbose", default=False, help="Verbose output")
 	(options, args) = parser.parse_args(args)
 
-	if len(args):
+	if len(args) == 0:
 		print("Missing .psd file. Did you mean to call munge_psd.py?")
 		sys.exit(1)
 
-		if (options.quiet):
-			options.verbose = False
+	if (options.quiet):
+		options.verbose = False
 
-		if slicePSD(args[0], options) == False:
-			sys.exit(1)
+	if slicePSD(args[0], options) == False:
+		sys.exit(1)
 
 if __name__ == '__main__':
     main(sys.argv[1:])
