@@ -64,7 +64,7 @@ If all you're interested in is code, you can also stop here.
 ## Art
 The full art pipeline involves a slew of Python scripts that proved to be an installation nightmare so they are not included.
 
-If you want to add art, place a `.png` for the element to the `Delores/Dev/Images/RoomName` and then run `Bin/munge_images.py` and the sprite sheets will be created.
+If you want to add art, place a `.png` for the element in the `Delores/Dev/Images/RoomName` and then run `Bin/munge_images.py` and the sprite sheets will be created.
 
 To do this, you need to have [TexturePacker](https://www.codeandweb.com/texturepacker) installed and working and define an enviornment variable `DELORES_GAMEROOT` that points to your `DeloresDev` directory.
 
