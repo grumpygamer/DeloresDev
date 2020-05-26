@@ -18,7 +18,7 @@ Find the `Prefs.json` file that was created.
 
 On Windows:
 ```
-AppData\Roaming\Terrible Toybox\DeloresDev\Prefs.json
+%AppData%\Terrible Toybox\DeloresDev\Prefs.json
 ```
 On Mac:
 ```
