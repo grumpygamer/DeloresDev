@@ -283,7 +283,7 @@ function _showYackChoices() {
 }}*/
 
 function _addYackChoice(index, text, label) {
-	local image = createTextImage(YACK_FONT, "● "+text, ALIGN_LEFT)
+	local image = createTextImage(YACK_FONT, "● "+TR(text), ALIGN_LEFT)
 	imageScale(image, 3.0)
 	imageTextOutline(image, COLOR_BLACK)
 	arrayappend(yack_choices, { "index": index, "image": image })
