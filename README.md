@@ -72,7 +72,7 @@ To do this, you need to have [TexturePacker](https://www.codeandweb.com/texturep
 Animation control files can be found in `DeloresDev/Animation` and are `.json` files. The tool that created these for Thimbleweed Park is long gone.
 
 ## Translations
-The version of Delores that is on stores does not include any translation.  This repo version has all the text stripped and wrapped and placed into `DeloresDev/Translations_en.tsv`.  See the help doc on Translations or look at `DeloresDev/Scripts/Helpers/TranslationHelpers.dinky` for more information.
+The version of Delores avaliable in online stores does not include any translation.  This repo version has all the text stripped and wrapped and placed into `DeloresDev/Translations_en.tsv`.  See the help doc on Translations or look at `DeloresDev/Scripts/Helpers/TranslationHelpers.dinky` for more information.
 
 ## Wimpy
 The tool to add and position objects is called **Wimpy** and it can be download [here](https://thimbleweedpark.com/deloresdev)
