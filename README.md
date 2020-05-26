@@ -32,6 +32,9 @@ If you're on Windows, use `/` as a path separator and not `\`
 
 Run the executable again and the game should start.
 
+## Support
+If you're looking for help or to help others, please visit [the Thimbleweed Park Forums](https://forums.thimbleweedpark.com/c/delores-engine/18).  
+
 ## Debug Console
 The debug console can be closed by clicking on the `X` in the upper right. To make it reappear, press `control-TAB`.
 
