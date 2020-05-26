@@ -1,0 +1,168 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+DEFINE_ROOM("QuickiePalOutside", {
+	music_pool = "town"
+	ambient_sound = SOUNDID(ambient_county)
+
+	// ------------------------------------------------------------------------
+	// General room functions
+
+	script flashQuickiePal() {
+		local soundID
+		objectState(quickiePalOutsideMainSign, "sign0")
+		breaktime(1.0)
+		do {
+			for (local x = 1 .. 8) {
+				objectState(quickiePalOutsideMainSign, "sign"+x)
+				playSoundAt(SOUNDID(neon_light_zap), quickiePalOutsideMainSign)
+				breaktime(1.0)
+			}
+			for (local x = 1 .. 2) {
+				objectState(quickiePalOutsideMainSign, "sign0")
+				breaktime(1.0)
+				objectState(quickiePalOutsideMainSign, "sign8")
+				playSoundAt(SOUNDID(neon_light_zap), quickiePalOutsideMainSign)
+				breaktime(1.0)
+			}
+			objectState(quickiePalOutsideMainSign, "sign0")
+			breaktime(2.0)
+		}
+	}
+
+	function flashOpenSign() {
+		objectState(openSign, "off")
+		startthread(@{
+			do {
+				breaktime(0.3)
+				objectState(openSign, "on")
+				roomLightEnable(3, YES)
+				playSoundAt(SOUNDID(neon_light2), openSignSound)
+				breaktime(1.5)
+				objectState(openSign, "off")
+				roomLightEnable(3, NO)
+			}
+		})
+	}
+
+
+	// ------------------------------------------------------------------------
+	// Enter/Exit code
+
+	enter = function(from_door=null) {
+		startthread(flashQuickiePal)
+		flashOpenSign()
+
+		local star = 0
+		local starOffset = 159
+		for (local i = 1; i <= 22; i += 1) {
+			star = this["star"+i]
+			objectOffset(star,point(starOffset,0))
+			// obj, fadeRange1, fadeRange2, alphaRange1, alphaRange2
+			twinkleStar(star, 0.01, 0.1, random(0,0.3), random(0.6, 1))
+		}
+		for (local i = 1; i <= 6; i += 1) {
+			star = this["starB"+i]
+			objectOffset(star,point(starOffset,0))
+			// obj, fadeRange1, fadeRange2, alphaRange1, alphaRange2
+			twinkleStar(star, 0.05, 0.3, 0, 1)
+		}
+	}
+
+	exit = function() {
+	}
+
+	// ------------------------------------------------------------------------
+	// Objects
+
+	quickiePalOutsideMainSign = {}
+
+	doorTrigger = {}
+	quickiePalDoor = DEFINE_OBJECT({
+		name = TEXT(11305,"Quickie Pal door")
+		photo_name = TEXT(11306,"the Quickie Pal door")
+		door_verbs = YES
+		door_trigger = @doorTrigger
+		verb_use_text = TEXT(11307,"Enter")
+		verb_use_desc = TEXT(11308,"Enter the Quickie Pal")
+		to_door = @QuickiePal.quickiePalDoor
+		door_sound = { open=SOUNDID(slidingDoorOpen), close=SOUNDID(slidingDoorClose) }
+	})
+
+	mainStreetDoor = DEFINE_OBJECT({
+		name = TEXT(11309,"Main Street")
+		no_photo = YES
+
+		VERB(walkto) {
+			exitRoomFromDoor(this, MainStreet.quickiePalDoor)
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	bathroomDoor = DEFINE_OBJECT({
+		name = TEXT(11310,"bathroom door")
+		photo_name = TEXT(11311,"the bathroom door")
+		door_verbs = YES
+		verb_use_text = TEXT(11312,"Enter")
+		verb_use_desc = TEXT(11313,"Enter bathroom")
+		to_door = @Bathroom.bathroomDoor
+	})
+
+	// --------------------------------------------------------------------------------------------
+	vistaDoor = DEFINE_OBJECT({
+		name = TEXT(11314,"vista")
+		no_photo = YES
+
+		VERB(walkto) {
+			exitRoomFromDoor(this, Vista.quickiePalDoor1)
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	quickiePalMovietron = DEFINE_OBJECT({
+		name = TEXT(11315,"MovieTron 3000™")
+		photo_name = TEXT(11316,"the MovieTron 3000™")
+
+		VERB(lookat) {
+			sayLine(SAY(11303,"These things were creepy. I'm glad they were deactivated."), ONCE(SAY(11304,"I heard they actually tracked your movie rentals and shared the information with unknown companies. **SHIVER**")))
+		}
+	})
+
+	star1 = {}
+	star2 = {}
+	star3 = {}
+	star4 = {}
+	star5 = {}
+	star6 = {}
+	star7 = {}
+	star8 = {}
+	star9 = {}
+	star10 = {}
+	star11 = {}
+	star12 = {}
+	star13 = {}
+	star14 = {}
+	star15 = {}
+	star16 = {}
+	star17 = {}
+	star18 = {}
+	star19 = {}
+  star20 = {}
+  star21 = {}
+  star22 = {}
+
+	starB1 = {}
+	starB2 = {}
+	starB3 = {}
+	starB4 = {}
+	starB5 = {}
+	starB6 = {}
+
+	openSign = {}
+
+// NEW_OBJECT_HERE
+})

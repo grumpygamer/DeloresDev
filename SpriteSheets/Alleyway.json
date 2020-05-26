@@ -1,0 +1,52 @@
+{"frames": {
+
+"background":
+{
+	"frame": {"x":3,"y":3,"w":320,"h":180},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":320,"h":180},
+	"sourceSize": {"w":320,"h":180}
+},
+"blue_neon_on":
+{
+	"frame": {"x":3,"y":322,"w":99,"h":4},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":99,"h":4},
+	"sourceSize": {"w":99,"h":4}
+},
+"foreground":
+{
+	"frame": {"x":3,"y":187,"w":320,"h":131},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":49,"w":320,"h":131},
+	"sourceSize": {"w":320,"h":180}
+},
+"thimblecon_poster":
+{
+	"frame": {"x":106,"y":322,"w":41,"h":53},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":41,"h":53},
+	"sourceSize": {"w":41,"h":53}
+},
+"valve":
+{
+	"frame": {"x":3,"y":330,"w":10,"h":10},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":10,"h":10},
+	"sourceSize": {"w":10,"h":10}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "Alleyway.png",
+	"format": "RGBA8888",
+	"size": {"w":326,"h":378},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:edeadd804f97b01e0b5cff1b569adf7f:521164ed3385966358b53c4e66728ced:0ac5523dcd4b937900edfebfadec8dc7$"
+}
+}

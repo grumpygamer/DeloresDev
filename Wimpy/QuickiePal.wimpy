@@ -1,0 +1,690 @@
+ambient_light: "{0.79777,0.980392,0.889081,1}"
+background: "background"
+name: "QuickiePal"
+room_scale: 3
+sheet: "QuickiePal"
+layers: [
+    {
+        name: "foreground_shelves"
+        parallax: 1
+        zsort: -1
+    }
+]
+objects: [
+    {
+        name: "quickiePalGreetingCard1"
+        usedir: "DIR_BACK"
+        zsort: 107
+        hotspot: ((-8,-7),(4,8))
+        pos: (153,159)
+        usepos: (2,-72)
+    }
+    {
+        name: "quickiePalGreetingCard2"
+        usedir: "DIR_BACK"
+        zsort: 107
+        hotspot: ((-8,-10),(5,8))
+        pos: (167,159)
+        usepos: (1,-72)
+    }
+    {
+        name: "quickiePalGreetingCard3"
+        usedir: "DIR_BACK"
+        zsort: 107
+        hotspot: ((-7,-8),(7,9))
+        pos: (150,139)
+        usepos: (2,-55)
+    }
+    {
+        name: "quickiePalGreetingCard4"
+        usedir: "DIR_BACK"
+        zsort: 107
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "greeting_card"
+                ]
+            }
+        ]
+        hotspot: ((-7,-8),(6,8))
+        pos: (165,139)
+        usepos: (1,-53)
+    }
+    {
+        name: "quickiePalGreetingCard5"
+        usedir: "DIR_BACK"
+        zsort: 107
+        hotspot: ((-9,-42),(5,-25))
+        pos: (153,153)
+        usepos: (0,-66)
+    }
+    {
+        name: "quickiePalGreetingCard6"
+        usedir: "DIR_BACK"
+        zsort: 107
+        hotspot: ((-7,-8),(7,10))
+        pos: (165,119)
+        usepos: (3,-34)
+    }
+    {
+        name: "plant"
+        usedir: "DIR_BACK"
+        zsort: 92
+        animations: [
+            {
+                name: "stop_snapping"
+                frames: [
+                    "plant1"
+                ]
+            }
+            {
+                fps: 8
+                loop: 1
+                name: "start_snapping"
+                frames: [
+                    "plant1"
+                    "plant2"
+                    "plant3"
+                    "plant2"
+                ]
+            }
+            {
+                fps: 6
+                name: "state2"
+                frames: [
+                    "plantgrow1"
+                    "plantgrow2"
+                    "plantgrow3"
+                    "plantgrow4"
+                    "plantgrow5"
+                ]
+            }
+            {
+                name: "state5"
+                frames: [
+                    "plantgrow5"
+                ]
+            }
+            {
+                fps: 10
+                name: "state6"
+                frames: [
+                    "big_plant1"
+                    "big_plant2"
+                    "big_plant3"
+                    "big_plant2"
+                    "plantgrow5"
+                ]
+            }
+            {
+                name: "state7"
+                frames: [
+                    "plant_leonard1"
+                ]
+            }
+            {
+                fps: 10
+                name: "state8"
+                frames: [
+                    "plant_leonard1"
+                    "plant_leonard2"
+                    "plant_leonard3"
+                    "plant_leonard2"
+                    "plant_leonard1"
+                ]
+            }
+        ]
+        hotspot: ((-9,-41),(11,-16))
+        pos: (290,171)
+        usepos: (-5,-80)
+    }
+    {
+        name: "quickiePalDoor"
+        usedir: "DIR_RIGHT"
+        usedir2: "DIR_RIGHT"
+        zsort: 103
+        animations: [
+            {
+                fps: 10
+                name: "closed"
+                frames: [
+                    "doors_opening3"
+                    "doors_opening2"
+                    "doors_opening1"
+                    "doors_closed"
+                ]
+            }
+            {
+                fps: 10
+                name: "open"
+                frames: [
+                    "doors_opening1"
+                    "doors_opening2"
+                    "doors_opening3"
+                    "doors_open"
+                ]
+            }
+        ]
+        hotspot: ((-25,-50),(20,51))
+        pos: (402,133)
+        usepos: (-14,-46)
+        usepos2: (-112,-55)
+    }
+    {
+        name: "quickiePalVCR"
+        prop: 1
+        zsort: 103
+        pos: (318,137)
+    }
+    {
+        name: "quickiePalCamera"
+        usedir: "DIR_RIGHT"
+        zsort: 91
+        animations: [
+            {
+                name: "gone"
+                frames: [
+                    "camera"
+                ]
+            }
+        ]
+        hotspot: ((-17,-13),(17,14))
+        pos: (373,198)
+        usepos: (-36,-108)
+    }
+    {
+        name: "mailBox"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 103
+        hotspot: ((-20,-8),(0,18))
+        pos: (204,105)
+        usepos: (-12,-15)
+        usepos2: (-10,-29)
+    }
+    {
+        name: "quickiePalLotto"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 103
+        hotspot: ((-20,-14),(3,20))
+        pos: (216,139)
+        usepos: (-7,-49)
+        usepos2: (-9,-58)
+    }
+    {
+        name: "quickiePalCounterMask"
+        prop: 1
+        zsort: 97
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "counter"
+                ]
+            }
+        ]
+        pos: (259,152)
+    }
+    {
+        name: "quickiePalNoteCards"
+        usedir: "DIR_BACK"
+        zsort: 118
+        hotspot: ((-16,-2),(6,16))
+        pos: (163,170)
+        usepos: (-6,-84)
+    }
+    {
+        name: "leonardSpot"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (243,99)
+    }
+    {
+        name: "leonardSpot1"
+        spot: 1
+        usedir: "DIR_LEFT"
+        pos: (200,99)
+    }
+    {
+        name: "leonardSpot2"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (264,99)
+    }
+    {
+        name: "leonardSpot3"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (308,101)
+    }
+    {
+        name: "leonardSpot4"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (345,100)
+    }
+    {
+        name: "leonardPhotoSpot"
+        spot: 1
+        usedir: "DIR_BACK"
+        pos: (270,69)
+    }
+    {
+        name: "quickiePalLights"
+        prop: 1
+        zsort: 67
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "lights"
+                ]
+            }
+        ]
+        pos: (216,108)
+    }
+    {
+        name: "flickerLight"
+        prop: 1
+        zsort: 63
+        animations: [
+            {
+                name: "on"
+                frames: [
+                    "flicker_light_off"
+                ]
+            }
+            {
+                name: "off"
+                frames: [
+                    "flicker_light_on"
+                ]
+            }
+        ]
+        pos: (214,121)
+    }
+    {
+        name: "quickiePalMaps"
+        usedir: "DIR_BACK"
+        zsort: 118
+        hotspot: ((136,5),(161,33))
+        pos: (213,118)
+        usepos: (155,-24)
+    }
+    {
+        name: "quickiePalMap1"
+        usedir: "DIR_BACK"
+        zsort: 97
+        animations: [
+            {
+                name: "gone"
+                frames: [
+                    "map"
+                ]
+            }
+        ]
+        hotspot: ((-6,-4),(6,3))
+        pos: (361,141)
+        usepos: (5,-49)
+    }
+    {
+        name: "quickiePalMap2"
+        usedir: "DIR_BACK"
+        zsort: 95
+        animations: [
+            {
+                name: "gone"
+                frames: [
+                    "map"
+                ]
+            }
+        ]
+        hotspot: ((-6,-4),(6,3))
+        pos: (364,141)
+        usepos: (5,-49)
+    }
+    {
+        name: "quickiePalMap3"
+        usedir: "DIR_BACK"
+        zsort: 95
+        animations: [
+            {
+                name: "gone"
+                frames: [
+                    "map"
+                ]
+            }
+        ]
+        hotspot: ((-6,-4),(6,3))
+        pos: (363,135)
+        usepos: (4,-45)
+    }
+    {
+        name: "plantTrigger"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 118
+        hotspot: ((52,-39),(102,-21))
+        pos: (213,118)
+        usepos: (0,-30)
+    }
+    {
+        name: "leonardTalkSpot"
+        spot: 1
+        usedir: "DIR_BACK"
+        pos: (223,93)
+    }
+    {
+        layer: -1
+        name: "rat"
+        prop: 1
+        zsort: -10
+        animations: [
+            {
+                fps: 12
+                loop: 1
+                name: "gone"
+                frames: [
+                    "SleepingRat1"
+                    "SleepingRat2"
+                    "SleepingRat3"
+                    "SleepingRat4"
+                    "SleepingRat5"
+                    "SleepingRat6"
+                    "SleepingRat6"
+                    "SleepingRat6"
+                ]
+            }
+        ]
+        pos: (286,31)
+    }
+    {
+        name: "ratSpot1"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (169,7)
+    }
+    {
+        name: "ratSpot2"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (299,25)
+    }
+    {
+        name: "quickiePalStar1"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (409,172)
+    }
+    {
+        name: "quickiePalStar2"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (392,167)
+    }
+    {
+        name: "quickiePalStarB1"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+        pos: (415,166)
+    }
+    {
+        name: "quickiePalTextWelcome"
+        prop: 1
+        zsort: 95
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "Welcome_text_en"
+                ]
+            }
+        ]
+        pos: (214,120)
+    }
+    {
+        name: "quickiPalTextBottleRedeem"
+        usedir: "DIR_BACK"
+        zsort: 135
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "Redeem_text_en"
+                ]
+            }
+        ]
+        hotspot: ((9,25),(56,45))
+        pos: (214,120)
+        usepos: (36,-28)
+    }
+    {
+        name: "quickiePalTextMaps"
+        prop: 1
+        zsort: 96
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "Maps_text_en"
+                ]
+            }
+        ]
+        pos: (214,120)
+    }
+    {
+        name: "quickiePalTextMail"
+        prop: 1
+        zsort: 96
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "Mail_text_en"
+                ]
+            }
+        ]
+        pos: (214,120)
+    }
+    {
+        name: "quickiePalTextLotto"
+        prop: 1
+        zsort: 96
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "Lotto_text_en"
+                ]
+            }
+        ]
+        pos: (214,120)
+    }
+    {
+        name: "quickiePalTextNoteCard"
+        prop: 1
+        zsort: 96
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "Note_Card_text_en"
+                ]
+            }
+        ]
+        pos: (214,120)
+    }
+    {
+        name: "quickiePalFranklinPhoto"
+        prop: 1
+        zsort: -24
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "franklin_photo"
+                ]
+            }
+        ]
+        pos: (22,80)
+    }
+    {
+        name: "doorTrigger"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 120
+        hotspot: ((155,-42),(219,-19))
+        pos: (214,120)
+        usepos: (0,-30)
+    }
+    {
+        name: "jumpSpot"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (218,83)
+    }
+    {
+        name: "tShirt"
+        usedir: "DIR_BACK"
+        zsort: 120
+        hotspot: ((120,20),(139,45))
+        pos: (214,120)
+        usepos: (133,-29)
+    }
+    {
+        name: "pillowBearBoxes"
+        usedir: "DIR_LEFT"
+        usedir2: "DIR_LEFT"
+        zsort: 120
+        hotspot: ((-187,53),(-134,77))
+        pos: (214,120)
+        usepos: (-114,-27)
+        usepos2: (-40,-33)
+    }
+    {
+        name: "ransomeCandyDisplay"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 120
+        hotspot: ((95,5),(135,27))
+        pos: (214,120)
+        usepos: (115,-31)
+        usepos2: (119,-48)
+    }
+    {
+        name: "ransomeCandy"
+        prop: 1
+        zsort: 95
+        animations: [
+            {
+                name: "here"
+                frames: [
+                    "ransome_dispenser"
+                ]
+            }
+            {
+                name: "gone"
+                frames: [
+                ]
+            }
+        ]
+        pos: (317,136)
+    }
+    {
+        layer: -1
+        name: "pillowBearComic"
+        prop: 1
+        zsort: -10
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "pillow_bear_comic"
+                ]
+            }
+        ]
+        pos: (301,21)
+    }
+    {
+        name: "star1"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (409,172)
+    }
+    {
+        name: "star2"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (392,167)
+    }
+    {
+        name: "starB1"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+        pos: (415,166)
+    }
+]
+room_bounds: ((1,1),(428,240))
+room_size: (428,240)
+scaling: [
+    "1.2@68"
+    "1.0@99"
+]
+walkboxes: [
+    {
+        polygon: "(82,94);(134,94);(142,91);(174,91);(183,94);(254,94);(261,92);(358,92);(362,95);(371,95);(415,79);(423,69);(5,69);(27,84);(49,84)"
+    }
+    {
+        polygon: "(193,102);(352,102);(352,97);(193,97)"
+    }
+]

@@ -1,0 +1,147 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+DEFINE_ROOM("Vista", {
+	music_pool = "vista"
+	ambient_sound = SOUNDID(ambient_county)
+
+	// --------------------------------------------------------------------------------------------
+	// General room functions
+
+	// --------------------------------------------------------------------------------------------
+	// Enter/Exit code
+
+	enter = function(from_door=null) {
+	}
+
+	exit = function() {
+	}
+
+	// --------------------------------------------------------------------------------------------
+	// Objects
+
+	// --------------------------------------------------------------------------------------------
+	quickiePalDoor1 = DEFINE_OBJECT({
+		name = TEXT(11696,"town")
+		no_photo = YES
+		default_verb = "verb_walkto"
+
+		VERB(walkto) {
+			exitRoomFromDoor(this, QuickiePalOutside.vistaDoor)
+		}
+		VERB(lookat) {
+			sayLine(SAY(11683,"There's the Quickie Pal down there, flashing away."))
+		}
+
+	})
+
+	// --------------------------------------------------------------------------------------------
+	countyExit = DEFINE_OBJECT({
+		name = TEXT(11697,"country")
+		no_photo = YES
+		default_verb = "verb_walkto"
+
+		VERB(walkto) {
+			sayLine(SAY(11684,"I shouldn't dilly-dally by walking down into the country."), ONCE(SAY(11685,"Natalie is counting on me for those photographs.")))
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	trafficCone = DEFINE_OBJECT({
+		name = TEXT(11698,"traffic cone")
+		for_story = "road_safety"
+		photo_reach = REACH_LOW
+
+		VERB(lookat) {
+			MainStreet.trafficCone1.verb_lookat()
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	circus = DEFINE_OBJECT({
+		name = TEXT(11699,"circus")
+		photo_name = TEXT(11700,"the circus")
+
+
+		VERB(lookat) {
+			sayLine(SAY(11686,"I love the circus!"), ONCE(SAY(11687,"I need to make sure I see Ransome the Clown's show before I go back to MMucasFlem Games.")))
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	circus2 = DEFINE_OBJECT({
+		name = TEXT(11701,"circus")
+		photo_name = TEXT(11702,"the circus")
+
+		VERB(lookat) {
+			circus.verb_lookat()
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	hotelTop = DEFINE_OBJECT({
+		name = TEXT(11703,"hotel")
+		photo_name = TEXT(11704,"the Edmund Hotel")
+		for_story = "hotel"
+
+		VERB(lookat) {
+			hotel.verb_lookat()
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	hotel = DEFINE_OBJECT({
+		name = TEXT(11705,"hotel")
+		photo_name = TEXT(11706,"the Edmund Hotel")
+		for_story = "hotel"
+
+		VERB(lookat) {
+			sayLine(SAY(11688,"It's the old Edmund Hotel."), ONCE(SAY(11689,"That was Uncle Chuck's pride and joy until the bank repossessed it when he was committed to the sanitarium.")))
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	factory = DEFINE_OBJECT({
+		name = TEXT(11707,"factory")
+		photo_name = TEXT(11708,"the factory")
+		bad_story = ["pillow_bears", SAY(11690,"That's where they'll make PillowBears™, but I think an image of a PillowBear™ is a better photo.")]
+
+		VERB(lookat) {
+			sayLine(SAY(11691,"It's nice to see the factory ramping up again to make PillowBears™.", ONCE(SAY(0,"Looks like Dad is working late again."))))
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	mansion = DEFINE_OBJECT({
+		name =@ sploded?TEXT(11709,"radioactive crater"):TEXT(11710,"Edmund Mansion mansion")
+		photo_name =@ sploded?TEXT(11711,"a radioactive crater"):TEXT(11712,"our old Mansion mansion")
+		for_story =@ sploded?"mansion":null
+		bad_story = ["mansion", SAY(11692,"The Mansion mansion is in great shape. I need a photo for home demolition.") ]
+
+		sploded = NO
+
+		VERB(lookat) {
+			if (sploded) {
+				sayLine(SAY(11693,"It's like Thimbleweed's own private Chernobyl."))
+			} else {
+				sayLine(SAY(11694,"My old home before it was repossessed by the bank."))
+			}
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	radioStation = DEFINE_OBJECT({
+		name = TEXT(11713,"radio station")
+		photo_name = TEXT(11714,"the radio station")
+
+		VERB(lookat) {
+			sayLine(SAY(11695,"KSCUM plays all the hits."))
+		}
+	})
+
+// NEW_OBJECT_HERE
+})

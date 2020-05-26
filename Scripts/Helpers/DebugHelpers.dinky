@@ -1,0 +1,204 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+ROOT(debug_active) <- null
+
+local debug_node = 0
+local filter = null
+local item_list = []
+
+function filter_name(name) {
+	if (filter == null || filter == "") return NO
+	if (strfindi(name, filter) == null) return YES
+	return NO
+}
+
+function debug_jump_to_room(room) {
+	debugShowroomJump(NO)
+	room = findRoom(room)
+	if (room) {
+		actorRemapAnimation(selectedActor, { "stand": "", "walk": "", "reach": "" })
+		actorLockFacing(selectedActor, NO)
+		actorAt(selectedActor, room, debugJumpSpot(room))
+		cameraFollow(selectedActor)
+	}
+}
+
+function debug_pickup_object(name) {
+	debugShowroomJump(NO)
+	local obj = Inventory?[name]
+	if (obj) {
+		pickupObject(obj)
+		refreshInventory()
+	}
+}
+
+function debugJumpSpot(room) {
+	if (room?.jumpSpot) return room.jumpSpot
+	return roomSize(room) / 2
+}
+
+function debug_create_line(pos) {
+	local image = createTextImage(DEBUG_FONT, "-----", ALIGN_CENTER)
+	imageAt(image, pos)
+	imageScale(image, 2.0)
+	imageTextOutline(image, COLOR_BLACK)
+	imageParentChild(debug_node, image)
+}
+
+function onKeyDebug(key, flags) {
+	if (key == KEY_ESC) {
+		return closeDebug()
+	}
+	if (key == 'j' && (flags & MOD_COMMAND)) {
+		return closeDebug()
+	}
+	if (key == 'p' && (flags & MOD_COMMAND)) {
+		return closeDebug()
+	}
+
+	if (key == KEY_RETURN) {
+		if (ROOT(debug_active) == "jump") {
+			debug_jump_to_room(arraylast(item_list))
+			return HANDLED
+		}
+		if (ROOT(debug_active) == "pickup") {
+			debug_pickup_object(item_list?[0])
+			return HANDLED
+		}
+	}
+
+	if (key == KEY_DELETE || key == KEY_BACKSPACE) {
+		filter = strslice(filter, 0, -2)
+		if (sizeof(filter) == 0) filter = null
+		if (ROOT(debug_active) == "jump") debugShowroomJump(YES)
+		if (ROOT(debug_active) == "pickup") debugShowPickup(YES)
+		return HANDLED
+	}
+
+	if (key >= 'a' || key <= 'z') {
+		if (sizeof(item_list) == 0) return
+		if (filter == null) filter = ""
+		filter += chr(key)
+		if (ROOT(debug_active) == "jump") debugShowroomJump(YES)
+		if (ROOT(debug_active) == "pickup") debugShowPickup(YES)
+		return HANDLED
+	}
+}
+
+function closeDebug() {
+	ROOT(debug_active) = null
+	popOnKeyDispatch(INPUT_POP)
+	deleteImage(debug_node)
+	filter = null
+	return HANDLED
+}
+
+function debugShowPickup(state=null) {
+	if (state == null) state = !ROOT(debug_active)
+	if (state == NO) {
+		return closeDebug()
+	}
+
+	if (!ROOT(debug_active)) pushOnKeyDispatch(onKeyDebug, INPUT_ON|INPUT_PUSH)
+	ROOT(debug_active) = "pickup"
+
+	local SPACING = point(0,20)
+
+	deleteImage(debug_node)
+	debug_node = createImage()
+	local pos = point(0,0)
+	local count = 0
+
+	debug_create_line(pos)
+	pos += SPACING
+	count++
+
+	item_list = []
+	arrayrsort(getMasterInventoryList())
+	foreach (local name in getMasterInventoryList()) {
+		if (filter_name(name)) continue
+		arrayappend(item_list, name)
+		local image = createTextImage(DEBUG_FONT, name, ALIGN_CENTER)
+		imageAt(image, pos)
+		imageScale(image, 2.0)
+		imageTextOutline(image, COLOR_BLACK)
+		imageParentChild(debug_node, image)
+		createButton({"item": name, "image": image}, image, debug_node, @(user, event, pos, flags) {
+			if (event == BUTTON_EVENT_ENTER) {
+				imageWiggle(user.image, 0.25, 2, 1)
+				imageColor(user.image, COLOR_YELLOW)
+			} else
+			if (event == BUTTON_EVENT_LEAVE) {
+				imageColor(user.image, COLOR_WHITE)
+			} else
+			if (event == BUTTON_EVENT_DOWN) {
+				debug_pickup_object(user.item)
+				return
+			}
+		})
+		pos += SPACING
+		count++
+	}
+
+	debug_create_line(pos)
+	count++
+
+	imageAt(debug_node, point(SCREEN_CENTER_X,SCREEN_CENTER_Y-(count*SPACING.y/2)))
+}
+
+function debugShowroomJump(state=null) {
+	if (state == null) state = !ROOT(debug_active)
+	if (state == NO) {
+		return closeDebug()
+	}
+	if (!ROOT(debug_active)) pushOnKeyDispatch(onKeyDebug, INPUT_ON|INPUT_PUSH)
+	ROOT(debug_active) = "jump"
+
+	local SPACING = point(0,20)
+
+	deleteImage(debug_node)
+	debug_node = createImage()
+	local pos = point(0,0)
+	local count = 0
+
+	debug_create_line(pos)
+	pos += SPACING
+	count++
+
+	item_list = []
+	arrayrsort(ROOT(master_room_list))
+	foreach (local name in ROOT(master_room_list)) {
+		if (filter_name(name)) continue
+		if (findRoom(name)?.no_jump) continue
+		arrayappend(item_list, name)
+		local image = createTextImage(DEBUG_FONT, name, ALIGN_CENTER)
+		imageAt(image, pos)
+		imageScale(image, 2.0)
+		imageTextOutline(image, COLOR_BLACK)
+		imageParentChild(debug_node, image)
+		createButton({"room": name, "image": image}, image, debug_node, @(user, event, pos, flags) {
+			if (event == BUTTON_EVENT_ENTER) {
+				imageWiggle(user.image, 0.25, 2, 1)
+				imageColor(user.image, COLOR_YELLOW)
+			} else
+			if (event == BUTTON_EVENT_LEAVE) {
+				imageColor(user.image, COLOR_WHITE)
+			} else
+			if (event == BUTTON_EVENT_DOWN) {
+				debug_jump_to_room(user.room)
+			}
+		})
+		pos += SPACING
+		count++
+	}
+
+	debug_create_line(pos)
+	count++
+
+	imageAt(debug_node, point(SCREEN_CENTER_X,SCREEN_CENTER_Y-(count*SPACING.y/2)))
+}

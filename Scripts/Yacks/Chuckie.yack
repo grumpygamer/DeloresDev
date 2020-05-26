@@ -1,0 +1,21 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+=== init ===
+-> exit
+
+== start ===
+chuckie: SAY(12000,"Hi Aunt Delores.")
+
+chuckie: SAY(12001,"Lenore says we're going camping.") [currentRoom == AStreet]
+chuckie: SAY(12002,"Lenore says someday we'll have money again.") [currentRoom == Bank]
+
+delores: SAY(12003,"That's nice.")
+-> done
+
+=== done ===
+-> exit

@@ -1,0 +1,293 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+// Bullet: ●
+
+local yack_choices = []
+local yack_choice_node = 0
+local is_yacking = NO
+local yack_choices_showing = NO
+local yack_choice_count = 0
+
+local yack_actor1 = null
+local yack_actor2 = null
+
+local trace_yack = NO
+
+/*{{
+@section yacks
+@func isYacking()
+@desc Returns `true` if a yack conversation is happening.
+}}*/
+
+function isYacking() {
+	return is_yacking
+}
+
+/*{{
+@section yacks
+@func yackActor1()
+@desc Returns the first party in a yack conversation.
+ Within a .yack file it's better to use `player`.
+}}*/
+
+function yackActor1() {
+	return yack_actor1
+}
+
+/*{{
+@section yacks
+@func yackActor2()
+@desc Returns the second party in a yack conversation.
+ Within a .yack file it's better to use `other`.
+}}*/
+
+function yackActor2() {
+	return yack_actor2
+}
+
+/*{{
+@section yacks
+@func defineYack(name)
+@desc Call once from defineYacks.dinky
+ Runs a pre-test on syntax plus runs the === init === code.
+}}*/
+
+function defineYack(name) {
+	startYack(null, null, name+":init")
+}
+
+/*{{
+@section yacks
+@func yackChoices()
+@desc Returns the number of yack choices showing
+ This is the number of choices at the moment it is called.  Most common use for the `yackChoices()`
+ is to see how many choices are showing while building a choice list.  It is not the total choices to be shown, just
+ the number up to that point.
+
+ It is most commonly called from `.yack` scripts to find out if there are no active choices.
+}}*/
+
+function yackChoices() {
+	return yack_choice_count
+}
+
+/*{{
+@section yacks
+@func areChoicesShowing()
+@desc Returns `true` if yack choices are showing and waiting for input.
+}}*/
+
+function areChoicesShowing() {
+	return yack_choices_showing ? YES : NO
+}
+
+/*{{
+@section yacks
+@func onKeyYack(key, flags)
+@desc Called when a key is pressed while yack choices are showing.
+}}*/
+
+function onKeyYack(key, flags) {
+	if (optionsShowing()) return
+	if (key == KEY_SPACE) {
+		if (pauseGame()) {
+			pauseGame(NO)
+		} else {
+			pauseGame(YES)
+		}
+		return
+	}
+	if (pauseGame()) return
+	if (key == '1' || key == KEY_PAD1) yackChoice(0) else
+	if (key == '2' || key == KEY_PAD2) yackChoice(1) else
+	if (key == '3' || key == KEY_PAD3) yackChoice(2) else
+	if (key == '4' || key == KEY_PAD4) yackChoice(3) else
+	if (key == '5' || key == KEY_PAD5) yackChoice(4) else
+	if (key == '6' || key == KEY_PAD6) yackChoice(5) else
+	if (key == '7' || key == KEY_PAD7) yackChoice(6) else
+	if (key == '8' || key == KEY_PAD8) yackChoice(7) else
+	if (key == '9' || key == KEY_PAD9) yackChoice(8) else
+	if (key == 'o') openOptions() else
+	if (key == 'h') openHelp()
+	return HANDLED
+}
+
+/*{{
+@section yacks
+@func _startYack(actor1, actor2)
+@desc Called when a yack conversation is started.
+ `actor1` or `actor2` can be `null` if there is no actor, or only one actor involved in the conversation.
+}}*/
+
+function _startYack(actor1, actor2) {
+	if (trace_yack) print(__FUNC__)
+	closeVerbs()
+	pushOnKeyDispatch(onKeyYack, INPUT_OFF|INPUT_PUSH)
+	hideInventory(PUSH|YES)
+	yack_actor1 = actor1
+	yack_actor2 = actor2
+	roottable()["player"] <- yack_actor1
+	roottable()["other"] <- yack_actor2
+	if (is_function(yack_actor1?.beginYack, 0)) {
+		yack_actor1.beginYack()
+	} else
+	if (is_function(yack_actor1?.beginYack, 1)) {
+		yack_actor1.beginYack(yack_actor2)
+	} else {
+		if (isActorInRoom(yack_actor1) && isActorInRoom(yack_actor2)) {
+			if (!getValue(yack_actor1?.no_yack_face)) actorFace(yack_actor1, yack_actor2)
+		}
+	}
+	if (is_function(yack_actor2?.beginYack, 0)) {
+		yack_actor2.beginYack()
+	} else
+	if (is_function(yack_actor2?.beginYack, 1)) {
+		yack_actor2.beginYack(yack_actor1)
+	} else {
+		if (isActorInRoom(yack_actor1) && isActorInRoom(yack_actor2)) {
+			if (!getValue(yack_actor2?.no_yack_face)) {
+				actorFace(yack_actor2, yack_actor1)
+			}
+			actorEyesLook(yack_actor2, yack_actor1)
+		}
+	}
+	if (is_function(currentRoom?.beginYack, 0)) {
+		currentRoom.beginYack()
+	} else
+	if (is_function(currentRoom?.beginYack, 1)) {
+		currentRoom.beginYack(yack_actor1)
+	} else
+	if (is_function(currentRoom?.beginYack, 2)) {
+		currentRoom.beginYack(yack_actor1, yack_actor2)
+	}
+	is_yacking = YES
+}
+
+/*{{
+@section yacks
+@func _endYack()
+@desc Called when a yack conversation is ending.
+}}*/
+
+function _endYack() {
+	if (trace_yack) print(__FUNC__)
+	if (yack_choice_node) {
+		_endYackChoices()
+	}
+	popOnKeyDispatch(INPUT_POP)
+	is_yacking = NO
+	hideInventory(POP)
+	ROOT(hover_object) = null
+	refreshUI()
+	if (is_function(yack_actor1?.endYack)) {
+		yack_actor1.endYack()
+	}
+	if (is_function(yack_actor2?.endYack)) {
+		yack_actor2.endYack()
+	}
+	if (is_function(currentRoom?.endYack, 0)) {
+		currentRoom.endYack()
+	} else
+	if (is_function(currentRoom?.endYack, 1)) {
+		currentRoom.endYack(yack_actor1)
+	} else
+	if (is_function(currentRoom?.endYack, 2)) {
+		currentRoom.endYack(yack_actor1, yack_actor2)
+	}
+	yack_actor1 = null
+	yack_actor2 = null
+	roottable()["player"] <- null
+	roottable()["other"] <- null
+}
+
+/*{{
+@section yacks
+@func _beginYackChoices()
+@desc Called before choices are displayed.
+}}*/
+
+function _beginYackChoices() {
+	yack_choices = []
+	yack_choice_node = deleteImage(yack_choice_node)
+	yack_choice_count = 0
+	inputState(_INPUT_YACK_CHOICES|INPUT_PUSH)
+}
+
+/*{{
+@section yacks
+@func _endYackChoices()
+@desc Called when yack choices need to be cleaned up.
+}}*/
+
+function _endYackChoices() {
+	if (yack_choice_node) inputState(INPUT_POP)
+	yack_choices = []
+	yack_choice_node = deleteImage(yack_choice_node)
+}
+
+/*{{
+@section yacks
+@func _showYackChoices()
+@desc Called after all the choices have been added and when they are ready to be displayed.
+}}*/
+
+function _showYackChoices() {
+	yack_choice_node = createImage()
+	imageAt(yack_choice_node, point(10, sizeof(yack_choices)*SETTING(yackSpacing).y))
+
+	local pos = point(0,0)
+	foreach(local choice in yack_choices) {
+		local color = selectedActor?.talk_color ? selectedActor.talk_color : COLOR_WHITE
+		imageAt(choice.image, pos)
+		imageParentChild(yack_choice_node, choice.image)
+		imageColor(choice.image, color)
+		pos = point(pos.x, pos.y-SETTING(yackSpacing).y)
+		createButton({ index = choice.index, image = choice.image, color = color }, choice.image, yack_choice_node, @(user, event, pos, flags) {
+			if (event == BUTTON_EVENT_ENTER) {
+				if (SETTING(hover_pop)) {
+					imageWiggle(user.image, 0.25, 2, 1)
+				}
+				imageColor(user.image, COLOR_YELLOW)
+			} else
+			if (event == BUTTON_EVENT_LEAVE) {
+				imageColor(user.image, user.color)
+			} else
+			if (event == BUTTON_EVENT_DOWN) {
+				yackChoice(user.index)
+			}
+		})
+	}
+	if (is_function(yack_actor1?.showYackChoices)) {
+		yack_actor1.showYackChoices()
+	}
+	if (is_function(yack_actor2?.showYackChoices)) {
+		yack_actor2.showYackChoices()
+	}
+	if (is_function(currentRoom?.showYackChoices)) {
+		currentRoom.showYackChoices()
+	}
+}
+
+/*{{
+@section yacks
+@func _addYackChoice(index, text, label)
+@desc Called for each yack choice.
+ `index` is `1`, `2`, `3`, ..., and can is passed back to the engine when selected.\\
+ `text` is the text to be displayed.
+ `label` is the label to jump to if selected (no longer used)
+}}*/
+
+function _addYackChoice(index, text, label) {
+	local image = createTextImage(YACK_FONT, "● "+text, ALIGN_LEFT)
+	imageScale(image, 3.0)
+	imageTextOutline(image, COLOR_BLACK)
+	arrayappend(yack_choices, { "index": index, "image": image })
+	yack_choice_count++
+}
+
+

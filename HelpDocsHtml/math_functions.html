@@ -1,0 +1,25 @@
+<html><head><link rel='stylesheet' href='../HelpDocs/help.css'><link href='https://fonts.googleapis.com/css?family=Roboto:300|Ubuntu:300' rel='stylesheet'></head><body><span class='button'><a href='home.html'>Home</a></span><span class='button'><a href='index.html'>Index</a></span><html><head><link rel='stylesheet' href='help.css'></head><body><h1>Math Functions</h1><div class='section text'></div><div class='function_list'><div id='6' class='function'>distance(p1,p2)<div class='desc'>Returns the distance between two numbers or <span class='inline_code'>points</span></div><div class='function text'><div class='code_block'><span class='keyword'>local</span> d = <span class='keyword'>distance</span>(50,100)
+<span class='keyword'>local</span> d = <span class='keyword'>distance</span>(<span class='keyword'>point</span>(10,10), <span class='keyword'>point</span>(100,75))
+</div></div></div><div id='7' class='function'>ord(string)<div class='desc'>Converts the first character of a <span class='inline_code'>string</span> into an ascii <span class='inline_code'>int</span></div><div class='function text'><div class='code_block'>ch = <span class='keyword'>ord</span>(<span class='string'>"a"</span>)    <span class='comment'>// ch is 97</span>
+</div></div></div><div id='8' class='function'>chr(ch)<div class='desc'>Converts an ascii <span class='inline_code'>int</span> to a <span class='inline_code'>string</span> char.</div><div class='function text'><div class='code_block'>s = <span class='keyword'>chr</span>(97)    <span class='comment'>// s is <span class='string'>"a"</span></span>
+</div></div></div><div id='9' class='function'>sin(angle)<div class='desc'>Returns the <span class='inline_code'>sin</span> of an angle.</div><div class='function text'>The <span class='inline_code'>angle</span> is in degrees. </div></div><div id='10' class='function'>cos(angle)<div class='desc'>Returns the <span class='inline_code'>cos</span> of an angle.</div><div class='function text'>The <span class='inline_code'>angle</span> is in degrees. </div></div><div id='11' class='function'>pow(num1,num2)<div class='desc'>Returns <span class='inline_code'>num1</span> to the power of <span class='inline_code'>num2</span></div><div class='function text'></div></div><div id='12' class='function'>abs(num)<div class='desc'>Returns the absolute value of <span class='inline_code'>num</span></div><div class='function text'><div class='code_block'>n = <span class='keyword'>abs</span>(-9)   <span class='comment'>// n is 9</span>
+</div></div></div><div id='13' class='function'>min(num1, num2)<div class='desc'>Returns the lowest of <span class='inline_code'>num1</span> and <span class='inline_code'>num2</span></div><div class='function text'><div class='code_block'>n = <span class='keyword'>min</span>(90, 100)   <span class='comment'>// n is 90</span>
+</div></div></div><div id='14' class='function'>max(num1, num2)<div class='desc'>Returns the highest of <span class='inline_code'>num1</span> and <span class='inline_code'>num2</span></div><div class='function text'><div class='code_block'>n = <span class='keyword'>min</span>(90, 100)   <span class='comment'>// n is 100</span>
+</div></div></div><div id='15' class='function'>clamp(num,lower,upper)<div class='desc'>Clamps <span class='inline_code'>num</span> between <span class='inline_code'>lower</span> and <span class='inline_code'>upper</span></div><div class='function text'><div class='code_block'>v = 50
+n = <span class='keyword'>clamp</span>(v, 0, 100)   <span class='comment'>// n is 50</span>
+
+v = -10
+n = <span class='keyword'>clamp</span>(v, 0, 100)   <span class='comment'>// n is 0</span>
+
+v = 130
+n = <span class='keyword'>clamp</span>(v, 0, 100)   <span class='comment'>// n is 100</span>
+
+v = -50
+n = <span class='keyword'>clamp</span>(v, 100, 0)   <span class='comment'>// n is 100</span>
+</div></div></div><div id='16' class='function'>lerp(v1,v2,time)<div class='desc'>Returns the linear interpolation between <span class='inline_code'>v1</span> and <span class='inline_code'>v2</span> base on <span class='inline_code'>time</span></div><div class='function text'><span class='inline_code'>time</span> can also be thought if as a percent of the way from <span class='inline_code'>v1</span> to <span class='inline_code'>v2</span> <div class='code_block'>n = <span class='keyword'>lerp</span>(100, 200, 0.5)     <span class='comment'>// n = 150</span>
+n = <span class='keyword'>lerp</span>(100, 200, 0.0)     <span class='comment'>// n = 100</span>
+n = <span class='keyword'>lerp</span>(100, 200, 1.0)     <span class='comment'>// n = 200</span>
+n = <span class='keyword'>lerp</span>(100, 200, 0.25)    <span class='comment'>// n = 125</span>
+n = <span class='keyword'>lerp</span>(100, 200, -0.5)    <span class='comment'>// n = 100</span>
+n = <span class='keyword'>lerp</span>(100, 200, 2.33)    <span class='comment'>// n = 200</span>
+</div></div></div></div><p class='copyright'>Copyright 2020 Terrible Toybox, Inc. All Rights Reserved.</p></body></html>

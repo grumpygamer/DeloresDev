@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{ed02aa2a-8b01-46a3-8297-a5a8a711b653}">
+		<property name="assetPath">
+			<value>LowBoom.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>22.0499992</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>4.6814058956916096</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{14fcd25f-489c-460f-adfb-cfb7d60888b4}</destination>
+		</relationship>
+	</object>
+</objects>

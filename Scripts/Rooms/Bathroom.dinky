@@ -1,0 +1,465 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+DEFINE_ROOM("Bathroom", {
+
+	no_speck_of_dust = YES
+	has_power = NO
+	tried_switch = NO
+	lights_on = NO
+	lights_off = YES	// We should only have "lights_off", but it's too late to make a big change.
+
+	// ------------------------------------------------------------------------
+	// General room functions
+
+	function adjustLights() {
+		roomLayer(Bathroom, -1, NO)
+		roomLayer(Bathroom, -2, NO)
+		roomLayer(Bathroom, -3, NO)
+		mirror.default_verb = "verb_lookat"
+		lights_on = NO
+		ambientLight(Bathroom, 0xFFDAFECB)
+		if (Bathroom.lightswitch?.state == "on") {
+			objectState(doorLightingOverlay, "lights_on")
+			objectState(light, "on")
+			roomLayer(Bathroom, -1, YES)
+			lights_on = YES
+			ambientLight(Bathroom, 0xFFDAFECB)
+			mirror.default_verb = "verb_lookin"
+			if (currentRoom == Bathroom) stopRoomMusic()
+		} else
+		if (bathroomDoor.state == "open") {
+			objectState(doorLightingOverlay, "door_open")
+			roomLayer(Bathroom, -2, YES)
+			ambientLight(Bathroom, 0xFF101010)
+			if (currentRoom == Bathroom) playRoomMusic(SOUNDID(bathroom_music))
+		} else
+		if (bathroomDoor.state == "closed") {
+			objectState(doorLightingOverlay, "door_closed")
+			ambientLight(Bathroom, COLOR_BLACK)
+			if (currentRoom == Bathroom) playRoomMusic(SOUNDID(bathroom_music))
+		}
+		lights_off = !lights_on
+	}
+
+	function areLightsOn() {
+		return Bathroom.lightswitch?.state == "on"
+	}
+
+	// ------------------------------------------------------------------------
+	// Enter/Exit code
+
+	enter = function(from_door=null) {
+		adjustLights()
+		// obj, fadeRange1, fadeRange2, alphaRange1, alphaRange2
+		twinkleStar(star1, 0.01, 0.1, random(0,0.3), random(0.6, 1))
+	}
+
+	exit = function() {
+		stopRoomMusic()
+		toilet.inUse = NO
+	}
+
+	script useToilet() {
+		if (toilet.inUse) {
+			sayLine(SAY(11493,"It's in use."))
+			return
+		}
+		toilet.inUse = YES
+		inputOff(@{
+			actorWalkTo(selectedActor, toiletHandle)
+			breakwhilewalking(selectedActor)
+		})
+		playAnimation(selectedActor, "reach_med")
+		local toilet_sid = playSoundAt(SOUNDID(flush_toilet), toilet)
+		breaktime(0.1)
+		// shakeObject(toilet, 0.25)
+		// jiggleObject(toilet, 0.25)
+		// breaktime(0.2)
+		// soundVolume(QuickiePalBathroom._tronSoundSID, 0.5)
+		playAnimation(selectedActor, "stand")
+		// fadeOutSound(QuickiePalBathroom._tronSoundSID, 4.7)	// Really just want to drop the volume
+		// breaktime(3.7)
+		// stopObjectMotors(toilet)
+		// stopSound(soundTubeHumLoop)
+		breakwhilesound(toilet_sid)
+		toilet.inUse = NO
+	}
+
+	// ------------------------------------------------------------------------
+	// Objects
+
+	// --------------------------------------------------------------------------------------------
+	doorLightingOverlay = {}
+	bathroomDoor = DEFINE_OBJECT({
+		name = TEXT(11524,"bathroom door")
+		photo_name = TEXT(11525,"the bathroom door")
+		door_verbs = YES
+		autoclose = NO
+		verb_use_text = TEXT(11526,"Leave")
+		verb_use_desc = TEXT(11527,"Leave bathroom")
+		to_door = @QuickiePalOutside.bathroomDoor
+		function stateChange() {
+			adjustLights()
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	light = {}
+	lightswitch = DEFINE_OBJECT({
+		name = TEXT(11528,"light switch")
+		default_verb = "verb_flip"
+
+		VERB(flip) {
+			playSound(SOUNDID(light_switch))
+			if (not Bathroom.has_power) {
+				sayLine(SAY(11494,"I don't think the power is on."))
+				tried_switch = YES
+				return
+			}
+			objectState(this, (state == "on") ? "off" : "on")
+		}
+		function stateChange() {
+			adjustLights()
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	toilet = DEFINE_OBJECT({
+		name = @lights_on?TEXT(11529,"toilet"):TEXT(11530,"something")
+		for_story = "disgusting"
+		photo_reach = REACH_LOW
+		inUse = NO
+
+		VERB(lookat) {
+			if (areLightsOn()) {
+				looked_at <- YES
+				sayLine(SAY(11495,"It's a gross toilet!"))
+			} else {
+				sayLine(SAY(11496,"It's too dark to see."))
+			}
+		}
+		VERB_OK(flush) { return lights_on }
+		VERB(flush) {
+			startthread(useToilet)
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	toiletHandle = DEFINE_OBJECT({
+		name = @lights_on?TEXT(11531,"toilet handle"):TEXT(11532,"something")
+		for_story = "disgusting"
+		photo_reach = REACH_LOW
+		default_verb = "verb_flush"
+
+		VERB(lookat) {
+			if (areLightsOn()) {
+				looked_at <- YES
+				sayLine(SAY(11497,"It's a gross toilet handle!"))
+			} else {
+				sayLine(SAY(11498,"It's too dark to see."))
+			}
+		}
+		VERB_OK(flush) { return lights_on }
+		VERB(flush) {
+			startthread(useToilet)
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	sink = DEFINE_OBJECT({
+		name = @lights_on?TEXT(11533,"sink"):TEXT(11534,"something")
+		for_story = "disgusting"
+		isWaterSource = NO
+		isEmptyLiquid = YES
+		default_verb = "verb_turn_on"
+		bad_story = null
+
+
+		// function enter() {
+		// 	sinkFaucet.water_sid <- playSoundAt((sinkFaucet?.state == "on") ? SOUNDID(water_running) : 0, sinkFaucet)
+		// }
+
+		VERB(lookat) {
+			if (areLightsOn()) {
+				looked_at <- YES
+				sayLine(SAY(11499,"It's a gross sink!"))
+			} else {
+				sayLine(SAY(11500,"It's too dark to see."))
+			}
+		}
+		VERB_PRE(turn_on) {
+			if (sinkFaucet.broken) {
+				sayLine(SAY(11501,"This has been broken for as long as I can remember."))
+				return NO
+			}
+			return YES
+		}
+		VERB_OK(turn_on) { return (sinkFaucet.state == "off" && lights_on)}
+		VERB(turn_on) {
+			sinkFaucet.verb_turn_on()
+		}
+		VERB_OK(turn_off) { return (sinkFaucet.state == "on" && lights_on)}
+		VERB(turn_off) {
+			sinkFaucet.verb_turn_off()
+		}
+		VERB_OK(repair) { return (sinkFaucet.broken && lights_on && noun2 == Inventory.screwdriver )}
+		VERB(repair) {
+			sinkFaucet.verb_repair()
+		}
+		VERB_OK(fill) {
+			if (sinkFaucet.state == "on" && lights_on) {
+				return noun2 == Inventory.glass && !Inventory.glass.filled_with
+			}
+		}
+		VERB(fill) {
+			if (noun2 == Inventory.glass) {
+				sinkFaucet.verb_fill(Inventory.glass)
+			}
+		}
+		VERB_OK(empty) {
+			if (lights_on) {
+				return noun2 == Inventory.glass && Inventory.glass.filled_with
+			}
+		}
+		VERB(empty) {
+			if (noun2 == Inventory.glass) {
+				Inventory.glass.filledWith(null)
+				playSoundAt(SOUNDID(water_pour), this)
+				sayLine(SAY(11502,"Down the drain."))
+			}
+		}
+	})
+
+// --------------------------------------------------------------------------------------------
+	sinkFaucet = DEFINE_OBJECT({
+		name = @lights_on?TEXT(11535,"faucet"):TEXT(11536,"something")
+		on_off_verbs = YES
+		for_story = "disgusting"
+		isWaterSource = NO
+		water_sid = NO
+		broken = YES
+		bad_story = null
+
+		VERB(lookat) {
+			if (areLightsOn()) {
+				looked_at <- YES
+				sayLine(SAY(11503,"It's a gross faucet!"))
+			} else {
+				sayLine(SAY(11504,"It's too dark to see."))
+			}
+		}
+		VERB_OK(turn_on) { return (state == "off" && lights_on)}
+		VERB_OK(turn_off) { return (state == "on" && lights_on)}
+
+		function stateChange() {
+			if (state == "on") {
+				stopSound(sinkFaucet.water_sid)
+				sinkFaucet.water_sid = playSoundAt(SOUNDID(water_running), this)
+			} else {
+				stopSound(sinkFaucet.water_sid)
+			}
+			if (areLightsOn()) {
+				if (state == "on") {
+					isWaterSource = YES
+					sink.isWaterSource = YES
+					sink.default_verb = "verb_turn_off"
+					bad_story = [ "bad_water", SAY(11505,"Photo needs to be better than water from a gross faucet.") ]
+					sink.bad_story = [ "bad_water", SAY(11506,"Photo needs to be better than water from a gross sink.") ]
+					photo_name <- "a faucet with running water"
+					sink.photo_name <- "a sink with running water"
+				} else {
+					isWaterSource = NO
+					sink.isWaterSource = NO
+					sink.default_verb = "verb_turn_on"
+					bad_story = null
+					sink.bad_story = null
+					photo_name <- "a faucet"
+					sink.photo_name <- "a sink"
+				}
+			} else {
+				sayLine(SAY(11507,"It's too dark to see."))
+			}
+		}
+
+		VERB_PRE(turn_on) {
+			if (broken) {
+				sayLine(SAY(11508,"This has been broken for as long as I can remember."))
+				return NO
+			}
+			return YES
+		}
+
+		VERB_OK(repair) { return (broken && lights_on && noun2 == Inventory.screwdriver )}
+		VERB(repair) {
+			broken = NO
+			cutscene(@{
+				for (local i = 1..5) {
+					playSound(SOUNDID(drop_coin))
+					actorQuickReach(delores, REACH_MED)
+					breaktime(0.2,0.4)
+				}
+				actorQuickReach(delores, REACH_MED)
+				this.verb_turn_on()
+			})
+		}
+
+		VERB_OK(fill) {
+			if (state == "on" && lights_on) {
+				return noun2 == Inventory.glass && !Inventory.glass.filled_with
+			}
+		}
+		VERB(fill) {
+			if (noun2 == Inventory.glass) {
+				inputOff(@{
+					playAnimation(delores, "reach_med")
+					breaktime(0.25)
+					playSoundAt(SOUNDID(water_fill_glass), this)
+					breaktime(1.5)
+					Inventory.glass.filledWith("water")
+					refreshInventory()
+					playAnimation(delores, "stand")
+					sayLine(SAY(11509,"That should do it."))
+				})
+			}
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	toiletPaper = DEFINE_OBJECT({
+		name = @lights_on?TEXT(11537,"toilet paper"):TEXT(11538,"something")
+		photo_name = TEXT(11539,"toilet paper")
+		reach = REACH_NONE
+		photo_reach = REACH_LOW
+		for_story = @state == "default" ? null : "cats"
+		first_time_flipped = YES
+
+		function stateChange() { objectState(mirror, (state == "over") ? "smile" : "default") }
+
+		VERB(lookat) {
+			if (areLightsOn()) {
+				looked_at <- YES
+				if (state == "under") {
+					sayLine(SAY(11510,"It's a roll of toilet paper in the “boring for cats” position."))
+				} else
+				if (state == "over") {
+					sayLine(SAY(11511,"It's a roll of toilet paper in the “fun for cats” position."))
+				} else {
+					sayLine(SAY(11512,"It's a roll of toilet paper."))
+				}
+			} else {
+				sayLine(SAY(11513,"It's too dark to see."))
+			}
+		}
+		VERB_OK(flip) { return lights_on }
+		VERB(flip) {
+			inputOff(@{
+				playAnimation(delores, "toilet_paper1")
+				breakwhileanimating(delores)
+				playSoundAt(SOUNDID(flip_toilet_paper), toiletPaper)
+				objectState(this, (state == "over") ? "under" : "over")
+				playAnimation(delores, "toilet_paper3")
+				breakwhileanimating(delores)
+				if (first_time_flipped) {
+					first_time_flipped = NO
+					this.verb_lookat()
+				}
+			})
+		}
+		VERB_OK(spin) { return lights_on }
+		VERB(spin) {
+			inputOff(@{
+				playAnimation(delores, "toilet_paper1")
+				breakwhileanimating(delores)
+				playSoundAt(SOUNDID(spin_toilet_paper), toiletPaper)
+				if (state == "over") {
+					playAnimation(this,"over_spin")
+				} else {
+					playAnimation(this,"under_spin")
+				}
+				playAnimation(delores, "toilet_paper3")
+				breakwhileanimating(delores)
+				breakwhileanimating(this)
+			})
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	screwdriver = DEFINE_OBJECT({
+		name =@ lights_on?TEXT(11540,"screwdriver"):TEXT(11541,"something")
+		reach = REACH_LOW
+		photo_reach = REACH_LOW
+
+		VERB(lookat) {
+			if (areLightsOn()) {
+				sayLine(SAY(11514,"It's a screwdriver!"))
+			} else {
+				sayLine(SAY(11515,"It's too dark to see."))
+			}
+		}
+		VERB_OK(pickup) { return (lights_on)}
+		VERB(pickup) {
+			if (areLightsOn()) {
+				pickupObject(Inventory.screwdriver)
+				objectState(this, "gone")
+			} else {
+				sayLine(SAY(11516,"It's too dark to see."))
+			}
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	mirror = DEFINE_OBJECT({
+		name = @lights_on?TEXT(11542,"mirror"):TEXT(11543,"something")
+		for_story = "selfie"
+		photo_name = TEXT(11544,"me")
+
+		VERB_OK(lookat) { return (!lights_on)}
+		VERB(lookat) {
+			sayLine(SAY(11517,"It's too dark to see."))
+		}
+		VERB_OK(lookin) { return (lights_on)}
+		VERB(lookin) {
+			sayLine(SAY(11518,"I can see myself through the grime."))
+		}
+
+		function startTakingPhoto(photo) {
+			sayLine(SAY(11519,"Smile!"))
+		}
+
+		// VERB_OK(takephoto) { return lights_on && noun2 == Inventory.camera }
+		// VERB(takephoto) {
+		// 	inputOff(@{
+		// 		actorWalkTo(delores, this)
+		// 		breakwhilewalking(delores)
+		// 		sayLine(SAY(11520,"Smile!"))
+		// 		breakwhiletalking()
+		// 		noun2.takePhoto(this)
+		// 	})
+		// }
+	})
+
+	// --------------------------------------------------------------------------------------------
+	trashCan = DEFINE_OBJECT({
+		name =@ lights_on?TEXT(11545,"trash can"):TEXT(11546,"something")
+		reach = REACH_MED
+		for_story = "trash"
+		photo_reach = REACH_LOW
+		is_trash =@ lights_on?YES:NO
+		bad_story = [ "disgusting", SAY(11521,"I don't think this is disgusting enough for Natalie.") ]
+
+		VERB(lookat) {
+			if (areLightsOn()) {
+				sayLine(SAY(11522,"No way am I going to look in there, I can smell it from here!"))
+			} else {
+				sayLine(SAY(11523,"It's too dark to see."))
+			}
+		}
+	})
+star1 = {}
+// NEW_OBJECT_HERE
+})

@@ -1,0 +1,21 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+=== init ===
+-> exit
+
+== start ===
+
+delores: SAY(12032,"Hi there, Dave.")
+dave: SAY(12033,"Hi Delores. Welcome back!") [Alleyway.valve.position == "normal"]
+dave: SAY(12034,"Can't talk. Busy!") [Alleyway.valve.position != "normal"]
+
+=== main ===
+
+=== done ===
+-> exit
+

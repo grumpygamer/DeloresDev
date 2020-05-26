@@ -1,0 +1,10 @@
+background: "background"
+name: "Note"
+room_scale: 2
+sheet: "Note"
+objects: [
+]
+room_bounds: ((1,1),(640,360))
+room_size: (640,360)
+walkboxes: [
+]

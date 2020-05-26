@@ -1,0 +1,157 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+// ----------------------------------------------------------------------------
+// System + UI
+// ----------------------------------------------------------------------------
+
+SOUNDID(hoverObject)		= defineSound("event:/ui/hover_object")
+SOUNDID(openVerbMenu)		= defineSound("event:/ui/open_verb_menu")
+SOUNDID(openInventory)		= defineSound("event:/ui/open_inventory")
+SOUNDID(closeInventory)		= defineSound("event:/ui/close_inventory")
+
+// ----------------------------------------------------------------------------
+// Game
+// ----------------------------------------------------------------------------
+
+// Generic pickup
+SOUNDID(pickup)					= defineSound("event:/objects/misc/pickup")
+
+// Default sounds for doors
+SOUNDID(doorOpen) 				= defineSound("event:/objects/doors/door_open")
+SOUNDID(doorClose) 				= defineSound("event:/objects/doors/door_close")
+
+SOUNDID(slidingDoorOpen) 		= defineSound("event:/objects/doors/sliding_door_open")
+SOUNDID(slidingDoorClose) 		= defineSound("event:/objects/doors/sliding_door_close")
+
+SOUNDID(drawerOpen) 			= defineSound("event:/objects/doors/drawer_open")
+SOUNDID(drawerClose) 			= defineSound("event:/objects/doors/drawer_close")
+
+SOUNDID(door_jiggle) 			= defineSound("event:/objects/doors/door_handle_jiggle")
+
+SOUNDID(open_jail_door) 		= defineSound("event:/objects/doors/open_jail_door")
+SOUNDID(close_jail_door) 		= defineSound("event:/objects/doors/close_jail_door")
+SOUNDID(unlock_jail) 			= defineSound("event:/objects/misc/unlock_jail")
+SOUNDID(jiggle_jail) 			= defineSound("event:/objects/misc/jiggle_jail")
+
+// Footsteps
+SOUNDID(footstep_normal) 		= defineSound("event:/foot_steps/normal")
+SOUNDID(footstep_grass) 		= defineSound("event:/foot_steps/grass")
+SOUNDID(footstep_water) 		= defineSound("event:/foot_steps/water")
+SOUNDID(footstep_ransome) 	= defineSound("event:/foot_steps/ransome")
+SOUNDID(dance_swish)        = defineSound("event:/foot_steps/dance_swish")
+SOUNDID(dance_cabbage_step1)  = defineSound("event:/foot_steps/dance_cabbage_step1")
+SOUNDID(dance_cabbage_step2)  = defineSound("event:/foot_steps/dance_cabbage_step2")
+SOUNDID(dance_cabbage_arms)   = defineSound("event:/foot_steps/dance_cabbage_arms")
+SOUNDID(dance_egyptian)       = defineSound("event:/foot_steps/dance_egyptian")
+
+// PostalWorker sorting
+SOUNDID(mail_package) 			= defineSound("event:/misc/mail_package")
+
+// Ambients
+SOUNDID(sizzleLoop) 			= defineSound("event:/objects/ambients/sizzle_loop")
+SOUNDID(sizzleFlareUp) 			= defineSound("event:/objects/ambients/sizzle_flare_up")
+SOUNDID(hotdog_machine) 		= defineSound("event:/objects/ambients/hotdog_machine")
+SOUNDID(flicker_fluorescent)	= defineSound("event:/objects/ambients/flicker_fluorescent")
+SOUNDID(neon_light_zap) 		= defineSound("event:/objects/ambients/neon_light_zap")
+SOUNDID(neon_light2)        = defineSound("event:/objects/ambients/neon_light2")
+SOUNDID(creepy_ambient) 		= defineSound("event:/objects/ambients/creepy_ambient")
+SOUNDID(creepy_wind_loop)   = defineSound("event:/objects/ambients/wind_loop")
+SOUNDID(flicker_fluorescent_quick) = defineSound("event:/objects/ambients/flicker_fluorescent_quick")
+SOUNDID(floppy_short) 			= defineSound("event:/misc/floppy_short")
+SOUNDID(floppy_long) 			= defineSound("event:/misc/floppy_long")
+SOUNDID(keyboard_typing_short)	= defineSound("event:/misc/keyboard_typing_short")
+SOUNDID(low_boom)				= defineSound("event:/misc/low_boom")
+SOUNDID(drone) 					= defineSound("event:/ambients/drone")
+
+SOUNDID(ambient_town) 			= defineSound("event:/ambients/town")
+SOUNDID(ambient_cityhall) 		= defineSound("event:/ambients/cityhall")
+SOUNDID(ambient_inside) 		= defineSound("event:/ambients/inside")
+SOUNDID(ambient_coroner) 		= defineSound("event:/ambients/coroner")
+SOUNDID(ambient_county) 		= defineSound("event:/ambients/county")
+
+// Misc objects
+SOUNDID(mailboxOpen) 			= defineSound("event:/objects/misc/mailbox_open")
+SOUNDID(pryOpen) 				= defineSound("event:/objects/misc/pry_open")
+SOUNDID(trashFire) 				= defineSound("event:/objects/misc/trash_fire")
+
+SOUNDID(drop_coin) 				= defineSound("event:/objects/misc/drop_coin")
+SOUNDID(repair_faucet)			= defineSound("event:/objects/misc/repair_faucet")
+
+SOUNDID(water_running) 			= defineSound("event:/objects/misc/water_running")
+SOUNDID(water_dripping) 		= defineSound("event:/objects/misc/water_dripping")
+SOUNDID(take_photo) 			= defineSound("event:/objects/misc/take_photo")
+SOUNDID(load_film) 				= defineSound("event:/objects/misc/load_film")
+SOUNDID(liquid_spill) 			= defineSound("event:/objects/misc/liquid_spill")
+
+SOUNDID(typing) 				  = defineSound("event:/misc/typing")
+SOUNDID(typing_return) 			= defineSound("event:/misc/typing_return")
+SOUNDID(typing_roll) 			= defineSound("event:/misc/typing_roll")
+
+SOUNDID(plant_snapping) 		= defineSound("event:/objects/misc/plant_snapping")
+SOUNDID(light_switch) 			= defineSound("event:/objects/misc/light_switch")
+SOUNDID(spin_toilet_paper)  = defineSound("event:/objects/misc/spin_toilet_paper")
+SOUNDID(flip_toilet_paper)  = defineSound("event:/objects/misc/flip_toilet_paper")
+SOUNDID(flush_toilet)       = defineSound("event:/objects/misc/flush_toilet")
+
+SOUNDID(break_mailbox)			= defineSound("event:/objects/misc/break_mailbox")
+SOUNDID(flip_photo)         = defineSound("event:/objects/misc/flip_photo")
+SOUNDID(discard_photos) 		= defineSound("event:/misc/discard_photos")
+SOUNDID(button_click) 			= defineSound("event:/objects/misc/button_click")
+SOUNDID(rusty_metal_scrape)	= defineSound("event:/objects/misc/rusty_metal_scrape")
+SOUNDID(toss_trash)         = defineSound("event:/objects/misc/toss_trash")
+SOUNDID(kick_can)           = defineSound("event:/objects/misc/kick_can")
+SOUNDID(candy_crunch)       = defineSound("event:/objects/misc/candy_crunch")
+SOUNDID(water_pour)         = defineSound("event:/objects/misc/water_pour")
+SOUNDID(water_fill_glass)   = defineSound("event:/objects/misc/water_fill_glass")
+
+// Misc sounds
+SOUNDID(small_splat) 			= defineSound("event:/objects/misc/small_splat")
+SOUNDID(mailbox_drop)			= defineSound("event:/objects/misc/mailbox_drop")
+SOUNDID(quiet_glitch) 			= defineSound("event:/misc/quiet_glitch")
+SOUNDID(glitch) 				= defineSound("event:/misc/glitch")
+SOUNDID(electric_shock) 		= defineSound("event:/misc/electric_shock")
+SOUNDID(big_distant_explosion) 	= defineSound("event:/misc/big_distant_explosion")
+SOUNDID(coin_flip) 				= defineSound("event:/misc/coin_flip")
+
+// Vocalizations
+SOUNDID(drinking)				= defineSound("event:/vocalizations/drinking")
+SOUNDID(groan)					= defineSound("event:/vocalizations/groan")
+SOUNDID(vomit)					= defineSound("event:/vocalizations/vomit")
+
+// Music
+SOUNDID(pause_music) 			= defineSound("event:/music/pause_music")
+SOUNDID(startscreen_music) 		= defineSound("event:/music/startscreen")
+SOUNDID(town_music) 			= defineSound("event:/music/town")
+SOUNDID(vista_music) 			= defineSound("event:/music/vista")
+SOUNDID(cityhall_music) 		= defineSound("event:/music/cityhall")
+SOUNDID(quickiepal_music) 		= defineSound("event:/music/quickie_pal")
+SOUNDID(bathroom_music) 		= defineSound("event:/music/bathroom")
+SOUNDID(title_stabs) 			= defineSound("event:/music/title_stab")
+SOUNDID(learn_clue) 			= defineSound("event:/music/learn_clue")
+SOUNDID(kscum_music) 			= defineSound("event:/misc/kscum")		// <--- not real music
+SOUNDID(credits_music) 			= defineSound("event:/music/credits")
+
+// Opening
+SOUNDID(title_stab) 			= defineSound("event:/misc/title_stab")
+SOUNDID(title_hum) 				= defineSound("event:/misc/title_hum")
+
+// Jibber
+SOUNDID(jibber_delores) 		= defineSound("event:/vocalizations/jibber/delores")
+SOUNDID(jibber_willie) 			= defineSound("event:/vocalizations/jibber/willie")
+SOUNDID(jibber_natalie) 		= defineSound("event:/vocalizations/jibber/natalie")
+SOUNDID(jibber_ransome) 		= defineSound("event:/vocalizations/jibber/ransome")
+SOUNDID(jibber_leonard) 		= defineSound("event:/vocalizations/jibber/leonard")
+SOUNDID(jibber_sheriff) 		= defineSound("event:/vocalizations/jibber/sheriff")
+SOUNDID(jibber_coroner) 		= defineSound("event:/vocalizations/jibber/coroner")
+SOUNDID(jibber_dave) 			= defineSound("event:/vocalizations/jibber/dave")
+SOUNDID(jibber_sandy) 			= defineSound("event:/vocalizations/jibber/sandy")
+SOUNDID(jibber_morena) 			= defineSound("event:/vocalizations/jibber/morena")
+SOUNDID(jibber_postalworker) 	= defineSound("event:/vocalizations/jibber/postalworker")
+SOUNDID(jibber_lenore) 			= defineSound("event:/vocalizations/jibber/lenore")
+SOUNDID(jibber_peter) 			= defineSound("event:/vocalizations/jibber/peter")
+SOUNDID(jibber_chuckie) 		= defineSound("event:/vocalizations/jibber/chuckie")

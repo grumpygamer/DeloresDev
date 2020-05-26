@@ -1,0 +1,48 @@
+background: "background"
+name: "StartScreen"
+room_scale: 1
+sheet: "StartScreen"
+objects: [
+    {
+        name: "refcard"
+        prop: 1
+        zsort: 360
+        animations: [
+            {
+                name: "default"
+                frames: [
+                ]
+            }
+            {
+                name: "show"
+                frames: [
+                    "refcard"
+                ]
+            }
+        ]
+        pos: (640,360)
+    }
+    {
+        name: "clickToContinue"
+        prop: 1
+        zsort: 360
+        animations: [
+            {
+                name: "default"
+                frames: [
+                ]
+            }
+            {
+                name: "show"
+                frames: [
+                    "click_to_continue"
+                ]
+            }
+        ]
+        pos: (640,360)
+    }
+]
+room_bounds: ((0,0),(1280,720))
+room_size: (1280,720)
+walkboxes: [
+]

@@ -1,0 +1,182 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+=== init ===
+{ 	YACK(received_stamps) <- NO
+  	YACK(nope_count) <- 0 }
+-> exit
+
+=== start_assignment ===
+
+{ cameraFollow(delores)
+  cameraZoomFromTo(20.0, 1.0, 1.5) }
+
+pause 1.50
+if [Note.totalCompletedCount() == 0]
+	delores: SAY(12186,"I'm excited about my new job!")
+	delores: SAY(12187,"Natalie has hired me to be the Nickel News photographer.")
+	delores: SAY(12188,"I can't wait to get started!")
+else
+	delores: SAY(12189,"Another exciting assignment as the Nickel News photographer!")
+	delores: SAY(12190,"I wonder what Natalie has for me now?")
+endif
+pause 0.50
+{ actorWalkTo(delores, AStreet.nickelDoor) }
+waitfor delores
+{ AStreet.nickelDoor.verb_open() }
+pause 0.50
+{ AStreet.nickelDoor.verb_use() }
+pause 0.75
+{ cutsceneCanOverride(NO)
+  actorWalkTo(delores, Nickel.natalieTalkSpot) }
+waitfor delores
+
+natalie: SAY(12191,"My, aren't we the eager beaver this morning.")
+1 SAY(12192,"I'm excited to get started!") -> excited
+2 SAY(12193,"It will be a nice creative break from making games.") -> games
+3 SAY(12194,"It's not really the morning, it's just after 5pm.") -> games
+
+=== games ===
+natalie: SAY(12195,"Interesting.")
+
+=== excited ===
+natalie: SAY(12196,"I'm working on several stories for upcoming editions of the Thimbleweed Nickel, and we need photographs.")
+natalie: SAY(12197,"I've made a list for you, and the camera is in the file cabinet by the door.")
+natalie: SAY(12198,"Let me know if you need anything. More film, office supplies, info on your 401k.")
+
+if [Note.totalCompletedCount() == 0]
+	natalie: SAY(12199,"Good luck on your first day as a photojournalist.")
+	delores: SAY(12200,"Photojournalist! That makes it sound important!")
+else
+	{ _ <- format(TR(SAY(12201,"^You need to turn in %d more photos before returning to your game developer job at MMucasFlem.")), Note.totalLeftToTurnin()) }
+	natalie: $_
+	waitfor natalie
+endif
+
+{ actorTurnTo(delores, DIR_FRONT) }
+
+delores: SAY(12202,"I better find that camera, take a look at the list, and get cracking.")
+-> done
+
+// ------------------------------------------------------------------------------------------------
+=== returning ===
+
+{ YACK(natalie_seen_work) <- NO }
+
+delores: SAY(12203,"Still working on those photos.") [once] [!Note.isDone() && inInventory(Inventory.camera)]
+
+== main ==
+1 SAY(12204,"Where did you say the camera was again?") -> where_is_camera [!inInventory(Inventory.camera)]
+1 SAY(12205,"I think I'm done with the assignment.") -> assignment_done [Note.isDone()]
+1 SAY(12206,"Can I get some more film?") -> film [!Note.isDone() && inInventory(Inventory.camera)]
+2 SAY(12207,"Want to see my work so far?") -> see_work [temponce] [!Note.isDone() && !YACK(natalie_seen_work) && inInventory(Inventory.camera)]
+3 SAY(12208,"How long will this assignment last?") -> last [temponce] [!Note.isDone()]
+4 SAY(12209,"Can I get some office supplies?") -> supplies
+5 SAY(12210,"What can you tell me about my 401k?") -> 401k [once]
+6 SAY(12211,"Never mind... bye.") -> done [!Note.isDone()]
+
+=== where_is_camera ===
+natalie: SAY(12212,"Look in the filing cabinet by the door.")
+-> exit
+
+=== last ===
+{ _ <- format((Note.totalLeftToTurnin() == 1 ? SAY(12213,"You need to turn in 1 more original photo.") : TR(SAY(12214,"^You need to turn in %d more original photos."))), Note.totalLeftToTurnin()) }
+natalie: $_
+delores: SAY(12215,"Then it's back to making games at MMucasFlem for me.") [once]
+-> main
+
+=== film ===
+if [Inventory.camera.shots_left >= 3]
+	natalie: SAY(12216,"Looks like you've got plenty.")
+	-> main
+endif
+natalie: SAY(12217,"Here is a couple more.")
+{	actorQuickReach(delores, REACH_MED)
+	playSound(SOUNDID(load_film))
+  	Inventory.camera.shots_left += 3 }
+if [!YACK(natalie_seen_work)]
+	{ 	YACK(natalie_seen_work) = YES
+		breakwhilerunning(startthread(Nickel.checkPhotos)) }
+	-> exit
+endif
+-> done
+
+=== see_work ===
+waitfor delores
+{	YACK(natalie_seen_work) = YES
+	breakwhilerunning(startthread(Nickel.checkPhotos)) }
+-> main
+
+=== supplies ===
+1 SAY(12218,"I need some paper clips!") -> no_supplies
+2 SAY(12219,"I need some manila folders.") -> no_supplies
+3 SAY(12220,"I need some stamps.") -> stamps [not YACK(received_stamps)]
+4 SAY(12221,"I need some no. 2 pencils.") -> no_supplies
+5 SAY(12222,"I need some whiteout.") -> no_supplies
+6 SAY(12223,"Sorry, I actually don't need anything right now.") -> main
+
+=== stamps ===
+-> no_supplies [not inInventory("letter")]
+delores: SAY(12224,"I have a letter that needs mailing. Might be important to my assignment.")
+natalie: SAY(12225,"Okay.")
+{ 	actorQuickReach(delores, REACH_MED)
+	pickupObject("stamps")
+  	YACK(received_stamps) = YES }
+-> done
+
+=== 401k ===
+natalie: SAY(12226,"Best path to retirement as a journalist is to get another job.")
+delores: SAY(12227,"Kind of like game development.")
+-> main
+
+=== no_supplies ===
+natalie: SAY(12228,"No you don't.")
+-> main
+
+=== assignment_done ===
+waitfor delores
+natalie: SAY(12229,"These look great!")
+##waitfor natalie
+
+{ Note.saveGame() }
+
+-> end_game [Note.totalLeftToTurnin() == 0]
+
+natalie: SAY(12230,"The prototype is now over.")
+
+=== assignment_main ===
+1 SAY(12231,"Do I get a raise?") -> nope
+2 SAY(12232,"Do I get a promotion?") -> nope
+3 SAY(12233,"Do I get to keep wandering around?") -> nope
+4 SAY(12234,"Can I quit the game?") -> ok_quit [YACK(nope_count) > 1 || Note.totalCompletedCount() > 5]
+
+=== nope ===
+natalie: SAY(12235,"Nope.")
+{ ++YACK(nope_count) }
+-> assignment_main
+
+=== ok_quit ===
+natalie: SAY(12236,"Ok.")
+natalie: SAY(12237,"Play again and I'll have more photos for you to take.")
+waitfor natalie
+{ quitGame() }
+
+=== end_game ===
+natalie: SAY(12238,"I think you're done here, Delores.")
+waitfor natalie
+pause 1.0
+natalie: SAY(12239,"By the way...")
+natalie: SAY(12240,"Do you know anything about the body they found under the bridge?")
+waitfor natalie
+
+{ startEnding() }
+-> exit
+
+// ------------------------------------------------------------------------------------------------
+=== done ===
+natalie: SAY(12241,"We've got a deadline, so no dilly-dallying.")
+-> exit

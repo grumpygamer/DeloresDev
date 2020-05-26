@@ -1,0 +1,376 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+// When adding a new verb, it must be added to the following three lists, and
+// the forth if it is a use-with verb.
+
+// The order in this list will be the order in the pop-up list.
+ROOT(master_verb_list) <- [
+	"verb_default"
+	"verb_use"
+	"verb_walkto"
+	"verb_lookat"
+	"verb_lookin"
+	"verb_lookatfar"
+	"verb_examine"
+	"verb_check"
+	"verb_dropin"
+	"verb_leave"
+	"verb_enter"
+	"verb_read"
+	"verb_unlock"
+	"verb_kick"
+	"verb_open"
+	"verb_pryopen"
+	"verb_close"
+	"verb_fill"
+	"verb_empty"
+	"verb_takephoto"
+	"verb_pickup"
+	"verb_take"
+	"verb_talkto"
+	"verb_giveto"
+	"verb_instant"
+	"verb_flip"
+	"verb_puton"
+	"verb_burnin"
+	"verb_dial"
+	"verb_push"
+	"verb_pull"
+	"verb_pull_down"
+	"verb_push_right"
+	"verb_push_left"
+	"verb_turn_on"
+	"verb_turn_off"
+	"verb_climb"
+	"verb_spin"
+	"verb_turn"
+	"verb_flush"
+	"verb_unlock_with"
+	"verb_vandalize_with"
+	"verb_smell"
+	"verb_activate"
+	"verb_jab_with"
+	"verb_dissolve"
+	"verb_loosen"
+	"verb_tighten"
+	"verb_show"
+	"verb_takefrom"
+	"verb_scrape"
+	"verb_toss"
+	"verb_drink"
+	"verb_lick"
+	"verb_repair"
+	"verb_eat"
+	"verb_dance"
+]
+
+// The order in this list is unimportant.
+ROOT(master_verb_names) <- {
+	"verb_default": TEXT(11812,"NEVER SEEN"),
+	"verb_walkto": TEXT(11813,"Walk to")
+	"verb_lookat": TEXT(11814,"Look at")
+	"verb_use": TEXT(11815,"Use")
+	"verb_lookin": TEXT(11816,"Look in")
+	"verb_check": TEXT(11817,"Check")
+	"verb_lookatfar": TEXT(11818,"Look at")
+	"verb_examine": TEXT(11819,"Examine")
+	"verb_leave": TEXT(11820,"Leave")
+	"verb_enter": TEXT(11821,"Enter")
+	"verb_read": TEXT(11822,"Read")
+	"verb_talkto": TEXT(11823,"Talk to")
+	"verb_unlock": TEXT(11824,"Unlock")
+	"verb_kick": TEXT(11825,"Kick")
+	"verb_open": TEXT(11826,"Open")
+	"verb_close": TEXT(11827,"Close")
+	"verb_pryopen": TEXT(11828,"Pry open")
+	"verb_pickup": TEXT(11829,"Pick up")
+	"verb_take": TEXT(11830,"Take")
+	"verb_flip": TEXT(11831,"Flip")
+	"verb_dial": TEXT(11832,"Dial")
+	"verb_push": TEXT(11833,"Push")
+	"verb_pull": TEXT(11834,"Pull")
+	"verb_pull_down": TEXT(11835,"Pull down")
+	"verb_push_right": TEXT(11836,"Push right")
+	"verb_push_left": TEXT(11837,"Push left")
+	"verb_turn_on": TEXT(11838,"Turn on")
+	"verb_turn_off": TEXT(11839,"Turn off")
+	"verb_climb": TEXT(11840,"Climb")
+	"verb_spin": TEXT(11841,"Spin")
+	"verb_turn": TEXT(11842,"Turn")
+	"verb_flush": TEXT(11843,"Flush")
+	"verb_smell": TEXT(11844,"Smell")
+	"verb_activate": TEXT(11845,"Activate")
+	"verb_drink": TEXT(11846,"Drink")
+	"verb_lick": TEXT(11847,"Lick")
+	"verb_eat": TEXT(11848,"Eat")
+	"verb_dance": TEXT(11849,"Dance")
+
+
+	"verb_instant": TEXT(11850,"")
+
+	"verb_takefrom": TEXT(11851,"Give to $NOUN1$")
+	"verb_giveto": TEXT(11852,"Give to $NOUN2$")
+	"verb_burnin": TEXT(11853,"Burn $NOUN1$ in $NOUN2$")
+	"verb_dropin": TEXT(11854,"Drop in $NOUN2$")
+	"verb_fill": TEXT(11855,"Fill $NOUN2$")
+	"verb_empty": TEXT(11856,"Empty $NOUN2$ in $NOUN1$")
+	"verb_takephoto": TEXT(11857,"Take photo of $NOUN2$")
+	"verb_puton": TEXT(11858,"Put $NOUN1$ on $NOUN2$")
+	"verb_unlock_with": TEXT(11859,"Unlock $NOUN1$ with $NOUN2$")
+	"verb_vandalize_with": TEXT(11860,"Vandalize $NOUN1$ with $NOUN2$")
+	"verb_jab_with": TEXT(11861,"Jab $NOUN2$ with $NOUN1$")
+	"verb_dissolve": TEXT(11862,"Dissolve poster glue with $NOUN2$")
+	"verb_loosen": TEXT(11863,"Loosen $NOUN1$ with $NOUN2$")
+	"verb_tighten": TEXT(11864,"Tighten $NOUN1$ with $NOUN2$")
+	"verb_show": TEXT(11865,"Show $NOUN1$ the $NOUN2$")
+	"verb_scrape": TEXT(11866,"Scrape $NOUN1$ with $NOUN2$")
+	"verb_toss": TEXT(11867,"Toss $NOUN1$ in $NOUN2$")
+	"verb_repair": TEXT(11868,"Repair $NOUN1$ with $NOUN2$")
+}
+
+// This list exists for speed reasons
+ROOT(okverb_list) <- {}
+ROOT(preverb_list) <- {}
+
+// Verbs that have a use-with. List is also the priority they are checked.
+ROOT(verb_usewith_list) <- [
+	"verb_giveto"
+	"verb_dropin"
+	"verb_takephoto"
+	"verb_fill"
+	"verb_empty"
+	"verb_puton"
+	"verb_burnin"
+	"verb_unlock_with"
+	"verb_vandalize_with"
+	"verb_jab_with"
+	"verb_dissolve"
+	"verb_loosen"
+	"verb_tighten"
+	"verb_show"
+	"verb_takefrom"
+	"verb_scrape"
+	"verb_toss"
+	"verb_repair"
+]
+
+// Verbs where the actor doesn't walk up to the object
+ROOT(verb_no_walkto) <- [
+	"verb_lookatfar"
+	"verb_takephoto"
+	"verb_instant"
+	"verb_dance"
+]
+
+// Verbs where the actor doesn't do a reach.
+ROOT(verb_no_reach) <- [
+	"verb_lookatfar"
+	"verb_takephoto"
+	"verb_instant"
+	"verb_walkto"
+	"verb_lookat"
+	"verb_lookin"
+	"verb_examine"
+	"verb_dial"		// Animation will take over
+	"verb_talkto"
+	"verb_climb"
+	"verb_smell"
+	"verb_read"
+	"verb_kick"
+	"verb_dance"
+	"verb_fill"
+]
+
+// Verbs where you don't have to be close to the object
+ROOT(verb_not_close) <- [
+	"verb_lookat"
+]
+
+// Validation on boot
+foreach (local verb_id in ROOT(master_verb_list)) {
+	ROOT(okverb_list)[verb_id] <- "ok"+verb_id
+	ROOT(preverb_list)[verb_id] <- "pre"+verb_id
+
+	if (verb_id !in ROOT(master_verb_names)) {
+		warning("Verb ", verb_id, " not in VerbHelpers::master_verb_names")
+	}
+
+	foreach (local verb_id in ROOT(verb_usewith_list)) {
+		if (verb_id !in ROOT(master_verb_list)) {
+			warning("Verb ", verb_id, " not in VerbHelpers::master_verb_names")
+		}
+	}
+}
+
+/*{{ ------------------------------------------------------------------------------------
+@section gamesystem_comands
+@func registerVerbs(object)
+@desc Call if you add or remove verbs outside of room.preEnter()
+ When verbs are added or removed, the object's known verbs needs to be rebuilt to reflect that. This is automatically done after
+ the room.preEnter() is called, but not at other times. If you need to add or remove verbs when entering a room, it's best
+ to do it in room.preEnter.
+}}*/
+
+function registerVerbs(object) {
+	local known_verbs
+	foreach (local key, value in object) {
+		if (strstartswith(key, "verb_") && !strendswith(key, "_text") && !strendswith(key, "_desc")) {
+			if (key !in ROOT(master_verb_list)) {
+				warning("Verb ",key," not in VerbHelpers::master_verb_list")
+			}
+			if (key in known_verbs) {
+				warning("Verb "+key+" already defined in "+object._key)
+			}
+			if (known_verbs == null) known_verbs = []
+			arrayappend(known_verbs, key)
+		}
+	}
+	if (known_verbs == null) {
+		object._known_verbs <- delete
+		return
+	}
+	object._known_verbs <- known_verbs
+	if ("default_verb" !in object) {
+		if ("verb_lookat" in object._known_verbs) {
+			object.default_verb <- "verb_lookat"
+		} else
+		if ("verb_examine" in object._known_verbs) {
+			object.default_verb <- "verb_examine"
+		} else
+		if ("verb_read" in object._known_verbs) {
+			object.default_verb <- "verb_read"
+		} else
+		if ("verb_lookatfar" in object._known_verbs) {
+			object.default_verb <- "verb_lookatfar"
+		} else
+		if ("verb_instant" in object._known_verbs) {
+			object.default_verb <- "verb_instant"
+		} else
+		if ("verb_walkto" in object._known_verbs) {
+			object.default_verb <- "verb_walkto"
+		} else {
+			if (sizeof(object._known_verbs)) {
+				warning("Object "+object._key+" has no default_verb, verb_instant, verb_walkto, verb_lookat, verb_examine, or verb_read.")
+			}
+		}
+	}
+	if (is_string(object?.default_verb)) {
+		if (object.default_verb !in object._known_verbs) {
+			warning("Default verb for "+object._key+" must be a defined verb.")
+		}
+	}
+}
+
+function _checkVerbValid(object, verb) {
+	if (verb in ROOT(verb_usewith_list)) {
+		return NO
+	}
+	local verb_ok = ROOT(okverb_list)[verb]
+	if (object?[verb_ok] == null) return YES
+	if (is_function(object?[verb_ok])) {
+		return object?[verb_ok]()
+	}
+	return NO
+}
+
+function _replaceObjectItem(str, noun1, noun2) {
+	str = TR(str)
+	if (noun1?.name) str = strreplace(str, "$NOUN1$", TR(getValue(noun1.name)))
+	if (noun2?.name) str = strreplace(str, "$NOUN2$", TR(getValue(noun2.name)))
+	return str
+}
+
+ROOT(verb_popup_node) = 0
+
+function isVerbMenuShowing() {
+	return ROOT(verb_popup_node) ? YES : NO
+}
+
+function closeVerbs() {
+	ROOT(verb_popup_node) = deleteImage(ROOT(verb_popup_node))
+	_inventoryTouchable(YES)
+	refreshUI()
+}
+
+function openVerbsFor(object, screen_pos) {
+	if (!is_array(object?._known_verbs)) return NO;
+
+	ROOT(hover_text_image) = deleteImage(ROOT(hover_text_image))
+	ROOT(verb_popup_node) = deleteImage(ROOT(verb_popup_node))
+	if (!object?._is_inventory && objectTouchable(object) == NO) { 	// Object became untouchable.
+		closeVerbs()
+		ROOT(hover_object) = null
+		return
+	}
+	ROOT(verb_popup_node) = createImage()
+
+	local start_pos = point(0,0)
+	local verb_spacing = point(0,SETTING(verbmenu_spacing))
+
+	// Need to create it first for ordering
+	local backing = createImage(UI_SHEET, "verb_backing")
+	imageParentChild(ROOT(verb_popup_node), backing)
+
+	local verb_count = 0
+	foreach (local verb_id in ROOT(master_verb_list)) {
+		if (verb_id in object._known_verbs && _checkVerbValid(object, verb_id)) {
+			local name = ROOT(master_verb_names)[verb_id]
+			if (verb_id+"_text" in object) {
+				name = object[verb_id+"_text"]
+			}
+
+			local verb_image = createTextImage(HOVER_FONT, TR(name), ALIGN_CENTER)
+			imageTextOutline(verb_image, COLOR_BLACK)
+			imageAt(verb_image, start_pos)
+			imageScale(verb_image, SETTING(verbmenu_scale))
+			imageParentChild(ROOT(verb_popup_node), verb_image)
+
+			createButton({verb=verb_id, image=verb_image object=object}, verb_image, ROOT(verb_popup_node), @(user, event, pos, flags) {
+				if (event == BUTTON_EVENT_ENTER) {
+					imageWiggle(user.image, 0.25, 2, 1)
+					imageColor(user.image, COLOR_YELLOW)
+				} else
+				if (event == BUTTON_EVENT_LEAVE) {
+					imageColor(user.image, COLOR_WHITE)
+				} else
+				if (event == BUTTON_EVENT_UP) {
+					execSentence(null, user.verb, user.object)
+					closeVerbs()
+				}
+			})
+
+			verb_count += 1
+			start_pos -= verb_spacing
+		}
+	}
+	imageAt(backing, point(0,-((verb_count-1)*verb_spacing.y)/2))
+	imageScale(backing, imageSize(ROOT(verb_popup_node))/2*1.1)
+	imageColor(backing, COLOR_BLACK)
+	imageAlpha(backing, 0.75)
+
+	local menu_size = imageSize(ROOT(verb_popup_node))
+	local menu_pos = screen_pos-SETTING(verbmenu_offset)
+	if (menu_pos.x+menu_size.x/2 > SCREEN_RIGHT-SETTING(verb_menu_margin)) {
+		menu_pos = point(SCREEN_RIGHT-menu_size.x/2-SETTING(verb_menu_margin), menu_pos.y)
+	}
+	if (menu_pos.x-menu_size.x/2 < SCREEN_LEFT+SETTING(verb_menu_margin)) {
+		menu_pos = point(SCREEN_LEFT+menu_size.x/2+SETTING(verb_menu_margin), menu_pos.y)
+	}
+	if (menu_pos.y+menu_size.y/2 > SCREEN_TOP-SETTING(verb_menu_margin)) {
+		menu_pos = point(menu_pos.x, SCREEN_TOP-menu_size.y/2-SETTING(verb_menu_margin))
+	}
+	if (menu_pos.y-menu_size.y/2 < SCREEN_BOTTOM+SETTING(verb_menu_margin)) {
+		menu_pos = point(menu_pos.x, SCREEN_BOTTOM+menu_size.y/2+SETTING(verb_menu_margin))
+	}
+	imageAt(ROOT(verb_popup_node), menu_pos)
+
+	imageScaleFromTo(ROOT(verb_popup_node), 0.1, 0.0, 1.0)
+	if (SETTING(hover_beep)) playSound(SOUNDID(openVerbMenu))
+
+	return YES
+}

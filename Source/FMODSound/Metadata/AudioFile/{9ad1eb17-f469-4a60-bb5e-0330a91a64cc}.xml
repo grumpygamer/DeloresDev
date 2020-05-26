@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{9ad1eb17-f469-4a60-bb5e-0330a91a64cc}">
+		<property name="assetPath">
+			<value>TitleCardStab4.ogg</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>9.1602721088435377</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{14fcd25f-489c-460f-adfb-cfb7d60888b4}</destination>
+		</relationship>
+	</object>
+</objects>

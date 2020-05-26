@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{078000cb-bd90-49b7-98af-eb2c2b94fbd1}">
+        <property name="assetPath">
+            <value>GGWarning.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>11.0249996</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>0.19709750566893425</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{14fcd25f-489c-460f-adfb-cfb7d60888b4}</destination>
+        </relationship>
+    </object>
+</objects>

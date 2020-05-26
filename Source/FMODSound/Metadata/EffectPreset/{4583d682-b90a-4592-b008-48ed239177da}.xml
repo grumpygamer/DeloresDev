@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="EffectPreset" id="{4583d682-b90a-4592-b008-48ed239177da}">
+		<property name="name">
+			<value>Close Room</value>
+		</property>
+		<relationship name="folder">
+			<destination>{098e666e-cbea-468e-8e92-d9e09f84f1e4}</destination>
+		</relationship>
+		<relationship name="effect">
+			<destination>{ccc09898-808a-4dec-8672-e54b2ebea408}</destination>
+		</relationship>
+	</object>
+	<object class="SpatialiserEffect" id="{ccc09898-808a-4dec-8672-e54b2ebea408}">
+		<property name="minimumDistance">
+			<value>50</value>
+		</property>
+		<property name="maximumDistance">
+			<value>100</value>
+		</property>
+	</object>
+</objects>

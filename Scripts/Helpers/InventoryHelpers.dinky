@@ -1,0 +1,158 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+// Only access this via the two functions below.
+GLOBAL(inventory) <- {}
+
+local master_inventory_list = []
+
+base_inventory <- {
+	function get_icon() {
+		return is_function(icon) ? icon() : icon
+	}
+	function _tostring() {
+		if ("_key" in this) {
+			return ("_id" in this) ? this._key+"("+this._id+")" : this._key
+		} else {
+			return "(?inventory?)"
+		}
+	}
+}
+
+function _defineInventory(name, table) {
+	table._key <- name
+	table._is_inventory <- YES
+	if ("icon" !in table) {
+		error("Inventory ",name," has no 'icon' defined")
+	}
+	setdelegate(this, base_inventory)
+	if (name in master_inventory_list) {
+		error("Inventory ",name," already defined.")
+	}
+	arrayappend(master_inventory_list, name)
+	return table
+}
+
+function getMasterInventoryList() {
+	return master_inventory_list
+}
+
+/*{{
+@section gamesystem_comands
+@func inInventory(object, actor=null)
+@desc Returns `true` if the object is in the `actors` inventory.
+}}*/
+
+function inInventory(object, actor=null) {
+	if (actor == null) actor = selectedActor
+	if (is_string(object)) object = Inventory?[object]
+	return (object in GLOBAL(inventory)?[actor._key]) ? YES : NO
+}
+
+/*{{
+@section gamesystem_comands
+@func getInventory(actor=null)
+@desc Returns the inventory array for an `actor`, or `null` if they don't have one.
+}}*/
+
+function getInventory(actor) {
+	if (actor?._key == null) return null
+	if (GLOBAL(inventory)?[actor._key] == null) {
+		GLOBAL(inventory)[actor._key] <- []
+	}
+	return GLOBAL(inventory)[actor._key]
+}
+
+function setInventory(actor, inventory) {
+	if (actor?._key == null) return null
+	GLOBAL(inventory)[actor._key] <- inventory
+}
+
+// Use pickupObject() to pickup objects from game code.
+function _addInventory(object, actor) {
+	local inventory = getInventory(actor)
+	if (inventory == null) {
+		error("Picking up inventory with bad actor")
+	}
+	if (inventory == null) return NO
+	arrayappend(inventory, object)
+	return YES
+}
+
+/*{{
+@section gamesystem_comands
+@func bounceInventory(object)
+@desc Bounces an object in the inventory
+}}*/
+
+function bounceInventory(object) {
+	if (!object) return
+	object.bounce_until <- gametime()+5
+	imageWiggle(object?.ui_image, 0.3, 3, 5)
+}
+
+/*{{
+@section gamesystem_comands
+@func removeInventory(object, actor=null)
+@desc Removes an object from the actors inventory and refreshes the UI
+The the actor is omitted or null, it uses the selectedActor
+}}*/
+
+function removeInventory(object, actor=null) {
+	if (actor == null) actor = selectedActor
+	local inventory = getInventory(actor)
+	if (inventory == null) return NO
+	arrayfindremove(inventory, object)
+	refreshInventory(actor)
+	return YES
+}
+
+/*{{ ------------------------------------------------------------------------------------------------------------------------------
+@section gamesystem_comands
+@func pickupObject(object, actor=null)
+@desc Picks up an inventory object.
+ The inventory object is not the object in the room, it is a object in the Inventory.dinky file.
+ The caller is responsible for changing the state of the object in the room.
+ If actor is `null`, the selectedActor is used.
+}}*/
+
+function pickupObject(object, actor=null, silent=NO) {
+	if (is_number(actor)) {
+		silent = actor
+		actor = null
+	}
+	if (actor == null) actor = selectedActor
+	if (actor == null || object == null) return
+	if (is_string(object)) {
+		object = Inventory?[object]
+		if (not object) {
+			warning("Object ",name," is not inventory.")
+			return
+		}
+	}
+	if (!object?._is_inventory) {
+		warning("Object ",object._key," is not inventory.")
+		return
+	}
+	_addInventory(object, actor)
+	if (!silent) {
+		if (object?.pickup_sound == null) {
+			playSound(SOUNDID(pickup))
+		} else {
+			playSound(getValue(object?.pickup_sound))
+		}
+		if (!isInventoryShowing()) {
+			slideInventory(object)
+		}
+		refreshInventory()
+	} else {
+//		if (!isInventoryShowing()) {
+			refreshInventory()
+//		}
+	}
+}
+

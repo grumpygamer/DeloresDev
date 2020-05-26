@@ -1,0 +1,53 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+DEFINE_ROOM("Newspaper", {
+	closeup = YES
+	newspaper_image = null
+
+	// --------------------------------------------------------------------------------------------
+	// General room functions
+
+	function genericNewspaper(text) {
+		enterRoom(Newspaper)
+		if (strfind(text, "$") == null) {
+//			text = strreplace(text, "$chucknumber$", ""+g.chucks_favorite_number)
+		}
+		local margin = Newspaper.marginRight.x-Newspaper.marginLeft.x
+		newspaper_image = createTextImage(NEWSPAPER_FONT, TR(text), ALIGN_TOP|ALIGN_CENTER|(margin/1.5))
+		local spot = objectPosition(Newspaper.textSpot) * 2
+		imageAt(newspaper_image, spot)
+		imageScale(newspaper_image, 3.0)
+		imageColor(newspaper_image, COLOR_BLACK)
+	}
+
+	// --------------------------------------------------------------------------------------------
+	// Enter/Exit code
+
+	function keyDown(key, flags) {
+		if (IS_BACK_BUTTON(key)) {
+			cameraFollow(selectedActor)
+		}
+		return HANDLED
+	}
+
+	enter = function() {
+		createExitButton(@{
+			cameraFollow(selectedActor)
+		})
+	}
+
+	exit = function() {
+		deleteImage(newspaper_image)
+		deleteExitButton()
+	}
+
+	// --------------------------------------------------------------------------------------------
+	// Objects
+
+// NEW_OBJECT_HERE
+})

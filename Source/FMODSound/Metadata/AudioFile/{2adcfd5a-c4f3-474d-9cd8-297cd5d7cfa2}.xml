@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{2adcfd5a-c4f3-474d-9cd8-297cd5d7cfa2}">
+		<property name="assetPath">
+			<value>WrenchDrop1.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>0.55299319727891161</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{14fcd25f-489c-460f-adfb-cfb7d60888b4}</destination>
+		</relationship>
+	</object>
+</objects>

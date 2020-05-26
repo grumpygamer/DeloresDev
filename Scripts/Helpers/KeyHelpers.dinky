@@ -1,0 +1,28 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+_onkey_dispatch_stack <- []
+_onkey_dispatch <- null
+
+function pushOnKeyDispatch(new_dispatch, input_state=null) {
+	arrayappend(_onkey_dispatch_stack, _onkey_dispatch)
+	_onkey_dispatch = new_dispatch
+	if (input_state != null) {
+		inputState(INPUT_PUSH|input_state)
+	}
+}
+
+function popOnKeyDispatch(input_state=null) {
+	_onkey_dispatch =  sizeof(_onkey_dispatch_stack) ? arrayremovelast(_onkey_dispatch_stack) : null
+	if (input_state == INPUT_POP) {
+		inputState(INPUT_POP)
+	}
+}
+
+function keyDispatch() {
+	return _onkey_dispatch
+}

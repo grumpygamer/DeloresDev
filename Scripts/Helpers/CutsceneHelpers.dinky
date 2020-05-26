@@ -1,0 +1,67 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+local _can_override_cutscenes = YES
+
+/*{{
+@section cutscenes
+@func _startCutscene()
+@desc Called right before the cut-scene code is called.
+ This function is responsible for changing the input state and pausing any global threads.
+
+ It is very important that the input stack matches when the cut-scene ends.  You can turn the cursor/input on and off
+ during a cut-scene, but if you do a `INPUT_PUSH` be sure you do a matching `INPUT_POP` before the end.
+
+ Starting a Yack conversation in a `cutscene` is OK, but it needs to end before the `cutscene` ends.  If a `cutscene` is started in
+ a Yack conversation, the Yack converation will abruptly end.  If an override is triggered during a Yack conversation in
+ a `cutscene` the Yack will be abruptly end.
+}}*/
+
+function _startCutscene() {
+	inputState(INPUT_OFF|INPUT_PUSH)
+	refreshUI(1)
+	_cancleAllHovers()
+	showGearIcon(NO)
+	threadpauseglobal(YES)
+}
+
+/*{{
+@section cutscenes
+@func _endCuscene()
+@desc Called after the cutscene code has been stopped.
+ This function is responsible for changing the input state and unpausing any global threads and returning the camera and resetting any UI.
+
+ If override code is defined, this is called after the override code has finished.
+}}*/
+
+function _endCutscene() {
+	inputState(INPUT_POP)
+	cameraFollow(selectedActor)
+	refreshUI(0)
+	threadpauseglobal(NO)
+	showGearIcon(YES)
+	_can_override_cutscenes = YES
+}
+
+/*{{
+@section cutscenes
+@func _overrideCuscene(state)
+@desc Called after the cutscene is overriden.
+ `state` is `true` if there is override code and `false` if there is not.\\
+ The callback `_endCutscene()` will happen once the override is done.
+}}*/
+
+function _overrideCutscene(state) {
+	if (isYacking()) {
+		endYack()
+	}
+	_can_override_cutscenes = NO
+}
+
+function cutsceneCanOverride(state=null) {
+	if (state == null) return _can_override_cutscenes
+	_can_override_cutscenes = state ? YES : NO
+}

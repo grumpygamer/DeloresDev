@@ -1,0 +1,305 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+local inventory_image = 0
+local inventory_expanded = NO
+local inventory_images = null
+local inventory_hidden = NO
+local slide_tid = 0
+local inventory_dirty = NO
+
+local INVENTORY_OFFSET = point(0,50)
+//local INVENTORY_SPACING = point(0,22*3.0)
+
+function _inventoryTouchable(state) {
+	imageTouchable(inventory_image, state)
+}
+
+function isInventoryShowing() {
+	return inventory_expanded && !inventory_hidden
+}
+
+local _inventory_hidden_stack = []
+function hideInventory(state) {
+	if (state & PUSH) {
+		arrayappend(_inventory_hidden_stack, inventory_hidden)
+		state = YES
+	} else
+	if (state & POP) {
+		state = sizeof(_inventory_hidden_stack) ? arrayremovelast(_inventory_hidden_stack) : NO
+	}
+	inventory_hidden = state
+	imageHide(inventory_image, state)
+}
+
+function collapesInventory(instant=NO) {
+	if (not instant) playSound(SOUNDID(closeInventory))
+	foreach (local item in getInventory(selectedActor)) {
+		item.ui_image <- delete
+	}
+	if (instant) {
+		deleteImage(inventory_image)
+		inventory_expanded = NO
+	} else {
+		foreach (local image in inventory_images) {
+			imageTouchable(image, NO)
+			imageMoveFromTo(image, EASE_OUT, 0.25, imageAt(image), point(0,0))
+			imageAlphaFromTo(image, EASE_OUT, 0.25, 1.0, 0.0)
+		}
+		startthread(@{
+			breaktime(0.25)
+			deleteImage(inventory_image)
+			inventory_expanded = NO
+			inventory_images = null
+		})
+	}
+	cancelDrag()
+	closeVerbs()
+}
+
+ROOT(last_drag_obj) = null
+ROOT(drag_image) = null
+
+local drag_verb = null
+local drag_noun1 = null
+local drag_noun2 = null
+
+function createInventoryImage(item) {
+	if (item?._key == null) {
+		warning("Inventory item had no _key.")
+		return null
+	}
+	if (item.get_icon() == null) {
+		warning("Inventory "+item?._key+" had no icon.")
+		return null
+	}
+	local image = createImage("Inventory:"+item.get_icon())
+	if (!image) return null
+	imageScale(image, 3.0)
+	return image
+}
+
+function refreshInventory(actor=null) {
+	if (actor && actor != selectedActor) return
+	if (inventory_expanded) expandInventory(INSTANT)
+}
+
+function expandInventory(instant=NO) {
+	cancelDrag()
+	closeVerbs()
+	local inventory = getInventory(selectedActor)
+	if (sizeof(inventory) == 0) {
+		inventory_expanded = 2
+		inventory_dirty = NO
+		return
+	}
+
+	if (slide_tid) _stopSlideInventory()
+
+	if (not instant) playSound(SOUNDID(openInventory))
+
+	deleteImage(inventory_image)
+	inventory_image = createImage()
+	if (inventory_hidden) imageHide(inventory_image, YES)
+
+	local pos = point(-SETTING(inventory_spacing).x,0)
+	local width
+
+	inventory_images = []
+
+	foreach (local item in inventory) {
+		local image = createInventoryImage(item)
+		if (!image) continue
+		imageParentChild(inventory_image, image)
+
+		width = imageSize(image).x
+		if (width < 16) width = 16
+
+		// Shift over 1/2 our width
+		pos = point(pos.x-(width/2), pos.y)
+
+		if (instant) {
+			imageAt(image, pos)
+		} else {
+			imageMoveFromTo(image, EASE_OUT, 0.25, point(0,0), pos)
+			imageAlphaFromTo(image, EASE_OUT, 0.25, 0.0, 1.0)
+		}
+
+		arrayappend(inventory_images, image)
+		item.ui_image <- image
+
+		// Next inventory start pos
+		pos = point(pos.x-(width/2)-SETTING(inventory_spacing).x, pos.y)
+		if (pos.x < -(SCREEN_WIDTH-(width+SETTING(inventory_spacing).x))) {
+			pos = point(-SETTING(inventory_spacing).x, pos.y+SETTING(inventory_spacing).y)
+		}
+
+		createButton({item=item, image=image}, image, inventory_image, @(user, event, screen_pos, flags) {
+			if (event == BUTTON_EVENT_ENTER) {
+				imageWiggle(user.image, 0.25, 2, 1)
+				local name = _create_hover_name(user.item)
+				createHoverText(name, screen_pos)
+				ROOT(last_drag_obj) = null
+			} else
+			if (event == BUTTON_EVENT_LOITER) {
+				positionHoverText(screen_pos)
+			} else
+			if (event == BUTTON_EVENT_LEAVE) {
+				createHoverText(null)
+			} else
+			if (event == BUTTON_EVENT_UP) {
+				if (flags & BUTTON_MOUSE_RIGHT) {
+					openVerbsFor(user.item, screen_pos)
+					_inventoryTouchable(NO)
+				} else
+				if (is_string(user.item?.default_verb)) {
+					createHoverText(null)
+					ROOT(last_drag_obj) = null
+					execSentence(null, user.item.default_verb, user.item)
+				}
+			} else
+			if (event == BUTTON_EVENT_DRAG) {
+				dragInventory(user.item, screen_pos)
+			} else
+			if (event == BUTTON_EVENT_DROP) {
+				createHoverText(null)
+				ROOT(drag_image) = deleteImage(ROOT(drag_image))
+				if (drag_verb && drag_noun2) {
+					execSentence(null, drag_verb, drag_noun1, drag_noun2)
+				}
+			}
+		})
+		if (item?.bounce_until && gametime() <= item.bounce_until) {
+			imageWiggle(image, 0.3, 3, 5)
+		} else {
+			item.bounce_until <- delete
+		}
+	}
+
+	imageAt(inventory_image, point(SCREEN_WIDTH-INVENTORY_OFFSET.x, INVENTORY_OFFSET.y))
+	inventory_dirty = NO
+
+	if (instant) {
+		inventory_expanded = 2
+	} else {
+		inventory_expanded = 1
+		quickDelay(0.25, inventory_expanded = 2)
+	}
+}
+
+function cancelDrag() {
+	createHoverText(null)
+	ROOT(last_drag_obj) = null
+	drag_verb = null
+	drag_noun1 = null
+	drag_noun2 = null
+	ROOT(drag_image) = deleteImage(ROOT(drag_image))
+	refreshUI(1)
+}
+
+function dragInventory(item, screen_pos) {
+	ROOT(verb_popup_node) = deleteImage(ROOT(verb_popup_node))
+	if (!ROOT(drag_image)) {
+		ROOT(drag_image) = createImage("Inventory:"+item.get_icon())
+		if (!ROOT(drag_image)) return
+		imageScale(ROOT(drag_image), 3.0)
+	}
+	imageAt(ROOT(drag_image), screen_pos)
+	local name
+	local obj
+	local button = findButtonAt(screen_pos)
+	if (button && button.item != item) {
+		obj = button.item
+	} else {
+		obj = findActorObjectAt(screenToRoom(screen_pos))
+	}
+	if (obj) {
+		if (ROOT(last_drag_obj) == obj) {
+			positionHoverText(screen_pos)
+			if (ROOT(hover_text_image)) return
+		} else {
+			createHoverText(null)
+		}
+		foreach (local verb in ROOT(verb_usewith_list)) {
+			local okverb = ROOT(okverb_list)[verb]
+			// Check the object (noun2)
+			if (obj?[verb]) {
+				if (obj?[okverb] && obj[okverb](item)) {
+					local verb_name = ROOT(master_verb_names)[verb]
+					name = _replaceObjectItem(verb_name, obj, item)
+					drag_verb = verb
+					break
+				}
+			}
+			// Check the item (noun1)
+			if (item?[verb]) {
+				if (item?[okverb] && item[okverb](obj)) {
+					local verb_name = ROOT(master_verb_names)[verb]
+					name = _replaceObjectItem(verb_name, item, obj)
+					drag_verb = verb
+					break
+				}
+			}
+		}
+		if (name) {
+			createHoverText(name, screen_pos)
+			ROOT(last_drag_obj) = obj
+			if (is_function(obj?[drag_verb])) {
+				drag_noun1 = obj
+				drag_noun2 = item
+			} else
+			if (is_function(item?[drag_verb])) {
+				drag_noun1 = item
+				drag_noun2 = obj
+			}
+			if (SETTING(hover_beep)) playSound(SOUNDID(hoverObject))
+		}
+	} else {
+		if (ROOT(last_drag_obj)) {
+			createHoverText(null)
+			ROOT(last_drag_obj) = null
+			drag_verb = null
+			drag_noun1 = null
+			drag_noun2 = null
+		}
+	}
+}
+
+local slide_image = 0
+
+function _stopSlideInventory() {
+	slide_tid = stopthread(slide_tid)
+	slide_image = deleteImage(slide_image)
+}
+
+/*{{
+@section gamesystem_comands
+@func slideInventory(object)
+@desc slides an inventory item on and off screen is the inventory is not showing.
+}}*/
+
+function slideInventory(item) {
+	if (isInventoryShowing()) return
+	closeVerbs()
+	slide_tid = stopthread(slide_tid)
+	deleteImage(slide_image)
+	slide_tid = startglobalthread(@{
+		slide_image = createInventoryImage(item)
+		if (not slide_image) return
+		local width = imageSize(slide_image).x
+		local start_pos  = point(SCREEN_WIDTH-INVENTORY_OFFSET.x, INVENTORY_OFFSET.y)
+		local end_pos = point(start_pos.x - width, INVENTORY_OFFSET.y)
+		imageMoveFromTo(slide_image, EASE_OUT, 0.25, start_pos, end_pos)
+		imageAlphaFromTo(slide_image, EASE_OUT, 0.25, 0.0, 1.0)
+		breaktime(1.0)
+		imageMoveFromTo(slide_image, EASE_OUT, 0.25, end_pos, start_pos)
+		imageAlphaFromTo(slide_image, EASE_OUT, 0.25, 1.0, 0.0)
+		breaktime(0.25)
+		deleteImage(slide_image)
+		slide_tid = 0
+	})
+}

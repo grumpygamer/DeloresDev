@@ -1,0 +1,2427 @@
+ambient_light: "{0.498039,0.517647,0.643137,1}"
+background: "background"
+name: "BookStore"
+room_scale: 4
+roomsize: "{428,843}"
+sheet: "BookStore"
+layers: [
+    {
+        name: "sky"
+        zsort: 2
+        parallax: (0.25,0.25)
+    }
+    {
+        name: "landscape"
+        zsort: 1
+        parallax: (0.75,0.75)
+    }
+    {
+        name: "foreground"
+        zsort: -2
+        parallax: (1.2,1.2)
+    }
+]
+lights: [
+    {
+        color1: "{0.47451,0.721569,0.968627,0}"
+        color2: "{0,0,0,0}"
+        id: 0
+        iradius: 51
+        oradius: 93
+        rate: 0
+        clipping: ((0,0),(0,0))
+        pos: (156,712)
+    }
+    {
+        color1: "{0.47451,0.721569,0.968627,0}"
+        color2: "{0,0,0,0}"
+        id: 1
+        iradius: 41
+        oradius: 81
+        rate: 0
+        clipping: ((0,0),(0,0))
+        pos: (158,466)
+    }
+    {
+        color1: "{0.475778,0.723188,0.970588,0}"
+        color2: "{0,0,0,0}"
+        id: 2
+        iradius: 46
+        oradius: 75
+        rate: 0
+        clipping: ((-38,-59),(80,81))
+        pos: (134,214)
+    }
+    {
+        color1: "{0.980392,0.800313,0.509419,0}"
+        color2: "{0,0,0,0}"
+        id: 3
+        iradius: 9
+        oradius: 22
+        rate: 0
+        clipping: ((0,0),(0,0))
+        pos: (121,59)
+    }
+    {
+        color1: "{0.980392,0.800313,0.509419,0}"
+        color2: "{0,0,0,0}"
+        id: 4
+        iradius: 9
+        oradius: 37
+        rate: 0
+        clipping: ((0,0),(0,0))
+        pos: (140,75)
+    }
+    {
+        color1: "{0.980392,0.800313,0.509419,0}"
+        color2: "{0,0,0,0}"
+        id: 5
+        iradius: 9
+        oradius: 27
+        rate: 0
+        clipping: ((0,0),(0,0))
+        pos: (291,75)
+    }
+    {
+        color1: "{0.980392,0.800313,0.509419,0}"
+        color2: "{0,0,0,0}"
+        id: 6
+        iradius: 19
+        oradius: 41
+        rate: 0
+        clipping: ((0,0),(0,0))
+        pos: (366,67)
+    }
+    {
+        color1: "{0.980392,0.800313,0.509419,0}"
+        color2: "{0,0,0,0}"
+        id: 7
+        iradius: 19
+        oradius: 44
+        rate: 0
+        clipping: ((0,0),(0,0))
+        pos: (125,220)
+    }
+    {
+        color1: "{0.980392,0.800313,0.509419,0}"
+        color2: "{0,0,0,0}"
+        id: 8
+        iradius: 58
+        oradius: 73
+        rate: 0
+        clipping: ((0,0),(0,0))
+        pos: (332,219)
+    }
+    {
+        color1: "{0.980392,0.800313,0.509419,0}"
+        color2: "{0,0,0,0}"
+        id: 9
+        iradius: 17
+        oradius: 51
+        rate: 0
+        clipping: ((-19,-68),(19,9))
+        pos: (172,148)
+    }
+]
+objects: [
+    {
+        name: "railing"
+        prop: 1
+        zsort: 156
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "railing"
+                ]
+            }
+        ]
+        pos: (271,191)
+    }
+    {
+        name: "leftWall"
+        usedir: "DIR_FRONT"
+        zsort: 58
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "left_wall"
+                ]
+            }
+        ]
+        hotspot: ((-20,-20),(20,20))
+        pos: (89,433)
+        usepos: (0,-30)
+    }
+    {
+        name: "counter"
+        usedir: "DIR_RIGHT"
+        zsort: 56
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "counter_mask"
+                ]
+            }
+        ]
+        hotspot: ((-32,-14),(8,20))
+        pos: (374,75)
+        usepos: (-35,-14)
+    }
+    {
+        name: "outsideDoor"
+        usedir: "DIR_LEFT"
+        zsort: 57
+        animations: [
+            {
+                name: "closed"
+                frames: [
+                    "door_opening2"
+                    "door_opening1"
+                    "door_closed"
+                ]
+            }
+            {
+                name: "open"
+                frames: [
+                    "door_opening1"
+                    "door_opening2"
+                    "door_open"
+                ]
+            }
+        ]
+        hotspot: ((-15,-43),(17,51))
+        pos: (59,90)
+        usepos: (16,-40)
+    }
+    {
+        name: "mummy"
+        usedir: "DIR_FRONT"
+        zsort: 56
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "mummy"
+                ]
+            }
+        ]
+        hotspot: ((-50,-16),(50,17))
+        pos: (215,72)
+        usepos: (2,-4)
+    }
+    {
+        name: "cloak"
+        usedir: "DIR_FRONT"
+        zsort: 81
+        hotspot: ((-81,-5),(-66,45))
+        pos: (159,81)
+        usepos: (-77,-19)
+    }
+    {
+        name: "lowerLadder"
+        usedir: "DIR_BACK"
+        zsort: 155
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "lower_ladder"
+                ]
+            }
+        ]
+        hotspot: ((-10,-57),(11,45))
+        pos: (178,131)
+        usepos: (0,-58)
+    }
+    {
+        name: "upperLadder"
+        usedir: "DIR_BACK"
+        zsort: 1552
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "upper_ladder"
+                ]
+            }
+        ]
+        hotspot: ((-10,-308),(10,312))
+        pos: (157,469)
+        usepos: (0,-310)
+    }
+    {
+        name: "morenaSpot"
+        spot: 1
+        usedir: "DIR_LEFT"
+        pos: (380,63)
+    }
+    {
+        name: "registerLamp"
+        prop: 1
+        zsort: 76
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "lamp_register"
+                ]
+            }
+        ]
+        pos: (370,147)
+    }
+    {
+        name: "ravenEyes"
+        prop: 1
+        zsort: 138
+        animations: [
+            {
+                name: "closed"
+                frames: [
+                ]
+            }
+            {
+                name: "open"
+                frames: [
+                    "raven_eyes_open"
+                ]
+            }
+        ]
+        pos: (122,118)
+    }
+    {
+        name: "skullEyes"
+        prop: 1
+        zsort: 79
+        animations: [
+            {
+                name: "closed"
+                frames: [
+                ]
+            }
+            {
+                name: "open"
+                frames: [
+                    "skull_eyes_open"
+                ]
+            }
+        ]
+        pos: (291,112)
+    }
+    {
+        name: "registerRat1"
+        prop: 1
+        zsort: 70
+        animations: [
+            {
+                name: "closed"
+                frames: [
+                ]
+            }
+            {
+                name: "open"
+                frames: [
+                    "rat2_eyes_open"
+                ]
+            }
+        ]
+        pos: (345,117)
+    }
+    {
+        name: "registerRat2"
+        prop: 1
+        zsort: 70
+        animations: [
+            {
+                name: "closed"
+                frames: [
+                ]
+            }
+            {
+                name: "open"
+                frames: [
+                    "rat2_eyes_open"
+                ]
+            }
+        ]
+        pos: (345,107)
+    }
+    {
+        name: "registerRat3"
+        prop: 1
+        zsort: 70
+        animations: [
+            {
+                name: "closed"
+                frames: [
+                ]
+            }
+            {
+                name: "open"
+                frames: [
+                    "rat2_eyes_open"
+                ]
+            }
+        ]
+        pos: (345,98)
+    }
+    {
+        name: "railRat1"
+        prop: 1
+        zsort: 180
+        animations: [
+            {
+                name: "closed"
+                frames: [
+                ]
+            }
+            {
+                name: "open"
+                frames: [
+                    "rat_eyes_open"
+                ]
+            }
+        ]
+        pos: (376,173)
+    }
+    {
+        name: "railRat2"
+        prop: 1
+        zsort: 180
+        animations: [
+            {
+                name: "closed"
+                frames: [
+                ]
+            }
+            {
+                name: "open"
+                frames: [
+                    "rat_eyes_open"
+                ]
+            }
+        ]
+        pos: (385,175)
+    }
+    {
+        name: "railRat3"
+        prop: 1
+        zsort: 180
+        animations: [
+            {
+                name: "closed"
+                frames: [
+                ]
+            }
+            {
+                name: "open"
+                frames: [
+                    "rat_eyes_open"
+                ]
+            }
+        ]
+        pos: (392,177)
+    }
+    {
+        name: "shelfRat1"
+        prop: 1
+        zsort: 125
+        animations: [
+            {
+                name: "closed"
+                frames: [
+                ]
+            }
+            {
+                name: "state1"
+                frames: [
+                    "rat_eyes_open"
+                ]
+            }
+        ]
+        pos: (393,111)
+    }
+    {
+        name: "shelfRat2"
+        prop: 1
+        zsort: 125
+        animations: [
+            {
+                name: "closed"
+                frames: [
+                ]
+            }
+            {
+                name: "state1"
+                frames: [
+                    "rat_eyes_open"
+                ]
+            }
+        ]
+        pos: (415,110)
+    }
+    {
+        name: "shelfRat3"
+        prop: 1
+        zsort: 125
+        animations: [
+            {
+                name: "closed"
+                frames: [
+                ]
+            }
+            {
+                name: "state1"
+                frames: [
+                    "rat_eyes_open"
+                ]
+            }
+        ]
+        pos: (425,109)
+    }
+    {
+        name: "backroomDoorMask"
+        prop: 1
+        zsort: 71
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "backroom_door_mask"
+                ]
+            }
+        ]
+        pos: (338,109)
+    }
+    {
+        name: "morenaSpot2"
+        spot: 1
+        usedir: "DIR_LEFT"
+        pos: (340,73)
+    }
+    {
+        name: "dollEyes"
+        prop: 1
+        zsort: 94
+        animations: [
+            {
+                name: "closed"
+                frames: [
+                ]
+            }
+            {
+                name: "open"
+                frames: [
+                    "doll_eyes_open"
+                ]
+            }
+        ]
+        pos: (134,120)
+    }
+    {
+        name: "dollTrigger"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 90
+        hotspot: ((-33,-26),(16,-10))
+        pos: (160,90)
+        usepos: (0,-30)
+    }
+    {
+        name: "skullTriggerUR"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 90
+        hotspot: ((3,40),(71,104))
+        pos: (289,73)
+        usepos: (0,-30)
+    }
+    {
+        name: "skullTriggerUL"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 90
+        hotspot: ((-187,42),(-3,107))
+        pos: (289,73)
+        usepos: (0,-30)
+    }
+    {
+        name: "skullTriggerDR"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 90
+        hotspot: ((3,-20),(75,39))
+        pos: (289,73)
+        usepos: (0,-30)
+    }
+    {
+        name: "skullTriggerDL"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 90
+        hotspot: ((-111,-21),(-3,35))
+        pos: (289,73)
+        usepos: (0,-30)
+    }
+    {
+        name: "railRatsTrigger"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 115
+        hotspot: ((-15,41),(50,90))
+        pos: (377,115)
+        usepos: (0,-30)
+    }
+    {
+        name: "doll"
+        usedir: "DIR_BACK"
+        zsort: 90
+        hotspot: ((-31,17),(-19,36))
+        pos: (160,90)
+        usepos: (-15,-17)
+    }
+    {
+        name: "downstairsAmbient"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 90
+        hotspot: ((-76,-34),(192,-29))
+        pos: (160,90)
+        usepos: (0,-30)
+    }
+    {
+        name: "upstairsAmbient"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 204
+        hotspot: ((-73,349),(135,573))
+        pos: (188,204)
+        usepos: (0,-30)
+    }
+    {
+        name: "morenaIntroSpot"
+        spot: 1
+        usedir: "DIR_LEFT"
+        pos: (287,56)
+    }
+    {
+        name: "bookStoreMoonbeam1"
+        prop: 1
+        zsort: 47
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "moonbeam1"
+                ]
+            }
+        ]
+        pos: (202,201)
+    }
+    {
+        name: "bookStoreMoonbeam2"
+        prop: 1
+        zsort: 33
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "moonbeam2"
+                ]
+            }
+        ]
+        pos: (238,363)
+    }
+    {
+        name: "bookStoreMoonbeam3"
+        prop: 1
+        zsort: 47
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "moonbeam3"
+                ]
+            }
+        ]
+        pos: (229,699)
+    }
+    {
+        name: "closeDoorTrigger"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 76
+        hotspot: ((-32,-19),(19,-1))
+        pos: (100,67)
+        usepos: (0,-30)
+    }
+    {
+        name: "ladder1Trigger0"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 80
+        hotspot: ((-40,-6),(-30,76))
+        pos: (213,80)
+        usepos: (0,-30)
+    }
+    {
+        name: "ladder1Trigger1"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 80
+        hotspot: ((-5,-6),(5,76))
+        pos: (213,80)
+        usepos: (0,-30)
+    }
+    {
+        name: "ladder1Trigger2"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 80
+        hotspot: ((30,-6),(42,76))
+        pos: (213,80)
+        usepos: (0,-30)
+    }
+    {
+        name: "ladder2Trigger0"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 213
+        hotspot: ((-63,-53),(-53,548))
+        pos: (215,213)
+        usepos: (0,-30)
+    }
+    {
+        name: "ladder2Trigger1"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 213
+        hotspot: ((0,-53),(8,548))
+        pos: (215,213)
+        usepos: (0,-30)
+    }
+    {
+        name: "ladder2Trigger2"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 213
+        hotspot: ((62,-53),(70,548))
+        pos: (215,213)
+        usepos: (0,-30)
+    }
+    {
+        name: "fortranBook"
+        usedir: "DIR_BACK"
+        zsort: 1555
+        animations: [
+            {
+                name: "here"
+                frames: [
+                    "book_of_dead"
+                ]
+            }
+            {
+                name: "gone"
+                frames: [
+                ]
+            }
+        ]
+        hotspot: ((-11,-4),(9,4))
+        pos: (201,779)
+        usepos: (17,-47)
+    }
+    {
+        name: "bookOfDeadGlow"
+        usedir: "DIR_BACK"
+        zsort: 1554
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "book_of_dead_glow"
+                ]
+            }
+        ]
+        hotspot: ((-11,-2),(8,4))
+        pos: (200,778)
+        usepos: (17,-47)
+    }
+    {
+        name: "navigatorHead"
+        usedir: "DIR_BACK"
+        zsort: 83
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "navigator_head"
+                ]
+            }
+        ]
+        hotspot: ((-8,-6),(5,7))
+        pos: (293,112)
+        usepos: (-8,-38)
+    }
+    {
+        disable: 1
+        name: "bookStoreEyedrops"
+        usedir: "DIR_RIGHT"
+        zsort: 71
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "backer_eyedrops"
+                ]
+            }
+        ]
+        hotspot: ((-4,-4),(5,7))
+        pos: (338,126)
+        usepos: (-12,-60)
+    }
+    {
+        disable: 1
+        name: "tea"
+        usedir: "DIR_RIGHT"
+        zsort: 70
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "backer_tea_pkg"
+                ]
+            }
+        ]
+        hotspot: ((-6,-4),(4,4))
+        pos: (344,109)
+        usepos: (-17,-44)
+    }
+    {
+        name: "bookStoreStar1"
+        prop: 1
+        zsort: 108
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (22,252)
+    }
+    {
+        name: "bookStoreStar2"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (33,260)
+    }
+    {
+        name: "bookStoreStar3"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (53,237)
+    }
+    {
+        name: "bookStoreStar4"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (54,220)
+    }
+    {
+        name: "bookStoreStar5"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (6,180)
+    }
+    {
+        name: "bookStoreStar6"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (31,127)
+    }
+    {
+        name: "bookStoreStar7"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (2,169)
+    }
+    {
+        name: "bookStoreStar8"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (8,229)
+    }
+    {
+        name: "bookStoreStar9"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (2,289)
+    }
+    {
+        name: "bookStoreStar10"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (42,198)
+    }
+    {
+        name: "bookStoreStar11"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (20,147)
+    }
+    {
+        name: "bookStoreStar12"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (2,256)
+    }
+    {
+        name: "bookStoreStar13"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (82,147)
+    }
+    {
+        name: "bookStoreStar14"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (21,275)
+    }
+    {
+        name: "bookStoreStar15"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (13,297)
+    }
+    {
+        name: "bookStoreStar16"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (0,307)
+    }
+    {
+        name: "bookStoreStar17"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (25,315)
+    }
+    {
+        name: "bookStoreStar18"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (45,278)
+    }
+    {
+        name: "bookStoreStar19"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (45,259)
+    }
+    {
+        name: "bookStoreStar20"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (28,283)
+    }
+    {
+        name: "bookStoreStar21"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (41,265)
+    }
+    {
+        name: "bookStoreStar22"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (10,341)
+    }
+    {
+        name: "bookStoreStar23"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (32,339)
+    }
+    {
+        name: "bookStoreStar24"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (2,153)
+    }
+    {
+        name: "bookStoreStar25"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (51,159)
+    }
+    {
+        name: "bookStoreStar26"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (46,308)
+    }
+    {
+        name: "bookStoreStar27"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (47,335)
+    }
+    {
+        name: "bookStoreStar28"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (48,315)
+    }
+    {
+        name: "bookStoreStar29"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (44,326)
+    }
+    {
+        name: "bookStoreStar30"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (71,231)
+    }
+    {
+        name: "bookStoreStar31"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (66,337)
+    }
+    {
+        name: "bookStoreStar32"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (74,292)
+    }
+    {
+        name: "bookStoreStar33"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (56,298)
+    }
+    {
+        name: "bookStoreStar34"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (77,183)
+    }
+    {
+        name: "bookStoreStar35"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (82,211)
+    }
+    {
+        name: "bookStoreStar36"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (67,298)
+    }
+    {
+        name: "bookStoreStar37"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (70,282)
+    }
+    {
+        name: "bookStoreStar38"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (87,172)
+    }
+    {
+        name: "bookStoreStar39"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (80,244)
+    }
+    {
+        name: "bookStoreStarB1"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+        pos: (15,192)
+    }
+    {
+        name: "bookStoreStarB2"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+        pos: (52,145)
+    }
+    {
+        name: "bookStoreStarB3"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+        pos: (55,206)
+    }
+    {
+        name: "bookStoreStarB4"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+        pos: (38,276)
+    }
+    {
+        name: "bookStoreStarB5"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+        pos: (7,315)
+    }
+    {
+        name: "bookStoreStarB6"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+        pos: (65,311)
+    }
+    {
+        name: "bookStoreStarB7"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+        pos: (92,231)
+    }
+    {
+        name: "bookStoreStarB8"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+        pos: (79,294)
+    }
+    {
+        name: "bookStoreStarB9"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+        pos: (16,331)
+    }
+    {
+        name: "bookStoreStarB10"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+        pos: (94,302)
+    }
+    {
+        name: "bookStoreStarB11"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+        pos: (98,256)
+    }
+    {
+        name: "bookStoreStarB12"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+        pos: (14,116)
+    }
+    {
+        name: "morenaTalkSpot"
+        spot: 1
+        usedir: "DIR_RIGHT"
+        pos: (340,63)
+    }
+    {
+        name: "jumpSpot"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (213,48)
+    }
+    {
+        name: "topWindow"
+        usedir: "DIR_BACK"
+        zsort: 449
+        hotspot: ((-193,192),(-150,302))
+        pos: (233,449)
+        usepos: (-75,222)
+    }
+    {
+        name: "poem"
+        usedir: "DIR_BACK"
+        zsort: 218
+        animations: [
+            {
+                name: "here"
+                frames: [
+                    "poem"
+                ]
+            }
+        ]
+        hotspot: ((-6,-8),(6,9))
+        pos: (386,235)
+        usepos: (-1,-60)
+    }
+    {
+        layer: 2
+        name: "star1"
+        prop: 1
+        zsort: 108
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (22,252)
+    }
+    {
+        layer: 2
+        name: "star2"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (33,260)
+    }
+    {
+        layer: 2
+        name: "star3"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (53,237)
+    }
+    {
+        layer: 2
+        name: "star4"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (54,220)
+    }
+    {
+        layer: 2
+        name: "star5"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (6,180)
+    }
+    {
+        layer: 2
+        name: "star6"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (31,127)
+    }
+    {
+        layer: 2
+        name: "star7"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (2,169)
+    }
+    {
+        layer: 2
+        name: "star8"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (8,229)
+    }
+    {
+        layer: 2
+        name: "star9"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (2,289)
+    }
+    {
+        layer: 2
+        name: "star10"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (42,198)
+    }
+    {
+        layer: 2
+        name: "star11"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (20,147)
+    }
+    {
+        layer: 2
+        name: "star12"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (2,256)
+    }
+    {
+        layer: 2
+        name: "star13"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (82,147)
+    }
+    {
+        layer: 2
+        name: "star14"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (21,275)
+    }
+    {
+        layer: 2
+        name: "star15"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (13,297)
+    }
+    {
+        layer: 2
+        name: "star16"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (0,307)
+    }
+    {
+        layer: 2
+        name: "star17"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (25,315)
+    }
+    {
+        layer: 2
+        name: "star18"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (45,278)
+    }
+    {
+        layer: 2
+        name: "star19"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (45,259)
+    }
+    {
+        layer: 2
+        name: "star20"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (28,283)
+    }
+    {
+        layer: 2
+        name: "star21"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (41,265)
+    }
+    {
+        layer: 2
+        name: "star22"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (10,341)
+    }
+    {
+        layer: 2
+        name: "star23"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (32,339)
+    }
+    {
+        layer: 2
+        name: "star24"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (2,153)
+    }
+    {
+        layer: 2
+        name: "star25"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (51,159)
+    }
+    {
+        layer: 2
+        name: "star26"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (46,308)
+    }
+    {
+        layer: 2
+        name: "star27"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (47,335)
+    }
+    {
+        layer: 2
+        name: "star28"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (48,315)
+    }
+    {
+        layer: 2
+        name: "star29"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (44,326)
+    }
+    {
+        layer: 2
+        name: "star30"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (71,231)
+    }
+    {
+        layer: 2
+        name: "star31"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (66,337)
+    }
+    {
+        layer: 2
+        name: "star32"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (74,292)
+    }
+    {
+        layer: 2
+        name: "star33"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (56,298)
+    }
+    {
+        layer: 2
+        name: "star34"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (77,183)
+    }
+    {
+        layer: 2
+        name: "star35"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (82,211)
+    }
+    {
+        layer: 2
+        name: "star36"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (67,298)
+    }
+    {
+        layer: 2
+        name: "star37"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (70,282)
+    }
+    {
+        layer: 2
+        name: "star38"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (87,172)
+    }
+    {
+        layer: 2
+        name: "star39"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (80,244)
+    }
+    {
+        layer: 2
+        name: "starB1"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+        pos: (15,192)
+    }
+    {
+        layer: 2
+        name: "starB2"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+        pos: (52,145)
+    }
+    {
+        layer: 2
+        name: "starB3"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+        pos: (55,206)
+    }
+    {
+        layer: 2
+        name: "starB4"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+        pos: (38,276)
+    }
+    {
+        layer: 2
+        name: "starB5"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+        pos: (7,315)
+    }
+    {
+        layer: 2
+        name: "starB6"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+        pos: (65,311)
+    }
+    {
+        layer: 2
+        name: "starB7"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+        pos: (92,231)
+    }
+    {
+        layer: 2
+        name: "starB8"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+        pos: (79,294)
+    }
+    {
+        layer: 2
+        name: "starB9"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+        pos: (16,331)
+    }
+    {
+        layer: 2
+        name: "starB10"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+        pos: (94,302)
+    }
+    {
+        layer: 2
+        name: "starB11"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+        pos: (98,256)
+    }
+    {
+        layer: 2
+        name: "starB12"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+        pos: (14,116)
+    }
+    {
+        name: "windowLight1"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (156,712)
+    }
+    {
+        name: "windowLight2"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (158,466)
+    }
+    {
+        name: "windowLight3"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (134,214)
+    }
+    {
+        name: "lampLight1"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (121,59)
+    }
+    {
+        name: "lampLight2"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (140,75)
+    }
+    {
+        name: "lampLight3"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (291,75)
+    }
+    {
+        name: "lampLight4"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (366,67)
+    }
+    {
+        name: "lampLight5"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (125,220)
+    }
+    {
+        name: "lampLight6"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (332,219)
+    }
+]
+room_bounds: ((1,1),(428,843))
+room_size: (428,843)
+scaling: [
+    "1.00@54"
+    "0.85@73"
+]
+walkboxes: [
+    {
+        polygon: "(137,75);(147,75);(157,73);(177,73);(178,73);(213,73);(214,73);(249,73);(250,73);(278,73);(282,75);(309,75);(317,72);(313,68);(274,68);(158,68);(124,64)"
+    }
+    {
+        polygon: "(69,64);(108,64);(94,59);(60,59)"
+    }
+    {
+        polygon: "(124,64);(158,68);(156,55);(274,55);(273,46);(61,46);(94,59);(108,64)"
+    }
+    {
+        polygon: "(274,68);(313,68);(330,66);(340,63);(358,51);(371,51);(375,46);(273,46);(274,55)"
+    }
+    {
+        polygon: "(130,159);(157,159);(158,159);(219,159);(220,159);(281,159);(282,159);(381,159);(381,157);(214,157);(213,157);(130,157)"
+    }
+    {
+        name: "upperLadder0"
+        polygon: "(157,738);(158,738);(158,159);(157,159)"
+    }
+    {
+        name: "upperLadder1"
+        polygon: "(219,738);(220,738);(220,159);(219,159)"
+    }
+    {
+        name: "upperLadder2"
+        polygon: "(281,738);(282,738);(282,159);(281,159)"
+    }
+    {
+        name: "lowerLadder0"
+        polygon: "(177,122);(178,122);(178,73);(177,73)"
+    }
+    {
+        name: "lowerLadder1"
+        polygon: "(213,157);(214,157);(214,73);(213,73)"
+    }
+    {
+        name: "lowerLadder2"
+        polygon: "(249,122);(250,122);(250,73);(249,73)"
+    }
+    {
+        polygon: "(385,67);(425,53);(403,53);(369,67)"
+    }
+    {
+        polygon: "(381,159);(418,175);(418,170);(381,157)"
+    }
+    {
+        name: "backroom"
+        polygon: "(309,75);(343,75);(344,73);(317,72)"
+    }
+]

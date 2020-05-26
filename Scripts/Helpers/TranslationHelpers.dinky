@@ -1,0 +1,115 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/deloresdev
+//
+// ----------------------------------------------------------------------------
+
+// __NO_EXTRACT__
+
+/*{{ ------------------------------------------------------------------------------------
+@section translation_comands
+@title Translation Commands
+
+The translation code was never fully finished for Delores and was hastily added right before releasing this
+source.  Apologies if there are rough edges.
+
+All text that needs to be translated should be wrapped with the `SAY(0,"Hi there!")` or `TEXT(0,"cardboard box")` macros depending on
+if the text is said by a character or just displayed on the verbs or UI.
+    sayLine(delores, "The commodore 64 is my favorite computer.")
+Becomes
+    sayLine(delores, SAY(11876,"The commodore 64 is my favorite computer."))
+This is best done by wrapping all text and leaving the id as `0`, then creating a python script that goes through
+and finds all `SAY(0,"...")` assigning a unique number and saves them to a `.tsv` file.  The ids must start at `11000`.
+
+The `.tsv` file has four columns::
+    id text en loc
+Note that is a `.tsv` (Tab Separated Values) file, not a `.csv` (Comma Separated Values) file.
+
+It's best if this python script is stable and can be run multiple times as you add new text without renumbering
+the text ids.
+
+Switching languages can be done by adding an option in `Options.dinky` and using that to load
+different Translation files.
+
+Most of the fonts in Delores don't include much more than ASCII glyphs. You can supply your own TTF fonts with
+the characters you need or you can use `http://www.pentacom.jp/pentacom/bitfontmaker2/` to upload and modify
+The included fonts.
+
+If you want your translations to be compatible with other mods, or even make it back into the release game, don't renumber the line ids.
+
+When working on a translation in the `.tsv` file, resist the urge to fix typos in the English (or native) text.  These changes should be made in the source (`.dinky` file) and
+then a new/updated extraction should be done.   This is because the English text comes from `Translations_en.tsv` and not the 2nd column of (for example) `Translations_de.tsv`, the player will never see the edits.
+
+The 2nd column is for reference only.
+
+Have fun!
+}}*/
+
+local translation_table = null
+
+/*{{ ------------------------------------------------------------------------------------
+@func useTranslation(language)
+@desc Change languages
+ This is called with a 2-letter language code: `en`, `de`, `fr`, `it`, etc. Technically they don't have to be 2-letter codes
+ but for for consistency they should be when possible. You could create `piglatin` files if you wanted.
+
+ There is a special text id of `10000` that should be used to hold the text of your language in your language.
+	English    English
+ or
+	Deutsch    German
+ The id `10001` should be used to provide a short description of the translation for display in the UI. This can be useful
+ in distinguishing between two translation in the same language.
+	Traduction par Google    Translation by Google
+ Text id's `10000`-`11000` should not be used as they are reserved for the system and engine.
+
+ If you switch languages in the middle of playing, any text already on the screen will not change until it
+ needs to be redrawn.
+
+ Passing `null` will turn off all translation and use the text in the source code.
+}}*/
+
+function useTranslation(language) {
+	translation_table = language ? loadtsvtable("Translations_"+language+".tsv") : null
+	// dumpvar(translation_table)	// Uncomment to dump the table
+	return translation_table ? YES : NO
+}
+
+/*{{ ------------------------------------------------------------------------------------
+@func TR(text)
+@desc Translates a raw line of text
+ The text must have line ids in it to be translated.  Line ids are a five digit number follow by
+ a `:` and then the original (English in this case) text.
+
+ After the macro expands, the code `sayLine(SAY(11879,"I love making games! Do you?"))` emits `sayLine("11879:I love making games! Do you?")`
+
+ A marker of `0` mean the text has not been extracted to the `.tsv` file yet.
+
+ Text that begins with a `^` won't be translated.
+
+ Turning on `Translation Markers` in the Options panel will produce good information for debugging.
+}}*/
+
+function TR(text) {
+	if (!is_string(text)) return text
+	if (text?[0] == '^') return strslice(text,1)		// Strings that don't require translation start with '^'
+	if (text?[1] == ':') {							// TEXT(0,"...")
+		text = strslice(text,2)
+		if (!DEBUG(translation_markers)) return text
+		return "??"+text
+	} else
+	if (text?[5] == ':') {							// TEXT(11881,"...")
+		if (translation_table == null) {
+			if (DEBUG(translation_markers)) return "??"+text+"??"
+			return strslice(text, 6)
+		}
+		local id = strslice(text, 0, 4)
+		local tr_text = translation_table?[id]?.text
+		if (tr_text == null) {
+			print("Missing translation id:", id)
+			return DEBUG(translation_markers) ? "??"+text+"??" : text
+		}
+		return DEBUG(translation_markers) ? "*"+tr_text : tr_text
+	}
+	return DEBUG(translation_markers) ? "??"+text+"??" : text
+}

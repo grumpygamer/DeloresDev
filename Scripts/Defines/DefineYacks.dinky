@@ -1,0 +1,23 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+// .yack files added here will get their `=== init ==` code run plus a pre-run syntax check.
+// This is only necessary in dev code. For the released game, all .yack files in the ggpack file
+// will get inited. It's still good practice to do.
+
+function defineAllYacks() {
+	defineYack("Natalie")
+	defineYack("Leonard")
+	defineYack("Willie")
+	defineYack("Lenore")
+	defineYack("Chuckie")
+	defineYack("Coroner")
+	defineYack("Dave")
+	defineYack("Sandy")
+	defineYack("Sheriff")
+	defineYack("Morena")
+}

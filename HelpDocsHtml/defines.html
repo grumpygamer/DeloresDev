@@ -1,0 +1,45 @@
+<html><head><link rel='stylesheet' href='../HelpDocs/help.css'><link href='https://fonts.googleapis.com/css?family=Roboto:300|Ubuntu:300' rel='stylesheet'></head><body><span class='button'><a href='home.html'>Home</a></span><span class='button'><a href='index.html'>Index</a></span><html><head><link rel='stylesheet' href='help.css'></head><body><h1>Defines and other const values</h1><div class='section text'><div class='line_break'></div> <h1>Colors</h1><div class='line_break'></div> <div class='code_block'>COLOR_NONE
+COLOR_BLACK
+COLOR_WHITE
+COLOR_RED
+COLOR_BROWN
+COLOR_GREEN
+COLOR_BLUE
+COLOR_YELLOW
+COLOR_CYAN
+COLOR_PURPLE
+COLOR_LIGHTGRAY
+COLOR_GRAY
+COLOR_ORANGE
+COLOR_LIGHTPURPLE
+COLOR_DARKRED
+COLOR_DARKGREEN
+COLOR_LIGHTGREE
+COLOR_DARKBLUE
+COLOR_DARKGRAY
+</div>Colors can also be specified by <span class='inline_code'>0xAARRGGBB</span> or <span class='inline_code'>0xRRGGBB</span> <div class='line_break'></div> <h1>Reaches</h1><div class='line_break'></div> <div class='code_block'>REACH_NONE
+REACH_LOW
+REACH_MED
+REACH_HIGH
+</div><h1>Input states</h1><div class='line_break'></div> <div class='code_block'>INPUT_ON              <span class='comment'>// Keyboard, Mouse, Cursor is all ON</span>
+INPUT_OFF             <span class='comment'>// Mouse, Cursor is OFF, but Keyboard is ON</span>
+_INPUT_ALL_OFF        <span class='comment'>// Keyboard, Mouse, Cursor is OFF</span>
+_INPUT_YACK_CHOICES   <span class='comment'>// Keyboard, Cursor is ON. Mouse is OFF</span>
+_INPUT_CURSOR         <span class='comment'>// Cursor is ON</span>
+_INPUT_MOUSE          <span class='comment'>// TBD</span>
+_INPUT_KEYS           <span class='comment'>// Keyboard is read</span>
+_INPUT_BUTTONS        <span class='comment'>// Buttons (`createButton()`) are active</span>
+_INPUT_PUSH           <span class='comment'>// Current input state is push before new state is set</span>
+_INPUT_POP            <span class='comment'>// Input stack state is popped</span>
+
+</div><h1>Images alignment</h1><div class='line_break'></div> Passed to <span class='inline_code'>createImage()</span> and <span class='inline_code'>createTextImage()</span> <div class='line_break'></div> Aligning to top and bottom is buggy. <div class='line_break'></div> <div class='code_block'>ALIGN_LEFT
+ALIGN_CENTER
+ALIGN_RIGHT
+ALIGN_TOP
+ALIGN_BOTTOM
+</div><h1>System macros</h1><div class='line_break'></div> The following macros are automaticaly created by the compiler. <div class='line_break'></div> <div class='code_block'>__LINE__            <span class='comment'>// The current line number</span>
+__FUNC__            <span class='comment'>// The name of the current <span class='keyword'>function</span></span>
+__LOC__             <span class='comment'>// The <span class='keyword'>function</span>:line</span>
+__FILE__            <span class='comment'>// The filename currently being compiled</span>
+__COMPILETIME__     <span class='comment'>// The unixtime the file was being compiled</span>
+</div><h1>TBD</h1></div><div class='function_list'></div><p class='copyright'>Copyright 2020 Terrible Toybox, Inc. All Rights Reserved.</p></body></html>

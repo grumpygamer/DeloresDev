@@ -1,0 +1,1802 @@
+ambient_light: "{0.378749,0.593415,0.696078,1}"
+name: "AStreet"
+room_scale: 3
+sheet: "AStreet"
+background: [
+    "background_left"
+    "background_right"
+]
+layers: [
+    {
+        parallax: 1.3
+        zsort: -2
+        name: [
+            "foreground_left"
+            "foreground_right"
+        ]
+    }
+    {
+        name: "sky"
+        parallax: 0.25
+        zsort: 2
+    }
+    {
+        parallax: 0.75
+        zsort: 1
+        name: [
+            "hills_left"
+            "hills_right"
+        ]
+    }
+]
+lights: [
+    {
+        color1: "{1,0.95963,0.656863,0}"
+        color2: "{1,0.668972,0.196078,0}"
+        id: 0
+        iradius: 81
+        oradius: 151
+        rate: 0.0105
+        clipping: ((0,0),(0,0))
+        pos: (1599,136)
+    }
+    {
+        color1: "{0.611765,0.611765,0.466667,0}"
+        color2: "{0,0,0,0}"
+        id: 1
+        iradius: 52
+        oradius: 94
+        rate: 0
+        clipping: ((0,0),(0,0))
+        pos: (1790,126)
+    }
+    {
+        color1: "{0.828431,0.82843,0.527922,0}"
+        color2: "{0,0,0,0}"
+        id: 2
+        iradius: 23
+        oradius: 100
+        rate: 0
+        clipping: ((0,0),(0,0))
+        pos: (160,85)
+    }
+    {
+        color1: "{0.828431,0.82843,0.527922,0}"
+        color2: "{0,0,0,0}"
+        id: 3
+        iradius: 23
+        oradius: 74
+        rate: 0
+        clipping: ((0,0),(0,0))
+        pos: (526,83)
+    }
+    {
+        color1: "{0.828431,0.82843,0.527922,0}"
+        color2: "{0,0,0,0}"
+        id: 4
+        iradius: 23
+        oradius: 100
+        rate: 0
+        clipping: ((0,0),(0,0))
+        pos: (870,84)
+    }
+    {
+        color1: "{0.828431,0.82843,0.527922,0}"
+        color2: "{0,0,0,0}"
+        id: 5
+        iradius: 45
+        oradius: 71
+        rate: 0
+        clipping: ((-82,-44),(54,0))
+        pos: (630,138)
+    }
+    {
+        color1: "{0.498606,0.813725,0.711775,0}"
+        color2: "{0,0,0,0}"
+        id: 6
+        iradius: 63
+        oradius: 134
+        rate: 0
+        clipping: ((0,0),(0,0))
+        pos: (1315,86)
+    }
+    {
+        color1: "{0.828431,0.82843,0.527922,0}"
+        color2: "{0,0,0,0}"
+        id: 7
+        iradius: 23
+        oradius: 100
+        rate: 0
+        clipping: ((-106,-52),(76,13))
+        pos: (2175,102)
+    }
+    {
+        color1: "{0.607843,0.607842,0.402249,0}"
+        color2: "{0,0,0,0}"
+        id: 8
+        iradius: 23
+        oradius: 37
+        rate: 0
+        clipping: ((-44,-52),(47,13))
+        pos: (2327,82)
+    }
+    {
+        color1: "{0.798587,0.840152,0.852941,0}"
+        color2: "{0,0,0,0}"
+        id: 9
+        iradius: 27
+        oradius: 51
+        rate: 0
+        clipping: ((-35,-23),(36,0))
+        pos: (720,118)
+    }
+]
+objects: [
+    {
+        name: "postOfficeDoor"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 98
+        animations: [
+            {
+                name: "closed"
+                frames: [
+                    "post_office_door4"
+                    "post_office_door3"
+                    "post_office_door2"
+                    "post_office_door1"
+                ]
+            }
+            {
+                name: "open"
+                frames: [
+                    "post_office_door1"
+                    "post_office_door2"
+                    "post_office_door3"
+                    "post_office_door4"
+                ]
+            }
+        ]
+        hotspot: ((-26,-34),(23,38))
+        pos: (1241,128)
+        usepos: (-2,-34)
+        usepos2: (3,-61)
+    }
+    {
+        name: "postOfficeDoorMask"
+        prop: 1
+        zsort: 97
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "post_office_door_mask"
+                ]
+            }
+        ]
+        pos: (1241,128)
+    }
+    {
+        name: "postOfficeDoorRailing"
+        prop: 1
+        zsort: 88
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "railing"
+                ]
+            }
+        ]
+        pos: (1233,106)
+    }
+    {
+        name: "nickelDoor"
+        usedir: "DIR_BACK"
+        zsort: 121
+        animations: [
+            {
+                name: "closed"
+                frames: [
+                    "nickel_door_opening2"
+                    "nickel_door_opening1"
+                    "nickel_door_closed"
+                ]
+            }
+            {
+                name: "open"
+                frames: [
+                    "nickel_door_opening1"
+                    "nickel_door_opening2"
+                    "nickel_door_open"
+                ]
+            }
+        ]
+        hotspot: ((-18,-34),(18,31))
+        pos: (603,133)
+        usepos: (2,-36)
+    }
+    {
+        name: "aStreetBarDoor"
+        usedir: "DIR_BACK"
+        zsort: 115
+        hotspot: ((6,-28),(41,-15))
+        pos: (370,143)
+        usepos: (20,-43)
+    }
+    {
+        name: "nickelBulletinBoard"
+        usedir: "DIR_BACK"
+        zsort: 119
+        hotspot: ((-20,-21),(33,20))
+        pos: (713,146)
+        usepos: (8,-46)
+    }
+    {
+        name: "nickelNote1"
+        usedir: "DIR_BACK"
+        zsort: 104
+        hotspot: ((-115,41),(-98,58))
+        pos: (807,104)
+        usepos: (-107,-8)
+    }
+    {
+        name: "nickelNote2"
+        usedir: "DIR_BACK"
+        zsort: 104
+        hotspot: ((-89,47),(-71,57))
+        pos: (807,104)
+        usepos: (-81,-8)
+    }
+    {
+        name: "nickelNote3"
+        usedir: "DIR_BACK"
+        zsort: 104
+        hotspot: ((-70,41),(-60,53))
+        pos: (807,104)
+        usepos: (-65,-8)
+    }
+    {
+        name: "nickelNote4"
+        usedir: "DIR_BACK"
+        zsort: 104
+        hotspot: ((-111,30),(-103,39))
+        pos: (807,104)
+        usepos: (-107,-8)
+    }
+    {
+        name: "nickelNote5"
+        usedir: "DIR_BACK"
+        zsort: 104
+        hotspot: ((-102,29),(-92,40))
+        pos: (807,104)
+        usepos: (-98,-9)
+    }
+    {
+        name: "nickelNote6"
+        usedir: "DIR_BACK"
+        zsort: 104
+        hotspot: ((-88,37),(-79,44))
+        pos: (807,104)
+        usepos: (-83,-7)
+    }
+    {
+        name: "nickelNote7"
+        usedir: "DIR_BACK"
+        zsort: 104
+        hotspot: ((-79,35),(-71,45))
+        pos: (807,104)
+        usepos: (-74,-8)
+    }
+    {
+        name: "nickelNote8"
+        usedir: "DIR_BACK"
+        zsort: 104
+        hotspot: ((-113,22),(-105,29))
+        pos: (807,104)
+        usepos: (-108,-8)
+    }
+    {
+        name: "nickelNote9"
+        usedir: "DIR_BACK"
+        zsort: 104
+        animations: [
+            {
+                name: "state1"
+                frames: [
+                    "nickel_news_ad"
+                ]
+            }
+        ]
+        hotspot: ((-3,-3),(3,4))
+        pos: (708,129)
+        usepos: (1,-33)
+    }
+    {
+        name: "nickelNote10"
+        usedir: "DIR_BACK"
+        zsort: 104
+        hotspot: ((-90,21),(-72,33))
+        pos: (807,104)
+        usepos: (-82,-8)
+    }
+    {
+        name: "nickelNote11"
+        usedir: "DIR_BACK"
+        zsort: 104
+        hotspot: ((-71,29),(-63,37))
+        pos: (807,104)
+        usepos: (-66,-7)
+    }
+    {
+        name: "nickelNote12"
+        usedir: "DIR_BACK"
+        zsort: 104
+        hotspot: ((-102,56),(-73,60))
+        pos: (807,104)
+        usepos: (-88,-8)
+    }
+    {
+        name: "trashcan"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 91
+        animations: [
+            {
+                name: "gone"
+                frames: [
+                ]
+            }
+            {
+                name: "here"
+                frames: [
+                    "trash_can_off"
+                ]
+            }
+            {
+                name: "fire"
+                frames: [
+                    "trash_can_on"
+                ]
+            }
+        ]
+        hotspot: ((-14,-35),(15,1))
+        pos: (1600,125)
+        usepos: (0,-38)
+        usepos2: (-5,-54)
+    }
+    {
+        name: "trashcanFire"
+        prop: 1
+        zsort: 91
+        animations: [
+            {
+                name: "gone"
+                frames: [
+                ]
+            }
+            {
+                loop: 1
+                name: "fire"
+                frames: [
+                    "fire_1"
+                    "fire_2"
+                    "fire_3"
+                    "fire_4"
+                ]
+            }
+        ]
+        pos: (1599,136)
+    }
+    {
+        name: "willieSitSpot"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (1606,92)
+    }
+    {
+        name: "mainStreetDoor"
+        usedir: "DIR_LEFT"
+        zsort: 124
+        hotspot: ((-69,-128),(-29,121))
+        pos: (57,124)
+        usepos: (-49,-55)
+    }
+    {
+        name: "startSpot"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (683,74)
+    }
+    {
+        name: "willieTalkSpot"
+        spot: 1
+        usedir: "DIR_BACK"
+        pos: (1587,72)
+    }
+    {
+        name: "bottle"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 115
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "bottle"
+                ]
+            }
+            {
+                name: "gone"
+                frames: [
+                ]
+            }
+        ]
+        hotspot: ((-14,-7),(19,7))
+        pos: (2504,96)
+        usepos: (2,-13)
+        usepos2: (-9,-17)
+    }
+    {
+        name: "booksStoreDoorOld"
+        usedir: "DIR_RIGHT"
+        zsort: 122
+        hotspot: ((-9,-36),(21,40))
+        pos: (2206,138)
+        usepos: (-6,-38)
+    }
+    {
+        name: "bookStoreDoor"
+        usedir: "DIR_RIGHT"
+        zsort: 122
+        animations: [
+            {
+                name: "closed"
+                frames: [
+                    "bookstore_door_opening2_inside_lit"
+                    "bookstore_door_opening1_inside_lit"
+                    "bookstore_door_closed_inside_lit"
+                ]
+            }
+            {
+                name: "open"
+                frames: [
+                    "bookstore_door_opening1_inside_lit"
+                    "bookstore_door_opening2_inside_lit"
+                    "bookstore_door_open_inside_lit"
+                ]
+            }
+            {
+                name: "state5"
+                frames: [
+                    "bookstore_door_closed"
+                ]
+            }
+            {
+                name: "state6"
+                frames: [
+                    "bookstore_door_closed_lamp_lit"
+                ]
+            }
+            {
+                name: "state7"
+                frames: [
+                    "bookstore_door_closed_inside_lit"
+                ]
+            }
+            {
+                name: "state8"
+                frames: [
+                    "bookstore_door_open_inside_lit"
+                ]
+            }
+        ]
+        hotspot: ((-21,-34),(8,41))
+        pos: (2220,138)
+        usepos: (-24,-34)
+    }
+    {
+        name: "bookStoreLamp"
+        prop: 1
+        zsort: 107
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "lamp_dark"
+                ]
+            }
+            {
+                name: "default"
+                frames: [
+                    "lamp_lit"
+                ]
+            }
+        ]
+        pos: (2133,172)
+    }
+    {
+        name: "bookStoreFrontLit"
+        prop: 1
+        zsort: 191
+        animations: [
+            {
+                name: "state1"
+                frames: [
+                    "bookstore_lamp_lit"
+                ]
+            }
+            {
+                name: "default"
+                frames: [
+                    "bookstore_inside_lit"
+                ]
+            }
+        ]
+        pos: (2227,138)
+    }
+    {
+        name: "bookStoreFoliage"
+        prop: 1
+        zsort: 64
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "bookstore_foliage"
+                ]
+            }
+        ]
+        pos: (2246,81)
+    }
+    {
+        name: "bookStoreRailLit"
+        prop: 1
+        zsort: 73
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "bookstore_rail"
+                ]
+            }
+            {
+                name: "default"
+                frames: [
+                    "bookstore_rail_lamp_lit"
+                ]
+            }
+            {
+                name: "state2"
+                frames: [
+                    "bookstore_rail_inside_lit"
+                ]
+            }
+        ]
+        pos: (2199,138)
+    }
+    {
+        name: "aStreetStreetLamps"
+        prop: 1
+        zsort: 82
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "streetlights"
+                ]
+            }
+        ]
+        pos: (848,160)
+    }
+    {
+        name: "aStreetParkPlants"
+        prop: 1
+        zsort: 102
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "park_plants"
+                ]
+            }
+        ]
+        pos: (138,165)
+    }
+    {
+        name: "bookStoreInsideLightsTrigger"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 86
+        hotspot: ((-40,-10),(63,22))
+        pos: (2200,86)
+        usepos: (0,-30)
+    }
+    {
+        name: "bookStoreLampTrigger"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 86
+        hotspot: ((-48,-29),(168,22))
+        pos: (2106,87)
+        usepos: (0,-30)
+    }
+    {
+        name: "bookStoreSign"
+        usedir: "DIR_BACK"
+        zsort: 86
+        hotspot: ((-16,-18),(14,16))
+        pos: (2102,145)
+        usepos: (6,-65)
+    }
+    {
+        name: "triggerGrass"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 121
+        hotspot: ((-187,-32),(50,3))
+        pos: (200,121)
+        usepos: (0,-30)
+    }
+    {
+        name: "triggerGrass2"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 115
+        hotspot: ((-62,-26),(53,-13))
+        pos: (749,115)
+        usepos: (0,-30)
+    }
+    {
+        name: "bookStoreExitSpot"
+        spot: 1
+        usedir: "DIR_LEFT"
+        pos: (2186,101)
+    }
+    {
+        name: "phone"
+        prop: 1
+        zsort: 87
+        animations: [
+            {
+                name: "here"
+                frames: [
+                    "phone_booth"
+                ]
+            }
+            {
+                name: "gone"
+                frames: [
+                ]
+            }
+        ]
+        pos: (1096,124)
+    }
+    {
+        name: "phoneBook"
+        prop: 1
+        zsort: 87
+        animations: [
+            {
+                name: "here"
+                frames: [
+                    "phone_book"
+                ]
+            }
+            {
+                name: "gone"
+                frames: [
+                ]
+            }
+        ]
+        pos: (1088,117)
+    }
+    {
+        name: "LaserdiscChaletRail"
+        prop: 1
+        zsort: 90
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "coffe_shop_rail"
+                ]
+            }
+        ]
+        pos: (1096,155)
+    }
+    {
+        name: "pergola"
+        prop: 1
+        zsort: 47
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "pergola"
+                ]
+            }
+        ]
+        pos: (2241,83)
+    }
+    {
+        name: "pergolaEyes1"
+        prop: 1
+        zsort: 100
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "eyes1_closed"
+                ]
+            }
+            {
+                name: "state1"
+                frames: [
+                    "eyes1_s"
+                ]
+            }
+        ]
+        pos: (1821,118)
+    }
+    {
+        name: "pergolaEyes2"
+        prop: 1
+        zsort: 101
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "eyes2_closed"
+                ]
+            }
+            {
+                name: "state1"
+                frames: [
+                    "eyes2_s"
+                ]
+            }
+        ]
+        pos: (1837,167)
+    }
+    {
+        name: "pergolaEyes3"
+        prop: 1
+        zsort: 101
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "eyes3_closed"
+                ]
+            }
+            {
+                name: "state1"
+                frames: [
+                    "eyes3_s"
+                ]
+            }
+        ]
+        pos: (1842,130)
+    }
+    {
+        name: "pergolaTrigger"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 61
+        hotspot: ((-71,8),(42,28))
+        pos: (1842,61)
+        usepos: (0,-30)
+    }
+    {
+        name: "bookStoreSaleSign"
+        usedir: "DIR_FRONT"
+        usedir2: "DIR_RIGHT"
+        zsort: 86
+        animations: [
+            {
+                name: "off"
+                frames: [
+                    "sandwich_board_off"
+                ]
+            }
+            {
+                name: "on"
+                frames: [
+                    "sandwich_board_on"
+                ]
+            }
+        ]
+        hotspot: ((-21,-26),(23,28))
+        pos: (1777,113)
+        usepos: (-37,-30)
+        usepos2: (-78,-34)
+    }
+    {
+        name: "bookStoreTrigger"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 64
+        hotspot: ((-195,-13),(-140,39))
+        pos: (2185,64)
+        usepos: (0,-30)
+    }
+    {
+        name: "dumpster"
+        usedir: "DIR_BACK"
+        zsort: 88
+        hotspot: ((-19,-23),(42,18))
+        pos: (1472,118)
+        usepos: (0,-31)
+    }
+    {
+        name: "leatherChair"
+        prop: 1
+        zsort: 113
+        animations: [
+            {
+                name: "here"
+                frames: [
+                    "chair"
+                ]
+            }
+            {
+                name: "gone"
+                frames: [
+                ]
+            }
+        ]
+        pos: (1728,113)
+    }
+    {
+        name: "PeterSpot"
+        spot: 1
+        usedir: "DIR_LEFT"
+        pos: (1727,87)
+    }
+    {
+        name: "LenoreSpot"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (1636,93)
+    }
+    {
+        name: "ChuckieSpot"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (1676,91)
+    }
+    {
+        name: "LenoreTalkSpot"
+        spot: 1
+        usedir: "DIR_BACK"
+        pos: (1623,85)
+    }
+    {
+        name: "PeterTalkSpot"
+        spot: 1
+        usedir: "DIR_RIGHT"
+        pos: (1679,88)
+    }
+    {
+        name: "ChuckieTalkSpot"
+        spot: 1
+        usedir: "DIR_BACK"
+        pos: (1661,88)
+    }
+    {
+        name: "phoneTrigger"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 90
+        hotspot: ((-246,-86),(52,118))
+        pos: (1197,90)
+        usepos: (0,-30)
+    }
+    {
+        name: "dropSpot"
+        spot: 1
+        usedir: "DIR_RIGHT"
+        pos: (670,76)
+    }
+    {
+        layer: 2
+        name: "star1"
+        prop: 1
+        zsort: 108
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (124,216)
+    }
+    {
+        layer: 2
+        name: "star2"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (175,236)
+    }
+    {
+        layer: 2
+        name: "star3"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (272,236)
+    }
+    {
+        layer: 2
+        name: "star4"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (309,220)
+    }
+    {
+        layer: 2
+        name: "star5"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (388,208)
+    }
+    {
+        layer: 2
+        name: "star6"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (412,182)
+    }
+    {
+        layer: 2
+        name: "star7"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (459,239)
+    }
+    {
+        layer: 2
+        name: "star8"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (488,213)
+    }
+    {
+        layer: 2
+        name: "star9"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (483,185)
+    }
+    {
+        layer: 2
+        name: "star10"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (38,214)
+    }
+    {
+        layer: 2
+        name: "star11"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (85,201)
+    }
+    {
+        layer: 2
+        name: "star12"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (105,233)
+    }
+    {
+        layer: 2
+        name: "star13"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (177,213)
+    }
+    {
+        layer: 2
+        name: "star14"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (269,208)
+    }
+    {
+        layer: 2
+        name: "star15"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (558,216)
+    }
+    {
+        layer: 2
+        name: "star16"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (609,236)
+    }
+    {
+        layer: 2
+        name: "star17"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (424,216)
+    }
+    {
+        layer: 2
+        name: "star18"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (706,236)
+    }
+    {
+        layer: 2
+        name: "star19"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (344,189)
+    }
+    {
+        layer: 2
+        name: "star20"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (370,231)
+    }
+    {
+        layer: 2
+        name: "star21"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (477,233)
+    }
+    {
+        layer: 2
+        name: "star22"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (539,233)
+    }
+    {
+        layer: 2
+        name: "star23"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (519,201)
+    }
+    {
+        layer: 2
+        name: "star24"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (647,191)
+    }
+    {
+        layer: 2
+        name: "star25"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (743,220)
+    }
+    {
+        layer: 2
+        name: "star26"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (778,189)
+    }
+    {
+        layer: 2
+        name: "star27"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (891,161)
+    }
+    {
+        layer: 2
+        name: "star28"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (703,208)
+    }
+    {
+        layer: 2
+        name: "star29"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (822,208)
+    }
+    {
+        layer: 2
+        name: "star30"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (804,231)
+    }
+    {
+        layer: 2
+        name: "star31"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (911,233)
+    }
+    {
+        layer: 2
+        name: "star32"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (882,200)
+    }
+    {
+        layer: 2
+        name: "star33"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (940,222)
+    }
+    {
+        layer: 2
+        name: "star34"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (858,216)
+    }
+    {
+        layer: 2
+        name: "star35"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (917,185)
+    }
+    {
+        layer: 2
+        name: "star36"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (893,239)
+    }
+    {
+        layer: 2
+        name: "star37"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (846,182)
+    }
+    {
+        layer: 2
+        name: "star38"
+        prop: 1
+        zsort: 108
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (213,191)
+    }
+    {
+        layer: 2
+        name: "star39"
+        prop: 1
+        zsort: 163
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (611,213)
+    }
+    {
+        layer: 2
+        name: "star40"
+        prop: 1
+        zsort: 163
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (536,196)
+    }
+    {
+        layer: 2
+        name: "star41"
+        prop: 1
+        zsort: 163
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (457,161)
+    }
+    {
+        layer: 2
+        name: "star42"
+        prop: 1
+        zsort: 163
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (524,178)
+    }
+    {
+        layer: 2
+        name: "star43"
+        prop: 1
+        zsort: 163
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+        pos: (493,174)
+    }
+    {
+        layer: 2
+        name: "starB1"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+        pos: (576,192)
+    }
+    {
+        layer: 2
+        name: "starB2"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+        pos: (64,233)
+    }
+    {
+        layer: 2
+        name: "starB3"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+        pos: (142,192)
+    }
+    {
+        layer: 2
+        name: "starB4"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+        pos: (380,176)
+    }
+    {
+        layer: 2
+        name: "starB5"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+        pos: (421,194)
+    }
+    {
+        layer: 2
+        name: "starB6"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+        pos: (498,233)
+    }
+    {
+        layer: 2
+        name: "starB7"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+        pos: (855,194)
+    }
+    {
+        layer: 2
+        name: "starB8"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+        pos: (814,176)
+    }
+    {
+        layer: 2
+        name: "starB9"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+        pos: (892,147)
+    }
+    {
+        layer: 2
+        name: "starB10"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+        pos: (458,147)
+    }
+    {
+        name: "saleSignLight"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (1790,80)
+    }
+    {
+        name: "streetLight1"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (160,85)
+    }
+    {
+        name: "streetLight2"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (526,83)
+    }
+    {
+        name: "nickelLight"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (676,138)
+    }
+    {
+        name: "streetLight3"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (870,84)
+    }
+    {
+        name: "postOfficeLight"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (1315,86)
+    }
+    {
+        name: "bookStoreLight"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (2175,102)
+    }
+    {
+        name: "bookStoreWindowLight"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (2327,82)
+    }
+    {
+        name: "willie"
+        prop: 1
+        zsort: 123
+        animations: [
+            {
+                name: "gone"
+                frames: [
+                ]
+            }
+            {
+                name: "here"
+                frames: [
+                    "willie"
+                ]
+            }
+        ]
+        pos: (1635,119)
+    }
+    {
+        name: "willieTrigger"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 99
+        hotspot: ((-31,-78),(190,44))
+        pos: (1583,99)
+        usepos: (0,-30)
+    }
+]
+room_bounds: ((0,0),(2600,240))
+room_size: (2600,240)
+scaling: [
+    "1.0@89"
+    "0.83@101"
+]
+walkboxes: [
+    {
+        polygon: "(5,88);(33,88);(53,88);(157,88);(164,103);(90,103);(82,103);(17,104);(18,110);(247,108);(248,104);(170,103);(177,88);(366,87);(375,101);(401,101);(406,86);(511,86);(518,87);(586,87);(596,99);(616,99);(624,87);(688,87);(715,100);(771,100);(790,87);(880,87);(885,86);(1144,86);(1130,103);(1045,103);(1046,106);(1131,106);(1151,87);(1173,87);(1176,94);(1275,94);(1277,93);(1180,93);(1178,87);(1589,87);(1621,87);(1634,90);(1687,90);(1718,81);(1808,81);(1993,87);(2084,72);(2162,104);(2184,102);(2195,102);(2238,97);(2221,97);(2164,101);(2090,70);(2269,70);(2579,89);(2583,77);(2268,66);(2066,66);(1987,76);(1889,78);(1831,78);(1801,70);(1564,70);(1565,77);(1563,84);(1543,84);(1543,77);(1544,70);(1241,70);(1241,76);(1239,84);(1214,84);(1213,76);(1214,70);(921,70);(922,77);(923,84);(850,84);(847,77);(846,70);(539,70);(539,77);(538,84);(514,84);(514,77);(515,70);(177,70);(176,77);(176,84);(176,84);(145,84);(144,77);(146,70);(5,70)"
+    }
+    {
+        polygon: "(82,103);(90,103);(53,88);(33,88)"
+    }
+    {
+        polygon: "(514,77);(539,77);(539,70);(515,70)"
+    }
+    {
+        polygon: "(144,77);(176,77);(177,70);(146,70)"
+    }
+    {
+        polygon: "(847,77);(922,77);(921,70);(846,70)"
+    }
+    {
+        polygon: "(1213,76);(1241,76);(1241,70);(1214,70)"
+    }
+    {
+        polygon: "(1543,77);(1565,77);(1564,70);(1544,70)"
+    }
+]

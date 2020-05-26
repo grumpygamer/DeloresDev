@@ -1,0 +1,85 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+local global_music_sid = 0
+local local_music_sid = 0
+local playing_pool = null
+local suspend_music = NO
+local suspend_ambients = NO
+
+local ambient_sid = 0
+local ambient_sound = 0
+
+function playMusic(music_id) {
+	stopSound(global_music_sid)
+	global_music_sid = playSound(music_id, GLOBAL_SOUND)
+	playing_pool = null
+	return global_music_sid
+}
+
+function stopMusic(music_sid=null) {
+	if (music_sid == null) music_sid = global_music_sid
+	playing_pool = null
+	return stopSound(music_sid)
+}
+
+function suspendMusic(state) {
+	suspend_music = state
+}
+
+function playRoomMusic(music_id) {
+	soundVolume(global_music_sid, 0.0)
+	stopSound(local_music_sid)
+	local_music_sid = playSound(music_id, GLOBAL_SOUND)
+}
+
+function stopRoomMusic(music_sid=null) {
+	if (music_sid == null) music_sid = local_music_sid
+	stopSound(local_music_sid)
+	soundVolume(global_music_sid, 1.0)
+}
+
+ function startMusicPool(pool) {
+	if (pool == null) return
+	if (suspend_music == YES) return
+	if (playing_pool == pool) return
+	stopSound(global_music_sid)
+	local music_sid = null
+	if (pool == "town") music_sid = SOUNDID(town_music) else
+	if (pool == "quickiepal") music_sid = SOUNDID(quickiepal_music) else
+	if (pool == "bathroom") music_sid = SOUNDID(bathroom_music) else
+	if (pool == "cityhall") music_sid = SOUNDID(cityhall_music) else
+	if (pool == "vista") music_sid = SOUNDID(vista_music) else
+	{
+		warning("Unknown music pool: ",pool)
+	}
+	if (SETTING(debug)) print("Playing music pool: ",pool)
+	playing_pool = pool
+	global_music_sid = playSound(music_sid, GLOBAL_SOUND)
+}
+
+function suspendAmbients(state=YES) {
+	suspend_ambients = state
+}
+
+function stopAmbient() {
+	ambient_sid = stopSound(ambient_sid)
+	ambient_sound = 0
+}
+
+function startAmbient(sound) {
+	if (sound == -1) {
+		ambient_sid = stopSound(ambient_sid)
+		ambient_sound = 0
+		return
+	}
+	if (suspend_ambients) return
+	if (sound == ambient_sound) return
+	ambient_sid = stopSound(ambient_sid)
+	ambient_sound = sound
+	ambient_sid = playSound(ambient_sound, GLOBAL_SOUND)
+}

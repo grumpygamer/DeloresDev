@@ -1,0 +1,688 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+local photos_taken = []
+
+
+DEFINE_ROOM("Inventory", {
+	no_jump = YES
+
+	// --------------------------------------------------------------------------------------------
+	glass = DEFINE_INVENTORY("glass", {
+		filled_with = NO
+		looked_at = NO
+		drink_count = 0
+		for_story =@ (filled_with == "water") ? "bad_water" : null
+		bad_story = [ "bad_water", SAY(11883,"A photo of an empty glass isn't good enough.") ]
+
+		icon = @filled_with?"glass_with_water":"glass"
+		name = @{
+			if (filled_with == "water") return looked_at ? TEXT(11976,"glass of polluted water") : TEXT(11977,"glass of water")
+			return "empty glass"
+		}
+		photo_name = @{
+			if (filled_with == "water") return looked_at ? TEXT(11978,"a glass of polluted water") : TEXT(11979,"a glass of water")
+			return "an empty glass"
+		}
+
+		VERB(lookat) {
+			if (filled_with) {
+				looked_at = YES
+				sayLine(SAY(11884,"It's a glass of polluted water!"))
+			} else {
+				sayLine(SAY(11885,"It's an empty glass."))
+			}
+		}
+		VERB_OK(drink) { return filled_with && !selectedActor?.on_ladder }
+		VERB(drink) {
+			drink_count++
+			if (drink_count < 4) {
+				actorTurnTo(delores, DIR_FRONT)
+				sayLine(randomfrom(SAY(11886,"I don't think that's smart."), SAY(11887,"I can barely stand the smell!"), SAY(11888,"That's not a good idea.")))
+			} else {
+				filledWith(null)
+				cutscene(@{
+					actorTurnTo(delores, DIR_BACK)
+					sayLine(SAY(11889,"Ok, here goes."))
+					breaktime(0.25)
+					breakwhiletalking(delores)
+					playAnimation(delores, "drinking_start")
+					breakwhileanimating(delores)
+					delores.sid <- playSoundAt(SOUNDID(drinking), delores)
+					playAnimation(delores, "drinking_loop", LOOPING)
+					breakwhilesound(delores.sid)
+					breaktime(5.5)
+					playAnimation(delores, "drinking_end")
+					breakwhileanimating(delores)
+					actorFace(delores, DIR_RIGHT)
+					actorCostume(delores, "DeloresVomitAnimation")
+					playAnimation(delores, "vomit")
+					breaktime(0.5)
+					delores.sid = playSoundAt(SOUNDID(vomit), delores)
+					sayLine(randomfrom(SAY(11890,"*huurrrll*"),
+									   SAY(11891,"*bleeeuuurrrggghh*"),
+									   SAY(11892,"*raaaaaallllllllllffff*")))
+					breakwhileanimating(delores)
+					actorCostume(delores, "DeloresAnimation")
+					breaktime(1)
+					sayLine(SAY(11893,"*sigh*"))
+					breaktime(2)
+					actorTurnTo(delores, DIR_FRONT)
+					sayLine(SAY(11894,"I feel better now."))
+				})
+			}
+		}
+
+		function filledWith(stuff) {
+			filled_with = stuff
+			if (filled_with) {
+				bad_story = null
+			} else {
+				bad_story = [ "bad_water", SAY(11895,"A photo of an empty glass isn't good enough.") ]
+			}
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	camera = DEFINE_INVENTORY("camera", {
+		icon = "polaroid_camera"
+		name = TEXT(11980,"camera")
+		shots_left = 10
+		reach = REACH_NONE
+		default_verb = "verb_check"
+
+		function takePhoto(subject) {
+			if (shots_left == 0 && DEBUG(unlimited_photos)) {
+				shots_left = 1
+			}
+			if (shots_left == 0) {
+				sayLine(SAY(11896,"I don't have any film left! Maybe I should go see Natalie."))
+				return
+			}
+			if (currentRoom == Bathroom and Bathroom.lightswitch.state != "on" && not (subject._key == "bathroomDoor" && Bathroom.bathroomDoor.state == "open")) {
+				sayLine(SAY(11897,"Even with the flash, there isn't enough light to take a picture."))
+				return
+			}
+			// Is the name the same...
+			{
+				local photo_subject_name = subject._key+(subject?._room_id?:0)+getValue(subject?.photo_name?(subject.photo_name):(subject.name))+getValue(subject?.for_story)
+  				if (photo_subject_name in photos_taken) {
+					if (isActor(subject)) {
+						sayLine(SAY(11898,"I already took a photo of them."))
+					} else {
+						sayLine(SAY(11899,"I already took a photo of that."))
+					}
+					return
+				}
+				if (!DEBUG(retake_photos)) {
+					arrayappend(photos_taken, photo_subject_name)
+				}
+			}
+			// if (not inInventory(subject)) {
+			// 	actorTurnTo(selectedActor, subject)
+			// }
+			local photo_taken = clone(Inventory.photo)
+			local article = getValue(subject?.article, TEXT(11981,"a"))
+			photo_taken.photo_of_key <- subject._key
+
+//			photo_taken.photo_of = ((article == "" || getValue(subject?.photo_name))?"":article+" ")+(getValue(subject?.photo_name?:subject.name))
+
+			if (article == "" || article == null || subject?.photo_name) {
+				photo_taken.photo_of = getValue(subject?.photo_name?:subject.name)
+			} else {
+				photo_taken.photo_of = "^"+TR(article)+" "+TR(getValue(subject?.photo_name?:subject.name))
+			}
+			local story = getValue(subject?.for_story)
+			if (Note.isActiveStory(story)) photo_taken.photo_good <- YES
+			if (subject?.keep_photo) photo_taken.keep_photo <- getValue(subject?.keep_photo)
+			subject.photo_taken <- getValue(subject?.photo_name?:subject.name)
+			GLOBAL(taking_photo) = YES
+			inputOff(@{
+				if (!inInventory(subject)) {
+					if (!subject?.photo_no_move) {
+						local pos = objectUsePos2(subject)
+						if (pos != point(0,0)) {
+							actorWalkTo(selectedActor, pos, objectUseDir2(subject))
+						} else {
+							if (currentRoom?[subject._key+"PhotoSpot"]) {
+								actorWalkTo(delores, currentRoom?[subject._key+"PhotoSpot"])
+							} else {
+								actorWalkTo(delores, subject)
+							}
+						}
+						breakwhiletalking(delores)
+						breakwhilewalking(delores)
+					} else {
+						actorTurnTo(delores, subject?.photo_dir?getValue(subject?.photo_dir):subject)
+					}
+				} else {
+					actorTurnTo(delores, DIR_BACK)
+					breakwhilewalking(delores)
+					breakwhiletalking(delores)
+					breaktime(0.1)
+				}
+				local position = "med"
+				if (getValue(subject?.photo_reach) == REACH_HIGH) position = "high"
+				if (getValue(subject?.photo_reach) == REACH_LOW) position = "low"
+				playAnimation(delores, "take_photo_out_"+position)
+				breakwhileanimating(delores)
+				playAnimation(delores, "take_photo_hold_"+position)
+				if (is_function(subject?.startTakingPhoto)) {
+					subject.startTakingPhoto(photo_taken)
+				}
+				breaktime(0.5)
+				playAnimation(delores, "take_photo_shot_"+position)
+				playSound(SOUNDID(take_photo))
+				overlayFlashColor(COLOR_WHITE, 0.25)
+				breakwhileanimating(delores)
+				playAnimation(delores, "take_photo_into_"+position)
+				breakwhileanimating(delores)
+				pickupObject(photo_taken)
+				playAnimation(delores, "stand")
+				if (is_function(subject?.doneTakingPhoto)) {
+					subject.doneTakingPhoto(photo_taken)
+				}
+				GLOBAL(taking_photo) = NO
+			})
+
+			local said_good = NO
+			if (story) {
+				photo_taken.photo_for_story <- story
+				foreach (story in strsplit(story, ",")) {
+					Note.takePhoto(story)
+				}
+				if (Note.isActiveStory(photo_taken.photo_for_story)) {
+					said_good = YES
+					bounceInventory(Inventory.assignment)
+					sayLine(randomfrom(SAY(11900,"That's a good shot!"),
+					                   SAY(11901,"Natalie will love this one!"),
+					                   SAY(11902,"This is perfect for the story!")))
+				}
+			}
+
+			if (!said_good) {
+				if (is_array(subject?.bad_story) && !photo_taken?.photo_good) {
+					local bad_story = subject.bad_story
+					if (is_string(bad_story?[0])) {
+						bad_story = [ [ subject.bad_story[0], subject.bad_story[1] ] ]
+					}
+					foreach (local story in bad_story) {
+						if (Note.isActiveStory(story[0]) && !Note.isStoryPhotographed(story[0])) {
+							sayLine(story[1])
+							break
+						}
+					}
+				}
+			}
+
+			shots_left--
+			if (shots_left == 2) {
+				breakwhiletalking()
+				sayLine(SAY(11903,"I only have two shots left."))
+			}
+			if (shots_left == 1) {
+				breakwhiletalking()
+				sayLine(SAY(11904,"I only have one shot left, I better make it count."))
+			}
+		}
+
+		VERB(check) {
+			sayLine(SAY(11905,"It's my trusting SnapTron3000™."))
+			if (shots_left == 10) sayLine(SAY(11906,"I have ten shots left."))
+			if (shots_left == 9) sayLine(SAY(11907,"I have nine shots left."))
+			if (shots_left == 8) sayLine(SAY(11908,"I have eight shots left."))
+			if (shots_left == 7) sayLine(SAY(11909,"I have seven shots left."))
+			if (shots_left == 6) sayLine(SAY(11910,"I have six shots left."))
+			if (shots_left == 5) sayLine(SAY(11911,"I have five shots left."))
+			if (shots_left == 4) sayLine(SAY(11912,"I have four shots left."))
+			if (shots_left == 3) sayLine(SAY(11913,"I have three shots left."))
+			if (shots_left == 2) sayLine(SAY(11914,"I have two shots left."))
+			if (shots_left == 1) sayLine(SAY(11915,"I have one shot left."))
+			if (shots_left == 0) sayLine(SAY(11916,"I'm out of film. Maybe I should go see Natalie."))
+		}
+
+		VERB_PRE(takephoto) {
+			if (noun2?.photo_no_move) {
+				startthread(takePhoto, noun2)
+				return NO
+			}
+		}
+		VERB_OK(takephoto) { return !noun2?.no_photo }
+		VERB(takephoto) {
+			takePhoto(noun2)
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	photo = DEFINE_INVENTORY("photo", {
+		icon = "photo1"
+		name = TEXT(11982,"photo")
+		is_photo = YES
+		photo_of = null
+
+		VERB(lookat) {
+			sayLine(format(TR(SAY(11917,"^It's a photo of %s.")), TR(photo_of)))
+		}
+		VERB_OK(toss) { return getValue(noun2?.is_trash) }
+		VERB(toss) {
+			if (this?.photo_good || this?.keep_photo) {
+				actorStopWalking(delores)
+				actorStopReach()
+				if (this?.keep_photo) {		// not necessarily a good photo, but needed for a puzzle (like the photo of the teller job)
+					sayLine(SAY(11918,"I'd better hold onto this one."))
+				} else {
+					sayLine(randomfrom(SAY(11919,"I'd better hold onto this one."),
+					                   SAY(11920,"Natalie will want this one."),
+					                   SAY(11921,"This was a great shot. I'm keeping it.")))
+				}
+			} else {
+				removeInventory(this)
+				playSoundAt(SOUNDID(toss_trash), noun2)
+			}
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	assignment = DEFINE_INVENTORY("assignment", {
+		icon = "tasks"
+		name = TEXT(11983,"my assignment")
+		article = ""
+
+		VERB(read) {
+			if (currentRoom == Bathroom && !Bathroom.lights_on) {
+				sayLine(SAY(11922,"It's too dark to read in here."))
+			} else {
+				enterRoom(Note)
+			}
+		}
+		VERB_OK(burnin) { return noun2 == AStreet.trashcan }
+		VERB(burnin) {
+			sayLine(SAY(11923,"I don't want to burn this, I need it to complete my assignment."))
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	letter = DEFINE_INVENTORY("letter", {
+		icon = @ has_stamps ? "letter_with_stamps" : "letter_no_stamps"
+		name = @ has_stamps ? TEXT(11984,"electricity bill with stamps") : TEXT(11985,"electricity bill")
+		has_stamps = NO
+
+		VERB(lookat) {
+			sayLine(SAY(11924,"It's the electricity bill from Leonard."), (has_stamps ? SAY(11925,"Ready to mail.") : SAY(11926,"It needs stamps.")))
+		}
+
+		VERB_OK(dropin) { return noun2?.accepts_mail }
+		VERB(dropin) {
+			if (has_stamps) {
+				sayLine(SAY(11927,"There! All mailed."))
+				playSound(SOUNDID(mailbox_drop))
+				removeInventory(Inventory.letter)
+				Bathroom.has_power = YES
+				GLOBAL(letter_mailed) = YES
+			} else {
+				actorStopReach()
+				sayLine(SAY(11928,"This needs stamps or it's not getting far."))
+			}
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	stamps = DEFINE_INVENTORY("stamps", {
+		icon = "stamps"
+		name = TEXT(11986,"stamps")
+		article = ""
+
+		VERB(lookat) {
+			sayLine(SAY(11929,"It's some stamps from Natalie."))
+		}
+
+		VERB_OK(puton) { return noun2 == Inventory.letter }
+		VERB(puton) {
+			noun2.has_stamps <- YES
+			sayLine(SAY(11930,"It's stamped and ready to mail."))
+			removeInventory(Inventory.stamps)
+			playSound(SOUNDID(small_splat))
+		}
+		VERB(lick) {
+			sayLine(SAY(11931,"Peppermint! Yum!"))
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	bottle = DEFINE_INVENTORY("bottle", {
+		icon = "bottle"
+		name = TEXT(11987,"bottle")
+		for_story = "trash"
+
+		VERB(lookat) {
+			sayLine(SAY(11932,"Smells like bum."))
+		}
+
+		VERB_OK(giveto) { return noun2 == leonard }
+		VERB(giveto) {
+			if (noun2 == leonard) {
+				cutscene(@{
+					QuickiePal.leonard_rambleTID = stopthread(QuickiePal.leonard_rambleTID)
+					actorWalkTo(leonard, QuickiePal.leonardSpot)
+					breakwhilewalking(leonard)
+					sayLine(leonard, SAY(11933,"Thanks for recycling! Here is your nickel deposit back."))
+					breakwhiletalking(leonard)
+					actorQuickReach(leonard, REACH_MED)
+					breaktime(0.25)
+					actorQuickReach(delores, REACH_MED)
+					removeInventory(Inventory.bottle)
+					pickupObject(Inventory.nickel)
+					QuickiePal.leonard_rambleTID = startthread(QuickiePal.leonardGreeting)
+				})
+			}
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	nickel = DEFINE_INVENTORY("nickel", {
+		icon = "nickel"
+		name = TEXT(11988,"nickel")
+		for_story = "jefferson"
+
+		VERB(lookat) {
+			sayLine(SAY(11934,"I wonder why they put presidents' heads on these and not cool people like Ada Lovelace."))
+		}
+
+		VERB_OK(giveto) { return noun2 == leonard }
+		VERB(giveto) {
+			if (noun2 == leonard) {
+				cutscene(@{
+					QuickiePal.leonard_rambleTID = stopthread(QuickiePal.leonard_rambleTID)
+					actorWalkTo(leonard, QuickiePal.leonardSpot)
+					breakwhilewalking(leonard)
+					sayLine(leonard, SAY(11935,"It's your nickel, you earned it by helping to clean up the environment!"))
+					QuickiePal.leonard_rambleTID = startthread(QuickiePal.leonardGreeting)
+				})
+			}
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	fortranBook = DEFINE_INVENTORY("fortranBook", {
+		icon = "fortran_book"
+		name = TEXT(11989,"Fortran book")
+		photo_name = TEXT(11990,"a Fortran book")
+		for_story = "dead_languages"
+
+		VERB(read) {
+			if (currentRoom == Bathroom && !Bathroom.lights_on) {
+				sayLine(SAY(11936,"It's too dark to read in here."))
+			} else {
+				enterRoom(Book)
+			}
+		}
+		function doneTakingPhoto(photo) {
+			BookStore.fortranBook.seen = YES	// So Morena doesn't talk about this book next time
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	jailKey = DEFINE_INVENTORY("jailKey", {
+		icon = "jail_key"
+		name = TEXT(11991,"key")
+
+		VERB(lookat) {
+			sayLine(SAY(11937,"It's a large key."))
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	screwdriver = DEFINE_INVENTORY("screwdriver", {
+		icon = "screwdriver"
+		name = TEXT(11992,"screwdriver")
+		shock_count = 0
+
+		VERB(lookat) {
+			sayLine(SAY(11938,"It's a screwdriver."))
+		}
+
+		VERB_OK(jab_with) { return noun2 == Diner.radio || noun2 == SheriffsOffice.radio || noun2 == Bathroom.lightswitch }
+		VERB(jab_with) {
+			if (currentRoom == Bathroom && !Bathroom.lights_on) {
+					sayLine(SAY(11939,"It's too dark to see."))
+					return
+			}
+			cutscene(@{
+				breaktime(0.10)
+				actorStopReach()
+				if (noun2 == Diner.radio || noun2 == SheriffsOffice.radio) {
+					if (noun2.state == "on") noun2.verb_turn_off()
+				}
+				playSound(SOUNDID(electric_shock))
+				playAnimation(delores, "electrocution_zap_back")
+				breakwhileanimating(delores)
+				playAnimation(delores, "stand")
+				if (inInventory(Inventory.strangeDevice) && Inventory.strangeDevice.has_power == NO) {
+					Inventory.strangeDevice.has_power = YES
+					sayLine(SAY(11940,"Ouch! “Philipp's Dangerous Dövice” seems to have come alive."))
+					return
+				}
+				shock_count++
+				if (shock_count == 1) {
+					sayLine(SAY(11941,"Ouch!"))
+				} else
+				if (shock_count == 2) {
+					sayLine(SAY(11942,"Ouch! Why did I do that again!"))
+				} else
+				if (shock_count == 3) {
+					sayLine(SAY(11943,"Ouch! Why do I keep doing that?"))
+				} else {
+					sayLine(SAY(11944,"Ouch! Ouch! Ouch!"))
+				}
+			})
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	strangeDevice = DEFINE_INVENTORY("strangeDevice", {
+		icon = "strange_device"
+		name = TEXT(11993,"“Philipp's Dangerous Dövice”")
+		has_power = NO
+		bad_story = [ "mansion", SAY(11945,"The demolition photo needs to be way more dramatic.") ]
+
+		VERB(examine) {
+			if (Vista.mansion.sploded) {
+				sayLine(SAY(11946,"I think I've caused enough destruction for one day."))
+				return
+			}
+			if (has_power) {
+				sayLine(SAY(11947,"Armed and ready to go!"), SAY(11948,"I feel like this is a bad course of action. I had fond memories of growing up in the Mansion mansion."))
+			} else {
+				sayLine(SAY(11949,"Good thing its batteries are dead. I have fond memories of growing up in the Mansion mansion."))
+			}
+		}
+
+		VERB_OK(activate) { return  !selectedActor?.on_ladder }
+		VERB(activate) {
+			if (Vista.mansion.sploded) {
+				sayLine(SAY(11950,"I think I've blown up enough things for today."))
+				return
+			}
+			actorStopWalking(selectedActor)
+			if (has_power) {
+				actorTurnTo(delores, DIR_BACK)
+				sayLine(SAY(11951,"OK, here goes nothing. I'm going to activate it."))
+				if (currentRoom == Vista) {
+					cutscene(@{
+						actorWalkTo(delores, Vista.mansion)
+						Vista.mansion.sploded = YES
+						Vista.mansion.bad_story = null
+						breakwhiletalking()
+						breakwhilewalking(delores)
+						breaktime(1.0)
+						actorQuickReach(delores, REACH_MED)
+						playSound(SOUNDID(button_click))
+						breaktime(0.5)
+						objectState(Vista.mansion, "explode")
+						playSoundAt(SOUNDID(big_distant_explosion), Vista.mansion)
+						breakwhileanimating(Vista.mansion)
+						objectState(Vista.mansion, "smoking")
+						breaktime(1.0)
+						actorTurnTo(delores, DIR_FRONT)
+						breaktime(0.1)
+						playAnimation(delores, "shocked")
+						breaktime(1.7)
+						playAnimation(delores, "stand")
+						breaktime(0.3)
+						sayLine(SAY(11952,"That's a lot of growing up in the Mansion mansion memories up in smoke."))
+						breakwhiletalking(delores)
+						playAnimation(delores, "full_cry", YES)
+						sayLine(delores, SAY(11953,"*sob*"))
+						breakwhiletalking(delores)
+						playAnimation(delores, "stand_cry")
+						breaktime(0.1)
+						playAnimation(delores, "stand")
+						sayLine(SAY(11954,"I guess it's the bank's problem now."))
+					})
+				} else {
+					cutscene(@{
+						breakwhiletalking()
+						playSound(SOUNDID(button_click))
+						actorQuickReach(delores, REACH_MED)
+						breaktime(1.0)
+						sayLine(SAY(11955,"Hmmm."))
+						breakwhiletalking()
+						playSound(SOUNDID(button_click))
+						actorQuickReach(delores, REACH_MED)
+						breaktime(0.5)
+						playSound(SOUNDID(button_click))
+						actorQuickReach(delores, REACH_MED)
+						sayLine(SAY(11956,"It has power."))
+						breakwhiletalking()
+						for (local i = 1..4) {
+							playSound(SOUNDID(button_click))
+							actorQuickReach(delores, REACH_MED)
+							breaktime(0.5)
+						}
+						breaktime(0.5)
+						for (local i = 1..4) {
+							playSound(SOUNDID(button_click))
+							actorQuickReach(delores, REACH_MED)
+							breaktime(0.5)
+						}
+						sayLine(SAY(11957,"What am I forgetting?"), SAY(11958,"Am I not close enough?"))
+						breakwhiletalking()
+						for (local i = 1..5) {
+							playSound(SOUNDID(button_click))
+							actorQuickReach(delores, REACH_MED)
+							breaktime(0.5)
+						}
+						sayLine(SAY(11959,"I give up."))
+					})
+				}
+			} else {
+				cutscene(@{
+					breakwhiletalking()
+					playSound(SOUNDID(button_click))
+					actorQuickReach(delores, REACH_MED)
+					breaktime(0.5)
+					playSound(SOUNDID(button_click))
+					actorQuickReach(delores, REACH_MED)
+					breaktime(0.5)
+					playSound(SOUNDID(button_click))
+					actorQuickReach(delores, REACH_MED)
+					breaktime(0.5)
+					sayLine(SAY(11960,"Good thing its batteries are dead. I have fond memories of growing up in the Mansion mansion."))
+				})
+			}
+		}
+	})
+	// --------------------------------------------------------------------------------------------
+	thimbleconPoster = DEFINE_INVENTORY("thimbleconPoster", {
+		icon = "thimblecon_poster"
+		name = TEXT(11994,"ThimbleCon poster")
+		for_story = "thimblecon"
+
+		VERB(lookat) {
+			sayLine(SAY(11961,"I'm sure it will be a collectible in 30 years."))
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	ransomeCandy = DEFINE_INVENTORY("ransomeCandy", {
+		icon = "ransome_dispenser"
+		name = TEXT(11995,"candy dispenser")
+		bad_story = [[ "pillow_bears", SAY(11962,"Definitely not a new toy craze. I had one when I was a kid.") ],
+								 [ "ransome", SAY(11963,"It's a celebrity's head, but kind of demeaning being a candy dispenser. I need a better photo.") ] ]
+		eaten = NO
+
+		VERB(lookat) {
+			sayLine(SAY(11964,"I sure loved these when I was a kid."))
+		}
+		VERB_OK(eat) { return eaten < 2 && !selectedActor?.on_ladder }
+		VERB(eat) {
+			if (!eaten) {
+				eaten++
+				inputOff(@{
+					actorTurnTo(delores, DIR_BACK)
+					breaktime(0.25)
+					actorQuickReach(delores, REACH_MED)
+					breaktime(0.75)
+					playSoundAt(SOUNDID(candy_crunch), delores)
+					breaktime(1.0)
+					sayLine(SAY(11965,"Ouch!! My tooth!"))
+				})
+			} else {
+				eaten++
+				sayLine(SAY(11966,"No way. One broken tooth is enough."))
+			}
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	specksOfDust = DEFINE_INVENTORY("specksOfDust", {
+		icon = "speck_of_dust_1"
+		name = TEXT(11996,"speck of dust")
+		dust_count = 0
+		photo_name = TEXT(11997,"a speck of dust")
+
+		function addDust() {
+			dust_count += 1
+			if (dust_count > 1) {
+				name = format(TR(SAY(11967,"^%d specks of dust")), dust_count)
+				photo_name = format(TR(SAY(11968,"^%d specks of dust")), dust_count)
+			}
+			if (dust_count <= 10) {
+				icon = "speck_of_dust_"+dust_count
+			} else {
+				icon = "speck_of_dust_"+random(7,10)
+			}
+			refreshInventory()
+		}
+
+		function doneTakingPhoto(photo_taken) {
+			if (Note.isActiveStory("cleaning_up") && !Note.isStoryPhotographed("cleaning_up")) {
+				if (this.dust_count < SETTING(specks_of_dust_complete)) {
+					sayLine(SAY(11969,"I don't think this is enough dust for Natalie."),
+					        format(TR(SAY(11970,"^She probably needs around %d specks of dust."), SETTING(specks_of_dust_complete))))
+				} else {
+					sayLine(randomfrom(SAY(11971,"That's a good shot!"),
+					                   SAY(11972,"Natalie will love this one!"),
+					                   SAY(11973,"This is perfect for the story!")))
+					photo_taken.photo_for_story <- "cleaning_up"
+					photo_taken.photo_good <- YES
+					Note.takePhoto("cleaning_up")
+					bounceInventory(Inventory.assignment)
+				}
+			}
+		}
+
+		VERB(lookat) {
+			if (dust_count == 1) {
+				sayLine(SAY(11974,"I have 1 speck of dust."))
+			} else {
+				sayLine(format(TR(SAY(11975,"^I have %d specks of dust.")), dust_count))
+			}
+		}
+	})
+
+})

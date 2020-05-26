@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="EffectPreset" id="{8dd4f8e7-fb25-4f80-870c-ce2aae426b16}">
+		<property name="name">
+			<value>Normal Room</value>
+		</property>
+		<relationship name="folder">
+			<destination>{098e666e-cbea-468e-8e92-d9e09f84f1e4}</destination>
+		</relationship>
+		<relationship name="effect">
+			<destination>{bcd066d9-b672-4ef2-b048-806955628d7a}</destination>
+		</relationship>
+	</object>
+	<object class="SpatialiserEffect" id="{bcd066d9-b672-4ef2-b048-806955628d7a}">
+		<property name="minimumDistance">
+			<value>70</value>
+		</property>
+		<property name="maximumDistance">
+			<value>500</value>
+		</property>
+	</object>
+</objects>

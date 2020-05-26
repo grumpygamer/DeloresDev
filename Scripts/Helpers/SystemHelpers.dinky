@@ -1,0 +1,1258 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+local hold_to_move = NO
+
+// These are system level functions for the UI, etc.
+// Please don't hack these to add new functionality or to fix bugs without checking first.
+
+base_object <- {
+	_tostring = function() {
+		if ("_key" in this) {
+			return ("_id" in this) ? this._key+"("+this._id+")" : this._key
+		} else {
+			return "(?object?)"
+		}
+	}
+	function enter() {}
+	function exit() {}
+}
+
+/*{{ ------------------------------------------------------------------------------------
+@section gamesystem_comands
+@title Game System Commands
+}}*/
+
+function _main() {
+	main()
+}
+
+/*{{ ------------------------------------------------------------------------------------
+@func getValue(value)
+@desc Returns a `value` that is `value` or `value()`
+ This allows string fields in objects to stored as
+ 	name = "bob"
+ or
+ 	name = @() { return "bob" }
+}}*/
+
+function getValue(value, def=null) {
+	if (value == null) return def
+	if (is_function(value)) {
+		value = value()
+	}
+	return value?value:null
+}
+
+function _defineRoom(name, room) {
+	if (!is_string(name)) {
+		error("Room name isn't a string")
+	}
+	if (!is_table(room)) {
+		error("Room "+name+" isn't a valid table.")
+	}
+	room.sheet <- name
+	if (name in roottable()) {
+		error("Room "+name+" already defined.")
+	}
+	roottable()[name] <- room
+
+	// See if there are any inventory objects.
+	foreach (local key,value in room) {
+		if (is_table(value)) {
+			if ("icon" in value && "name" in value) {
+				registerVerbs(value)
+//				setdelegate(value, base_object)
+			}
+		}
+	}
+
+	arrayappend(ROOT(master_room_list), name)
+	return room
+}
+
+function _defineObject(object) {
+	object._tostring <- function() {
+		if ("_key" in this) {
+			return ("_id" in this) ? this._key+"("+this._id+")" : this._key
+		} else {
+			return "(?object?)"
+		}
+	}
+	//setdelegate(object, base_object)
+	return object
+}
+
+/*{{ ------------------------------------------------------------------------------------------------------------------------------
+@section home
+@title Delores Game Scripting Docs
+TBD
+COMING SOON
+}}*/
+
+/*{{ ------------------------------------------------------------------------------------------------------------------------------
+@section gamesystem_callbacks
+@title Game System Callbacks
+ The following functions are called by the system in response to various events.  These should never be called
+ directly.  Most of these functions then pass control to other functions that are meant to be modified with game logic.
+ For example:  The system callback `_clickedAt()` calls `clickedAt()` and any game logic should be placed there.
+
+/*{{ ------------------------------------------------------------------------------------------------------------------------------
+@func _initRoom(room)
+@desc Called only once when the room is inited.
+ This function then calls room.init().
+}}*/
+
+function _initRoom(room) {
+	log3("Initing room"+room?._key)
+	room.exit_at_time <- 0
+	room.enter_at_time <- 0
+	if (is_function(room?.init)) {
+		room.init()
+	}
+}
+
+/*{{ ------------------------------------------------------------------------------------------------------------------------------
+@func _initObject(object)
+@desc Called only once when the object is inited.
+ This function then calls `object.init()`.  It also sets up door verbs if
+ `object.door_verbs` is set and then registers all verbs found in the object.
+}}*/
+
+function _initObject(object) {
+	log3("Initing object ", object._key)
+	if (is_function(object?.init)) {
+		object.init()
+	}
+	if ("state" !in object) object.state <- null
+	if (object?.door_verbs == YES) {
+		if ("reach" !in object) object.reach <- REACH_MED
+		if ("autoclose" !in object) object.autoclose <- YES
+		if ("state" !in object) object.state <- object?.no_animation ? "default" : "closed"
+		if ("door_trigger" in object) {
+			local trigger = is_function(object.door_trigger) ? object.door_trigger() : object.door_trigger
+			if (is_table(trigger)) {
+				trigger.trigger <- function(actor, state) {
+					if (state == TRIGGER_ENTER) {
+						quickiePalDoor.verb_open()
+					} else
+					if (state == TRIGGER_LEAVE) {
+						quickiePalDoor.verb_close()
+					}
+				}
+			}
+		}
+		if ("default_verb" !in object) object.default_verb <- object?.no_animation ? "verb_use" : "verb_open"
+		if ("stateChange" in object) object._stateChange <- object.stateChange
+		object.stateChange <- function() {
+			if (this.default_verb == "verb_open" || this.default_verb == "verb_close" || this.default_verb == "verb_use") {
+				if (this.state == "open") {
+					this.default_verb = "verb_use"
+				} else
+				if (this.state == "closed") {
+					this.default_verb = "verb_open"
+				}
+			}
+			if (this?._stateChange) this._stateChange()
+		}
+		if ("verb_open" !in object) {
+			object.verb_open <- function(use_with=null) {
+				if (this.state != "open") {
+					objectState(this, this?.no_animation ? "default" : "open")
+					local to_door = is_function(this?.to_door) ? this?.to_door() : null
+					if (to_door) {
+						if (to_door?.no_animation) {
+							to_door.default_verb <- "verb_use"
+						} else {
+							objectState(to_door, "open")
+							to_door.default_verb <- "verb_use"
+						}
+					}
+					if (this?.door_sound) {
+						playSound(this.door_sound?.open)
+					} else {
+						playSound(SOUNDID(doorOpen))
+					}
+				}
+				this.default_verb <- "verb_use"
+			}
+		}
+		if ("verb_close" !in object) {
+			object.verb_close <- function(use_with=null) {
+				if (state != "closed") {
+					objectState(this, this?.no_animation ? "default" : "closed")
+					local to_door = is_function(this?.to_door) ? this?.to_door() : null
+					if (to_door) {
+						if (to_door?.no_animation) {
+							to_door.default_verb <- "verb_use"
+						} else {
+							objectState(to_door, "closed")
+							to_door.default_verb <- "verb_open"
+						}
+					}
+					if (this?.door_sound) {
+						playSound(this.door_sound?.close)
+					} else {
+						playSound(SOUNDID(doorOpen))
+					}
+				}
+				this.default_verb <- this?.no_animation ? "verb_use" : "verb_open"
+			}
+		}
+		if ("okverb_open" !in object) {
+			object.okverb_open <- function(noun2=null) { return state != "open" && !this?.no_animation}
+		}
+		if ("okverb_close" !in object) {
+			object.okverb_close <- function(noun2=null) { return state == "open"  && !this?.no_animation}
+		}
+
+		if ("okverb_use" !in object) {
+			object.okverb_use <- function(noun2=null) { return state == "open" || this?.no_animation}
+		}
+		if ("verb_use" !in object) {
+			object.verb_use <- function(use_with=null) {
+				if (this?.state == "open" || this?.no_animation) {
+					if (this?.to_door) exitRoomFromDoor(this, to_door())
+				}
+			}
+		}
+	}
+
+	if (object?.on_off_verbs == YES) {
+		if ("default_verb" !in object) object.default_verb <- "verb_turn_on"
+		if ("stateChange" in object) object._stateChange <- object.stateChange
+		object.stateChange <- function() {
+			if (this.default_verb == "verb_turn_off" || this.default_verb == "verb_turn_on") {
+				if (this.state == "on") {
+					this.default_verb = "verb_turn_off"
+				} else
+				if (this.state == "off") {
+					this.default_verb = "verb_turn_on"
+				}
+			}
+			if (this?._stateChange) this._stateChange()
+		}
+		if ("okverb_turn_off" !in object) {
+			object.okverb_turn_off <- function(noun2=null) { return state == "on" }
+		}
+		if ("okverb_turn_on" !in object) {
+			object.okverb_turn_on <- function(noun2=null) { return state == "off" }
+		}
+		if ("verb_turn_on" !in object) {
+			object.verb_turn_on <- function(noun2=null) { objectState(this, "on") }
+		}
+		if ("verb_turnoff" !in object) {
+			object.verb_turn_off <- function(noun2=null) { objectState(this, "off") }
+		}
+	}
+
+	if (object?.open_close_verbs == YES) {
+		if ("default_verb" !in object) object.default_verb <- "verb_open"
+		if ("stateChange" in object) object._stateChange <- object.stateChange
+		object.stateChange <- function() {
+			if (this.default_verb == "verb_close" || this.default_verb == "verb_open") {
+				if (this.state == "open") {
+					this.default_verb = "verb_close"
+				} else
+				if (this.state == "closed") {
+					this.default_verb = "verb_open"
+				}
+			}
+			if (this?._stateChange) this._stateChange()
+		}
+		if ("okverb_open" !in object) {
+			object.okverb_open <- function(noun2=null) { return state == "closed" }
+		}
+		if ("okverb_close" !in object) {
+			object.okverb_close <- function(noun2=null) { return state == "open" }
+		}
+		if ("verb_open" !in object) {
+			object.verb_open <- function(noun2=null) { objectState(this, "open") }
+		}
+		if ("verb_close" !in object) {
+			object.verb_close <- function(noun2=null) { objectState(this, "closed") }
+		}
+	}
+
+	if (object?.drawer_verbs == YES) {
+		if ("default_verb" !in object) object.default_verb <- object?.no_animation ? "verb_lookat" : "verb_open"
+		if ("name" !in object) object.name <- "drawer"
+		if ("stateChange" in object) object._stateChange <- object.stateChange
+		object.stateChange <- function() {
+			if (this.default_verb == "verb_close" || this.default_verb == "verb_open") {
+				if (this.state == "open") {
+					this.default_verb = "verb_close"
+				} else
+				if (this.state == "closed") {
+					this.default_verb = "verb_open"
+				}
+			}
+			if (this?._stateChange) this._stateChange()
+		}
+		if ("verb_open" !in object) {
+			object.verb_open <- function(use_with=null) {
+				if (this.state != "open") {
+					objectState(this, "open")
+					if (is_array(this?.sound)) {
+						playSound(this.sound?.open)
+					} else {
+						playSound(SOUNDID(drawerOpen))
+					}
+				}
+			}
+		}
+		if ("verb_close" !in object) {
+			object.verb_close <- function(use_with=null) {
+				if (state != "closed") {
+					objectState(this, "closed")
+					if (is_array(this?.sound)) {
+						playSound(this.door_sound?.close)
+					} else {
+						playSound(SOUNDID(drawerClose))
+					}
+				}
+			}
+		}
+		if ("okverb_lookin" !in object) {
+			object.okverb_lookin <- function(noun2=null) { return state == "open" }
+		}
+		if ("okverb_lookat" !in object) {
+			object.okverb_lookat <- function(noun2=null) { return state != "open" }
+		}
+		if ("okverb_open" !in object) {
+			object.okverb_open <- function(noun2=null) { return state != "open" }
+		}
+		if ("okverb_close" !in object) {
+			object.okverb_close <- function(noun2=null) { return state == "open" }
+		}
+		if ("verb_lookat" !in object) {
+			object.verb_lookat <- function(use_with=null) { sayLine("It's just a drawer.") }
+		}
+	}
+
+	registerVerbs(object)
+}
+
+/*{{ ------------------------------------------------------------------------------------------------------------------------------
+@func _enterRoom(room, stage)
+@desc	Called when the room is entered.
+ Based on the `stage`, this function calls `room.preEnter()`, `room.enter()` and `room.postEnter()`.
+}}*/
+
+function _enterRoom(room, stage) {
+	// Before objects/actors are created...
+	if (stage == 1) {
+		closeVerbs()
+		hold_to_move = NO
+		if (SETTING(debug)) print("Entering "+room?._key)
+		::currentRoom <- room
+		if (is_function(room?.preEnter)) {
+			room.preEnter()
+		}
+	} else
+	// After Objects and before Actors...
+	if (stage == 2) {
+		if (room?.closeup) {
+			startCloseup()
+		}
+		if (room?.music_pool) {
+			startMusicPool(room?.music_pool)
+		}
+		if (room?.ambient_sound) {
+			startAmbient(room?.ambient_sound)
+		} else {
+			stopAmbient()
+		}
+		room.enter_at_time <- gametime()
+		if (is_function(room?.enter,0)) {
+			room.enter()
+		} else
+		if (is_function(room?.enter,1)) {
+			room.enter(null)
+		}
+	} else
+	// After Actors...
+	if (stage == 3) {
+		if (is_function(room?.postEnter)) {
+			room.postEnter()
+		}
+		if (not room?.closeup) createSpeckOfDust(room)
+	}
+}
+
+/*{{ ------------------------------------------------------------------------------------------------------------------------------
+@func _exitRoom(room, stage)
+@desc Called when exiting a room
+ This function calls `room.exit()`.
+}}*/
+
+function _exitRoom(room, stage) {
+	_cancleAllHovers()
+	closeVerbs()
+	stopLocalSounds()
+	if (stage == 1) {
+	} else
+	// After Objects...
+	if (stage == 2) {
+		if (room?.closeup) endCloseup()
+		room.exit_at_time <- gametime()
+		if (is_function(room?.exit)) {
+			room.exit()
+		}
+	}
+}
+
+/*{{ ------------------------------------------------------------------------------------------------------------------------------
+@func _enterObject(object)
+@desc Called for each object when entering a room.
+ Called after room.preEnter() but before room.enter()
+
+ If the object is a trigger and has trigger code, it is added and enabled.
+
+ Sounds defined with a `object.sound` are started, after which
+ `object.enter()` is called. Then objects that have a `state` variable
+ are set to the last frame of that animation.
+
+ If the sound is a FMOD spatially aware, it won't be heard more than 500 pixels away (by default).
+ The can be changed in FMOD.
+}}*/
+
+function _enterObject(object) {
+	if (object?._type == OBJECT_ACTOR) {
+		startBlinking(object)
+		if (is_function(object?.enter)) {
+			object.enter()
+		}
+		return
+	}
+	if (object?._type == OBJECT_TRIGGER) {
+		if (object?.trigger || object?.triggerEnter || object?.triggerLeave) {
+			addTrigger(object)
+			if (object?.trigger_on == null) {
+				enableTrigger(object, TRIGGER_ENTER|TRIGGER_LEAVE)
+			} else {
+				enableTrigger(object, object.trigger_on)
+			}
+ 		}
+		return
+	}
+	if (object?.sound) {
+		if (is_function(object.sound)) {
+			object._soundid <- playSoundAt(object.sound(), object)
+		} else {
+			object._soundid <- playSoundAt(object.sound, object)
+		}
+	}
+	if (is_function(object?.enter)) {
+		object.enter()
+	}
+	if ("state" in object) {
+		objectState(object, object.state, INSTANT)	// INSTANT = jump to last frame unless it's a looping animation.
+	} else {
+		objectState(object, 0, INSTANT)
+	}
+	registerVerbs(object)
+}
+
+/*{{ ------------------------------------------------------------------------------------------------------------------------------
+@func _enterObject(object)
+@desc Called for each actor when entering a room.
+ This is also called when an actor is placed in the current room.
+}}*/
+
+function _enterActor(actor) {
+	actor._arrived_time <- gametime()
+	startBlinking(actor)
+	startActorIdles(actor)
+	if (is_function(actor?.enter)) {
+		actor.enter()
+	}
+}
+
+/*{{ ------------------------------------------------------------------------------------------------------------------------------
+@func _exitObject(room, stage)
+@desc Called for each object or actor when exiting a room.
+ This function calls `object.exit()` then stops any sound playing that is using `object._soundid`.
+}}*/
+
+function _exitObject(object) {
+	if (object?._soundid) {
+		stopSound(object._soundid)
+	}
+	if (object?._type == OBJECT_ACTOR) {
+		stopthread(object?.reach_tid)
+		if (is_function(object?.exit)) {
+			object.exit()
+		}
+		return
+	}
+	if (is_function(object?.exit)) {
+		object.exit()
+	}
+}
+
+/*{{ ------------------------------------------------------------------------------------------------------------------------------
+@func _keyDown(key, flags)
+@desc Called when a key goes down.
+ This function calls `keyDown()` and all game related logic should happen in there.
+ The parameter `flags` holds the modifier keys such as `MOD_SHIFT` and `MOD_CONTROL` and can be checked using
+
+ 	if (flags&MOD_SHIFT) { ... }
+
+ There is no built in functionality for key repeats.
+}}*/
+
+function _keyDown(key, flags) {
+
+	if (SETTING(debug) &&  key == 'm') {
+		print("--- marker ---")
+	}
+
+	if (isComfirmationShowing()) return
+
+	if (key == '[') {
+		soundMixVolume("music", (as_int(soundMixVolume("music")*10)-1)/10.0)
+		if (SETTING(debug)) print("Music volume: ", soundMixVolume("music"))
+		return
+	}
+	if (key == ']') {
+		soundMixVolume("music", (as_int(soundMixVolume("music")*10)+1)/10.0)
+		if (SETTING(debug)) print("Music volume: ", soundMixVolume("music"))
+		return
+	}
+
+	if (_onkey_dispatch) {
+		return _onkey_dispatch(key, flags)
+	}
+
+	if (key == KEY_SPACE) {
+		if (pauseGame()) {
+			pauseGame(NO)
+		} else {
+			pauseGame(YES)
+		}
+		return
+	}
+
+	if (SETTING(debug)) {
+		if (key == 'j' && (flags & MOD_CONTROL) && (flags & MOD_ALT)) {
+			print("Start room cleared.")
+			setuserpref("startRoom", null)
+			setuserpref("startPos", null)
+		} else
+		if (key == 'j' && (flags & MOD_CONTROL)) {
+			if (currentRoom) {
+				print("Start room ",currentRoom._key," set.")
+				setuserpref("startRoom", currentRoom._key)
+				setuserpref("startPos", actorPos(selectedActor))
+			}
+		}
+	}
+
+	if (key == KEY_ESC) {
+		if (inCutscene()) {
+			if (cutsceneCanOverride()) {
+				cutsceneDoOverride()
+				return HANDLED
+			}
+		} else
+		if (pauseGame()) {
+			pauseGame(NO)
+			return HANDLED
+		}
+	}
+
+	if (inputState() == INPUT_OFF) return
+
+	if (SETTING(tester) || SETTING(debug)) {
+		if (key == 'o' && flags&MOD_CONTROL) {
+			if (optionsShowing()) {
+				closeOptions()
+			} else {
+				openDebugOptions()
+			}
+			return
+		}
+	}
+
+	if (key == 'o') {
+		if (optionsShowing()) {
+			closeOptions()
+		} else {
+			openOptions()
+		}
+		return
+	}
+
+	if (key == 'h') {
+		if (optionsShowing()) {
+			closeOptions()
+		} else {
+			openHelp()
+		}
+		return
+	}
+
+	if (DEBUG(jump) || SETTING(debug)) {
+		if (key == 'j' && (flags&(MOD_COMMAND|MOD_ALT))) {
+			debugShowroomJump()
+		}
+	}
+	if (DEBUG(pickup) || SETTING(debug)) {
+		if (key == 'p' && (flags&(MOD_COMMAND|MOD_ALT))) {
+			debugShowPickup()
+		}
+	}
+
+	if (is_function(currentRoom?.keyDown)) {
+		if (currentRoom.keyDown(key, flags) == HANDLED) return
+	}
+	if (is_function(roottable()?.keyDown)) ::keyDown(key, flags)
+}
+
+/*{{ ------------------------------------------------------------------------------------------------------------------------------
+@func _keyUp(key, flags)
+@desc Called when a key comes up.
+ For most situations you only need to monitor `_keyDown()`
+}}*/
+
+function _keyUp(key, flags) {
+	if (_onkey_dispatch) return
+	if (inputState() == INPUT_OFF) return
+	if (roottable()?.keyUp) ::keyUp(key, flags)
+}
+
+/*{{ ------------------------------------------------------------------------------------------------------------------------------
+@func _actorArrived(actor)
+@desc Called when an actor reaches their final destination.
+ This function is not called as the actor walks around walkboxes and the actor might not stop
+ close to where they were told to walk. If the room is exited while an actor is walking, they
+ will not get this callback.  This also calls the optional `actor.arrived()`.
+}}*/
+
+function _actorArrived(actor) {
+	if (actor == selectedActor) closeVerbs()
+	actor._arrived_time <- gametime()
+	if (actor?.arrived) actor.arrived()
+	if (is_table(actor?._exec)) {
+		if (!inInventory(actor._exec.noun1)) {
+			if (!objectTouchable(actor._exec.noun1)) {	// Object became untouchable as we were walking there.
+				actor._exec = null
+				return
+			}
+			// Did we get close enough?
+			local dist = distance(actorPosition(actor), objectUsePos(actor._exec.noun1))
+			local min_dist = (actor._exec.verb == "verb_talkto")?actor.min_talk_dist:actor.min_use_dist
+			if (actor._exec.verb !in ROOT(verb_not_close) && dist > min_dist) {
+				actor.cantReach()
+				return
+			}
+			actorFace(actor, objectUseDir(actor._exec.noun1))
+		}
+		if (actor._exec.noun2 && !inInventory(actor._exec.noun2)) {
+			if (!objectTouchable(actor._exec.noun2)) {	// Object became untouchable as we were walking there.
+				actor._exec = null
+				return
+			}
+			local dist = distance(actorPosition(actor), objectUsePos(actor._exec.noun2))
+			local min_dist = (actor._exec.verb == "verb_talkto")?actor.min_talk_dist:actor.min_use_dist
+			if (dist > min_dist) {
+				actor.cantReach()
+				return
+			}
+		}
+		_callVerb(actor, actor._exec.verb, actor._exec.noun1, actor._exec.noun2)
+		actor._exec = null
+	}
+}
+
+/*{{ ------------------------------------------------------------------------------------------------------------------------------
+@func execSentence(actor, verb, noun1, noun2=null)
+@desc Called to execute a sentence and, if needed, start the actor walking.
+ If `actor` is `null` then the selectedActor is assumed.
+ If the actor has to walk, the verb code will be called from _actorArrived.
+}}*/
+
+function execSentence(actor, verb, noun1, noun2=null) {
+	if (SETTING(debug)) print(format("exec(%s,%s,%s)",verb,noun1,noun2))		// Don't delete
+	if (actor == null) actor = selectedActor
+	if (verb == null || noun1 == null) return
+	if (actor?._verb_tid) stopthread(actor._verb_tid)
+
+	if (!inInventory(noun1) && objectTouchable(noun1) == NO) return 	// Object became untouchable
+	if (noun2 && !inInventory(noun2) && objectTouchable(noun2) == NO) return 	// Object became untouchable
+
+	if (inInventory(noun1)) {
+		if (not noun2 or inInventory(noun2)) {
+			_callVerb(actor, verb, noun1, noun2)
+			return YES
+		}
+	}
+	if (verb in ROOT(verb_no_walkto)) {
+		if (verb != "verb_instant" && !inInventory(noun1)) actorTurnTo(actor, noun1)
+		_callVerb(actor, verb, noun1, noun2)
+		return YES
+	}
+	actor._exec <- {
+		"verb": verb
+		"noun1": noun1
+		"noun2": noun2
+	}
+	if (not inInventory(noun1)) {
+		actorWalkTo(actor, noun1)
+	} else {
+		actorWalkTo(actor, noun2)
+	}
+
+	return NO
+}
+
+/*{{ ------------------------------------------------------------------------------------------------------------------------------
+@func cancelSentence(actor)
+@desc Cancels any sentence queued for the actor
+ If `actor` is `null` then the selectedActor is assumed.
+}}*/
+
+function cancelSentence(actor) {
+	if (actor == null) actor = selectedActor
+	if (actor?._exec) {
+		actor._exec = null
+	}
+}
+
+/*{{ ------------------------------------------------------------------------------------------------------------------------------
+@func inputOff(code)
+@desc Turns the input off, runs the code, and then back on
+ The cursor will also turn off during this time.  It should be used for short sequences you
+ don't want the player to interrupt.
+	inputOff(@{
+		actorWalkTo(selectedActor, toiletHandle)
+		breakwhilewalking(selectedActor)
+	})
+}}*/
+
+function inputOff(code=null) {
+	cancelAllInteractions()
+	if (!is_function(code)) {
+		inputState(_INPUT_KEYS|INPUT_PUSH)
+	} else {
+		inputState(_INPUT_KEYS|INPUT_PUSH)
+		breakwhilerunning(startthread(code))
+		inputState(INPUT_POP)
+		cancelAllInteractions()
+	}
+}
+
+function inputOn() {
+	inputState(INPUT_POP)
+	cancelAllInteractions()
+}
+
+/*{{ ------------------------------------------------------------------------------------------------------------------------------
+@func cancelAllInteractions()
+@desc Cancels all drags and sentences.
+}}*/
+
+function cancelAllInteractions() {
+	cancelSentence(selectedActor)
+	cancelDrag()
+	closeVerbs()
+	_cancleAllHovers()
+	ROOT(hover_object) = null
+}
+
+// Called after the actor has walked to the object. All checks for it being a valid verb/noun will have been done.
+function _callVerb(actor, verb, noun1, noun2) {
+	closeVerbs()
+	cancelDrag()
+	actorStopWalking(selectedActor)
+
+	if (!inInventory(noun1) && objectTouchable(noun1) == NO) return 	// Object became untouchable
+	if (noun2 && !inInventory(noun2) && objectTouchable(noun2) == NO) return 	// Object became untouchable
+
+	// Do reach before calling verb so we can kill it if needed.
+	local did_reach = NO
+	if (verb !in ROOT(verb_no_reach)) {
+		if (not inInventory(noun1)) {
+			if (noun1?.reach == null || noun1?.reach != REACH_NONE) {
+				actorQuickReach(actor, ("reach" in noun1) ? noun1.reach : REACH_MED)
+				did_reach = YES
+			}
+		}
+		if (noun2 and not did_reach) {
+			if (not inInventory(noun2)) {
+				if (noun2?.reach == null || noun2?.reach != REACH_NONE) {
+					actorQuickReach(actor, ("reach" in noun2) ? noun2.reach : REACH_MED)
+					did_reach = YES
+				}
+			}
+		}
+	}
+
+	// Check noun1/noun2 combinations to find the best match based on who thinks the verbs and nouns are OK.
+	verbActor = actor
+	local preverb = ROOT(preverb_list)[verb]
+	if (noun2) {
+		local okverb = ROOT(okverb_list)[verb]
+		if (is_function(noun1?[verb]) and (!noun1?[okverb] or noun1[okverb](noun2))) {
+			if (is_function(noun1?[preverb]) and noun1?[preverb](noun2) == NO) { verbActor = null; return }
+			actor._verb_tid <- startthread(noun1, noun1[verb], noun2)
+		} else
+		if (is_function(noun2?[verb]) and (!noun2?[okverb] or noun2[okverb](noun1))) {
+			if (is_function(noun2?[preverb]) and noun2?[preverb](noun1) == NO) { verbActor = null; return }
+			actor._verb_tid <- startthread(noun2, noun2[verb], noun1)
+		}
+	} else
+	if (is_function(noun1?[verb])) {
+		if (is_function(noun1?[preverb]) and noun1?[preverb](noun2) == NO) { verbActor = null; return }
+		actor._verb_tid <- startthread(noun1, noun1[verb], noun2)
+	} else
+	if (noun2 && is_function(noun2?[verb])) {
+		if (is_function(noun2?[preverb]) and noun2?[preverb](noun1) == NO) { verbActor = null; return }
+		actor._verb_tid <- startthread(noun2, noun2[verb], noun1)
+	}
+
+	ROOT(hover_object) = null
+	cancelDrag()
+	refreshInventory()
+	refreshUI()
+	verbActor = null
+}
+
+ROOT(hover_text_image) <- null	// Image of text for hover object
+ROOT(hover_object) <- null		// object that has hover text
+
+local hover_offset = point(0,20)
+
+function _create_hover_name(object) {
+	local name = null
+	if (!object?.name) {
+		warning("Object ",object," has no name")
+		return
+	}
+	local default_verb = object?.default_verb
+	if (default_verb == null) {
+		error("default_verb missing for ",object)
+	}
+	if (is_string(default_verb)) {
+		local okverb = ROOT(okverb_list)[default_verb]
+		if (is_function(object?[default_verb]) and (!object?[okverb] or object[okverb](null))) {
+			name = getValue(object?.name)
+			if (object?[default_verb+"_desc"]) {
+				name = TR(object[default_verb+"_desc"])
+			} else {
+				local verb_name = ROOT(master_verb_names)?[default_verb]
+				name = (verb_name) ? (TR(verb_name)+" "+TR(name)) : TR(name)
+			}
+		} else {
+//			warning("No valid default_verb for ",object?._key)
+		}
+	} else {
+		error("default_verb for ",object," must be a string.")
+	}
+	return name
+}
+
+function createHoverText(text, screen_pos=null) {
+	if (text == null || screen_pos == point(0,0)) {
+		ROOT(hover_text_image) = deleteImage(ROOT(hover_text_image))
+		return
+	}
+	deleteImage(ROOT(hover_text_image))
+	ROOT(hover_text_image) = createTextImage(HOVER_FONT, text, ALIGN_CENTER)
+	imageTextOutline(ROOT(hover_text_image), COLOR_BLACK, SETTING(text_outline_offset))
+	imageScale(ROOT(hover_text_image), SETTING(hover_object_scale))
+	if (SETTING(hover_pop)) imageQuickPop(ROOT(hover_text_image), 0.25, SETTING(hover_object_pop))
+	if (screen_pos) positionHoverText(screen_pos)
+}
+
+// Positions hover text and shifts it to be on-screen
+function positionHoverText(screen_pos) {
+	if (!ROOT(hover_text_image)) return
+	local size = imageSize(ROOT(hover_text_image))
+	if (screen_pos.x+(size.x/2) > SCREEN_WIDTH) {
+		screen_pos = point(SCREEN_WIDTH-(size.x/2), screen_pos.y)
+	} else
+	if (screen_pos.x-(size.x/2) < 0) {
+		screen_pos = point((size.x/2), screen_pos.y)
+	}
+	local pos = point(as_int(screen_pos.x+hover_offset.x)&~1, as_int(screen_pos.y+hover_offset.y)&~1)
+
+	imageAt(ROOT(hover_text_image), screen_pos+hover_offset)
+}
+
+function _cancleAllHovers() {
+	ROOT(hover_text_image) = deleteImage(ROOT(hover_text_image))
+	ROOT(hover_object) <- null		// object that has hover text
+	cancelDrag()
+	cancelSentence(selectedActor)
+}
+
+/*{{ ------------------------------------------------------------------------------------------------------------------------------
+@func _hoverObject(state, object, room_pos)
+@desc Called when an object is hovered over.
+ The state will be `HOVER_ENTER`, `HOVER_LEAVE`, or `HOVER_LOITER`. The function is responsible
+ for creating the text that appears at the cursor.
+}}*/
+
+local last_beep_object = null
+
+function _hoverObject(state, object, room_pos) {
+	if (!is_entity(object) || !objectTouchable(object)) {			// Object became untouchable right before this is call.
+		ROOT(hover_text_image) = deleteImage(ROOT(hover_text_image))
+		ROOT(hover_object) = null
+		last_beep_object = null
+		return
+	}
+	if (ROOT(debug_active)) return
+
+	if (isVerbMenuShowing()) {
+		ROOT(hover_text_image) = deleteImage(ROOT(hover_text_image))
+		ROOT(hover_object) = null
+		return
+	}
+
+	if (hold_to_move) {
+		return
+	}
+
+	if (ROOT(hover_object) != object) {
+		state = HOVER_ENTER
+	}
+	if (state == HOVER_ENTER) {
+		local name = _create_hover_name(object)
+		createHoverText(name, roomToScreen(room_pos))
+		positionHoverText(roomToScreen(room_pos))
+		if (name && object != last_beep_object) {
+			if (SETTING(hover_beep)) playSound(SOUNDID(hoverObject))
+			last_beep_object = object
+		}
+		ROOT(hover_object) = object
+	} else
+	if (state == HOVER_LEAVE) {
+		ROOT(hover_text_image) = deleteImage(ROOT(hover_text_image))
+		ROOT(hover_object) = null
+		last_beep_object = null
+	} else
+	if (state == HOVER_LOITER) {
+		if (!ROOT(hover_text_image)) {
+			local name = _create_hover_name(object)
+			createHoverText(name, roomToScreen(room_pos))
+		}
+		positionHoverText(roomToScreen(room_pos))
+		ROOT(hover_object) = object
+	}
+}
+
+/*{{ ------------------------------------------------------------------------------------------------------------------------------
+@func _clickedDownAt(screen_pos, flags)
+@desc Called when the screen is clicked or touched.
+ It called on click-down unless it's a touch interface, then it's on touch-up.
+
+ `clickedAt()` and `room.clickedAt()` are
+ also called by this function.
+
+ If a `button` is clicked on, this callback will not happen.  See [[`imageButton()`]](gameimage) for more information about
+ buttons.
+}}*/
+
+function _clickedDownAt(screen_pos, flags) {
+	if (ROOT(debug_active)) return
+
+	if (ROOT(verb_popup_node)) {
+		closeVerbs()
+		return HANDLED
+	}
+
+	local room_pos = screenToRoom(screen_pos)
+
+	if (SETTING(debug)) {
+		if (iskeydown(KEY_SHIFT_LEFT)) {
+			if (selectedActor) {
+				actorAt(selectedActor, room_pos)
+				return
+			}
+		}
+	}
+
+	if (flags & BUTTON_MOUSE_DOUBLECLICK) {
+		actorFastWalk(selectedActor, YES)
+		hold_to_move = YES
+		return
+	}
+
+	if (is_entity(ROOT(hover_object))) {
+		if (flags & BUTTON_MOUSE_RIGHT) {
+			openVerbsFor(ROOT(hover_object), screen_pos)
+		} else
+		if (flags & BUTTON_MOUSE_LEFT) {
+			if (is_string(ROOT(hover_object)?.default_verb) ) {
+				local object = ROOT(hover_object)
+				local default_verb = ROOT(hover_object).default_verb
+				local okverb = ROOT(okverb_list)[default_verb]
+				if (is_function(object?[default_verb]) and (!object?[okverb] or object[okverb](null))) {
+					execSentence(null, default_verb, object)
+				}
+			}
+		}
+	} else {
+		// Just clicking on the ground
+		cancelSentence(selectedActor)
+		if (isActorInRoom()) actorWalkTo(selectedActor, room_pos)
+		hold_to_move = YES
+	}
+
+	if (roottable()?.clickedAt) {
+		if (::clickedAt(screen_pos) == HANDLED) return
+	}
+	if (is_function(::currentRoom?.clickedAt)) {
+		if (::currentRoom.clickedAt(room_pos)  == HANDLED) return
+	}
+}
+
+/*{{ ------------------------------------------------------------------------------------------------------------------------------
+@func _clickedUpAt(screen_pos, flags)
+@desc Called when the mouse button is let up.
+}}*/
+
+function _clickedUpAt(screen_pos, flags) {
+	if (ROOT(debug_active)) return
+	hold_to_move = NO
+}
+
+/*{{ ------------------------------------------------------------------------------------------------------------------------------
+@func _clickedDragAt(screen_pos, flags)
+@desc Called when the mouse is moved with the button down.
+}}*/
+
+local next_hold_to_move_time = 0
+function _clickedDragAt(screen_pos) {
+	if (ROOT(debug_active)) return
+	if (hold_to_move && gametime() > next_hold_to_move_time) {
+		if (ROOT(hover_text_image)) {
+			_cancleAllHovers()
+		}
+		cancelSentence(selectedActor)
+		local room_pos = screenToRoom(screen_pos)
+		if (actorFastWalk(selectedActor)) actorFastWalk(selectedActor, YES)
+		if (isActorInRoom() && distance(actorPosition(selectedActor), room_pos) > 5) actorWalkTo(selectedActor, room_pos)
+		next_hold_to_move_time = gametime()+0.25
+	}
+}
+
+/*{{ ------------------------------------------------------------------------------------------------------------------------------
+@func _startSayline(actor, text)
+@desc Called when sayLine text needs to be displayed.
+ Return an image of the text.
+}}*/
+
+function _startSayline(actor, text) {
+	local text_scale = 3.0
+	local image = createTextImage(SAYLINE_FONT, TR(text), ALIGN_CENTER|(SCREEN_WIDTH*(0.80/text_scale)))
+	imageAt(image, point(SCREEN_CENTER_X, SCREEN_HEIGHT*0.90))
+	imageScale(image, text_scale)
+	imageColor(image, actor.talkColor())
+	imageTextOutline(image, COLOR_BLACK)
+	actor._sayline_image <- image
+	if (SETTING(jibber)) {
+		actor._jibber_sid <- playSound(actor?.jibber_sid)
+	}
+	return image
+}
+
+/*{{ ------------------------------------------------------------------------------------------------------------------------------
+@func _doneSayline(actor)
+@desc Called when the actor's sayLine is done.
+}}*/
+
+function _doneSayline(actor) {
+	deleteImage(actor._sayline_image)
+	if (SETTING(jibber)) {
+		soundParam(actor._jibber_sid, "done", YES)
+		actor._jibber_sid <- delete
+	}
+	actor._sayline_image <- delete
+}
+
+/*{{ ------------------------------------------------------------------------------------------------------------------------------
+@section gamesystem_comands
+@func _selectedActorChanged(actor)
+@desc Called when the selected actor changes
+}}*/
+
+function _selectedActorChanged(actor) {
+	selectedActor = actor
+}
+
+/*{{ ------------------------------------------------------------------------------------------------------------------------------
+@section gamesystem_comands
+@func _triggerCallback(trigger, actor, code, state)(actor)
+@desc Called when an actor enters or leaves a trigger.
+ Only the selected actor will trigger a trigger unless the trigger has the `any_actor = YES` flag set.
+
+ If trigger object has a `trigger(actor, state)` function, then it is called passing the actor and
+ a state of `TRIGGER_ENTER` or `TRIGGER_LEAVE`.
+
+ Otherwise, if the trigger object has a `triggerEnter()` or a `triggerLeave()` function those will be called.
+
+ And finally, it will try and call the code passed during a `addTrigger()` call.
+}}*/
+
+function _triggerCallback(trigger, actor, code, state) {
+	if (!trigger?.any_actor && actor != selectedActor) {
+		return
+	}
+	if (trigger?.once) {
+		trigger.trigger_on <- NO
+		enableTrigger(trigger, NO)
+	}
+	if (is_function(trigger?.trigger)) {
+		trigger.trigger(actor, state)
+		return
+	}
+	if (state == TRIGGER_ENTER && is_function(trigger?.triggerEnter)) {
+		trigger.triggerEnter(actor)
+		return
+	}
+	if (state == TRIGGER_LEAVE && is_function(trigger?.triggerLeave)) {
+		trigger.triggerLeave(actor)
+		return
+	}
+	if (is_function(code)) {
+		code(actor, state)
+		return
+	}
+}
+
+/*{{ ------------------------------------------------------------------------------------------------------------------------------
+@section gamesystem_comands
+@func exitRoomFromDoor(from_door, to_door)
+@desc Call when you need to leave a room from one door to another door.
+ The 'selectedActor' is moved to the room of the 'to_door'.
+
+ This function performs all animations need for the two doors.
+
+ The 'to_door' is animated closing after entering if 'autoclose' is set for that door. See [[Doors]](doors) for more
+ information about door objects.
+}}*/
+
+function exitRoomFromDoor(from_door, to_door) {
+	if (!to_door?._room_id) {
+		if (SETTING(debug)) print("Is the door named correctly in the .dinky and .wimpy files?")
+		if (SETTING(debug)) print("Is the door defined using object = DEFINE_OBJECT(...)?")
+		error("Invalid exit door.")
+	}
+	if (to_door?.verb_open && !to_door?.no_animation) {
+		to_door.state = "open"
+	}
+	local room = roomForID(to_door._room_id)
+	enterRoom(room, to_door)
+	actorAt(selectedActor, to_door)
+	actorFace(selectedActor, DIR_FLIP)
+	cameraFollow(selectedActor)
+	createSpeckOfDust(room)
+	if (is_function(to_door?.enteredUsing)) {
+		to_door.enteredUsing()
+	} else {
+		if (isActorInRoom()) actorWalkForward(selectedActor, to_door?.walk_forward?:4)
+	}
+	if (to_door?.autoclose) {
+		to_door.default_verb <- to_door?.no_animation ? "verb_use" : "verb_open"
+		startthread(@{
+			breaktime(0.10)
+			if (is_function(to_door?.verb_close)) to_door.verb_close()
+		})
+	}
+	refreshUI()
+}
+
+local _once_checks = {}
+function _once(id, thing, def=null) {
+	if (id in _once_checks) return def
+	_once_checks[id] <- gametime()
+	return thing
+}
+
+/*{{ ------------------------------------------------------------------------------------------------------------------------------
+@section gamesystem_callbacks
+@func _triggerSound(actor,sound)
+@desc Called when an actor or object animation triggers a sound
+}}*/
+
+function _triggerSound(actor, sound) {
+	if (sound == "step") {
+		local sid = actor?.footstep_sound
+		if (sid) {
+			playSoundAt(sid, actor)
+		}
+	} else {
+		if (is_function(actor?.triggerSound, 1)) {
+			actor.triggerSound(sound)
+		}
+	}
+}
+
+local pause_not_allowed = NO
+function pauseNotAllowed(state) {
+	pause_not_allowed = state
+}
+
+/*{{ ------------------------------------------------------------------------------------------------------------------------------
+@section gamesystem_callbacks
+@func _pauseGame(state)
+@desc Called when the game is paused by the window going out of focus
+ Also called after the `pauseGame(YES|NO)` is called. This is typically used for a pause key.
+}}*/
+local pause_image = 0
+function _pauseGame(state) {
+	if (pause_not_allowed) return
+	if (state) {
+		inputState(_INPUT_KEYS|INPUT_PUSH)
+		pauseAllSounds("music", YES)
+		pauseAllSounds("effects", YES)
+		pauseAllSounds("voice", YES)
+		soundMixVolume("paused", soundMixVolume("music"))
+		playSound(SOUNDID(pause_music))
+		pause_image = createTextImage(FONT_SYSTEM, TR(TEXT(11811,"Game Paused")), ALIGN_CENTER)
+		imageScale(pause_image, 10.0)
+		imageTextOutline(pause_image, COLOR_BLACK)
+		imageAt(pause_image, point(SCREEN_CENTER_X,SCREEN_CENTER_Y))
+		closeVerbs()
+		cancelDrag()
+	} else {
+		inputState(INPUT_POP)
+		pauseAllSounds("music", NO)
+		pauseAllSounds("effects", NO)
+		pauseAllSounds("voice", NO)
+		stopAllSounds("paused")
+		pause_image = deleteImage(pause_image)
+	}
+}
+
+/*{{ ------------------------------------------------------------------------------------------------------------------------------
+@section gamesystem_callbacks
+@func _gameFocus(state)
+@desc Called when the game gains or looses focus.
+}}*/
+function _gameFocus(state) {
+	if (state == NO) {
+		closeVerbs()
+		cancelDrag()
+	}
+}
+
+/*{{ ------------------------------------------------------------------------------------------------------------------------------
+@section gamesystem_callbacks
+@func _quitGame()
+@desc Called when the game wants to quit.
+ Return `true` if it's OK, or `false` if the scripts want to avoid the quit or handle it themselves.
+}}*/
+function _quitGame() {
+	if (!SETTING(quit_confirm)) return YES
+	if (!quitShowing()) openQuitConfirmation()
+	return NO
+}

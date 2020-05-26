@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{b6c3d420-71b8-413f-ab83-a5b33bf87d70}">
+		<property name="assetPath">
+			<value>TownAmbienceWindGust5.ogg</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>12.016961451247166</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{14fcd25f-489c-460f-adfb-cfb7d60888b4}</destination>
+		</relationship>
+	</object>
+</objects>

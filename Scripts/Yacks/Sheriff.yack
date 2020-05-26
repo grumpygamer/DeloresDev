@@ -1,0 +1,86 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+=== init ===
+{ YACK(a_reno_counter) <- 0
+  YACK(asked_for_coroner_time) <- 0 }
+-> exit
+
+== start ===
+if [sheriff?.locked_in_jail]
+	sheriff: SAY(12280,"I'm not in a talking-a-reno mood, just let me out!")
+	-> exit
+endif
+
+-> done [sheriff.busy]
+
+delores: SAY(12281,"Hi Sheriff!")
+other: SAY(12282,"Hello-a-reno Delores.")
+
+=== main ===
+1 SAY(12283,"When did you start adding 'a-reno' after everything?") -> a_reno [once]
+1 SAY(12284,"Just then! You did it again!") -> a_reno [YACK(a_reno_counter) == 1] [showonce]
+1 SAY(12285,"Whatever-a-reno.") -> a_reno [YACK(a_reno_counter) == 2] [showonce]
+2 SAY(12286,"Not a lot of crime in Thimbleweed Park, is there?") -> crime
+3 SAY(12287,"What's that I read about the circus being abandoned?") -> circus [hasHeardAbout("circus")]
+4 SAY(12288,"I was thinking about becoming a federal agent...") -> agent [once]
+5 SAY(12289,"Got to run... bye.") -> done
+
+=== crime ===
+sheriff: SAY(12290,"Not really.") [once]
+sheriff: SAY(12291,"A new vagrant family has been hanging out on A Street.")
+sheriff: SAY(12292,"They haven't been causing any trouble-a-reno, so I leave them be.") [once]
+sheriff: SAY(12293,"Probably fell on hard times.")
+delores: SAY(12294,"Or she is a complete pompous jerk and deserves everything she gets.") [GLOBAL(talked_to_lenore)] [once]
+-> main
+
+=== a_reno ===
+sheriff: SAY(12295,"I don't understand-a-reno what you're asking?") [YACK(a_reno_counter) == 0]
+sheriff: SAY(12296,"Are you on drugs-a-reno? Just say no-a-reno.") [YACK(a_reno_counter) == 1]
+sheriff: SAY(12297,"Hey, the 'a-reno' gag is mine!") [YACK(a_reno_counter) == 2]
+delores: SAY(12298,"Ha! Got ya!") [YACK(a_reno_counter) == 2]
+{ YACK(a_reno_counter)++ }
+-> main
+
+=== circus ===
+sheriff: SAY(12299,"What-a-reno!")
+sheriff: SAY(12300,"Ransome's more popular than ever since he dropped the insult bit many years ago.")
+sheriff: SAY(12301,"Where did you read that?")
+
+parrot NO
+1 SAY(12302,"I read it in your confidential police files.") -> rumor
+2 SAY(12303,"I read it in that trash-rag the Nickel News.")  -> rumor
+3 SAY(12304,"I read it on an on-line BBS.")  -> rumor
+
+=== rumor ==
+delores: SAY(12305,"I don't know. I can't remember.")
+parrot YES
+-> main
+
+=== agent ===
+delores: SAY(12306,"Ever met one?")
+sheriff:  SAY(12307,"Can't say-a-reno that I ever have.")
+delores: SAY(12308,"Maybe I'll just make a game that has a federal agent in it.")
+delores: SAY(12309,"Sounds easier.")
+-> main
+
+=== done ===
+
+-> exit [!Note.isActiveStory("seeing_double") || Note.isStoryPhotographed("seeing_double")]
+
+sheriff: SAY(12310,"Oh...")
+sheriff: SAY(12311,"Can you go get the Coroner-a-reno for me?")
+
+{ YACK(asked_for_coroner_time) = gametime() }
+
+1 SAY(12312,"Sure, I'll go get the Coroner for you.") -> get_coroner
+2 SAY(12313,"Right-a-reno, I'll let the Coroner know to come see you.") -> get_coroner
+
+=== get_coroner ===
+
+-> exit
+

@@ -1,0 +1,204 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+DEFINE_ROOM("CoronersOffice", {
+	music_pool = "cityhall"
+	ambient_sound = SOUNDID(ambient_coroner)
+
+	looked_at_trons = NO
+	lookin_drawers = NO
+
+	// --------------------------------------------------------------------------------------------
+	// General room functions
+
+	function flickerLight() {
+		objectState(officeLight, "off")
+		objectState(coronersGurney, "unlit")
+		startthread(@{
+			do {
+				breaktime(0.05, 0.1)
+				objectState(officeLight, "on")
+				roomLightEnable(0, YES)
+				playSoundAt(SOUNDID(flicker_fluorescent_quick), officeLight)
+				breaktime(1.0, 8.0)
+				objectState(officeLight, "off")
+				roomLightEnable(0, NO)
+			}
+		})
+	}
+
+	function lookAtTrons(tron) {
+		looked_at_trons++
+		if (looked_at_trons == 1) {
+			sayLine(SAY(11781,"These things were creepy. I'm glad they were deactivated."))
+		} else
+		if (looked_at_trons == 2) {
+			sayLine(SAY(11782,"They should serve as a warning about the dangers of AI."))
+		} else
+		if (looked_at_trons == 3) {
+			sayLine(SAY(11783,"Scary to think about Uncle Chuck getting digitized and sucked into his AI creation."))
+		} else
+		if (looked_at_trons == 4) {
+			sayLine(SAY(11784,"I'm glad me and those two federal agents were able to get him out."))
+		} else
+		if (looked_at_trons == 5) {
+			sayLine(SAY(11785,"Of course, he will probably spend the rest of his life in that sanitarium."))
+		} else
+		if (looked_at_trons == 6) {
+			sayLine(SAY(11786,"I shudder to think what would have happened if we hadn't gotten to him in time."))
+			heardAbout("ai")
+		} else {
+			sayLine(SAY(11787,"The Tron 3000™ machines creep me out more than being in the morgue."))
+		}
+	}
+
+	function addCoronerDrawerVerbs(drawer) {
+		drawer.drawer_verbs <- YES
+		if ("verb_lookat" !in drawer) {
+			drawer.verb_lookat <- function(use_with=null) {
+				sayLine(SAY(11788,"Just a drawer."))
+			}
+			drawer.verb_lookin <- function(use_with=null) {
+				if (this.state == "open") {
+					if (this?.boris_drawer) {
+						sayLine(SAY(11789,"Just the odd coroner report about the murder of Boris."), SAY(11790,"Which couldn't have happened."))
+					} else {
+						++lookin_drawers
+						if (lookin_drawers == 3) {
+							this.boris_drawer <- YES
+							heardAbout("boris")
+							sayLine(SAY(11791,"Weird? There is an autopsy report for a murder last year of someone named Boris?"),
+							        SAY(11792,"There hasn't been a murder in Thimbleweed Park for twenty years."))
+						} else {
+							sayLine(randomfrom(SAY(11793,"Just some old coroner files."),
+							                   SAY(11794,"Lots of old files."),
+							                   SAY(11795,"Bunch of badly organized files.")))
+						}
+					}
+				} else {
+					this.verb_lookat()
+				}
+			}
+		}
+	}
+
+	// --------------------------------------------------------------------------------------------
+	// Enter/Exit code
+
+	enter = function(from_door=null) {
+		flickerLight()
+		looked_at_trons = NO 	// Reset each time.
+		// if (YACK(asked_for_coroner_time) && YACK(told_coroner_time) && gametime() > YACK(told_coroner_time)+60) {
+		// 	SheriffsOffice.resetSheriffCoronerPuzzle()
+		// }
+	}
+
+	exit = function() {
+	}
+
+	// --------------------------------------------------------------------------------------------
+	// Objects
+
+	coronersGurney = {}
+	officeLight = {
+		function stateChange() {
+			objectState(coronersGurney, state)
+		}
+	}
+
+	// --------------------------------------------------------------------------------------------
+	door = DEFINE_OBJECT({
+		name = TEXT(11799,"door")
+		door_verbs = YES
+		no_animation = YES
+		verb_use_text = TEXT(11800,"Leave")
+		verb_use_desc = TEXT(11801,"Leave the Coroner's Office")
+		to_door = @CityHall.coronerDoor
+		function enteredUsing() {
+			actorWalkTo(selectedActor, doorWalkToSpot)
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	fingerTron = DEFINE_OBJECT({
+		name = TEXT(11802,"FingerTron 3000™")
+		photo_name = TEXT(11803,"the FingerTron 3000™")
+
+		VERB(lookat) {
+			lookAtTrons(this)
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	bloodTron = DEFINE_OBJECT({
+		name = TEXT(11804,"BloodTron 3000™")
+		photo_name = TEXT(11805,"the BloodTron 3000™")
+
+		VERB(lookat) {
+			lookAtTrons(this)
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	tronTrigger = {
+		function triggerEnter(actor) {
+		}
+	}
+	faceTronHalEyeLit = {}
+	faceTron = DEFINE_OBJECT({
+		name = TEXT(11806,"FaceTron 3000™")
+		photo_name = TEXT(11807,"the FaceTron 3000™")
+
+		VERB(lookat) {
+			lookAtTrons(this)
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	skeleton = DEFINE_OBJECT({
+		name = TEXT(11808,"skeleton")
+		for_story = "bones"
+		article = TEXT(12354,"a")
+
+		VERB(lookat) {
+			sayLine(SAY(11796,"It's a skeleton!"))
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	chart = DEFINE_OBJECT({
+		name = TEXT(11809,"chart")
+
+		VERB(lookat) {
+			sayLine(SAY(11797,"Chewy Caramel Center."))
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	certificate = DEFINE_OBJECT({
+		name = TEXT(11810,"certificate")
+
+		VERB(lookat) {
+			sayLine(SAY(11798,"Odd? I didn't know you could mail order for coroner degrees."))
+		}
+	})
+
+	cabinetD1 = DEFINE_OBJECT({
+		reach = REACH_HIGH
+		function init() { addCoronerDrawerVerbs(this) }
+	})
+	cabinetD2 = DEFINE_OBJECT({
+		reach = REACH_MED
+		function init() { addCoronerDrawerVerbs(this) }
+	})
+	cabinetD3 = DEFINE_OBJECT({
+		reach = REACH_LOW
+		function init() { addCoronerDrawerVerbs(this) }
+	})
+
+// NEW_OBJECT_HERE
+})

@@ -1,0 +1,6 @@
+	__OBJECTNAME__ = {
+		function triggerEnter(actor) {
+		}
+		function triggerLeave(actor) {
+		}
+	}

@@ -1,0 +1,97 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+SETTING(error_on_warning) = getuserpref("errorOnWarning", NO)
+
+SETTING(debug) <- getuserpref("debug", NO)
+SETTING(tester) <- getuserpref("tester", NO)
+
+// Call for settings that will appear in the final game.
+function getSetting(key, def=0) {
+	return getuserpref(key, def)
+}
+
+// Call for settings that appear only in the dev game.
+function getDebugSetting(key, def) {
+	if (SETTING(debug) || SETTING(tester)) {
+		return getuserpref(key, def)
+	} else {
+		return def
+	}
+}
+
+DEBUG(scenario) <- getDebugSetting("debugScenario", null)
+
+DEBUG(print_idles) <- getDebugSetting("debugPrintIdles", NO)
+
+DEBUG(translation_markers) <- getDebugSetting("debugTranslationMarkers", NO)
+DEBUG(unlimited_photos) <- getDebugSetting("debugUnlimitedPhotos", NO)
+DEBUG(retake_photos) <- getDebugSetting("debugRetakePhotos", NO)
+DEBUG(force_story) <- getDebugSetting("forceStory", null)
+DEBUG(skip_intro) <- getDebugSetting("skipIntro", NO)
+DEBUG(watch_ending) <- getDebugSetting("watchEnding", NO)
+
+DEBUG(jump) <- getDebugSetting("debugJump", NO)
+DEBUG(pickup) <- getDebugSetting("debugPickup", NO)
+
+SETTING(verbmenu_offset) <- point(0, getSetting("verbMenuOffset", 25))
+SETTING(verbmenu_scale) <- max(min(getSetting("verbMenuScale", 3.0), 4.0), 1.0)
+SETTING(verbmenu_spacing) <- getSetting("verbMenuSpacing", 27)
+
+SETTING(inventory_spacing) <- getSetting("inventorySpacing", point(10,70))
+
+SETTING(hover_object_scale) <- max(min(getSetting("hoverObjectScale", 3.0), 4.0), 1.0)
+SETTING(hover_object_pop) <- max(min(getSetting("hoverObjectPop", 1.40), 2.0), 1.0)
+
+SETTING(yackSpacing) <- point(0,0)
+
+SETTING(verb_menu_margin) <- getSetting("verbMenuMargin", 10)
+
+SETTING(seen_opening) <- as_int(getSetting("seen_opening", NO))
+
+SETTING(text_outline_offset) <- getSetting("outlineOffset", 0.9)
+
+SETTING(specks_of_dust_complete) <- getSetting("specksOfDustComplete", 10)
+
+SETTING(flashback_odds) <- 0.95
+
+SETTING(gear_alpha) = 0.5
+SETTING(gear_margin) = getSetting("gearMargin", null)
+if (!is_point(SETTING(gear_margin))) SETTING(gear_margin) = point(60,60)
+
+// Player options
+
+SETTING(hover_beep) <- as_int(getSetting("hoverBeep", YES))
+SETTING(hover_pop) <- as_int(getSetting("hoverPop", YES))
+SETTING(fullscreen) <- as_int(getSetting("windowFullscreen", YES))
+
+SETTING(quit_confirm) <- as_int(getSetting("quitConfirm", YES))
+
+SETTING(delete_progress) <- NO
+
+SETTING(jibber) <- getSetting("jibber", 0)
+
+SETTING(small_font) <- getSetting("smallFont", NO)
+
+// Called when the debugger UI or options changes a value.
+function onRefreshPrefs() {
+	setuserpref("hoverBeep", SETTING(hover_beep))
+	setuserpref("hoverPop", SETTING(hover_pop))
+	setuserpref("windowFullscreen", SETTING(fullscreen))
+
+	setuserpref("smallFont", SETTING(small_font))
+
+	setuserpref("debugRetakePhotos", DEBUG(retake_photos)?DEBUG(retake_photos):null)
+	setuserpref("debugUnlimitedPhotos", DEBUG(unlimited_photos)?DEBUG(unlimited_photos):null)
+	setuserpref("skipIntro", DEBUG(skip_intro)?DEBUG(skip_intro):null)
+	setuserpref("debugJump", DEBUG(jump)?DEBUG(jump):null)
+	setuserpref("debugPickup", DEBUG(pickup)?DEBUG(pickup):null)
+	setuserpref("debugTranslationMarkers", DEBUG(translation_markers)?DEBUG(translation_markers):null)
+	setFont()
+}
+
+//onRefreshPrefs()

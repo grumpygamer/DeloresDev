@@ -1,0 +1,372 @@
+ambient_light: "{0.617455,0.623234,0.715686,1}"
+background: "background"
+name: "PostOffice"
+room_scale: 4
+sheet: "PostOffice"
+layers: [
+    {
+        name: "foreground"
+        parallax: 1
+        zsort: -2
+    }
+]
+lights: [
+    {
+        color1: "{0.839216,1,0.86286,0}"
+        color2: "{0,0,0,0}"
+        id: 0
+        iradius: 55
+        oradius: 87
+        rate: 0
+        clipping: ((0,0),(0,0))
+        pos: (117,117)
+    }
+    {
+        color1: "{0.839216,1,0.862745,0}"
+        color2: "{0,0,0,0}"
+        id: 1
+        iradius: 39
+        oradius: 70
+        rate: 0
+        clipping: ((0,0),(0,0))
+        pos: (269,101)
+    }
+]
+objects: [
+    {
+        name: "counter"
+        prop: 1
+        zsort: 72
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "counter"
+                ]
+            }
+        ]
+        pos: (123,89)
+    }
+    {
+        name: "sideCounter"
+        prop: 1
+        zsort: 67
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "side_counter"
+                ]
+            }
+        ]
+        pos: (283,110)
+    }
+    {
+        name: "tape"
+        usedir: "DIR_BACK"
+        zsort: 72
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "tape"
+                ]
+            }
+        ]
+        hotspot: ((-4,-5),(6,6))
+        pos: (115,99)
+        usepos: (1,-29)
+    }
+    {
+        name: "scale"
+        usedir: "DIR_BACK"
+        zsort: 72
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "scale"
+                ]
+            }
+        ]
+        hotspot: ((-7,-8),(8,10))
+        pos: (102,102)
+        usepos: (-1,-34)
+    }
+    {
+        name: "mailDrop"
+        usedir: "DIR_BACK"
+        zsort: 72
+        hotspot: ((-20,10),(3,36))
+        pos: (178,68)
+        usepos: (-8,-1)
+    }
+    {
+        name: "notice"
+        usedir: "DIR_BACK"
+        zsort: 50
+        hotspot: ((-40,61),(-26,80))
+        pos: (213,50)
+        usepos: (-34,19)
+    }
+    {
+        name: "mailBoxes"
+        usedir: "DIR_BACK"
+        zsort: 77
+        hotspot: ((-25,34),(27,101))
+        pos: (213,50)
+        usepos: (1,21)
+    }
+    {
+        name: "boxes"
+        usedir: "DIR_RIGHT"
+        zsort: 160
+        hotspot: ((40,45),(113,79))
+        pos: (213,50)
+        usepos: (48,7)
+    }
+    {
+        name: "calendar"
+        usedir: "DIR_BACK"
+        zsort: 50
+        hotspot: ((-126,65),(-109,89))
+        pos: (213,50)
+        usepos: (-119,18)
+    }
+    {
+        name: "door"
+        usedir: "DIR_LEFT"
+        zsort: 71
+        animations: [
+            {
+                name: "closed"
+                frames: [
+                    "doors_opening3"
+                    "doors_opening2"
+                    "doors_opening1"
+                    "doors_closed"
+                ]
+            }
+            {
+                name: "open"
+                frames: [
+                    "doors_opening1"
+                    "doors_opening2"
+                    "doors_opening3"
+                    "doors_open"
+                ]
+            }
+        ]
+        hotspot: ((-15,-51),(13,51))
+        pos: (42,102)
+        usepos: (14,-42)
+    }
+    {
+        name: "brokenMailbox"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 76
+        animations: [
+            {
+                name: "damaged"
+                frames: [
+                    "damaged_mailbox"
+                ]
+            }
+            {
+                name: "destroyed"
+                frames: [
+                    "destroyed_mailbox"
+                ]
+            }
+        ]
+        hotspot: ((-9,-5),(10,5))
+        pos: (229,122)
+        usepos: (-9,-54)
+        usepos2: (2,-55)
+    }
+    {
+        name: "lamp"
+        prop: 1
+        zsort: 71
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "ceiling_lamp"
+                ]
+            }
+        ]
+        pos: (120,116)
+    }
+    {
+        name: "glass"
+        usedir: "DIR_RIGHT"
+        zsort: 58
+        animations: [
+            {
+                name: "glass"
+                frames: [
+                    "glass_empty"
+                ]
+            }
+            {
+                name: "default"
+                frames: [
+                ]
+            }
+        ]
+        hotspot: ((-3,-4),(5,6))
+        pos: (313,97)
+        usepos: (-34,-48)
+    }
+    {
+        name: "postOfficeWallMask"
+        prop: 1
+        zsort: 78
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "right_wall_mask"
+                ]
+            }
+        ]
+        pos: (203,118)
+    }
+    {
+        name: "slotSpot1"
+        spot: 1
+        usedir: "DIR_BACK"
+        pos: (123,85)
+    }
+    {
+        name: "slotSpot2"
+        spot: 1
+        usedir: "DIR_BACK"
+        pos: (136,85)
+    }
+    {
+        name: "slotSpot3"
+        spot: 1
+        usedir: "DIR_BACK"
+        pos: (150,85)
+    }
+    {
+        name: "slotSpot4"
+        spot: 1
+        usedir: "DIR_BACK"
+        pos: (166,85)
+    }
+    {
+        name: "slotSpot5"
+        spot: 1
+        usedir: "DIR_BACK"
+        pos: (188,85)
+    }
+    {
+        name: "jumpSpot"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (160,66)
+    }
+    {
+        name: "star1"
+        pos: "{30,166}"
+        prop: 1
+        zsort: 108
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+    }
+    {
+        name: "star2"
+        pos: "{50,152}"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+    }
+    {
+        name: "star3"
+        pos: "{37,154}"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+    }
+    {
+        name: "star4"
+        pos: "{34,139}"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+    }
+    {
+        name: "star5"
+        pos: "{35,143}"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_blue"
+                ]
+            }
+        ]
+    }
+    {
+        name: "starB1"
+        pos: "{44,158}"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+    }
+]
+room_bounds: ((0,0),(320,180))
+room_size: (320,180)
+roomsize: (320,180)
+scaling: [
+    "1.7@0"
+    "0.75@71"
+]
+walkboxes: [
+    {
+        polygon: "(65,69);(192,69);(189,73);(276,73);(281,69);(237,69);(301,35);(301,27);(12,27)"
+    }
+    {
+        polygon: "(94,87);(219,87);(222,78);(167,78);(163,75);(164,73);(66,73);(66,75);(91,75)"
+    }
+]

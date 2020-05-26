@@ -1,0 +1,20 @@
+<html><head><link rel='stylesheet' href='../HelpDocs/help.css'><link href='https://fonts.googleapis.com/css?family=Roboto:300|Ubuntu:300' rel='stylesheet'></head><body><span class='button'><a href='home.html'>Home</a></span><span class='button'><a href='index.html'>Index</a></span><html><head><link rel='stylesheet' href='help.css'></head><body><h1>Regular Expressions</h1><div class='section text'>It is beyond the scope of this document to describe regular expressions.  Additional information can be found at <a href='https:'>Regex Primer</a>. Dinky regular expressions do not support character classes like <span class='inline_code'>\w</span>, <span class='inline_code'>\d\</span>, etc. </div><div class='function_list'><div id='29' class='function'>regexcompile<div class='desc'>Compiles a regular expression for future use</div><div class='function text'></div></div><div id='30' class='function'>regexmatch<div class='desc'>Returns the number of matches found.</div><div class='function text'>If no match were made, <span class='inline_code'>null</span> is returned, otherwise true. <div class='code_block'><span class='keyword'>local</span> re = <span class='keyword'>regexcompile</span>(<span class='string'>"([0-9]+)"</span>)
+<span class='keyword'>if</span> (<span class='keyword'>regexmatch</span>(<span class='string'>"abc123xyz"</span>)) {
+    <span class='keyword'>print</span>(<span class='string'>"found"</span>)
+}
+</div></div></div><div id='31' class='function'>regexcapture<div class='desc'>Captures matches in a previously compiled regex</div><div class='function text'>Returns an <span class='inline_code'>array</span> with all the matches or <span class='inline_code'>null</span> if no matches are made. <div class='code_block'><span class='keyword'>local</span> re = <span class='keyword'>regexcompile</span>(<span class='string'>"<span class='keyword'>point</span>\\(([0-9]+),[ \\t]*([0-9]+)\\)"</span>)
+<span class='keyword'>local</span> a = <span class='keyword'>regexcapture</span>(<span class='string'>"<span class='keyword'>point</span>(100,200)"</span>)
+<span class='keyword'>if</span> (a) {
+    <span class='keyword'>print</span>(a[1]+<span class='string'>","</span>+a[2])
+}
+</div></div></div><div id='32' class='function'>regexcaptureall<div class='desc'>Capture all the matches in a string to an array</div><div class='function text'><div class='code_block'><span class='keyword'>local</span> re = <span class='keyword'>regexcompile</span>(<span class='string'>"([0-9]+)"</span>)
+<span class='keyword'>local</span> a = <span class='keyword'>regexcaptureall</span>(<span class='string'>"123,456,789"</span>)
+<span class='keyword'>if</span> (a) {
+    <span class='keyword'>foreach</span>(num <span class='keyword'>in</span> a) {
+        <span class='keyword'>print</span>(num)
+    }
+}
+</div></div></div><div id='33' class='function'>regexfree<div class='desc'>Release a previously compiled regex</div><div class='function text'>Compiled Regex expressions are not garbage collected, so it is up to the programmer to release them when done.  They take up very little space and if they are reused often it's acceptable to compile them at boot and never release them. <div class='code_block'><span class='keyword'>local</span> re = <span class='keyword'>regexcompile</span>(<span class='string'>"([0-9]+)"</span>)
+...
+re = <span class='keyword'>regexfree</span>(re)
+</div>By storing the <span class='inline_code'>null</span> return from <span class='inline_code'>regexrelease</span> it lower the risk that it will be used again after releasing. </div></div></div><p class='copyright'>Copyright 2020 Terrible Toybox, Inc. All Rights Reserved.</p></body></html>

@@ -1,0 +1,637 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+DEFINE_ROOM("SheriffsOffice", {
+	music_pool = "cityhall"
+	ambient_sound = SOUNDID(ambient_cityhall)
+
+	lookin_drawers = NO
+	jail_close_duration = 1.2
+
+	// --------------------------------------------------------------------------------------------
+	// General room functions
+
+	function addPoliceDrawerVerbs(drawer) {
+		drawer.drawer_verbs <- YES
+		if ("verb_lookat" !in drawer) {
+			drawer.verb_lookat <- function(use_with=null) {
+				sayLine(SAY(11578,"Just a drawer."))
+			}
+			drawer.verb_lookin <- function(use_with=null) {
+				if (this.state == "open") {
+					if (this?.circus_drawer) {
+						sayLine(SAY(11579,"Just the odd police report about the abandoned circus. Which isn't abandoned."))
+					} else
+					if (this?.empty_drawer) {
+						sayLine(randomfrom(SAY(11580,"Just some old police files."),
+						                   SAY(11581,"Just some old police reports."),
+						                   SAY(11582,"Reports of minor infractions.")))
+					} else {
+						++lookin_drawers
+						if (lookin_drawers == 4) {
+							this.circus_drawer <- YES
+							heardAbout("circus")
+							sayLine(SAY(11583,"That's odd? There is a police report for trouble at the abandoned circus?"),
+							        SAY(11584,"The circus isn't abandoned? Ransome has never been more popular."))
+						} else {
+							this.empty_drawer <- YES
+							sayLine(randomfrom(SAY(11585,"Just some old police files."),
+							                   SAY(11586,"Just some old police reports."),
+							                   SAY(11587,"Reports of minor infractions.")))
+						}
+					}
+				} else {
+					this.verb_lookat()
+				}
+			}
+		}
+	}
+
+	function isSheriffInJail() {
+		if (not isActorInRoom(sheriff, SheriffsOffice)) return NO
+		return (not jailDoor.open && isActorInTrigger(sheriff, inJailTrigger))
+	}
+
+	script sheriffLockedInJail() {
+		if (isActorInRoom(coroner, SheriffsOffice)) return
+		radio._check_again_at <- gametime() + random(10.0,15.0)
+		sheriff.busy <- NO
+		sheriff.locked_in_jail <- YES
+		actorTouchable(sheriff, YES)
+		do {
+			if (isSheriffInJail()) {
+				while(isSheriffInJail()) {
+					breakwhiletalking()
+					breaktime(1.0,2.0)
+					breakwhiletalking()
+					if (isSheriffInJail()) {
+						sayLine(sheriff, randomfrom(
+					                 SAY(11588,"Open this door!"),
+									 SAY(11589,"Open this door now!"),
+									 SAY(11590,"Open this door-a-reno!"),
+					        		 SAY(11591,"I'm an officer of the law-a-reno!"),
+					        		 SAY(11592,"I could write-a-reno you a ticket for this."),
+					        		 SAY(11593,"A-reno! A-reno! A-reno-alert-a-reno!"),
+					        		 SAY(11594,"Why didn't I bring my service-revolver-a-reno today?")))
+						if (randomodds(0.3)) {
+							actorWalkTo(sheriff, jailSpot2)
+							breakwhilewalking(sheriff)
+							playAnimation(sheriff, "reach_med")
+							jailDoor.verb_open()
+							breaktime(1.0)
+							playAnimation(sheriff, "stand")
+							breakwhiletalking(sheriff)
+							sayLine(sheriff, SAY(11595,"Dagnabbit-a-reno!"))
+						} else {
+							actorWalkTo(sheriff, jailSpot1)
+							breakwhilewalking(sheriff)
+						}
+					}
+				}
+			} else {
+				actorWalkTo(sheriff, sheriffSpot)
+				breakwhilewalking(sheriff)
+				if (not isActorInTrigger(sheriff, fussyTriggerRadio)) break
+			}
+			breaktime(0.5)
+		}
+		sheriff.locked_in_jail <- NO
+		startthread(sheriffFussing)
+	}
+
+	script sheriffFussing() {
+		if (threadrunning(this?._fussing_tid)) return
+		if (isActorInRoom(coroner, SheriffsOffice)) return
+		if (!isActorInRoom(sheriff, SheriffsOffice)) return
+		if (isSheriffInJail()) {
+			startthread(sheriffLockedInJail)
+			return
+		}
+		sheriff.busy <- NO
+		actorTouchable(sheriff, NO)		// Briefly untouchable until the script kicks in.
+		this._fussing_tid <- threadid()
+		breaktime(1.0)
+		do {
+			if (!isActorInRoom(sheriff, SheriffsOffice)) return
+			// Don't fuss if we're around fuss objects
+			while(in_trigger && !isSheriffInJail()) {
+				breaktime(2.0)
+				actorWalkTo(sheriff, sheriffSpot)
+				breakwhilewalking(sheriff)
+			}
+			local found = NO
+			foreach(local obj in [radio, cabinet1D1, cabinet1D2, cabinet1D3, cabinet2D1, cabinet2D2, cabinet2D3]) {
+				if (obj?._check_again_at && obj._check_again_at > gametime()) continue
+				if (obj.state == "open" || obj.state == "on") {
+					found = YES
+					sheriff.busy <- YES
+					actorTouchable(sheriff, NO)
+					actorWalkTo(sheriff, obj)
+					breakwhilewalking(sheriff)
+					breaktime(0.25)
+					if (obj == radio) {
+						radio._check_again_at <- gametime() + random(10.0,15.0)
+						if (isActorInTrigger(sheriff, inJailTrigger)) { 	// Only turn off radio if in the jail
+							obj.verb_turn_off()
+							objectState(radioImage, "off")
+							if (jailDoor.open) {				// May be able to escape
+								breaktime(2.0)
+								do {
+									if (jailDoor.open) break 	// Yes, make the escape
+									actorTurnTo(sheriff, DIR_FRONT)
+									sayLine(sheriff, SAY(11596,"What-the-a-reno!"))
+									startthread(sheriffLockedInJail)
+									return
+								}
+							} else {
+								actorWalkTo(sheriff, jailSpot2)	// Jail door is closed
+								breakwhilewalking(sheriff)
+								jailDoor.verb_open()
+								breaktime(1.0)
+								sayLine(sheriff, SAY(11597,"Dagnabbit-a-reno!"))
+								startthread(sheriffLockedInJail)
+								return
+							}
+						}
+					} else {
+						if (obj?.verb_open) obj.verb_close()
+					}
+					local reach = obj?.reach == REACH_HIGH ? REACH_MED : obj?.reach 	// Sheriff doesn't have REACH_HIGH
+					breakwhilerunning(actorQuickReach(sheriff, reach))
+					breaktime(0.5)
+					if (not isActorTalking()) {
+						if (obj == radio && not jailDoor.open && not isActorInTrigger(sheriff, inJailTrigger)) {
+							sayLine(sheriff, randomfrom(SAY(11598,"I can't reach the radio-a-reno."),
+							                            SAY(11599,"Delores!!"),
+							                            SAY(11600,"Kids-a-reno these days!"),
+							                            SAY(11601,"Where's my key?")))
+						} else {
+							if (isSheriffInJail()) {	// Do another check if he's locked in jail
+								actorTurnTo(sheriff, DIR_FRONT)
+								sayLine(sheriff, SAY(11602,"What-the-a-reno!"))
+								startthread(sheriffLockedInJail)
+								return
+							}
+							sayLine(sheriff, randomfrom(SAY(11603,"Don't touch that-a-reno."),
+							                            SAY(11604,"Humph!"),
+							                            SAY(11605,"Kids-a-reno these days!"),
+							                            SAY(11606,"Why?"),
+							                            SAY(11607,"Please leave-a-reno.")))
+						}
+						breaktime(2.0)
+						break
+					}
+				}
+			}
+			if (not found) {
+				if (actorDistanceTo(sheriff, sheriffSpot) > 1) {
+					actorWalkTo(sheriff, sheriffSpot)
+					breakwhilewalking(sheriff)
+				}
+				sheriff.busy <- NO
+				actorTouchable(sheriff, YES)
+				breaktime(3.0,4.0)
+				if (isSheriffInJail()) {	// Do another check if he's locked in jail
+					actorTurnTo(sheriff, DIR_FRONT)
+					sayLine(sheriff, SAY(11608,"What-the-a-reno!"))
+					startthread(sheriffLockedInJail)
+					return
+				}
+			}
+		}
+	}
+
+	script coronerWaiting() {
+		inputOff(@{
+			breaktime(0.5)
+			actorWalkTo(delores, coronerSpot2)
+			breaktime(1.0)
+			sayLine(coroner, randomfrom(SAY(11609,"I don't see him-a-who?"),
+			                            SAY(11610,"Sheriff's not here-a-who?"),
+			                            SAY(11611,"Sheriff must have stepped-a-who out-a-who?")))
+			breakwhiletalking(coroner)
+			actorWalkTo(coroner, cityHallDoor)
+			breakwhilewalking(coroner)
+			cityHallDoor.verb_open()
+			breaktime(0.5)
+			cityHallDoor.verb_close()
+			actorAt(coroner, CoronersOffice, CoronersOffice.coronerSpot)
+		})
+	}
+
+	script sheriffCoronerChat() {
+		actorAt(coroner, coronerJailSpot)
+		actorFace(coroner, DIR_RIGHT)
+		actorAt(sheriff, jailSpot1)
+		actorFace(sheriff, DIR_LEFT)
+		objectTouchable(sheriffCoroner, YES)
+		objectTouchable(sheriff, NO)
+		objectTouchable(coroner, NO)
+		do {
+			breakwhiletalking()
+			sayLine(sheriff, randomfrom(SAY(11612,"Where is the key-a-reno?"),
+			                            SAY(11613,"Do you have-a-reno the key?"),
+			                            SAY(11614,"I need to get out-a-reno."),
+			                            SAY(11615,"I don't have-a-reno the key!")))
+			breakwhiletalking()
+			sayLine(coroner, randomfrom(SAY(11616,"Where is the key-a-who?"),
+			                            SAY(11617,"Do you have-a-who the key?"),
+			                            SAY(11618,"You need to get out-a-who."),
+			                            SAY(11619,"I don't have-a-who the key!")))
+		}
+	}
+
+	function resetSheriffCoronerPuzzle() {
+		actorAt(coroner, CoronersOffice, CoronersOffice.coronerSpot)
+		actorAt(sheriff, SheriffsOffice, SheriffsOffice.sheriffSpot)
+		YACK(told_coroner_time) = 0
+		YACK(asked_for_coroner_time) = 0
+		objectTouchable(sheriffCoroner, NO)
+		actorTouchable(sheriff, YES)
+		actorTouchable(coroner, YES)
+		sheriff.locked_in_jail <- NO
+		sheriff.busy <- NO
+	}
+
+	// --------------------------------------------------------------------------------------------
+	// Enter/Exit code
+
+	enter = function(from_door=null) {
+		objectTouchable(sheriff, YES)
+		objectTouchable(coroner, YES)
+		objectTouchable(sheriffCoroner, NO)
+		if (isSheriffInJail()) {
+			actorAt(sheriff, jailSpot1)
+			if (YACK(told_coroner_time)) {
+				startthread(sheriffCoronerChat)
+			} else {
+				startthread(sheriffLockedInJail)
+			}
+		} else {
+			if (gametime() > exit_at_time+5) {	// we've been gone for more than 5 seconds
+				objectState(cabinet1D1, "closed")
+				objectState(cabinet1D2, "closed")
+				objectState(cabinet1D3, "closed")
+				objectState(cabinet2D1, "closed")
+				objectState(cabinet2D2, "closed")
+				objectState(cabinet2D3, "closed")
+				objectState(radio, "off")
+				actorAt(sheriff, sheriffSpot)
+			}
+			if (YACK(asked_for_coroner_time) && gametime() < YACK(told_coroner_time)+60 && isActorInRoom(coroner, SheriffsOffice)) {
+				actorAt(sheriff, Void, point(0,0))
+				startthread(coronerWaiting)
+			} else {
+				startthread(sheriffFussing)
+			}
+		}
+
+		if (not inInventory(Inventory.jailKey)) {
+			if (Note.isActiveStory("seeing_double")) {
+				objectHidden(SheriffsOffice.jailKey, NO)
+				objectTouchable(SheriffsOffice.jailKey, YES)
+			} else {
+				objectHidden(SheriffsOffice.jailKey, YES)
+				objectTouchable(SheriffsOffice.jailKey, NO)
+			}
+		}
+
+		local star = 0
+		local starOffset = 105
+		for (local i = 1; i <= 2; i += 1) {
+			star = this["star"+i]
+			objectOffset(star,point(starOffset,0))
+			// obj, fadeRange1, fadeRange2, alphaRange1, alphaRange2
+			twinkleStar(star, 0.01, 0.1, random(0,0.3), random(0.6, 1))
+		}
+	}
+
+	exit = function() {
+		if (jailDoor.open && isActorInRoom(sheriff, SheriffsOffice) && isActorInRoom(coroner, SheriffsOffice)) {
+			resetSheriffCoronerPuzzle()
+		} else
+		if (jailDoor.open && isActorInRoom(sheriff, SheriffsOffice) && !isActorInRoom(coroner, SheriffsOffice)) {
+			actorAt(sheriff, SheriffsOffice.sheriffSpot)
+		}
+	}
+
+	startYack = function(actor1, actor2) {
+		if (actor2 == sheriff) {
+			stopthread(this._fussing_tid)
+		}
+	}
+
+	endYack = function(actor1, actor2) {
+		startthread(sheriffFussing)
+	}
+
+	// --------------------------------------------------------------------------------------------
+	// Objects
+
+	// --------------------------------------------------------------------------------------------
+	arrestTron = DEFINE_OBJECT({
+		name = TEXT(11638,"ArrestTron 3000™")
+		photo_name = TEXT(11639,"the ArrestTron 3000™")
+
+		VERB(lookat) {
+			sayLine(SAY(11620,"These things were creepy. I'm glad they were deactivated."))
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	cityHallDoor = DEFINE_OBJECT({
+		name = TEXT(11640,"door")
+		door_verbs = YES
+		verb_use_text = TEXT(11641,"Leave")
+		verb_use_desc = TEXT(11642,"Leave the Sheriff's Office")
+		to_door = @CityHall.sheriffDoor
+	})
+
+	// --------------------------------------------------------------------------------------------
+	poster1 = DEFINE_OBJECT({
+		name = TEXT(11643,"poster")
+
+		VERB(read) {
+			sayLine(SAY(11621,"It's a wanted poster."))
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	poster2 = DEFINE_OBJECT({
+		name = TEXT(11644,"poster")
+
+		VERB(read) {
+			sayLine(SAY(11622,"I think that one came in the box."))
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	poster3 = DEFINE_OBJECT({
+		name = TEXT(11645,"poster")
+
+		VERB(read) {
+			sayLine(SAY(11623,"Wanted: One wanted poster. No reward."))
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	phone = DEFINE_OBJECT({
+		name = TEXT(11646,"phone")
+		default_verb = "verb_dial"
+		for_story = "history_of_phone"
+		sheriff_scolded = NO
+
+		VERB(lookat) {
+			sayLine(SAY(11624,"It's an official police phone."))
+		}
+
+		VERB(dial) {
+			if (isActorInRoom(sheriff, SheriffsOffice)) {
+				sheriff_scolded = YES
+				sayLine(sheriff, SAY(11625,"Hey! That's an official police-a-reno phone. Someone might call in with an emergency-a-reno."))
+			} else {
+				if (sheriff_scolded) {
+					sayLine(SAY(11626,"That's an official “police-a-reno” phone. Someone might call in with an “emergency-a-reno”."))
+				} else {
+					sayLine(SAY(11627,"That's an official police phone. Someone might call in with an emergency."))
+				}
+			}
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	cabinet1 = DEFINE_OBJECT({
+		name = TEXT(11647,"cabinet")
+
+		VERB(lookat) {
+			sayLine(SAY(11628,"It's a cabinet!"))
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	cabinet2 = DEFINE_OBJECT({
+		name = TEXT(11648,"cabinet")
+
+		VERB(lookat) {
+			sayLine(SAY(11629,"It's a cabinet!"))
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	cabinet1D1 = DEFINE_OBJECT({
+		reach = REACH_HIGH
+		photo_reach = REACH_HIGH
+		function init() { addPoliceDrawerVerbs(this) }
+	})
+	cabinet1D2 = DEFINE_OBJECT({
+		reach = REACH_MED
+		function init() { addPoliceDrawerVerbs(this) }
+	})
+	cabinet1D3 = DEFINE_OBJECT({
+		reach = REACH_LOW
+		photo_reach = REACH_LOW
+		function init() { addPoliceDrawerVerbs(this) }
+	})
+	cabinet2D1 = DEFINE_OBJECT({
+		reach = REACH_HIGH
+		photo_reach = REACH_HIGH
+		function init() { addPoliceDrawerVerbs(this) }
+	})
+	cabinet2D2 = DEFINE_OBJECT({
+		reach = REACH_MED
+		function init() { addPoliceDrawerVerbs(this) }
+	})
+	cabinet2D3 = DEFINE_OBJECT({
+		reach = REACH_LOW
+		photo_reach = REACH_LOW
+		function init() { addPoliceDrawerVerbs(this) }
+	})
+
+
+	// --------------------------------------------------------------------------------------------
+	jailKey = DEFINE_OBJECT({
+		name = TEXT(11649,"key")
+		reach = REACH_HIGH
+		photo_reach = REACH_HIGH
+		default_verb = "verb_take"
+
+		VERB(lookat) {
+			sayLine(SAY(11630,"It's a large key."))
+		}
+
+		VERB(take) {
+			if (isActorInRoom(sheriff, SheriffsOffice) && !isActorInTrigger(sheriff, fussyTriggerLeft)) {
+				inputOff(@{
+					actorEyesLook(sheriff, DIR_RIGHT)
+					sayLine(sheriff, SAY(11631,"Don't touch the key-a-reno."))
+					breaktime(0.5)
+					actorWalkTo(selectedActor, scoldSpot)
+				})
+			} else {
+				pickupObject(Inventory.jailKey)
+				objectState(this, "gone")
+			}
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	radio = DEFINE_OBJECT({
+		name = TEXT(11650,"radio")
+		state = "off"
+		on_off_verbs = YES
+
+		function stateChange() {
+			if (delores?._dancingTID) {
+				cutsceneDoOverride()
+			}
+			playRadio(this)
+			objectState(radioImage, state)
+			this._check_again_at <- delete
+		}
+
+		VERB(lookat) {
+			sayLine(state == "on" ? SAY(11632,"It's tuned to KSCUM. As it should be!") : SAY(11633,"Needs more KSCUM!"))
+		}
+		VERB_OK(empty) {
+			return noun2 == Inventory.glass && Inventory.glass.filled_with
+		}
+		VERB(empty) {
+			if (noun2 == Inventory.glass) {
+				Inventory.glass.filledWith(null)
+				playSoundAt(SOUNDID(water_pour), this)
+				this.verb_turn_off()
+				Inventory.screwdriver.verb_jab_with()
+			}
+		}
+		VERB_OK(dance) {return state == "on" }
+		VERB(dance) {
+			startthread(Diner.deloresDance)
+		}
+
+	})
+
+
+	radioImage = DEFINE_OBJECT({
+		function init() {objectTouchable(this, NO) }
+	})
+
+	// --------------------------------------------------------------------------------------------
+	jailDoor = DEFINE_OBJECT({
+		name = TEXT(11651,"jail door")
+		photo_name = TEXT(11652,"the jail door")
+		open = NO
+		default_verb = "verb_open"
+
+		function enter() {
+			walkboxHidden("jail_door", not open)
+			if (open) {
+				objectTouchable(this, YES)
+				objectOffset(this, point(-58, 0))
+				default_verb = "verb_close"
+			} else {
+				objectTouchable(this, YES)
+				objectOffset(this, point(0,0))
+				default_verb = "verb_open"
+			}
+		}
+
+		script openJailDoor() {
+			if (open) return
+			open = YES
+			default_verb = "verb_close"
+			objectOffsetTo(jailDoor, point(-58, 0), SheriffsOffice.jail_close_duration, EASE_IN)
+			playSoundAt(SOUNDID(open_jail_door), jailDoor)
+			objectTouchable(jailDoor, NO)
+			breaktime(SheriffsOffice.jail_close_duration)
+			objectTouchable(jailDoor, YES)
+			walkboxHidden("jail_door", NO)
+		}
+
+		script closeJailDoor() {
+			if (!open) return
+			walkboxHidden("jail_door", YES)
+			open = NO
+			default_verb = "verb_open"
+			objectOffsetTo(jailDoor, point(0, 0), SheriffsOffice.jail_close_duration, EASE_IN)
+			playSoundAt(SOUNDID(close_jail_door), jailDoor)
+			objectTouchable(jailDoor, NO)
+			breaktime(SheriffsOffice.jail_close_duration)
+			objectTouchable(jailDoor, YES)
+		}
+
+		VERB(lookat) {
+			sayLine(SAY(11634,"I'd hate to get locked up in here."))
+		}
+
+		VERB_OK(open) { return !open }
+		VERB(open) {
+			if (!open) {	// Need to check because Sheriff can call this.
+				playSound(SOUNDID(jiggle_jail))
+				sayLine(verbActor, SAY(11635,"It's locked."))
+				inputOff(@{
+					objectOffset(SheriffsOffice.jailDoor, point(-1, 0))
+					breaktime(0.25)
+					objectOffset(SheriffsOffice.jailDoor, point(0, 0))
+					breaktime(0.25)
+					objectOffset(SheriffsOffice.jailDoor, point(-1, 0))
+					breaktime(0.25)
+					objectOffset(SheriffsOffice.jailDoor, point(0, 0))
+				})
+			}
+		}
+
+		VERB_OK(close) { return open }
+		VERB(close) {
+			if (open) {	// Need to check because Sheriff can call this.
+				startthread(closeJailDoor)
+			}
+		}
+
+		VERB_OK(unlock_with) { return !open && noun2 == Inventory.jailKey }
+		VERB(unlock_with) {
+			if (objectTouchable(sheriffCoroner)) {
+				sayLine(delores, SAY(11636,"I don't want to let him out while they are so upset."))
+			} else {
+				startthread(openJailDoor)
+			}
+		}
+	})
+
+	in_trigger = NO
+	fussyTriggerLeft = {
+		function triggerEnter(actor) { in_trigger = YES }
+		function triggerLeave(actor) { in_trigger = NO }
+	}
+	fussyTriggerRight = {
+		function triggerEnter(actor) { in_trigger = YES }
+		function triggerLeave(actor) { in_trigger = NO }
+	}
+	fussyTriggerRadio = {
+		function triggerEnter(actor) { in_trigger = YES }
+		function triggerLeave(actor) { in_trigger = NO }
+	}
+	inJailTrigger = {
+		function triggerEnter(actor) { }
+		function triggerLeave(actor) { }
+	}
+
+	// --------------------------------------------------------------------------------------------
+	sheriffCoroner = DEFINE_OBJECT({
+		name = TEXT(11653,"Sheriff and Coroner")
+		article = TEXT(11654,"the")
+		for_story = "seeing_double"
+
+		VERB(lookat) {
+			sayLine(SAY(11637,"They look upset."))
+		}
+	})
+
+	star1 = {}
+	star2 = {}
+
+// NEW_OBJECT_HERE
+})

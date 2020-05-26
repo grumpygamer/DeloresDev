@@ -1,0 +1,13 @@
+/*{{
+
+@section room_functions
+@title Room Functions
+
+ A `room` is basically a screen that `objects` and `actors` can be placed into.  A room also has `walkboxes` that define the pathing
+ an `actor` can use when walking around.
+
+ The tool [[`Wimpy`]](wimpy) is used to define the visual characteristic of a room and it's `objects`
+
+ The `enterRoom()` command changes rooms and there is a global `currentRoom` variable that always hold the current room.
+
+}}*/

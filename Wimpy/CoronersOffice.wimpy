@@ -1,0 +1,916 @@
+ambient_light: "{0.568627,0.756863,0.729412,1}"
+background: "background"
+name: "CoronersOffice"
+room_scale: 4
+roomsize: "{600,180}"
+sheet: "CoronersOffice"
+layers: [
+    {
+        name: "webs"
+        parallax: 1.25
+        zsort: -2
+    }
+]
+lights: [
+    {
+        color1: "{0.843137,1,0.96732,0}"
+        color2: "{0,0,0,0}"
+        id: 0
+        iradius: 55
+        oradius: 198
+        rate: 0
+        clipping: ((0,0),(0,0))
+        pos: (251,93)
+    }
+]
+objects: [
+    {
+        name: "coronersGurney"
+        prop: 1
+        zsort: 56
+        animations: [
+            {
+                name: "off"
+                frames: [
+                    "gurney"
+                ]
+            }
+            {
+                name: "on"
+                frames: [
+                    "gurney_lit"
+                ]
+            }
+        ]
+        pos: (252,73)
+    }
+    {
+        name: "fingerTron"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 69
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "fingertron"
+                ]
+            }
+        ]
+        hotspot: ((-25,-46),(22,27))
+        pos: (376,114)
+        usepos: (1,-51)
+        usepos2: (7,-69)
+    }
+    {
+        name: "faceTron"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 71
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "facetron"
+                ]
+            }
+        ]
+        hotspot: ((-33,-46),(14,25))
+        pos: (439,114)
+        usepos: (-6,-51)
+        usepos2: (-3,-69)
+    }
+    {
+        name: "bloodTron"
+        usedir: "DIR_BACK"
+        usedir2: "DIR_BACK"
+        zsort: 70
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "bloodtron"
+                ]
+            }
+        ]
+        hotspot: ((-26,-46),(23,27))
+        pos: (322,114)
+        usepos: (0,-51)
+        usepos2: (1,-69)
+    }
+    {
+        name: "door"
+        usedir: "DIR_RIGHT"
+        zsort: 72
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "doorway"
+                ]
+            }
+            {
+                name: "state1"
+                frames: [
+                    "doorway"
+                ]
+            }
+        ]
+        hotspot: ((-34,-50),(28,57))
+        pos: (173,123)
+        usepos: (35,-21)
+    }
+    {
+        name: "fingerTronLight"
+        parent: "fingerTron"
+        prop: 1
+        zsort: 67
+        animations: [
+            {
+                name: "on"
+                frames: [
+                    "fingertron_light"
+                ]
+            }
+        ]
+        pos: (370,151)
+    }
+    {
+        name: "faceTronLight"
+        parent: "faceTron"
+        prop: 1
+        zsort: 66
+        animations: [
+            {
+                name: "on"
+                frames: [
+                    "fingertron_light"
+                ]
+            }
+        ]
+        pos: (425,151)
+    }
+    {
+        name: "bloodTronLight"
+        parent: "bloodTron"
+        prop: 1
+        zsort: 69
+        animations: [
+            {
+                name: "on"
+                frames: [
+                    "fingertron_light"
+                ]
+            }
+        ]
+        pos: (315,151)
+    }
+    {
+        name: "spot1"
+        spot: 1
+        usedir: "DIR_LEFT"
+        pos: (446,59)
+    }
+    {
+        name: "spot2"
+        spot: 1
+        usedir: "DIR_RIGHT"
+        pos: (399,58)
+    }
+    {
+        name: "spot3"
+        spot: 1
+        usedir: "DIR_RIGHT"
+        pos: (347,62)
+    }
+    {
+        name: "bloodTronLabel"
+        usedir: "DIR_BACK"
+        zsort: 68
+        hotspot: ((-33,3),(-20,20))
+        pos: (347,96)
+        usepos: (-25,-32)
+    }
+    {
+        name: "fingerTronLabel"
+        usedir: "DIR_BACK"
+        zsort: 68
+        hotspot: ((-29,3),(-15,21))
+        pos: (398,96)
+        usepos: (-21,-33)
+    }
+    {
+        name: "faceTronLabel"
+        usedir: "DIR_BACK"
+        zsort: 68
+        hotspot: ((-27,4),(-13,23))
+        pos: (452,94)
+        usepos: (-19,-31)
+    }
+    {
+        name: "cabinetD1"
+        usedir: "DIR_BACK"
+        zsort: 67
+        animations: [
+            {
+                name: "closed"
+                frames: [
+                ]
+            }
+            {
+                name: "open"
+                frames: [
+                    "top_drawer_open"
+                ]
+            }
+        ]
+        hotspot: ((-10,-7),(12,9))
+        pos: (106,114)
+        usepos: (-5,-50)
+    }
+    {
+        name: "cabinetD2"
+        usedir: "DIR_BACK"
+        zsort: 67
+        animations: [
+            {
+                name: "closed"
+                frames: [
+                ]
+            }
+            {
+                name: "open"
+                frames: [
+                    "middle_drawer_open"
+                ]
+            }
+        ]
+        hotspot: ((-10,-5),(12,11))
+        pos: (106,97)
+        usepos: (-5,-33)
+    }
+    {
+        name: "cabinetD3"
+        usedir: "DIR_BACK"
+        zsort: 67
+        animations: [
+            {
+                name: "closed"
+                frames: [
+                ]
+            }
+            {
+                name: "open"
+                frames: [
+                    "bottom_drawer_open"
+                ]
+            }
+        ]
+        hotspot: ((-11,-7),(12,9))
+        pos: (106,81)
+        usepos: (-5,-17)
+    }
+    {
+        name: "coronersOfficeFilingCabinet"
+        usedir: "DIR_BACK"
+        zsort: 97
+        hotspot: ((-74,-44),(-47,12))
+        pos: (173,113)
+        usepos: (-63,-48)
+    }
+    {
+        name: "skeleton"
+        usedir: "DIR_LEFT"
+        usedir2: "DIR_BACK"
+        zsort: 55
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "skeleton"
+                ]
+            }
+        ]
+        hotspot: ((18,-49),(41,32))
+        pos: (57,98)
+        usepos: (58,-46)
+        usepos2: (29,-61)
+    }
+    {
+        name: "bloodTronTube"
+        usedir: "DIR_BACK"
+        zsort: 78
+        hotspot: ((82,64),(93,79))
+        pos: (219,78)
+        usepos: (86,-13)
+    }
+    {
+        name: "faceTronTube"
+        usedir: "DIR_BACK"
+        zsort: 78
+        hotspot: ((82,64),(93,79))
+        pos: (329,78)
+        usepos: (86,-13)
+    }
+    {
+        name: "fingerTronTube"
+        usedir: "DIR_BACK"
+        zsort: 78
+        hotspot: ((82,64),(93,79))
+        pos: (272,78)
+        usepos: (86,-13)
+    }
+    {
+        name: "officeLight"
+        prop: 1
+        zsort: 46
+        animations: [
+            {
+                name: "off"
+                frames: [
+                    "ceiling_lamp_off"
+                ]
+            }
+            {
+                name: "on"
+                frames: [
+                    "ceiling_lamp_on"
+                ]
+            }
+        ]
+        pos: (248,116)
+    }
+    {
+        name: "chart"
+        usedir: "DIR_BACK"
+        zsort: 103
+        hotspot: ((-20,-22),(15,20))
+        pos: (230,129)
+        usepos: (-3,-59)
+    }
+    {
+        name: "certificate"
+        usedir: "DIR_BACK"
+        zsort: 103
+        hotspot: ((-20,3),(3,20))
+        pos: (268,123)
+        usepos: (-9,-53)
+    }
+    {
+        name: "coronersOfficeBookshelf"
+        usedir: "DIR_RIGHT"
+        zsort: 57
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "bookshelf"
+                ]
+            }
+        ]
+        hotspot: ((-41,-46),(9,53))
+        pos: (558,97)
+        usepos: (-45,-46)
+    }
+    {
+        name: "skeletonSpot"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (97,63)
+    }
+    {
+        name: "doorWalkToSpot"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (164,75)
+    }
+    {
+        name: "detSpot1"
+        spot: 1
+        usedir: "DIR_RIGHT"
+        pos: (162,58)
+    }
+    {
+        name: "detSpot2"
+        spot: 1
+        usedir: "DIR_RIGHT"
+        pos: (127,60)
+    }
+    {
+        name: "coronersFingerprintKit1"
+        usedir: "DIR_BACK"
+        zsort: 67
+        hotspot: ((-62,24),(-43,35))
+        pos: (160,90)
+        usepos: (-57,-25)
+    }
+    {
+        name: "coronersFingerprintKit2"
+        usedir: "DIR_BACK"
+        zsort: 67
+        hotspot: ((-60,8),(-44,17))
+        pos: (160,90)
+        usepos: (-59,-25)
+    }
+    {
+        name: "coronersFingerprintKit3"
+        usedir: "DIR_BACK"
+        zsort: 67
+        hotspot: ((-61,-8),(-43,1))
+        pos: (160,90)
+        usepos: (-59,-25)
+    }
+    {
+        name: "spotCoronerHide"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (142,79)
+    }
+    {
+        name: "spotCoronerWelcome"
+        spot: 1
+        usedir: "DIR_LEFT"
+        pos: (266,53)
+    }
+    {
+        name: "coronersBody"
+        usedir: "DIR_LEFT"
+        zsort: 90
+        hotspot: ((40,-14),(136,18))
+        pos: (160,90)
+        usepos: (158,-31)
+    }
+    {
+        name: "bloodTronLight1_On"
+        parent: "bloodTron"
+        usedir: "DIR_FRONT"
+        zsort: 65
+        animations: [
+            {
+                name: "state1"
+                frames: [
+                    "green_light_lit"
+                ]
+            }
+        ]
+        hotspot: ((-7,-8),(10,6))
+        pos: (305,111)
+        usepos: (0,-30)
+    }
+    {
+        name: "bloodTronLight2_On"
+        parent: "bloodTron"
+        usedir: "DIR_FRONT"
+        zsort: 65
+        animations: [
+            {
+                name: "state1"
+                frames: [
+                    "green_light_lit"
+                ]
+            }
+        ]
+        hotspot: ((-7,-8),(10,6))
+        pos: (305,103)
+        usepos: (0,-30)
+    }
+    {
+        name: "fingerTronLight1_On"
+        parent: "fingerTron"
+        usedir: "DIR_FRONT"
+        zsort: 65
+        animations: [
+            {
+                name: "state1"
+                frames: [
+                    "green_light_lit"
+                ]
+            }
+        ]
+        hotspot: ((-7,-8),(10,6))
+        pos: (360,111)
+        usepos: (0,-30)
+    }
+    {
+        name: "fingerTronLight2_On"
+        parent: "fingerTron"
+        usedir: "DIR_FRONT"
+        zsort: 65
+        animations: [
+            {
+                name: "state1"
+                frames: [
+                    "green_light_lit"
+                ]
+            }
+        ]
+        hotspot: ((-7,-8),(10,6))
+        pos: (360,103)
+        usepos: (0,-30)
+    }
+    {
+        name: "faceTronLight1_On"
+        parent: "faceTron"
+        usedir: "DIR_FRONT"
+        zsort: 65
+        animations: [
+            {
+                name: "state1"
+                frames: [
+                    "green_light_lit"
+                ]
+            }
+        ]
+        hotspot: ((-7,-8),(10,6))
+        pos: (416,111)
+        usepos: (0,-30)
+    }
+    {
+        name: "faceTronLight2_On"
+        parent: "faceTron"
+        usedir: "DIR_FRONT"
+        zsort: 65
+        animations: [
+            {
+                name: "state1"
+                frames: [
+                    "green_light_lit"
+                ]
+            }
+        ]
+        hotspot: ((-7,-8),(10,6))
+        pos: (416,103)
+        usepos: (0,-30)
+    }
+    {
+        name: "bloodTronReport"
+        usedir: "DIR_BACK"
+        zsort: 67
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "bloodtron_report"
+                ]
+            }
+        ]
+        hotspot: ((-10,-6),(10,8))
+        pos: (320,78)
+        usepos: (-6,-12)
+    }
+    {
+        name: "fingerTronReport"
+        usedir: "DIR_BACK"
+        zsort: 67
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "fingertron_report"
+                ]
+            }
+        ]
+        hotspot: ((-9,-6),(10,8))
+        pos: (375,78)
+        usepos: (-6,-12)
+    }
+    {
+        name: "faceTronReport"
+        usedir: "DIR_BACK"
+        zsort: 67
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "facetron_report"
+                ]
+            }
+        ]
+        hotspot: ((-10,-6),(10,7))
+        pos: (431,78)
+        usepos: (-6,-12)
+    }
+    {
+        name: "bloodTronFlashingLights"
+        parent: "bloodTron"
+        prop: 1
+        zsort: 67
+        animations: [
+            {
+                name: "state1"
+                frames: [
+                    "lights1"
+                    "lights2"
+                    "lights3"
+                    "lights4"
+                    "lights5"
+                    "lights6"
+                    "lights7"
+                    "lights8"
+                    "lights9"
+                    "lights10"
+                ]
+            }
+            {
+                name: "state2"
+                frames: [
+                    "lights10"
+                    "lights9"
+                    "lights8"
+                    "lights7"
+                    "lights6"
+                    "lights5"
+                    "lights4"
+                    "lights3"
+                    "lights2"
+                    "lights1"
+                ]
+            }
+            {
+                name: "state3"
+                frames: [
+                    "lights4"
+                    "lights1"
+                    "lights8"
+                    "lights3"
+                    "lights9"
+                    "lights6"
+                    "lights10"
+                    "lights5"
+                    "lights2"
+                    "lights7"
+                ]
+            }
+        ]
+        pos: (337,107)
+    }
+    {
+        name: "fingerTronFlashingLights"
+        parent: "fingerTron"
+        prop: 1
+        zsort: 67
+        animations: [
+            {
+                name: "state1"
+                frames: [
+                    "lights1"
+                    "lights2"
+                    "lights3"
+                    "lights4"
+                    "lights5"
+                    "lights6"
+                    "lights7"
+                    "lights8"
+                    "lights9"
+                    "lights10"
+                ]
+            }
+            {
+                name: "state2"
+                frames: [
+                    "lights10"
+                    "lights9"
+                    "lights8"
+                    "lights7"
+                    "lights6"
+                    "lights5"
+                    "lights4"
+                    "lights3"
+                    "lights2"
+                    "lights1"
+                ]
+            }
+            {
+                name: "state3"
+                frames: [
+                    "lights4"
+                    "lights1"
+                    "lights8"
+                    "lights3"
+                    "lights9"
+                    "lights6"
+                    "lights10"
+                    "lights5"
+                    "lights2"
+                    "lights7"
+                ]
+            }
+        ]
+        pos: (392,107)
+    }
+    {
+        name: "faceTronFlashingLights"
+        parent: "faceTron"
+        prop: 1
+        zsort: 67
+        animations: [
+            {
+                name: "state1"
+                frames: [
+                    "lights1"
+                    "lights2"
+                    "lights3"
+                    "lights4"
+                    "lights5"
+                    "lights6"
+                    "lights7"
+                    "lights8"
+                    "lights9"
+                    "lights10"
+                ]
+            }
+            {
+                name: "state2"
+                frames: [
+                    "lights10"
+                    "lights9"
+                    "lights8"
+                    "lights7"
+                    "lights6"
+                    "lights5"
+                    "lights4"
+                    "lights3"
+                    "lights2"
+                    "lights1"
+                ]
+            }
+            {
+                name: "state3"
+                frames: [
+                    "lights4"
+                    "lights1"
+                    "lights8"
+                    "lights3"
+                    "lights9"
+                    "lights6"
+                    "lights10"
+                    "lights5"
+                    "lights2"
+                    "lights7"
+                ]
+            }
+        ]
+        pos: (448,107)
+    }
+    {
+        name: "bloodTronHalEyeLit"
+        parent: "bloodTron"
+        prop: 1
+        zsort: 67
+        animations: [
+            {
+                name: "state1"
+                frames: [
+                    "hal_eye_lit"
+                ]
+            }
+        ]
+        pos: (337,128)
+    }
+    {
+        name: "fingerTronHalEyeLit"
+        parent: "fingerTron"
+        prop: 1
+        zsort: 67
+        animations: [
+            {
+                name: "state1"
+                frames: [
+                    "hal_eye_lit"
+                ]
+            }
+        ]
+        pos: (392,128)
+    }
+    {
+        name: "faceTronHalEyeLit"
+        parent: "faceTron"
+        prop: 1
+        zsort: 67
+        animations: [
+            {
+                name: "off"
+                frames: [
+                ]
+            }
+            {
+                name: "on"
+                frames: [
+                    "hal_eye_lit"
+                ]
+            }
+        ]
+        pos: (448,128)
+    }
+    {
+        name: "spotWakeup1"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (235,67)
+    }
+    {
+        name: "spotWakeup2"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (273,67)
+    }
+    {
+        name: "spotAgent1"
+        spot: 1
+        usedir: "DIR_RIGHT"
+        pos: (222,49)
+    }
+    {
+        name: "spotAgent2"
+        spot: 1
+        usedir: "DIR_LEFT"
+        pos: (278,48)
+    }
+    {
+        name: "faceTronMask"
+        prop: 1
+        zsort: 67
+        animations: [
+            {
+                name: "state1"
+                frames: [
+                    "facetron_mask"
+                ]
+            }
+        ]
+        pos: (432,96)
+    }
+    {
+        name: "fingerTronMask"
+        prop: 1
+        zsort: 67
+        animations: [
+            {
+                name: "state1"
+                frames: [
+                    "fingertron_mask"
+                ]
+            }
+        ]
+        pos: (376,96)
+    }
+    {
+        name: "bloodTronMask"
+        prop: 1
+        zsort: 67
+        animations: [
+            {
+                name: "state1"
+                frames: [
+                    "bloodtron_mask"
+                ]
+            }
+        ]
+        pos: (321,96)
+    }
+    {
+        name: "tronTrigger"
+        trigger: 1
+        usedir: "DIR_FRONT"
+        zsort: 90
+        hotspot: ((-20,-95),(7,7))
+        pos: (300,90)
+        usepos: (0,-30)
+    }
+    {
+        name: "coronerSpot"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (479,68)
+    }
+    {
+        name: "coronerTalkSpot"
+        spot: 1
+        usedir: "DIR_BACK"
+        pos: (466,54)
+    }
+]
+room_bounds: ((1,1),(600,180))
+room_size: (600,180)
+scaling: [
+    "1.2@32"
+    ".90@80"
+]
+walkboxes: [
+    {
+        polygon: "(99,66);(126,66);(196,63);(189,54);(320,54);(323,32);(31,33);(64,49);(99,49);(104,56);(73,56)"
+    }
+    {
+        polygon: "(131,70);(152,70);(154,75);(122,76);(123,80);(169,80);(169,78);(169,76);(189,76);(187,71);(191,70);(207,70);(213,71);(282,71);(286,66);(285,63);(196,63);(126,66)"
+    }
+    {
+        polygon: "(507,66);(522,58);(505,58);(532,45);(531,32);(323,32);(320,54);(313,63);(285,63);(286,66)"
+    }
+    {
+        polygon: "(169,80);(195,96);(196,94);(169,78)"
+    }
+    {
+        name: "stairs"
+        polygon: "(195,96);(208,103);(209,102);(196,94)"
+    }
+]

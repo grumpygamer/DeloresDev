@@ -1,0 +1,275 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+local note_text = [ TEXT(11747,"Delores: Thanks for joining the Thimbleweed Nickel Photojournalism Team.⏎")
+			        TEXT(11748,"For your assignment, I'd like you to get the following photos for some upcoming stories:⏎⏎") ]
+
+local note_text2 = TEXT(11749,"⏎P.S. Thanks for helping out while you're on vacation from MMucasFlem Games.")
+
+const STORY_VERSION = 4
+
+// These need to be in order of difficulty.
+local story_master_list = [
+	"editor"
+	"patriotic"
+	"trash"
+	"thimbleweed_county"
+	"bones"
+
+	"road_safety"
+	"videogames"
+	"hotel"
+	"disgusting"
+	"poverty"
+
+	"selfie"
+	"thimblecon"
+	"jefferson"
+	"dead_languages"
+	"bankteller"
+
+	"wildlife"
+	"pillow_bears"
+	"poetry"
+	"birdeye_view"
+	"ransome"
+
+	"cleaning_up"
+	"bad_water"
+	"mansion"
+	"danger_job"
+	"history_of_phone"
+
+	"tiny_clock"
+	"gambling"
+	"vandalism"
+	"cats"
+	"seeing_double"
+]
+
+// This order doesn't matter.
+local story_data = {
+	"patriotic": 			TEXT(11750,"Story about the 4th of July")
+	"thimbleweed_county": 	TEXT(11751,"Column about Thimbleweed County")
+	"poverty": 				TEXT(11752,"Story about childhood poverty")
+	"editor": 				TEXT(11753,"Photo of the editor of the Nickel News")
+	"wildlife": 			TEXT(11754,"Action photo of dangerous wildlife")
+	"bad_water": 			TEXT(11755,"Our bad Thimbleweed drinking water quality")
+	"disgusting": 			TEXT(11756,"Something disgusting")
+	"jefferson": 			TEXT(11757,"Story about President Thomas Jefferson")
+	"dead_languages": 		TEXT(11758,"A look at the dead languages of antiquity")
+	"cats": 				TEXT(11759,"Exposé on the humor of living with cats")
+	"vandalism": 			TEXT(11760,"Government property vandalism")
+	"hotel": 				TEXT(11761,"Piece on the closing of the Edmund Hotel")
+	"bones": 				TEXT(11762,"A good example of proximal phalanges")
+	"bankteller": 			TEXT(11763,"Biting piece on rude bank employees")
+	"videogames": 			TEXT(11764,"Reviews of some new adventure games")
+	"trash": 				TEXT(11765,"Public service piece about picking up trash")
+	"thimblecon": 			TEXT(11766,"Puff-piece on ThimbleCon '88")
+	"birdeye_view": 		TEXT(11767,"Birds-eye view of the town")
+	"selfie": 				TEXT(11768,"Take a photo of our newest photojournalist")
+	"poetry": 				TEXT(11769,"Story for the poetry section")
+	"ransome": 				TEXT(11770,"Headshot for a story on a celebrity")
+	"danger_job": 			TEXT(11771,"Photo of a person doing a dangerous job")
+	"mansion" : 			TEXT(11772,"Story on home demolition")
+	"road_safety" : 		TEXT(11773,"Story about road safety")
+	"old_timey": 			TEXT(11774,"Article on old-timey black and white photos")
+	"history_of_phone": 	TEXT(11775,"A hit-piece on the history of the phone")
+	"tiny_clock": 			TEXT(11776,"History of tiny clocks")
+	"seeing_double": 		TEXT(11777,"A story about seeing double")
+	"gambling": 			TEXT(11778,"An exposé on Thimbleweed's gambling problem")
+	"pillow_bears": 		TEXT(11779,"Story about the latest toy craze")
+	"cleaning_up" : 		TEXT(11780,"Story about allergies")
+}
+
+local completed_stories = []	// All stories that have been completed over time.
+local active_stories = []		// Stories player is currently working on
+local active_photos_taken = []	// Photos of active stories taken
+
+
+DEFINE_ROOM("Note", {
+	no_jump = YES
+	closeup = YES
+
+	text_image = null
+
+	// ------------------------------------------------------------------------
+	// General room functions
+
+	function createStories() {
+
+		local possible_stories = []
+		foreach (local key in story_master_list) {
+			arrayappend(possible_stories, key)
+		}
+		// Ripple shuffle
+		for (local i = 0..sizeof(possible_stories)-2) {
+			if (randomodds(0.50)) {
+				local t = possible_stories[i]
+				possible_stories[i] = possible_stories[i+1]
+				possible_stories[i+1] = t
+			}
+		}
+
+		completed_stories = getprivatepref("completed_stories")
+		if (completed_stories == null) {
+			completed_stories = []
+			setprivatepref("bathroom_power", NO)
+		}
+
+		// Game quit/crashed before final endgame...
+		if (sizeof(completed_stories) >= 30) {
+			setprivatepref("completed_stories", [])
+			setprivatepref("bathroom_power", NO)
+			syncprefs()
+			completed_stories = []
+		}
+
+		Bathroom.has_power = getprivatepref("bathroom_power", NO)
+
+		// Find stories that haven't been completed.
+		active_stories = arrayfilter(possible_stories, @(index,story) {
+			return (story !in completed_stories) ? YES : NO
+		})
+
+		if (sizeof(active_stories) < 5) {
+			// This will only happen for people playing old test builds, but also a good safety
+		 	local completed_copy = arrayshuffle(clone(completed_stories))
+		 	arrayappend(active_stories, arrayremovefirst(completed_copy))
+		 	arrayappend(active_stories, arrayremovefirst(completed_copy))
+		 	arrayappend(active_stories, arrayremovefirst(completed_copy))
+		 	arrayappend(active_stories, arrayremovefirst(completed_copy))
+		 	arrayresize(active_stories, 5)
+		} else {
+			arrayresize(active_stories, 5)
+		}
+
+		arrayshuffle(active_stories)
+
+		if (DEBUG(force_story)) {
+			if (DEBUG(force_story) !in story_master_list) {
+				error("forceStory: '",DEBUG(force_story),"' not a valid story.")
+			}
+			arrayappend(active_stories, DEBUG(force_story))
+		}
+	}
+
+	function add_story(tag, text) {
+		text = "  • "+TR(text)+"."
+		if (isStoryPhotographed(tag)) {
+			text = "#{008000}"+text+" ✓#{}"
+		}
+		return text+"⏎"
+	}
+
+	function buildText() {
+		local text = ""
+		foreach (local line in note_text) { text += TR(line) }
+		foreach(local story in active_stories) {
+			if (story_data?[story]) text += add_story(story, story_data[story])
+		}
+		text += TR(note_text2)
+		text_image = createTextImage(NOTE_FONT, text, ALIGN_LEFT|800)
+		imageAt(text_image, point(290,580))
+		imageColor(text_image, COLOR_BLACK)
+		imageRotate(text_image, -3.5)
+		imageFilter(text_image, 1)
+	}
+
+	function isDone() {
+	if (DEBUG(watch_ending)) return YES
+		return (sizeof(active_photos_taken) >= 5) ? YES : NO
+	}
+
+	// Total stories completed over several play sessions.
+	function totalCompletedCount() {
+		return sizeof(completed_stories)
+	}
+	function totalTasksCount() {
+		return sizeof(story_master_list)
+	}
+	// Including the ones in inventory, how many are left to turn in.
+	function totalLeftToTurnin() {
+		if (DEBUG(watch_ending)) return 0
+		local count = sizeof(story_master_list)-sizeof(completed_stories)
+		if (count < 0) count = 0
+		return count
+	}
+	function isActiveStory(story_list) {
+		foreach (local story in strsplit(story_list, ",")) {
+			if (story in active_stories) return YES
+		}
+		return NO
+	}
+	function isStoryPhotographed(story) {
+		return (story in active_photos_taken)
+	}
+	function isStoryIn(story, story_list) {
+		foreach (local s in strsplit(story_list, ",")) {
+			if (story == s) return YES
+		}
+		return NO
+	}
+
+	// Every photo taken calls this function for each of it's possible stories.
+	function takePhoto(for_story) {
+		if (for_story in active_stories) {
+			arrayfindremove(active_photos_taken, for_story)
+			arrayappend(active_photos_taken, for_story)
+			return YES
+		}
+		return NO
+	}
+
+	// Called when you turn in your assignment to Natalie.  Only place data is saved.
+	function saveGame() {
+		playSound(SOUNDID(floppy_short))
+		foreach(local story in active_photos_taken) {
+			arrayfindremove(completed_stories, story)
+			arrayappend(completed_stories, story)
+		}
+		setprivatepref("completed_stories", completed_stories)
+		if (Bathroom.has_power) {
+			setprivatepref("bathroom_power", YES)
+		}
+		syncprefs()
+	}
+
+	function debugCompleteAllAssignments() {
+		foreach(local story in active_stories) {
+			takePhoto(story)
+		}
+		saveGame()
+	}
+
+	// ------------------------------------------------------------------------
+	// Enter/Exit code
+
+	enter = function(from_door=null) {
+		buildText()
+		createExitButton(@{
+			cameraFollow(selectedActor)
+		})
+	}
+
+	exit = function() {
+		deleteImage(text_image)
+		deleteExitButton()
+	}
+
+	keyDown = function(key, flags) {
+		if (IS_BACK_BUTTON(key)) {
+			cameraFollow(selectedActor)
+		}
+		return HANDLED
+	}
+
+	// ------------------------------------------------------------------------
+	// Objects
+
+// NEW_OBJECT_HERE
+})

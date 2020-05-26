@@ -1,0 +1,87 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+DEFINE_ROOM("Book", {
+	no_jump = YES
+	closeup = YES
+
+	text_image = null
+
+	page1 = [ 	TEXT(11715,"FORTRAN⏎")
+				TEXT(11716,"An introduction⏎")
+				TEXT(11717,"⏎")
+				TEXT(11718,"While many programmers today consider FORTRAN to be a dead programming language, nothing could be further from the truth.⏎⏎")
+				TEXT(11719,"The authors have no doubt that well into the 2020's (and beyond) FORTRAN will be at the forefront of all computer languages.⏎⏎")
+				TEXT(11720,"This book is to serve as a tool for the modern programmer looking for an edge in the future of computer programing.") ]
+
+	page2 = [ 	TEXT(11721,"⏎program circle⏎")
+	      		TEXT(11722,"real r, area⏎")
+				TEXT(11723,"⏎")
+				TEXT(11724,"c Reads a number and prints⏎")
+				TEXT(11725,"c the area of a circle.⏎")
+				TEXT(11726,"⏎")
+				TEXT(11727,"write (*,*) 'Give radius r:'⏎")
+				TEXT(11728,"read  (*,*) r⏎")
+				TEXT(11729,"area = 3.14159*r*r⏎")
+				TEXT(11730,"write (*,*) 'Area = ', area⏎")
+				TEXT(11731,"⏎")
+				TEXT(11732,"stop⏎")
+				TEXT(11733,"end⏎") ]
+
+	// --------------------------------------------------------------------------------------------
+	// General room functions
+
+	function buildText() {
+		text_image = createImage()
+
+		local text1 = ""
+		foreach (local line in page1) { text1 += TR(line) }
+		local text2 = ""
+		foreach (local line in page2) { text2 += TR(line) }
+
+		local image = createTextImage(NOTE_FONT, text1, ALIGN_LEFT|550)
+		imageAt(image, point(80,540))
+		imageColor(image, COLOR_BLACK)
+		imageRotate(image, -5)
+		imageFilter(image, 1)
+		imageParentChild(text_image, image)
+
+		image = createTextImage(NOTE_FONT, text2, ALIGN_LEFT|550)
+		imageAt(image, point(670,580))
+		imageColor(image, COLOR_BLACK)
+		imageRotate(image, -5)
+		imageFilter(image, 1)
+		imageParentChild(text_image, image)
+	}
+
+	// --------------------------------------------------------------------------------------------
+	// Enter/Exit code
+
+	enter = function(from_door=null) {
+		buildText()
+		createExitButton(@{
+			cameraFollow(selectedActor)
+		})
+	}
+
+	exit = function() {
+		deleteImage(text_image)
+		deleteExitButton()
+	}
+
+	keyDown = function(key, flags) {
+		if (IS_BACK_BUTTON(key)) {
+			cameraFollow(selectedActor)
+		}
+		return HANDLED
+	}
+
+	// --------------------------------------------------------------------------------------------
+	// Objects
+
+// NEW_OBJECT_HERE
+})

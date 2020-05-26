@@ -1,0 +1,255 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+DEFINE_ROOM("Alleyway", {
+	music_pool = "town"
+	ambient_sound = SOUNDID(ambient_town)
+
+	// --------------------------------------------------------------------------------------------
+	// General room functions
+	function flickerLight() {
+		objectState(blueNeon, "off")
+		startthread(@{
+			do {
+				breaktime(0.01, 0.2)
+				objectState(blueNeon, "on")
+				roomLightEnable(1, YES)
+				playSoundAt(SOUNDID(flicker_fluorescent), blueNeon)
+				breaktime(1.0, 4.0)
+				objectState(blueNeon, "off")
+				roomLightEnable(1, NO)
+			}
+		})
+	}
+
+	// --------------------------------------------------------------------------------------------
+	// Enter/Exit code
+
+	enter = function(from_door=null) {
+		flickerLight()
+	}
+
+	exit = function() {
+	}
+
+	// --------------------------------------------------------------------------------------------
+	// Objects
+
+	// --------------------------------------------------------------------------------------------
+	RansomePoster = DEFINE_OBJECT({
+		name = TEXT(11346,"poster")
+		for_story = "ransome"
+		photo_reach = REACH_HIGH
+
+		VERB(lookat) {
+			sayLine(SAY(11317,"It's an old Ransome the Clown poster."), ONCE(SAY(11318,"I think I miss his brilliant performance satire most of all.")))
+			name = TEXT(11347,"Ransome the Clown poster")
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	coveredRansomePoster = DEFINE_OBJECT({
+		name = TEXT(11348,"poster edge")
+		bad_story = [ "ransome", SAY(11319,"Kind of artsy, but I don't think Natalie will want this one.") ]
+		// looked_at = NO
+
+		VERB(lookat) {
+			sayLine(SAY(11320,"It's a Ransome the Clown poster!"))
+			name = TEXT(11349,"Ransome the Clown poster")
+			bad_story = [ "ransome", SAY(11321,"That's a pretty crappy photo. No one's going to know it's Ransome.") ]
+			RansomePoster.name = TEXT(11350,"Ransome the Clown poster")
+			// looked_at = YES
+		}
+		// function doneTakingPhoto(photo) {
+		// 	if (looked_at) {
+		// 		sayLine(SAY(11322,"That's a pretty crappy photo. No one's going to know it's Ransome."))
+		// 	} else {
+		// 		sayLine(SAY(11323,"Kind of artsy, but I don't think Natalie will want this one."))
+		// 	}
+		// }
+	})
+
+	// --------------------------------------------------------------------------------------------
+	trashCan = DEFINE_OBJECT({
+		name = TEXT(11351,"trash can")
+		reach = REACH_NONE
+		looked_at <- NO
+		for_story = "trash"
+		is_trash = YES
+		bad_story = [ [ "round", SAY(11324,"I don't think this is round enough.") ],
+					  [ "disgusting", SAY(11325,"It's actually pretty clean for a trash can. Not disgusting at all.") ] ]
+
+		VERB(lookat) {
+			this.looked_at = YES
+			sayLine(SAY(11326,"This is the second cleanest trash can I've ever seen."))
+		}
+		VERB(open) {
+			if (this.looked_at) {
+				sayLine(SAY(11327,"It may be clean, but I'm not interested in looking inside."))
+			} else {
+				sayLine(SAY(11328,"I don't think opening trash cans is part of my job description."))
+			}
+		}
+	})
+
+
+	// --------------------------------------------------------------------------------------------
+	box = DEFINE_OBJECT({
+		name = TEXT(11352,"box")
+		photo_reach = REACH_LOW
+		bad_story = [ "cats", SAY(11329,"Nothing funny about a cat in a box. Or no cat in a box.") ]
+
+		VERB(lookat) {
+			sayLine(SAY(11330,"It's still just an empty box."))
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	MainStreetDoor = DEFINE_OBJECT({
+		name = TEXT(11353,"Main Street")
+		no_photo = YES
+
+		VERB(walkto) {
+			exitRoomFromDoor(this, MainStreet.alleywayDoor)
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	dinerBackDoor = DEFINE_OBJECT({
+		name = TEXT(11354,"door")
+		photo_name = TEXT(11355,"the Diner back door")
+
+		VERB(lookat) {
+			sayLine(SAY(11331,"It's the back door to the Diner. It's always locked."))
+		}
+		VERB(open) {
+			sayLine(SAY(11332,"It's locked."))
+		}
+	})
+
+
+	// --------------------------------------------------------------------------------------------
+	blueNeon = {}
+
+	// --------------------------------------------------------------------------------------------
+	thimbleconPoster = DEFINE_OBJECT({
+		name = TEXT(11356,"poster")
+		for_story = "thimblecon"
+		reach = REACH_HIGH
+		stuck = YES
+
+		VERB(lookat) {
+			sayLine(SAY(11333,"Ooh, a ThimbleCon 88 poster!"), SAY(11334,"This would look great in my MMucasFlem office, if Jay Bane will let me put it up."))
+			name = TEXT(11357,"ThimbleCon poster")
+		}
+		VERB(pull_down) {
+			if (stuck) {
+				sayLine(SAY(11335,"It's glued on and I can't pull it off."))
+			} else {
+				pickupObject(Inventory.thimbleconPoster)
+				objectTouchable(coveredRansomePoster, NO)
+				objectState(this, "off")
+				objectHidden(this, YES)
+				sayLine(SAY(11336,"Hi Ransome!"))
+				RansomePoster.name = "Ransome the Clown poster"
+			}
+		}
+		VERB_OK(dissolve) {
+			return noun2 == Inventory.glass && Inventory.glass.filled_with
+		}
+		VERB(dissolve) {
+			if (noun2 == Inventory.glass) {
+				Inventory.glass.filledWith(null)
+				sayLine(SAY(11337,"Maybe the water will dissolve the glue."))
+				stuck = NO
+			}
+		}
+		VERB_OK(scrape) {
+			return noun2 == Inventory.screwdriver
+		}
+		VERB(scrape) {
+			if (noun2 == Inventory.screwdriver) {
+				objectState(this, "off")
+				objectHidden(this, YES)
+				pickupObject(Inventory.thimbleconPoster)
+				sayLine(SAY(11338,"That worked! And without damaging either poster."), SAY(11339,"Hi Ransome!"))
+				objectTouchable(coveredRansomePoster, NO)
+				RansomePoster.name = TEXT(11358,"Ransome the Clown poster")
+			}
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	valve = DEFINE_OBJECT({
+		name = TEXT(11359,"valve")
+		moved = NO
+		position = "normal"
+		delores_tightened = NO
+		default_verb = "verb_turn"
+
+		VERB(lookat) {
+			if (moved && position == "normal") {
+				sayLine(SAY(11340,"It's back to its original setting."), (!delores_tightened ? ONCE(SAY(11341,"Guess Sandy or Dave figured it out.")) : ""))
+			} else {
+				if (position == "cranked") {
+					sayLine(SAY(11342,"The valve is set to full on!"))
+				} else {
+					sayLine(SAY(11343,"It's a rusty old valve. It says “Thimbleweed Park Gas Company, Do Not Touch”."))
+					name = TEXT(11360,"gas valve")
+				}
+			}
+		}
+		VERB(turn) {
+			inputOff(@{
+				playAnimation(delores, "reach_med")
+				breakwhilesound(playSoundAt(SOUNDID(groan), delores))
+				breaktime(1.5)
+				playAnimation(delores, "stand")
+				if (!moved) {
+					sayLine(SAY(11344,"It's stuck. I can't move it."))
+				} else {
+					sayLine(SAY(11345,"It's stuck again."))
+				}
+			})
+		}
+		VERB_OK(loosen) { return position == "normal" && noun2 == Inventory.screwdriver }
+		VERB(loosen) {
+			position = "cranked"
+			delores_tightened = NO
+			inputOff(@{
+				local sid = playSound(SOUNDID(rusty_metal_scrape))
+				while(isSoundPlaying(sid)) {
+					actorQuickReach(selectedActor, REACH_LOW)
+					breaktime(0.5,0.75)
+				}
+				if (!moved) {
+					actorTurnTo(selectedActor, DIR_FRONT)
+					breaktime(0.25)
+					actorWalkForward(selectedActor, 8)
+					sayLine("That's probably really dangerous.",
+							"I've been designing adventure games too long.")
+					moved = YES
+				}
+			})
+		}
+		VERB_OK(tighten) { return position == "cranked" && noun2 == Inventory.screwdriver }
+		VERB(tighten) {
+			position = "normal"
+			delores_tightened = YES
+			inputOff(@{
+				local sid = playSound(SOUNDID(rusty_metal_scrape))
+				while(isSoundPlaying(sid)) {
+					actorQuickReach(selectedActor, REACH_LOW)
+					breaktime(0.5,0.75)
+				}
+			})
+		}
+	})
+
+
+// NEW_OBJECT_HERE
+})

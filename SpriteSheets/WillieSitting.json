@@ -1,0 +1,116 @@
+{"frames": {
+
+"fsit_blink":
+{
+	"frame": {"x":75,"y":73,"w":12,"h":4},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":26,"y":52,"w":12,"h":4},
+	"sourceSize": {"w":64,"h":100}
+},
+"fsit_body1":
+{
+	"frame": {"x":75,"y":38,"w":34,"h":31},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":14,"y":67,"w":34,"h":31},
+	"sourceSize": {"w":64,"h":100}
+},
+"fsit_eyes_left":
+{
+	"frame": {"x":91,"y":73,"w":12,"h":3},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":26,"y":53,"w":12,"h":3},
+	"sourceSize": {"w":64,"h":100}
+},
+"fsit_eyes_right":
+{
+	"frame": {"x":107,"y":73,"w":12,"h":3},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":26,"y":53,"w":12,"h":3},
+	"sourceSize": {"w":64,"h":100}
+},
+"fsit_head1":
+{
+	"frame": {"x":80,"y":3,"w":28,"h":31},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":18,"y":38,"w":28,"h":31},
+	"sourceSize": {"w":64,"h":100}
+},
+"fsit_head2":
+{
+	"frame": {"x":112,"y":3,"w":28,"h":31},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":18,"y":38,"w":28,"h":31},
+	"sourceSize": {"w":64,"h":100}
+},
+"fsit_head3":
+{
+	"frame": {"x":144,"y":3,"w":28,"h":31},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":18,"y":38,"w":28,"h":31},
+	"sourceSize": {"w":64,"h":100}
+},
+"fsit_head4":
+{
+	"frame": {"x":3,"y":43,"w":28,"h":32},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":18,"y":38,"w":28,"h":32},
+	"sourceSize": {"w":64,"h":100}
+},
+"fsit_head5":
+{
+	"frame": {"x":113,"y":38,"w":28,"h":31},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":18,"y":38,"w":28,"h":31},
+	"sourceSize": {"w":64,"h":100}
+},
+"fsit_head6":
+{
+	"frame": {"x":145,"y":38,"w":28,"h":31},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":18,"y":38,"w":28,"h":31},
+	"sourceSize": {"w":64,"h":100}
+},
+"fwave_body1":
+{
+	"frame": {"x":35,"y":43,"w":36,"h":31},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":12,"y":67,"w":36,"h":31},
+	"sourceSize": {"w":64,"h":100}
+},
+"fwave_body2":
+{
+	"frame": {"x":40,"y":3,"w":36,"h":31},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":12,"y":67,"w":36,"h":31},
+	"sourceSize": {"w":64,"h":100}
+},
+"fwave_body3":
+{
+	"frame": {"x":3,"y":3,"w":33,"h":36},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":15,"y":62,"w":33,"h":36},
+	"sourceSize": {"w":64,"h":100}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "WillieSitting.png",
+	"format": "RGBA8888",
+	"size": {"w":176,"h":80},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:c8c47cc1578690b138390183d214b2e4:122cf60781bd09e0cfbfdb7e3d09f8e2:3fc4affb94586a1ae8fb1e338382d3fd$"
+}
+}

@@ -1,0 +1,644 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+local options_image = null
+local panel_width = 0
+local panel_height = 0
+
+// Create a empty sized panel
+function createPanel(width, height) {
+	local scale = 3.0
+	local source_size = 8
+
+	width /= 2.0
+	height /= 2.0
+
+	local panel = createImage()
+
+	local tl = createImage(UI_SHEET, "panel_tl", point(-width, height))
+	local tr = createImage(UI_SHEET, "panel_tr", point( width, height))
+	local bl = createImage(UI_SHEET, "panel_bl", point(-width,-height))
+	local br = createImage(UI_SHEET, "panel_br", point( width,-height))
+	local tm = createImage(UI_SHEET, "panel_t",  point(0, height))
+	local bm = createImage(UI_SHEET, "panel_b",  point(0,-height))
+	local lm = createImage(UI_SHEET, "panel_l",  point(-width, 0))
+	local rm = createImage(UI_SHEET, "panel_r",  point(width, 0))
+	local mm = createImage(UI_SHEET, "panel_m",  point(0,0))
+
+	imageScale(tl, scale)
+	imageScale(tr, scale)
+	imageScale(bl, scale)
+	imageScale(br, scale)
+
+	imageScale(tm, point(width/source_size, scale))
+	imageScale(bm, point(width/source_size, scale))
+	imageScale(rm, point(scale, height/source_size))
+	imageScale(lm, point(scale, height/source_size))
+	imageScale(mm, point((width+(source_size*3))/source_size, (height+(source_size*3))/source_size))
+
+	imageParentChild(panel, mm)
+	imageParentChild(panel, tm)
+	imageParentChild(panel, bm)
+	imageParentChild(panel, rm)
+	imageParentChild(panel, lm)
+	imageParentChild(panel, tl)
+	imageParentChild(panel, tr)
+	imageParentChild(panel, bl)
+	imageParentChild(panel, br)
+
+//	imageHide(tm, YES)
+//	imageHide(bm, YES)
+//	imageHide(rm, YES)
+//	imageHide(lm, YES)
+//	imageHide(mm, YES)
+
+	return panel
+}
+
+local image_gear = 0
+function showGearIcon(state) {
+	if (state) {
+		if (!image_gear) {
+			image_gear = createImage(UI_SHEET, "icon_gear")
+			imageScale(image_gear, 3.0)
+			imageAlpha(image_gear, SETTING(gear_alpha))
+			imageAt(image_gear, point(SCREEN_RIGHT-SETTING(gear_margin).x, SCREEN_TOP-SETTING(gear_margin).y))
+			createButton(null, image_gear, null, @(data, event, pos, flags) {
+				if (event == BUTTON_EVENT_ENTER) {
+					imageWiggle(image_gear, 0.25,1,2)
+					imageAlpha(image_gear, 1.0)
+				}
+				if (event == BUTTON_EVENT_LEAVE) {
+					imageAlpha(image_gear, SETTING(gear_alpha))
+				}
+				if (event == BUTTON_EVENT_DOWN) {
+					openOptions(YES)
+				}
+			})
+		}
+	} else {
+		image_gear = deleteImage(image_gear)
+	}
+}
+
+function onKeyOptions(key, flags) {
+	if (quitShowing()) return HANDLED
+	if (key == KEY_ESC || key == 'o' || key == 'h') {
+		gameFullscreen(SETTING(fullscreen))
+		closeOptions()
+		return
+	}
+}
+
+function makeSlider(pos, text, dist, min_value, max_value, code) {
+
+	local image = createImage()
+	imageAt(image, pos)
+
+	text = code(0)
+	local text_image = createTextImage(FONT_OPTIONS, text, ALIGN_CENTER)
+	imageAt(text_image, point(0,-10))
+	imageScale(text_image, 3.0)
+	imageParentChild(image, text_image)
+
+	local image_down = makeSliderButton(point(pos.x-dist, pos.y), "-", text_image, @(text_image) {
+		local new_text = code(-1)
+		imageReplaceText(text_image, new_text)
+	})
+	local image_up = makeSliderButton(point(pos.x+dist, pos.y), "+", text_image, @(text_image) {
+		local new_text = code(1)
+		imageReplaceText(text_image, new_text)
+	})
+
+	imageParentChild(options_image, image)
+
+	return image
+}
+
+function makeSliderButton(pos, text, slider_text, code) {
+	local image = createImage(UI_SHEET, "panel_check_off")
+	imageAt(image, pos)
+	imageParentChild(options_image, image)
+	imageScale(image, 3.0)
+
+	local text_image = createTextImage(FONT_OPTIONS, text, ALIGN_CENTER)
+	imageAt(text_image, point(0.5,-3.5))
+	imageScale(text_image, 1.0)
+	imageParentChild(image, text_image)
+
+	createButton({"image": image "slider_text": slider_text}, image, options_image, @(data, event, pos, flags) {
+		if (event == BUTTON_EVENT_ENTER) {
+			imageWiggle(data.image, 0.25,1,2)
+		}
+		if (event == BUTTON_EVENT_DOWN) {
+			code(data.slider_text)
+		}
+	})
+
+	return image
+}
+
+function makeButton(pos, text, code) {
+	local image = createImage(UI_SHEET, "panel_button")
+	imageAt(image, pos)
+	imageParentChild(options_image, image)
+	imageScale(image, 3.0)
+
+	local text_image = createTextImage(FONT_OPTIONS, text, ALIGN_CENTER)
+	imageAt(text_image, point(1,-3.5))
+	imageScale(text_image, 1.0)
+	imageParentChild(image, text_image)
+
+	createButton({"image": image}, image, options_image, @(data, event, pos, flags) {
+		if (event == BUTTON_EVENT_ENTER) {
+			imageWiggle(data.image, 0.25,1,2)
+		}
+		if (event == BUTTON_EVENT_UP) {
+			code()
+		}
+	})
+
+	return image
+}
+
+function makeText(pos, text, scale=3.0, align=ALIGN_CENTER) {
+	local text_image = createTextImage(FONT_OPTIONS, text, align)
+	imageAt(text_image, pos)
+	imageScale(text_image, scale)
+	imageParentChild(options_image, text_image)
+	return text_image
+}
+
+function makeCheckbox(pos, text, code) {
+	local image_on = createImage(UI_SHEET, "panel_check_on")
+	local image_off = createImage(UI_SHEET, "panel_check_off")
+	imageScale(image_on, 3.0)
+	imageScale(image_off, 3.0)
+
+	local image = createImage()
+	imageParentChild(image, image_on)
+	imageParentChild(image, image_off)
+
+	local state = code(NO)
+	imageHide(image_on, !state)
+	imageHide(image_off, state)
+
+	local text_image = createTextImage(FONT_OPTIONS, text, ALIGN_LEFT)
+	imageAt(text_image, point(32,-10))
+	imageScale(text_image, 3.0)
+	imageParentChild(image, text_image)
+
+	createButton({"image_on": image_on "image_off": image_off}, image, options_image, @(data, event, pos, flags) {
+		if (event == BUTTON_EVENT_ENTER) {
+			imageWiggle(data.image_on, 0.25,1,2)
+			imageWiggle(data.image_off, 0.25,1,2)
+		}
+		if (event == BUTTON_EVENT_DOWN) {
+			local state = code(YES)
+			imageHide(data.image_on, !state)
+			imageHide(data.image_off, state)
+		}
+	})
+
+	imageAt(image, pos)
+	imageParentChild(options_image, image)
+
+	return image
+}
+
+function linePos(lineno) {
+	local line_height = 52
+	return panel_height/2-(line_height*lineno)
+}
+local did_save_state = NO
+
+function optionsShowing() {
+	return options_image
+}
+
+function closeOptions() {
+	if (! options_image) return
+	options_image = deleteImage(options_image)
+	if (did_save_state) {
+		pauseAllSounds("music", NO)
+		pauseAllSounds("effects", NO)
+		pauseAllSounds("voice", NO)
+		stopAllSounds("paused")
+		freezeGame(NO)
+		imagePushPopFrozen(NO)
+		pauseNotAllowed(NO)
+	}
+	popOnKeyDispatch(INPUT_POP)
+	onRefreshPrefs()
+	refreshUI(1)
+}
+
+function openOptions(save_state=YES) {
+	if (quitShowing()) return
+	cancelAllInteractions()
+	did_save_state = save_state
+	if (save_state) {
+		pauseNotAllowed(YES)
+		pauseAllSounds("music", YES)
+		pauseAllSounds("effects", YES)
+		pauseAllSounds("voice", YES)
+		soundMixVolume("paused", soundMixVolume("music")/4.0)
+		playSound(SOUNDID(pause_music))
+		freezeGame(YES)
+		imagePushPopFrozen(YES)
+		soundMixVolume("paused", soundMixVolume("music"))
+	}
+	pushOnKeyDispatch(onKeyOptions, INPUT_OPTIONS)
+
+	panel_width = 700
+	panel_height = 600
+
+	options_image = createImage()
+	local panel = createPanel(panel_width,panel_height)
+	imageParentChild(options_image, panel)
+
+	local header = createTextImage(FONT_OPTIONS, TR(TEXT(12321,"Options-a-reno")), ALIGN_CENTER)
+	imageAt(header, point(0, panel_height/2-35))
+	imageScale(header, 5.0)
+	imageParentChild(options_image, header)
+
+	SETTING(fullscreen) = gameFullscreen()
+
+	local line = 2
+	makeCheckbox(point(-panel_width/2+32, linePos(line)), TR(TEXT(12322,"Hover beep")), @(flip) {
+		if (flip) SETTING(hover_beep) = !SETTING(hover_beep)
+		return SETTING(hover_beep)
+	})
+	makeCheckbox(point(32, linePos(line)), TR(TEXT(12323,"Hover pop")), @(flip) {
+		if (flip) SETTING(hover_pop) = !SETTING(hover_pop)
+		return SETTING(hover_pop)
+	})
+	line += 1
+	makeCheckbox(point(-panel_width/2+32, linePos(line)), TR(TEXT(12324,"Fullscreen")), @(flip) {
+		if (flip) SETTING(fullscreen) = !SETTING(fullscreen)
+		return SETTING(fullscreen)
+	})
+	makeCheckbox(point(32, linePos(line)), TR(TEXT(12325,"Small font")), @(flip) {
+		if (flip) SETTING(small_font) = !SETTING(small_font)
+		return SETTING(small_font)
+	})
+
+	line += 1.5
+	makeSlider(point(0, linePos(line)), "", 150, 1.0, 0.0, @(inc_dec){
+		local vol = as_int(soundMixVolume("music")*10)
+		if (inc_dec > 0) vol += 1
+		if (inc_dec < 0) vol -= 1
+		vol = vol/10.0
+		if (vol < 0.0) vol = 0.0
+		if (vol > 2.0) vol = 2.0
+		soundMixVolume("music", vol)
+		soundMixVolume("paused", vol)
+		return format(TR(TEXT(12326,"Music %d%%")), as_int(vol*100.0))
+	})
+
+	line += 1
+	makeSlider(point(0, linePos(line)), "", 150, 1.0, 0.0, @(inc_dec){
+		local vol = as_int(soundMixVolume("effects")*10)
+		if (inc_dec > 0) vol += 1
+		if (inc_dec < 0) vol -= 1
+		vol = vol/10.0
+		if (vol < 0.0) vol = 0.0
+		if (vol > 2.0) vol = 2.0
+		soundMixVolume("effects", vol)
+		return format(TR(TEXT(12327,"Sound %d%%")), as_int(vol*100.0))
+	})
+
+	line += 2
+	makeSlider(point(0, linePos(line)), "", 185, 1.0, 0.0, @(inc_dec) {
+		local s = gameprop("sayLineSpeed")
+		local v = 7
+		if (s <= 0.25 ) v = 1 else
+		if (s <= 0.50 ) v = 2 else
+		if (s <= 0.75 ) v = 3 else
+		if (s <= 1.00 ) v = 4 else
+		if (s <= 1.25 ) v = 5 else
+		if (s <= 1.50 ) v = 6
+
+		if (inc_dec > 0) v -= 1
+		if (inc_dec < 0) v += 1
+
+		if (v <= 1) v = 1
+		if (v >= 7) v = 7
+
+		local t = null
+		local p = 1.0
+		if (v == 7) { t = "slowest"; p = 2.0 }
+		if (v == 6) { t = "slower"; p = 1.5 }
+		if (v == 5) { t = "slow"; p = 1.25 }
+		if (v == 4) { t = "normal"; p = 1.0 }
+		if (v == 3) { t = "fast"; p = 0.75 }
+		if (v == 2) { t = "faster"; p = 0.5 }
+		if (v == 1) { t = "fastest"; p = 0.25 }
+
+		gameprop("sayLineSpeed", p)
+		return format(TR(TEXT(12328,"Text speed: %s")), t)
+	})
+
+	local ok_button = null
+	SETTING(delete_progress) = NO
+
+	line = 9
+	makeCheckbox(point(-panel_width/2+32, linePos(line)), TR(TEXT(12329,"Delete all progress and quit")), @(flip){
+		if (flip) SETTING(delete_progress) = !SETTING(delete_progress)
+		if (SETTING(delete_progress)) {
+			imageHide(ok_button, YES)
+		} else {
+			imageHide(ok_button, NO)
+		}
+		return SETTING(delete_progress)
+	})
+
+	line += 1
+	makeText(point(0,linePos(line)), format(TR(TEXT(12330,"You've handed in %d out of %d photos")), Note.totalCompletedCount(), Note.totalTasksCount()), 2.0)
+
+	line += 1
+	ok_button = makeButton(point(-panel_width/2+80, linePos(line)), TR(TEXT(12331,"Ok")), @() {
+		gameFullscreen(SETTING(fullscreen))
+		closeOptions()
+	})
+	makeButton(point(-panel_width/2+80+160, linePos(line)), TR(TEXT(12332,"Help")), @() {
+		gameFullscreen(SETTING(fullscreen))
+		closeOptions()
+		openHelp()
+	})
+	makeButton(point(panel_width/2-80, linePos(line)), TR(TEXT(12333,"Quit")), @() {
+		gameFullscreen(SETTING(fullscreen))
+		if (SETTING(delete_progress)) {
+			openConfirmation(TR(TEXT(12334,"Are you sure you want to delete ALL progress and quit?")), TR(TEXT(12335,"DELETE")), TR(TEXT(12336,"Cancel")), @(button){
+				if (button == 1) {
+					setprivatepref("completed_stories", [])
+					setprivatepref("bathroom_power", NO)
+					quitGame()
+				} else
+				if (button == 2) {
+				}
+			})
+		} else {
+			if (!SETTING(quit_confirm)) quitGame()
+			closeOptions()
+			openQuitConfirmation()
+		}
+	})
+
+	local plat = ""
+	if (PLATFORM == WIN) plat = "Windows"
+	if (PLATFORM == MAC) plat = "Mac"
+
+	makeText(point(panel_width/2-0,-panel_height/2-10), format("%s Build %d", plat, GAME_BUILD_NUM), 1.0, ALIGN_RIGHT)
+
+	imageAt(options_image, point(SCREEN_CENTER_X,SCREEN_CENTER_Y))
+}
+
+function openDebugOptions(save_state=YES) {
+	if (quitShowing()) return
+	cancelAllInteractions()
+	did_save_state = save_state
+	if (save_state) {
+		pauseNotAllowed(YES)
+		pauseAllSounds("music", YES)
+		pauseAllSounds("effects", YES)
+		pauseAllSounds("voice", YES)
+		soundMixVolume("paused", soundMixVolume("music")/4.0)
+		playSound(SOUNDID(pause_music))
+		freezeGame(YES)
+		imagePushPopFrozen(YES)
+		soundMixVolume("paused", soundMixVolume("music"))
+	}
+	pushOnKeyDispatch(onKeyOptions, INPUT_OPTIONS)
+
+	panel_width = 500
+	panel_height = 600
+
+	options_image = createImage()
+	local panel = createPanel(panel_width,panel_height)
+	imageParentChild(options_image, panel)
+
+	local header = createTextImage(FONT_OPTIONS, "DEBUG Options", ALIGN_CENTER)
+	imageAt(header, point(0, panel_height/2-35))
+	imageScale(header, 5.0)
+	imageParentChild(options_image, header)
+
+	local line = 2
+	makeCheckbox(point(-panel_width/2+32, linePos(line)), "Translation Markers", @(flip) {
+		if (flip) DEBUG(translation_markers) = !DEBUG(translation_markers)
+		return DEBUG(translation_markers)
+	})
+	line += 1
+	makeCheckbox(point(-panel_width/2+32, linePos(line)), "Unlimted Photos", @(flip) {
+		if (flip) DEBUG(unlimited_photos) = !DEBUG(unlimited_photos)
+		return DEBUG(unlimited_photos)
+	})
+	line += 1
+	makeCheckbox(point(-panel_width/2+32, linePos(line)), "Retake Photos", @(flip) {
+		if (flip) DEBUG(retake_photos) = !DEBUG(retake_photos)
+		return DEBUG(retake_photos)
+	})
+	line += 1
+	makeCheckbox(point(-panel_width/2+32, linePos(line)), "Skip Intro", @(flip) {
+		if (flip) DEBUG(skip_intro) = !DEBUG(skip_intro)
+		return DEBUG(skip_intro)
+	})
+	line += 1
+	makeCheckbox(point(-panel_width/2+32, linePos(line)), "Jump (alt/cmd-J)", @(flip) {
+		if (flip) DEBUG(jump) = !DEBUG(jump)
+		return DEBUG(jump)
+	})
+	line += 1
+	makeCheckbox(point(-panel_width/2+32, linePos(line)), "Pickup (alt/cmd-P)", @(flip) {
+		if (flip) DEBUG(pickup) = !DEBUG(pickup)
+		return DEBUG(pickup)
+	})
+	line += 1
+	makeCheckbox(point(-panel_width/2+32, linePos(line)), "Bathroom Power", @(flip) {
+		if (flip) {
+			Bathroom.has_power = YES
+			Bathroom.tried_switch = YES
+			objectState(Bathroom.lightswitch, "on")
+			objectState(Bathroom.bathroomDoor, "open")
+			YACK(received_stamps) = YES
+		}
+		return Bathroom.has_power
+	})
+	line += 1
+	makeCheckbox(point(-panel_width/2+32, linePos(line)), "Bank Open", @(flip) {
+		if (flip) {
+			GLOBAL(hired_lenore_state) = YES
+			Bank.open = YES
+		}
+		return GLOBAL(hired_lenore_state)
+	})
+
+	line = 11
+	makeButton(point(0, linePos(line)), "Ok", @() {
+		gameFullscreen(SETTING(fullscreen))
+		closeOptions()
+	})
+
+	imageAt(options_image, point(SCREEN_CENTER_X,SCREEN_CENTER_Y))
+}
+
+function openHelp(save_state=YES) {
+	if (quitShowing()) return
+	cancelAllInteractions()
+	did_save_state = save_state
+	if (save_state) {
+		pauseNotAllowed(YES)
+		pauseAllSounds("music", YES)
+		pauseAllSounds("effects", YES)
+		pauseAllSounds("voice", YES)
+		soundMixVolume("paused", soundMixVolume("music")/4.0)
+		playSound(SOUNDID(pause_music))
+		freezeGame(YES)
+		imagePushPopFrozen(YES)
+		soundMixVolume("paused", soundMixVolume("music"))
+	}
+	pushOnKeyDispatch(onKeyOptions, INPUT_OPTIONS)
+
+	panel_width = 1000
+	panel_height = 600
+
+	options_image = createImage()
+	local panel = createPanel(panel_width,panel_height)
+	imageParentChild(options_image, panel)
+
+	local header = createTextImage(FONT_OPTIONS, TR(TEXT(12337,"Help!")), ALIGN_CENTER)
+	imageAt(header, point(0, panel_height/2-35))
+	imageScale(header, 5.0)
+	imageParentChild(options_image, header)
+
+	local left = -panel_width/2+5
+	local line = 2
+
+	makeText(point(left,linePos(line++)), TR(TEXT(12338,"● Left-click to do what the cursor sentence says.")), 3.0, ALIGN_LEFT)
+	makeText(point(left,linePos(line++)), TR(TEXT(12339,"● Right-click to show more verbs.")), 3.0, ALIGN_LEFT)
+	makeText(point(left,linePos(line++)), TR(TEXT(12340,"● Drag inventory onto other inventory or room objects.")), 3.0, ALIGN_LEFT)
+	makeText(point(left,linePos(line++)), TR(TEXT(12341,"● When dragging, if no sentence appears, they can't")), 3.0, ALIGN_LEFT)
+	makeText(point(left,linePos(line++)), TR(TEXT(12342,"  be used together.")), 3.0, ALIGN_LEFT)
+	makeText(point(left,linePos(line++)), TR(TEXT(12343,"● Drag Camera to take pictures.")), 3.0, ALIGN_LEFT)
+	makeText(point(left,linePos(line++)), TR(TEXT(12344,"● Use #{FFFF00}i#{} to show/hide inventory.")), 3.0, ALIGN_LEFT)
+	makeText(point(left,linePos(line++)), TR(TEXT(12345,"● Use #{FFFF00}o#{} to show/hide options.")), 3.0, ALIGN_LEFT)
+	makeText(point(left,linePos(line++)), TR(TEXT(12346,"● Use #{FFFF00}.#{} to skip dialog.")), 3.0, ALIGN_LEFT)
+	makeText(point(left,linePos(line++)), TR(TEXT(12347,"● Use #{FFFF00}ctrl-Q/cmd-Q#{} to quit.")), 3.0, ALIGN_LEFT)
+
+	line = 11
+	makeButton(point(panel_width/2-80, linePos(line)), TR(TEXT(12348,"Ok")), @() {
+		gameFullscreen(SETTING(fullscreen))
+		closeOptions()
+	})
+
+	imageAt(options_image, point(SCREEN_CENTER_X,SCREEN_CENTER_Y))
+}
+
+local confirmation_showing = NO
+function isComfirmationShowing() { return confirmation_showing }
+function openConfirmation(text, button1, button2, callback) {
+	if (confirmation_showing) return
+	cancelAllInteractions()
+	confirmation_showing = YES
+	closeOptions()
+	local save_state = YES
+	did_save_state = save_state
+	if (save_state) {
+		pauseNotAllowed(YES)
+		pauseAllSounds("music", YES)
+		pauseAllSounds("effects", YES)
+		pauseAllSounds("voice", YES)
+		soundMixVolume("paused", soundMixVolume("music")/4.0)
+		playSound(SOUNDID(pause_music))
+		freezeGame(YES)
+		imagePushPopFrozen(YES)
+		soundMixVolume("paused", soundMixVolume("music"))
+	}
+	pushOnKeyDispatch(onKeyOptions, INPUT_OPTIONS)
+
+	options_image = createImage()
+
+	panel_height = 130
+
+	local line = 0.8
+	local text_image = makeText(point(0,linePos(line)), text, 3.0)
+
+	panel_width = imageSize(text_image).x
+
+	local panel = createPanel(panel_width,panel_height)
+	imageParentChild(options_image, panel)
+	imageParentChild(options_image, text_image)
+
+	line = 2
+	makeButton(point(-panel_width/5, linePos(line)), button1, @() {
+		confirmation_showing = NO
+		closeOptions()
+		callback(1)
+	})
+	makeButton(point( panel_width/5, linePos(line)), button2, @() {
+		confirmation_showing = NO
+		closeOptions()
+		callback(2)
+	})
+
+	imageAt(options_image, point(SCREEN_CENTER_X,SCREEN_CENTER_Y))
+}
+
+local quit_confirmation = NO
+function quitShowing() { return quit_confirmation }
+function openQuitConfirmation(save_state=YES) {
+	if (quit_confirmation) return
+	openConfirmation(TR(TEXT(12349,"Quit now and lose progress on these five photographs?")), TR(TEXT(12350,"NO!")), TR(TEXT(12351,"Quit")), @(button) {
+		if (button == 1) {
+			quit_confirmation = NO
+			closeOptions()
+		} else
+		if (button == 2) {
+			quitGame()
+		}
+	})
+
+
+	// if (quit_confirmation) return
+	// cancelAllInteractions()
+	// quit_confirmation = YES
+	// closeOptions()
+	// did_save_state = save_state
+	// if (save_state) {
+	// 	pauseNotAllowed(YES)
+	// 	pauseAllSounds("music", YES)
+	// 	pauseAllSounds("effects", YES)
+	// 	pauseAllSounds("voice", YES)
+	// 	soundMixVolume("paused", soundMixVolume("music")/4.0)
+	// 	playSound(SOUNDID(pause_music))
+	// 	freezeGame(YES)
+	// 	imagePushPopFrozen(YES)
+	// 	soundMixVolume("paused", soundMixVolume("music"))
+	// }
+	// pushOnKeyDispatch(onKeyOptions, INPUT_OPTIONS)
+
+	// panel_width = 500
+	// panel_height = 130
+
+	// options_image = createImage()
+	// local panel = createPanel(panel_width,panel_height)
+	// imageParentChild(options_image, panel)
+
+	// local line = 0.8
+	// makeText(point(0,linePos(line)), "Quit now and lose progress on these five photographs", 3.0)
+
+	// line = 2
+	// makeButton(point(panel_width/5, linePos(line)), "NO!", @() {
+	// 	closeOptions()
+	// 	quit_confirmation = NO
+	// })
+	// makeButton(point(-panel_width/5, linePos(line)), "Quit", @() {
+	// 	quitGame()
+	// })
+
+	// imageAt(options_image, point(SCREEN_CENTER_X,SCREEN_CENTER_Y))
+}

@@ -1,0 +1,27 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+=== init ===
+-> exit
+
+=== start ===
+delores: SAY(12314,"Hi Willie.")
+willie: SAY(12315,"Hello Delores.")
+
+1 SAY(12316,"You're closing up late.") -> late
+2 SAY(12317,"How's business?") -> late
+
+=== late ===
+
+willie: SAY(12318,"Business is booming.")
+willie: SAY(12319,"Sorry I can't talk, I've got to get home.")
+willie: SAY(12320,"It's my night to cook dinner.")
+
+-> done
+
+=== done ===
+-> exit

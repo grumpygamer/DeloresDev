@@ -1,0 +1,66 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+// Special room to stick actors if you want them gone. Don't ever enter this room.
+Void <- { sheet = "Void" }
+defineRoom(Void)
+
+// All rooms need to be included and defined in here.
+// Rooms are automatically added by new_room.py
+// Don't move, remove or alter the INCLUDE and DEFINE lines
+
+import("PostOffice.dinky")
+import("AStreet.dinky")
+import("Inventory.dinky")
+import("Note.dinky")
+import("Nickel.dinky")
+import("MainStreet.dinky")
+import("QuickiePalOutside.dinky")
+import("QuickiePal.dinky")
+import("CityHall.dinky")
+import("Bathroom.dinky")
+import("Alleyway.dinky")
+import("Vista.dinky")
+import("CoronersOffice.dinky")
+import("SheriffsOffice.dinky")
+import("Diner.dinky")
+import("BookStore.dinky")
+import("Newspaper.dinky")
+import("TitleCards.dinky")
+import("Bank.dinky")
+import("StartScreen.dinky")
+import("Ending.dinky")
+import("Book.dinky")
+// INCLUDE
+
+function defineAllRooms() {
+defineRoom(PostOffice)
+defineRoom(AStreet)
+defineRoom(Inventory)
+defineRoom(Note)
+defineRoom(Nickel)
+defineRoom(MainStreet)
+defineRoom(QuickiePalOutside)
+defineRoom(QuickiePal)
+defineRoom(CityHall)
+defineRoom(Bathroom)
+defineRoom(Alleyway)
+defineRoom(Vista)
+defineRoom(CoronersOffice)
+defineRoom(SheriffsOffice)
+defineRoom(BookStore)
+defineRoom(Diner)
+defineRoom(Newspaper)
+defineRoom(TitleCards)
+defineRoom(Bank)
+defineRoom(StartScreen)
+defineRoom(Ending)
+defineRoom(Book)
+// DEFINE
+}
+
+

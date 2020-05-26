@@ -1,0 +1,472 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+DEFINE_ROOM("BookStore", {
+	knows_about_Fortran_book = NO
+
+	// --------------------------------------------------------------------------------------------
+	// General room functions
+
+	script moveLadder(ladder, direction) {
+		local walkbox = (ladder == lowerLadder) ? "lowerLadder" : "upperLadder"
+		local trigger = (ladder == lowerLadder) ? "ladder1Trigger" : "ladder2Trigger"
+		for (local x = 0..2) {
+			walkboxHidden(walkbox+x, YES)
+			enableTrigger(BookStore[trigger+x], NO)
+		}
+		ladder.position = ladder.position + direction
+		if (ladder.position < 0) {
+			ladder.position = 0
+		} else
+		if (ladder.position > 2) {
+			ladder.position = 2
+		} else {
+			objectOffsetTo(ladder, point(ladder.position*ladder.offset, 0), 1.0, EASE_INOUT)
+			breaktime(1) // wait for ladder to move before turning on boxes
+		}
+		walkboxHidden(walkbox+ladder.position, NO)
+		enableTrigger(BookStore[trigger+ladder.position], YES)
+	}
+
+	function actorOnLadder(actor, state) {
+		if (state) {
+			actor.on_ladder <- YES
+			actorLockFacing(actor, DIR_BACK)
+			// playAnimation(actor, "stand")
+			actorRemapAnimation(actor, { "stand": "climb_stand", "walk": "climb_walk", "reach": "climb_stand" })
+		} else {
+			actor.on_ladder <- NO
+			actorRemapAnimation(actor, { "stand": "", "walk": "", "reach": "" })
+			actorLockFacing(actor, NO)
+		}
+		closeVerbs()
+	}
+
+	function addTriggerCode(trigger, ladder) {
+		trigger.triggerEnter <- function(actor) {
+			actorOnLadder(actor, YES)
+			objectTouchable(ladder, NO)
+		}
+		trigger.triggerLeave <- function(actor) {
+			actorOnLadder(actor, NO)
+			objectTouchable(ladder, YES)
+		}
+	}
+
+//
+// TODO: This was never implemented... go for it.
+//
+
+	_book_count = 0
+	_book_list = null
+
+	function nameBooks(startX, endX, yPos, usePosYOffset, ladderFlag) {
+		if (_book_list == null) return
+		local xUsePos = 0
+		// Create fewer books on mobile due to CPU speed issues.
+#ifdef MOBILE
+		local book_dist = 9
+#else
+		local book_dist = 3
+#endif
+		local book_width = book_dist-2
+		for (local x = startX; x < endX; x += book_dist) {	// distance between books (2=adjacent)
+			if (ladderFlag) {
+				if (x < 182) {
+					xUsePos = 158-x
+				} else
+				if (x < 255) {
+					xUsePos = 219-x
+				} else {
+					xUsePos = 281-x
+				}
+			}
+			local bookObject = createObject()
+			objectPosition(bookObject, point(x,yPos))
+			objectHotspot(bookObject, -book_width, -6, book_width, 6);
+			objectUsePos(bookObject, xUsePos, usePosYOffset-yPos, DIR_BACK)
+			objectSort(bookObject, 50000)
+			objectTouchable(bookObject, YES)
+//			objectBumperCycle(bookObject, NO)
+			bookObject.name <- _book_list[_book_count]
+			bookObject.verb_lookatfar  <- function(use_with=null) { BookStore.scold() }
+#ifdef MOBILE
+			_book_count += random(1, 3)
+#else
+			++_book_count
+#endif
+			if (_book_count == sizeof(_book_list)) {
+				_book_count = 0
+			}
+		}
+	}
+
+	function createBooks() {
+		return		// Work TBD
+
+		_book_list = loadarray("BookNames.txt")
+		_book_count = 0
+
+		// startX, endX, yPos, usePosYOffset, ladderFlag
+		nameBooks(160, 270, 99, 73, NO)		// bottom shelf on 1st floor
+		nameBooks(160, 270, 112, 73, NO)
+		nameBooks(160, 270, 125, 73, NO)
+		nameBooks(160, 270, 138, 73, NO)	// top shelf on 1st floor
+
+		nameBooks(131, 145, 99, 73, NO)		// left bottom shelf on 1st floor
+		nameBooks(127, 145, 137, 73, NO)	// left top shelf on 1st floor
+
+		nameBooks(283, 301, 99, 73, NO)		// right bottom shelf on 1st floor
+		nameBooks(283, 293, 137, 73, NO)	// right top shelf on 1st floor
+
+		nameBooks(146, 308, 185, 158, NO)	// bottom shelf in balcony
+		nameBooks(146, 314, 198, 158, NO)
+		nameBooks(146, 314, 211, 158, NO)	// highest shelf reachable without a ladder
+		local x = 0
+		for (x = 0; x < 41; x += 1) {
+			nameBooks(135, 315, 224+x*13, 200+x*13, YES)	// 60 books per row
+		}
+		nameBooks(158, 289, 224+x*13, 169+x*13, YES)	// shelves are getting shorter
+		nameBooks(184, 265, 224+(x+1)*13, 169+(x+1)*13, YES)
+		nameBooks(211, 239, 224+(x+2)*13, 169+(x+2)*13, YES)
+	}
+
+	function scold() {
+		sayLine(morena, SAY(11465,"Don't touch the books unless you know what you want!"))
+	}
+
+	function randomRatMovement(rat) {
+		startthread(@{
+			do {
+				objectState(rat, randomfrom("open", "closed"))
+				breaktime(1.0,4.0)
+			}
+		})
+		startthread(@{
+			do {
+				objectOffsetTo(rat, point(random(-1, 1), random(-1, 1)), 0.2, LINEAR)
+				breaktime(2.0,5.0)
+			}
+		})
+	}
+
+	script watchSkull() {
+		objectState(skullEyes, "open")
+		do {
+			if (actorPosition(selectedActor).x < objectPosition(skullEyes).x && actorPosition(selectedActor).y < objectPosition(skullEyes).y) {
+				objectOffset(skullEyes, point(-1, 0))
+			} else
+			if (actorPosition(selectedActor).x > objectPosition(skullEyes).x && actorPosition(selectedActor).y < objectPosition(skullEyes).y) {
+				objectOffset(skullEyes, point(0, 0))
+			} else
+			if (actorPosition(selectedActor).x < objectPosition(skullEyes).x && actorPosition(selectedActor).y > objectPosition(skullEyes).y) {
+				objectOffset(skullEyes, point(-1, 1))
+			} else
+			if (actorPosition(selectedActor).x > objectPosition(skullEyes).x && actorPosition(selectedActor).y > objectPosition(skullEyes).y) {
+				objectOffset(skullEyes, point(0, 1))
+			}
+			breaktime(1.0)
+		}
+	}
+
+	// --------------------------------------------------------------------------------------------
+	// Enter/Exit code
+
+	enter = function(from_door=null) {
+		walkboxHidden("backroom", YES)
+
+		objectOffset(lowerLadder, point(lowerLadder.position*lowerLadder.offset,0))
+		objectOffset(upperLadder, point(upperLadder.position*upperLadder.offset,0))
+		for (local x = 0..2) {
+			walkboxHidden("lowerLadder"+x, YES)
+			walkboxHidden("upperLadder"+x, YES)
+			enableTrigger(BookStore["ladder1Trigger"+x], NO)
+			enableTrigger(BookStore["ladder2Trigger"+x], NO)
+		}
+		walkboxHidden("lowerLadder"+lowerLadder.position, NO)
+		walkboxHidden("upperLadder"+upperLadder.position, NO)
+		enableTrigger(BookStore["ladder1Trigger"+lowerLadder.position], YES)
+		enableTrigger(BookStore["ladder2Trigger"+upperLadder.position], YES)
+
+		objectTouchable(lowerLadder, YES)
+		objectTouchable(upperLadder, YES)
+
+		for (local i = 1..3) {
+			randomRatMovement(BookStore["shelfRat"+i])
+			randomRatMovement(BookStore["registerRat"+i])
+			randomRatMovement(BookStore["railRat"+i])
+		}
+
+		startthread(watchSkull)
+
+		playSoundAt(SOUNDID(creepy_ambient), downstairsAmbient)
+		playSoundAt(SOUNDID(creepy_wind_loop), upstairsAmbient)
+
+		createBooks()
+
+		local star = 0
+		local starOffsetX = 41
+		local starOffsetY = 248
+		for (local i = 1; i <= 39; i += 1) {
+			star = this["star"+i]
+			objectOffset(star,point(starOffsetX,starOffsetY))
+			// obj, fadeRange1, fadeRange2, alphaRange1, alphaRange2
+			twinkleStar(star, 0.01, 0.1, random(0,0.3), random(0.6, 1))
+		}
+		for (local i = 1; i <= 12; i += 1) {
+			star = this["starB"+i]
+			objectOffset(star,point(starOffsetX,starOffsetY))
+			// obj, fadeRange1, fadeRange2, alphaRange1, alphaRange2
+			twinkleStar(star, 0.05, 0.3, 0, 1)
+		}
+
+	}
+
+	exit = function() {
+	}
+
+	// --------------------------------------------------------------------------------------------
+	// Objects
+
+	// --------------------------------------------------------------------------------------------
+	outsideDoor = DEFINE_OBJECT({
+		name = TEXT(11481,"door")
+		photo_name = TEXT(11482,"the bookstore door")
+		door_verbs = YES
+		verb_use_text = TEXT(11483,"Leave")
+		verb_use_desc = TEXT(11484,"Leave the bookstore")
+		to_door = @AStreet.bookStoreDoor
+	})
+
+	// --------------------------------------------------------------------------------------------
+	ladder1Trigger0 = {
+		function init() { addTriggerCode(this, lowerLadder) }
+	}
+	ladder1Trigger1 = {
+		function init() { addTriggerCode(this, lowerLadder) }
+	}
+	ladder1Trigger2 = {
+		function init() { addTriggerCode(this, lowerLadder) }
+	}
+	ladder2Trigger0 = {
+		function init() { addTriggerCode(this, upperLadder) }
+	}
+	ladder2Trigger1 = {
+		function init() { addTriggerCode(this, upperLadder) }
+	}
+	ladder2Trigger2 = {
+		function init() { addTriggerCode(this, upperLadder) }
+	}
+
+	// --------------------------------------------------------------------------------------------
+	lowerLadder = DEFINE_OBJECT({
+		name = TEXT(11485,"ladder")
+		position = 0
+		offset = 36
+		default_verb = "verb_climb"
+
+		VERB(lookat) {
+			sayLine(SAY(11466,"Just a small ladder."))
+		}
+		VERB(climb) {
+			actorWalkForward(selectedActor, 5)
+		}
+		VERB_OK(push_right) { return position != 2 }
+		VERB(push_right) {
+			startthread(moveLadder, this, 1)
+		}
+		VERB_OK(push_left) { return position != 0 }
+		VERB(push_left) {
+			startthread(moveLadder, this, -1)
+		}
+	})
+ // --------------------------------------------------------------------------------------------
+	upperLadder = DEFINE_OBJECT({
+		name = TEXT(11486,"ladder")
+		position = 0
+		offset = 62
+		default_verb = "verb_climb"
+
+		VERB(lookat) {
+			sayLine(SAY(11467,"Just a tall, rickety-looking ladder."))
+		}
+		VERB(climb) {
+			actorWalkForward(selectedActor, 5)
+		}
+		VERB_OK(push_right) { return position != 2 }
+		VERB(push_right) {
+			startthread(moveLadder, this, 1)
+		}
+		VERB_OK(push_left) { return position != 0 }
+		VERB(push_left) {
+			startthread(moveLadder, this, -1)
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	mummy = DEFINE_OBJECT({
+		name = TEXT(11487,"mummy")
+		for_story = "videogames"
+		photo_reach = REACH_LOW
+
+		VERB(lookat) {
+			sayLine(SAY(11468,"Kind of looks like Dead Cousin Ted from that new game I love."))
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+
+	dollTrigger = {
+		function triggerEnter(actor) {
+			objectState(dollEyes, "open")
+		}
+		function triggerLeave(actor) {
+			objectState(dollEyes, "closed")
+		}
+	}
+
+	dollEyes = {}
+	doll = DEFINE_OBJECT({
+		name = TEXT(11488,"doll")
+
+		VERB(lookat) {
+			sayLine(SAY(11469,"Creepy."), ONCE(SAY(11470,"Not sure why anyone wants to play with dolls.")))
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	fortranBook = DEFINE_OBJECT({
+		name = TEXT(11489,"Learning Fortran")
+		photo_name = TEXT(11490,"a Fortran book")
+		for_story = "dead_languages"
+		seen = NO
+
+		VERB(lookat) {
+			seen = YES
+			if (knows_about_Fortran_book) {
+					sayLine(SAY(11471,"It's that book on Fortran, a 30-year-old computer language."))
+			} else {
+					sayLine(SAY(11472,"It's a book on Fortran, a 30-year-old computer language."))
+			}
+		}
+
+		VERB(pickup) {
+			pickupObject(Inventory.fortranBook)
+			seen = YES
+			objectState(this, "gone")
+		}
+
+		function doneTakingPhoto(photo) {
+			BookStore.fortranBook.seen = YES	// So Morena doesn't talk about this book next time
+		}
+	})
+
+	skullEyes = {}
+	railRat1 = {}
+	railRat2 = {}
+	railRat3 = {}
+	shelfRat1 = {}
+	shelfRat2 = {}
+	shelfRat3 = {}
+	registerRat1 = {}
+	registerRat2 = {}
+	registerRat3 = {}
+	downstairsAmbient = {}
+	upstairsAmbient = {}
+
+	// --------------------------------------------------------------------------------------------
+	topWindow = DEFINE_OBJECT({
+		name = TEXT(11491,"window")
+		for_story = "birdeye_view"
+		photo_name = TEXT(11492,"the town")
+
+		VERB(lookat) {
+			sayLine(SAY(11473,"Nice view from up here. I can see the S&D Diner."))
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	poem = DEFINE_OBJECT({
+		name =@ looked_at ? "poem":"note"
+		for_story = "poetry"
+
+		looked_at = NO
+
+		VERB(lookat) {
+			cutscene(@{
+				looked_at = YES
+				sayLine(SAY(11474,"It reads..."))
+				breakwhiletalking()
+				sayLine(SAY(11475,"“Creepy eyes.”"))
+				breakwhiletalking()
+				sayLine(SAY(11476,"“Creepy nose.”"))
+				breakwhiletalking()
+				sayLine(SAY(11477,"“Creepy feet.”"))
+				breakwhiletalking()
+				sayLine(SAY(11478,"“Creepy toes.”"))
+				breakwhiletalking()
+				sayLine(SAY(11479,"“  - Happy Valentine's Day”"))
+			}, @{
+				sayLine(SAY(11480,"bla bla bla bla..."))
+			})
+		}
+	})
+star1 = {}
+	star2 = {}
+	star3 = {}
+	star4 = {}
+	star5 = {}
+	star6 = {}
+	star7 = {}
+	star8 = {}
+	star9 = {}
+	star10 = {}
+	star11 = {}
+	star12 = {}
+	star13 = {}
+	star14 = {}
+	star15 = {}
+	star16 = {}
+	star17 = {}
+	star18 = {}
+	star19 = {}
+  star20 = {}
+  star21 = {}
+  star22 = {}
+  star23 = {}
+  star24 = {}
+  star25 = {}
+  star26 = {}
+  star27 = {}
+  star28 = {}
+  star29 = {}
+  star30 = {}
+  star31 = {}
+  star32 = {}
+  star33 = {}
+  star34 = {}
+  star35 = {}
+  star36 = {}
+  star37 = {}
+  star38 = {}
+  star39 = {}
+
+	starB1 = {}
+	starB2 = {}
+	starB3 = {}
+	starB4 = {}
+	starB5 = {}
+	starB6 = {}
+	starB7 = {}
+	starB8 = {}
+	starB9 = {}
+	starB10 = {}
+	starB11 = {}
+	starB12 = {}
+
+// NEW_OBJECT_HERE
+})

@@ -1,0 +1,566 @@
+sheet: "DeloresDancing"
+animations: [
+    {
+        name: "stand_front"
+        frames: [
+        	"standing1"
+        ]
+    }
+    {
+        name: "swirl_left_front"
+        frames: [
+        	"swirl_left1"
+        	"swirl_left2"
+        	"swirl_left3"
+        	"swirl_left4"
+        	"swirl_left5"
+        	"swirl_left6"
+         ]
+		triggers: [
+				"dance_swish"
+				NULL
+				NULL
+				NULL
+				NULL
+				NULL
+		]
+    }
+    {
+        name: "swirl_left_short_front"
+        frames: [
+        	"swirl_left1"
+        	"swirl_left2"
+        	"swirl_left3"
+        	"swirl_left4"
+         ]
+        triggers: [
+        	"dance_swish"
+        	NULL
+        	NULL
+        	NULL
+        	NULL
+        	NULL
+		]
+    }
+    {
+        name: "swirl_right_front"
+        frames: [
+        	"swirl_right1"
+        	"swirl_right2"
+        	"swirl_right3"
+        	"swirl_right4"
+        	"swirl_right5"
+        ]
+		triggers: [
+			"dance_swish"
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+		]
+    }
+    {
+        name: "talking_front"
+        layers: [
+            {
+                name: "body"
+                frames: [
+					"reading_letter18"
+                ]
+            }
+            {
+                flags: 1
+                name: "head1"
+                frames: [
+                    "fstand_head1"
+                ]
+            }
+            {
+                flags: 1
+                name: "head2"
+                frames: [
+                    "fstand_head2"
+                ]
+            }
+            {
+                flags: 1
+                name: "head3"
+                frames: [
+                    "fstand_head3"
+                ]
+            }
+            {
+                flags: 1
+                name: "head4"
+                frames: [
+                    "fstand_head4"
+                ]
+            }
+            {
+                flags: 1
+                name: "head5"
+                frames: [
+                    "fstand_head5"
+                ]
+            }
+            {
+                flags: 1
+                name: "head6"
+                frames: [
+                    "fstand_head6"
+                ]
+            }
+        ]
+    }
+    {
+        name: "reading_start_front"
+        layers: [
+            {
+                name: "body"
+                fps: 12
+                frames: [
+    				"reading_letter1"
+    				"reading_letter2"
+    				"reading_letter3"
+    				"reading_letter4"
+    				"reading_letter5"
+    				"reading_letter6"
+    				"reading_letter7"
+    				"reading_letter8"
+    				"reading_letter9"
+    				"reading_letter9"
+    				"reading_letter10"
+    				"reading_letter10"
+    				"reading_letter9"
+    				"reading_letter9"
+    				"reading_letter10"
+    				"reading_letter10"
+    				"reading_letter9"
+    				"reading_letter9"
+    				"reading_letter10"
+    				"reading_letter10"
+    				"reading_letter9"
+    				"reading_letter9"
+    				"reading_letter10"
+    				"reading_letter10"
+    				"reading_letter9"
+    				"reading_letter9"
+    				"reading_letter10"
+    				"reading_letter10"
+    				"reading_letter11"
+    				"reading_letter12"
+    				"reading_letter13"
+    				"reading_letter14"
+    				"reading_letter15"
+    				"reading_letter15"
+    				"reading_letter16"
+    				"reading_letter16"
+    				"reading_letter17"
+    				"reading_letter15"
+    				"reading_letter15"
+    				"reading_letter15"
+    				"reading_letter15"
+    				"reading_letter15"
+                ]
+                triggers: [
+                    "@soundLetterOpenDelores"
+                    NULL
+                    NULL
+                    NULL
+                    NULL
+                    NULL
+                    NULL
+                    NULL
+                    NULL
+                    NULL
+                    NULL
+                    NULL
+                    NULL
+                    NULL
+                    NULL
+                    NULL
+                    NULL
+                    NULL
+                    NULL
+                    NULL
+                    NULL
+                    NULL
+                    NULL
+                    NULL
+                    NULL
+                    NULL
+                    NULL
+                    NULL
+                    NULL
+                    NULL
+                    NULL
+                    NULL
+                    NULL
+                    NULL
+                    "dance_swish"
+                    NULL
+                    NULL
+                    NULL
+                    NULL
+                    NULL
+                    NULL
+                    NULL
+                ]
+            }
+        ]
+    }
+    {
+        name: "reading_end_front"
+        layers: [
+            {
+                name: "body"
+                fps: 12
+                frames: [
+    				"reading_letter8"
+    				"reading_letter7"
+    				"reading_letter6"
+    				"reading_letter5"
+    				"reading_letter4"
+    				"reading_letter3"
+    				"reading_letter2"
+    				"reading_letter1"
+                ]
+            }
+        ]
+    }
+    {
+        name: "moonwalk_loop_front"
+        frames: [
+        	"moonwalk_right1"
+        	"moonwalk_right2"
+        	"moonwalk_right3"
+        	"moonwalk_right4"
+        	"moonwalk_right5"
+        	"moonwalk_right6"
+        	"moonwalk_right7"
+        	"moonwalk_right8"
+        	"moonwalk_right9"
+        	"moonwalk_right10"
+        	"moonwalk_right11"
+        	"moonwalk_right12"
+        	"moonwalk_right13"
+        	"moonwalk_right14"
+        	"moonwalk_right15"
+        	"moonwalk_right16"
+        	"moonwalk_right17"
+        	"moonwalk_right18"
+        	"swirl_right1"
+        	"swirl_right4"
+        	"swirl_right5"
+        	"moonwalk_left1"
+        	"moonwalk_left2"
+        	"moonwalk_left3"
+        	"moonwalk_left4"
+        	"moonwalk_left5"
+        	"moonwalk_left6"
+        	"moonwalk_left7"
+        	"moonwalk_left8"
+        	"moonwalk_left9"
+        	"moonwalk_left10"
+        	"moonwalk_left11"
+        	"moonwalk_left12"
+        	"moonwalk_left13"
+        	"moonwalk_left14"
+        	"moonwalk_left15"
+        	"moonwalk_left16"
+        	"moonwalk_left17"
+        	"moonwalk_left18"
+        	"swirl_left1"
+        	"swirl_left5"
+        	"swirl_left6"
+        ]
+        triggers: [
+            "dance_moonwalk"
+            NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			"dance_swish"
+			NULL
+			NULL
+			"dance_moonwalk"
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			"dance_swish"
+			NULL
+			NULL
+		]
+    }
+    {
+        name: "moonwalk_front"
+        frames: [
+        	"moonwalk_right1"
+        	"moonwalk_right2"
+        	"moonwalk_right3"
+        	"moonwalk_right4"
+        	"moonwalk_right5"
+        	"moonwalk_right6"
+        	"moonwalk_right7"
+        	"moonwalk_right8"
+        	"moonwalk_right9"
+        	"moonwalk_right10"
+        	"moonwalk_right11"
+        	"moonwalk_right12"
+        	"moonwalk_right13"
+        	"moonwalk_right14"
+        	"moonwalk_right15"
+        	"moonwalk_right16"
+        	"moonwalk_right17"
+        	"moonwalk_right18"
+        	"swirl_right1"
+        	"swirl_right4"
+        	"swirl_right5"
+        	"moonwalk_left1"
+        	"moonwalk_left2"
+        	"moonwalk_left3"
+        	"moonwalk_left4"
+        	"moonwalk_left5"
+        	"moonwalk_left6"
+        	"moonwalk_left7"
+        	"moonwalk_left8"
+        	"moonwalk_left9"
+        	"moonwalk_left10"
+        	"moonwalk_left11"
+        	"moonwalk_left12"
+        	"moonwalk_left13"
+        	"moonwalk_left14"
+        	"moonwalk_left15"
+        	"moonwalk_left16"
+        	"moonwalk_left17"
+        	"moonwalk_left18"
+        ]
+        triggers: [
+    		"dance_moonwalk"
+    		NULL
+    		NULL
+    		NULL
+    		NULL
+    		NULL
+    		NULL
+    		NULL
+    		NULL
+    		NULL
+    		NULL
+    		NULL
+    		NULL
+    		NULL
+    		NULL
+    		NULL
+    		NULL
+    		NULL
+    		"dance_swish"
+    		NULL
+    		NULL
+    		"dance_moonwalk"
+    		NULL
+    		NULL
+    		NULL
+    		NULL
+    		NULL
+    		NULL
+    		NULL
+    		NULL
+    		NULL
+    		NULL
+    		NULL
+    		NULL
+    		NULL
+    		NULL
+    		NULL
+    		NULL
+    		NULL
+        ]
+    }
+    {
+        name: "cabbage_start_front"
+        frames: [
+        	"swirl_left1"
+        	"cabbage1"
+        	"cabbage2"
+        	"cabbage3"
+        	"cabbage4"
+        	"cabbage5"
+        	"cabbage6"
+        	"cabbage7"
+        	"cabbage8"
+        	"cabbage9"
+        	"cabbage10"
+        	"cabbage11"
+         ]
+		triggers: [
+			"dance_swish"
+			"dance_cabbage_step1"
+			"dance_cabbage_arms"
+			NULL
+			NULL
+			NULL
+			NULL
+			"dance_cabbage_step1"
+			NULL
+			NULL
+			NULL
+			"dance_cabbage_step2"
+		]
+    }
+    {
+        name: "cabbage_loop_front"
+        frames: [
+        	"cabbage2"
+        	"cabbage3"
+        	"cabbage4"
+        	"cabbage5"
+        	"cabbage6"
+        	"cabbage7"
+        	"cabbage8"
+        	"cabbage9"
+        	"cabbage10"
+        	"cabbage11"
+         ]
+		triggers: [
+			"dance_cabbage_arms"
+			NULL
+			NULL
+			NULL
+			NULL
+			"dance_cabbage_step1"
+			NULL
+			NULL
+			NULL
+			"dance_cabbage_step2"
+		]
+    }
+    {
+        name: "egyptian_front"
+        frames: [
+         	"swirl_left1"
+        	"swirl_left2"
+        	"swirl_left5"
+        	"swirl_left6"
+        	"egiptian_left1"
+        	"egiptian_left2"
+        	"egiptian_left3"
+        	"egiptian_left4"
+        	"egiptian_left5"
+        	"egiptian_left6"
+        	"egiptian_left7"
+        	"egiptian_left6"
+        	"egiptian_left5"
+        	"egiptian_left6"
+        	"egiptian_left7"
+        	"egiptian_left6"
+        	"egiptian_left5"
+        	"egiptian_left6"
+        	"egiptian_left7"
+        	"egiptian_left6"
+        	"swirl_left5"
+        	"egiptian_right1"
+        	"egiptian_right2"
+        	"egiptian_right3"
+        	"egiptian_right2"
+        	"egiptian_right1"
+        	"egiptian_right2"
+        	"egiptian_right3"
+        	"egiptian_right2"
+        	"egiptian_right1"
+        	"egiptian_right2"
+        	"egiptian_right3"
+        	"egiptian_right2"
+         ]
+		triggers: [
+			"dance_swish"
+			NULL
+			NULL
+			NULL
+			"dance_egyptian"
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			"dance_swish"
+			"dance_egyptian"
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+		]
+    }
+    {
+        name: "airpunch_front"
+        frames: [
+        	"airpunch1"
+        	"airpunch2"
+        	"airpunch3"
+        	"airpunch4"
+        	"airpunch5"
+        	"airpunch5"
+        	"airpunch5"
+        	"airpunch5"
+        	"airpunch5"
+        	"airpunch6"
+         ]
+		triggers: [
+			"dance_cabbage_step1"
+			"dance_swish"
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+			NULL
+		]
+    }
+]

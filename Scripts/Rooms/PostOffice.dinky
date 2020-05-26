@@ -1,0 +1,193 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+DEFINE_ROOM("PostOffice", {
+	music_pool = "town"
+	ambient_sound = SOUNDID(ambient_inside)
+
+	test_foo = 1
+
+	enter = function() {
+		startthread(postalWorkerWorking)
+		local star = 0
+		local starOffset = 0
+		for (local i = 1; i <= 5; i += 1) {
+			star = this["star"+i]
+			objectOffset(star,point(starOffset,0))
+			// obj, fadeRange1, fadeRange2, alphaRange1, alphaRange2
+			twinkleStar(star, 0.01, 0.1, random(0,0.3), random(0.6, 1))
+		}
+		for (local i = 1; i <= 1; i += 1) {
+			star = this["starB"+i]
+			objectOffset(star,point(starOffset,0))
+			// obj, fadeRange1, fadeRange2, alphaRange1, alphaRange2
+			twinkleStar(star, 0.05, 0.3, 0, 1)
+		}
+	}
+
+	exit = function() {
+	}
+
+	script postalWorkerWorking() {
+		stopthread(PostOffice?._workingTID)
+		PostOffice._workingTID <- threadid()
+		while(YES) {
+			actorWalkTo(postalworker, PostOffice["slotSpot"+random(1, 5)])
+			breakwhilewalking(postalworker)
+			breaktime(0.25)
+			playAnimation(postalworker, randomfrom("reach_low_mail", "reach_med_mail", "reach_med_high_mail", "reach_high_mail"))
+			breaktime(0.1)
+			breakwhileanimating(postalworker)
+			breaktime(0.1)
+		}
+	}
+
+	// ------------------------------------------------------------------------
+	// Objects
+
+	door = DEFINE_OBJECT({
+		name = TEXT(11264,"door")
+		photo_name = TEXT(11265,"the Post Office door")
+		door_verbs = YES
+	 	verb_use_text = TEXT(11266,"Leave")
+	 	verb_use_desc = TEXT(11267,"Leave the Post Office")
+		to_door = @AStreet.postOfficeDoor
+		door_sound = { open=SOUNDID(slidingDoorOpen), close=SOUNDID(slidingDoorClose) }
+	})
+
+	tape = DEFINE_OBJECT({
+		name = TEXT(11268,"tape")
+		photo_name = TEXT(11269,"tape")
+		article = ""
+
+		VERB(lookat) {
+			sayLine(SAY(11245,"Probably the solution to a puzzle in another game."))
+		}
+	})
+
+	scale = DEFINE_OBJECT({
+		name = TEXT(11270,"scale")
+
+		VERB(lookat) {
+			sayLine(SAY(11246,"It's for weighing mail."))
+		}
+	})
+
+	mailDrop = DEFINE_OBJECT({
+		name = TEXT(11271,"mail drop")
+		accepts_mail = YES
+
+		VERB(lookat) {
+			if (inInventory("letter")) {
+				sayLine(SAY(11247,"This is where I could mail Leonard's electricity bill."))
+			} else {
+				sayLine(SAY(11248,"If I had any mail, this is where I'd put it."))
+			}
+		}
+	})
+
+	calendar = DEFINE_OBJECT({
+		name = TEXT(11272,"calendar")
+		for_story = "patriotic"
+		bad_story = ["jefferson", SAY(11249,"An actual image of Jefferson would be much better.")]
+		VERB(lookat) {
+			sayLine(SAY(11250,"It's showing the month of July... That was a long time ago."))
+		}
+	})
+
+	notice = DEFINE_OBJECT({
+		name = TEXT(11273,"important notice")
+		photo_name = TEXT(11274,"an important notice")
+		photo_reach = REACH_HIGH
+		bad_story = [ "vandalism", SAY(11251,"Looks like government property vandalism really is a problem. I need to photograph an example of it.") ]
+
+		DEFAULT_VERB(read)
+		VERB(read) {
+			sayLine(SAY(11252,"“Please stop trying to break into the mailboxes.”"))
+		}
+	})
+
+	mailBoxes = DEFINE_OBJECT({
+		name = TEXT(11275,"mailboxes")
+		photo_name = TEXT(11276,"mailboxes")
+
+		tried_to_open = NO
+
+		VERB(open) {
+			sayLine(SAY(11253,"They are locked."))
+			tried_to_open = YES
+		}
+		VERB_OK(unlock) { return tried_to_open }
+		VERB(unlock) {
+			sayLine(SAY(11254,"I don't have the combination."))
+		}
+		VERB(lookat) {
+			sayLine(SAY(11255,"That's a lot of private mailboxes."))
+		}
+	})
+
+	brokenMailbox = DEFINE_OBJECT({
+		name = @broken ? TEXT(11277,"destroyed mailbox") : TEXT(11278,"scuffed up mailbox")
+		pried_count = 0
+		broken = NO
+		for_story = @broken ? "vandalism" : null
+		state = "damaged"
+		bad_story = [ "vandalism", SAY(11256,"The mailbox damage is really minor. Not good enough for the photo.") ]
+		photo_reach = REACH_HIGH
+
+		VERB_OK(lookin) { return broken }
+		VERB(lookin) {
+			sayLine(SAY(11257,"It's dark in there!"))
+		}
+
+		VERB(lookat) {
+			if (broken) {
+				sayLine(SAY(11258,"I'm going to get in so much trouble for this."))
+			} else {
+				sayLine(SAY(11259,"This mailbox looks a little scuffed up."))
+			}
+		}
+
+		VERB_OK(vandalize_with) { return !broken && noun2 == Inventory.screwdriver }
+		VERB(vandalize_with) {
+			broken = YES
+			inputOff(@{
+				local sid = playSound(SOUNDID(break_mailbox))
+				bad_story = null
+				while(isSoundPlaying(sid)) {
+					actorQuickReach(selectedActor, REACH_HIGH)
+					breaktime(0.5,0.75)
+				}
+				objectState(this, "destroyed")
+				actorTurnTo(selectedActor, DIR_FRONT)
+				breaktime(0.25)
+				actorWalkForward(selectedActor, 8)
+				sayLine(SAY(11260,"I'm not so sure this was a smart idea."))
+			})
+		}
+	})
+
+	boxes = DEFINE_OBJECT({
+		name = TEXT(11279,"boxes")
+		photo_name = TEXT(11280,"boxes")
+		bad_story = [ "pillow_bears", SAY(11261,"No one cares about a bunch of boxes.")]
+
+		VERB(lookat) {
+			sayLine(SAY(11262,"It's a bunch of PillowBears™, waiting to be mailed out."), ONCE(SAY(11263,"That was Dad's idea!")))
+		}
+	})
+
+	star1 = {}
+	star2 = {}
+	star3 = {}
+	star4 = {}
+	star5 = {}
+	starB1 = {}
+
+
+// NEW_OBJECT_HERE
+})

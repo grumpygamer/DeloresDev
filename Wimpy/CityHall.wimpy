@@ -1,0 +1,258 @@
+ambient_light: "{0.576471,0.686275,0.741176,1}"
+background: "background"
+name: "CityHall"
+room_scale: 3
+sheet: "CityHall"
+layers: [
+    {
+        name: "foreground1"
+        zsort: -3
+        parallax: (1.35,1.35)
+    }
+    {
+        name: "foreground2"
+        zsort: -2
+        parallax: (1.2,1.2)
+    }
+]
+lights: [
+    {
+        color1: "{0.95098,0.912839,0.61534,0}"
+        color2: "{0,0,0,0}"
+        id: 0
+        iradius: 69
+        oradius: 124
+        rate: 0
+        clipping: ((0,0),(0,0))
+        pos: (271,163)
+    }
+    {
+        color1: "{0.605921,0.883922,0.965686,0}"
+        color2: "{0,0,0,0}"
+        id: 1
+        iradius: 16
+        oradius: 17
+        rate: 0
+        clipping: ((0,0),(0,0))
+        pos: (444,168)
+    }
+    {
+        color1: "{0.548659,0.8583,0.867647,0}"
+        color2: "{0,0,0,0}"
+        id: 2
+        iradius: 0
+        oradius: 16
+        rate: 0
+        clipping: ((0,0),(0,0))
+        pos: (474,77)
+    }
+    {
+        color1: "{0.867647,0.72554,0.565672,0}"
+        color2: "{0,0,0,0}"
+        id: 3
+        iradius: 16
+        oradius: 28
+        rate: 0
+        clipping: ((0,0),(0,0))
+        pos: (58,96)
+    }
+]
+objects: [
+    {
+        name: "mainStreetDoor"
+        usedir: "DIR_LEFT"
+        zsort: 98
+        animations: [
+            {
+                name: "closed"
+                frames: [
+                    "enrtrance_door_opening2"
+                    "enrtrance_door_opening1"
+                    "enrtrance_door_closed"
+                ]
+            }
+            {
+                name: "open"
+                frames: [
+                    "enrtrance_door_opening1"
+                    "enrtrance_door_opening2"
+                    "enrtrance_door_open"
+                ]
+            }
+        ]
+        hotspot: ((-19,-47),(35,54))
+        pos: (43,143)
+        usepos: (27,-54)
+    }
+    {
+        name: "coronerDoor"
+        usedir: "DIR_BACK"
+        zsort: 79
+        animations: [
+            {
+                name: "closed"
+                frames: [
+                    "coroner_door_opening2"
+                    "coroner_door_opening1"
+                    "coroner_door_closed"
+                ]
+            }
+            {
+                name: "open"
+                frames: [
+                    "coroner_door_opening1"
+                    "coroner_door_opening2"
+                    "coroner_door_open"
+                ]
+            }
+        ]
+        hotspot: ((-23,-41),(23,39))
+        pos: (474,123)
+        usepos: (4,-48)
+    }
+    {
+        name: "sheriffDoor"
+        usedir: "DIR_BACK"
+        zsort: 172
+        animations: [
+            {
+                name: "closed"
+                frames: [
+                    "sheriff_door_opening2"
+                    "sheriff_door_opening1"
+                    "sheriff_door_closed"
+                ]
+            }
+            {
+                name: "open"
+                frames: [
+                    "sheriff_door_opening1"
+                    "sheriff_door_opening2"
+                    "sheriff_door_open"
+                ]
+            }
+        ]
+        hotspot: ((-25,-35),(22,45))
+        pos: (444,203)
+        usepos: (1,-33)
+    }
+    {
+        name: "cityHallStaircase"
+        prop: 1
+        zsort: 80
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "staircase"
+                ]
+            }
+        ]
+        pos: (465,113)
+    }
+    {
+        name: "cityHallDesk"
+        prop: 1
+        zsort: 97
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "desk"
+                ]
+            }
+        ]
+        pos: (217,131)
+    }
+    {
+        name: "waterFountain"
+        usedir: "DIR_BACK"
+        zsort: 137
+        hotspot: ((-47,-43),(-9,16))
+        pos: (385,119)
+        usepos: (-30,-45)
+    }
+    {
+        name: "spot1"
+        spot: 1
+        usedir: "DIR_LEFT"
+        pos: (246,90)
+    }
+    {
+        name: "seal"
+        usedir: "DIR_BACK"
+        zsort: 126
+        hotspot: ((-97,19),(-22,98))
+        pos: (284,126)
+        usepos: (-57,-32)
+    }
+    {
+        name: "pictureRight"
+        usedir: "DIR_BACK"
+        zsort: 162
+        hotspot: ((-29,21),(10,76))
+        pos: (320,162)
+        usepos: (-16,-95)
+    }
+    {
+        name: "pictureLeft"
+        usedir: "DIR_BACK"
+        zsort: 162
+        hotspot: ((-199,22),(-159,76))
+        pos: (320,162)
+        usepos: (-184,-79)
+    }
+    {
+        name: "light"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (271,163)
+    }
+    {
+        name: "sheriffLight"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (444,168)
+    }
+    {
+        name: "coronerLight"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (474,77)
+    }
+    {
+        name: "doorLight"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (58,96)
+    }
+]
+room_bounds: ((0,0),(640,324))
+room_size: (640,324)
+scaling: [
+    "1.20@40"
+    "0.90@105"
+]
+walkboxes: [
+    {
+        polygon: "(42,77);(282,76);(448,76);(457,78);(492,78);(508,76);(552,40);(14,39)"
+    }
+    {
+        polygon: "(75,95);(99,95);(131,95);(297,96);(299,94);(282,87);(282,76);(42,77);(46,85)"
+    }
+    {
+        polygon: "(125,105);(132,105);(131,95);(99,95);(119,101)"
+    }
+    {
+        polygon: "(167,111);(266,111);(265,104);(164,104)"
+    }
+    {
+        polygon: "(297,96);(419,169);(420,165);(299,94)"
+    }
+    {
+        polygon: "(523,169);(523,165);(420,165);(419,169)"
+    }
+    {
+        polygon: "(523,169);(620,172);(619,167);(523,165)"
+    }
+]

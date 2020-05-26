@@ -1,0 +1,1117 @@
+ambient_light: "{0.79902,0.610324,0.493512,1}"
+background: "background"
+height: 128
+name: "Diner"
+room_scale: 4
+roomsize: "{480,180}"
+sheet: "Diner"
+layers: [
+    {
+        name: "near_foreground"
+        parallax: 1.3
+        zsort: -2
+    }
+    {
+        name: "mid_foreground"
+        parallax: 1.15
+        zsort: -1
+    }
+    {
+        name: "sky"
+        parallax: 0.25
+        zsort: 2
+    }
+    {
+        name: "hills"
+        parallax: 0.75
+        zsort: 1
+    }
+]
+lights: [
+    {
+        color1: "{0.965686,0.937284,0.724265,0}"
+        color2: "{0,0,0,0}"
+        id: 0
+        iradius: 62
+        oradius: 95
+        rate: 0
+        clipping: ((0,0),(0,0))
+        pos: (113,127)
+    }
+    {
+        color1: "{0.964706,0.937255,0.72549,0}"
+        color2: "{0,0,0,0}"
+        id: 1
+        iradius: 27
+        oradius: 45
+        rate: 0
+        clipping: ((0,0),(0,0))
+        pos: (21,109)
+    }
+    {
+        color1: "{0.581027,0.955882,0.84513,0}"
+        color2: "{0,0,0,0}"
+        id: 2
+        iradius: 42
+        oradius: 44
+        rate: 0
+        clipping: ((-34,-17),(43,15))
+        pos: (268,92)
+    }
+    {
+        color1: "{0.862745,0.843137,0.678431,0}"
+        color2: "{0,0,0,0}"
+        id: 3
+        iradius: 29
+        oradius: 51
+        rate: 0
+        clipping: ((-47,-45),(34,3))
+        pos: (185,71)
+    }
+    {
+        color1: "{0.862745,0.843137,0.678431,0}"
+        color2: "{0,0,0,0}"
+        id: 4
+        iradius: 29
+        oradius: 51
+        rate: 0
+        clipping: ((-74,-45),(74,3))
+        pos: (285,71)
+    }
+    {
+        color1: "{0.862745,0.841391,0.676663,0}"
+        color2: "{0,0,0,0}"
+        id: 5
+        iradius: 29
+        oradius: 51
+        rate: 0
+        clipping: ((-74,-45),(74,3))
+        pos: (389,71)
+    }
+]
+objects: [
+    {
+        name: "flies"
+        prop: 1
+        zsort: 61
+        animations: [
+            {
+                name: "state0"
+                frames: [
+                    "flies1"
+                    "flies2"
+                    "flies3"
+                    "flies4"
+                    "flies5"
+                ]
+            }
+        ]
+        pos: (319,116)
+    }
+    {
+        name: "MainStreetDoor"
+        usedir: "DIR_BACK"
+        zsort: 88
+        animations: [
+            {
+                name: "closed"
+                frames: [
+                    "door_opening2"
+                    "door_opening1"
+                    "door_closed"
+                ]
+            }
+            {
+                name: "open"
+                frames: [
+                    "door_opening1"
+                    "door_opening2"
+                    "door_open"
+                ]
+            }
+        ]
+        hotspot: ((-19,-34),(18,35))
+        pos: (109,117)
+        usepos: (-5,-37)
+    }
+    {
+        name: "hotDog1"
+        usedir: "DIR_BACK"
+        zsort: 61
+        animations: [
+            {
+                fps: 8
+                loop: 1
+                name: "state0"
+                frames: [
+                    "hotdog1"
+                    "hotdog2"
+                    "hotdog3"
+                    "hotdog4"
+                ]
+            }
+        ]
+        hotspot: ((-5,-11),(5,4))
+        pos: (299,104)
+        usepos: (0,-45)
+    }
+    {
+        name: "hotDog2"
+        usedir: "DIR_BACK"
+        zsort: 62
+        animations: [
+            {
+                fps: 8
+                loop: 1
+                name: "state0"
+                frames: [
+                    "hotdog3"
+                    "hotdog4"
+                    "hotdog1"
+                    "hotdog2"
+                ]
+            }
+        ]
+        hotspot: ((-5,-12),(5,4))
+        pos: (308,104)
+        usepos: (-1,-46)
+    }
+    {
+        name: "hotDog3"
+        usedir: "DIR_BACK"
+        zsort: 63
+        animations: [
+            {
+                fps: 8
+                loop: 1
+                name: "state0"
+                frames: [
+                    "hotdog2"
+                    "hotdog3"
+                    "hotdog4"
+                    "hotdog1"
+                ]
+            }
+        ]
+        hotspot: ((-4,-13),(5,4))
+        pos: (317,104)
+        usepos: (-1,-45)
+    }
+    {
+        name: "hotDog4"
+        usedir: "DIR_BACK"
+        zsort: 64
+        animations: [
+            {
+                fps: 8
+                loop: 1
+                name: "state0"
+                frames: [
+                    "hotdog4"
+                    "hotdog1"
+                    "hotdog2"
+                    "hotdog3"
+                ]
+            }
+        ]
+        hotspot: ((-5,-13),(5,4))
+        pos: (326,104)
+        usepos: (2,-47)
+    }
+    {
+        name: "CashRegister"
+        usedir: "DIR_RIGHT"
+        zsort: 76
+        hotspot: ((-20,-4),(5,17))
+        pos: (170,99)
+        usepos: (-34,-28)
+    }
+    {
+        name: "sandyCashRegisterSpot"
+        spot: 1
+        usedir: "DIR_LEFT"
+        pos: (181,73)
+    }
+    {
+        name: "menu"
+        usedir: "DIR_BACK"
+        zsort: 93
+        hotspot: ((31,44),(61,85))
+        pos: (167,64)
+        usepos: (40,-6)
+    }
+    {
+        name: "counter"
+        prop: 1
+        zsort: 67
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "counter"
+                ]
+            }
+        ]
+        pos: (300,75)
+    }
+    {
+        name: "sandySpot"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (211,68)
+    }
+    {
+        name: "kitchen"
+        prop: 1
+        zsort: 74
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "kitchen_wall"
+                ]
+            }
+        ]
+        pos: (281,125)
+    }
+    {
+        name: "spotPlayerSandyTalk"
+        spot: 1
+        usedir: "DIR_RIGHT"
+        pos: (136,74)
+    }
+    {
+        name: "spotPlayerSandyTalk2"
+        spot: 1
+        usedir: "DIR_BACK"
+        pos: (196,59)
+    }
+    {
+        name: "radio"
+        usedir: "DIR_BACK"
+        zsort: 61
+        animations: [
+            {
+                name: "off"
+                frames: [
+                    "radio_off"
+                ]
+            }
+            {
+                name: "on"
+                frames: [
+                    "radio_on"
+                ]
+            }
+        ]
+        hotspot: ((-14,-15),(7,0))
+        pos: (423,106)
+        usepos: (-6,-46)
+    }
+    {
+        name: "cameraPanSpot"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (68,123)
+    }
+    {
+        name: "sandyHotDog1Spot"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (283,67)
+    }
+    {
+        name: "sandyHotDog2Spot"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (290,67)
+    }
+    {
+        name: "sandyHotDog3Spot"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (300,67)
+    }
+    {
+        name: "sandyHotDog4Spot"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (312,67)
+    }
+    {
+        name: "counterLights"
+        prop: 1
+        zsort: 52
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "counter_lamps"
+                ]
+            }
+        ]
+        pos: (288,90)
+    }
+    {
+        name: "doorLights"
+        prop: 1
+        zsort: 75
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "door_lamps"
+                ]
+            }
+        ]
+        pos: (109,129)
+    }
+    {
+        name: "sandyRansomeSpot"
+        spot: 1
+        usedir: "DIR_LEFT"
+        pos: (183,68)
+    }
+    {
+        name: "fireball"
+        prop: 1
+        zsort: 63
+        animations: [
+            {
+                name: "gone"
+                frames: [
+                ]
+            }
+            {
+                fps: 12
+                name: "flare_up"
+                frames: [
+                    "fire1"
+                    "fire2"
+                    "fire3"
+                    "fire4"
+                    "fire5"
+                    "fire6"
+                    "fire7"
+                    "fire8"
+                    "fire9"
+                    "fire10"
+                    "fire11"
+                ]
+            }
+            {
+                fps: 12
+                loop: 1
+                name: "flare_loop"
+                frames: [
+                    "fire4"
+                    "fire5"
+                    "fire6"
+                    "fire7"
+                    "fire8"
+                    "fire9"
+                    "fire10"
+                    "fire11"
+                ]
+            }
+            {
+                fps: 12
+                name: "flare_down"
+                frames: [
+                    "fire11"
+                    "fire3"
+                    "fire2"
+                    "fire1"
+                    "fire0"
+                ]
+            }
+            {
+                fps: 12
+                name: "flare_up_down"
+                frames: [
+                    "fire1"
+                    "fire2"
+                    "fire3"
+                    "fire4"
+                    "fire5"
+                    "fire6"
+                    "fire7"
+                    "fire8"
+                    "fire9"
+                    "fire10"
+                    "fire11"
+                    "fire3"
+                    "fire2"
+                    "fire1"
+                    "fire0"
+                ]
+            }
+        ]
+        pos: (248,116)
+    }
+    {
+        name: "fireball1"
+        prop: 1
+        zsort: 63
+        animations: [
+            {
+                name: "gone"
+                frames: [
+                ]
+            }
+            {
+                fps: 12
+                name: "flare_up"
+                frames: [
+                    "fire1"
+                    "fire2"
+                    "fire3"
+                    "fire4"
+                    "fire5"
+                    "fire6"
+                    "fire7"
+                    "fire8"
+                    "fire9"
+                    "fire10"
+                    "fire11"
+                ]
+            }
+            {
+                fps: 12
+                loop: 1
+                name: "flare_loop"
+                frames: [
+                    "fire4"
+                    "fire5"
+                    "fire6"
+                    "fire7"
+                    "fire8"
+                    "fire9"
+                    "fire10"
+                    "fire11"
+                ]
+            }
+            {
+                fps: 12
+                name: "flare_down"
+                frames: [
+                    "fire11"
+                    "fire3"
+                    "fire2"
+                    "fire1"
+                    "fire0"
+                ]
+            }
+            {
+                fps: 12
+                name: "flare_up_down"
+                frames: [
+                    "fire1"
+                    "fire2"
+                    "fire3"
+                    "fire4"
+                    "fire5"
+                    "fire6"
+                    "fire7"
+                    "fire8"
+                    "fire9"
+                    "fire10"
+                    "fire11"
+                    "fire3"
+                    "fire2"
+                    "fire1"
+                    "fire0"
+                ]
+            }
+        ]
+        pos: (248,116)
+    }
+    {
+        name: "fireball2"
+        prop: 1
+        zsort: 63
+        animations: [
+            {
+                name: "gone"
+                frames: [
+                ]
+            }
+            {
+                fps: 12
+                name: "flare_up"
+                frames: [
+                    "fire1"
+                    "fire2"
+                    "fire3"
+                    "fire4"
+                    "fire5"
+                    "fire6"
+                    "fire7"
+                    "fire8"
+                    "fire9"
+                    "fire10"
+                    "fire11"
+                ]
+            }
+            {
+                fps: 12
+                loop: 1
+                name: "flare_loop"
+                frames: [
+                    "fire4"
+                    "fire5"
+                    "fire6"
+                    "fire7"
+                    "fire8"
+                    "fire9"
+                    "fire10"
+                    "fire11"
+                ]
+            }
+            {
+                fps: 12
+                name: "flare_down"
+                frames: [
+                    "fire11"
+                    "fire3"
+                    "fire2"
+                    "fire1"
+                    "fire0"
+                ]
+            }
+            {
+                fps: 12
+                name: "flare_up_down"
+                frames: [
+                    "fire1"
+                    "fire2"
+                    "fire3"
+                    "fire4"
+                    "fire5"
+                    "fire6"
+                    "fire7"
+                    "fire8"
+                    "fire9"
+                    "fire10"
+                    "fire11"
+                    "fire3"
+                    "fire2"
+                    "fire1"
+                    "fire0"
+                ]
+            }
+        ]
+        pos: (248,116)
+    }
+    {
+        name: "fireball3"
+        prop: 1
+        zsort: 63
+        animations: [
+            {
+                name: "gone"
+                frames: [
+                ]
+            }
+            {
+                fps: 12
+                name: "flare_up"
+                frames: [
+                    "fire1"
+                    "fire2"
+                    "fire3"
+                    "fire4"
+                    "fire5"
+                    "fire6"
+                    "fire7"
+                    "fire8"
+                    "fire9"
+                    "fire10"
+                    "fire11"
+                ]
+            }
+            {
+                fps: 12
+                loop: 1
+                name: "flare_loop"
+                frames: [
+                    "fire4"
+                    "fire5"
+                    "fire6"
+                    "fire7"
+                    "fire8"
+                    "fire9"
+                    "fire10"
+                    "fire11"
+                ]
+            }
+            {
+                fps: 12
+                name: "flare_down"
+                frames: [
+                    "fire11"
+                    "fire3"
+                    "fire2"
+                    "fire1"
+                    "fire0"
+                ]
+            }
+            {
+                fps: 12
+                name: "flare_up_down"
+                frames: [
+                    "fire1"
+                    "fire2"
+                    "fire3"
+                    "fire4"
+                    "fire5"
+                    "fire6"
+                    "fire7"
+                    "fire8"
+                    "fire9"
+                    "fire10"
+                    "fire11"
+                    "fire3"
+                    "fire2"
+                    "fire1"
+                    "fire0"
+                ]
+            }
+        ]
+        pos: (248,116)
+    }
+    {
+        name: "fireball4"
+        prop: 1
+        zsort: 63
+        animations: [
+            {
+                name: "gone"
+                frames: [
+                ]
+            }
+            {
+                fps: 12
+                name: "flare_up"
+                frames: [
+                    "fire1"
+                    "fire2"
+                    "fire3"
+                    "fire4"
+                    "fire5"
+                    "fire6"
+                    "fire7"
+                    "fire8"
+                    "fire9"
+                    "fire10"
+                    "fire11"
+                ]
+            }
+            {
+                fps: 12
+                loop: 1
+                name: "flare_loop"
+                frames: [
+                    "fire4"
+                    "fire5"
+                    "fire6"
+                    "fire7"
+                    "fire8"
+                    "fire9"
+                    "fire10"
+                    "fire11"
+                ]
+            }
+            {
+                fps: 12
+                name: "flare_down"
+                frames: [
+                    "fire11"
+                    "fire3"
+                    "fire2"
+                    "fire1"
+                    "fire0"
+                ]
+            }
+            {
+                fps: 12
+                name: "flare_up_down"
+                frames: [
+                    "fire1"
+                    "fire2"
+                    "fire3"
+                    "fire4"
+                    "fire5"
+                    "fire6"
+                    "fire7"
+                    "fire8"
+                    "fire9"
+                    "fire10"
+                    "fire11"
+                    "fire3"
+                    "fire2"
+                    "fire1"
+                    "fire0"
+                ]
+            }
+        ]
+        pos: (248,116)
+    }
+    {
+        name: "fireball5"
+        prop: 1
+        zsort: 63
+        animations: [
+            {
+                name: "gone"
+                frames: [
+                ]
+            }
+            {
+                fps: 12
+                name: "flare_up"
+                frames: [
+                    "fire1"
+                    "fire2"
+                    "fire3"
+                    "fire4"
+                    "fire5"
+                    "fire6"
+                    "fire7"
+                    "fire8"
+                    "fire9"
+                    "fire10"
+                    "fire11"
+                ]
+            }
+            {
+                fps: 12
+                loop: 1
+                name: "flare_loop"
+                frames: [
+                    "fire4"
+                    "fire5"
+                    "fire6"
+                    "fire7"
+                    "fire8"
+                    "fire9"
+                    "fire10"
+                    "fire11"
+                ]
+            }
+            {
+                fps: 12
+                name: "flare_down"
+                frames: [
+                    "fire11"
+                    "fire3"
+                    "fire2"
+                    "fire1"
+                    "fire0"
+                ]
+            }
+            {
+                fps: 12
+                name: "flare_up_down"
+                frames: [
+                    "fire1"
+                    "fire2"
+                    "fire3"
+                    "fire4"
+                    "fire5"
+                    "fire6"
+                    "fire7"
+                    "fire8"
+                    "fire9"
+                    "fire10"
+                    "fire11"
+                    "fire3"
+                    "fire2"
+                    "fire1"
+                    "fire0"
+                ]
+            }
+        ]
+        pos: (248,116)
+    }
+    {
+        name: "fireball6"
+        prop: 1
+        zsort: 63
+        animations: [
+            {
+                name: "gone"
+                frames: [
+                ]
+            }
+            {
+                fps: 12
+                name: "flare_up"
+                frames: [
+                    "fire1"
+                    "fire2"
+                    "fire3"
+                    "fire4"
+                    "fire5"
+                    "fire6"
+                    "fire7"
+                    "fire8"
+                    "fire9"
+                    "fire10"
+                    "fire11"
+                ]
+            }
+            {
+                fps: 12
+                loop: 1
+                name: "flare_loop"
+                frames: [
+                    "fire4"
+                    "fire5"
+                    "fire6"
+                    "fire7"
+                    "fire8"
+                    "fire9"
+                    "fire10"
+                    "fire11"
+                ]
+            }
+            {
+                fps: 12
+                name: "flare_down"
+                frames: [
+                    "fire11"
+                    "fire3"
+                    "fire2"
+                    "fire1"
+                    "fire0"
+                ]
+            }
+            {
+                fps: 12
+                name: "flare_up_down"
+                frames: [
+                    "fire1"
+                    "fire2"
+                    "fire3"
+                    "fire4"
+                    "fire5"
+                    "fire6"
+                    "fire7"
+                    "fire8"
+                    "fire9"
+                    "fire10"
+                    "fire11"
+                    "fire3"
+                    "fire2"
+                    "fire1"
+                    "fire0"
+                ]
+            }
+        ]
+        pos: (248,116)
+    }
+    {
+        name: "smoke"
+        prop: 1
+        zsort: 76
+        animations: [
+            {
+                name: "gone"
+                frames: [
+                ]
+            }
+            {
+                fps: 12
+                name: "smoke"
+                frames: [
+                    "smoke1"
+                    "smoke2"
+                    "smoke3"
+                    "smoke4"
+                    "smoke5"
+                    "smoke6"
+                    "smoke7"
+                    "smoke8"
+                    "smoke9"
+                ]
+            }
+        ]
+        pos: (270,124)
+    }
+    {
+        name: "giveHotDogSpot"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (268,67)
+    }
+    {
+        name: "getHotDogSpot"
+        spot: 1
+        usedir: "DIR_BACK"
+        pos: (251,60)
+    }
+    {
+        name: "getFoodSpot"
+        spot: 1
+        usedir: "DIR_BACK"
+        pos: (248,72)
+    }
+    {
+        layer: 2
+        name: "star1"
+        prop: 1
+        zsort: 108
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (45,135)
+    }
+    {
+        layer: 2
+        name: "star2"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (113,144)
+    }
+    {
+        layer: 2
+        name: "star3"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_white"
+                ]
+            }
+        ]
+        pos: (121,130)
+    }
+    {
+        layer: 2
+        name: "starB1"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+        pos: (101,132)
+    }
+    {
+        layer: 2
+        name: "starB2"
+        prop: 1
+        zsort: 119
+        animations: [
+            {
+                name: "default"
+                frames: [
+                    "astar_cross1"
+                ]
+            }
+        ]
+        pos: (4,135)
+    }
+    {
+        name: "hotDogMachine"
+        prop: 1
+        zsort: 53
+        pos: (300,53)
+    }
+    {
+        name: "jumpSpot"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (108,72)
+    }
+    {
+        name: "daveSpot1"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (253,76)
+    }
+    {
+        name: "daveSpot2"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (266,76)
+    }
+    {
+        name: "daveSpot3"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (279,76)
+    }
+    {
+        name: "flameMinSpot"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (248,76)
+    }
+    {
+        name: "flameMaxSpot"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (283,76)
+    }
+    {
+        name: "daveTalkSpot"
+        spot: 1
+        usedir: "DIR_BACK"
+        pos: (252,60)
+    }
+    {
+        name: "fireballsObject"
+        usedir: "DIR_BACK"
+        zsort: 96
+        hotspot: ((-1,11),(64,37))
+        pos: (240,90)
+        usepos: (16,-31)
+    }
+    {
+        name: "dance_spot"
+        spot: 1
+        usedir: "DIR_FRONT"
+        pos: (216,31)
+    }
+]
+room_bounds: ((10,10),(470,170))
+room_size: (480,180)
+scaling: [
+    "1.304@14"
+    ".80@82"
+]
+walkboxes: [
+    {
+        polygon: "(466,53);(3,53);(3,84);(32,84);(34,79);(51,79);(59,83);(150,83);(153,77);(133,77);(146,57);(190,57);(195,60);(209,60);(217,57);(244,57);(247,60);(262,60);(268,57);(293,57);(296,60);(313,60);(324,57);(342,57);(348,60);(361,60);(369,56);(395,56);(401,60);(417,60);(422,56);(456,56)"
+    }
+    {
+        polygon: "(167,81);(174,81);(187,73);(372,73);(388,67);(184,67)"
+    }
+    {
+        polygon: "(211,84);(356,84);(358,76);(207,76)"
+    }
+    {
+        polygon: "(3,53);(466,53);(469,14);(15,14)"
+    }
+]

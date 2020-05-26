@@ -1,0 +1,392 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+function defineAllActors() {
+
+// ------------------------------------------------------------------------------------------------
+	DEFINE_ACTOR("delores", {
+		name = TEXT(11028,"Delores")
+		talk_color = 0xbd8cbf
+		jibber_sid = SOUNDID(jibber_delores)
+		default_costume = "DeloresAnimation"
+		footstep_sound = SOUNDID(footstep_normal)
+
+		function init() {
+			//actorCameraOffset(this, point(0,50))
+		}
+		function triggerSound(sound) {
+			if (sound == "low_boom") playSound(SOUNDID(low_boom))
+			if (sound == "liquid_spill") playSound(SOUNDID(liquid_spill))
+			if (sound == "kick_can") playSound(SOUNDID(kick_can))
+			if (sound == "dance_swish") playSound(SOUNDID(dance_swish))
+			if (sound == "dance_cabbage_step1") playSound(SOUNDID(dance_cabbage_step1))
+			if (sound == "dance_cabbage_step2") playSound(SOUNDID(dance_cabbage_step2))
+			if (sound == "dance_cabbage_arms") playSound(SOUNDID(dance_cabbage_arms))
+			if (sound == "dance_egyptian") playSound(SOUNDID(dance_egyptian))
+		}
+	})
+
+// ------------------------------------------------------------------------------------------------
+	DEFINE_ACTOR("willie", {
+		name = TEXT(11029,"Willie")
+		talk_color = 0xc69c6d
+		jibber_sid = SOUNDID(jibber_willie)
+		default_costume = "WillieAnimation"
+		article = ""
+
+		function init() {
+			actorAt(willie, MainStreet, MainStreet.willieSpot1)
+			actorUsePos(willie, MainStreet.willieTalkSpot)
+		}
+
+		VERB(lookat) {}
+	})
+
+// ------------------------------------------------------------------------------------------------
+	DEFINE_ACTOR("natalie", {
+		name = TEXT(11030,"Natalie")
+		talk_color = 0xaaaaaa
+		jibber_sid = SOUNDID(jibber_natalie)
+		default_costume = "NatalieAnimation"
+		default_verb = "verb_talkto"
+		article = ""
+		for_story = "editor"
+		no_yack_face = @this?.typing
+		function init() {
+			actorAt(natalie, Nickel, Nickel.typewriterSpot)
+			actorUsePos(natalie, Nickel.natalieTalkSpot)
+		}
+
+		VERB(talkto) {
+			startYack(selectedActor, natalie, "Natalie:returning")
+		}
+
+		VERB_OK(takefrom) { return noun2 == Inventory.assignment || noun2?.is_photo }
+		VERB(takefrom) {
+			if (Note.isDone()) {
+				sayLine(SAY(11000,"I think I'm done with the assignment."))
+				startYack(selectedActor, natalie, "Natalie:assignment_done")
+			} else {
+				sayLine(SAY(11001,"Want to take a look at my work so far?"))
+				startYack(selectedActor, natalie, "Natalie:see_work")
+			}
+		}
+	})
+
+// ------------------------------------------------------------------------------------------------
+	DEFINE_ACTOR("ransome", {
+		name = TEXT(11031,"Ransome")
+		talk_color = 0xff5f75
+		jibber_sid = SOUNDID(jibber_ransome)
+		default_costume = "RansomeAnimation"
+		footstep_sound = SOUNDID(footstep_ransome)
+		function init() {
+			actorUseWalkboxSet(ransome, NO)
+			actorHideLayer(ransome, "head_nm")
+			actorHideLayer(ransome, "head_nm1")
+			actorHideLayer(ransome, "head_nm2")
+			actorHideLayer(ransome, "head_nm3")
+			actorHideLayer(ransome, "head_nm4")
+			actorHideLayer(ransome, "head_nm5")
+			actorHideLayer(ransome, "head_nm6")
+
+		}
+	})
+
+// ------------------------------------------------------------------------------------------------
+	DEFINE_ACTOR("leonard", {
+		name = TEXT(11032,"Leonard")
+		talk_color = 0xf8941d
+		jibber_sid = SOUNDID(jibber_leonard)
+		no_yack_face = YES
+		default_costume = "LeonardAnimation"
+		default_verb = "verb_talkto"
+		article = ""
+		function init() {
+			actorAt(leonard, QuickiePal, QuickiePal.leonardSpot)
+			actorUsePos(leonard, QuickiePal.leonardTalkSpot)
+			actorHotspot(leonard, point(-14,28), point(14,68))
+		}
+		VERB(talkto) {
+			startYack(selectedActor, leonard, "Leonard")
+		}
+	})
+
+// ------------------------------------------------------------------------------------------------
+	DEFINE_ACTOR("sheriff", {
+		name = TEXT(11033,"Sheriff")
+		talk_color = 0xfff845
+		jibber_sid = SOUNDID(jibber_sheriff)
+		default_costume = "SheriffAnimation"
+		default_verb = "verb_talkto"
+		article = TEXT(12352,"the")
+		bad_story = [ ["danger_job", SAY(11002,"The last time the Sheriff did anything dangerous was looking in the mirror.") ],
+									["seeing_double", SAY(11003,"A photo of the Sheriff by himself won't work for Natalie.")] ]
+		function init() {
+			actorAt(sheriff, SheriffsOffice, SheriffsOffice.sheriffSpot)
+		}
+
+		VERB_OK(talkto) { return !isActorWalking(this) && !this?.busy }
+		VERB(talkto) {
+			startYack(selectedActor, sheriff, "Sheriff")
+		}
+
+		function endYack() {
+			actorFace(this, DIR_FRONT)
+		}
+		function triggerSound(sound) {
+			if (sound == "coin_flip") playSoundAt(SOUNDID(coin_flip), sheriff)
+		}
+	})
+
+// ------------------------------------------------------------------------------------------------
+	DEFINE_ACTOR("coroner", {
+		name = TEXT(11034,"Coroner")
+		talk_color = 0xdbd64a
+		jibber_sid = SOUNDID(jibber_coroner)
+		default_costume = "CoronerAnimation"
+		default_verb = "verb_talkto"
+		article = TEXT(12353,"the")
+		no_yack_face = YES
+		bad_story = ["seeing_double", SAY(11004,"A photo of the Coroner by himself won't work for Natalie.")]
+
+		function init() {
+			actorAt(coroner, CoronersOffice, CoronersOffice.coronerSpot)
+			actorUsePos(coroner, CoronersOffice.coronerTalkSpot)
+		}
+
+		VERB(talkto) {
+			startYack(selectedActor, coroner, "Coroner")
+		}
+
+		function endYack() {
+			actorFace(this, DIR_FRONT)
+		}
+		function triggerSound(sound) {
+			if (sound == "coin_flip") playSoundAt(SOUNDID(coin_flip), this)
+		}
+	})
+
+// ------------------------------------------------------------------------------------------------
+	DEFINE_ACTOR("dave", {
+		name = TEXT(11035,"Dave")
+		talk_color = 0xd17b00
+		jibber_sid = SOUNDID(jibber_dave)
+		default_costume = "DaveAnimation"
+		default_verb = "verb_talkto"
+		for_story = ""
+		photo_name = TEXT(11036,"Dave")
+//		bad_story = [ "ransome", SAY(11005,"I think Natalie will want someone much more famous, only pretentious food critics think he's a celebrity.")]
+		article = ""
+		function init() {
+			actorAt(dave, Diner, Diner.daveSpot1)
+			actorUsePos(dave, Diner.daveTalkSpot)
+		}
+		function endYack() {
+			actorEyesLook(this, DIR_FRONT)
+		}
+		function beginYack() {
+			actorEyesLook(this, DIR_FRONT)
+		}
+
+		VERB(talkto) {
+			startYack(selectedActor, dave, "Dave")
+		}
+	})
+
+// ------------------------------------------------------------------------------------------------
+	DEFINE_ACTOR("sandy", {
+		name = TEXT(11037,"Sandy")
+		talk_color = 0xfcfc54
+		jibber_sid = SOUNDID(jibber_sandy)
+		default_costume = "SandyAnimation"
+		default_verb = "verb_talkto"
+		article = ""
+		function init() {
+			actorAt(sandy, Diner, Diner.sandyCashRegisterSpot)
+			actorUsePos(sandy, Diner.spotPlayerSandyTalk)
+		}
+
+		VERB(talkto) {
+			startYack(selectedActor, sandy, "Sandy:returning")
+		}
+	})
+
+// ------------------------------------------------------------------------------------------------
+	DEFINE_ACTOR("morena", {
+		name = TEXT(11038,"Madame Morena")
+		talk_color = 0x80bdb8
+		jibber_sid = SOUNDID(jibber_morena)
+		default_costume = "MorenaAnimation"
+		default_verb = "verb_talkto"
+		article = ""
+		function init() {
+			actorAt(morena, BookStore, BookStore.morenaSpot)
+			actorUsePos(morena, BookStore.morenaTalkSpot)
+		}
+
+		VERB(talkto) {
+			startYack(selectedActor, morena, "Morena")
+		}
+	})
+
+// ------------------------------------------------------------------------------------------------
+	DEFINE_ACTOR("postalworker", {
+		name = TEXT(11039,"George")
+		talk_color = 0x9bcee4
+		jibber_sid = SOUNDID(jibber_postalworker)
+		default_costume = "PostalWorkerAnimation"
+		default_verb = "verb_talkto"
+		article = ""
+		footstep_sound = SOUNDID(footstep_normal)
+		function init() {
+			actorAt(postalworker, PostOffice, PostOffice.slotSpot5)
+			actorUsePos(postalworker, PostOffice.tape)
+			actorHotspot(postalworker, point(-15,25), point(15,55))
+		}
+
+		VERB(talkto) {
+			sayLine(postalworker, randomfrom(SAY(11006,"Sorry, too busy now. I'm behind on my sorting."),
+											SAY(11007,"Too busy to stop, it's all these PillowBear™ orders!"),
+											SAY(11008,"A postman's work is never done, can't stop."),
+											SAY(11009,"Have to keep sorting these PillowBear™ orders, can't stop."),
+											SAY(11010,"Can't help you now.")))
+		}
+		VERB_OK(takefrom) { return noun2 == Inventory.letter || noun2 == Inventory.stamps }
+		VERB(takefrom) {
+			if (noun2 == Inventory.letter) {
+				if (Inventory.letter.has_stamps) {
+					sayLine(postalworker, SAY(11011,"I'm too busy to take your letter. Just use the mail drop."))
+				} else {
+					sayLine(postalworker, SAY(11012,"I'm too busy to take your letter. Don't forget to add stamps!"))
+				}
+			} else
+			if (noun2 == Inventory.stamps) {
+				sayLine(postalworker, SAY(11013,"Too busy now, and no returns on stamps."))
+			}
+		}
+
+		function triggerSound(sound) {
+			if (sound == "package") {
+				playSoundAt(SOUNDID(mail_package), this)
+			}
+		}
+	})
+
+// ------------------------------------------------------------------------------------------------
+	DEFINE_ACTOR("lenore", {
+		name = TEXT(11040,"Lenore")
+		talk_color = 0xf8941d
+		jibber_sid = SOUNDID(jibber_lenore)
+		no_yack_face = YES
+		default_costume = "LenoreAnimation"
+		default_verb = "verb_talkto"
+		photo_name =@ (currentRoom == Bank && GLOBAL(hired_lenore_state)) ? "Lenore working" : "Lenore"
+		for_story =@ (currentRoom == Bank && GLOBAL(hired_lenore_state)) ? "bankteller" : null
+		bad_story = [ "ransome", SAY(11014,"My sister might think she's a celebrity, but no one else does.") ]
+
+		function init() {
+			actorUseWalkboxSet(lenore, NO)
+			actorAt(lenore, AStreet, AStreet.LenoreSpot)
+			actorUsePos(lenore, AStreet.LenoreTalkSpot)
+		}
+
+		VERB(talkto) {
+			startYack(selectedActor, lenore, "Lenore")
+		}
+
+		VERB_OK(show) { return noun2?.bank_sign_photo && GLOBAL(hired_lenore_state) <= 1}
+		VERB(show) {
+			startYack(selectedActor, lenore, "Lenore:show_photo")
+		}
+
+		VERB_OK(takefrom) { return noun2 == Inventory.nickel }
+		VERB(takefrom) {
+			if (GLOBAL(hired_lenore_state) == 2) {
+				sayLine(lenore, SAY(11015,"We don't take deposits in the form of coins."))
+			} else {
+				sayLine(lenore, SAY(11016,"I don't want or need your pity nickel."))
+			}
+		}
+	})
+
+// ------------------------------------------------------------------------------------------------
+	DEFINE_ACTOR("peter", {
+		name = TEXT(11041,"Peter")
+		talk_color = 0xb7905c
+		jibber_sid = SOUNDID(jibber_peter)
+		default_costume = "PeterAnimation"
+		default_verb = "verb_talkto"
+		article = ""
+		function init() {
+			actorUseWalkboxSet(peter, NO)
+			actorAt(peter, AStreet, AStreet.PeterSpot)
+			actorUsePos(peter, AStreet.PeterTalkSpot)
+			actorHotspot(peter, point(-20,0), point(13,70))	// normal is about x= -14 to 14
+		}
+
+		VERB(talkto) {
+			actorTurnTo(delores, lenore)
+			sayLine(lenore, this?.tried_to_talk ? SAY(11017,"I told you to talk to me, not what's-his-face.") : SAY(11018,"You want to talk to him, you talk to me!"))
+			this.tried_to_talk <- YES
+		}
+	})
+
+// ------------------------------------------------------------------------------------------------
+	DEFINE_ACTOR("chuckie", {
+		name = TEXT(11042,"Chuckie")
+		talk_color = 0x00aeef
+		jibber_sid = SOUNDID(jibber_chuckie)
+		no_yack_face = YES
+		default_costume = "ChuckieAnimation"
+		default_verb = "verb_talkto"
+		article = ""
+		gave_toy = NO
+		for_story = "poverty"
+
+		function init() {
+			actorUseWalkboxSet(chuckie, NO)
+			actorAt(chuckie, AStreet, AStreet.ChuckieSpot)
+			actorUsePos(chuckie, AStreet.ChuckieTalkSpot)
+			actorHotspot(chuckie, point(-10,0), point(10,43))
+		}
+
+		VERB(talkto) {
+			startYack(selectedActor, chuckie, "Chuckie")
+		}
+
+		VERB_OK(takefrom) { return gave_toy ? NO : YES }
+		VERB(takefrom) {
+			if (noun2 == Inventory.nickel) {
+				sayLine(chuckie, SAY(11019,"A nickel won't buy a good toy. I want a toy!"))
+			} else
+			if (noun2 != Inventory.ransomeCandy) {
+				sayLine(chuckie, randomfrom(SAY(11020,"I don't want that!"), SAY(11021,"I want a toy!"), SAY(11022,"Kids don't want that!")))
+			} else {
+				gave_toy = YES
+				removeInventory(noun2)
+				sayLine(chuckie, SAY(11023,"Thanks!"))
+				breakwhiletalking(chuckie)
+				sayLine(SAY(11024,"Don't let them rot your teeth like they did mine."))
+			}
+		}
+
+		VERB(takephoto) {
+			if (!gave_toy) {
+				sayLine(chuckie, ONCE(SAY(11025,"Not so fast Aunt Delores.")),
+			    	    	   		  SAY(11026,"Gotta give me a present if you want to take my picture."))
+				return
+			}
+			sayLine(SAY(11027,"Smile!"))
+			noun2.takePhoto(this)
+		}
+	})
+
+
+}
+
+// ------------------------------------------------------------------------------------------------

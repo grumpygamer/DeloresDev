@@ -1,0 +1,125 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+function actorLookLeftRight(actor, count = 1) {
+	return startthread(@() {
+		actor.pauseIdlesLooking(YES)
+		actor.pauseBlinks(YES)
+		while(count--) {
+			actorEyesLook(actor, DIR_RIGHT)
+			breaktime(0.5)
+			actorEyesLook(actor, DIR_FRONT)
+			breaktime(0.15)
+			actorEyesLook(actor, DIR_LEFT)
+			breaktime(0.5)
+			actorEyesLook(actor, DIR_FRONT)
+			breaktime(0.15)
+		}
+		actor.pauseIdlesLooking(NO)
+		actor.pauseBlinks(NO)
+	})
+}
+
+function actorEyesLook(actor, dir) {
+	if (actor && dir) {
+		if (not is_number(dir)) {
+			local x = actorPosition(actor).x - actorPosition(dir).x
+			if (x > -10 && x < 10) {
+				dir = DIR_FRONT
+			} else
+			if (x < 0) {
+				dir = DIR_RIGHT
+			} else {
+				dir = DIR_LEFT
+			}
+		}
+		if (dir == DIR_RIGHT) {
+			actorShowLayer(actor, "eyes_left", NO)
+			actorShowLayer(actor, "eyes_right", YES)
+		}
+		if (dir == DIR_LEFT) {
+			actorShowLayer(actor, "eyes_left", YES)
+			actorShowLayer(actor, "eyes_right", NO)
+		}
+		if (dir == DIR_FRONT) {
+			actorShowLayer(actor, "eyes_left", NO)
+			actorShowLayer(actor, "eyes_right", NO)
+		}
+	}
+}
+
+function startActorIdles(actor) {
+	if (GLOBAL(no_idle_animations)) return
+	if (actor == delores) {
+		startActorIdle(delores, 5.0, [ "stand", "brushhair", "shift_bag", "shift_weight" ])
+	} else
+	if (actor == leonard) {
+	 	startActorIdle(leonard, 5.0, [ "stand", "stand", "stand_scratch_face", "stand_scratch_face", "stand_scratch_face2", "stand_nametag" ])
+	} else
+	if (actor == morena) {
+	 	startActorIdle(morena, 6.0, [ "stand", "stand", "stand", "stand", "pull_up_skirt", "hands_on_hips8", "hands_on_hips4", "rubbing_hands", "rubbing_hands", "rubbing_hands" ])
+	} else
+	if (actor == sheriff) {
+	 	startActorIdle(sheriff, 6.0, [ "stand", "flip_coin", "flip_coin2", "flip_coin3", "flip_coin", "flip_coin2" ])
+	} else
+	if (actor == coroner) {
+	 	startActorIdle(coroner, 6.0, [ "stand", "flip_coin", "flip_coin2", "flip_coin3", "flip_coin", "flip_coin2" ])
+	} else
+	if (actor == lenore) {
+	 	startActorIdle(lenore, 6.0, [ "stand" ])
+	} else
+	if (actor == chuckie) {
+	 	startActorIdle(chuckie, 6.0, [ "sit" ])
+	}
+}
+
+script startActorIdle(actor, time, animations) {
+//	if (settings.actorIdleAnimations == NO) return
+	if (!actor?._idle_tid) actor._idle_tid <- 0
+	actor._idle_tid = stopthread(actor._idle_tid)
+	if (animations == null) return
+	if (!isActorInRoom(actor, currentRoom)) return
+	if (DEBUG(print_idles)) print("Starting idles for ", actor)
+	actor._idle_tid = startthread(@{
+		time /= 2
+		do {
+			breaktime(time-(time*0.25), time+(time*0.25))
+			if ((gametime() < (actor?._arrived_time + time)) || isActorTalking(actor) || inCutscene() || isYacking() || inputState() == INPUT_OFF) {
+				continue
+			}
+			if (!actor?.no_looking) {
+				actorEyesLook(actor, randomfrom(DIR_FRONT, DIR_RIGHT, DIR_LEFT))
+			}
+			breaktime(time-(time*0.25), time+(time*0.25))
+			if ((gametime() < (actor?._arrived_time + time)) || isActorTalking(actor) || inCutscene() || isYacking() || inputState() == INPUT_OFF) {
+				continue
+			}
+			if (!isActorWalking(actor) && !isActorTalking(actor) && !actor?.no_idle_animations && !actor?.on_ladder) {
+//				if (actorAnimationFlags(actor) & IDLE_OK) {
+					if (actorFacing(actor) == DIR_FRONT) {
+						local anim = randomfrom(animations)
+						if (anim) {
+							if (DEBUG(print_idles)) print("Idle ",actor,": ", anim)
+							playAnimation(actor, anim)
+						}
+					}
+//				}
+				if (!actor?.no_looking) {
+					actorEyesLook(actor, randomfrom(DIR_FRONT, DIR_RIGHT, DIR_LEFT))
+				}
+			}
+		}
+	})
+}
+
+function stopActorIdle(actor) {
+	if (actor == null) return
+	if (actor?._idle_tid == NO) {
+		actor._idle_tid <- 0
+	}
+	actor._idle_tid = stopthread(actor._idle_tid)
+}

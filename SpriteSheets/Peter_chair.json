@@ -1,0 +1,68 @@
+{"frames": {
+
+"peter_seated":
+{
+	"frame": {"x":215,"y":3,"w":37,"h":50},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":19,"y":44,"w":37,"h":50},
+	"sourceSize": {"w":100,"h":100}
+},
+"sitting1":
+{
+	"frame": {"x":3,"y":3,"w":23,"h":76},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":39,"y":21,"w":23,"h":76},
+	"sourceSize": {"w":100,"h":100}
+},
+"sitting2":
+{
+	"frame": {"x":30,"y":3,"w":28,"h":75},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":35,"y":22,"w":28,"h":75},
+	"sourceSize": {"w":100,"h":100}
+},
+"sitting3":
+{
+	"frame": {"x":62,"y":3,"w":29,"h":74},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":32,"y":23,"w":29,"h":74},
+	"sourceSize": {"w":100,"h":100}
+},
+"sitting4":
+{
+	"frame": {"x":95,"y":3,"w":34,"h":73},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":26,"y":24,"w":34,"h":73},
+	"sourceSize": {"w":100,"h":100}
+},
+"sitting5":
+{
+	"frame": {"x":174,"y":3,"w":37,"h":70},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":23,"y":24,"w":37,"h":70},
+	"sourceSize": {"w":100,"h":100}
+},
+"sitting6":
+{
+	"frame": {"x":133,"y":3,"w":37,"h":72},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":19,"y":22,"w":37,"h":72},
+	"sourceSize": {"w":100,"h":100}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "Peter_chair.png",
+	"format": "RGBA8888",
+	"size": {"w":255,"h":82},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:0ce6468dc5f65bc2d802c076f3368ad3:7c92071ca8d395645ed47dde56ada69e:f4a8935d2cef6fa6460e85ed99e595b8$"
+}
+}

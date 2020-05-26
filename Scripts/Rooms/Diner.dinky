@@ -1,0 +1,328 @@
+// ----------------------------------------------------------------------------
+//
+//  Copyright (c) 2020 Terrible Toybox, Inc. All rights reserved.
+//  Licensed for personal use only: https://github.com/grumpygamer/DeloresDev
+//
+// ----------------------------------------------------------------------------
+
+DEFINE_ROOM("Diner", {
+	music_pool = "town"
+	ambient_sound = SOUNDID(ambient_inside)
+
+	first_time = YES
+
+	// --------------------------------------------------------------------------------------------
+	// General room functions
+
+	flameSpot = point(0,0)
+
+	script daveCooking() {
+		actorLockFacing(dave, DIR_FRONT)
+
+		actorWalkTo(dave, daveSpot1)
+		breakwhilewalking(dave)
+		do {
+			actorWalkTo(dave, flameSpot)
+			breakwhilewalking(dave)
+			playAnimation(dave, "cooking", randomodds(0.75) ? LOOPING : 0)
+			breaktime(1.0,2.0)
+			playAnimation(dave, "stand")
+			actorWalkTo(dave, randomfrom(daveSpot1, daveSpot2, daveSpot3))
+			breakwhilewalking(dave)
+			playAnimation(dave, "cooking", randomodds(0.25) ? LOOPING : 0)
+			breaktime(1.0,2.0)
+			playAnimation(dave, "stand")
+		}
+	}
+
+	script animateFireball() {
+		foreach(local obj in [fireball, fireball1, fireball2, fireball3, fireball4, fireball5, fireball6]) {
+				objectState(obj, "gone")
+		}
+		dave.for_story = ""
+		dave.photo_name = "Dave"
+//		dave.bad_story = [ "ransome", "I think Natalie will want someone much more famous, only pretentious food critics think he's a celebrity."]
+		objectTouchable(Diner.fireballsObject, NO)
+		actorHotspot(dave, point(-15,20), point(15,63))	// normal version
+		flameSpot = point(random(flameMinSpot.x, flameMaxSpot.x), flameMinSpot.y)
+		objectTouchable(fireballsObject, NO)
+
+		if (Alleyway.valve.position == "normal") {
+			do {
+				breaktime(3.0,6.0)
+				// Find random position
+				flameSpot = point(random(flameMinSpot.x, flameMaxSpot.x), flameSpot.y)
+				objectOffset(fireball, point(flameSpot.x-objectPosition(fireball).x, 0))
+
+				local firetype = 3
+				refreshUI(0)
+				if (firetype == 2) {
+					objectState(fireball, "flare_up")
+					playSoundAt(SOUNDID(sizzleFlareUp), fireball)
+					breakwhileanimating(fireball)
+					objectState(fireball, "flare_loop")
+					breaktime(0.5, 3)
+					objectState(fireball, "flare_down")
+				} else
+				if (firetype == 3) {
+					objectState(fireball, "flare_up_down")
+					playSoundAt(SOUNDID(sizzleFlareUp), fireball)
+					breakwhileanimating(fireball)
+				} else
+				if (firetype == 4) {
+					objectState(fireball, "flare_up_down")
+					playSoundAt(SOUNDID(sizzleFlareUp), fireball)
+					breakwhileanimating(fireball)
+				}
+				dave.for_story = ""
+				dave.photo_name = "Dave"
+				objectTouchable(Diner.fireball, NO)
+				refreshUI(0)
+			}
+		} else {
+			dave.for_story = "danger_job"
+			dave.photo_name = "Dave and the fireballs"
+//			dave.bad_story = [ "ransome", "Impressive! But I think Natalie will want someone much more famous, only pretentious food critics think he's a celebrity."]
+			objectTouchable(fireballsObject, YES)
+			actorHotspot(dave, point(-10,38), point(10,63))	// behind fire version
+			breaktime(0.1)
+			foreach(local obj in [fireball, fireball1, fireball2, fireball3, fireball4, fireball5, fireball6]) {
+				startthread(crazyFireballs, obj)
+			}
+			do {
+				breaktime(3.0,4.0)
+				breakwhiletalking()
+				sayLine(dave, randomfrom(SAY(11549,"Gas is on too high!"),
+				                         SAY(11550,"Agggg!"),
+				                         SAY(11551,"Man oh man oh man!"),
+				                         SAY(11552,"Noooo!"),
+				                         SAY(11553,"Someone turn down the gas!"),
+				                         SAY(11554,"Down! Stay down!")))
+				breakwhiletalking(dave)
+			}
+		}
+	}
+
+	script crazyFireballs(fire){
+		do {
+			breaktime(0.1,1.0)
+			// Find random position
+			flameSpot = point(random(flameMinSpot.x, flameMaxSpot.x), flameSpot.y)
+			objectOffset(fire, point(flameSpot.x-objectPosition(fireball).x, 0))
+
+			local firetype = randomfrom(2,3,3,4)
+			refreshUI(0)
+			if (firetype == 2) {
+				objectState(fire, "flare_up")
+				playSoundAt(SOUNDID(sizzleFlareUp), fire)
+				breakwhileanimating(fire)
+				objectState(fire, "flare_loop")
+				breaktime(0.5, 3)
+				objectState(fire, "flare_down")
+			} else
+			if (firetype == 3) {
+				objectState(fire, "flare_up_down")
+				playSoundAt(SOUNDID(sizzleFlareUp), fire)
+				breakwhileanimating(fire)
+			} else
+			if (firetype == 4) {
+				objectState(fire, "flare_up_down")
+				playSoundAt(SOUNDID(sizzleFlareUp), fire)
+				breakwhileanimating(fire)
+			}
+		}
+	}
+
+	script deloresDance(){
+		delores._dancingTID <- threadid()
+		cutscene(@{
+				actorWalkTo(delores, currentRoom.dance_spot)
+				breakwhilewalking(delores)
+				actorCostume(delores, "DeloresDancingAnimation")
+				local danceMove = random(1,3)
+				if (danceMove == 1) {
+					playAnimation(delores, "swirl_left_front")
+					breakwhileanimating(delores)
+					for (local i = 1; i <= 1; i += 1) {
+						playAnimation(delores, "moonwalk_loop")
+						breakwhileanimating(delores)
+						playAnimation(delores, "moonwalk")
+						breakwhileanimating(delores)
+					}
+				} else
+				if (danceMove == 2) {
+					playAnimation(delores, "cabbage_start")
+					breakwhileanimating(delores)
+					for (local i = 1; i <= 4; i += 1) {
+						playAnimation(delores, "cabbage_loop")
+						breakwhileanimating(delores)
+					}
+
+				} else {
+					for (local i = 1; i <= 2; i += 1) {
+						playAnimation(delores, "egyptian")
+						breakwhileanimating(delores)
+					}
+				}
+				playAnimation(delores, "swirl_left_short")
+				cutsceneDoOverride()
+			}, @{
+				breakwhileanimating(delores)
+				playAnimation(delores, "airpunch")
+				breakwhileanimating(delores)
+				actorCostume(delores, "DeloresAnimation")
+				delores._dancingTID = NO
+			})
+	}
+
+
+	// --------------------------------------------------------------------------------------------
+	// Enter/Exit code
+
+	enter = function(from_door=null) {
+		startthread(daveCooking)
+		startthread(animateFireball)
+
+		playSoundAt(SOUNDID(sizzleLoop), daveSpot2)
+		playSoundAt(SOUNDID(hotdog_machine), hotDogMachine)
+
+		if (first_time && Alleyway.valve.position == "normal") {
+			first_time = NO
+			startYack(delores, sandy, "Sandy:start_first_time")
+		}
+
+		local star = 0
+		local starOffset = 60
+		for (local i = 1; i <= 3; i += 1) {
+			star = this["star"+i]
+			objectOffset(star,point(starOffset,0))
+			// obj, fadeRange1, fadeRange2, alphaRange1, alphaRange2
+			twinkleStar(star, 0.01, 0.1, random(0,0.3), random(0.6, 1))
+		}
+		for (local i = 1; i <= 2; i += 1) {
+			star = this["starB"+i]
+			objectOffset(star,point(starOffset,0))
+			// obj, fadeRange1, fadeRange2, alphaRange1, alphaRange2
+			twinkleStar(star, 0.05, 0.3, 0, 1)
+		}
+	}
+
+	exit = function() {
+	}
+
+	// --------------------------------------------------------------------------------------------
+	// Objects
+
+	// --------------------------------------------------------------------------------------------
+	MainStreetDoor = DEFINE_OBJECT({
+		name = TEXT(11565,"door")
+		photo_name = TEXT(11566,"the Diner door")
+		door_verbs = YES
+		verb_use_text = TEXT(11567,"Leave")
+		verb_use_desc = TEXT(11568,"Leave the Diner")
+		to_door = @MainStreet.dinerDoor
+
+	})
+
+	// --------------------------------------------------------------------------------------------
+	hotDog1 = DEFINE_OBJECT({
+		name = TEXT(11569,"hot dog")
+
+		VERB(lookat) {
+			sayLine(SAY(11555,"It's a Kobe beef hot dog."))
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	hotDog2 = DEFINE_OBJECT({
+		name = TEXT(11570,"hot dog")
+
+		VERB(lookat) {
+			sayLine(SAY(11556,"It's a Swiss pork hot dog."))
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	hotDog3 = DEFINE_OBJECT({
+		name = TEXT(11571,"hot dog")
+
+		VERB(lookat) {
+			sayLine(SAY(11557,"It's a herb and chicken hot dog."))
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	hotDog4 = DEFINE_OBJECT({
+		name = TEXT(11572,"hot dog")
+
+		VERB(lookat) {
+			sayLine(SAY(11558,"It's a French mustard and kale veggie dog."))
+		}
+	})
+
+	hotDogMachine = {}
+	// --------------------------------------------------------------------------------------------
+	radio = DEFINE_OBJECT({
+		name = TEXT(11573,"radio")
+		on_off_verbs = YES
+
+		function stateChange() {
+			playRadio(this)
+		}
+
+		VERB(lookat) {
+			sayLine(state == "on" ? SAY(11559,"It's tuned to KSCUM. As it should be!") : SAY(11560,"Needs more KSCUM!"))
+		}
+		VERB_OK(empty) {
+			return noun2 == Inventory.glass && Inventory.glass.filled_with
+		}
+		VERB(empty) {
+			if (noun2 == Inventory.glass) {
+				Inventory.glass.filledWith(null)
+				playSoundAt(SOUNDID(water_pour), this)
+				this.verb_turn_off()
+				Inventory.screwdriver.verb_jab_with()
+			}
+		}
+		VERB_OK(dance) {return state == "on" }
+		VERB(dance) {
+			startthread(deloresDance)
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	menu = DEFINE_OBJECT({
+		name = TEXT(11574,"menu")
+		photo_name = TEXT(11575,"the Diner menu")
+
+		VERB(lookat) {
+			sayLine(SAY(11561,"Fancy stuff! All kinds of gourmet hot dogs."), ONCE(SAY(11562,"Quality sure has gone up since Dave and Sandy won all those awards.")))
+		}
+	})
+
+	// --------------------------------------------------------------------------------------------
+	fireballsObject = DEFINE_OBJECT({
+		name = TEXT(11576,"fireballs")
+		photo_name = TEXT(11577,"Dave and the fireballs")
+		for_story = "danger_job"
+
+		VERB(lookat) {
+			sayLine(SAY(11563,"That's a lot of fire!"), ONCE(SAY(11564,"Looks dangerous! Anything for a story.")))
+		}
+	})
+
+	fireball = {}
+	fireball1 = {}
+	fireball2 = {}
+	fireball3 = {}
+	fireball4 = {}
+	fireball5 = {}
+	fireball6 = {}
+	star1 = {}
+	star2 = {}
+	star3 = {}
+	starB1 = {}
+	starB2 = {}
+
+// NEW_OBJECT_HERE
+})

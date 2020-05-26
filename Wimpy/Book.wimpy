@@ -1,0 +1,8 @@
+background: "background"
+name: "Book"
+sheet: "Book"
+room_scale: 2
+room_bounds: ((1,1),(640,360))
+room_size: (640,360)
+objects: [
+]
