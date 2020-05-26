@@ -1,6 +1,6 @@
 ## Delores: A Thimbleweed Park mini-adventure Source Code License v1.0
 
-This repo contains the source code and documentation for the interactive software game Delores, including art, sound, and music (the “Software”). The Software does not include the `DeloresDev` engine or `Wimpy`, which remain subject to a proprietary license and which may not be redistributed for any reason. For personal use, you can find these assets for free on [link].
+This repo contains the source code and documentation for the interactive software game Delores, including art, sound, and music (the “Software”). The Software does not include the `DeloresDev` engine or `Wimpy`, which remain subject to a proprietary license and which may not be redistributed for any reason. For personal use, you can find these assets for free [here](https://thimbleweedpark.com/deloresdev).
 
 The purpose of making the Software available is for others to learn from.
 
