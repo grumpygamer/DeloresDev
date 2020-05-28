@@ -1,6 +1,6 @@
 id	text	en	loc
-10000	Engish	English	
-10001	Default	Default	
+10000	Engish	English
+10001	Default	Default
 11000	I think I'm done with the assignment.	I think I'm done with the assignment.	DefineActors.dinky
 11001	Want to take a look at my work so far?	Want to take a look at my work so far?	DefineActors.dinky
 11002	The last time the Sheriff did anything dangerous was looking in the mirror.	The last time the Sheriff did anything dangerous was looking in the mirror.	DefineActors.dinky
@@ -1350,3 +1350,4 @@ id	text	en	loc
 12352	the	the	DefineActors.dinky
 12353	the	the	DefineActors.dinky
 12354	a	a	CoronersOffice.dinky
+12355	Looks like Dad is working late again.	Looks like Dad is working late again.	Vista.dinky

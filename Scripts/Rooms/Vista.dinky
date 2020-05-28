@@ -111,7 +111,7 @@ DEFINE_ROOM("Vista", {
 		bad_story = ["pillow_bears", SAY(11690,"That's where they'll make PillowBears™, but I think an image of a PillowBear™ is a better photo.")]
 
 		VERB(lookat) {
-			sayLine(SAY(11691,"It's nice to see the factory ramping up again to make PillowBears™.", ONCE(SAY(0,"Looks like Dad is working late again."))))
+			sayLine(SAY(11691,"It's nice to see the factory ramping up again to make PillowBears™."), ONCE(SAY(12355,"Looks like Dad is working late again.")))
 		}
 	})
 
