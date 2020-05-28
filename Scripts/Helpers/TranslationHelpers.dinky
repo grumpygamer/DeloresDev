@@ -74,6 +74,7 @@ local translation_table = null
 function useTranslation(language) {
 	translation_table = language ? loadtsvtable("Translations_"+language+".tsv") : null
 	// dumpvar(translation_table)	// Uncomment to dump the table
+	setLanguage(translation_table ? language : "en")
 	return translation_table ? YES : NO
 }
 
