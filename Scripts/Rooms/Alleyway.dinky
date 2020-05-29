@@ -155,7 +155,7 @@ DEFINE_ROOM("Alleyway", {
 				objectState(this, "off")
 				objectHidden(this, YES)
 				sayLine(SAY(11336,"Hi Ransome!"))
-				RansomePoster.name = TEXT(0,"Ransome the Clown poster")
+				RansomePoster.name = TEXT(12358,"Ransome the Clown poster")
 			}
 		}
 		VERB_OK(dissolve) {

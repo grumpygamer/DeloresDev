@@ -285,7 +285,7 @@ function defineAllActors() {
 		no_yack_face = YES
 		default_costume = "LenoreAnimation"
 		default_verb = "verb_talkto"
-		photo_name =@ (currentRoom == Bank && GLOBAL(hired_lenore_state)) ? TEXT(0,"Lenore working") : TEXT(0,"Lenore")
+		photo_name =@ (currentRoom == Bank && GLOBAL(hired_lenore_state)) ? TEXT(12356,"Lenore working") : TEXT(12357,"Lenore")
 		for_story =@ (currentRoom == Bank && GLOBAL(hired_lenore_state)) ? "bankteller" : null
 		bad_story = [ "ransome", SAY(11014,"My sister might think she's a celebrity, but no one else does.") ]
 

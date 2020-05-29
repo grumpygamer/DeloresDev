@@ -692,7 +692,7 @@ id	text	en	loc
 11688	It's the old Edmund Hotel.	It's the old Edmund Hotel.	Vista.dinky
 11689	That was Uncle Chuck's pride and joy until the bank repossessed it when he was committed to the sanitarium.	That was Uncle Chuck's pride and joy until the bank repossessed it when he was committed to the sanitarium.	Vista.dinky
 11690	That's where they'll make PillowBears™, but I think an image of a PillowBear™ is a better photo.	That's where they'll make PillowBears™, but I think an image of a PillowBear™ is a better photo.	Vista.dinky
-11691	It's nice to see the factory ramping up again to make PillowBears™.", ONCE(SAY(0,"Looks like Dad is working late again.	It's nice to see the factory ramping up again to make PillowBears™.", ONCE(SAY(0,"Looks like Dad is working late again.	Vista.dinky
+11691	It's nice to see the factory ramping up again to make PillowBears™.	It's nice to see the factory ramping up again to make PillowBears™.	Vista.dinky
 11692	The Mansion mansion is in great shape. I need a photo for home demolition.	The Mansion mansion is in great shape. I need a photo for home demolition.	Vista.dinky
 11693	It's like Thimbleweed's own private Chernobyl.	It's like Thimbleweed's own private Chernobyl.	Vista.dinky
 11694	My old home before it was repossessed by the bank.	My old home before it was repossessed by the bank.	Vista.dinky
@@ -1351,3 +1351,13 @@ id	text	en	loc
 12353	the	the	DefineActors.dinky
 12354	a	a	CoronersOffice.dinky
 12355	Looks like Dad is working late again.	Looks like Dad is working late again.	Vista.dinky
+12356	Lenore working	Lenore working	DefineActors.dinky
+12357	Lenore	Lenore	DefineActors.dinky
+12358	Ransome the Clown poster	Ransome the Clown poster	Alleyway.dinky
+12359	a faucet with running water	a faucet with running water	Bathroom.dinky
+12360	a sink with running water	a sink with running water	Bathroom.dinky
+12361	a faucet	a faucet	Bathroom.dinky
+12362	a sink	a sink	Bathroom.dinky
+12363	Dave	Dave	Diner.dinky
+12364	Dave	Dave	Diner.dinky
+12365	Dave and the fireballs	Dave and the fireballs	Diner.dinky

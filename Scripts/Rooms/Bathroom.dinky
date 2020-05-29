@@ -270,16 +270,16 @@ DEFINE_ROOM("Bathroom", {
 					sink.default_verb = "verb_turn_off"
 					bad_story = [ "bad_water", SAY(11505,"Photo needs to be better than water from a gross faucet.") ]
 					sink.bad_story = [ "bad_water", SAY(11506,"Photo needs to be better than water from a gross sink.") ]
-					photo_name <- TEXT(0,"a faucet with running water")
-					sink.photo_name <- TEXT(0,"a sink with running water")
+					photo_name <- TEXT(12359,"a faucet with running water")
+					sink.photo_name <- TEXT(12360,"a sink with running water")
 				} else {
 					isWaterSource = NO
 					sink.isWaterSource = NO
 					sink.default_verb = "verb_turn_on"
 					bad_story = null
 					sink.bad_story = null
-					photo_name <- TEXT(0,"a faucet")
-					sink.photo_name <- TEXT(0,"a sink")
+					photo_name <- TEXT(12361,"a faucet")
+					sink.photo_name <- TEXT(12362,"a sink")
 				}
 			} else {
 				sayLine(SAY(11507,"It's too dark to see."))
