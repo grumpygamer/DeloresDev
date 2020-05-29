@@ -207,7 +207,7 @@ DEFINE_ROOM("AStreet", {
 	trashcan = DEFINE_OBJECT({
 		for_story = "trash"
 		name = TEXT(11454,"trash can")
-		article = TEXT(0,"a")
+		article = TEXT(12404,"a")
 		is_trash = YES
 		bad_story = [ "disgusting", SAY(11397,"It's a bit scary, but not really disgusting.") ]
 
@@ -239,7 +239,7 @@ DEFINE_ROOM("AStreet", {
 
 	// dime = DEFINE_OBJECT({
 	// 	name = TEXT(11455,"dime")
-	// 	article = TEXT(0,"a")
+	// 	article = TEXT(12405,"a")
 	// 	reach = REACH_LOW
 	// 	photo_reach = REACH_LOW
 
@@ -267,7 +267,7 @@ DEFINE_ROOM("AStreet", {
 	// --------------------------------------------------------------------------------------------
 	bottle = DEFINE_OBJECT({
 		name = TEXT(11457,"bottle")
-		article = TEXT(0,"a")
+		article = TEXT(12406,"a")
 		reach = REACH_LOW
 		for_story = "trash"
 		photo_reach = REACH_LOW
@@ -327,7 +327,7 @@ DEFINE_ROOM("AStreet", {
 	// --------------------------------------------------------------------------------------------
 	dumpster = DEFINE_OBJECT({
 		name = TEXT(11464,"dumpster")
-		article = TEXT(0,"a")
+		article = TEXT(12407,"a")
 		for_story = "trash"
 		photo_reach = REACH_HIGH
 		reach = REACH_HIGH

@@ -241,7 +241,7 @@ DEFINE_ROOM("Nickel", {
 	// --------------------------------------------------------------------------------------------
 	nickelSign = DEFINE_OBJECT({
 		name = TEXT(11121,"sign")
-		article = TEXT(0,"a")
+		article = TEXT(12368,"a")
 
 		VERB(lookat) {
 			sayLine(SAY(11100,"That sign must be as old as the Nickel News!"))
@@ -251,7 +251,7 @@ DEFINE_ROOM("Nickel", {
 	// --------------------------------------------------------------------------------------------
 	printingPress = DEFINE_OBJECT({
 		name = TEXT(11122,"printing press")
-		article = TEXT(0,"a")
+		article = TEXT(12369,"a")
 		seen = NO
 		photo_reach = REACH_HIGH
 
@@ -270,7 +270,7 @@ DEFINE_ROOM("Nickel", {
 	// --------------------------------------------------------------------------------------------
 	thimbleweedMap = DEFINE_OBJECT({
 		name = TEXT(11123,"map")
-		article = TEXT(0,"a")
+		article = TEXT(12370,"a")
 		seen_house = NO
 		photo_reach = REACH_HIGH
 		for_story = "thimbleweed_county"
@@ -300,7 +300,7 @@ DEFINE_ROOM("Nickel", {
 	// --------------------------------------------------------------------------------------------
 	fileDrawer = DEFINE_OBJECT({
 		name = TEXT(11126,"file cabinet")
-		article = TEXT(0,"a")
+		article = TEXT(12371,"a")
 		default_verb = "verb_open"
 		reach = REACH_HIGH
 		open_count = 0

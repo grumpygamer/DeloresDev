@@ -113,7 +113,7 @@ DEFINE_ROOM("CoronersOffice", {
 	// --------------------------------------------------------------------------------------------
 	door = DEFINE_OBJECT({
 		name = TEXT(11799,"door")
-		article = TEXT(0,"a")
+		article = TEXT(12456,"a")
 		door_verbs = YES
 		no_animation = YES
 		verb_use_text = TEXT(11800,"Leave")
@@ -173,7 +173,7 @@ DEFINE_ROOM("CoronersOffice", {
 	// --------------------------------------------------------------------------------------------
 	chart = DEFINE_OBJECT({
 		name = TEXT(11809,"chart")
-		article = TEXT(0,"a")
+		article = TEXT(12457,"a")
 
 		VERB(lookat) {
 			sayLine(SAY(11797,"Chewy Caramel Center."))
@@ -183,7 +183,7 @@ DEFINE_ROOM("CoronersOffice", {
 	// --------------------------------------------------------------------------------------------
 	certificate = DEFINE_OBJECT({
 		name = TEXT(11810,"certificate")
-		article = TEXT(0,"a")
+		article = TEXT(12458,"a")
 
 		VERB(lookat) {
 			sayLine(SAY(11798,"Odd? I didn't know you could mail order for coroner degrees."))
@@ -191,20 +191,20 @@ DEFINE_ROOM("CoronersOffice", {
 	})
 
 	cabinetD1 = DEFINE_OBJECT({
-		name = TEXT(0,"drawer")
-		article = TEXT(0,"a")
+		name = TEXT(12459,"drawer")
+		article = TEXT(12460,"a")
 		reach = REACH_HIGH
 		function init() { addCoronerDrawerVerbs(this) }
 	})
 	cabinetD2 = DEFINE_OBJECT({
-		name = TEXT(0,"drawer")
-		article = TEXT(0,"a")
+		name = TEXT(12461,"drawer")
+		article = TEXT(12462,"a")
 		reach = REACH_MED
 		function init() { addCoronerDrawerVerbs(this) }
 	})
 	cabinetD3 = DEFINE_OBJECT({
-		name = TEXT(0,"drawer")
-		article = TEXT(0,"a")
+		name = TEXT(12463,"drawer")
+		article = TEXT(12464,"a")
 		reach = REACH_LOW
 		function init() { addCoronerDrawerVerbs(this) }
 	})

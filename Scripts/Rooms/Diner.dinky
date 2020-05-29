@@ -227,7 +227,7 @@ DEFINE_ROOM("Diner", {
 	// --------------------------------------------------------------------------------------------
 	hotDog1 = DEFINE_OBJECT({
 		name = TEXT(11569,"hot dog")
-		article = TEXT(0,"a")
+		article = TEXT(12423,"a")
 
 		VERB(lookat) {
 			sayLine(SAY(11555,"It's a Kobe beef hot dog."))
@@ -237,7 +237,7 @@ DEFINE_ROOM("Diner", {
 	// --------------------------------------------------------------------------------------------
 	hotDog2 = DEFINE_OBJECT({
 		name = TEXT(11570,"hot dog")
-		article = TEXT(0,"a")
+		article = TEXT(12424,"a")
 
 		VERB(lookat) {
 			sayLine(SAY(11556,"It's a Swiss pork hot dog."))
@@ -247,7 +247,7 @@ DEFINE_ROOM("Diner", {
 	// --------------------------------------------------------------------------------------------
 	hotDog3 = DEFINE_OBJECT({
 		name = TEXT(11571,"hot dog")
-		article = TEXT(0,"a")
+		article = TEXT(12425,"a")
 
 		VERB(lookat) {
 			sayLine(SAY(11557,"It's a herb and chicken hot dog."))
@@ -257,7 +257,7 @@ DEFINE_ROOM("Diner", {
 	// --------------------------------------------------------------------------------------------
 	hotDog4 = DEFINE_OBJECT({
 		name = TEXT(11572,"hot dog")
-		article = TEXT(0,"a")
+		article = TEXT(12426,"a")
 
 		VERB(lookat) {
 			sayLine(SAY(11558,"It's a French mustard and kale veggie dog."))
@@ -268,7 +268,7 @@ DEFINE_ROOM("Diner", {
 	// --------------------------------------------------------------------------------------------
 	radio = DEFINE_OBJECT({
 		name = TEXT(11573,"radio")
-		article = TEXT(0,"a")
+		article = TEXT(12427,"a")
 		on_off_verbs = YES
 
 		function stateChange() {

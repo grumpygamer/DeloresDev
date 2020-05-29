@@ -135,8 +135,8 @@ DEFINE_ROOM("QuickiePal", {
 			}
 		}
 
-		name =@ state=="start_snapping"?TEXT(0,"snapping plant"):TEXT(0,"plant")
-		article =@ state=="start_snapping"?TEXT(0,"a"):TEXT(0,"a")
+		name =@ state=="start_snapping"?TEXT(12379,"snapping plant"):TEXT(12380,"plant")
+		article =@ state=="start_snapping"?TEXT(12381,"a"):TEXT(12382,"a")
 		for_story =@ state=="start_snapping"?"wildlife":null
 		photo_dir =@ state=="start_snapping"?DIR_BACK:this
 
@@ -157,7 +157,7 @@ DEFINE_ROOM("QuickiePal", {
 	// --------------------------------------------------------------------------------------------
 	mailBox = DEFINE_OBJECT({
 		name = TEXT(11236,"mail drop")
-		article = TEXT(0,"a")
+		article = TEXT(12383,"a")
 		accepts_mail = YES
 
 		VERB(lookat) {
@@ -170,7 +170,7 @@ DEFINE_ROOM("QuickiePal", {
 	// // --------------------------------------------------------------------------------------------
 	// tShirt = DEFINE_OBJECT({
 	// 	name = TEXT(11237,"T-shirt")
-	// 	article = TEXT(0,"a")
+	// 	article = TEXT(12384,"a")
 
 	// 	VERB(lookat) {
 	// 		sayLine(SAY(11220,"It's a souvenir Thimbleweed Park T-shirt!"))
@@ -180,7 +180,7 @@ DEFINE_ROOM("QuickiePal", {
 	// --------------------------------------------------------------------------------------------
 	quickiPalTextBottleRedeem = DEFINE_OBJECT({
 		name = TEXT(11238,"sign")
-		article = TEXT(0,"a")
+		article = TEXT(12385,"a")
 		default_verb = "verb_read"
 
 		VERB(read) {
@@ -202,7 +202,7 @@ DEFINE_ROOM("QuickiePal", {
 	// // --------------------------------------------------------------------------------------------
 	// rat = DEFINE_OBJECT({
 	// 	name = TEXT(11241,"rat")
-	// 	article = TEXT(0,"a")
+	// 	article = TEXT(12386,"a")
 
 	// 	VERB(lookat) {
 	// 		sayLine(SAY(11225,"It's Ratastic!"))
@@ -214,7 +214,7 @@ DEFINE_ROOM("QuickiePal", {
 	ransomeCandy = {}
 	ransomeCandyDisplay = DEFINE_OBJECT({
 		name = TEXT(11242,"Ransome candy dispensers")
-		photo_name = TEXT(0,"Ransome candy dispensers")
+		photo_name = TEXT(12387,"Ransome candy dispensers")
 		taken_one = NO
 		looked_at = NO
 		bad_story = [[ "pillow_bears", SAY(11226,"Definitely not a new toy craze. I had one when I was a kid.")],

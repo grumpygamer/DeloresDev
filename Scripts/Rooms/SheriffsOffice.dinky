@@ -345,7 +345,7 @@ DEFINE_ROOM("SheriffsOffice", {
 	// --------------------------------------------------------------------------------------------
 	cityHallDoor = DEFINE_OBJECT({
 		name = TEXT(11640,"door")
-		article = TEXT(0,"a")
+		article = TEXT(12428,"a")
 		door_verbs = YES
 		verb_use_text = TEXT(11641,"Leave")
 		verb_use_desc = TEXT(11642,"Leave the Sheriff's Office")
@@ -355,7 +355,7 @@ DEFINE_ROOM("SheriffsOffice", {
 	// --------------------------------------------------------------------------------------------
 	poster1 = DEFINE_OBJECT({
 		name = TEXT(11643,"poster")
-		article = TEXT(0,"a")
+		article = TEXT(12429,"a")
 
 		VERB(read) {
 			sayLine(SAY(11621,"It's a wanted poster."))
@@ -365,7 +365,7 @@ DEFINE_ROOM("SheriffsOffice", {
 	// --------------------------------------------------------------------------------------------
 	poster2 = DEFINE_OBJECT({
 		name = TEXT(11644,"poster")
-		article = TEXT(0,"a")
+		article = TEXT(12430,"a")
 
 		VERB(read) {
 			sayLine(SAY(11622,"I think that one came in the box."))
@@ -375,7 +375,7 @@ DEFINE_ROOM("SheriffsOffice", {
 	// --------------------------------------------------------------------------------------------
 	poster3 = DEFINE_OBJECT({
 		name = TEXT(11645,"poster")
-		article = TEXT(0,"a")
+		article = TEXT(12431,"a")
 
 		VERB(read) {
 			sayLine(SAY(11623,"Wanted: One wanted poster. No reward."))
@@ -385,7 +385,7 @@ DEFINE_ROOM("SheriffsOffice", {
 	// --------------------------------------------------------------------------------------------
 	phone = DEFINE_OBJECT({
 		name = TEXT(11646,"phone")
-		article = TEXT(0,"a")
+		article = TEXT(12432,"a")
 		default_verb = "verb_dial"
 		for_story = "history_of_phone"
 		sheriff_scolded = NO
@@ -411,7 +411,7 @@ DEFINE_ROOM("SheriffsOffice", {
 	// --------------------------------------------------------------------------------------------
 	cabinet1 = DEFINE_OBJECT({
 		name = TEXT(11647,"cabinet")
-		article = TEXT(0,"a")
+		article = TEXT(12433,"a")
 
 		VERB(lookat) {
 			sayLine(SAY(11628,"It's a cabinet!"))
@@ -421,7 +421,7 @@ DEFINE_ROOM("SheriffsOffice", {
 	// --------------------------------------------------------------------------------------------
 	cabinet2 = DEFINE_OBJECT({
 		name = TEXT(11648,"cabinet")
-		article = TEXT(0,"a")
+		article = TEXT(12434,"a")
 
 		VERB(lookat) {
 			sayLine(SAY(11629,"It's a cabinet!"))
@@ -430,41 +430,41 @@ DEFINE_ROOM("SheriffsOffice", {
 
 	// --------------------------------------------------------------------------------------------
 	cabinet1D1 = DEFINE_OBJECT({
-		name = TEXT(0,"drawer")
-		article = TEXT(0,"a")
+		name = TEXT(12435,"drawer")
+		article = TEXT(12436,"a")
 		reach = REACH_HIGH
 		photo_reach = REACH_HIGH
 		function init() { addPoliceDrawerVerbs(this) }
 	})
 	cabinet1D2 = DEFINE_OBJECT({
-		name = TEXT(0,"drawer")
-		article = TEXT(0,"a")
+		name = TEXT(12437,"drawer")
+		article = TEXT(12438,"a")
 		reach = REACH_MED
 		function init() { addPoliceDrawerVerbs(this) }
 	})
 	cabinet1D3 = DEFINE_OBJECT({
-		name = TEXT(0,"drawer")
-		article = TEXT(0,"a")
+		name = TEXT(12439,"drawer")
+		article = TEXT(12440,"a")
 		reach = REACH_LOW
 		photo_reach = REACH_LOW
 		function init() { addPoliceDrawerVerbs(this) }
 	})
 	cabinet2D1 = DEFINE_OBJECT({
-		name = TEXT(0,"drawer")
-		article = TEXT(0,"a")
+		name = TEXT(12441,"drawer")
+		article = TEXT(12442,"a")
 		reach = REACH_HIGH
 		photo_reach = REACH_HIGH
 		function init() { addPoliceDrawerVerbs(this) }
 	})
 	cabinet2D2 = DEFINE_OBJECT({
-		name = TEXT(0,"drawer")
-		article = TEXT(0,"a")
+		name = TEXT(12443,"drawer")
+		article = TEXT(12444,"a")
 		reach = REACH_MED
 		function init() { addPoliceDrawerVerbs(this) }
 	})
 	cabinet2D3 = DEFINE_OBJECT({
-		name = TEXT(0,"drawer")
-		article = TEXT(0,"a")
+		name = TEXT(12445,"drawer")
+		article = TEXT(12446,"a")
 		reach = REACH_LOW
 		photo_reach = REACH_LOW
 		function init() { addPoliceDrawerVerbs(this) }
@@ -474,7 +474,7 @@ DEFINE_ROOM("SheriffsOffice", {
 	// --------------------------------------------------------------------------------------------
 	jailKey = DEFINE_OBJECT({
 		name = TEXT(11649,"key")
-		article = TEXT(0,"a")
+		article = TEXT(12447,"a")
 		reach = REACH_HIGH
 		photo_reach = REACH_HIGH
 		default_verb = "verb_take"
@@ -501,7 +501,7 @@ DEFINE_ROOM("SheriffsOffice", {
 	// --------------------------------------------------------------------------------------------
 	radio = DEFINE_OBJECT({
 		name = TEXT(11650,"radio")
-		article = TEXT(0,"a")
+		article = TEXT(12448,"a")
 		state = "off"
 		on_off_verbs = YES
 

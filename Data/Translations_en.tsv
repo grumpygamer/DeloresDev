@@ -1,6 +1,6 @@
 id	text	en	loc
-10000	English	English
-10001	Default	Default
+10000	English	English	
+10001	Default	Default	
 11000	I think I'm done with the assignment.	I think I'm done with the assignment.	DefineActors.dinky
 11001	Want to take a look at my work so far?	Want to take a look at my work so far?	DefineActors.dinky
 11002	The last time the Sheriff did anything dangerous was looking in the mirror.	The last time the Sheriff did anything dangerous was looking in the mirror.	DefineActors.dinky
@@ -1363,3 +1363,110 @@ id	text	en	loc
 12365	Dave and the fireballs	Dave and the fireballs	Diner.dinky
 12366	a newspaper headline	a newspaper headline	Nickel.dinky
 12367	He's definitely not an ex-president.	He's definitely not an ex-president.	CityHall.dinky
+12368	a	a	Nickel.dinky
+12369	a	a	Nickel.dinky
+12370	a	a	Nickel.dinky
+12371	a	a	Nickel.dinky
+12372	a	a	MainStreet.dinky
+12373	a	a	MainStreet.dinky
+12374	a	a	MainStreet.dinky
+12375	a	a	MainStreet.dinky
+12376	a	a	MainStreet.dinky
+12377	a	a	MainStreet.dinky
+12378	a	a	MainStreet.dinky
+12379	snapping plant	snapping plant	QuickiePal.dinky
+12380	plant	plant	QuickiePal.dinky
+12381	a	a	QuickiePal.dinky
+12382	a	a	QuickiePal.dinky
+12383	a	a	QuickiePal.dinky
+12384	a	a	QuickiePal.dinky
+12385	a	a	QuickiePal.dinky
+12386	a	a	QuickiePal.dinky
+12387	Ransome candy dispensers	Ransome candy dispensers	QuickiePal.dinky
+12388	a	a	PostOffice.dinky
+12389	a	a	PostOffice.dinky
+12390	a	a	PostOffice.dinky
+12391	a	a	PostOffice.dinky
+12392	a	a	PostOffice.dinky
+12393	a	a	CityHall.dinky
+12394	a	a	CityHall.dinky
+12395	a	a	CityHall.dinky
+12396	a	a	CityHall.dinky
+12397	a	a	CityHall.dinky
+12398	a	a	Alleyway.dinky
+12399	a	a	Alleyway.dinky
+12400	a	a	Alleyway.dinky
+12401	a	a	Alleyway.dinky
+12402	a	a	Alleyway.dinky
+12403	a	a	Alleyway.dinky
+12404	a	a	AStreet.dinky
+12405	a	a	AStreet.dinky
+12406	a	a	AStreet.dinky
+12407	a	a	AStreet.dinky
+12408	a	a	BookStore.dinky
+12409	a	a	BookStore.dinky
+12410	a	a	BookStore.dinky
+12411	a	a	BookStore.dinky
+12412	poem	poem	BookStore.dinky
+12413	note	note	BookStore.dinky
+12414	a	a	BookStore.dinky
+12415	a	a	BookStore.dinky
+12416	a	a	Bathroom.dinky
+12417	a	a	Bathroom.dinky
+12418	a	a	Bathroom.dinky
+12419	a	a	Bathroom.dinky
+12420	a	a	Bathroom.dinky
+12421	a	a	Bathroom.dinky
+12422	a	a	Bathroom.dinky
+12423	a	a	Diner.dinky
+12424	a	a	Diner.dinky
+12425	a	a	Diner.dinky
+12426	a	a	Diner.dinky
+12427	a	a	Diner.dinky
+12428	a	a	SheriffsOffice.dinky
+12429	a	a	SheriffsOffice.dinky
+12430	a	a	SheriffsOffice.dinky
+12431	a	a	SheriffsOffice.dinky
+12432	a	a	SheriffsOffice.dinky
+12433	a	a	SheriffsOffice.dinky
+12434	a	a	SheriffsOffice.dinky
+12435	drawer	drawer	SheriffsOffice.dinky
+12436	a	a	SheriffsOffice.dinky
+12437	drawer	drawer	SheriffsOffice.dinky
+12438	a	a	SheriffsOffice.dinky
+12439	drawer	drawer	SheriffsOffice.dinky
+12440	a	a	SheriffsOffice.dinky
+12441	drawer	drawer	SheriffsOffice.dinky
+12442	a	a	SheriffsOffice.dinky
+12443	drawer	drawer	SheriffsOffice.dinky
+12444	a	a	SheriffsOffice.dinky
+12445	drawer	drawer	SheriffsOffice.dinky
+12446	a	a	SheriffsOffice.dinky
+12447	a	a	SheriffsOffice.dinky
+12448	a	a	SheriffsOffice.dinky
+12449	a	a	Bank.dinky
+12450	a	a	Bank.dinky
+12451	a	a	Bank.dinky
+12452	a	a	Bank.dinky
+12453	a	a	Bank.dinky
+12454	a	a	Bank.dinky
+12455	a	a	Vista.dinky
+12456	a	a	CoronersOffice.dinky
+12457	a	a	CoronersOffice.dinky
+12458	a	a	CoronersOffice.dinky
+12459	drawer	drawer	CoronersOffice.dinky
+12460	a	a	CoronersOffice.dinky
+12461	drawer	drawer	CoronersOffice.dinky
+12462	a	a	CoronersOffice.dinky
+12463	drawer	drawer	CoronersOffice.dinky
+12464	a	a	CoronersOffice.dinky
+12465	a	a	Inventory.dinky
+12466	an	an	Inventory.dinky
+12467	an	an	Inventory.dinky
+12468	a	a	Inventory.dinky
+12469	a	a	Inventory.dinky
+12470	a	a	Inventory.dinky
+12471	a	a	Inventory.dinky
+12472	a	a	Inventory.dinky
+12473	a	a	Inventory.dinky
+12474	a	a	Inventory.dinky
