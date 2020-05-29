@@ -1,7 +1,8 @@
 	// --------------------------------------------------------------------------------------------
 	__OBJECTNAME__ = DEFINE_OBJECT({
 		name = NAME(0,"__OBJECTNAME__")
-
+		article = TEXT(0,"a")
+		
 		VERB(lookat) {
 			sayLine("It's a __OBJECTNAME__!")
 		}

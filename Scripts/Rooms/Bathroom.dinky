@@ -112,6 +112,7 @@ DEFINE_ROOM("Bathroom", {
 	light = {}
 	lightswitch = DEFINE_OBJECT({
 		name = TEXT(11528,"light switch")
+		article = TEXT(0,"a")
 		default_verb = "verb_flip"
 
 		VERB(flip) {
@@ -131,6 +132,7 @@ DEFINE_ROOM("Bathroom", {
 	// --------------------------------------------------------------------------------------------
 	toilet = DEFINE_OBJECT({
 		name = @lights_on?TEXT(11529,"toilet"):TEXT(11530,"something")
+		article = TEXT(0,"a")
 		for_story = "disgusting"
 		photo_reach = REACH_LOW
 		inUse = NO
@@ -152,6 +154,7 @@ DEFINE_ROOM("Bathroom", {
 	// --------------------------------------------------------------------------------------------
 	toiletHandle = DEFINE_OBJECT({
 		name = @lights_on?TEXT(11531,"toilet handle"):TEXT(11532,"something")
+		article = TEXT(0,"a")
 		for_story = "disgusting"
 		photo_reach = REACH_LOW
 		default_verb = "verb_flush"
@@ -173,6 +176,7 @@ DEFINE_ROOM("Bathroom", {
 	// --------------------------------------------------------------------------------------------
 	sink = DEFINE_OBJECT({
 		name = @lights_on?TEXT(11533,"sink"):TEXT(11534,"something")
+		article = TEXT(0,"a")
 		for_story = "disgusting"
 		isWaterSource = NO
 		isEmptyLiquid = YES
@@ -238,6 +242,7 @@ DEFINE_ROOM("Bathroom", {
 // --------------------------------------------------------------------------------------------
 	sinkFaucet = DEFINE_OBJECT({
 		name = @lights_on?TEXT(11535,"faucet"):TEXT(11536,"something")
+		article = TEXT(0,"a")
 		on_off_verbs = YES
 		for_story = "disgusting"
 		isWaterSource = NO
@@ -391,6 +396,7 @@ DEFINE_ROOM("Bathroom", {
 	// --------------------------------------------------------------------------------------------
 	screwdriver = DEFINE_OBJECT({
 		name =@ lights_on?TEXT(11540,"screwdriver"):TEXT(11541,"something")
+		article = TEXT(0,"a")
 		reach = REACH_LOW
 		photo_reach = REACH_LOW
 
@@ -446,6 +452,7 @@ DEFINE_ROOM("Bathroom", {
 	// --------------------------------------------------------------------------------------------
 	trashCan = DEFINE_OBJECT({
 		name =@ lights_on?TEXT(11545,"trash can"):TEXT(11546,"something")
+		article = TEXT(0,"a")
 		reach = REACH_MED
 		for_story = "trash"
 		photo_reach = REACH_LOW

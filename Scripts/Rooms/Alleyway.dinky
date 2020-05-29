@@ -42,6 +42,7 @@ DEFINE_ROOM("Alleyway", {
 	// --------------------------------------------------------------------------------------------
 	RansomePoster = DEFINE_OBJECT({
 		name = TEXT(11346,"poster")
+		article = TEXT(0,"a")
 		for_story = "ransome"
 		photo_reach = REACH_HIGH
 
@@ -54,6 +55,7 @@ DEFINE_ROOM("Alleyway", {
 	// --------------------------------------------------------------------------------------------
 	coveredRansomePoster = DEFINE_OBJECT({
 		name = TEXT(11348,"poster edge")
+		article = TEXT(0,"a")
 		bad_story = [ "ransome", SAY(11319,"Kind of artsy, but I don't think Natalie will want this one.") ]
 		// looked_at = NO
 
@@ -76,6 +78,7 @@ DEFINE_ROOM("Alleyway", {
 	// --------------------------------------------------------------------------------------------
 	trashCan = DEFINE_OBJECT({
 		name = TEXT(11351,"trash can")
+		article = TEXT(0,"a")
 		reach = REACH_NONE
 		looked_at <- NO
 		for_story = "trash"
@@ -100,6 +103,7 @@ DEFINE_ROOM("Alleyway", {
 	// --------------------------------------------------------------------------------------------
 	box = DEFINE_OBJECT({
 		name = TEXT(11352,"box")
+		article = TEXT(0,"a")
 		photo_reach = REACH_LOW
 		bad_story = [ "cats", SAY(11329,"Nothing funny about a cat in a box. Or no cat in a box.") ]
 
@@ -138,6 +142,7 @@ DEFINE_ROOM("Alleyway", {
 	// --------------------------------------------------------------------------------------------
 	thimbleconPoster = DEFINE_OBJECT({
 		name = TEXT(11356,"poster")
+		article = TEXT(0,"a")
 		for_story = "thimblecon"
 		reach = REACH_HIGH
 		stuck = YES
@@ -186,6 +191,7 @@ DEFINE_ROOM("Alleyway", {
 	// --------------------------------------------------------------------------------------------
 	valve = DEFINE_OBJECT({
 		name = TEXT(11359,"valve")
+		article = TEXT(0,"a")
 		moved = NO
 		position = "normal"
 		delores_tightened = NO

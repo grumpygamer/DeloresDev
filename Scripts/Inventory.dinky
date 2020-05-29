@@ -261,6 +261,7 @@ DEFINE_ROOM("Inventory", {
 	photo = DEFINE_INVENTORY("photo", {
 		icon = "photo1"
 		name = TEXT(11982,"photo")
+		article = TEXT(0,"a")
 		is_photo = YES
 		photo_of = null
 
@@ -309,6 +310,7 @@ DEFINE_ROOM("Inventory", {
 	letter = DEFINE_INVENTORY("letter", {
 		icon = @ has_stamps ? "letter_with_stamps" : "letter_no_stamps"
 		name = @ has_stamps ? TEXT(11984,"electricity bill with stamps") : TEXT(11985,"electricity bill")
+		article = @ has_stamps ? TEXT(0,"an") : TEXT(0,"an")
 		has_stamps = NO
 
 		VERB(lookat) {
@@ -356,6 +358,7 @@ DEFINE_ROOM("Inventory", {
 	bottle = DEFINE_INVENTORY("bottle", {
 		icon = "bottle"
 		name = TEXT(11987,"bottle")
+		article = TEXT(0,"a")
 		for_story = "trash"
 
 		VERB(lookat) {
@@ -386,6 +389,7 @@ DEFINE_ROOM("Inventory", {
 	nickel = DEFINE_INVENTORY("nickel", {
 		icon = "nickel"
 		name = TEXT(11988,"nickel")
+		article = TEXT(0,"a")
 		for_story = "jefferson"
 
 		VERB(lookat) {
@@ -429,6 +433,7 @@ DEFINE_ROOM("Inventory", {
 	jailKey = DEFINE_INVENTORY("jailKey", {
 		icon = "jail_key"
 		name = TEXT(11991,"key")
+		article = TEXT(0,"a")
 
 		VERB(lookat) {
 			sayLine(SAY(11937,"It's a large key."))
@@ -439,6 +444,7 @@ DEFINE_ROOM("Inventory", {
 	screwdriver = DEFINE_INVENTORY("screwdriver", {
 		icon = "screwdriver"
 		name = TEXT(11992,"screwdriver")
+		article = TEXT(0,"a")
 		shock_count = 0
 
 		VERB(lookat) {
@@ -486,6 +492,7 @@ DEFINE_ROOM("Inventory", {
 	strangeDevice = DEFINE_INVENTORY("strangeDevice", {
 		icon = "strange_device"
 		name = TEXT(11993,"“Philipp's Dangerous Dövice”")
+		article = TEXT(0,"a")
 		has_power = NO
 		bad_story = [ "mansion", SAY(11945,"The demolition photo needs to be way more dramatic.") ]
 
@@ -600,6 +607,7 @@ DEFINE_ROOM("Inventory", {
 	thimbleconPoster = DEFINE_INVENTORY("thimbleconPoster", {
 		icon = "thimblecon_poster"
 		name = TEXT(11994,"ThimbleCon poster")
+		article = TEXT(0,"a")
 		for_story = "thimblecon"
 
 		VERB(lookat) {
@@ -611,6 +619,7 @@ DEFINE_ROOM("Inventory", {
 	ransomeCandy = DEFINE_INVENTORY("ransomeCandy", {
 		icon = "ransome_dispenser"
 		name = TEXT(11995,"candy dispenser")
+		article = TEXT(0,"a")
 		bad_story = [[ "pillow_bears", SAY(11962,"Definitely not a new toy craze. I had one when I was a kid.") ],
 								 [ "ransome", SAY(11963,"It's a celebrity's head, but kind of demeaning being a candy dispenser. I need a better photo.") ] ]
 		eaten = NO

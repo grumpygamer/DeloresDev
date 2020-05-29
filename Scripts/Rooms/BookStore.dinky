@@ -265,6 +265,7 @@ DEFINE_ROOM("BookStore", {
 	// --------------------------------------------------------------------------------------------
 	lowerLadder = DEFINE_OBJECT({
 		name = TEXT(11485,"ladder")
+		article = TEXT(0,"a")
 		position = 0
 		offset = 36
 		default_verb = "verb_climb"
@@ -287,6 +288,7 @@ DEFINE_ROOM("BookStore", {
  // --------------------------------------------------------------------------------------------
 	upperLadder = DEFINE_OBJECT({
 		name = TEXT(11486,"ladder")
+		article = TEXT(0,"a")
 		position = 0
 		offset = 62
 		default_verb = "verb_climb"
@@ -310,6 +312,7 @@ DEFINE_ROOM("BookStore", {
 	// --------------------------------------------------------------------------------------------
 	mummy = DEFINE_OBJECT({
 		name = TEXT(11487,"mummy")
+		article = TEXT(0,"a")
 		for_story = "videogames"
 		photo_reach = REACH_LOW
 
@@ -332,6 +335,7 @@ DEFINE_ROOM("BookStore", {
 	dollEyes = {}
 	doll = DEFINE_OBJECT({
 		name = TEXT(11488,"doll")
+		article = TEXT(0,"a")
 
 		VERB(lookat) {
 			sayLine(SAY(11469,"Creepy."), ONCE(SAY(11470,"Not sure why anyone wants to play with dolls.")))
@@ -391,7 +395,8 @@ DEFINE_ROOM("BookStore", {
 
 	// --------------------------------------------------------------------------------------------
 	poem = DEFINE_OBJECT({
-		name =@ looked_at ? "poem":"note"
+		name =@ looked_at ? TEXT(0,"poem"):TEXT(0,"note")
+		article =@ looked_at ? TEXT(0,"a"):TEXT(0,"a")
 		for_story = "poetry"
 
 		looked_at = NO

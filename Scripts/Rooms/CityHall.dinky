@@ -32,6 +32,7 @@ DEFINE_ROOM("CityHall", {
 	// --------------------------------------------------------------------------------------------
 	mainStreetDoor = DEFINE_OBJECT({
 		name = TEXT(11288,"door")
+		article = TEXT(0,"a")
 		door_verbs = YES
 		verb_use_text = TEXT(11289,"Leave")
 		verb_use_desc = TEXT(11290,"Leave City Hall")
@@ -41,6 +42,7 @@ DEFINE_ROOM("CityHall", {
 	// --------------------------------------------------------------------------------------------
 	waterFountain = DEFINE_OBJECT({
 		name = TEXT(11291,"drinking fountain")
+		article = TEXT(0,"a")
 
 		VERB(lookat) {
 			sayLine(SAY(11281,"It's been shut off."), ONCE(SAY(11282,"Even if it was working, I wouldn't drink from it.")))
@@ -58,6 +60,7 @@ DEFINE_ROOM("CityHall", {
 	// --------------------------------------------------------------------------------------------
 	seal = DEFINE_OBJECT({
 		name = TEXT(11292,"seal")
+		article = TEXT(0,"a")
 		for_story = "thimbleweed_county"
 
 		VERB(lookat) {
@@ -88,6 +91,7 @@ DEFINE_ROOM("CityHall", {
 	// --------------------------------------------------------------------------------------------
 	pictureLeft = DEFINE_OBJECT({
 		name = TEXT(11301,"painting")
+		article = TEXT(0,"a")
 		bad_story = [ "jefferson", SAY(12367,"He's definitely not an ex-president.") ]
 
 		VERB(lookat) {
@@ -98,6 +102,7 @@ DEFINE_ROOM("CityHall", {
 	// --------------------------------------------------------------------------------------------
 	pictureRight = DEFINE_OBJECT({
 		name = TEXT(11302,"painting")
+		article = TEXT(0,"a")
 		bad_story = [ "jefferson", SAY(11286,"I don't know who he is, but he doesn't look very presidential.") ]
 
 		VERB(lookat) {
