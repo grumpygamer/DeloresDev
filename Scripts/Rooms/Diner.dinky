@@ -40,7 +40,7 @@ DEFINE_ROOM("Diner", {
 				objectState(obj, "gone")
 		}
 		dave.for_story = ""
-		dave.photo_name = "Dave"
+		dave.photo_name = TEXT(0,"Dave")
 //		dave.bad_story = [ "ransome", "I think Natalie will want someone much more famous, only pretentious food critics think he's a celebrity."]
 		objectTouchable(Diner.fireballsObject, NO)
 		actorHotspot(dave, point(-15,20), point(15,63))	// normal version
@@ -75,13 +75,13 @@ DEFINE_ROOM("Diner", {
 					breakwhileanimating(fireball)
 				}
 				dave.for_story = ""
-				dave.photo_name = "Dave"
+				dave.photo_name = TEXT(0,"Dave")
 				objectTouchable(Diner.fireball, NO)
 				refreshUI(0)
 			}
 		} else {
 			dave.for_story = "danger_job"
-			dave.photo_name = "Dave and the fireballs"
+			dave.photo_name = TEXT(0,"Dave and the fireballs")
 //			dave.bad_story = [ "ransome", "Impressive! But I think Natalie will want someone much more famous, only pretentious food critics think he's a celebrity."]
 			objectTouchable(fireballsObject, YES)
 			actorHotspot(dave, point(-10,38), point(10,63))	// behind fire version
