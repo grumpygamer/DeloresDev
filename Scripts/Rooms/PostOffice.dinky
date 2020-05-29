@@ -71,6 +71,7 @@ DEFINE_ROOM("PostOffice", {
 
 	scale = DEFINE_OBJECT({
 		name = TEXT(11270,"scale")
+		article = TEXT(0,"a")
 
 		VERB(lookat) {
 			sayLine(SAY(11246,"It's for weighing mail."))
@@ -79,6 +80,7 @@ DEFINE_ROOM("PostOffice", {
 
 	mailDrop = DEFINE_OBJECT({
 		name = TEXT(11271,"mail drop")
+		article = TEXT(0,"a")
 		accepts_mail = YES
 
 		VERB(lookat) {
@@ -92,6 +94,7 @@ DEFINE_ROOM("PostOffice", {
 
 	calendar = DEFINE_OBJECT({
 		name = TEXT(11272,"calendar")
+		article = TEXT(0,"a")
 		for_story = "patriotic"
 		bad_story = ["jefferson", SAY(11249,"An actual image of Jefferson would be much better.")]
 		VERB(lookat) {
@@ -132,6 +135,7 @@ DEFINE_ROOM("PostOffice", {
 
 	brokenMailbox = DEFINE_OBJECT({
 		name = @broken ? TEXT(11277,"destroyed mailbox") : TEXT(11278,"scuffed up mailbox")
+		article = @broken ? TEXT(0,"a") : TEXT(0,"a")
 		pried_count = 0
 		broken = NO
 		for_story = @broken ? "vandalism" : null

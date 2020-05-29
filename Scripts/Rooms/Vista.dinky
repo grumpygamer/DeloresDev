@@ -53,6 +53,7 @@ DEFINE_ROOM("Vista", {
 	// --------------------------------------------------------------------------------------------
 	trafficCone = DEFINE_OBJECT({
 		name = TEXT(11698,"traffic cone")
+		article = TEXT(0,"a")
 		for_story = "road_safety"
 		photo_reach = REACH_LOW
 

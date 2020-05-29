@@ -110,6 +110,7 @@ DEFINE_ROOM("MainStreet", {
 		}
 
 		name = TEXT(11165,"fire hydrant")
+		article = TEXT(0,"a")
 		smell_count = 0
 		isWaterSource = YES
 		dripping_sid = NO
@@ -321,6 +322,7 @@ DEFINE_ROOM("MainStreet", {
 	// --------------------------------------------------------------------------------------------
 	willieWatchSign = DEFINE_OBJECT({
 		name = TEXT(11181,"watch repair sign")
+		article = TEXT(0,"a")
 		for_story = "tiny_clock"
 
 		VERB(read) {
@@ -334,6 +336,7 @@ DEFINE_ROOM("MainStreet", {
 	willieNewShop = {}
 	watchRepairDoor = DEFINE_OBJECT({
 		name = TEXT(11182,"door")
+		article = TEXT(0,"a")
 
 		VERB(lookat) {
 			sayLine(SAY(11153,"Looks like Willie's Watch & Violin Repairs is closed for the night."))
@@ -418,6 +421,7 @@ DEFINE_ROOM("MainStreet", {
 	// --------------------------------------------------------------------------------------------
 	pillowBearsSign = DEFINE_OBJECT({
 		name = TEXT(11189,"PillowBear™ sign")
+		article = TEXT(0,"a")
 		for_story = "pillow_bears"
 
 		VERB(lookat) {
@@ -451,6 +455,7 @@ DEFINE_ROOM("MainStreet", {
 	// --------------------------------------------------------------------------------------------
 	trafficCone1 = DEFINE_OBJECT({
 		name = TEXT(11195,"traffic cone")
+		article = TEXT(0,"a")
 		seen = NO
 		for_story = "road_safety"
 		photo_reach = REACH_LOW
@@ -463,6 +468,7 @@ DEFINE_ROOM("MainStreet", {
 	// --------------------------------------------------------------------------------------------
 	trafficCone2 = DEFINE_OBJECT({
 		name = TEXT(11196,"traffic cone")
+		article = TEXT(0,"a")
 		for_story = "road_safety"
 		photo_reach = REACH_LOW
 
@@ -474,6 +480,7 @@ DEFINE_ROOM("MainStreet", {
 	// --------------------------------------------------------------------------------------------
 	trafficCone3 = DEFINE_OBJECT({
 		name = TEXT(11197,"traffic cone")
+		article = TEXT(0,"a")
 		for_story = "road_safety"
 		photo_reach = REACH_LOW
 

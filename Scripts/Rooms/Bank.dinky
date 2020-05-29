@@ -68,6 +68,7 @@ DEFINE_ROOM("Bank", {
 	// --------------------------------------------------------------------------------------------
 	wallClock = DEFINE_OBJECT({
 		name = TEXT(11668,"clock")
+		article = TEXT(0,"a")
 		photo_reach = REACH_HIGH
 		bad_story = [ "tiny_clock", TEXT(11669,"I don't think that clock is tiny enough.") ]
 
@@ -81,6 +82,7 @@ DEFINE_ROOM("Bank", {
 	// --------------------------------------------------------------------------------------------
 	bankPainting = DEFINE_OBJECT({
 		name = TEXT(11670,"painting")
+		article = TEXT(0,"a")
 		photo_reach = REACH_HIGH
 
 		VERB(lookat) {
@@ -91,6 +93,7 @@ DEFINE_ROOM("Bank", {
 	// --------------------------------------------------------------------------------------------
 	bankSign = DEFINE_OBJECT({
 		name = TEXT(11671,"sign")
+		article = TEXT(0,"a")
 		photo_reach = REACH_HIGH
 
 		VERB(lookat) {
@@ -129,6 +132,7 @@ DEFINE_ROOM("Bank", {
 	// --------------------------------------------------------------------------------------------
 	strangeDevice = DEFINE_OBJECT({
 		name = TEXT(11678,"“Philipp's Dangerous Dövice”")
+		article = TEXT(0,"a")
 		looked_at = NO
 		bad_story = [ "mansion", TEXT(11679,"The demolition photo needs to be way more dramatic.") ]
 
@@ -151,6 +155,7 @@ DEFINE_ROOM("Bank", {
 	// --------------------------------------------------------------------------------------------
 	phone = DEFINE_OBJECT({
 		name = TEXT(11680,"bank phone")
+		article = TEXT(0,"a")
 		for_story = "history_of_phone"
 		default_verb = "verb_dial"
 
@@ -167,6 +172,7 @@ DEFINE_ROOM("Bank", {
 	trashcan = DEFINE_OBJECT({
 		for_story = "trash"
 		name = TEXT(11681,"trash can")
+		article = TEXT(0,"a")
 		is_trash = YES
 		bad_story = [ "disgusting", TEXT(11682,"It's a bit scary, but not really disgusting.") ]
 
