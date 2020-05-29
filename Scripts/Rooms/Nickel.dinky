@@ -106,7 +106,7 @@ DEFINE_ROOM("Nickel", {
 		local note = _newspaper_headlines[headline]
 		obj.name <- strupper(note[0])
 		obj.note <- note
-		obj.photo_name <- "a newspaper headline"
+		obj.photo_name <- TEXT(12366,"a newspaper headline")
 		obj.photo_reach <- REACH_LOW
 		obj.verb_read <- function(use_with=null)
 		{
