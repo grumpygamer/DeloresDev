@@ -88,7 +88,7 @@ DEFINE_ROOM("CityHall", {
 	// --------------------------------------------------------------------------------------------
 	pictureLeft = DEFINE_OBJECT({
 		name = TEXT(11301,"painting")
-		bad_story = [ "jefferson", "He's definitely not an ex-president." ]
+		bad_story = [ "jefferson", SAY(12367,"He's definitely not an ex-president.") ]
 
 		VERB(lookat) {
 			sayLine(SAY(11285,"That's some old dude who I'm pretty sure is dead. "))
