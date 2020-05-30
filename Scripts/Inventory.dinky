@@ -672,7 +672,7 @@ DEFINE_ROOM("Inventory", {
 			if (Note.isActiveStory("cleaning_up") && !Note.isStoryPhotographed("cleaning_up")) {
 				if (this.dust_count < SETTING(specks_of_dust_complete)) {
 					sayLine(SAY(11969,"I don't think this is enough dust for Natalie."),
-					        format(TR(SAY(11970,"^She probably needs around %d specks of dust."), SETTING(specks_of_dust_complete))))
+					        format(TR(SAY(11970,"^She probably needs around %d specks of dust.")), SETTING(specks_of_dust_complete)))
 				} else {
 					sayLine(randomfrom(SAY(11971,"That's a good shot!"),
 					                   SAY(11972,"Natalie will love this one!"),
