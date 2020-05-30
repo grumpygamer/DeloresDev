@@ -719,9 +719,9 @@ id	text	en	loc
 11715	FORTRAN⏎	FORTRAN⏎	Book.dinky
 11716	Un'introduzione⏎	An introduction⏎	Book.dinky
 11717	⏎	⏎	Book.dinky
-11718	Oggigiorno molti programmatori considerano FORTRAN un linguaggio obsoleto. Niente di più falso.⏎⏎	While many programmers today consider FORTRAN to be a dead programming language, nothing could be further from the truth.⏎⏎	Book.dinky
-11719	Gli autori sono certi che nel 2020 (e oltre) FORTRAN sarà l'avanguardia tra i linguaggi di programmazione.⏎⏎	The authors have no doubt that well into the 2020's (and beyond) FORTRAN will be at the forefront of all computer languages.⏎⏎	Book.dinky
-11720	Questo libro si pone come riferimento per il programmatore moderno alla ricerca delle tecnologie più avanzate nel futuro della programmazione.	This book is to serve as a tool for the modern programmer looking for an edge in the future of computer programing.	Book.dinky
+11718	Molti programmatori credono che FORTRAN sia un linguaggio obsoleto. Niente di più falso!⏎	While many programmers today consider FORTRAN to be a dead programming language, nothing could be further from the truth.⏎⏎	Book.dinky
+11719	Siamo certi che nel 2020 (e oltre) FORTRAN sarà l'avanguardia tra i linguaggi di programmazione.⏎⏎	The authors have no doubt that well into the 2020's (and beyond) FORTRAN will be at the forefront of all computer languages.⏎⏎	Book.dinky
+11720	Questo libro si pone come riferimento per lo sviluppatore moderno alla ricerca delle tecnologie più avanzate nel futuro della programmazione.	This book is to serve as a tool for the modern programmer looking for an edge in the future of computer programing.	Book.dinky
 11721	⏎program circle⏎	⏎program circle⏎	Book.dinky
 11722	real r, area⏎	real r, area⏎	Book.dinky
 11723	⏎	⏎	Book.dinky
@@ -798,7 +798,7 @@ id	text	en	loc
 11794	Un sacco di vecchie cartelle.	Lots of old files.	CoronersOffice.dinky
 11795	Una manciata di archivi disorganizzati.	Bunch of badly organized files.	CoronersOffice.dinky
 11796	È uno scheletro!	It's a skeleton!	CoronersOffice.dinky
-11797	Centro Masticoso Caramelloso.	Chewy Caramel Center.	CoronersOffice.dinky
+11797	Ripieno gommoso al caramello.	Chewy Caramel Center.	CoronersOffice.dinky
 11798	Ma va'? Non pensavo si potesse prendere una laurea da coroner per corrispondenza.	Odd? I didn't know you could mail order for coroner degrees.	CoronersOffice.dinky
 11799	porta	door	CoronersOffice.dinky
 11800	Esci	Leave	CoronersOffice.dinky
@@ -839,10 +839,10 @@ id	text	en	loc
 11835	Abbassa	Pull down	VerbHelpers.dinky
 11836	Spingi a destra	Push right	VerbHelpers.dinky
 11837	Spingi a sinistra	Push left	VerbHelpers.dinky
-11838	Accendi	Turn on	VerbHelpers.dinky
-11839	Spegni	Turn off	VerbHelpers.dinky
+11838	Apri	Turn on	VerbHelpers.dinky
+11839	Chiudi	Turn off	VerbHelpers.dinky
 11840	Sali	Climb	VerbHelpers.dinky
-11841	Fai girare	Spin	VerbHelpers.dinky
+11841	Fai ruotare	Spin	VerbHelpers.dinky
 11842	Ruota	Turn	VerbHelpers.dinky
 11843	Aziona	Flush	VerbHelpers.dinky
 11844	Annusa	Smell	VerbHelpers.dinky
@@ -870,7 +870,7 @@ id	text	en	loc
 11866	Gratta $NOUN1$ con $NOUN2$	Scrape $NOUN1$ with $NOUN2$	VerbHelpers.dinky
 11867	Getta $NOUN1$ dentro $NOUN2$	Toss $NOUN1$ in $NOUN2$	VerbHelpers.dinky
 11868	Ripara $NOUN1$ con $NOUN2$	Repair $NOUN1$ with $NOUN2$	VerbHelpers.dinky
-11869	Non riesco a raggiungerlo.	I can't reach that.	ActorHelpers.dinky
+11869	Non ci arrivo.	I can't reach that.	ActorHelpers.dinky
 11870	Non penso sia abbastanza polvere per Natalie.	I don't think this is enough dust for Natalie.	DustHelpers.dinky
 11871	C'è troppo buio per vedere.	It's too dark to see	DustHelpers.dinky
 11872	È un granello di polvere.	It's a speck of dust.	DustHelpers.dinky
