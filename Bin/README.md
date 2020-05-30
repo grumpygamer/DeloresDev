@@ -1,4 +1,4 @@
-# PSD Art Tools
+## PSD Art Tools
 
 `munge_psds.py` is the script the extracts `.png` images from `.psd` files based on the name of the layer/group.
 
