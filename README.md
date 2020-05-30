@@ -77,6 +77,9 @@ Animation control files can be found in `DeloresDev/Animation` and are `.json` f
 ## Translations
 The version of Delores avaliable in online stores does not include any translation.  This repo version has all the text stripped and wrapped and placed into `DeloresDev/Data/Translations_en.tsv`.  See the help doc on Translations or look at `DeloresDev/Scripts/Helpers/TranslationHelpers.dinky` for more information.
 
+If you're working on a translation you'd like released with the next update of Delores, visit the [Thimbleweed Park Forums
+](https://forums.thimbleweedpark.com/c/delores-engine) for more information and to connect with others doing translations.
+
 ## Wimpy
 The tool to add and position objects is called **Wimpy** and it can be download [here](https://thimbleweedpark.com/deloresdev)
 

@@ -331,13 +331,13 @@ function openOptions(save_state=YES) {
 
 		local t = null
 		local p = 1.0
-		if (v == 7) { t = "slowest"; p = 2.0 }
-		if (v == 6) { t = "slower"; p = 1.5 }
-		if (v == 5) { t = "slow"; p = 1.25 }
-		if (v == 4) { t = "normal"; p = 1.0 }
-		if (v == 3) { t = "fast"; p = 0.75 }
-		if (v == 2) { t = "faster"; p = 0.5 }
-		if (v == 1) { t = "fastest"; p = 0.25 }
+		if (v == 7) { t = TEXT(12475,"slowest"); p = 2.0 }
+		if (v == 6) { t = TEXT(12476,"slower"); p = 1.5 }
+		if (v == 5) { t = TEXT(12477,"slow"); p = 1.25 }
+		if (v == 4) { t = TEXT(12478,"normal"); p = 1.0 }
+		if (v == 3) { t = TEXT(12479,"fast"); p = 0.75 }
+		if (v == 2) { t = TEXT(12460,"faster"); p = 0.5 }
+		if (v == 1) { t = TEXT(12461,"fastest"); p = 0.25 }
 
 		gameprop("sayLineSpeed", p)
 		return format(TR(TEXT(12328,"Text speed: %s")), t)
