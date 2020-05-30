@@ -655,7 +655,7 @@ id	text	en	loc
 11651	porta della cella	jail door	SheriffsOffice.dinky
 11652	la porta della cella	the jail door	SheriffsOffice.dinky
 11653	sceriffo e coroner	Sheriff and Coroner	SheriffsOffice.dinky
-11654		the	SheriffsOffice.dinky
+11654	insieme	the	SheriffsOffice.dinky
 11655	Sono le cinque e qualcosina.	It's just after five o'clock.	Bank.dinky
 11656	Credo di aver già visto questo dipinto da qualche parte.	I think I've seen this painting somewhere before.	Bank.dinky
 11657	Notevole!	Impressive!	Bank.dinky
@@ -839,8 +839,8 @@ id	text	en	loc
 11835	Abbassa	Pull down	VerbHelpers.dinky
 11836	Spingi a destra	Push right	VerbHelpers.dinky
 11837	Spingi a sinistra	Push left	VerbHelpers.dinky
-11838	Apri	Turn on	VerbHelpers.dinky
-11839	Chiudi	Turn off	VerbHelpers.dinky
+11838	Attiva	Turn on	VerbHelpers.dinky
+11839	Disattiva	Turn off	VerbHelpers.dinky
 11840	Sali	Climb	VerbHelpers.dinky
 11841	Fai ruotare	Spin	VerbHelpers.dinky
 11842	Ruota	Turn	VerbHelpers.dinky
@@ -947,7 +947,7 @@ id	text	en	loc
 11949	Meno male che la batteria è scarica. Nella Mansion mansion ci sono cresciuta, ho bei ricordi lì.	Good thing its batteries are dead. I have fond memories of growing up in the Mansion mansion.	Inventory.dinky
 11950	Penso di aver fatto saltare in aria abbastanza cose per oggi.	I think I've blown up enough things for today.	Inventory.dinky
 11951	OK, o la va o la spacca. Lo aziono.	OK, here goes nothing. I'm going to activate it.	Inventory.dinky
-11952	Ecco che tutti i ricordi della mia infanzia nella Mansion Mansion se ne vanno in fumo.	That's a lot of growing up in the Mansion mansion memories up in smoke.	Inventory.dinky
+11952	Ecco che tutti i ricordi della mia infanzia nella Mansion mansion se ne vanno in fumo.	That's a lot of growing up in the Mansion mansion memories up in smoke.	Inventory.dinky
 11953	*sob*	*sob*	Inventory.dinky
 11954	Immagino sia un problema della banca, adesso.	I guess it's the bank's problem now.	Inventory.dinky
 11955	Hmmm.	Hmmm.	Inventory.dinky
@@ -1012,7 +1012,7 @@ id	text	en	loc
 12014	Devo scappare... ciao.	Got to run... bye.	Coroner.yack
 12015	Non direi.	Not really.	Coroner.yack
 12016	Non so bene perché ho ancora un lavoro.	I'm not sure why I still have a job.	Coroner.yack
-12017	Non capisco di chi stai parlando-a-uh!	I don't understand-a-who what you're talking about!	Coroner.yack
+12017	Non capisco di che stai parlando-a-uh!	I don't understand-a-who what you're talking about!	Coroner.yack
 12018	Hai bevuto formaldeide? Fidati, se la conosci la eviti-a-uh.	Have you been drinking formaldehyde? Trust me, just say-no-a-who.	Coroner.yack
 12019	Ehi, 'a-uh' è cosa mia!	Hey, the 'a-who' bit is mine!	Coroner.yack
 12020	Ha! Fregato!	Ha! Got ya!	Coroner.yack
