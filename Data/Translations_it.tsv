@@ -67,7 +67,7 @@ id	text	en	loc
 11063	Mimo applaude silenziosamente per Ransome...	Mime applauds silently for Ransome...	Nickel.dinky
 11064	Mimando che era il miglior show che avesse mai visto, il Mimo locale si mette in fila per il quarto show di Ransome di seguito.	While miming that it was the best show he'd ever seen, local Mime stands in line for 4th Ransome show in a row.	Nickel.dinky
 11065	Giardiniere locale ottiene posto alla Casa Bianca...	Local groundskeeper wins White House post...	Nickel.dinky
-11066	Il giardiniere locale Doug Braverman stato assunto alla Casa Bianca per scavare buche nel roseto.	Local groundskeeper Doug Braverman is hired by the White House to dig holes in the rose garden.	Nickel.dinky
+11066	Il giardiniere locale Doug Braverman è stato assunto alla Casa Bianca per scavare buche nel roseto.	Local groundskeeper Doug Braverman is hired by the White House to dig holes in the rose garden.	Nickel.dinky
 11067	Nessun titolo oggi...	No headline today...	Nickel.dinky
 11068	Il Nickel News ha finito l'inchiostro e non può pubblicare la notizia del gior	The Nickel News ran out of ink and cannot publish today's pap	Nickel.dinky
 11069	Guardia giurata Reyes ottiene nuova promozione...	Factory security guard Reyes promoted again...	Nickel.dinky
@@ -378,14 +378,14 @@ id	text	en	loc
 11374	Nuovi colori per il 1988!	New colors for 1988!	AStreet.dinky
 11375	Sorelle Piccione Idraulici	Pigeon Sisters Plumbing	AStreet.dinky
 11376	"Hai rotto tubo, scarico o sifone?	So let us fix your leaking waters'	AStreet.dinky
-11377	Te lo ripariamo noi,	Nothing is faster'	AStreet.dinky
-11378	le Sorelle Piccione"	than the Pigeon daughters'	AStreet.dinky
+11377	Te li ripariamo noi,	Nothing is faster'	AStreet.dinky
+11378	le Sorelle Piccione!"	than the Pigeon daughters'	AStreet.dinky
 11379	In cerca dell'Amore	Looking for Love	AStreet.dinky
 11380	Cerco la persona che era in giro al belvedere la scorsa notte.	Seeking the person hanging out at the Vista last night.	AStreet.dinky
 11381	Credo che potremmo avere una connessione.	I think we might have a connection.	AStreet.dinky
 11382	Razor and the Scummettes suonano dal vivo al The Hitchin' Post!	Razor and the Scummettes playing live at The Hitchin' Post!	AStreet.dinky
 11383	Aprono GT e le Ventose.	Support by GT and the Suction Cups.	AStreet.dinky
-11384	Giri sul toro meccanico gratis per tutta la notte!	Mechanical bull rides free all night!	AStreet.dinky
+11384	Potrai salire sul toro meccanico gratis per tutta la notte!	Mechanical bull rides free all night!	AStreet.dinky
 11385	Stupendous Brothers Traveling Circus	Stupendous Brothers Traveling Circus	AStreet.dinky
 11386	Spettacolo principale - Ransome il Clown!	Headline Act - Ransome the Clown!	AStreet.dinky
 11387	Lo spettacolo per famiglie inizia alle ore 14.	Family show starts at 2pm.	AStreet.dinky
@@ -749,7 +749,7 @@ id	text	en	loc
 11745	Vediamo se possiamo patcharlo...	Let's go see if we can apply a patch...	Ending.dinky
 11746	...credo di sapere come fare.	...I might know just the one.	Ending.dinky
 11747	Delores: grazie per essere entrata nel team di fotoreporter del Thimbleweed Nickel.⏎	Delores: Thanks for joining the Thimbleweed Nickel Photojournalism Team.⏎	Note.dinky
-11748	Come consegna, vorrei che mi portassi queste foto per le prossime storie:⏎⏎	For your assignment, I'd like you to get the following photos for some upcoming stories:⏎⏎	Note.dinky
+11748	Per questo incarico, vorrei che mi portassi queste foto per le prossime storie:⏎⏎	For your assignment, I'd like you to get the following photos for some upcoming stories:⏎⏎	Note.dinky
 11749	⏎P.S. Grazie per volermi aiutare mentre sei in vacanza dalla MMucasFlem Games.	⏎P.S. Thanks for helping out while you're on vacation from MMucasFlem Games.	Note.dinky
 11750	Articolo sul 4 luglio	Story about the 4th of July	Note.dinky
 11751	Editoriale sulla Contea di Thimbleweed	Column about Thimbleweed County	Note.dinky
@@ -765,11 +765,11 @@ id	text	en	loc
 11761	Un pezzo sulla chiusura dell'Edmund Hotel	Piece on the closing of the Edmund Hotel	Note.dinky
 11762	Un buon esempio di falangi prossimali	A good example of proximal phalanges	Note.dinky
 11763	Denuncia sui commessi bancari maleducati	Biting piece on rude bank employees	Note.dinky
-11764	Recensioni di avventure grafiche recenti	Reviews of some new adventure games	Note.dinky
+11764	Recensione su avventure grafiche recenti	Reviews of some new adventure games	Note.dinky
 11765	Servizio pubblico sul raccogliere i rifiuti	Public service piece about picking up trash	Note.dinky
 11766	Elogio della ThimbleCon '88	Puff-piece on ThimbleCon '88	Note.dinky
 11767	Vista a volo d'uccello della città	Birds-eye view of the town	Note.dinky
-11768	Scatta una foto del nostro nuovo fotoreporter	Take a photo of our newest photojournalist	Note.dinky
+11768	Foto del nostro nuovo fotoreporter	Take a photo of our newest photojournalist	Note.dinky
 11769	Una storia per la sezione poesia	Story for the poetry section	Note.dinky
 11770	Primo piano di una celebrità	Headshot for a story on a celebrity	Note.dinky
 11771	Foto di qualcuno che svolge un lavoro pericolos	Photo of a person doing a dangerous job	Note.dinky
@@ -1186,7 +1186,7 @@ id	text	en	loc
 12188	Non vedo l'ora di cominciare!	I can't wait to get started!	Natalie.yack
 12189	Un altro compito entusiasmante per il fotografo del Nickel News!	Another exciting assignment as the Nickel News photographer!	Natalie.yack
 12190	Chissà cosa avrà in serbo per me Natalie?	I wonder what Natalie has for me now?	Natalie.yack
-12191	Ma tu guarda se siamo belle pimpanti stamattina.	My, aren't we the eager beaver this morning.	Natalie.yack
+12191	Ma tu guarda come siamo belle pimpanti stamattina.	My, aren't we the eager beaver this morning.	Natalie.yack
 12192	Sono entusiasta di cominciare!	I'm excited to get started!	Natalie.yack
 12193	Sarà un bel diversivo creativo dal fare videogiochi.	It will be a nice creative break from making games.	Natalie.yack
 12194	Non è proprio mattina, sono le 5 del pomeriggio.	It's not really the morning, it's just after 5pm.	Natalie.yack
@@ -1317,10 +1317,10 @@ id	text	en	loc
 12319	Scusa ma non posso parlare, devo tornare a casa.	Sorry I can't talk, I've got to get home.	Willie.yack
 12320	Oggi tocca a me cucinare la cena.	It's my night to cook dinner.	Willie.yack
 12321	Opzioni-a-rino	Options-a-reno	Options.dinky
-12322	Bip col cursore	Hover beep	Options.dinky
-12323	Animazione verbo	Hover pop	Options.dinky
+12322	Cursore con bip	Hover beep	Options.dinky
+12323	Animazione frase	Hover pop	Options.dinky
 12324	Schermo intero	Fullscreen	Options.dinky
-12325	Font ridotto	Small font	Options.dinky
+12325	Font più piccolo	Small font	Options.dinky
 12326	Musica %d%%	Music %d%%	Options.dinky
 12327	Suoni %d%%	Sound %d%%	Options.dinky
 12328	Velocità testo: %s	Text speed: %s	Options.dinky
