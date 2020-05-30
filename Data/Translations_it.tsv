@@ -23,7 +23,7 @@ id	text	en	loc
 11019	Un nichelino non basta per un bel giocattolo. Voglio un giocattolo!	A nickel won't buy a good toy. I want a toy!	DefineActors.dinky
 11020	Non lo voglio!	I don't want that!	DefineActors.dinky
 11021	Voglio un giocattolo!	I want a toy!	DefineActors.dinky
-11022	I bambini non lo vogliono!	Kids don't want that!	DefineActors.dinky
+11022	Ai bambini non piace!	Kids don't want that!	DefineActors.dinky
 11023	Grazie!	Thanks!	DefineActors.dinky
 11024	Non lasciare che ti rovinino i denti, come è successo ai miei.	Don't let them rot your teeth like they did mine.	DefineActors.dinky
 11025	Non così in fretta, zia Delores.	Not so fast Aunt Delores.	DefineActors.dinky
@@ -346,7 +346,7 @@ id	text	en	loc
 11342	La valvola è completamente aperta!	The valve is set to full on!	Alleyway.dinky
 11343	È una vecchia valvola arruginita. Dice: "Società del Gas di Thimbleweed Park. Non Toccare".	It's a rusty old valve. It says “Thimbleweed Park Gas Company, Do Not Touch”.	Alleyway.dinky
 11344	È bloccata. Non riesco a muoverla.	It's stuck. I can't move it.	Alleyway.dinky
-11345	È ancora bloccata.	It's stuck again.	Alleyway.dinky
+11345	Si è bloccata di nuovo.	It's stuck again.	Alleyway.dinky
 11346	poster	poster	Alleyway.dinky
 11347	poster di Ransome il Clown	Ransome the Clown poster	Alleyway.dinky
 11348	bordo del poster	poster edge	Alleyway.dinky
@@ -772,8 +772,8 @@ id	text	en	loc
 11768	Foto del nostro nuovo fotoreporter	Take a photo of our newest photojournalist	Note.dinky
 11769	Una storia per la sezione poesia	Story for the poetry section	Note.dinky
 11770	Primo piano di una celebrità	Headshot for a story on a celebrity	Note.dinky
-11771	Foto di qualcuno che svolge un lavoro pericolos	Photo of a person doing a dangerous job	Note.dinky
-11772	Storia sul demolizione domestica	Story on home demolition	Note.dinky
+11771	Foto di qualcuno che svolge un lavoro pericoloso	Photo of a person doing a dangerous job	Note.dinky
+11772	Storia sulle demolizioni domestiche	Story on home demolition	Note.dinky
 11773	Storia sulla sicurezza stradale	Story about road safety	Note.dinky
 11774	Articolo sulle vecchie foto in bianco e nero	Article on old-timey black and white photos	Note.dinky
 11775	Editoriale sulla storia del telefono	A hit-piece on the history of the phone	Note.dinky
@@ -866,7 +866,7 @@ id	text	en	loc
 11862	Sciogli la colla del poster con $NOUN2$	Dissolve poster glue with $NOUN2$	VerbHelpers.dinky
 11863	Allenta $NOUN1$ con $NOUN2$	Loosen $NOUN1$ with $NOUN2$	VerbHelpers.dinky
 11864	Stringi $NOUN1$ con $NOUN2$	Tighten $NOUN1$ with $NOUN2$	VerbHelpers.dinky
-11865	Mostra a $NOUN1$ $NOUN2$	Show $NOUN1$ the $NOUN2$	VerbHelpers.dinky
+11865	Mostra $NOUN2$ a $NOUN1$	Show $NOUN1$ the $NOUN2$	VerbHelpers.dinky
 11866	Gratta $NOUN1$ con $NOUN2$	Scrape $NOUN1$ with $NOUN2$	VerbHelpers.dinky
 11867	Getta $NOUN1$ dentro $NOUN2$	Toss $NOUN1$ in $NOUN2$	VerbHelpers.dinky
 11868	Ripara $NOUN1$ con $NOUN2$	Repair $NOUN1$ with $NOUN2$	VerbHelpers.dinky
@@ -1335,7 +1335,7 @@ id	text	en	loc
 12337	Aiuto!	Help!	Options.dinky
 12338	● Clic sinistro per compiere l'azione indicata dal cursore.	● Left-click to do what the cursor sentence says.	Options.dinky
 12339	● Clic destro per mostrare più verbi.	● Right-click to show more verbs.	Options.dinky
-12340	● Trascina l'inventario su altri oggetti nella stanza o nell'inventario.	● Drag inventory onto other inventory or room objects.	Options.dinky
+12340	● Trascina l'inventario su altri oggetti di stanza o inventario.	● Drag inventory onto other inventory or room objects.	Options.dinky
 12341	● Quando trascini, se non appare una frase, non puoi	● When dragging, if no sentence appears, they can't	Options.dinky
 12342	combinare i due oggetti.	be used together.	Options.dinky
 12343	● Trascina la fotocamera per scattare una foto.	● Drag Camera to take pictures.	Options.dinky
@@ -1362,6 +1362,7 @@ id	text	en	loc
 12364	Dave	Dave	Diner.dinky
 12365	Dave e le fiammate	Dave and the fireballs	Diner.dinky
 12366	un titolo di giornale	a newspaper headline	Nickel.dinky
+12367	Non è di certo un ex presidente.	He's definitely not an ex-president.	CityHall.dinky
 12368	un	a	Nickel.dinky
 12369	un	a	Nickel.dinky
 12370	una	a	Nickel.dinky
