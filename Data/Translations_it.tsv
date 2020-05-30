@@ -832,7 +832,7 @@ id	text	en	loc
 11828	Forza	Pry open	VerbHelpers.dinky
 11829	Raccogli	Pick up	VerbHelpers.dinky
 11830	Prendi	Take	VerbHelpers.dinky
-11831	Premi	Flip	VerbHelpers.dinky
+11831	Gira	Flip	VerbHelpers.dinky
 11832	Componi	Dial	VerbHelpers.dinky
 11833	Premi	Push	VerbHelpers.dinky
 11834	Tira	Pull	VerbHelpers.dinky
@@ -843,8 +843,8 @@ id	text	en	loc
 11839	Spegni	Turn off	VerbHelpers.dinky
 11840	Sali	Climb	VerbHelpers.dinky
 11841	Fai girare	Spin	VerbHelpers.dinky
-11842	Cambia verso	Turn	VerbHelpers.dinky
-11843	Tira l'acqua	Flush	VerbHelpers.dinky
+11842	Ruota	Turn	VerbHelpers.dinky
+11843	Aziona	Flush	VerbHelpers.dinky
 11844	Annusa	Smell	VerbHelpers.dinky
 11845	Attiva	Activate	VerbHelpers.dinky
 11846	Bevi	Drink	VerbHelpers.dinky
@@ -1474,5 +1474,5 @@ id	text	en	loc
 12477	lento	slow	Options.dinky
 12478	normale	normal	Options.dinky
 12479	veloce	fast	Options.dinky
-12460	più veloce	faster	Options.dinky
-12461	velocissimo	fastest	Options.dinky
+12480	più veloce	faster	Options.dinky
+12481	velocissimo	fastest	Options.dinky
