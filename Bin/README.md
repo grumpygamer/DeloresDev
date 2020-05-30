@@ -4,4 +4,4 @@
 
 To use this script, you must install [psd_tools](https://github.com/psd-tools/psd-tools).
 
-Given the tempestuous nature of installing python packages, how to do that is beyond he scope of this README.  If you have decent __pythonfoo__, this shouldn't be a probem.
+Given the tempestuous nature of installing python packages, how to do that is beyond the scope of this README.  If you have decent _pythonfoo_, this shouldn't be a probem.
