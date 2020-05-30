@@ -236,8 +236,8 @@ DEFINE_ROOM("Alleyway", {
 					actorTurnTo(selectedActor, DIR_FRONT)
 					breaktime(0.25)
 					actorWalkForward(selectedActor, 8)
-					sayLine("That's probably really dangerous.",
-							"I've been designing adventure games too long.")
+					sayLine(SAY(12482,"That's probably really dangerous."),
+							SAY(12483,"I've been designing adventure games too long."))
 					moved = YES
 				}
 			})
