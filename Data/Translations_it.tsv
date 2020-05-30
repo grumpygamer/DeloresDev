@@ -559,7 +559,7 @@ id	text	en	loc
 11555	È un hot dog di manzo Kobe.	It's a Kobe beef hot dog.	Diner.dinky
 11556	È un hot dog di suino svizzero.	It's a Swiss pork hot dog.	Diner.dinky
 11557	È un hot dog di pollo e erbe.	It's a herb and chicken hot dog.	Diner.dinky
-11558	È un hot dog vegetale con senape francese.	It's a French mustard and kale veggie dog.	Diner.dinky
+11558	È un hot dog di verza e senape francese.	It's a French mustard and kale veggie dog.	Diner.dinky
 11559	È sintonizzata su KSCUM. Com'è giusto che sia!	It's tuned to KSCUM. As it should be!	Diner.dinky
 11560	Serve più KSCUM!	Needs more KSCUM!	Diner.dinky
 11561	Roba di lusso! Hot dog gourmet di vario genere.	Fancy stuff! All kinds of gourmet hot dogs.	Diner.dinky
@@ -799,7 +799,7 @@ id	text	en	loc
 11795	Una manciata di archivi disorganizzati.	Bunch of badly organized files.	CoronersOffice.dinky
 11796	È uno scheletro!	It's a skeleton!	CoronersOffice.dinky
 11797	Centro Masticoso Caramelloso.	Chewy Caramel Center.	CoronersOffice.dinky
-11798	Ma va? Non pensavo si potesse prendere una laurea da coroner per corrispondenza.	Odd? I didn't know you could mail order for coroner degrees.	CoronersOffice.dinky
+11798	Ma va'? Non pensavo si potesse prendere una laurea da coroner per corrispondenza.	Odd? I didn't know you could mail order for coroner degrees.	CoronersOffice.dinky
 11799	porta	door	CoronersOffice.dinky
 11800	Esci	Leave	CoronersOffice.dinky
 11801	Esci dall'ufficio del coroner	Leave the Coroner's Office	CoronersOffice.dinky
@@ -868,7 +868,7 @@ id	text	en	loc
 11864	Stringi $NOUN1$ con $NOUN2$	Tighten $NOUN1$ with $NOUN2$	VerbHelpers.dinky
 11865	Mostra a $NOUN1$ $NOUN2$	Show $NOUN1$ the $NOUN2$	VerbHelpers.dinky
 11866	Gratta $NOUN1$ con $NOUN2$	Scrape $NOUN1$ with $NOUN2$	VerbHelpers.dinky
-11867	Metti $NOUN1$ dentro $NOUN2$	Toss $NOUN1$ in $NOUN2$	VerbHelpers.dinky
+11867	Getta $NOUN1$ dentro $NOUN2$	Toss $NOUN1$ in $NOUN2$	VerbHelpers.dinky
 11868	Ripara $NOUN1$ con $NOUN2$	Repair $NOUN1$ with $NOUN2$	VerbHelpers.dinky
 11869	Non riesco a raggiungerlo.	I can't reach that.	ActorHelpers.dinky
 11870	Non penso sia abbastanza polvere per Natalie.	I don't think this is enough dust for Natalie.	DustHelpers.dinky
@@ -1256,7 +1256,7 @@ id	text	en	loc
 12258	Prenderò un hot dog di manzo Kobe.	I'll have a Kobe beef hot dog.	Sandy.yack
 12259	Prenderò un hot dog di suino svizzero.	I'll have a Swiss pork hot dog.	Sandy.yack
 12260	Prenderò un hot dog di pollo e erbe.	I'll have a herb and chicken hot dog.	Sandy.yack
-12261	Prenderò un hot dog vegetale con senape francese.	I'll have a French mustard and kale veggie dog.	Sandy.yack
+12261	Prenderò un hot dog di verza e senape francese.	I'll have a French mustard and kale veggie dog.	Sandy.yack
 12262	Prenderò la faraona con sauté di funghi selvatici.	I'll have the Guinea chicken sauté with wild mushrooms.	Sandy.yack
 12263	Prenderò l'insalata di cavolo riccio e salsa chutney.	I'll have the kale salad with chutney sauce.	Sandy.yack
 12264	Prenderò le zampe di rana fritte con salsa tartara.	I'll have the fried frogs' legs, sauce tartare.	Sandy.yack
@@ -1315,7 +1315,7 @@ id	text	en	loc
 12317	Come vanno gli affari?	How's business?	Willie.yack
 12318	Gli affari vanno a gonfie vele.	Business is booming.	Willie.yack
 12319	Scusa ma non posso parlare, devo tornare a casa.	Sorry I can't talk, I've got to get home.	Willie.yack
-12320	Stasera tocca a me cucinare la cena.	It's my night to cook dinner.	Willie.yack
+12320	Oggi tocca a me cucinare la cena.	It's my night to cook dinner.	Willie.yack
 12321	Opzioni-a-rino	Options-a-reno	Options.dinky
 12322	Cursore con bip	Hover beep	Options.dinky
 12323	Animazione frase	Hover pop	Options.dinky
@@ -1469,3 +1469,10 @@ id	text	en	loc
 12472	un	a	Inventory.dinky
 12473	un	a	Inventory.dinky
 12474	un	a	Inventory.dinky
+12475	lentissimo	slowest	Options.dinky
+12476	più lento	slower	Options.dinky
+12477	lento	slow	Options.dinky
+12478	normale	normal	Options.dinky
+12479	veloce	fast	Options.dinky
+12460	più veloce	faster	Options.dinky
+12461	velocissimo	fastest	Options.dinky
