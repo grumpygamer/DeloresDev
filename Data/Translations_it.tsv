@@ -128,7 +128,7 @@ id	text	en	loc
 11124	vecchie foto del giornale	old news photos	Nickel.dinky
 11125	le vecchie foto del giornale	the old news photos	Nickel.dinky
 11126	schedario	file cabinet	Nickel.dinky
-11127	La strada sembra bloccata.	The street looks blocked off.	MainStreet.dinky
+11127	La strada è inacessibile.	The street looks blocked off.	MainStreet.dinky
 11128	Puzza da far schifo, ma non credo che sia abbastanza disgustoso per Natalie.	It's really smelly, but I don't think this looks disgusting enough for Natalie.	MainStreet.dinky
 11129	Puzza da far schifo, ma non credo che sia abbastanza disgustoso per Natalie.	It's really smelly, but I don't think this looks disgusting enough for Natalie.	MainStreet.dinky
 11130	La foto deve essere qualcosa di meglio di un po' di acqua che sgocciola da un idrante.	Photo needs to be better than water dripping from a fire hydrant.	MainStreet.dinky
@@ -143,7 +143,7 @@ id	text	en	loc
 11139	Questo sì che puzza!	That sure is some stink!	MainStreet.dinky
 11140	Perché lo sto annusando ancora!	Why do I keep smelling that!	MainStreet.dinky
 11141	Questo dovrebbe bastare.	That should do it.	MainStreet.dinky
-11142	Wow! Qualcosa puzza davvero parecchio.	Wow! Something smells really bad.	MainStreet.dinky
+11142	Wow! Qui qualcosa puzza davvero tanto.	Wow! Something smells really bad.	MainStreet.dinky
 11143	Sembra piuttosto buio laggiù.	Looks pretty dark down there.	MainStreet.dinky
 11144	Il ristorante è aperto al pubblico.	The Diner is open for business.	MainStreet.dinky
 11145	Hanno cibo fantastico, e un registro sanitario impeccabile!	They have amazing food, and a perfect health record!	MainStreet.dinky
@@ -286,7 +286,7 @@ id	text	en	loc
 11282	Anche se funzionasse, non credo che berrei da lì.	Even if it was working, I wouldn't drink from it.	CityHall.dinky
 11283	È il sigillo della contea di tri-Thimbleweed!	It's the Thimbleweed tri-county seal!	CityHall.dinky
 11284	È maestoso!	It's majestic!	CityHall.dinky
-11285	Un vecchio tizio che credo proprio sia sia morto.	That's some old dude who I'm pretty sure is dead.	CityHall.dinky
+11285	Un vecchio tizio che credo proprio sia morto.	That's some old dude who I'm pretty sure is dead.	CityHall.dinky
 11286	Non so chi sia, ma non mi sembra molto presidenziale.	I don't know who he is, but he doesn't look very presidential.	CityHall.dinky
 11287	Sono piuttosto sicura che fosse incluso con la cornice.	Pretty sure that came with the frame.	CityHall.dinky
 11288	porta	door	CityHall.dinky
@@ -331,7 +331,7 @@ id	text	en	loc
 11327	Può anche essere pulito, ma non sono interessata a guardarci dentro.	It may be clean, but I'm not interested in looking inside.	Alleyway.dinky
 11328	Non credo che aprire i bidoni dei rifiuti rientri fra le mansioni del mio lavoro.	I don't think opening trash cans is part of my job description.	Alleyway.dinky
 11329	Non c'è nulla di divertente in un gatto in una scatola. O una scatola senza gatti.	Nothing funny about a cat in a box. Or no cat in a box.	Alleyway.dinky
-11330	È ancora soltanto una scatola vuota.	It's still just an empty box.	Alleyway.dinky
+11330	È soltanto una scatola vuota.	It's still just an empty box.	Alleyway.dinky
 11331	È la porta sul retro del ristorante. È sempre chiusa a chiave.	It's the back door to the Diner. It's always locked.	Alleyway.dinky
 11332	È chiusa a chiave.	It's locked.	Alleyway.dinky
 11333	Ooh, un poster del ThimbleCon '88!	Ooh, a ThimbleCon 88 poster!	Alleyway.dinky
@@ -495,7 +495,7 @@ id	text	en	loc
 11491	finestra	window	BookStore.dinky
 11492	la città	the town	BookStore.dinky
 11493	È in uso.	It's in use.	Bathroom.dinky
-11494	Non credo che ci sia corrente.	I don't think the power is on.	Bathroom.dinky
+11494	Sembra che non ci sia corrente.	I don't think the power is on.	Bathroom.dinky
 11495	È un water schifoso!	It's a gross toilet!	Bathroom.dinky
 11496	È troppo buio per vedere.	It's too dark to see.	Bathroom.dinky
 11497	È una schifosa maniglia dello scarico!	It's a gross toilet handle!	Bathroom.dinky
@@ -558,8 +558,8 @@ id	text	en	loc
 11554	Buttatevi a terra! Tutti!	Down! Stay down!	Diner.dinky
 11555	È un hot dog di manzo Kobe.	It's a Kobe beef hot dog.	Diner.dinky
 11556	È un hot dog di suino svizzero.	It's a Swiss pork hot dog.	Diner.dinky
-11557	È un hot dog di erbe e pollo.	It's a herb and chicken hot dog.	Diner.dinky
-11558	È un hot dog di senape francese e cavolo riccio.	It's a French mustard and kale veggie dog.	Diner.dinky
+11557	È un hot dog di pollo e erbe.	It's a herb and chicken hot dog.	Diner.dinky
+11558	È un hot dog vegetale con senape francese.	It's a French mustard and kale veggie dog.	Diner.dinky
 11559	È sintonizzata su KSCUM. Com'è giusto che sia!	It's tuned to KSCUM. As it should be!	Diner.dinky
 11560	Serve più KSCUM!	Needs more KSCUM!	Diner.dinky
 11561	Roba di lusso! Hot dog gourmet di vario genere.	Fancy stuff! All kinds of gourmet hot dogs.	Diner.dinky
@@ -792,14 +792,14 @@ id	text	en	loc
 11788	È solo un cassetto.	Just a drawer.	CoronersOffice.dinky
 11789	Solo lo strano referto sull'omicidio di Boris.	Just the odd coroner report about the murder of Boris.	CoronersOffice.dinky
 11790	Che non può essere accaduto.	Which couldn't have happened.	CoronersOffice.dinky
-11791	Ma che? C'è un referto autoptico dell'anno scorso per l'omicidio di un uomo di nome Boris?	Weird? There is an autopsy report for a murder last year of someone named Boris?	CoronersOffice.dinky
+11791	Ma cos...? C'è un referto autoptico dell'anno scorso per l'omicidio di un uomo di nome Boris?	Weird? There is an autopsy report for a murder last year of someone named Boris?	CoronersOffice.dinky
 11792	Non c'è stato un omicidio a Thimbleweed Park da almeno vent'anni.	There hasn't been a murder in Thimbleweed Park for twenty years.	CoronersOffice.dinky
 11793	Vecchi archivi del coroner.	Just some old coroner files.	CoronersOffice.dinky
 11794	Un sacco di vecchie cartelle.	Lots of old files.	CoronersOffice.dinky
 11795	Una manciata di archivi disorganizzati.	Bunch of badly organized files.	CoronersOffice.dinky
 11796	È uno scheletro!	It's a skeleton!	CoronersOffice.dinky
 11797	Centro Masticoso Caramelloso.	Chewy Caramel Center.	CoronersOffice.dinky
-11798	Ah sì? Non pensavo potessi prendere una laurea da coroner per corrispondenza.	Odd? I didn't know you could mail order for coroner degrees.	CoronersOffice.dinky
+11798	Ma va? Non pensavo si potesse prendere una laurea da coroner per corrispondenza.	Odd? I didn't know you could mail order for coroner degrees.	CoronersOffice.dinky
 11799	porta	door	CoronersOffice.dinky
 11800	Esci	Leave	CoronersOffice.dinky
 11801	Esci dall'ufficio del coroner	Leave the Coroner's Office	CoronersOffice.dinky
@@ -817,7 +817,7 @@ id	text	en	loc
 11813	Vai verso	Walk to	VerbHelpers.dinky
 11814	Guarda	Look at	VerbHelpers.dinky
 11815	Usa	Use	VerbHelpers.dinky
-11816	Guarda dentro	Look in	VerbHelpers.dinky
+11816	Esamina	Look in	VerbHelpers.dinky
 11817	Controlla	Check	VerbHelpers.dinky
 11818	Guarda	Look at	VerbHelpers.dinky
 11819	Esamina	Examine	VerbHelpers.dinky
@@ -832,7 +832,7 @@ id	text	en	loc
 11828	Forza	Pry open	VerbHelpers.dinky
 11829	Raccogli	Pick up	VerbHelpers.dinky
 11830	Prendi	Take	VerbHelpers.dinky
-11831	Gira	Flip	VerbHelpers.dinky
+11831	Premi	Flip	VerbHelpers.dinky
 11832	Componi	Dial	VerbHelpers.dinky
 11833	Premi	Push	VerbHelpers.dinky
 11834	Tira	Pull	VerbHelpers.dinky
@@ -842,9 +842,9 @@ id	text	en	loc
 11838	Accendi	Turn on	VerbHelpers.dinky
 11839	Spegni	Turn off	VerbHelpers.dinky
 11840	Sali	Climb	VerbHelpers.dinky
-11841	Ruota	Spin	VerbHelpers.dinky
-11842	Gira	Turn	VerbHelpers.dinky
-11843	Tira	Flush	VerbHelpers.dinky
+11841	Fai girare	Spin	VerbHelpers.dinky
+11842	Cambia verso	Turn	VerbHelpers.dinky
+11843	Tira l'acqua	Flush	VerbHelpers.dinky
 11844	Annusa	Smell	VerbHelpers.dinky
 11845	Attiva	Activate	VerbHelpers.dinky
 11846	Bevi	Drink	VerbHelpers.dinky
@@ -855,7 +855,7 @@ id	text	en	loc
 11851	Dai a $NOUN1$	Give to $NOUN1$	VerbHelpers.dinky
 11852	Dai a $NOUN2$	Give to $NOUN2$	VerbHelpers.dinky
 11853	Brucia $NOUN1$ dentro $NOUN2$	Burn $NOUN1$ in $NOUN2$	VerbHelpers.dinky
-11854	Getta in $NOUN2$	Drop in $NOUN2$	VerbHelpers.dinky
+11854	Metti in $NOUN2$	Drop in $NOUN2$	VerbHelpers.dinky
 11855	Riempi $NOUN2$	Fill $NOUN2$	VerbHelpers.dinky
 11856	Svuota $NOUN2$ dentro $NOUN1$	Empty $NOUN2$ in $NOUN1$	VerbHelpers.dinky
 11857	Scatta foto a $NOUN2$	Take photo of $NOUN2$	VerbHelpers.dinky
@@ -868,7 +868,7 @@ id	text	en	loc
 11864	Stringi $NOUN1$ con $NOUN2$	Tighten $NOUN1$ with $NOUN2$	VerbHelpers.dinky
 11865	Mostra a $NOUN1$ $NOUN2$	Show $NOUN1$ the $NOUN2$	VerbHelpers.dinky
 11866	Gratta $NOUN1$ con $NOUN2$	Scrape $NOUN1$ with $NOUN2$	VerbHelpers.dinky
-11867	Getta $NOUN1$ dentro $NOUN2$	Toss $NOUN1$ in $NOUN2$	VerbHelpers.dinky
+11867	Metti $NOUN1$ dentro $NOUN2$	Toss $NOUN1$ in $NOUN2$	VerbHelpers.dinky
 11868	Ripara $NOUN1$ con $NOUN2$	Repair $NOUN1$ with $NOUN2$	VerbHelpers.dinky
 11869	Non riesco a raggiungerlo.	I can't reach that.	ActorHelpers.dinky
 11870	Non penso sia abbastanza polvere per Natalie.	I don't think this is enough dust for Natalie.	DustHelpers.dinky
@@ -1006,7 +1006,7 @@ id	text	en	loc
 12008	Come vuoi-a-uh.	Whatever-a-who.	Coroner.yack
 12009	Tu e lo sceriffo dovreste formare un duo comico.	You and the Sheriff should form a comedy team.	Coroner.yack
 12010	Non muore molta gente a Thimbleweed Park, vero?	Not a lot of deaths in Thimbleweed Park, are there?	Coroner.yack
-12011	Ho letto che qualcuno di nome Boris è stato assassinato?	Did I read about someone named Boris being murdered?	Coroner.yack
+12011	Ho letto che un certo Boris è stato assassinato?	Did I read about someone named Boris being murdered?	Coroner.yack
 12012	Lo sceriffo vuole vederti.	Sheriff wants to see you.	Coroner.yack
 12013	Lo sceriffo vuole vederti di nuovo.	Sheriff wants to see you again.	Coroner.yack
 12014	Devo scappare... ciao.	Got to run... bye.	Coroner.yack
@@ -1024,7 +1024,7 @@ id	text	en	loc
 12026	Dove l'hai letto? Non c'è mai stato un omicidio a Thimbleweed Park, e non conosco nessuno di nome Boris.	Where did you read that? We've never had a murder in Thimbleweed Park, and I don't know anyone named Boris.	Coroner.yack
 12027	L'ho letto nei tuoi archivi da coroner riservati.	I read it in your confidential coroner files.	Coroner.yack
 12028	L'ho letto in quello straccio del Nickel News.	I read it in that trash-rag the Nickel News.	Coroner.yack
-12029	L'ho letto su un BBS online.	I read it on an on-line BBS.	Coroner.yack
+12029	L'ho letto su una BBS online.	I read it on an on-line BBS.	Coroner.yack
 12030	Non so. Non ricordo.	I don't know. I can't remember.	Coroner.yack
 12031	Davvero? Vedermi-a-uh? Emozionante.	Really? Me-a-who? That's exciting.	Coroner.yack
 12032	Ciao, Dave.	Hi there, Dave.	Dave.yack
@@ -1219,7 +1219,7 @@ id	text	en	loc
 12221	Mi servono matite n. 2	I need some no. 2 pencils.	Natalie.yack
 12222	Mi serve del bianchetto.	I need some whiteout.	Natalie.yack
 12223	Scusa, in realtà non mi serve niente ora.	Sorry, I actually don't need anything right now.	Natalie.yack
-12224	Ho una lettera da spedire. Potrebbe essermi utile per la consegna.	I have a letter that needs mailing. Might be important to my assignment.	Natalie.yack
+12224	Ho una lettera da spedire. Potrebbe essere importante per il mio incarico.	I have a letter that needs mailing. Might be important to my assignment.	Natalie.yack
 12225	Ok.	Okay.	Natalie.yack
 12226	Il miglior piano pensionistico come giornalista è trovarsi un altro lavoro.	Best path to retirement as a journalist is to get another job.	Natalie.yack
 12227	Un po' come programmare videogiochi.	Kind of like game development.	Natalie.yack
@@ -1256,24 +1256,24 @@ id	text	en	loc
 12258	Prenderò un hot dog di manzo Kobe.	I'll have a Kobe beef hot dog.	Sandy.yack
 12259	Prenderò un hot dog di suino svizzero.	I'll have a Swiss pork hot dog.	Sandy.yack
 12260	Prenderò un hot dog di pollo e erbe.	I'll have a herb and chicken hot dog.	Sandy.yack
-12261	Prenderò un hot dog di cavolo riccio e senape francese.	I'll have a French mustard and kale veggie dog.	Sandy.yack
-12262	Prenderò il pollo della Guinea saltato con funghi selvatici.	I'll have the Guinea chicken sauté with wild mushrooms.	Sandy.yack
+12261	Prenderò un hot dog vegetale con senape francese.	I'll have a French mustard and kale veggie dog.	Sandy.yack
+12262	Prenderò la faraona con sauté di funghi selvatici.	I'll have the Guinea chicken sauté with wild mushrooms.	Sandy.yack
 12263	Prenderò l'insalata di cavolo riccio e salsa chutney.	I'll have the kale salad with chutney sauce.	Sandy.yack
 12264	Prenderò le zampe di rana fritte con salsa tartara.	I'll have the fried frogs' legs, sauce tartare.	Sandy.yack
 12265	Prenderò la torta di ciliegie.	I'll have the cherry pie.	Sandy.yack
 12266	Prenderò il bicchiere d'acqua con scaglie di ghiaccio.	I'll have the glass of water with chipped ice.	Sandy.yack
 12267	Ho cambiato idea. Non ho fame.	I changed my mind. I'm not hungry.	Sandy.yack
 12268	Mi spiace, li ho appena messi sulla griglia. Non hanno ancora raggiunto la temperatura necessaria per poterli mangiare in sicurezza.	Sorry, I just put those on the grill. They haven't come up to the proper safe eating temperature yet.	Sandy.yack
-12269	Mi spiace, i funghi che ho raccolto sembrerebbero essere velenosi.	Sorry, the mushrooms I gathered today look to be of the poisonous variety.	Sandy.yack
+12269	Mi spiace, pare che i funghi che ho raccolto siano velenosi.	Sorry, the mushrooms I gathered today look to be of the poisonous variety.	Sandy.yack
 12270	Mi spiace, ho dimenticato di aggiornare il menu. Non abbiamo più cavolo riccio...	Sorry, forgot to update the board. We're all out of kale...	Sandy.yack
 12271	...né chutney.	...and chutney.	Sandy.yack
-12272	Spiacente, ho dimenticato di andare a caccia di rane stamattina.	No can do, I forgot to go frog hunting this morning.	Sandy.yack
+12272	Spiacente, mi son dimenticata di andare a caccia di rane, stamattina.	No can do, I forgot to go frog hunting this morning.	Sandy.yack
 12273	Mi spiace, uno spilungone si è mangiato l'ultima fetta con una tazza di tè.	Sorry, some tall guy just ate the last slice with a cup of joe.	Sandy.yack
 12274	Ma certo! In arrivo.	Sure thing! Coming right up.	Sandy.yack
 12275	Ecco qua.	Here you go.	Sandy.yack
 12276	Pieno della nostra speciale acqua filtrata. E puoi tenere il bicchiere, è in promozione.	Filled with our fancy filtered water. And you can keep the glass as part of our promotion.	Sandy.yack
 12277	Grazie! Scusa un attimo.	Thanks! Excuse me.	Sandy.yack
-12278	Mi sa che avevo davvero sete!	I guess I was really thirsty!	Sandy.yack
+12278	Mi sa che avevo proprio sete!	I guess I was really thirsty!	Sandy.yack
 12279	A dopo, Delores.	Later, Delores.	Sandy.yack
 12280	Non ho voglia-a-rino di parlare, fammi uscire!	I'm not in a talking-a-reno mood, just let me out!	Sheriff.yack
 12281	Salve, sceriffo!	Hi Sheriff!	Sheriff.yack
@@ -1315,7 +1315,7 @@ id	text	en	loc
 12317	Come vanno gli affari?	How's business?	Willie.yack
 12318	Gli affari vanno a gonfie vele.	Business is booming.	Willie.yack
 12319	Scusa ma non posso parlare, devo tornare a casa.	Sorry I can't talk, I've got to get home.	Willie.yack
-12320	Oggi tocca a me cucinare la cena.	It's my night to cook dinner.	Willie.yack
+12320	Stasera tocca a me cucinare la cena.	It's my night to cook dinner.	Willie.yack
 12321	Opzioni-a-rino	Options-a-reno	Options.dinky
 12322	Cursore con bip	Hover beep	Options.dinky
 12323	Animazione frase	Hover pop	Options.dinky
