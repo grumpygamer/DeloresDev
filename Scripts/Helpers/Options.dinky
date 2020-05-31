@@ -313,7 +313,7 @@ function openOptions(save_state=YES) {
 	})
 
 	line += 2
-	makeSlider(point(0, linePos(line)), "", 185, 1.0, 0.0, @(inc_dec) {
+	makeSlider(point(0, linePos(line)), "", 230, 1.0, 0.0, @(inc_dec) {
 		local s = gameprop("sayLineSpeed")
 		local v = 7
 		if (s <= 0.25 ) v = 1 else
