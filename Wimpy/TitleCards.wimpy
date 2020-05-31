@@ -54,7 +54,7 @@ objects: [
             {
                 name: "show"
                 frames: [
-                    "part10"
+                    "part10_en"
                 ]
             }
         ]
@@ -73,7 +73,7 @@ objects: [
             {
                 name: "show"
                 frames: [
-                    "part10_title"
+                    "part10_title_en"
                 ]
             }
         ]
