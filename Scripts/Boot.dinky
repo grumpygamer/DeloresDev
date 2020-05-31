@@ -88,7 +88,7 @@ function main() {
 	// Create new Translations_de.tsv, Translations_fr.tsv, Translations_it.tsv, etc files and switch to them using useTranslation("de")
 	// For extra credit, add an option to Options.dinky and switch on the fly.
 
-	useTranslation("it")		// Uncomment to start using Translations_en.tsv
+	//useTranslation("en")		// Uncomment to start using Translations_en.tsv
 
 	randomseed(null)
 	print("Running boot.dinky...")
