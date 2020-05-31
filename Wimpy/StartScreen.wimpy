@@ -16,7 +16,7 @@ objects: [
             {
                 name: "show"
                 frames: [
-                    "refcard"
+                    "refcard_en"
                 ]
             }
         ]
@@ -35,7 +35,7 @@ objects: [
             {
                 name: "show"
                 frames: [
-                    "click_to_continue"
+                    "click_to_continue_en"
                 ]
             }
         ]
