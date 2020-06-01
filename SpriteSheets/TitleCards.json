@@ -2,7 +2,7 @@
 
 "1988":
 {
-	"frame": {"x":379,"y":429,"w":131,"h":51},
+	"frame": {"x":647,"y":52,"w":131,"h":51},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":256,"y":149,"w":131,"h":51},
@@ -18,7 +18,7 @@
 },
 "line":
 {
-	"frame": {"x":3,"y":367,"w":576,"h":9},
+	"frame": {"x":3,"y":452,"w":576,"h":9},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":36,"y":178,"w":576,"h":9},
@@ -26,15 +26,39 @@
 },
 "part10":
 {
-	"frame": {"x":3,"y":380,"w":372,"h":81},
+	"frame": {"x":461,"y":367,"w":372,"h":81},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":134,"y":78,"w":372,"h":81},
 	"sourceSize": {"w":640,"h":360}
 },
+"part10_en":
+{
+	"frame": {"x":461,"y":367,"w":372,"h":81},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":134,"y":78,"w":372,"h":81},
+	"sourceSize": {"w":640,"h":360}
+},
+"part10_it":
+{
+	"frame": {"x":3,"y":367,"w":454,"h":81},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":93,"y":78,"w":454,"h":81},
+	"sourceSize": {"w":640,"h":360}
+},
 "part10_title":
 {
-	"frame": {"x":379,"y":380,"w":178,"h":45},
+	"frame": {"x":647,"y":3,"w":178,"h":45},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":232,"y":250,"w":178,"h":45},
+	"sourceSize": {"w":640,"h":360}
+},
+"part10_title_en":
+{
+	"frame": {"x":647,"y":3,"w":178,"h":45},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":232,"y":250,"w":178,"h":45},
@@ -45,8 +69,8 @@
 	"version": "1.0",
 	"image": "TitleCards.png",
 	"format": "RGBA8888",
-	"size": {"w":646,"h":483},
+	"size": {"w":836,"h":464},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:eed3ad72c4a2c476d762a7a99178981d:abcc5bf21c10e5df3c428e94f35821a2:bb67c055a9c28f1be6c06f931e6710a1$"
+	"smartupdate": "$TexturePacker:SmartUpdate:2b46f301185366da6bf8517c9eb2e6b5:a7c74fe2e9cb2387628a852633019e40:bb67c055a9c28f1be6c06f931e6710a1$"
 }
 }
