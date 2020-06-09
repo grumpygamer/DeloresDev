@@ -1,0 +1,1483 @@
+id	text	en	loc
+10000	Deutsch	English
+10001	Standard	Default
+11000	Ich denke, dass ich mit dem Auftrag fertig bin.	I think I'm done with the assignment.	DefineActors.dinky
+11001	Willst du einen Blick auf meine bisherige Arbeit werfen?	Want to take a look at my work so far?	DefineActors.dinky
+11002	Das letzte Gefährliche was der Sheriff je tat, war ein Blick in den Spiegel.	The last time the Sheriff did anything dangerous was looking in the mirror.	DefineActors.dinky
+11003	Ein Foto vom Sheriff allein wird Natalie nicht helfen.	A photo of the Sheriff by himself won't work for Natalie.	DefineActors.dinky
+11004	Ein Foto vom Pathologen allein wird Natalie nicht helfen.	A photo of the Coroner by himself won't work for Natalie.	DefineActors.dinky
+11005	Ich denke Natalie sucht nach jemand berühmteren, nur prätentiöse Restaurantkritiker denken, er sei eine Berühmtheit.	I think Natalie will want someone much more famous, only pretentious food critics think he's a celebrity.	DefineActors.dinky
+11006	Tschuldige, zu beschäftigt. Komme nicht mit Sortieren nach.	Sorry, too busy now. I'm behind on my sorting.	DefineActors.dinky
+11007	Zu beschäftigt um Pause zu machen, wegen all dieser PillowBear™ Bestellungen!	Too busy to stop, it's all these PillowBear™ orders!	DefineActors.dinky
+11008	Die Arbeit eines Postbeamten ist niemals erledigt, kann nicht aufhören.	A postman's work is never done, can't stop.	DefineActors.dinky
+11009	Muss weiter diese PillowBear™ Bestellungen sortieren, kann nicht stoppen.	Have to keep sorting these PillowBear™ orders, can't stop.	DefineActors.dinky
+11010	Kann dir gerade nicht helfen.	Can't help you now.	DefineActors.dinky
+11011	Zu beschäftigt um deinen Brief anzunehmen. Wirf ihn einfach in den Briefkasten.	I'm too busy to take your letter. Just use the mail drop.	DefineActors.dinky
+11012	Zu beschäftigt um deinen Brief anzunehmen. Vergiss die Briefmarken nicht!	I'm too busy to take your letter. Don't forget to add stamps!	DefineActors.dinky
+11013	Zu beschäftigt und Rückgabe von Briefmarken ist ausgeschlossen.	Too busy now, and no returns on stamps.	DefineActors.dinky
+11014	Meine Schwester denkt, sie ist eine Berühmtheit. Sonst denkt das keiner.	My sister might think she's a celebrity, but no one else does.	DefineActors.dinky
+11015	Wir nehmen keine Einlagen in Form von Münzen an.	We don't take deposits in the form of coins.	DefineActors.dinky
+11016	Ich will deine Almosen nicht.	I don't want or need your pity nickel.	DefineActors.dinky
+11017	Ich sagte, sprich mit mir, nicht diesem Niemand.	I told you to talk to me, not what's-his-face.	DefineActors.dinky
+11018	Willst du mit ihm sprechen, sprich mit MIR!	You want to talk to him, you talk to me!	DefineActors.dinky
+11019	Dafür bekommt man kein gutes Spielzeug. Ich will ein Spielzeug!	A nickel won't buy a good toy. I want a toy!	DefineActors.dinky
+11020	Das will ich nicht!	I don't want that!	DefineActors.dinky
+11021	Ich will ein Spielzeug!	I want a toy!	DefineActors.dinky
+11022	Sowas wollen Kinder nicht!	Kids don't want that!	DefineActors.dinky
+11023	Danke!	Thanks!	DefineActors.dinky
+11024	Lass sie nicht deine Zähne ruinieren, wie sie es mit meinen taten.	Don't let them rot your teeth like they did mine.	DefineActors.dinky
+11025	Nicht so schnell Tante Delores.	Not so fast Aunt Delores.	DefineActors.dinky
+11026	Musst mir schon was schenken, wenn du ein Foto von mir willst.	Gotta give me a present if you want to take my picture.	DefineActors.dinky
+11027	Lächeln!	Smile!	DefineActors.dinky
+11028	Delores	Delores	DefineActors.dinky
+11029	Willie	Willie	DefineActors.dinky
+11030	Natalie	Natalie	DefineActors.dinky
+11031	Ransome	Ransome	DefineActors.dinky
+11032	Leonard	Leonard	DefineActors.dinky
+11033	Sheriff	Sheriff	DefineActors.dinky
+11034	Pathologe	Coroner	DefineActors.dinky
+11035	Dave	Dave	DefineActors.dinky
+11036	Dave	Dave	DefineActors.dinky
+11037	Sandy	Sandy	DefineActors.dinky
+11038	Madame Morena	Madame Morena	DefineActors.dinky
+11039	George	George	DefineActors.dinky
+11040	Lenore	Lenore	DefineActors.dinky
+11041	Peter	Peter	DefineActors.dinky
+11042	Chuckie	Chuckie	DefineActors.dinky
+11043	Chuck Edmund in Sanatorium eingewiesen ...	Chuck Edmund committed to sanitarium...	Nickel.dinky
+11044	Chuck eingewiesen nach psychischem Zusammenbruch im Glauben Teil eines Computers zu sein.	Chuck committed after a psychotic breakdown due to believing he was part of a computer.	Nickel.dinky
+11045	Willie's Geigen Reparatur Werkstatt verzeichnet Rekordgewinne...	Willie's violin repair posts record profits...	Nickel.dinky
+11046	Willie's Geigen Reparatur Geschäft boomt wegen neuer BTX Bestellungen und Werbung.	Willie's violin repair business is booming due to new BBS ordering and advertising.	Nickel.dinky
+11047	KSCUM wird Musikauswahl ändern...	KSCUM to change music styles...	Nickel.dinky
+11048	Altgedientes KSCUM Radio ist bereit Musikauswahl zu ändern... von eklektischem Rock zu esoterischen Rock.	Long standing KSCUM radio set to change formats from eclectic rock to esoteric rock.	Nickel.dinky
+11049	S&D Diner streicht weitere Auszeichnung ein...	S&D Diner nets another award...	Nickel.dinky
+11050	S&D Diner erhält weitere Auszeichnung für ihr fantastisches Essen. Restaurantkritiker sind sich einig, dies ist das beste Lokal im Land.	S&D Diner received another award for their amazing food. Critics all agree, it's the best place to eat in the county.	Nickel.dinky
+11051	Gratis Gedenkgläser im S&D Diner...	Free commemorative glass at S&D diner...	Nickel.dinky
+11052	Zur Feier ihrer kürzlichen Auszeichnung verschenkt das S&D Diner Gedenkgläser bei jedem Kauf.	In celebration of their latest award, the S&D Diner is giving a free commemorative glass with every purchase.	Nickel.dinky
+11053	Art by Eltron wird als PillowBear™ Geschäft wiedereröffnet...	Art by Eltron to re-open as PillowBear™ store...	Nickel.dinky
+11054	Das Geschäft, welches den Einwohnern als Art by Eltron bekannt ist, wird neu eröffnet als PillowBear™ Werksverkauf Anfang Mai.	The store referred to by locals as Art by Eltron will re-open as a PillowBear™ factory outlet in early May.	Nickel.dinky
+11055	Quickie Pal Toilette ist toxische Umgebung...	Quickie Pal bathroom a toxic site...	Nickel.dinky
+11056	Bundesbehörden haben die Quickie Pal Toilette als Klasse 5 toxische Umgebung ausgewiesen. Säuberung sollte bald starten.	Federal agencies have designated the Quickie Pal bathroom a Class 5 toxic site. Clean-up should begin soon.	Nickel.dinky
+11057	Lenore Edmund rausgeworfen...	Lenore Edmund evicted...	Nickel.dinky
+11058	Nachdem die Bank Chuck Edmund's Mansion Mansion wieder in Besitz nahm, wurde Lenore Edmund des Hauses verwiesen. Man hörte sie schreien “Wissen Sie eigentlich wer ich bin!”	After the bank repossessed Chuck Edmund's mansion, Lenore Edmund was evicted while screaming “Do you know who I am!”	Nickel.dinky
+11059	Okkulter Kauz Madame Morena erklärt...	Occult oddball Madame Morena tells town...	Nickel.dinky
+11060	Ich würde nie jemand verfluchen, das würde selbst meine schwarze Magie übersteigen. Komm zum großen Ausverkauf!	I would never curse anyone, that would go beyond even my black magic. Come for the big blow-out sale!	Nickel.dinky
+11061	Einwohner ergattert angesehenen Job bei MmucasFlem Games...	Local nets prestigious job at MmucasFlem Games...	Nickel.dinky
+11062	Delores Edmund scheint kürzlichen Familientumult abgeschüttelt zu haben und ist auf dem Weg an die Spitze der Spieleindustrie!	Delores Edmund seems to have shaken recent family turmoil and is on her way to the top of the game industry!	Nickel.dinky
+11063	Mime applaudiert stumm für Ransome...	Mime applauds silently for Ransome...	Nickel.dinky
+11064	Während er gebärdet, es wäre die Beste Show die er je gesehen hat, steht ein anwohnender Mime Schlange für die 4. Ransom Aufführung in Folge.	While miming that it was the best show he'd ever seen, local Mime stands in line for 4th Ransome show in a row.	Nickel.dinky
+11065	Hiesiger Platzwart gewinnt Regierungsausschreibung...	Local groundskeeper wins White House post...	Nickel.dinky
+11066	Der hiesige Platzwart Doug Braverman wurde vom Weißen Haus angeheuert um Löcher in den Rosengarten zu gram'.	Local groundskeeper Doug Braverman is hired by the White House to dig holes in the rose garden.	Nickel.dinky
+11067	Keine Schlagzeile heute...	No headline today...	Nickel.dinky
+11068	Nickel News ging die Tinte aus und kann daher heutigen Brei nicht veröffentlichen	The Nickel News ran out of ink and cannot publish today's pap	Nickel.dinky
+11069	Fabrikwächter Reyes erneut befördert...	Factory security guard Reyes promoted again...	Nickel.dinky
+11070	Nach 5 Beförderungen wurde der Wachmann und stolze Vater Reyes zum Chef der Sicherheit bei der neuen PillowBear™ Fabrik ernannt.	After five promotions, security guard and proud father Reyes has been made head of security at the new PillowBear™ factory.	Nickel.dinky
+11071	Geist von Franklin spukt in Edmund Hotel...	Ghost of Franklin haunts Edmund Hotel...	Nickel.dinky
+11072	Der Geist von Franklin, Chuck Edmund's Bruder, spukt angeblich im hiesigen Edmund Hotel. Pigeon Brothers sind an dem Fall dran.	The ghost of Franklin, Chuck Edmund's brother, is said to haunt the local Edmund Hotel. Pigeon Brothers are on the case.	Nickel.dinky
+11073	Ransome soll Philanthropie Preis erhalten...	Ransome to receive philanthropy award...	Nickel.dinky
+11074	Mit Verweis auf die verschiedenen Projekte zur Unterstützung von Kindern auf der ganzen Welt, wird der Preis Ransome gewidmet.	Citing his various projects benefiting children around the world, the award will be bestowed on Ransome.	Nickel.dinky
+11075	Lass sehen was du hast...	Let's see what you've got...	Nickel.dinky
+11076	Lass einen Blick auf deine Fotos werfen...	Let's take a look at your photos...	Nickel.dinky
+11077	Warum werfen wir nicht einen kurzen Blick auf deine Fotos...	Why don't we take a quick look at your photos...	Nickel.dinky
+11078	Lustig! Ziemlich meta! Ich mag das hier.	Funny! Very meta! I like this one.	Nickel.dinky
+11079	Ich bin sehr fotogen. Schönes Foto von mir.	I'm very photogenic. Nice one of me.	Nickel.dinky
+11080	Gutes Exemplar!	Good one!	Nickel.dinky
+11081	Das ist nett!	This is nice!	Nickel.dinky
+11082	Perfekt für die Story!	Perfect for the story!	Nickel.dinky
+11083	Erstaunlich!	Amazing!	Nickel.dinky
+11084	Verschwommen...	Blurry...	Nickel.dinky
+11085	Schlecht belichtet...	Poor lighting...	Nickel.dinky
+11086	Nicht gut getroffen...	Not framed well...	Nickel.dinky
+11087	Uninteressant...	Uninteresting...	Nickel.dinky
+11088	Banal...	Mundane...	Nickel.dinky
+11089	Amateurhaft...	Amateurish...	Nickel.dinky
+11090	Geh raus da Kind und mache Fotos.	Get out there kid and take some photos.	Nickel.dinky
+11091	Ärgere dich nicht zu sehr. Es braucht Zeit, um Fotojournalismus zu beherrschen.	Don't feel too bad. It takes a while to master photojournalism.	Nickel.dinky
+11092	Das ist eine gute Aufnahme!	That's a good shot!	Nickel.dinky
+11093	Sind ein paar gute Aufnahmen dabei!	There are some good shots in there!	Nickel.dinky
+11094	Lass mich die schlechten wegwerfen.	Let me get rid of the bad ones.	Nickel.dinky
+11095	Behalte die guten, bis du deine heutige Arbeit erledigt hast.	You keep the good ones until you've finished today's work.	Nickel.dinky
+11096	Zieh besser los und nehme mehr Fotos auf, wir haben einen Abgabetermin.	Better get out there and take some more photos, we've got a deadline.	Nickel.dinky
+11097	Paps? Tot? Ein Geist?	Dad? Dead? A ghost?	Nickel.dinky
+11098	Das kann nicht sein. Ich hab mit ihm heute morgen gefrühstückt.	That can't be, I had breakfast with him this morning.	Nickel.dinky
+11099	Ich sollte die Kamera finden, bevor ich mich auf dem Weg mache. Natalie sagte, sie wäre im Aktenschrank.	I should find the camera before setting out. Natalie said it is in the file cabinet.	Nickel.dinky
+11100	Dieses Schild muss so alt sein, wie der Nickel News!	That sign must be as old as the Nickel News!	Nickel.dinky
+11101	Es ist ein Relikt einer vergangen Ära.	It's an old relic of a bygone era.	Nickel.dinky
+11102	Druck ist tot.	Print is dead.	Nickel.dinky
+11103	Eines Tages wird alles auf Computern sein.	Someday it will all be on computers.	Nickel.dinky
+11104	Und Natalie wird arbeitslos sein.	And Natalie will be out of business.	Nickel.dinky
+11105	Aber das ist OK, weil Social Media die Rolle einer vertrauenswürdigen Nachrichtenquelle übernehmen wird.	But that's OK because social media will take over as the trusted source of news.	Nickel.dinky
+11106	So sieht die Stadt nicht aus der Vogelperspektive aus.	This is not how the town would look to a bird.	Nickel.dinky
+11107	Es ist eine Karte des Thimbleweed Landkreises.	It's a map of Thimbleweed County.	Nickel.dinky
+11108	Ich glaube, ich kann mein Haus sehen.	I think I can see my house.	Nickel.dinky
+11109	Das sind alte Fotos vom Nickel News.	Those are old photos from the Nickel News.	Nickel.dinky
+11110	Da steckt viel Geschichte drin.	There is a lot of history in those.	Nickel.dinky
+11111	Es ist leer.	It's empty.	Nickel.dinky
+11112	Da ist die Kamera.	There's the camera.	Nickel.dinky
+11113	Da fand ich die Kamera. Das Fach ist jetzt leer.	This is where I found the camera. The cabinet is empty now.	Nickel.dinky
+11114	Natalie sagte, die Kamera sei da drin.	This is where Natalie said the camera should be.	Nickel.dinky
+11115	Muss eine Fundgrube alter Geschichten da drin sein.	Must be a treasure trove of old stories in there.	Nickel.dinky
+11116	Ich sollte in die Schublade schauen, ob die Kamera dort liegt, wie Natalie behauptet.	I should look in the drawer and see if the camera is here, like Natalie said.	Nickel.dinky
+11117	Tür	door	Nickel.dinky
+11118	der Nickel News Tür	the Nickel News door	Nickel.dinky
+11119	Verlassen	Leave	Nickel.dinky
+11120	Verlasse den Nickel	Leave the Nickel	Nickel.dinky
+11121	Schild	sign	Nickel.dinky
+11122	Druckerpresse	printing press	Nickel.dinky
+11123	Karte	map	Nickel.dinky
+11124	alte Nachrichtenfotos	old news photos	Nickel.dinky
+11125	den alten Nachrichtenfotos	the old news photos	Nickel.dinky
+11126	Aktenschrank	file cabinet	Nickel.dinky
+11127	Die Straße sieht blockiert aus.	The street looks blocked off.	MainStreet.dinky
+11128	Das riecht richtig übel, aber ich denke nicht, dass es eklig genug ist für Natalie.	It's really smelly, but I don't think this looks disgusting enough for Natalie.	MainStreet.dinky
+11129	Das riecht richtig übel, aber ich denke nicht, dass es eklig genug ist für Natalie.	It's really smelly, but I don't think this looks disgusting enough for Natalie.	MainStreet.dinky
+11130	Foto muss besser sein, als ein tropfender Feuerhydrant.	Photo needs to be better than water dripping from a fire hydrant.	MainStreet.dinky
+11131	Das ist ein ziemlich leckender Feuerhydrant.	It's a very leaky fire hydrant.	MainStreet.dinky
+11132	Kein Leck mehr!	No more leaks!	MainStreet.dinky
+11133	Ich könnte einen Ferienjob bei den Pigeon Sisters bekommen!	I could get a summer job with the Pigeon Sisters!	MainStreet.dinky
+11134	Das riecht richtig übel, aber ich denke nicht, dass es eklig genug ist für Natalie.	It's really smelly, but I don't think this looks disgusting enough for Natalie.	MainStreet.dinky
+11135	Foto muss besser sein, als ein tropfender Feuerhydrant.	Photo needs to be better than water dripping from a fire hydrant.	MainStreet.dinky
+11136	Das riecht richtig übel, aber ich denke nicht, dass es eklig genug ist für Natalie.	It's really smelly, but I don't think this looks disgusting enough for Natalie.	MainStreet.dinky
+11137	Uff! Das stinkt mal so richtig.	Yikes! That really stinks.	MainStreet.dinky
+11138	Leute! Das riecht!	Gads! That smells!	MainStreet.dinky
+11139	Das ist mal ein Gestank!	That sure is some stink!	MainStreet.dinky
+11140	Warum rieche ich immer noch daran!	Why do I keep smelling that!	MainStreet.dinky
+11141	Das sollte es gewesen sein.	That should do it.	MainStreet.dinky
+11142	Wow! Hier riecht was richtig übel.	Wow! Something smells really bad.	MainStreet.dinky
+11143	Ziemlich dunkel da unten.	Looks pretty dark down there.	MainStreet.dinky
+11144	Das Diner ist geöffnet.	The Diner is open for business.	MainStreet.dinky
+11145	Sie haben fantastisches Essen, und eine tadellose Gesundheitsakte!	They have amazing food, and a perfect health record!	MainStreet.dinky
+11146	Das ist eine beeindruckende Tür.	That is an impressive door.	MainStreet.dinky
+11147	Das Schild sagt: “Hilfe gesucht: Bank Kassierer*in. Geschlossen, bis wir jemand gefunden haben.”	Sign says: “Help Wanted: Bank Teller. Closed until we find one.”	MainStreet.dinky
+11148	Thimbleweed Park war ein großartiger Ort um aufzuwachsen.	Thimbleweed Park was a great place to grow up.	MainStreet.dinky
+11149	Die Landstraße in die Stadt ist gesperrt.	The highway into town is closed.	MainStreet.dinky
+11150	Es sagt “Willie's Uhren & Geigen Reparaturen...	It says “Willie's Watch & Violin Repairs...	MainStreet.dinky
+11151	“Wir reparieren Uhren und Geigen seit 1957.”	“Repairing watches and violins since 1957.”	MainStreet.dinky
+11152	Ich denke die kleine Uhr ist nicht echt.	I think the little clock is fake.	MainStreet.dinky
+11153	Scheinbar ist Willie's Uhren und Geigen Reparatur in der Nacht geschlossen.	Looks like Willie's Watch & Violin Repairs is closed for the night.	MainStreet.dinky
+11154	Nacht Willie!	Night Willie!	MainStreet.dinky
+11155	Hier drinnen sind keine Fotos von demolierten Wohnungen zu finden.	There aren't any photos of demolished homes in there.	MainStreet.dinky
+11156	Wer würde hier hin ziehen wollen.	Who would want to move here.	MainStreet.dinky
+11157	Eines von vielen Opfern der Wirtschaft.	One of the many casualties of the economy.	MainStreet.dinky
+11158	Ich kann es kaum erwarten, dass der PillowBear™ Laden öffnet.	I can't wait for the new PillowBear™ store to open.	MainStreet.dinky
+11159	Ich bin so stolz auf Paps.	I'm so proud of Dad.	MainStreet.dinky
+11160	Diese PillowBears™ sind so niedlich!	These PillowBears™ are so cute!	MainStreet.dinky
+11161	Das waren alles Paps Ideen.	They were all Dad's idea.	MainStreet.dinky
+11162	Das ist ein Verkehrshütchen. Ich lass es besser in Ruhe.	It's a traffic cone. I'm going to leave it alone.	MainStreet.dinky
+11163	A Straße	A Street	MainStreet.dinky
+11164	B Straße	B Street	MainStreet.dinky
+11165	Feuerhydrant	fire hydrant	MainStreet.dinky
+11166	Allee	alley	MainStreet.dinky
+11167	einer Allee	an alley	MainStreet.dinky
+11168	Tür	door	MainStreet.dinky
+11169	der Diner Tür	the Diner door	MainStreet.dinky
+11170	Betrete	Enter	MainStreet.dinky
+11171	Betrete das Diner	Enter Diner	MainStreet.dinky
+11172	Bank Tür	bank door	MainStreet.dinky
+11173	der Bank Tür	the bank door	MainStreet.dinky
+11174	Betrete	Enter	MainStreet.dinky
+11175	Betrete die Bank	Enter bank	MainStreet.dinky
+11176	Schild	sign	MainStreet.dinky
+11177	einem Job Angebot	a job posting	MainStreet.dinky
+11178	Ortseingangsschild	sign	MainStreet.dinky
+11179	dem Thimbleweed Park Ortseingangsschild	the Thimbleweed Park sign	MainStreet.dinky
+11180	der Landstraße	the highway	MainStreet.dinky
+11181	Uhren Reparaturen Schild	watch repair sign	MainStreet.dinky
+11182	Tür	door	MainStreet.dinky
+11183	Makler Büro	realtor's office	MainStreet.dinky
+11184	dem Makler Büro	the realtor's office	MainStreet.dinky
+11185	Blumenladen	flower shop	MainStreet.dinky
+11186	dem Blumenladen	the flower shop	MainStreet.dinky
+11187	Eröffnet in Bälde	Coming Soon	MainStreet.dinky
+11188	dem neuen PillowBear™ Laden	the new PillowBear™ store	MainStreet.dinky
+11189	PillowBear™ Schild	PillowBear™ sign	MainStreet.dinky
+11190	Aussenbezirk	outskirts	MainStreet.dinky
+11191	Stadthallentür	City Hall door	MainStreet.dinky
+11192	der Stadthallentür	the City Hall door	MainStreet.dinky
+11193	Betrete	Enter	MainStreet.dinky
+11194	Betrete Stadthalle	 City Hall	MainStreet.dinky
+11195	Verkehrshütchen	traffic cone	MainStreet.dinky
+11196	Verkehrshütchen	traffic cone	MainStreet.dinky
+11197	Verkehrshütchen	traffic cone	MainStreet.dinky
+11198	Willkommen im Quickie Pal. Kann ich Ihnen irgendwie behilflich sein?	Welcome to Quickie Pal. Can I help you find anything?	QuickiePal.dinky
+11199	Ich persönlich bin ja richtig vernarrt in die Schokoladenbonbons.	I personally am really fond of the chocolate bon bons.	QuickiePal.dinky
+11200	Lassen Sie mich wissen, wenn ich irgendwie behilflich sein kann.	Let me know if I can help you find anything.	QuickiePal.dinky
+11201	Lassen Sie mich wissen, wenn ich irgendwie behilflich sein kann.	Let me know if I can help you find anything.	QuickiePal.dinky
+11202	Lassen Sie mich wissen, wenn ich irgendwie behilflich sein kann.	Let me know if I can help you find anything.	QuickiePal.dinky
+11203	Lassen Sie mich wissen, wenn ich irgendwie behilflich sein kann.	Let me know if I can help you find anything.	QuickiePal.dinky
+11204	Lassen Sie mich wissen, wenn ich irgendwie behilflich sein kann.	Let me know if I can help you find anything.	QuickiePal.dinky
+11205	Lassen Sie mich wissen, wenn ich irgendwie behilflich sein kann.	Let me know if I can help you with anything.	QuickiePal.dinky
+11206	Lassen Sie mich wissen, wenn ich irgendwie behilflich sein kann.	Let me know if I can help you with anything.	QuickiePal.dinky
+11207	Ich bin hier um zu dienen.	I'm here to serve.	QuickiePal.dinky
+11208	Ich bin hier um zu dienen.	I'm here to serve.	QuickiePal.dinky
+11209	Ich bin hier um zu dienen.	I'm here to serve.	QuickiePal.dinky
+11210	Wie stehts mit diesem Sonnenuntergang?	How about that sunset?	QuickiePal.dinky
+11211	Wie stehts mit diesem Ransome the Clown? Er ist so lustig.	How about that Ransome the Clown? He's so funny.	QuickiePal.dinky
+11212	Vergessen Sie ihre Grippeimpfung nicht.	Don't forget to get your flu shot.	QuickiePal.dinky
+11213	Suchen Sie abgelaufene Milch? 50% Rabatt.	Want some expired milk? 50% off normal price.	QuickiePal.dinky
+11214	Glücklicherweise konnten die Pigeon Sisters unser Rattenproblem loswerden!	Sure glad the Pigeon Sisters got rid of our rat problem!	QuickiePal.dinky
+11215	Wollen Sie eine feine Lederjacke kaufen™?	Want to buy a Fine Leather Jacket™?	QuickiePal.dinky
+11216	Huch!	Yikes!	QuickiePal.dinky
+11217	Huch!	Yikes!	QuickiePal.dinky
+11218	Trink aus!	Drink up!	QuickiePal.dinky
+11219	Es ist ein Briefkasten.	It's a mail drop.	QuickiePal.dinky
+11220	Es ist ein Thimbleweed Park Souvenir T-Shirt!	It's a souvenir Thimbleweed Park T-shirt!	QuickiePal.dinky
+11221	Da steht “Pfandflaschen einwerfen, 5¢.”	It says “Redeem bottles here, 5¢.”	QuickiePal.dinky
+11222	Niemanden kümmert ein Haufen Kisten.	No one cares about a bunch of boxes.	QuickiePal.dinky
+11223	Auf allen steht, “1 Dutzend PillowBears™.”	They all say, “1 Dozen PillowBears™.”	QuickiePal.dinky
+11224	Ich bin so stolz auf Paps, dass er diese Idee hatte!	I'm so proud of Dad for thinking up this idea!	QuickiePal.dinky
+11225	Es ist rattastisch!	It's Ratastic!	QuickiePal.dinky
+11226	Definitiv kein neuer Spielzeugwahn. Ich hatte einen, als ich noch ein Kind war.	Definitely not a new toy craze. I had one when I was a kid.	QuickiePal.dinky
+11227	Es ist der Kopf einer Berühmtheit, aber irgendwie erniedrigend als Süßigkeitenspender. Ich brauche ein besseres Foto.	It's a celebrity's head, but kind of demeaning being a candy dispenser. I need a better photo.	QuickiePal.dinky
+11228	Das sind eine Menge Ransome Süßigkeitenspender.	That's a lot of Ransome candy dispensers.	QuickiePal.dinky
+11229	Wir verschenken Sie als Werbung für das Ransome the Clown Haus für Missratene Kinder. Nimm einen.	Giving them away as a promotion for the Ransome the Clown House for Wayward Kids. Take one.	QuickiePal.dinky
+11230	Nur 1 pro Kunde. Unternehmensrichtlinie.	It's one per customer. Corporate policy.	QuickiePal.dinky
+11231	Ich würde spielen, wenn es garantiert wäre.	I'd play if it were a sure thing.	QuickiePal.dinky
+11232	Quickie Pal Tür	Quickie Pal door	QuickiePal.dinky
+11233	die Quickie Pal Tür	the Quickie Pal door	QuickiePal.dinky
+11234	Verlasse	Leave	QuickiePal.dinky
+11235	Verlasse den Quickie Pal	Leave the Quickie Pal	QuickiePal.dinky
+11236	Briefkasten	mail drop	QuickiePal.dinky
+11237	T-Shirt	T-shirt	QuickiePal.dinky
+11238	Schild	sign	QuickiePal.dinky
+11239	Kisten	boxes	QuickiePal.dinky
+11240	Kisten	boxes	QuickiePal.dinky
+11241	Ratte	rat	QuickiePal.dinky
+11242	Ransome Süßigkeitenspender	Ransome candy dispensers	QuickiePal.dinky
+11243	Lotto	Lotto	QuickiePal.dinky
+11244	dem Lotto Schild	the Lotto sign	QuickiePal.dinky
+11245	Möglicherweise die Lösung für ein Rätsel in einem anderen Spiel.	Probably the solution to a puzzle in another game.	PostOffice.dinky
+11246	Das ist zum Briefe wiegen.	It's for weighing mail.	PostOffice.dinky
+11247	Da könnte ich Leonard's Stromrechnung versenden.	This is where I could mail Leonard's electricity bill.	PostOffice.dinky
+11248	Wenn ich irgendwelche Briefe hätte, könnte ich sie dort einwerfen.	If I had any mail, this is where I'd put it.	PostOffice.dinky
+11249	Ein richtiges Foto von Jefferson wäre viel besser.	An actual image of Jefferson would be much better.	PostOffice.dinky
+11250	Es zeigt den Monat Juli... Das ist lang her.	It's showing the month of July... That was a long time ago.	PostOffice.dinky
+11251	Scheint als sei Vandalismus an Staatseigentum ein echtes Problem. Ich sollte ein Foto davon machen.	Looks like government property vandalism really is a problem. I need to photograph an example of it.	PostOffice.dinky
+11252	“Bitte hören Sie auf die Briefkästen aufzubrechen.”	“Please stop trying to break into the mailboxes.”	PostOffice.dinky
+11253	Sie sind verschlossen.	They are locked.	PostOffice.dinky
+11254	Ich habe die Kombination nicht.	I don't have the combination.	PostOffice.dinky
+11255	Das ist eine Menge privater Briefkästen.	That's a lot of private mailboxes.	PostOffice.dinky
+11256	Der Schaden am Briefkasten ist wirklich gering. Nicht groß genug für ein Foto.	The mailbox damage is really minor. Not good enough for the photo.	PostOffice.dinky
+11257	Es ist dunkel da drin!	It's dark in there!	PostOffice.dinky
+11258	Ich werde dafür so viel Ärger bekommen.	I'm going to get in so much trouble for this.	PostOffice.dinky
+11259	Dieser Briefkasten sieht ein wenig beschädigt aus.	This mailbox looks a little scuffed up.	PostOffice.dinky
+11260	Ich bin nicht sicher, dass das eine gute Idee war.	I'm not so sure this was a smart idea.	PostOffice.dinky
+11261	Wen kümmern schon ein Haufen Kisten.	No one cares about a bunch of boxes.	PostOffice.dinky
+11262	Das ist ein Haufen PillowBears™, die auf den Versand warten.	It's a bunch of PillowBears™, waiting to be mailed out.	PostOffice.dinky
+11263	Das war Papas Idee!	That was Dad's idea!	PostOffice.dinky
+11264	Tür	door	PostOffice.dinky
+11265	die Postamtstür	the Post Office door	PostOffice.dinky
+11266	Verlasse	Leave	PostOffice.dinky
+11267	Verlasse das Postamt	Leave the Post Office	PostOffice.dinky
+11268	Klebeband	tape	PostOffice.dinky
+11269	Klebeband	tape	PostOffice.dinky
+11270	Waage	scale	PostOffice.dinky
+11271	Briefkasten	mail drop	PostOffice.dinky
+11272	Kalender	calendar	PostOffice.dinky
+11273	Wichtige Nachricht	important notice	PostOffice.dinky
+11274	einer wichtigen Nachricht	an important notice	PostOffice.dinky
+11275	Briefkästen	mailboxes	PostOffice.dinky
+11276	Briefkästen	mailboxes	PostOffice.dinky
+11277	zerstörter Briefkasten	destroyed mailbox	PostOffice.dinky
+11278	beschädigter Briefkasten	scuffed up mailbox	PostOffice.dinky
+11279	Kisten	boxes	PostOffice.dinky
+11280	Kisten	boxes	PostOffice.dinky
+11281	Er ist abgestellt.	It's been shut off.	CityHall.dinky
+11282	Selbst wenn er funktionieren würde, würde ich nicht daraus trinken.	Even if it was working, I wouldn't drink from it.	CityHall.dinky
+11283	Es ist das Thimbleweed Dreiländer Siegel!	It's the Thimbleweed tri-county seal!	CityHall.dinky
+11284	Es ist majestätisch!	It's majestic!	CityHall.dinky
+11285	Ein alter Hoschi der ziemlich sicher tot ist. 	That's some old dude who I'm pretty sure is dead. 	CityHall.dinky
+11286	Ich weiß zwar nicht wer das ist, aber er sieht nicht gerade repräsentativ aus.	I don't know who he is, but he doesn't look very presidential.	CityHall.dinky
+11287	Ziemlich sicher war das beim Rahmen mit dabei.	Pretty sure that came with the frame.	CityHall.dinky
+11288	Tür	door	CityHall.dinky
+11289	Verlasse	Leave	CityHall.dinky
+11290	Verlassen Stadthalle	Leave City Hall	CityHall.dinky
+11291	Trinkbrunnen	drinking fountain	CityHall.dinky
+11292	Siegel	seal	CityHall.dinky
+11293	Sheriff's Büro Tür	Sheriff's Office door	CityHall.dinky
+11294	der Tür zum Büro des Sheriff's	the Sheriff's Office door	CityHall.dinky
+11295	Betrete	Enter	CityHall.dinky
+11296	Betrete das Büro des Sheriff's	Enter the Sheriff's Office	CityHall.dinky
+11297	Bürotür des Pathologen	Coroner's Office door	CityHall.dinky
+11298	der Tür zum Büro des Pathologen	the Coroner's Office door	CityHall.dinky
+11299	Betrete	Enter	CityHall.dinky
+11300	Betrete das Büro des Pathologen	Enter the Coroner's Office	CityHall.dinky
+11301	Gemälde	painting	CityHall.dinky
+11302	Gemälde	painting	CityHall.dinky
+11303	Diese Dinger waren gruselig. Ich bin so froh, dass sie deaktiviert wurden.	These things were creepy. I'm glad they were deactivated.	QuickiePalOutside.dinky
+11304	Ich hörte, die haben tatsächlich deine Filmleihe aufgezeichnet und sie mit unbekannten Firmen geteilt. **FRÖSTEL**	I heard they actually tracked your movie rentals and shared the information with unknown companies. **SHIVER**	QuickiePalOutside.dinky
+11305	Quickie Pal Tür	Quickie Pal door	QuickiePalOutside.dinky
+11306	der Quickie Pal Tür	the Quickie Pal door	QuickiePalOutside.dinky
+11307	Betrete	Enter	QuickiePalOutside.dinky
+11308	Betrete das Quickie Pal	Enter the Quickie Pal	QuickiePalOutside.dinky
+11309	Hauptstraße	Main Street	QuickiePalOutside.dinky
+11310	Toilettentür	bathroom door	QuickiePalOutside.dinky
+11311	der Toilettentür	the bathroom door	QuickiePalOutside.dinky
+11312	Betrete	Enter	QuickiePalOutside.dinky
+11313	Betrete Toilette	Enter bathroom	QuickiePalOutside.dinky
+11314	Ausblick	vista	QuickiePalOutside.dinky
+11315	MovieTron 3000™	MovieTron 3000™	QuickiePalOutside.dinky
+11316	dem MovieTron 3000™	the MovieTron 3000™	QuickiePalOutside.dinky
+11317	Es ist ein altes Ransome the Clown Plakat.	It's an old Ransome the Clown poster.	Alleyway.dinky
+11318	Ich denke ich vermisse seine brillianten Satireaufführungen am meisten.	I think I miss his brilliant performance satire most of all.	Alleyway.dinky
+11319	Irgendwie künstlerisch, aber ich denke nicht das Natalie das sucht.	Kind of artsy, but I don't think Natalie will want this one.	Alleyway.dinky
+11320	Es ist ein Ransome the Clown Plakat!	It's a Ransome the Clown poster!	Alleyway.dinky
+11321	Das ist ein ziemlich beschissenes Foto. No one's going to know it's Ransome.	That's a pretty crappy photo. No one's going to know it's Ransome.	Alleyway.dinky
+11322	Das ist ein ziemlich beschissenes Foto. No one's going to know it's Ransome.	That's a pretty crappy photo. No one's going to know it's Ransome.	Alleyway.dinky
+11323	Irgendwie künstlerisch, aber ich denke nicht das Natalie das sucht.	Kind of artsy, but I don't think Natalie will want this one.	Alleyway.dinky
+11324	Ich denke nicht, dass das rund genug ist.	I don't think this is round enough.	Alleyway.dinky
+11325	Aussergewöhnlich sauber für einen Mülltonne. Kein bisschen eklig.	It's actually pretty clean for a trash can. Not disgusting at all.	Alleyway.dinky
+11326	Das ist die zweitsauberste Mülltonne, den ich je gesehen habe.	This is the second cleanest trash can I've ever seen.	Alleyway.dinky
+11327	Obwohl sie schön sauber ist, bin ich nicht erpischt hinein zu sehen.	It may be clean, but I'm not interested in looking inside.	Alleyway.dinky
+11328	Ich denke nicht dass das Öffnen von Mülltonnen zu meiner Jobbeschreibung gehört.	I don't think opening trash cans is part of my job description.	Alleyway.dinky
+11329	Da ist nichts lustiges an einer Katze im Karton. Or no cat in a box.	Nothing funny about a cat in a box. Or no cat in a box.	Alleyway.dinky
+11330	Immer noch nur ein leerer Karton.	It's still just an empty box.	Alleyway.dinky
+11331	Das ist die Hintertür zum Diner. Stets abgeschlossen.	It's the back door to the Diner. It's always locked.	Alleyway.dinky
+11332	Abgeschlossen.	It's locked.	Alleyway.dinky
+11333	Oh, ein ThimbleCon '88 Plakat!	Ooh, a ThimbleCon 88 poster!	Alleyway.dinky
+11334	Das würde sich super in meinem MMucasFlem Büro machen, falls Jay Bane es mich aufhängen lässt.	This would look great in my MMucasFlem office, if Jay Bane will let me put it up.	Alleyway.dinky
+11335	Es ist festgeklebt und ich bekomme es nicht ab.	It's glued on and I can't pull it off.	Alleyway.dinky
+11336	Hi Ransome!	Hi Ransome!	Alleyway.dinky
+11337	Möglicherweise könnte das Wasser den Kleber auflösen.	Maybe the water will dissolve the glue.	Alleyway.dinky
+11338	Das hat geklappt! Ohne auch nur eines der Plakate zu beschädigen.	That worked! And without damaging either poster.	Alleyway.dinky
+11339	Hi Ransome!	Hi Ransome!	Alleyway.dinky
+11340	Es ist zurück in seiner ursprünglichen Position.	It's back to its original setting.	Alleyway.dinky
+11341	Schätze Sandy oder Dave habens rausgefunden.	Guess Sandy or Dave figured it out.	Alleyway.dinky
+11342	Das Ventil ist voll geöffnet!	The valve is set to full on!	Alleyway.dinky
+11343	Es ist ein altes verrostetes Ventil. Drauf steht “Thimbleweed Park Gas Company, Nicht anfassen”.	It's a rusty old valve. It says “Thimbleweed Park Gas Company, Do Not Touch”.	Alleyway.dinky
+11344	Es klemmt. Ich kann es nicht bewegen.	It's stuck. I can't move it.	Alleyway.dinky
+11345	Es klemmt wieder.	It's stuck again.	Alleyway.dinky
+11346	Plakat	poster	Alleyway.dinky
+11347	Ransome the Clown Plakat	Ransome the Clown poster	Alleyway.dinky
+11348	Plakatrand	poster edge	Alleyway.dinky
+11349	Ransome the Clown Plakat	Ransome the Clown poster	Alleyway.dinky
+11350	Ransome the Clown Plakat	Ransome the Clown poster	Alleyway.dinky
+11351	Mülltonne	trash can	Alleyway.dinky
+11352	Kiste	box	Alleyway.dinky
+11353	Hauptstraße	Main Street	Alleyway.dinky
+11354	Tür	door	Alleyway.dinky
+11355	der Hintertür des Diners	the Diner back door	Alleyway.dinky
+11356	Plakat	poster	Alleyway.dinky
+11357	ThimbleCon Plakat	ThimbleCon poster	Alleyway.dinky
+11358	Ransome the Clown Plakat	Ransome the Clown poster	Alleyway.dinky
+11359	Ventil	valve	Alleyway.dinky
+11360	Gas Ventil	gas valve	Alleyway.dinky
+11361	Es ist wieder Zeit für die ThimbleCon mit der ThimbleCon '88!	It's time to do the ThimbleCon with ThimbleCon '88!	AStreet.dinky
+11362	Sci-fi Shows und Filme, Comicbücher, und die neueste Computer- und Videospieltechnologie!	Sci-fi shows and movies, comic books, and the latest computer and video game technology!	AStreet.dinky
+11363	Hol dir deine Tickets, bevor sie ausverkauft sind.	Get your tickets before they are all gone.	AStreet.dinky
+11364	Bitte hören Sie auf, Ihre alten Dosen und Flaschen in den Hinterhof meines Bücherladens zu werfen.	Please stop throwing your old cans and bottles into the backyard of my bookstore.	AStreet.dinky
+11365	Ich weiß wie ich dich verfluchen kann!	I know how to curse you!	AStreet.dinky
+11366	Gesucht - Kleiderspenden	Wanted - Clothes Donations	AStreet.dinky
+11367	Hilf Lenore mit stilvoller Kleidung.	Help Lenore out with some classy clothes.	AStreet.dinky
+11368	Am liebsten ungetragen, aber ich schätze ich kann nicht wählerisch sein.	I'd rather you hadn't worn them, but I guess I can't be picky.	AStreet.dinky
+11369	Safely First Savings - Wo sorgsam Sparen schlausam Sparen ist!	Safely First Savings - Where saving safely is saving smartly!	AStreet.dinky
+11370	Der Aktienmarkt schießt in die Höhe, wir erwarten nicht, dass er allzubald wieder runter kommt!	The stock market is soaring, we don't see it coming down anytime soon!	AStreet.dinky
+11371	Ihr Sheriff will Sie umweltbewusst and rein-lein!	Your sheriff wants you to be green and clean-a-reno!	AStreet.dinky
+11372	Keine Müllentsorgung auf der Landstraße oder Beschmieren von Geschäftsfassaden!	Don't litter on the highway or vandalize the storefronts!	AStreet.dinky
+11373	Die neuesten PillowBears™ sind fast schon da!	The latest PillowBears™ are almost here!	AStreet.dinky
+11374	Neue Farben für 1988!	New colors for 1988!	AStreet.dinky
+11375	Pigeon Sisters Klempnerei	Pigeon Sisters Plumbing	AStreet.dinky
+11376	'Also lassen Sie uns Ihr Wasserleck stopfen'	'So let us fix your leaking waters'	AStreet.dinky
+11377	'Nichts ist schneller'	'Nothing is faster'	AStreet.dinky
+11378	'als die Pigeon-Töchter'	'than the Pigeon daughters'	AStreet.dinky
+11379	Suche nach Liebe	Looking for Love	AStreet.dinky
+11380	Suche die Person, welche letzte Nacht am Aussichtspunkt Ausschau hielt.	Seeking the person hanging out at the Vista last night.	AStreet.dinky
+11381	Ich denke, wir haben da möglicherweise eine Verbindung.	I think we might have a connection.	AStreet.dinky
+11382	Razor and the Scummettes spielen live bei The Hitchin' Post!	Razor and the Scummettes playing live at The Hitchin' Post!	AStreet.dinky
+11383	Begleitet von GT and the Suction Cups.	Support by GT and the Suction Cups.	AStreet.dinky
+11384	Mechanisches Bullenreiten gratis die ganze Nacht!	Mechanical bull rides free all night!	AStreet.dinky
+11385	Reisender Zirkus: Stupendous Brothers	Stupendous Brothers Traveling Circus	AStreet.dinky
+11386	Hauptattraktion - Ransome the Clown!	Headline Act - Ransome the Clown!	AStreet.dinky
+11387	Familienvorstellung beginnt um 14 Uhr.	Family show starts at 2pm.	AStreet.dinky
+11388	Drehen Sie KSCUM 198.7 FM rein, für die knorkigsten Hits aus der Umgebung!	Turn your dials to KSCUM 198.7 FM for the gnarliest hits from local artists!	AStreet.dinky
+11389	DJ Cassie meint 'Ich hoffe Ihr mögt Tuna Head!'	DJ Cassie says 'I hope you like Tuna Head!'	AStreet.dinky
+11390	Zeremonie in der Stadthalle	Ceremony at City Hall	AStreet.dinky
+11391	Stadthalle wird umbenannt in Chuck E. Edmund Stadthalle...	City Hall is being renamed the Chuck E. Edmund City Hall...	AStreet.dinky
+11392	...in Gedenken an alles was Chuck für die Stadt tat.	...in honor of everything Chuck has done for the town.	AStreet.dinky
+11393	Werd wieder gesund Chuck. Wir vermissen dich.	Get better Chuck. We miss you.	AStreet.dinky
+11394	Das ist nur Text. Ich brauche was beeindruckenderes für ein gutes Foto.	This is just text. I need something more impressive for a good photo.	AStreet.dinky
+11395	Ich brauche etwas bildlicheres als eine Notiz.	I need something more photographic than a note.	AStreet.dinky
+11396	Das ist zu stark verwittert für ein gutes Foto.	It's too badly weathered for a good photo.	AStreet.dinky
+11397	Ein wenig unheimlich, aber nicht wirklich eklig.	It's a bit scary, but not really disgusting.	AStreet.dinky
+11398	Eine brennende Mülltonne!	It's a burning trash can!	AStreet.dinky
+11399	Autsch! Mein Zeh!	Ouch! My toe!	AStreet.dinky
+11400	Etwas zu heiß für meine Inventarecke.	That's too hot to put in my inventory-hole.	AStreet.dinky
+11401	Ich bin reich!	I'm rich!	AStreet.dinky
+11402	Ich wünschte die Leute würden recyclen.	I wish people would recycle.	AStreet.dinky
+11403	Ich weiß, dass jede planetenweite ökologische Katastrophe hundert oder mehr Jahre entfernt liegt, aber dennoch.	I know any planet-wide ecological catastrophe is a hundred or more years away, but still.	AStreet.dinky
+11404	Scheint als läuft bei Madame Morena einer ihrer nie endenden okkulten Ausverkäufe.	Looks like Madame Morena is having one of her never ending occult sales.	AStreet.dinky
+11405	Scheinbar hat Madame Morena ihre “gespenstischen” Bewegungsmelder abgestellt.	Looks like Madame Morena turned off her “spooky” motion sensors.	AStreet.dinky
+11406	Sie hat damit niemanden hinters Licht geführt.	She wasn't fooling anyone with those.	AStreet.dinky
+11407	Und ja, ich habe Gänsefüßchen benutzt.	And yes, I was using air-quotes.	AStreet.dinky
+11408	Ich denke nicht, dass das ekelhaft genug für Natalie ist.	I don't think this is disgusting enough for Natalie.	AStreet.dinky
+11409	Gefüllt bis zum Rand mit übelriechendem MÜll.	Filled to the brim with smelly trash.	AStreet.dinky
+11410	ThimbleCon Werbung	ThimbleCon advertisement	AStreet.dinky
+11411	einer	a	AStreet.dinky
+11412	Offizielle Bekanntmachung	official notice	AStreet.dinky
+11413	eine	an	AStreet.dinky
+11414	Private Werbung	personals advertisement	AStreet.dinky
+11415	eine	a	AStreet.dinky
+11416	Bank Werbung	banking advertisement	AStreet.dinky
+11417	eine	a	AStreet.dinky
+11418	Mitteilung des öffentlichen Dienst	public service announcement	AStreet.dinky
+11419	eine	a	AStreet.dinky
+11420	PillowBear™ Werbung	PillowBear™ advertisement	AStreet.dinky
+11421	einer	a	AStreet.dinky
+11422	Klempner Werbung	plumbing advertisement	AStreet.dinky
+11423	einer	a	AStreet.dinky
+11424	Kontaktannounce	missed connection ad	AStreet.dinky
+11425	einer	a	AStreet.dinky
+11426	Alte Werbung	old advertisement	AStreet.dinky
+11427	eine	an	AStreet.dinky
+11428	Verwitterte Werbung	weathered advertisement	AStreet.dinky
+11429	eine	a	AStreet.dinky
+11430	Radiowerbung	radio advertisement	AStreet.dinky
+11431	einer	a	AStreet.dinky
+11432	Offizielle Ansage	official announcement	AStreet.dinky
+11433	eine	an	AStreet.dinky
+11434	Postamtstür	Post Office door	AStreet.dinky
+11435	der Postamtstür	the Post Office door	AStreet.dinky
+11436	Betrete	Enter	AStreet.dinky
+11437	Betrete Postamt	Enter Post Office	AStreet.dinky
+11438	Nickel News Tür	Nickel News door	AStreet.dinky
+11439	der Nickel News Tür	the Nickel News door	AStreet.dinky
+11440	Betrete	Enter	AStreet.dinky
+11441	Betrete Nickel News	Enter Nickel News	AStreet.dinky
+11442	Notiz	note	AStreet.dinky
+11443	Notiz	note	AStreet.dinky
+11444	Notiz	note	AStreet.dinky
+11445	Notiz	note	AStreet.dinky
+11446	Notiz	note	AStreet.dinky
+11447	Notiz	note	AStreet.dinky
+11448	Notiz	note	AStreet.dinky
+11449	Notiz	note	AStreet.dinky
+11450	Notiz	note	AStreet.dinky
+11451	Notiz	note	AStreet.dinky
+11452	Notiz	note	AStreet.dinky
+11453	Notiz	note	AStreet.dinky
+11454	Mülltonne	trash can	AStreet.dinky
+11455	Groschen	dime	AStreet.dinky
+11456	Hauptstraße	Main Street	AStreet.dinky
+11457	Flasche	bottle	AStreet.dinky
+11458	Schild	sign	AStreet.dinky
+11459	dem Buchladen Ausverkaufsschild	the bookstore sale sign	AStreet.dinky
+11460	Buchladentür	bookstore door	AStreet.dinky
+11461	die Buchladentür	the bookstore door	AStreet.dinky
+11462	Betrete	Enter	AStreet.dinky
+11463	Betrete okkulten Buchladen	Enter Occult Bookstore	AStreet.dinky
+11464	Müllcontainer	dumpster	AStreet.dinky
+11465	Fass die Bücher nicht an, außer du weißt was du willst!	Don't touch the books unless you know what you want!	BookStore.dinky
+11466	Nur eine kleine Leiter.	Just a small ladder.	BookStore.dinky
+11467	Nur eine große, wackelig wirkende Leiter.	Just a tall, rickety-looking ladder.	BookStore.dinky
+11468	Sieht aus wie der tote Cousin Ted aus dem neuen Spiel das ich so liebe.	Kind of looks like Dead Cousin Ted from that new game I love.	BookStore.dinky
+11469	Gruselig.	Creepy.	BookStore.dinky
+11470	Ich verstehe nicht, warum irgendwer mit Puppen spielt.	Not sure why anyone wants to play with dolls.	BookStore.dinky
+11471	Das ist dieses Buch über Fortran, eine 30 Jahre alte Computersprache.	It's that book on Fortran, a 30-year-old computer language.	BookStore.dinky
+11472	Das ist ein Buch über Fortran, eine 30 Jahre alter Computersprache.	It's a book on Fortran, a 30-year-old computer language.	BookStore.dinky
+11473	Gute Aussicht von hier oben. Ich kann das S&D Diner sehen.	Nice view from up here. I can see the S&D Diner.	BookStore.dinky
+11474	Da steht...	It reads...	BookStore.dinky
+11475	“Gruselige Augen.”	“Creepy eyes.”	BookStore.dinky
+11476	“Gruselige Nase.”	“Creepy nose.”	BookStore.dinky
+11477	“Gruselige Füße.”	“Creepy feet.”	BookStore.dinky
+11478	“Gruselige Zehen.”	“Creepy toes.”	BookStore.dinky
+11479	“  - Fröhlichen Valentinstag”	“  - Happy Valentine's Day”	BookStore.dinky
+11480	bla bla bla bla...	bla bla bla bla...	BookStore.dinky
+11481	Tür	door	BookStore.dinky
+11482	der Buchladentür	the bookstore door	BookStore.dinky
+11483	Verlasse	Leave	BookStore.dinky
+11484	Verlasse den Buchladen	Leave the bookstore	BookStore.dinky
+11485	Leiter	ladder	BookStore.dinky
+11486	Leiter	ladder	BookStore.dinky
+11487	Mumie	mummy	BookStore.dinky
+11488	Puppe	doll	BookStore.dinky
+11489	Lerne Fortran	Learning Fortran	BookStore.dinky
+11490	ein Fortran Buch	a Fortran book	BookStore.dinky
+11491	Fenster	window	BookStore.dinky
+11492	der Stadt	the town	BookStore.dinky
+11493	Das ist in Benutzung.	It's in use.	Bathroom.dinky
+11494	Ich glaube nicht, dass der Strom an ist.	I don't think the power is on.	Bathroom.dinky
+11495	Das ist ne eklige Toilette!	It's a gross toilet!	Bathroom.dinky
+11496	Zu dunkel um zu sehen.	It's too dark to see.	Bathroom.dinky
+11497	Das ist ein ekliger Toilettengriff!	It's a gross toilet handle!	Bathroom.dinky
+11498	Zu dunkel um zu sehen.	It's too dark to see.	Bathroom.dinky
+11499	Das ist ein ekliger Abfluss!	It's a gross sink!	Bathroom.dinky
+11500	Zu dunkel um zu sehen.	It's too dark to see.	Bathroom.dinky
+11501	Das ist so lange kaputt, wie ich denken kann.	This has been broken for as long as I can remember.	Bathroom.dinky
+11502	Runter in den Gulli.	Down the drain.	Bathroom.dinky
+11503	Ein ekliger Wasserhahn!	It's a gross faucet!	Bathroom.dinky
+11504	Zu dunkel um zu sehen.	It's too dark to see.	Bathroom.dinky
+11505	Foto muss besser sein, als Wasser von nem ekligen Wasserhahn.	Photo needs to be better than water from a gross faucet.	Bathroom.dinky
+11506	Foto muss besser sein, als Wasser von nem ekligen Abfluss.	Photo needs to be better than water from a gross sink.	Bathroom.dinky
+11507	Zu dunkel um zu sehen.	It's too dark to see.	Bathroom.dinky
+11508	Das ist so lange kaputt, wie ich denken kann.	This has been broken for as long as I can remember.	Bathroom.dinky
+11509	Das sollte es gewesen sein.	That should do it.	Bathroom.dinky
+11510	Eine Rolle Toilettenpapier in der “langweilig für Katzen” Position.	It's a roll of toilet paper in the “boring for cats” position.	Bathroom.dinky
+11511	Eine Rolle Toilettenpapier in der “Spaß für Katzen” Position.	It's a roll of toilet paper in the “fun for cats” position.	Bathroom.dinky
+11512	Eine Rolle Toilettenpapier.	It's a roll of toilet paper.	Bathroom.dinky
+11513	Zu dunkel um zu sehen.	It's too dark to see.	Bathroom.dinky
+11514	Ein Schraubendreher!	It's a screwdriver!	Bathroom.dinky
+11515	Zu dunkel um zu sehen.	It's too dark to see.	Bathroom.dinky
+11516	Zu dunkel um zu sehen.	It's too dark to see.	Bathroom.dinky
+11517	Zu dunkel um zu sehen.	It's too dark to see.	Bathroom.dinky
+11518	Ich kann mich selbst durch den Schmutz sehen.	I can see myself through the grime.	Bathroom.dinky
+11519	Lächeln!	Smile!	Bathroom.dinky
+11520	Lächeln!	Smile!	Bathroom.dinky
+11521	Ich denke nicht, dass das ekelhaft genug für Natalie ist.	I don't think this is disgusting enough for Natalie.	Bathroom.dinky
+11522	Keinesfalls schau ich da rein, ich kanns schon von hier riechen!	No way am I going to look in there, I can smell it from here!	Bathroom.dinky
+11523	Zu dunkel um zu sehen.	It's too dark to see.	Bathroom.dinky
+11524	Toilettentür	bathroom door	Bathroom.dinky
+11525	die Toilettentür	the bathroom door	Bathroom.dinky
+11526	Verlasse	Leave	Bathroom.dinky
+11527	Verlasse Toilette	Leave bathroom	Bathroom.dinky
+11528	Lichtschalter	light switch	Bathroom.dinky
+11529	Klo	toilet	Bathroom.dinky
+11530	Etwas	something	Bathroom.dinky
+11531	Toilettengriff	toilet handle	Bathroom.dinky
+11532	Etwas	something	Bathroom.dinky
+11533	Abfluss	sink	Bathroom.dinky
+11534	Etwas	something	Bathroom.dinky
+11535	Wasserhahn	faucet	Bathroom.dinky
+11536	Etwas	something	Bathroom.dinky
+11537	Toilettenpapier	toilet paper	Bathroom.dinky
+11538	Etwas	something	Bathroom.dinky
+11539	Toilettenpapier	toilet paper	Bathroom.dinky
+11540	Schraubendreher	screwdriver	Bathroom.dinky
+11541	Etwas	something	Bathroom.dinky
+11542	Spiegel	mirror	Bathroom.dinky
+11543	Etwas	something	Bathroom.dinky
+11544	Ich	me	Bathroom.dinky
+11545	Mülleimer	trash can	Bathroom.dinky
+11546	Etwas	something	Bathroom.dinky
+11547	^Du musst immer noch %d weitere Fotos bringen bevor du in deinen Job als Spieleentwickler bei MMucasFlem zurückkehren kannst.	^You need to turn in %d more photos before returning to your game developer job at MMucasFlem.	StartScreen.dinky
+11548	Ich finde besser diese Kamera, werfe einen Blick auf die Liste und lege los.	I better find that camera, take a look at the list, and get cracking.	StartScreen.dinky
+11549	Gas ist zu hoch aufgedreht!	Gas is on too high!	Diner.dinky
+11550	Agggg!	Agggg!	Diner.dinky
+11551	Mann oh Mann oh Mann!	Man oh man oh man!	Diner.dinky
+11552	Neeeeiiiin!	Noooo!	Diner.dinky
+11553	Kann jemand mal das Gas abstellen!	Someone turn down the gas!	Diner.dinky
+11554	Unten! Bleib unten!	Down! Stay down!	Diner.dinky
+11555	Das ist ein Kobe Rind Hot Dog.	It's a Kobe beef hot dog.	Diner.dinky
+11556	Das ist ein Suise porc Hot Dog.	It's a Swiss pork hot dog.	Diner.dinky
+11557	Das ist ein Kräuterhähnchen Hot Dog.	It's a herb and chicken hot dog.	Diner.dinky
+11558	Das ist ein Dijon-Khale-Veggie Dog.	It's a French mustard and kale veggie dog.	Diner.dinky
+11559	Es ist auf KSCUM eingestellt. So soll es sein!	It's tuned to KSCUM. As it should be!	Diner.dinky
+11560	Das braucht mehr KSCUM!	Needs more KSCUM!	Diner.dinky
+11561	Extravagante Auswahl! Alle möglichen Gourmet Hot Dogs.	Fancy stuff! All kinds of gourmet hot dogs.	Diner.dinky
+11562	Die Qualität muss gestiegen sein, wenn Dave und Sandy all diese Auszeichnungen gewonnen haben.	Quality sure has gone up since Dave and Sandy won all those awards.	Diner.dinky
+11563	Das ist aber ne Menge Feuer!	That's a lot of fire!	Diner.dinky
+11564	Sieht gefährlich aus! Alles für ne Story.	Looks dangerous! Anything for a story.	Diner.dinky
+11565	Tür	door	Diner.dinky
+11566	der Diner Tür	the Diner door	Diner.dinky
+11567	Verlasse	Leave	Diner.dinky
+11568	Verlasse das Diner	Leave the Diner	Diner.dinky
+11569	Hot Dog	hot dog	Diner.dinky
+11570	Hot Dog	hot dog	Diner.dinky
+11571	Hot Dog	hot dog	Diner.dinky
+11572	Hot Dog	hot dog	Diner.dinky
+11573	Radio	radio	Diner.dinky
+11574	Karte	menu	Diner.dinky
+11575	der Diner Karte	the Diner menu	Diner.dinky
+11576	Feuerbälle	fireballs	Diner.dinky
+11577	Dave and the fireballs	Dave and the fireballs	Diner.dinky
+11578	Nur eine Schublade.	Just a drawer.	SheriffsOffice.dinky
+11579	Nur ein seltsamer Polizeibericht über den verlassenen Zirkus. Welcher nicht verlassen ist.	Just the odd police report about the abandoned circus. Which isn't abandoned.	SheriffsOffice.dinky
+11580	Nur ein paar alte Polizeiakten.	Just some old police files.	SheriffsOffice.dinky
+11581	Nur ein paar alte Polizeiakten.	Just some old police reports.	SheriffsOffice.dinky
+11582	Berichte über kleinere Gesetzesübertretungen.	Reports of minor infractions.	SheriffsOffice.dinky
+11583	Das ist seltsam? Da ist ein Polizeibericht über Ärger beim verlassenen Zirkus?	That's odd? There is a police report for trouble at the abandoned circus?	SheriffsOffice.dinky
+11584	Der Zirkus ist nicht verlassen? Ransome war nie berühmter.	The circus isn't abandoned? Ransome has never been more popular.	SheriffsOffice.dinky
+11585	Nur ein paar alte Polizeiakten.	Just some old police files.	SheriffsOffice.dinky
+11586	Nur ein paar alte Polizeiberichte.	Just some old police reports.	SheriffsOffice.dinky
+11587	Berichte über kleinere Gesetzesübertretungen.	Reports of minor infractions.	SheriffsOffice.dinky
+11588	Öffne diese Tür!	Open this door!	SheriffsOffice.dinky
+11589	Öffne diese Tür jetzt!	Open this door now!	SheriffsOffice.dinky
+11590	Öffne das Türlein!	Open this door-a-reno!	SheriffsOffice.dinky
+11591	Ich bin ein Vertreter der Gesetzlein!	I'm an officer of the law-a-reno!	SheriffsOffice.dinky
+11592	Ich könnte dir ein Strafzettellein verpassen.	I could write-a-reno you a ticket for this.	SheriffsOffice.dinky
+11593	O-lein! O-lein! O-lein-Alarm-o-lein!	A-reno! A-reno! A-reno-alert-a-reno!	SheriffsOffice.dinky
+11594	Warum hab ich gerade heute mein Revolverlein nicht dabei?	Why didn't I bring my service-revolver-a-reno today?	SheriffsOffice.dinky
+11595	Verdammtlein!	Dagnabbit-a-reno!	SheriffsOffice.dinky
+11596	Waszurlein!	What-the-a-reno!	SheriffsOffice.dinky
+11597	Verdammtlein!	Dagnabbit-a-reno!	SheriffsOffice.dinky
+11598	Ich komm an das Radiolein nicht ran.	I can't reach the radio-a-reno.	SheriffsOffice.dinky
+11599	Delores!!	Delores!!	SheriffsOffice.dinky
+11600	Die Kindlein dieser Tage!	Kids-a-reno these days!	SheriffsOffice.dinky
+11601	Wo ist mein Schlüssel?	Where's my key?	SheriffsOffice.dinky
+11602	Waszurlein!	What-the-a-reno!	SheriffsOffice.dinky
+11603	Fass daslein nicht an.	Don't touch that-a-reno.	SheriffsOffice.dinky
+11604	Hmpf!	Humph!	SheriffsOffice.dinky
+11605	Die Kindlein dieser Tage!	Kids-a-reno these days!	SheriffsOffice.dinky
+11606	Warum?	Why?	SheriffsOffice.dinky
+11607	Bitte verschwindelein.	Please leave-a-reno.	SheriffsOffice.dinky
+11608	Was zurlein!	What-the-a-reno!	SheriffsOffice.dinky
+11609	Ich seh ihnle nicht?	I don't see him-a-who?	SheriffsOffice.dinky
+11610	Der Sheriff ist nicht hierle?	Sheriff's not here-a-who?	SheriffsOffice.dinky
+11611	Der Sheriff muss rausle gegangle sein?	Sheriff must have stepped-a-who out-a-who?	SheriffsOffice.dinky
+11612	Wo ist das Schlüsslein?	Where is the key-a-reno?	SheriffsOffice.dinky
+11613	Hast du das Schlüsslein?	Do you have-a-reno the key?	SheriffsOffice.dinky
+11614	Ich muss hier rauslein.	I need to get out-a-reno.	SheriffsOffice.dinky
+11615	Ich hab das Schlüsslein nicht!	I don't have-a-reno the key!	SheriffsOffice.dinky
+11616	Wo ist das Schlüssle?	Where is the key-a-who?	SheriffsOffice.dinky
+11617	Hast du das Schlüssle?	Do you have-a-who the key?	SheriffsOffice.dinky
+11618	Du musst rausle.	You need to get out-a-who.	SheriffsOffice.dinky
+11619	Ich hab das Schlüssle nicht!	I don't have-a-who the key!	SheriffsOffice.dinky
+11620	Diese Dinger waren gruselig. Ich bin so froh, dass sie deaktiviert wurden.	These things were creepy. I'm glad they were deactivated.	SheriffsOffice.dinky
+11621	Das ist ein Gesucht Plakat.	It's a wanted poster.	SheriffsOffice.dinky
+11622	Ich glaube das kam mit der Aufhängung.	I think that one came in the box.	SheriffsOffice.dinky
+11623	Gesucht: Ein Gesucht Plakat. Ohne Belohnung.	Wanted: One wanted poster. No reward.	SheriffsOffice.dinky
+11624	Das ist ein offizielles Polizeitelefon.	It's an official police phone.	SheriffsOffice.dinky
+11625	Hey! Das ist ein offizielles Polizei-lein-fon. Jemand könnte mit einem Notfalllein anrufen.	Hey! That's an official police-a-reno phone. Someone might call in with an emergency-a-reno.	SheriffsOffice.dinky
+11626	Das ist ein offizielles "Polizei-lein-fon". Jemand könnte mit einem "Notfalllein" anrufen.	That's an official “police-a-reno” phone. Someone might call in with an “emergency-a-reno”.	SheriffsOffice.dinky
+11627	Das ist ein offizielles Polizei Telefon. Jemand könnte mit einem Notfall anrufen.	That's an official police phone. Someone might call in with an emergency.	SheriffsOffice.dinky
+11628	Es ist ein Schrank!	It's a cabinet!	SheriffsOffice.dinky
+11629	Es ist ein Schrank!	It's a cabinet!	SheriffsOffice.dinky
+11630	Das ist ein großer Schlüssel.	It's a large key.	SheriffsOffice.dinky
+11631	Fass nicht das Schlüsslein an.	Don't touch the key-a-reno.	SheriffsOffice.dinky
+11632	Es ist KSCUM reingedreht. So wie es sein soll!	It's tuned to KSCUM. As it should be!	SheriffsOffice.dinky
+11633	Das braucht mehr KSCUM!	Needs more KSCUM!	SheriffsOffice.dinky
+11634	Ich würde es hassen, hier eingesperrt zu sein.	I'd hate to get locked up in here.	SheriffsOffice.dinky
+11635	Abgeschlossen.	It's locked.	SheriffsOffice.dinky
+11636	Ich möchte ihn nicht rauslassen, solange sie sich so aufregen.	I don't want to let him out while they are so upset.	SheriffsOffice.dinky
+11637	Sie sehen verärgert aus.	They look upset.	SheriffsOffice.dinky
+11638	ArrestTron 3000™	ArrestTron 3000™	SheriffsOffice.dinky
+11639	dem ArrestTron 3000™	the ArrestTron 3000™	SheriffsOffice.dinky
+11640	Tür	door	SheriffsOffice.dinky
+11641	Verlasse	Leave	SheriffsOffice.dinky
+11642	Verlasse das Büro des Sheriffs	Leave the Sheriff's Office	SheriffsOffice.dinky
+11643	Plakat	poster	SheriffsOffice.dinky
+11644	Plakat	poster	SheriffsOffice.dinky
+11645	Plakat	poster	SheriffsOffice.dinky
+11646	Telefon	phone	SheriffsOffice.dinky
+11647	Schrank	cabinet	SheriffsOffice.dinky
+11648	Schrank	cabinet	SheriffsOffice.dinky
+11649	Schlüssel	key	SheriffsOffice.dinky
+11650	Radio	radio	SheriffsOffice.dinky
+11651	Zellentür	jail door	SheriffsOffice.dinky
+11652	von der Zellentür	the jail door	SheriffsOffice.dinky
+11653	Sheriff und Pathologe	Sheriff and Coroner	SheriffsOffice.dinky
+11654	dem Duo	the	SheriffsOffice.dinky
+11655	Es ist kurz nach 17 Uhr.	It's just after five o'clock.	Bank.dinky
+11656	Ich denke, das Bild hab ich schonmal gesehen.	I think I've seen this painting somewhere before.	Bank.dinky
+11657	Eindrucksvoll!	Impressive!	Bank.dinky
+11658	Das ist ein Werbeflugblatt der Bank.	It's a promotional bank flyer.	Bank.dinky
+11659	Keine Bankflugblätter übrig.	No bank flyers left.	Bank.dinky
+11660	Das ist Onkel Chuck's “Philipp's Dangerous Dövice.”	It's Uncle Chuck's “Philipp's Dangerous Dövice.”	Bank.dinky
+11661	Ich schätze der Banker bewahrt es sicher auf, sodass sein Pfändungsstück sich nicht in radioaktiven Staub verwandelt.	I guess the banker is keeping it safe so his repossession doesn't turn to radioactive dust.	Bank.dinky
+11662	Das ist ein Bank-Dienst-Telefon.	It's an official bank phone.	Bank.dinky
+11663	Das sollte ich besser nicht tun. Jemand mit dringenden Bankangelegenheiten könnte anrufen.	I probably shouldn't, someone with important bank business might call.	Bank.dinky
+11664	Das ist eine brennende Mülltonne!	It's a burning trash can!	Bank.dinky
+11665	In einer Bank!	In a bank!	Bank.dinky
+11666	Autsch! Mein Zeh!	Ouch! My toe!	Bank.dinky
+11667	Etwas zu heiß für meine Inventarecke.	That's too hot to put in my inventory-hole.	Bank.dinky
+11668	Uhr	clock	Bank.dinky
+11669	Ich denke nicht, dass die Uhr klein genug ist.	I don't think that clock is tiny enough.	Bank.dinky
+11670	Gemälde	painting	Bank.dinky
+11671	Schild	sign	Bank.dinky
+11672	Tür	door	Bank.dinky
+11673	die Banktür	the bank door	Bank.dinky
+11674	Verlasse	Leave	Bank.dinky
+11675	Verlasse die Bank	Leave the bank	Bank.dinky
+11676	Bankflugblätter	bank flyers	Bank.dinky
+11677	einer Menge Bankflugblätter	bank flyers	Bank.dinky
+11678	“Philipp's Dangerous Dövice”	“Philipp's Dangerous Dövice”	Bank.dinky
+11679	Ein Foto über Zerstörung muss viel dramatischer sein.	The demolition photo needs to be way more dramatic.	Bank.dinky
+11680	Banktelefon	bank phone	Bank.dinky
+11681	Mülltonne	trash can	Bank.dinky
+11682	Ein wenig unheimlich, aber nicht wirklich eklig.	It's a bit scary, but not really disgusting.	Bank.dinky
+11683	Da unten ist das Quickie Pal, nur einen Katzensprung entfernt.	There's the Quickie Pal down there, flashing away.	Vista.dinky
+11684	Ich sollte keine Zeit mit Spatzierengehen vertrödeln.	I shouldn't dilly-dally by walking down into the country.	Vista.dinky
+11685	Natalie zählt auf mich, wegen dieser Fotos.	Natalie is counting on me for those photographs.	Vista.dinky
+11686	Ich liebe den Zirkus!	I love the circus!	Vista.dinky
+11687	Ich muss unbedingt die Ransome the Clown's Show sehen, bevor ich zurück zu MMucasFlem Games gehe.	I need to make sure I see Ransome the Clown's show before I go back to MMucasFlem Games.	Vista.dinky
+11688	Das ist das alte Edmund Hotel.	It's the old Edmund Hotel.	Vista.dinky
+11689	Das war Onkel Chucks ganzer Stolz und einzige Freude, bis die Bank es gepfändet hat als er ins Sanatorium eingewiesen wurde.	That was Uncle Chuck's pride and joy until the bank repossessed it when he was committed to the sanitarium.	Vista.dinky
+11690	Dort stellen sie die PillowBears™ her, aber ich denke ein Bild von einem PillowBear™ ist das bessere Foto.	That's where they'll make PillowBears™, but I think an image of a PillowBear™ is a better photo.	Vista.dinky
+11691	Es ist schön zu sehen, dass die Fabrik wieder hoch fährt um PillowBears™ herzustellen.	It's nice to see the factory ramping up again to make PillowBears™.	Vista.dinky
+11692	Die Mansion Mansion ist in einem Top Zustand. Ich brauche ein Foto über Hausbeschädigungen.	The Mansion mansion is in great shape. I need a photo for home demolition.	Vista.dinky
+11693	Das ist wie Thimbleweed's ganz eigenes Chernobyl.	It's like Thimbleweed's own private Chernobyl.	Vista.dinky
+11694	Mein altes Zuhause, bevor es von der Bank gepfändet wurde.	My old home before it was repossessed by the bank.	Vista.dinky
+11695	KSCUM spielt all die Hits.	KSCUM plays all the hits.	Vista.dinky
+11696	Stadt	town	Vista.dinky
+11697	Land	country	Vista.dinky
+11698	Verkehrshütchen	traffic cone	Vista.dinky
+11699	Zirkus	circus	Vista.dinky
+11700	dem Zirkus	the circus	Vista.dinky
+11701	Zirkus	circus	Vista.dinky
+11702	dem Zirkus	the circus	Vista.dinky
+11703	Hotel	hotel	Vista.dinky
+11704	dem Edmund Hotel	the Edmund Hotel	Vista.dinky
+11705	Hotel	hotel	Vista.dinky
+11706	dem Edmund Hotel	the Edmund Hotel	Vista.dinky
+11707	Fabrik	factory	Vista.dinky
+11708	der Fabrik	the factory	Vista.dinky
+11709	Radioaktiver Krater	radioactive crater	Vista.dinky
+11710	Edmund Mansion Mansion	Edmund Mansion mansion	Vista.dinky
+11711	einem radioaktiven Krater	a radioactive crater	Vista.dinky
+11712	unserer alten Mansion Mansion	our old Mansion mansion	Vista.dinky
+11713	Radiostation	radio station	Vista.dinky
+11714	der Radiostation	the radio station	Vista.dinky
+11715	FORTRAN⏎	FORTRAN⏎	Book.dinky
+11716	Eine Einführung⏎	An introduction⏎	Book.dinky
+11717	⏎	⏎	Book.dinky
+11718	Während viele Programmierer FORTRAN heutzutage für eine tote Programmiersprache halten, könnte nichts ferner von der Wahrheit liegen.⏎⏎	While many programmers today consider FORTRAN to be a dead programming language, nothing could be further from the truth.⏎⏎	Book.dinky
+11719	Die Autoren haben keinerlei Zweifel, dass weit in 2020 (und darüber hinaus) FORTRAN an vorderster Front der Computersprachen stehen wird.⏎⏎	The authors have no doubt that well into the 2020's (and beyond) FORTRAN will be at the forefront of all computer languages.⏎⏎	Book.dinky
+11720	Dieses Buch soll als Werkzeug für den modernen Programmierer, mit dem Blick in die Zukunft der Programmierung, dienen.	This book is to serve as a tool for the modern programmer looking for an edge in the future of computer programing.	Book.dinky
+11721	⏎program circle⏎	⏎program circle⏎	Book.dinky
+11722	real r, area⏎	real r, area⏎	Book.dinky
+11723	⏎	⏎	Book.dinky
+11724	c Reads a number and prints⏎	c Reads a number and prints⏎	Book.dinky
+11725	c the area of a circle.⏎	c the area of a circle.⏎	Book.dinky
+11726	⏎	⏎	Book.dinky
+11727	write (*,*) 'Give radius r:'⏎	write (*,*) 'Give radius r:'⏎	Book.dinky
+11728	read  (*,*) r⏎	read  (*,*) r⏎	Book.dinky
+11729	area = 3.14159*r*r⏎	area = 3.14159*r*r⏎	Book.dinky
+11730	write (*,*) 'Area = ', area⏎	write (*,*) 'Area = ', area⏎	Book.dinky
+11731	⏎	⏎	Book.dinky
+11732	stop⏎	stop⏎	Book.dinky
+11733	end⏎	end⏎	Book.dinky
+11734	Nein!	No!	Ending.dinky
+11735	Mir gehts nicht gut...	I don't feel well...	Ending.dinky
+11736	Ich muss mal an die frische Luft...	I'm going to get fresh air...	Ending.dinky
+11737	Oh nein... alles kommt zurück.	Oh no... it's all coming back.	Ending.dinky
+11738	Also...	So...	Ending.dinky
+11739	...ich schätze das ist alles meine Schuld.	...I guess this is all my fault.	Ending.dinky
+11740	Muss ein Fehler in meinem gehackten Spielstand gewesen sein.	It must have been a bug in my hacked savegame.	Ending.dinky
+11741	Ich bin nicht so talentiert wie du.	I don't have the same skills you do.	Ending.dinky
+11742	Wer ist das schon.	Who does.	Ending.dinky
+11743	Du solltest gar nicht hier rüber sehen können...	You weren't supposed to see through to this side...	Ending.dinky
+11744	...aber ich schätze, das bricht jetzt alles zusammen.	...but I guess it's all come crashing down now.	Ending.dinky
+11745	Lass uns schauen, ob wir den Fehler beheben können...	Let's go see if we can apply a patch...	Ending.dinky
+11746	...ich wüsste da schon was.	...I might know just the one.	Ending.dinky
+11747	Delores: Danke, dass du dich dem Thimbleweed Nickel Fotojournalismus Team angeschlossen hast.⏎	Delores: Thanks for joining the Thimbleweed Nickel Photojournalism Team.⏎	Note.dinky
+11748	Dein Auftrag: ich hätte gern die folgenden Fotos für anstehende Berichte:⏎⏎	For your assignment, I'd like you to get the following photos for some upcoming stories:⏎⏎	Note.dinky
+11749	⏎P.S. Danke fürs Aushelfen während deines Urlaubs bei MMucasFlem Games.	⏎P.S. Thanks for helping out while you're on vacation from MMucasFlem Games.	Note.dinky
+11750	Story über den 4. Juli	Story about the 4th of July	Note.dinky
+11751	Kolumne über den Thimbleweed Landkreis	Column about Thimbleweed County	Note.dinky
+11752	Story über Kinderarmut	Story about childhood poverty	Note.dinky
+11753	Foto des Chefredakteurs der Nickel News	Photo of the editor of the Nickel News	Note.dinky
+11754	Action Foto aus der gefährlichen Tierwelt	Action photo of dangerous wildlife	Note.dinky
+11755	Unsere schlechte Trinkwasserqualität	Our bad Thimbleweed drinking water quality	Note.dinky
+11756	Etwas ekliges	Something disgusting	Note.dinky
+11757	Story über Präsident Thomas Jefferson	Story about President Thomas Jefferson	Note.dinky
+11758	Ein Blick auf die toten Sprachen der Antike	A look at the dead languages of antiquity	Note.dinky
+11759	Exposé über den Spaß im Leben mit Katzen	Exposé on the humor of living with cats	Note.dinky
+11760	Vandalismus an Staatseigentum	Government property vandalism	Note.dinky
+11761	Beitrag über die Schließung des Edmund Hotels	Piece on the closing of the Edmund Hotel	Note.dinky
+11762	Ein gutes Beispiel von Extremitäten	A good example of proximal phalanges	Note.dinky
+11763	Bissiger Abriss über rüde Bankangestellte	Biting piece on rude bank employees	Note.dinky
+11764	Bewertung neuer Adverture Spiele	Reviews of some new adventure games	Note.dinky
+11765	Öffentlichkeitsarbeit über Müllentsorgung	Public service piece about picking up trash	Note.dinky
+11766	Lobhudelei auf die ThimbleCon '88	Puff-piece on ThimbleCon '88	Note.dinky
+11767	Die Stadt aus der Vogelperspektive	Birds-eye view of the town	Note.dinky
+11768	Ein Foto unserer neuesten Fotojournalistin	Take a photo of our newest photojournalist	Note.dinky
+11769	Story über die Abteilung Dichtkunst	Story for the poetry section	Note.dinky
+11770	Schlagzeile über eine Berühmtheit	Headshot for a story on a celebrity	Note.dinky
+11771	Foto über einen gefährlichen Job	Photo of a person doing a dangerous job	Note.dinky
+11772	Story über Hausbeschädigungen	Story on home demolition	Note.dinky
+11773	Story über Straßensicherheit	Story about road safety	Note.dinky
+11774	Artikel zu altertümlichen Schwarz-Weiß-Fotos	Article on old-timey black and white photos	Note.dinky
+11775	Ein Kracher zur Geschichte des Telefons	A hit-piece on the history of the phone	Note.dinky
+11776	Geschichte kleiner Uhren	History of tiny clocks	Note.dinky
+11777	Eine Story über Doppelbilder	A story about seeing double	Note.dinky
+11778	Exposé über Thimbleweed's Glückspielproblem	An exposé on Thimbleweed's gambling problem	Note.dinky
+11779	Story über den neuerlichen Spielzeugwahn	Story about the latest toy craze	Note.dinky
+11780	Story über Allergien	Story about allergies	Note.dinky
+11781	Diese Dinger waren gruselig. Ich bin so froh, dass sie deaktiviert wurden.	These things were creepy. I'm glad they were deactivated.	CoronersOffice.dinky
+11782	Sie sollten als Warnung dienen, vor den Gefahren der KI.	They should serve as a warning about the dangers of AI.	CoronersOffice.dinky
+11783	Unheimlich darüber nachzudenken, wie Onkel Chuck digitalisiert und in seine KI Kreation hineingesaugt wurde.	Scary to think about Uncle Chuck getting digitized and sucked into his AI creation.	CoronersOffice.dinky
+11784	Ich bin so froh, dass ich und diese Bundesagenten ihn da rausholen konnten.	I'm glad me and those two federal agents were able to get him out.	CoronersOffice.dinky
+11785	Natürlich wird er vermutlich den Rest seines Lebens in dem Sanatorium verbringen.	Of course, he will probably spend the rest of his life in that sanitarium.	CoronersOffice.dinky
+11786	Ich schaudere wenn ich mir vorstelle, was passiert wäre, hätten wir ihn nicht rechtzeitig da rausgeholt.	I shudder to think what would have happened if we hadn't gotten to him in time.	CoronersOffice.dinky
+11787	Die Tron 3000™ Maschinen sind gruseliger als die Leichenhalle.	The Tron 3000™ machines creep me out more than being in the morgue.	CoronersOffice.dinky
+11788	Nur eine Schublade.	Just a drawer.	CoronersOffice.dinky
+11789	Nur der seltsame Pathologenbericht über den Mord an Boris.	Just the odd coroner report about the murder of Boris.	CoronersOffice.dinky
+11790	Was nicht passiert sein kann.	Which couldn't have happened.	CoronersOffice.dinky
+11791	Schräg? Da ist ein Autopsie Bericht über einen Mord letztes Jahr, an einem gewissen Boris?	Weird? There is an autopsy report for a murder last year of someone named Boris?	CoronersOffice.dinky
+11792	Es gab keine Morde in Thimbleweed Park seit 20 Jahren.	There hasn't been a murder in Thimbleweed Park for twenty years.	CoronersOffice.dinky
+11793	Nur ein paar alte Pathologenakten.	Just some old coroner files.	CoronersOffice.dinky
+11794	Ne Menge alter Akten.	Lots of old files.	CoronersOffice.dinky
+11795	Ein Haufen schlecht geordneter Akten.	Bunch of badly organized files.	CoronersOffice.dinky
+11796	Das ist ein Skelett!	It's a skeleton!	CoronersOffice.dinky
+11797	Zäher Karamelkern.	Chewy Caramel Center.	CoronersOffice.dinky
+11798	Seltsam? Ich wusste nicht, dass man einen Pathologenabschluss per Post bestellen kann.	Odd? I didn't know you could mail order for coroner degrees.	CoronersOffice.dinky
+11799	Tür	door	CoronersOffice.dinky
+11800	Verlasse	Leave	CoronersOffice.dinky
+11801	Verlasse das Büro des Pathologens	Leave the Coroner's Office	CoronersOffice.dinky
+11802	FingerTron 3000™	FingerTron 3000™	CoronersOffice.dinky
+11803	dem FingerTron 3000™	the FingerTron 3000™	CoronersOffice.dinky
+11804	BloodTron 3000™	BloodTron 3000™	CoronersOffice.dinky
+11805	dem BloodTron 3000™	the BloodTron 3000™	CoronersOffice.dinky
+11806	FaceTron 3000™	FaceTron 3000™	CoronersOffice.dinky
+11807	dem FaceTron 3000™	the FaceTron 3000™	CoronersOffice.dinky
+11808	Skelet	skeleton	CoronersOffice.dinky
+11809	Diagram	chart	CoronersOffice.dinky
+11810	Urkunde	certificate	CoronersOffice.dinky
+11811	Spiel pausiert	Game Paused	SystemHelpers.dinky
+11812	UNGESEHEN	NEVER SEEN	VerbHelpers.dinky
+11813	Lauf zu	Walk to	VerbHelpers.dinky
+11814	Schau an	Look at	VerbHelpers.dinky
+11815	Benutze	Use	VerbHelpers.dinky
+11816	Schau in	Look in	VerbHelpers.dinky
+11817	Überprüfe	Check	VerbHelpers.dinky
+11818	Betrachte	Look at	VerbHelpers.dinky
+11819	Untersuche	Examine	VerbHelpers.dinky
+11820	Verlasse	Leave	VerbHelpers.dinky
+11821	Betrete	Enter	VerbHelpers.dinky
+11822	Lese	Read	VerbHelpers.dinky
+11823	Rede mit	Talk to	VerbHelpers.dinky
+11824	Schließe auf	Unlock	VerbHelpers.dinky
+11825	Tritt	Kick	VerbHelpers.dinky
+11826	Öffne	Open	VerbHelpers.dinky
+11827	Schliesse	Close	VerbHelpers.dinky
+11828	Brich auf	Pry open	VerbHelpers.dinky
+11829	Nimm	Pick up	VerbHelpers.dinky
+11830	Nimm	Take	VerbHelpers.dinky
+11831	Verdrehe	Flip	VerbHelpers.dinky
+11832	Wähle	Dial	VerbHelpers.dinky
+11833	Drück	Push	VerbHelpers.dinky
+11834	Zieh	Pull	VerbHelpers.dinky
+11835	Zieh runter	Pull down	VerbHelpers.dinky
+11836	Schiebe rechts	Push right	VerbHelpers.dinky
+11837	Schiebe links	Push left	VerbHelpers.dinky
+11838	Schalte ein	Turn on	VerbHelpers.dinky
+11839	Schalte aus	Turn off	VerbHelpers.dinky
+11840	Klettere	Climb	VerbHelpers.dinky
+11841	Drehe	Spin	VerbHelpers.dinky
+11842	Verdrehe	Turn	VerbHelpers.dinky
+11843	Spüle	Flush	VerbHelpers.dinky
+11844	Rieche	Smell	VerbHelpers.dinky
+11845	Aktiviere	Activate	VerbHelpers.dinky
+11846	Trink	Drink	VerbHelpers.dinky
+11847	Lecke	Lick	VerbHelpers.dinky
+11848	Esse	Eat	VerbHelpers.dinky
+11849	Tanze	Dance	VerbHelpers.dinky
+11850			VerbHelpers.dinky
+11851	Gib an $NOUN1$	Give to $NOUN1$	VerbHelpers.dinky
+11852	Gebe an $NOUN2$	Give to $NOUN2$	VerbHelpers.dinky
+11853	Verbrenne $NOUN1$ in $NOUN2$	Burn $NOUN1$ in $NOUN2$	VerbHelpers.dinky
+11854	Wirf ein $NOUN2$	Drop in $NOUN2$	VerbHelpers.dinky
+11855	Fülle $NOUN2$	Fill $NOUN2$	VerbHelpers.dinky
+11856	Leere $NOUN2$ in $NOUN1$	Empty $NOUN2$ in $NOUN1$	VerbHelpers.dinky
+11857	Schiesse ein Foto von $NOUN2$	Take photo of $NOUN2$	VerbHelpers.dinky
+11858	Lege ab $NOUN1$ on $NOUN2$	Put $NOUN1$ on $NOUN2$	VerbHelpers.dinky
+11859	Entsperre $NOUN1$ mit $NOUN2$	Unlock $NOUN1$ with $NOUN2$	VerbHelpers.dinky
+11860	Beschädige $NOUN1$ mit $NOUN2$	Vandalize $NOUN1$ with $NOUN2$	VerbHelpers.dinky
+11861	Steche $NOUN2$ mit $NOUN1$	Jab $NOUN2$ with $NOUN1$	VerbHelpers.dinky
+11862	Löse auf Plakatleim mit $NOUN2$	Dissolve poster glue with $NOUN2$	VerbHelpers.dinky
+11863	Löse $NOUN1$ mit $NOUN2$	Loosen $NOUN1$ with $NOUN2$	VerbHelpers.dinky
+11864	Zieh fest $NOUN1$ mit $NOUN2$	Tighten $NOUN1$ with $NOUN2$	VerbHelpers.dinky
+11865	Zeige $NOUN1$ an $NOUN2$	Show $NOUN1$ the $NOUN2$	VerbHelpers.dinky
+11866	Schürfe $NOUN1$ mit $NOUN2$	Scrape $NOUN1$ with $NOUN2$	VerbHelpers.dinky
+11867	Schleudere $NOUN1$ in $NOUN2$	Toss $NOUN1$ in $NOUN2$	VerbHelpers.dinky
+11868	Repariere $NOUN1$ mit $NOUN2$	Repair $NOUN1$ with $NOUN2$	VerbHelpers.dinky
+11869	Da komm ich nicht ran.	I can't reach that.	ActorHelpers.dinky
+11870	Ich denke nicht, dass das genug Staub für Natalie ist.	I don't think this is enough dust for Natalie.	DustHelpers.dinky
+11871	Zu dunkel um was zu sehen	It's too dark to see	DustHelpers.dinky
+11872	Es ist ein Staubkorn.	It's a speck of dust.	DustHelpers.dinky
+11873	Zu dunkel um was zu sehen.	It's too dark to see.	DustHelpers.dinky
+11874	Etwas	something	DustHelpers.dinky
+11875	Staubkorn	speck of dust	DustHelpers.dinky
+11882	Hi, wo hast du gelernt zu programmieren?	Hi, were did you learn to program?	Defines.dinky
+11883	Ein Foto eines leeren Glases ist nicht gut genug.	A photo of an empty glass isn't good enough.	Inventory.dinky
+11884	Ein Glass verschmutztes Wasser!	It's a glass of polluted water!	Inventory.dinky
+11885	Ein leeres Glas.	It's an empty glass.	Inventory.dinky
+11886	Das halte ich nicht für schlau.	I don't think that's smart.	Inventory.dinky
+11887	Ich kann den Geruch kaum aushalten!	I can barely stand the smell!	Inventory.dinky
+11888	Das ist keine gute Idee.	That's not a good idea.	Inventory.dinky
+11889	Ok, los gehts.	Ok, here goes.	Inventory.dinky
+11890	*huurrrll*	*huurrrll*	Inventory.dinky
+11891	*bleeeuuurrrggghh*	*bleeeuuurrrggghh*	Inventory.dinky
+11892	*raaaaaallllllllllffff*	*raaaaaallllllllllffff*	Inventory.dinky
+11893	*seufz*	*sigh*	Inventory.dinky
+11894	Mir gehts schon besser.	I feel better now.	Inventory.dinky
+11895	Ein Foto eines leeren Glases ist nicht gut genug.	A photo of an empty glass isn't good enough.	Inventory.dinky
+11896	Kein Film mehr übrig! Ich sollte wohl zu Natalie gehen.	I don't have any film left! Maybe I should go see Natalie.	Inventory.dinky
+11897	Selbst mit Blitz ist da nicht genug Licht um ein Foto zu machen.	Even with the flash, there isn't enough light to take a picture.	Inventory.dinky
+11898	Davon habe ich bereits ein Foto.	I already took a photo of them.	Inventory.dinky
+11899	Davon habe ich bereits ein Foto.	I already took a photo of that.	Inventory.dinky
+11900	Gut getroffen!	That's a good shot!	Inventory.dinky
+11901	Natalie wird dieses lieben!	Natalie will love this one!	Inventory.dinky
+11902	Das ist perfekt für die Story!	This is perfect for the story!	Inventory.dinky
+11903	Ich hab nur noch 2 Bilder übrig.	I only have two shots left.	Inventory.dinky
+11904	Ich hab nur noch 1 Bild übrig, das sollte besser passen.	I only have one shot left, I better make it count.	Inventory.dinky
+11905	Das ist mein treuer SnapTron3000™.	It's my trusting SnapTron3000™.	Inventory.dinky
+11906	Ich habe zehn Bilder übrig.	I have ten shots left.	Inventory.dinky
+11907	Ich habe neun Bilder übrig.	I have nine shots left.	Inventory.dinky
+11908	Ich habe acht Bilder übrig.	I have eight shots left.	Inventory.dinky
+11909	Ich habe sieben Bilder übrig.	I have seven shots left.	Inventory.dinky
+11910	Ich habe sechs Bilder übrig.	I have six shots left.	Inventory.dinky
+11911	Ich habe fünf Bilder übrig.	I have five shots left.	Inventory.dinky
+11912	Ich habe vier Bilder übrig.	I have four shots left.	Inventory.dinky
+11913	Ich habe drei Bilder übrig.	I have three shots left.	Inventory.dinky
+11914	Ich habe zwei Bilder übrig.	I have two shots left.	Inventory.dinky
+11915	Ich habe ein Bild übrig.	I have one shot left.	Inventory.dinky
+11916	Kein Film mehr. Ich sollte möglicherweise Natalie aufsuchen.	I'm out of film. Maybe I should go see Natalie.	Inventory.dinky
+11917	^Es ist ein Foto von %s.	^It's a photo of %s.	Inventory.dinky
+11918	Das behalte ich besser.	I'd better hold onto this one.	Inventory.dinky
+11919	Das behalte ich besser.	I'd better hold onto this one.	Inventory.dinky
+11920	Natalie würde das gern haben.	Natalie will want this one.	Inventory.dinky
+11921	Das war ein großartiger Schnappschuss. Ich behalte ihn.	This was a great shot. I'm keeping it.	Inventory.dinky
+11922	Zu dunkel um hier zu lesen.	It's too dark to read in here.	Inventory.dinky
+11923	Das will ich nicht verbrennen. Ich brauche es um meinen Auftrag abzuschließen.	I don't want to burn this, I need it to complete my assignment.	Inventory.dinky
+11924	Das ist die Stromrechnung von Leonard.	It's the electricity bill from Leonard.	Inventory.dinky
+11925	Bereit versendet zu werden.	Ready to mail.	Inventory.dinky
+11926	Da fehlen Briefmarken.	It needs stamps.	Inventory.dinky
+11927	Schau! Alles versendet.	There! All mailed.	Inventory.dinky
+11928	Das benötigt Briefmarken, oder es kommt nicht weit.	This needs stamps or it's not getting far.	Inventory.dinky
+11929	Einige Briefmarken von Natalie.	It's some stamps from Natalie.	Inventory.dinky
+11930	Frankiert und bereit versendet zu werden.	It's stamped and ready to mail.	Inventory.dinky
+11931	Pfefferminze! Mmh!	Peppermint! Yum!	Inventory.dinky
+11932	Riecht wie ein Landstreicher.	Smells like bum.	Inventory.dinky
+11933	Danke fürs Recyclen! Hier ist ihr Groschen zurück.	Thanks for recycling! Here is your nickel deposit back.	Inventory.dinky
+11934	Ich frage mich, warum die Köpfe von Präsidenten da drauf geprägt haben und nicht von coolen Leuten wie Ada Lovelace.	I wonder why they put presidents' heads on these and not cool people like Ada Lovelace.	Inventory.dinky
+11935	Das ist dein Groschen! Du hast ihn dir im Einsatz für die Umwelt verdient!	It's your nickel, you earned it by helping to clean up the environment!	Inventory.dinky
+11936	Zu dunkel um hier zu lesen.	It's too dark to read in here.	Inventory.dinky
+11937	Ein großer Schlüssel.	It's a large key.	Inventory.dinky
+11938	Ein Schraubendreher.	It's a screwdriver.	Inventory.dinky
+11939	Zu dunkel um zu sehen.	It's too dark to see.	Inventory.dinky
+11940	Autsch! “Philipp's Dangerous Dövice” scheint lebendig geworden zu sein.	Ouch! “Philipp's Dangerous Dövice” seems to have come alive.	Inventory.dinky
+11941	Autsch!	Ouch!	Inventory.dinky
+11942	Autsch! Warum hab ich das schon wieder getan!	Ouch! Why did I do that again!	Inventory.dinky
+11943	Autsch! Warum machen ich das immer wieder?	Ouch! Why do I keep doing that?	Inventory.dinky
+11944	Autsch! Autsch! Autsch!	Ouch! Ouch! Ouch!	Inventory.dinky
+11945	Ein Foto über Zerstörung muss viel dramatischer sein.	The demolition photo needs to be way more dramatic.	Inventory.dinky
+11946	Ich denke ich hab genug Zerstörung angerichtet für einen Tag.	I think I've caused enough destruction for one day.	Inventory.dinky
+11947	Geladen und bereit!	Armed and ready to go!	Inventory.dinky
+11948	Ich hab das Gefühl, das nimmt gerade eine üble Richtung ein. Ich habe liebevolle Erinnerung an meine Kindheit in der Mansion Mansion.	I feel like this is a bad course of action. I had fond memories of growing up in the Mansion mansion.	Inventory.dinky
+11949	Zum Glück sind die Batterien tot. Ich habe liebevolle Erinnerung an meine Kindheit in der Mansion Mansion.	Good thing its batteries are dead. I have fond memories of growing up in the Mansion mansion.	Inventory.dinky
+11950	Ich denke, ich habe genug in die Luft gejagt für heute.	I think I've blown up enough things for today.	Inventory.dinky
+11951	OK, da geht gar nichts. Ich werds mal aktivieren.	OK, here goes nothing. I'm going to activate it.	Inventory.dinky
+11952	Da gehen eine Menge Kindheitserinnerungen in der Mansion Mansion in Rauch auf.	That's a lot of growing up in the Mansion mansion memories up in smoke.	Inventory.dinky
+11953	*schluchz*	*sob*	Inventory.dinky
+11954	Ich schätze, das ist nun das Problem der Bank.	I guess it's the bank's problem now.	Inventory.dinky
+11955	Hmmm.	Hmmm.	Inventory.dinky
+11956	Es hat Strom.	It has power.	Inventory.dinky
+11957	Was hab ich vergessen?	What am I forgetting?	Inventory.dinky
+11958	Bin ich nicht nah genug?	Am I not close enough?	Inventory.dinky
+11959	Ich gebs auf.	I give up.	Inventory.dinky
+11960	Zum Glück sind die Batterien tot. Ich habe liebevolle Erinnerung an meine Kindheit in der Mansion Mansion.	Good thing its batteries are dead. I have fond memories of growing up in the Mansion mansion.	Inventory.dinky
+11961	Ich bin sicher, dass wird ein Sammlerstück in 30 Jahren.	I'm sure it will be a collectible in 30 years.	Inventory.dinky
+11962	Definitiv kein neuer Spielzeugwahn. Ich hatte einen, als ich noch ein Kind war.	Definitely not a new toy craze. I had one when I was a kid.	Inventory.dinky
+11963	Es ist der Kopf einer Berühmtheit, aber irgendwie erniedrigend als Süßigkeitenspender. Ich brauche ein besseres Foto.	It's a celebrity's head, but kind of demeaning being a candy dispenser. I need a better photo.	Inventory.dinky
+11964	Ich habe die geliebt, als ich ein Kind war.	I sure loved these when I was a kid.	Inventory.dinky
+11965	Autsch!! Mein Zahn!	Ouch!! My tooth!	Inventory.dinky
+11966	Auf keinen Fall. Ein abgebrochener Zahn ist genug.	No way. One broken tooth is enough.	Inventory.dinky
+11967	^%d Staubkörner	^%d specks of dust	Inventory.dinky
+11968	^%d Staubkörner	^%d specks of dust	Inventory.dinky
+11969	Ich denke nicht, dass das genug Staub für Natalie ist.	I don't think this is enough dust for Natalie.	Inventory.dinky
+11970	^Sie braucht vermutlich %d Staubkörner.	^She probably needs around %d specks of dust.	Inventory.dinky
+11971	Ein guter Schnappschuss!	That's a good shot!	Inventory.dinky
+11972	Natalie wird den hier lieben!	Natalie will love this one!	Inventory.dinky
+11973	Das ist perfekt für die Story!	This is perfect for the story!	Inventory.dinky
+11974	Ich habe 1 Staubkorn.	I have 1 speck of dust.	Inventory.dinky
+11975	^Ich habe %d Staubkörner.	^I have %d specks of dust.	Inventory.dinky
+11976	Glas voll verschmutztem Wasser	glass of polluted water	Inventory.dinky
+11977	Glas voll Wasser	glass of water	Inventory.dinky
+11978	ein Glas verschmutztes Wasser	a glass of polluted water	Inventory.dinky
+11979	ein Glas Wasser	a glass of water	Inventory.dinky
+11980	Kamera	camera	Inventory.dinky
+11981	a	a	Inventory.dinky
+11982	Foto	photo	Inventory.dinky
+11983	Mein Auftrag	my assignment	Inventory.dinky
+11984	Stromrechnung mit Briefmarken	electricity bill with stamps	Inventory.dinky
+11985	Stromrechnung	electricity bill	Inventory.dinky
+11986	Briefmarken	stamps	Inventory.dinky
+11987	Flasche	bottle	Inventory.dinky
+11988	Münze	nickel	Inventory.dinky
+11989	Fortran Buch	Fortran book	Inventory.dinky
+11990	einem Fortran Buch	a Fortran book	Inventory.dinky
+11991	Schlüssel	key	Inventory.dinky
+11992	Schraubendreher	screwdriver	Inventory.dinky
+11993	“Philipp's Dangerous Dövice”	“Philipp's Dangerous Dövice”	Inventory.dinky
+11994	ThimbleCon Plakat	ThimbleCon poster	Inventory.dinky
+11995	Süßigkeitenspender	candy dispenser	Inventory.dinky
+11996	Staubkorn	speck of dust	Inventory.dinky
+11997	eines Staubkorns	a speck of dust	Inventory.dinky
+11998	Hi da	Hi there	BLANK.yack
+11999	Hi zurück	Hi back	BLANK.yack
+12000	Hi Tante Delores.	Hi Aunt Delores.	Chuckie.yack
+12001	Lenore sagt, wir gehen campen.	Lenore says we're going camping.	Chuckie.yack
+12002	Lenore sagt, eines Tages werden wir wieder zu Geld kommen.	Lenore says someday we'll have money again.	Chuckie.yack
+12003	Das ist nett.	That's nice.	Chuckie.yack
+12004	Hi Pathologe!	Hi Coroner!	Coroner.yack
+12005	Hallöle Delores.	Hello-a-who Delores.	Coroner.yack
+12006	Wann haben Sie angefangen 'le' an alles anzuhängen?	When did you start adding 'a-who' after everything?	Coroner.yack
+12007	Genau da! Sie habens gerade wieder getan!	Right there! You just did it again!	Coroner.yack
+12008	Was auch immerle.	Whatever-a-who.	Coroner.yack
+12009	Sie und der Sheriff sollten ein Komödiantenduo bilden.	You and the Sheriff should form a comedy team.	Coroner.yack
+12010	Nicht viele Sterbefälle in Thimbleweed Park, oder?	Not a lot of deaths in Thimbleweed Park, are there?	Coroner.yack
+12011	Hab ich da nicht kürzlich was über einen Ermordeten names Boris gelesen?	Did I read about someone named Boris being murdered?	Coroner.yack
+12012	Der Sheriff will Sie sehen.	Sheriff wants to see you.	Coroner.yack
+12013	Der Sheriff will Sie nochmal sehen.	Sheriff wants to see you again.	Coroner.yack
+12014	Muss los... bye.	Got to run... bye.	Coroner.yack
+12015	Nicht wirklich.	Not really.	Coroner.yack
+12016	Es ist mir unklar, warum ich immer noch einen Job habe.	I'm not sure why I still have a job.	Coroner.yack
+12017	Ich verstehsle nicht worüber du sprichst!	I don't understand-a-who what you're talking about!	Coroner.yack
+12018	Hast du jemals Formaldehyd getrunken? Vertrau mir, sag einfach neinle dazu.	Have you been drinking formaldehyde? Trust me, just say-no-a-who.	Coroner.yack
+12019	Hey, das 'le' Ding ist meins!	Hey, the 'a-who' bit is mine!	Coroner.yack
+12020	Ha! Erwischt!	Ha! Got ya!	Coroner.yack
+12021	Sie zwei könnten im Vorprogramm von Ransome the Clown auftreten.	You two could open for Ransome the Clown.	Coroner.yack
+12022	Ich werde mit ihmle darüber sprechen.	I'll talk to him-a-who about it.	Coroner.yack
+12023	Ich hab tolles Material über Gehirnextraktionen.	I have some great material about extracting a brain.	Coroner.yack
+12024	Ich wette das haben Sie.	I bet you do.	Coroner.yack
+12025	Wasle!	What-a-who!	Coroner.yack
+12026	Wo hast du das gelesen? Wir hatten nie einen Mord in Thimbleweed Park und ich kenne niemand namens Boris.	Where did you read that? We've never had a murder in Thimbleweed Park, and I don't know anyone named Boris.	Coroner.yack
+12027	Ich hab es in Ihren vertraulichen gerichtsmedizinischen Akten gelesen.	I read it in your confidential coroner files.	Coroner.yack
+12028	Ich habs in dem Klatschplatz Nickel News gelesen.	I read it in that trash-rag the Nickel News.	Coroner.yack
+12029	Ich habs im BTX gelesen.	I read it on an on-line BBS.	Coroner.yack
+12030	Weiß nicht, kann mich nicht erinnern.	I don't know. I can't remember.	Coroner.yack
+12031	Wirklich? Ichle? Das ist spannend.	Really? Me-a-who? That's exciting.	Coroner.yack
+12032	Hi da, Dave.	Hi there, Dave.	Dave.yack
+12033	Hi Delores. Willkommen zurück!	Hi Delores. Welcome back!	Dave.yack
+12034	Kann nicht schwatzen. Schwer beschäftigt!	Can't talk. Busy!	Dave.yack
+12035	Hi Lenore.	Hi Lenore.	Lenore.yack
+12036	Was machst du hier? An einer brennenden Mülltonne hocken wie ein Landstreicher?	What are you doing here? Hanging out by a burning trash can like a bum.	Lenore.yack
+12037	Oh genug von deinen Witzeleien und den “Ich bin so viel besser als Du” Spitzen.	Oh enough with the wise-cracks and “I'm so much better than you” remarks.	Lenore.yack
+12038	Ich hab dich nicht nachgeahmt, das war eine ernstgemeinte...	I wasn't mocking you, it was a real...	Lenore.yack
+12039	Das ist alles deine Schuld.	This is all your doing.	Lenore.yack
+12040	Was ist alles meine Schuld?	What is all my doing?	Lenore.yack
+12041	Wir sind Schwestern, können wir nicht Freundinnen sein?	We're sisters, can't we be friends?	Lenore.yack
+12042	Ich habe plötzlich das Verlangen nach etwas Geschmortem.	I suddenly have a craving for s'mores.	Lenore.yack
+12043	Schluss mit den Witzeleien!	Enough with the wise-cracks!	Lenore.yack
+12044	Wenn du Onkel Chuck im Computer gelassen hättest, wäre er gestorben und ich hätte mein Erbe bekommen.	If you'd left Uncle Chuck in the computer, he would have died and I'd have gotten my inheritance.	Lenore.yack
+12045	Aber er lebt noch in einem Sanatorium und ist juristisch ausser Reichweite.	But he's still alive and in a sanitarium and legally out-of-reach.	Lenore.yack
+12046	Du wurdest aus der Mansion Mansion rausgeworfen?	You got evicted from the Mansion mansion?	Lenore.yack
+12047	Gibt es keinen Ort wo du hin kannst?	You have no place to go?	Lenore.yack
+12048	Du könntest bei mir knacken?	You could bunk with me?	Lenore.yack
+12049	Ich habe ein Foto von einem Jobangebot bei der Bank.	I have a photo that shows a job opening at the bank.	Lenore.yack
+12050	Ich habe ein Foto von einem Jobangebot bei der Bank.	I have a photo that shows a job opening at the bank.	Lenore.yack
+12051	Es gibt ein Jobangebot bei der Bank.	There is a job opening at the bank.	Lenore.yack
+12052	Hast du versucht einen Job zu finden?	Have you tried to get a job?	Lenore.yack
+12053	Ich dachte du liebst den kleinen Chuckie?	I thought you loved little Chuckie?	Lenore.yack
+12054	Schönes Wetter.	Nice weather.	Lenore.yack
+12055	Hast du die Ransome Show schon gesehen?	Seen the new Ransome show yet?	Lenore.yack
+12056	Sehen uns später, Schwester.	See ya around, sis.	Lenore.yack
+12057	Hau ab.	Get lost.	Lenore.yack
+12058	Ja!	Yes!	Lenore.yack
+12059	Wenn du nicht so darin vertieft gewesen wärest, Mordsimulatoren zu bauen, hättest du's gewusst.	If you hadn't been so preoccupied with making murder simulators, you'd have known.	Lenore.yack
+12060	Die Bank hat sich die Edmund Mansion Mansion zurückgeholt und hat mich, die kleine Bratze da und meinen nutzlosen Ehemann Peter rausgeworfen.	The bank repossessed the Edmund Mansion mansion and evicted me and the little brat and my worthless husband Peter.	Lenore.yack
+12061	Hey.	Hey.	Lenore.yack
+12062	Alles was ich behalten durfte, ist dieser schäbige Stuhl aus der Bibliothek.	All I got to take was that crappy chair from the library.	Lenore.yack
+12063	Nicht einen einzigen! Ich wurde bei allen gesellschaftlich angesehenen Etablissements im Drei-Länder-Eck auf die Schwarze Liste gesetzt.	None! I've been blacklisted by all the high society places in the tri-county area.	Lenore.yack
+12064	Ich habe ihn nach Onkel Chuck benannt und so...	I named him after Uncle Chuck and everything...	Lenore.yack
+12065	...was hats geholfen?	...what good did it do?	Lenore.yack
+12066	Nichts! Rausgeflogen!	Nothing! Evicted!	Lenore.yack
+12067	Sicher! Ich und all deine nerdigen Freunde können D&E zusammen spielen.	Sure! Me and all your nerdy friends can play D&E together.	Lenore.yack
+12068	Wir sind keine Nerds!	We're not nerds!	Lenore.yack
+12069	Es heißt D&D. Steht für Dungeons and Dragons.	It's called D&D. For Dungeons and Dragons.	Lenore.yack
+12070	Wir sind keine Nerds!	We're not nerds!	Lenore.yack
+12071	I'm thinking you play chaotic evil?	I'm thinking you play chaotic evil?	Lenore.yack
+12072	Wir sind keine Nerds!	We're not nerds!	Lenore.yack
+12073	Hab dich auch lieb Schwesterherz.	Love you too sis.	Lenore.yack
+12074	Bankkassiererin?	Bank teller?	Lenore.yack
+12075	Du scherzt wohl! Ein Edmund aus dem angesehen Hause der Thimbleweed Edmunds als Kassierer?	You've got to be kidding! An Edmund from the prestigious Thimbleweed Edmunds taking a teller job?	Lenore.yack
+12076	Selbst wenn ich so tief gesunken wäre, ich glaub dir das nicht.	Even if I was to stoop that low, I don't believe you.	Lenore.yack
+12077	Als was!?!	Like what!?!	Lenore.yack
+12078	Barista. Ich hörte, die sind groß im Kommen.	Barista. I hear it's going to be big.	Lenore.yack
+12079	NASA Space Shuttle mission specialist?	NASA Space Shuttle mission specialist?	Lenore.yack
+12080	Straßendirne?	Streetwalker?	Lenore.yack
+12081	Wochenendbedienung im S&D Diner?	Weekend waitress at the S&D Diner?	Lenore.yack
+12082	Bankkassiererin?	Bank teller?	Lenore.yack
+12083	Ransome the Clown Show Ticketabreisser.	Ransome the Clown show ticket taker.	Lenore.yack
+12084	Yeah, das ist eine interessante...	Yeah, that's an interesting...	Lenore.yack
+12085	NEIN IST ES NICHT!	NO IT'S NOT!	Lenore.yack
+12086	Edmunds arbeiten nicht!	Edmunds don't work!	Lenore.yack
+12087	Deshalb bist du so eine Schande für den Familiennamen.	That's why you're such a disgrace to the family name.	Lenore.yack
+12088	Was?  Du zeigst mir ein Jobangebot? Du denkst ich brauch nen Job! Wie das ordinäre Volk!	What?  You're showing me a job opening? You think I need a job! Like a common person!	Lenore.yack
+12089	Wobei... Ich hab nie... Naja... Ich werde... Ich... Ich schau da mal vorbei...	Well... I never... Yeah... I'll... I... I might stop by...	Lenore.yack
+12090	Ein Jobangebot? Wobei... Ich hab nie... Naja... Ich werde... Ich... Vielleich schau ich da mal vorbei...	A job opening? Well... I never... Yeah... I'll... I... I might stop by...	Lenore.yack
+12091	Ähm, du hast mir das schon gezeigt! Ich denk drüber nach.	Yeah, you already showed me that! I'll think about it.	Lenore.yack
+12092	Interessant... Naja... Vielleicht werde ich... Nein... Ich... Vielleicht schau ich da mal vorbei... Might.	Interesting... Yeah... Maybe I'll... No... I... I might stop by... Might.	Lenore.yack
+12093	Das sagtest du bereits! Ich denk drüber nach.	Yeah, you already said that! I'll think about it.	Lenore.yack
+12094	Ohja...! Die ist die Beste!	Oh my! It is the best!	Lenore.yack
+12095	Ransome zu sehen, ist die einzige Freude die mir im Leben geblieben ist.	Seeing Ransome is the only joy left in my life.	Lenore.yack
+12096	Hi Lenore.	Hi Lenore.	Lenore.yack
+12097	Glückwunsch zum neuen Job!	Congrats on the new job!	Lenore.yack
+12098	Shhhhh... nicht so laut. Jemand könnten meinen Namen hören.	Shhhhh... don't say my name out loud. Someone might hear.	Lenore.yack
+12099	Ich höre es.	I hear.	Lenore.yack
+12100	Kannst du meinen Kontostand checken?	Can you check my bank balance?	Lenore.yack
+12101	Kannst du meinen Kontostand nochmal checken?	Can you check my bank balance again?	Lenore.yack
+12102	Schönes Wetter.	Nice weather.	Lenore.yack
+12103	So...	So...	Lenore.yack
+12104	Wie gehts Chuckie?	How is Chuckie?	Lenore.yack
+12105	Auf Wiedersehen und Danke.	Goodbye and thanks.	Lenore.yack
+12106	Lass mich schauen...	Let me see...	Lenore.yack
+12107	Du hast...	You have...	Lenore.yack
+12108	NICHTS!	NOTHING!	Lenore.yack
+12109	Nullu!	Zip squat!	Lenore.yack
+12110	Null Euro und null Cent.	Zero dollars and zero cents.	Lenore.yack
+12111	Nada!	Nada!	Lenore.yack
+12112	Eine große Null Komma Null Euro.	A big zero point zero zero dollars.	Lenore.yack
+12113	Als obs mich kümmert.	Like I care anymore.	Lenore.yack
+12114	Oder irgendwas...	About anything...	Lenore.yack
+12115	Gute und schlechte Nachrichten über die Mansion Mansion... vergiss es.	Good and bad news about the Mansion mansion... never mind.	Lenore.yack
+12116	Wen kümmerts.	Who cares.	Lenore.yack
+12117	Hau ab.	Get lost.	Lenore.yack
+12118	Was geht D!	What's up D!	Leonard.yack
+12119	Was geht Delores!	What's up Delores!	Leonard.yack
+12120	Danke, dass du den Brief versendet hast.	Thanks for mailing that letter.	Leonard.yack
+12121	Nenn mich nicht D.	Don't call me D.	Leonard.yack
+12122	Hey Leonard.	Hey Leonard.	Leonard.yack
+12123	Das Toilettenlicht funktioniert nicht.	Bathroom light switch doesn't work.	Leonard.yack
+12124	Das Toilettenlicht funktioniert immer noch nicht.	Bathroom light switch still doesn't work.	Leonard.yack
+12125	Bis dann!	See ya!	Leonard.yack
+12126	OK, türlich D... Ich meine Delores.	OK, sure thing D... I mean Delores.	Leonard.yack
+12127	Hey zurück!	Hey back at ya!	Leonard.yack
+12128	Ahja, daaasss.	Yeah. About that.	Leonard.yack
+12129	Die Geschäftsleitung hat vergessen, die Stromrechnung zu bezahlen, daher wurde uns der Strom in der Toilette abgestellt.	Management forgot to pay the power bill, so they cut power to the bathroom.	Leonard.yack
+12130	Wenn das nicht bald bezahlt wird, drehen die uns noch den gesamten Strom ab, Mann.	If it doesn't get paid soon, the whole building will lose power, man.	Leonard.yack
+12131	Hat die Geschäftsleitung es vergessen, oder hast DU es vergessen?	Did management forget, or did you forget to mail the payment?	Leonard.yack
+12132	Ich denke nicht, dass das die richtige Zeit für Schuldzuweisungen ist!	I don't think this is the time to be pointing fingers!	Leonard.yack
+12133	Hier ist die Bezahlung, kannst du sie für mich in einen Briefkasten werfen... Ich meine, für die Geschäftsleitung natürlich?	Here is the payment, can you drop it in a mailbox for me... I mean management?	Leonard.yack
+12134	Sicher.	Sure.	Leonard.yack
+12135	Die Geschäftsleitung hat vergessen, die Stromrechung zu bezahlen, die ich dir gegeben habe.	Management forgot to pay the power bill I gave you.	Leonard.yack
+12136	Wenn die nicht bald bezahlt wird, geht im ganzen Gebäude der Strom aus, Mann.	If it doesn't get paid soon, the whole building will lose power, man.	Leonard.yack
+12137	Kannst du die Bezahlung für mich in einen Briefkasten werfen... Ich meine für die Geschäftsleitung?	Can you drop the payment in a mailbox for me... I mean management?	Leonard.yack
+12138	Sicher.	Sure.	Leonard.yack
+12139	Hallo Madame Morena.	Hello Madame Morena.	Morena.yack
+12140	Wie ist es Ihnen ergangen?	How have things been?	Morena.yack
+12141	Haben Sie vielleicht Molchesaug?	Got any eye-of-newt?	Morena.yack
+12142	Ja, ich sehe.	Yes, I see.	Morena.yack
+12143	Wirklich, ich sehe.	Yes, I really see.	Morena.yack
+12144	Wirklich wirklich, ich sehe!	I really really see!	Morena.yack
+12145	Ich kann es sehen!	I can see!	Morena.yack
+12146	Aber ich kann es sehen.	But I can see.	Morena.yack
+12147	Ok fein, ich kanns nicht sehen.	Ok fine, I can't see.	Morena.yack
+12148	*seufz*	*sigh*	Morena.yack
+12149	Haben Sie davon gehört, dass der Zirkus verlassen wurde? 	Have you heard about the circus being abandoned? 	Morena.yack
+12150	Schon Ransome the Clown's aktuelle Show gesehen?	Seen Ransome the Clown's latest show yet?	Morena.yack
+12151	Irgendwas seltsames gespürt?	You noticed anything odd?	Morena.yack
+12152	Das Schild draussen sagt, Sie haben nen Ausverkauf.	Sign out front says you're having a blow-out sale.	Morena.yack
+12153	Seh Sie!	See ya!	Morena.yack
+12154	Schon eine Weile her, dass ich dir hier gesehen habe, Delores.	Been a while since I've seen you around, Delores.	Morena.yack
+12155	Der Spielentwickler Job hat mich auf Trab gehalten.	That game designer job has kept me pretty busy.	Morena.yack
+12156	Ich bin in meinem Nach-Krisen-Urlaub und helfe bei Natalie aus.	I'm on my post-crunch vacation, helping Natalie out.	Morena.yack
+12157	Ja! Das ist seine beste Show bisher. Ich geh jede Woche hin.	Yes! It's his best show yet. I go every week.	Morena.yack
+12158	Ich hoffe, sie noch sehen zu können, bevor ich wieder gehe.	I hope to see it before I leave.	Morena.yack
+12159	Nichts...	Nothing...	Morena.yack
+12160	...Und du solltest es lieber in Ruhe lassen, meine Liebe.	...And you should leave well enough alone my dear.	Morena.yack
+12161	Es lauert nichts außer Elend am Ende des Pfades dieses Gedankens.	Only misery lies down that path of thought.	Morena.yack
+12162	Außerdem, ich wüsste nicht was ich machen sollte ohne meine wöchentliche Dosis Ransome!	Besides, I don't know what I'd do without my weekly hit of Ransome!	Morena.yack
+12163	Bitte!	Please!	Morena.yack
+12164	Molchesaug gibts nur auf der Rückseite von Comics!	Eye of Newt is right out of the back of comic books!	Morena.yack
+12165	Das ist nicht wirklich Magie.	It's not real magic.	Morena.yack
+12166	Ah, ich sehs.	I see.	Morena.yack
+12167	Siehst du?	Do you see?	Morena.yack
+12168	Siehst du wirklich?	Do you really see?	Morena.yack
+12169	Siehst du wirklich wirklich?	Do you really really see?	Morena.yack
+12170	Ich denke nicht, dass du siehst.	I don't think you see.	Morena.yack
+12171	Ich wünschte du könntest sehen.	I wish you could see.	Morena.yack
+12172	Ich denke nicht, dass du sehen kannst.	I don't think you can see.	Morena.yack
+12173	Ich hab dir doch gesagt, dass du nicht sehen kannst.	I told you, you can't see.	Morena.yack
+12174	In den letzten Tagen habe ich ein seltsames Kräuseln im Gefüge der Realität verspürt.	In the last day I've noticed some odd ripples in the fabric of reality.	Morena.yack
+12175	Wenn ich diesen Mumpitz glauben würde, klänge es gruselig.	If I believed that mumbo-jumbo, that would sound scary.	Morena.yack
+12176	VERTRAUE!	BELIEVE!	Morena.yack
+12177	Unheimliche Kräfte sind am Werk.	Scary forces are at work.	Morena.yack
+12178	Vor vielen Jahren gab es einen Riss, der unbemerkt blieb, bis vor wenigen Tagen.	Many years ago, there was a tear that has gone unnoticed until a few days ago.	Morena.yack
+12179	Ich befürchte, das hängt irgendwie mit dir zusammen.	I fear you might be connected.	Morena.yack
+12180	Nimm ne Beruhigungspille.	Take a chill-pill.	Morena.yack
+12181	Oder vielleicht ein paar Minzpastillen.	And maybe some breath mints.	Morena.yack
+12182	Haben Sie irgendwelche Bücher über Fortran?	Got any books on Fortran?	Morena.yack
+12183	Möglicherweise eines ganz oben.	Might be one at the very top.	Morena.yack
+12184	Wenn du es findest, kannst du es behalten.	If you find it, you can take it.	Morena.yack
+12185	Die einzige tote Sprache, über die es Bücher geben sollte, ist antikes Kaspisch.	The only dead languages we need books on is ancient capsipan.	Morena.yack
+12186	Ich bin begeistert von meinem neuen Job!	I'm excited about my new job!	Natalie.yack
+12187	Natalie hat mich als Nickel News Fotografin eingestellt.	Natalie has hired me to be the Nickel News photographer.	Natalie.yack
+12188	Ich kann es kaum erwarten, anzufangen!	I can't wait to get started!	Natalie.yack
+12189	Ein weiterer aufregender Auftrag als Nickel News Fotografin!	Another exciting assignment as the Nickel News photographer!	Natalie.yack
+12190	Ich bin gespannt, was Natalie für mich hat.	I wonder what Natalie has for me now?	Natalie.yack
+12191	Meine Güte sind wir wieder übereifrig heute Morgen.	My, aren't we the eager beaver this morning.	Natalie.yack
+12192	Ich kann es kaum erwarten, anzufangen!	I'm excited to get started!	Natalie.yack
+12193	Das wird eine willkommene Abwechslung vom Spieleprogrammieren.	It will be a nice creative break from making games.	Natalie.yack
+12194	Es ist nicht wirklich Morgens, nach 17 Uhr.	It's not really the morning, it's just after 5pm.	Natalie.yack
+12195	Interessant.	Interesting.	Natalie.yack
+12196	Ich arbeite an einigen Geschichten für zukünftige Ausgaben vom Thimbleweed Nickel und wir brauchen Fotografien.	I'm working on several stories for upcoming editions of the Thimbleweed Nickel, and we need photographs.	Natalie.yack
+12197	Ich habe eine Liste für dich und die Kamera befindet sich im Aktenschrank bei der Tür.	I've made a list for you, and the camera is in the file cabinet by the door.	Natalie.yack
+12198	Lass mich wissen, wenn du etwas brauchst. Mehr Film, Büroutensilien, Informationen zur Betrieblichen Altersvorsorge.	Let me know if you need anything. More film, office supplies, info on your 401k.	Natalie.yack
+12199	Viel Glück an deinem ersten Tag als Fotojournalistin.	Good luck on your first day as a photojournalist.	Natalie.yack
+12200	Fotojournalistin! Klingt irgendwie wichtig!	Photojournalist! That makes it sound important!	Natalie.yack
+12201	^Du musst noch %d weitere Fotos bringen bevor du in deinen Job als Spieleentwickler bei MMucasFlem zurückkehren kannst.	^You need to turn in %d more photos before returning to your game developer job at MMucasFlem.	Natalie.yack
+12202	Ich finde besser diese Kamera, werfe einen Blick auf die Liste und lege los.	I better find that camera, take a look at the list, and get cracking.	Natalie.yack
+12203	Arbeite immernoch an diesen Fotos.	Still working on those photos.	Natalie.yack
+12204	Wo sagtest du noch finde ich diese Kamera?	Where did you say the camera was again?	Natalie.yack
+12205	Ich denke ich bin fertig mit dem Auftrag.	I think I'm done with the assignment.	Natalie.yack
+12206	Kann ich mehr Film bekommen?	Can I get some more film?	Natalie.yack
+12207	Willst du meine bisherige Arbeit sehen?	Want to see my work so far?	Natalie.yack
+12208	Wie lang wird der Auftrag dauern?	How long will this assignment last?	Natalie.yack
+12209	Kann ich ein paar Büroutensilien bekommen?	Can I get some office supplies?	Natalie.yack
+12210	Was kannst du mir über die Betriebliche Altersvorsorge sagen?	What can you tell me about my 401k?	Natalie.yack
+12211	Egal... tschüss.	Never mind... bye.	Natalie.yack
+12212	Schau in den Aktenschrank bei der Tür.	Look in the filing cabinet by the door.	Natalie.yack
+12213	Du musst noch 1 weiteres originelles Foto bringen.	You need to turn in 1 more original photo.	Natalie.yack
+12214	^Du musst noch %d weitere originelle Fotos bringen.	^You need to turn in %d more original photos.	Natalie.yack
+12215	Dann heißt es wohl, zurück zu MMucasFlem für mich.	Then it's back to making games at MMucasFlem for me.	Natalie.yack
+12216	Scheint als hättest du genug.	Looks like you've got plenty.	Natalie.yack
+12217	Hier hast du ein paar.	Here is a couple more.	Natalie.yack
+12218	Ich brauche ein paar Heftklammern!	I need some paper clips!	Natalie.yack
+12219	Ich brauche ein paar Umlaufmappen.	I need some manila folders.	Natalie.yack
+12220	Ich brauche ein paar Briefmarken.	I need some stamps.	Natalie.yack
+12221	Ich brauche ein paar Bleistifte Stärke 2.	I need some no. 2 pencils.	Natalie.yack
+12222	Ich brauche etwas Tipp-Ex.	I need some whiteout.	Natalie.yack
+12223	Entschuldige, ich brauche eigentlich gerade nichts.	Sorry, I actually don't need anything right now.	Natalie.yack
+12224	Ich habe einen Brief der versendet werden muss. Scheint wichtig für den Auftrag zu sein.	I have a letter that needs mailing. Might be important to my assignment.	Natalie.yack
+12225	Okay.	Okay.	Natalie.yack
+12226	Der schnellste Weg zum Ruhestand ist, einen anderen Job zu finden.	Best path to retirement as a journalist is to get another job.	Natalie.yack
+12227	Mag Spieleentwicklung irgendwie.	Kind of like game development.	Natalie.yack
+12228	Nein, brauchst du nicht.	No you don't.	Natalie.yack
+12229	Diese sehen großartig aus!	These look great!	Natalie.yack
+12230	Der Testlauf ist nun vorbei.	The prototype is now over.	Natalie.yack
+12231	Bekomme ich eine Gehaltserhöhung?	Do I get a raise?	Natalie.yack
+12232	Bekomme ich eine Beförderung?	Do I get a promotion?	Natalie.yack
+12233	Kann ich noch ein wenig herumlaufen?	Do I get to keep wandering around?	Natalie.yack
+12234	Kann ich das Spiel beenden?	Can I quit the game?	Natalie.yack
+12235	Nope.	Nope.	Natalie.yack
+12236	Ok.	Ok.	Natalie.yack
+12237	Spiel nochmal und ich werde weitere Fotoaufträge für dich haben.	Play again and I'll have more photos for you to take.	Natalie.yack
+12238	Ich denke du bist hier fertig, Delores.	I think you're done here, Delores.	Natalie.yack
+12239	Übrigens...	By the way...	Natalie.yack
+12240	Weißt du irgendwas über den Körper, den man unter der Brücke fand?	Do you know anything about the body they found under the bridge?	Natalie.yack
+12241	Wir haben einen Abgabetermin, also Schluss mit Trödeln.	We've got a deadline, so no dilly-dallying.	Natalie.yack
+12242	Willkommen im S&D Diner, Delores!	Welcome to the S&D Diner, Delores!	Sandy.yack
+12243	Lang her, dass ich dich zuletzt hier gesehen habe.	Long time since I've seen you here.	Sandy.yack
+12244	Kann grad nicht sprechen. In der Küche gehts drunter und drüber!	Can't talk right now, things are crazy in the kitchen!	Sandy.yack
+12245	Willkommen zurück, Delores!	Welcome back, Delores!	Sandy.yack
+12246	Was kann ichn für dich tun?	What can I do for ya?	Sandy.yack
+12247	Wie ist es dir so ergangen, Sandy?	How has life been treating you, Sandy?	Sandy.yack
+12248	Hast du Ransome kürzlich gesehen?	You seen Ransome lately?	Sandy.yack
+12249	Ich verhungere. Was ist dein Spezialangebot heute?	I'm starving. What are your specials today?	Sandy.yack
+12250	Wir sehen uns!	See ya!	Sandy.yack
+12251	Kann mich nicht beschweren. Dave und ich sind gerade zurück von unserer dritten Hochzeitsreise.	Can't complain. Dave and I just came back from our third honeymoon.	Sandy.yack
+12252	Redest du über mich?	You talking about me?	Sandy.yack
+12253	Ja, Schnuckelkeks, über wen sollte ich sonst reden?	Yes, snuggle cakes, who else would I be talking about?	Sandy.yack
+12254	Ah, Zuckerschnute.	Ah, love muffin.	Sandy.yack
+12255	Dave und ich sehen seine Show jeden Samstag bei unserer Date-Night.	Dave and I see his show every Saturday on our date-night.	Sandy.yack
+12256	Er hat uns noch immer zum lachen gebracht. So ein guter Junge.	He never fails to make us laugh. Such a good guy.	Sandy.yack
+12257	Steht alles auf der Speisekarte. Was willst du haben?	Everything is on the menu board, what do you want?	Sandy.yack
+12258	Ich hätte gern den Kobe Rind Hot Dog.	I'll have a Kobe beef hot dog.	Sandy.yack
+12259	Ich hätte gern den Suisse Porc Hot Dog.	I'll have a Swiss pork hot dog.	Sandy.yack
+12260	Ich hätte gern den Kräuterhühnchen Hot Dog.	I'll have a herb and chicken hot dog.	Sandy.yack
+12261	Ich hätte gern den Dijon-Kale-Veggie Dog.	I'll have a French mustard and kale veggie dog.	Sandy.yack
+12262	Ich hätte gern sautiertes Perlhuhn mit Waldpilzen.	I'll have the Guinea chicken sauté with wild mushrooms.	Sandy.yack
+12263	Ich hätte gern den Grünkohlsalat mit Chutney Dressing.	I'll have the kale salad with chutney sauce.	Sandy.yack
+12264	Ich hätte gern die frittierten Froschschenkel, alá Tatar.	I'll have the fried frogs' legs, sauce tartare.	Sandy.yack
+12265	Ich hätte gern den Kirschkuchen.	I'll have the cherry pie.	Sandy.yack
+12266	Ich hätte gern ein Glas Wasser mit zerstoßenem Eis.	I'll have the glass of water with chipped ice.	Sandy.yack
+12267	Ich habs mir anders überlegt. Ich bin hungrig.	I changed my mind. I'm not hungry.	Sandy.yack
+12268	Sorry, ich hab die grad erst auf den Grill getan. Die haben noch nicht ihre richtige Gartemperatur erreicht.	Sorry, I just put those on the grill. They haven't come up to the proper safe eating temperature yet.	Sandy.yack
+12269	Sorry, die Pilze, die ich heute gesammelt haben, sehen eher nach ner giftigen Sorte aus.	Sorry, the mushrooms I gathered today look to be of the poisonous variety.	Sandy.yack
+12270	Sorry, vergessen die Speisekarte zu aktualisieren. Grünkohl ist aus...	Sorry, forgot to update the board. We're all out of kale...	Sandy.yack
+12271	...und Chutney.	...and chutney.	Sandy.yack
+12272	Geht leider nicht, hab vergessen heute Morgen auf Froschjagd zu gehen.	No can do, I forgot to go frog hunting this morning.	Sandy.yack
+12273	Sorry, so'n großer Typ hat gerade das letzter Stück verschlungen und dabei fröhlich vor sich hingeträllert.	Sorry, some tall guy just ate the last slice with a cup of joe.	Sandy.yack
+12274	Klar doch! Kommt sofort.	Sure thing! Coming right up.	Sandy.yack
+12275	Da, bitte schön.	Here you go.	Sandy.yack
+12276	Gefüllt mit unserem außergewöhnlich gefiltertem Wasser. Und du kannst das Glas als Werbegeschenk behalten.	Filled with our fancy filtered water. And you can keep the glass as part of our promotion.	Sandy.yack
+12277	Danke! Entschuldige mich.	Thanks! Excuse me.	Sandy.yack
+12278	Schätze ich war echt durstig!	I guess I was really thirsty!	Sandy.yack
+12279	Später, Delores.	Later, Delores.	Sandy.yack
+12280	Ich bin nicht in Quatschlein-Stimmung, lass mich einfach raus!	I'm not in a talking-a-reno mood, just let me out!	Sheriff.yack
+12281	Hi Sheriff!	Hi Sheriff!	Sheriff.yack
+12282	Hallölein Delores.	Hello-a-reno Delores.	Sheriff.yack
+12283	Wann haben Sie angefangen 'lein' überall anzuhängen?	When did you start adding 'a-reno' after everything?	Sheriff.yack
+12284	Genau da! Sie habens gerade wieder getan!	Just then! You did it again!	Sheriff.yack
+12285	Was auch immerlein.	Whatever-a-reno.	Sheriff.yack
+12286	Nicht gerade viele Verbrechen in Thimbleweed Park, oder?	Not a lot of crime in Thimbleweed Park, is there?	Sheriff.yack
+12287	Was hab ich da über den verlassenen Zirkus gelesen?	What's that I read about the circus being abandoned?	Sheriff.yack
+12288	Ich hab überlegt Bundesagent zu werden...	I was thinking about becoming a federal agent...	Sheriff.yack
+12289	Muss los... bye.	Got to run... bye.	Sheriff.yack
+12290	Nicht wirklich.	Not really.	Sheriff.yack
+12291	Eine neue Landstreicherfamilie hängt in der A Straße rum.	A new vagrant family has been hanging out on A Street.	Sheriff.yack
+12292	Sie haben aber kein Ärgerlein gemacht, also hab ich sie gelassen.	They haven't been causing any trouble-a-reno, so I leave them be.	Sheriff.yack
+12293	Möglicherweise schwere Zeiten.	Probably fell on hard times.	Sheriff.yack
+12294	Oder sie ist ein kompletter Wichtigtuer und hat all das verdient.	Or she is a complete pompous jerk and deserves everything she gets.	Sheriff.yack
+12295	Ich verstehe das Fraglein nicht?	I don't understand-a-reno what you're asking?	Sheriff.yack
+12296	Bist du auf Drogileins? Sag einfach neinlein.	Are you on drugs-a-reno? Just say no-a-reno.	Sheriff.yack
+12297	Hey, der 'lein' Gag ist meiner!	Hey, the 'a-reno' gag is mine!	Sheriff.yack
+12298	Ha! Erwischt!	Ha! Got ya!	Sheriff.yack
+12299	Waslein!	What-a-reno!	Sheriff.yack
+12300	Ransome ist so berühmt wie nie, seit er die Beschimpfungstirade vor vielen Jahren los ließ.	Ransome's more popular than ever since he dropped the insult bit many years ago.	Sheriff.yack
+12301	Wo hast du das gelesen?	Where did you read that?	Sheriff.yack
+12302	Ich habs in Ihren vertraulichen Polizeiakten gelesen.	I read it in your confidential police files.	Sheriff.yack
+12303	Ich habs in dem Klatschblatt Nickel News gelesen.	I read it in that trash-rag the Nickel News.	Sheriff.yack
+12304	Ich habs im BTX gelesen.	I read it on an on-line BBS.	Sheriff.yack
+12305	Weiß nicht. Kann mich nicht erinnern.	I don't know. I can't remember.	Sheriff.yack
+12306	Jemals einen getroffen?	Ever met one?	Sheriff.yack
+12307	Kann ich nicht behauptlein.	Can't say-a-reno that I ever have.	Sheriff.yack
+12308	Vielleicht mach ich einfach ein Spiel, das einen Bundesagenten enthält.	Maybe I'll just make a game that has a federal agent in it.	Sheriff.yack
+12309	Klingt einfacher.	Sounds easier.	Sheriff.yack
+12310	Oh...	Oh...	Sheriff.yack
+12311	Kannst du das Pathologilein für mich holen?	Can you go get the Coroner-a-reno for me?	Sheriff.yack
+12312	Sicher, ich geh den Pathologen für Sie holen.	Sure, I'll go get the Coroner for you.	Sheriff.yack
+12313	Geht klarlein. I werde den Pathologe bitten, Sie aufzusuchen.	Right-a-reno, I'll let the Coroner know to come see you.	Sheriff.yack
+12314	Hi Willie.	Hi Willie.	Willie.yack
+12315	Hallo Delores.	Hello Delores.	Willie.yack
+12316	Du machst aber spät dicht.	You're closing up late.	Willie.yack
+12317	Wie läuft das Geschäft?	How's business?	Willie.yack
+12318	Viel zu tun.	Business is booming.	Willie.yack
+12319	Sorry ich kann grad nicht sprechen, ich muss nach Hause.	Sorry I can't talk, I've got to get home.	Willie.yack
+12320	Heute bin ich dran mit Kochen.	It's my night to cook dinner.	Willie.yack
+12321	Option-lein	Options-a-reno	Options.dinky
+12322	Hover Piep	Hover beep	Options.dinky
+12323	Hover Plopp	Hover pop	Options.dinky
+12324	Vollbild	Fullscreen	Options.dinky
+12325	Kleine Schrift	Small font	Options.dinky
+12326	Musik %d%%	Music %d%%	Options.dinky
+12327	Geräusche %d%%	Sound %d%%	Options.dinky
+12328	Text Tempo: %s	Text speed: %s	Options.dinky
+12329	Lösche gesamten Fortschritt und beende	Delete all progress and quit	Options.dinky
+12330	Du hast %d von %d Fotos eingereicht	You've handed in %d out of %d photos	Options.dinky
+12331	Ok	Ok	Options.dinky
+12332	Hilfe	Help	Options.dinky
+12333	Beende	Quit	Options.dinky
+12334	Sicher das du allen Fortschritt löschen willst und beenden?	Are you sure you want to delete ALL progress and quit?	Options.dinky
+12335	LÖSCHE	DELETE	Options.dinky
+12336	Abbruch	Cancel	Options.dinky
+12337	Hilfe!	Help!	Options.dinky
+12338	● Links Klick um angezeigten Befehl auszuführen.	● Left-click to do what the cursor sentence says.	Options.dinky
+12339	● Rechts Klick um mehr Befehle anzuzeigen.	● Right-click to show more verbs.	Options.dinky
+12340	● Ziehe Inventar auf anderes Inventar oder Objekte im Raum.	● Drag inventory onto other inventory or room objects.	Options.dinky
+12341	● Wenn beim Ziehen kein Befehl angezeigt wird	● When dragging, if no sentence appears, they can't	Options.dinky
+12342	  kann es dort nicht verwendet werden.	  be used together.	Options.dinky
+12343	● Ziehe Kamera um Fotos aufzunehmen.	● Drag Camera to take pictures.	Options.dinky
+12344	● Benutze #{FFFF00}i#{} um Inventar zu sehen/verstecken.	● Use #{FFFF00}i#{} to show/hide inventory.	Options.dinky
+12345	● Benutze #{FFFF00}o#{} um Einstellungen zu sehen/verstecken.	● Use #{FFFF00}o#{} to show/hide options.	Options.dinky
+12346	● Benutze #{FFFF00}.#{} um Dialog zu überspringen.	● Use #{FFFF00}.#{} to skip dialog.	Options.dinky
+12347	● Benutze #{FFFF00}ctrl-Q/cmd-Q#{} um zu beenden.	● Use #{FFFF00}ctrl-Q/cmd-Q#{} to quit.	Options.dinky
+12348	Ok	Ok	Options.dinky
+12349	Beenden und den Fortschritt für diese 5 Fotos verlieren?	Quit now and lose progress on these five photographs?	Options.dinky
+12350	NEIN!	NO!	Options.dinky
+12351	Beende	Quit	Options.dinky
+12352	dem	the	DefineActors.dinky
+12353	dem	the	DefineActors.dinky
+12354	einem	a	CoronersOffice.dinky
+12355	Scheinbar macht Paps wieder Überstunden.	Looks like Dad is working late again.	Vista.dinky
+12356	Lenore am Arbeiten	Lenore working	DefineActors.dinky
+12357	Lenore	Lenore	DefineActors.dinky
+12358	Ransome the Clown Plakat	Ransome the Clown poster	Alleyway.dinky
+12359	laufenden Wassers aus einem Wasserhahn	a faucet with running water	Bathroom.dinky
+12360	einem Abfluss mit laufendem Wasser	a sink with running water	Bathroom.dinky
+12361	einem Wasserhahn	a faucet	Bathroom.dinky
+12362	einem Abflusses	a sink	Bathroom.dinky
+12363	Dave	Dave	Diner.dinky
+12364	Dave	Dave	Diner.dinky
+12365	Dave und die Feuerbälle	Dave and the fireballs	Diner.dinky
+12366	einer Zeitungsschlagzeile	a newspaper headline	Nickel.dinky
+12367	Er ist definitiv kein ehemaliger Präsident.	He's definitely not an ex-president.	CityHall.dinky
+12368	einem	a	Nickel.dinky
+12369	einer	a	Nickel.dinky
+12370	einer	a	Nickel.dinky
+12371	einem	a	Nickel.dinky
+12372	einem	a	MainStreet.dinky
+12373	einem	a	MainStreet.dinky
+12374	einer	a	MainStreet.dinky
+12375	einem	a	MainStreet.dinky
+12376	einem	a	MainStreet.dinky
+12377	einem	a	MainStreet.dinky
+12378	einem	a	MainStreet.dinky
+12379	Schnapppflanze	snapping plant	QuickiePal.dinky
+12380	Pflanze	plant	QuickiePal.dinky
+12381	einer	a	QuickiePal.dinky
+12382	einer	a	QuickiePal.dinky
+12383	einem	a	QuickiePal.dinky
+12384	einem	a	QuickiePal.dinky
+12385	einem	a	QuickiePal.dinky
+12386	einer	a	QuickiePal.dinky
+12387	Ransome Süßigkeitenspender	Ransome candy dispensers	QuickiePal.dinky
+12388	einer	a	PostOffice.dinky
+12389	einem	a	PostOffice.dinky
+12390	einem	a	PostOffice.dinky
+12391	ein	a	PostOffice.dinky
+12392	ein	a	PostOffice.dinky
+12393	einer	a	CityHall.dinky
+12394	einem	a	CityHall.dinky
+12395	einem	a	CityHall.dinky
+12396	einem	a	CityHall.dinky
+12397	einem	a	CityHall.dinky
+12398	einem	a	Alleyway.dinky
+12399	einem	a	Alleyway.dinky
+12400	einer	a	Alleyway.dinky
+12401	einer	a	Alleyway.dinky
+12402	einem	a	Alleyway.dinky
+12403	einem	a	Alleyway.dinky
+12404	einer	a	AStreet.dinky
+12405	einem	a	AStreet.dinky
+12406	einer	a	AStreet.dinky
+12407	einem	a	AStreet.dinky
+12408	einer	a	BookStore.dinky
+12409	einer	a	BookStore.dinky
+12410	einer	a	BookStore.dinky
+12411	einer	a	BookStore.dinky
+12412	Gedicht	poem	BookStore.dinky
+12413	Notiz	note	BookStore.dinky
+12414	einem	a	BookStore.dinky
+12415	einer	a	BookStore.dinky
+12416	einem	a	Bathroom.dinky
+12417	einem	a	Bathroom.dinky
+12418	einem	a	Bathroom.dinky
+12419	einem	a	Bathroom.dinky
+12420	einem	a	Bathroom.dinky
+12421	einem	a	Bathroom.dinky
+12422	einem	a	Bathroom.dinky
+12423	einem	a	Diner.dinky
+12424	einem	a	Diner.dinky
+12425	einem	a	Diner.dinky
+12426	einem	a	Diner.dinky
+12427	einem	a	Diner.dinky
+12428	einer	a	SheriffsOffice.dinky
+12429	einem	a	SheriffsOffice.dinky
+12430	einem	a	SheriffsOffice.dinky
+12431	einem	a	SheriffsOffice.dinky
+12432	einem	a	SheriffsOffice.dinky
+12433	einem	a	SheriffsOffice.dinky
+12434	einem	a	SheriffsOffice.dinky
+12435	Schublade	drawer	SheriffsOffice.dinky
+12436	einer	a	SheriffsOffice.dinky
+12437	Schublade	drawer	SheriffsOffice.dinky
+12438	einer	a	SheriffsOffice.dinky
+12439	Schublade	drawer	SheriffsOffice.dinky
+12440	einer	a	SheriffsOffice.dinky
+12441	Schublade	drawer	SheriffsOffice.dinky
+12442	einer	a	SheriffsOffice.dinky
+12443	Schublade	drawer	SheriffsOffice.dinky
+12444	einer	a	SheriffsOffice.dinky
+12445	Schublade	drawer	SheriffsOffice.dinky
+12446	einer	a	SheriffsOffice.dinky
+12447	einem	a	SheriffsOffice.dinky
+12448	einem	a	SheriffsOffice.dinky
+12449	einer	a	Bank.dinky
+12450	einem	a	Bank.dinky
+12451	einem	a	Bank.dinky
+12452	einem	a	Bank.dinky
+12453	einem	a	Bank.dinky
+12454	einer	a	Bank.dinky
+12455	einem	a	Vista.dinky
+12456	einer	a	CoronersOffice.dinky
+12457	einem	a	CoronersOffice.dinky
+12458	einer	a	CoronersOffice.dinky
+12459	Schublade	drawer	CoronersOffice.dinky
+12460	einer	a	CoronersOffice.dinky
+12461	Schublade	drawer	CoronersOffice.dinky
+12462	einer	a	CoronersOffice.dinky
+12463	Schublade	drawer	CoronersOffice.dinky
+12464	einer	a	CoronersOffice.dinky
+12465	einem	a	Inventory.dinky
+12466	einer	an	Inventory.dinky
+12467	einer	an	Inventory.dinky
+12468	einer	a	Inventory.dinky
+12469	einer	a	Inventory.dinky
+12470	einem	a	Inventory.dinky
+12471	einem	a	Inventory.dinky
+12472	einem	a	Inventory.dinky
+12473	einem	a	Inventory.dinky
+12474	einem	a	Inventory.dinky
+12475	am lahmsten	slowest	Options.dinky
+12476	lahmer	slower	Options.dinky
+12477	lahm	slow	Options.dinky
+12478	normal	normal	Options.dinky
+12479	schnell	fast	Options.dinky
+12480	schneller	faster	Options.dinky
+12481	am schnellsten	fastest	Options.dinky
+12482	Das ist vermutlich echt gefährlich.	That's probably really dangerous.	Alleyway.dinky
+12483	Ich gestalte schon zu lange Adverture Spiele.	I've been designing adventure games too long.	Alleyway.dinky
+12484	Leeres Glas	empty glass	Inventory.dinky
+12485	einem leeren Glas	an empty glass	Inventory.dinky
