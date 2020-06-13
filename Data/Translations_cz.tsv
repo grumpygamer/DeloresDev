@@ -292,7 +292,7 @@ id	text	en	loc
 11288	dveře	door	CityHall.dinky
 11289	Odejít	Leave	CityHall.dinky
 11290	Odejít z radnice	Leave City Hall	CityHall.dinky
-11291	fontánka	drinking fountain	CityHall.dinky
+11291	fontánku	drinking fountain	CityHall.dinky
 11292	emblém	seal	CityHall.dinky
 11293	dveře šerifovy kanceláře	Sheriff's Office door	CityHall.dinky
 11294	dveří šerifovy kanceláře	the Sheriff's Office door	CityHall.dinky
@@ -303,7 +303,7 @@ id	text	en	loc
 11299	Vejít	Enter	CityHall.dinky
 11300	Vejít do koronerovy kanceláře	Enter the Coroner's Office	CityHall.dinky
 11301	obraz	painting	CityHall.dinky
-11302	obrazu	painting	CityHall.dinky
+11302	obraz	painting	CityHall.dinky
 11303	Tyhle věci byly děsivé. Jsem ráda, že už jsou vypnuté.	These things were creepy. I'm glad they were deactivated.	QuickiePalOutside.dinky
 11304	Slyšela jsem, že sledovali vaše výpůjčky a tyhle informace pak prodávali dalším firmám. Brr!	I heard they actually tracked your movie rentals and shared the information with unknown companies. **SHIVER**	QuickiePalOutside.dinky
 11305	dveře Quickie Pal	Quickie Pal door	QuickiePalOutside.dinky
@@ -962,10 +962,10 @@ id	text	en	loc
 11964	Jako díte jsem je fakt milovala!	I sure loved these when I was a kid.	Inventory.dinky
 11965	Au! Můj zub!	Ouch!! My tooth!	Inventory.dinky
 11966	Ani omylem. Jeden zlomený zub stačí.	No way. One broken tooth is enough.	Inventory.dinky
-11967	^% smítek prachu	^%d specks of dust	Inventory.dinky
-11968	^% smítek prachu	^%d specks of dust	Inventory.dinky
+11967	^%d smítek prachu	^%d specks of dust	Inventory.dinky
+11968	^%d smítek prachu	^%d specks of dust	Inventory.dinky
 11969	Nemyslím si, že je toho prachu pro Natalii dost.	I don't think this is enough dust for Natalie.	Inventory.dinky
-11970	^Pravděpodobně potřebuje zhruba %d smítek prachu.	^She probably needs around %d specks of dust.	Inventory.dinky
+11970	^Pravděpodobně bude potřeba zhruba %d smítek prachu.	^She probably needs around %d specks of dust.	Inventory.dinky
 11971	To je dobrá fotka!	That's a good shot!	Inventory.dinky
 11972	Tohle se Natalii bude líbit!	Natalie will love this one!	Inventory.dinky
 11973	To je pro článek perfektní!	This is perfect for the story!	Inventory.dinky
@@ -1325,7 +1325,7 @@ id	text	en	loc
 12327	Zvuk %d%%	Sound %d%%	Options.dinky
 12328	Rychlost textu %s	Text speed: %s	Options.dinky
 12329	Smažte veškerý pokrok a odejděte.	Delete all progress and quit	Options.dinky
-12330	Doručili jste %d z %d fotografií.	You've handed in %d out of %d photos	Options.dinky
+12330	Předáno %d z %d fotografií.	You've handed in %d out of %d photos	Options.dinky
 12331	OK	Ok	Options.dinky
 12332	Pomoc	Help	Options.dinky
 12333	Konec	Quit	Options.dinky
