@@ -292,7 +292,7 @@ id	text	en	loc
 11288	dveře	door	CityHall.dinky
 11289	Odejít	Leave	CityHall.dinky
 11290	Odejít z radnice	Leave City Hall	CityHall.dinky
-11291	fontánka	drinking fountain	CityHall.dinky
+11291	fontánku	drinking fountain	CityHall.dinky
 11292	emblém	seal	CityHall.dinky
 11293	dveře šerifovy kanceláře	Sheriff's Office door	CityHall.dinky
 11294	dveří šerifovy kanceláře	the Sheriff's Office door	CityHall.dinky
@@ -303,7 +303,7 @@ id	text	en	loc
 11299	Vejít	Enter	CityHall.dinky
 11300	Vejít do koronerovy kanceláře	Enter the Coroner's Office	CityHall.dinky
 11301	obraz	painting	CityHall.dinky
-11302	obrazu	painting	CityHall.dinky
+11302	obraz	painting	CityHall.dinky
 11303	Tyhle věci byly děsivé. Jsem ráda, že už jsou vypnuté.	These things were creepy. I'm glad they were deactivated.	QuickiePalOutside.dinky
 11304	Slyšela jsem, že sledovali vaše výpůjčky a tyhle informace pak prodávali dalším firmám. Brr!	I heard they actually tracked your movie rentals and shared the information with unknown companies. **SHIVER**	QuickiePalOutside.dinky
 11305	dveře Quickie Pal	Quickie Pal door	QuickiePalOutside.dinky
@@ -455,7 +455,7 @@ id	text	en	loc
 11451	cedulku	note	AStreet.dinky
 11452	cedulku	note	AStreet.dinky
 11453	cedulku	note	AStreet.dinky
-11454	odpadkový koš	trash can	AStreet.dinky
+11454	popelnici	trash can	AStreet.dinky
 11455	desetník	dime	AStreet.dinky
 11456	na Hlavní ulici	Main Street	AStreet.dinky
 11457	láhev	bottle	AStreet.dinky
@@ -472,8 +472,8 @@ id	text	en	loc
 11468	Vypadá jak mrtvý bratranec Ted z té nové hry, co miluju.	Kind of looks like Dead Cousin Ted from that new game I love.	BookStore.dinky
 11469	Děsivé.	Creepy.	BookStore.dinky
 11470	Netuším, proč si lidi hrají s panenkami.	Not sure why anyone wants to play with dolls.	BookStore.dinky
-11471	Je to ta kniha o Fortranu, třicet let starém počítačovém jazyku.	It's that book on Fortran, a 30-year-old computer language.	BookStore.dinky
-11472	Je to kniha o Fortranu, třicet let starém počítačovém jazyku.	It's a book on Fortran, a 30-year-old computer language.	BookStore.dinky
+11471	Je to ta kniha o Fortranu, třicet let starém programovacím jazyku.	It's that book on Fortran, a 30-year-old computer language.	BookStore.dinky
+11472	Je to kniha o Fortranu, třicet let starém programovacím jazyku.	It's a book on Fortran, a 30-year-old computer language.	BookStore.dinky
 11473	Je tu shora pěkný výhled. Vidím i bufet S&D.	Nice view from up here. I can see the S&D Diner.	BookStore.dinky
 11474	Píše se tu:	It reads...	BookStore.dinky
 11475	“Děsné oči”	“Creepy eyes.”	BookStore.dinky
@@ -495,7 +495,7 @@ id	text	en	loc
 11491	okno	window	BookStore.dinky
 11492	města	the town	BookStore.dinky
 11493	Je to v provozu.	It's in use.	Bathroom.dinky
-11494	Nemyslím si, že je zapnutá elektřina.	I don't think the power is on.	Bathroom.dinky
+11494	Vypadá to, že nejde elektřina.	I don't think the power is on.	Bathroom.dinky
 11495	To je ale hnusný záchod!	It's a gross toilet!	Bathroom.dinky
 11496	Je tu moc tma.	It's too dark to see.	Bathroom.dinky
 11497	Je to hnusné splachovadlo.	It's a gross toilet handle!	Bathroom.dinky
@@ -697,8 +697,8 @@ id	text	en	loc
 11693	Jako by teď měl Thimbleweed svůj vlastní Černobyl.	It's like Thimbleweed's own private Chernobyl.	Vista.dinky
 11694	Náš bývalý dům, než ho převzala banka.	My old home before it was repossessed by the bank.	Vista.dinky
 11695	KSCUM hraje všechny hity.	KSCUM plays all the hits.	Vista.dinky
-11696	město	town	Vista.dinky
-11697	do kraje	country	Vista.dinky
+11696	do města	town	Vista.dinky
+11697	do okolí	country	Vista.dinky
 11698	dopravní kužel	traffic cone	Vista.dinky
 11699	cirkus	circus	Vista.dinky
 11700	cirkusu	the circus	Vista.dinky
@@ -927,7 +927,7 @@ id	text	en	loc
 11929	To jsou známky od Natalie.	It's some stamps from Natalie.	Inventory.dinky
 11930	Už tam jsou známky, takže je to připraveno k odeslání.	It's stamped and ready to mail.	Inventory.dinky
 11931	Máta, mňam!	Peppermint! Yum!	Inventory.dinky
-11932	Smrdí to jako vandrák.	Smells like bum.	Inventory.dinky
+11932	Smrdí jako nějaký vágus.	Smells like bum.	Inventory.dinky
 11933	Díky za recyklaci! Tady je záloha 5 centů.	Thanks for recycling! Here is your nickel deposit back.	Inventory.dinky
 11934	Zajímalo by mě, proč na ně dali hlavy prezidentů a ne cool lidí jako Ada Lovelaceová.	I wonder why they put presidents' heads on these and not cool people like Ada Lovelace.	Inventory.dinky
 11935	Tady je tvůj pěťák. Zasloužila sis ho za svou pomoc při čištění životního prostředí!	It's your nickel, you earned it by helping to clean up the environment!	Inventory.dinky
@@ -962,10 +962,10 @@ id	text	en	loc
 11964	Jako díte jsem je fakt milovala!	I sure loved these when I was a kid.	Inventory.dinky
 11965	Au! Můj zub!	Ouch!! My tooth!	Inventory.dinky
 11966	Ani omylem. Jeden zlomený zub stačí.	No way. One broken tooth is enough.	Inventory.dinky
-11967	^% smítek prachu	^%d specks of dust	Inventory.dinky
-11968	^% smítek prachu	^%d specks of dust	Inventory.dinky
+11967	^%d smítek prachu	^%d specks of dust	Inventory.dinky
+11968	^%d smítek prachu	^%d specks of dust	Inventory.dinky
 11969	Nemyslím si, že je toho prachu pro Natalii dost.	I don't think this is enough dust for Natalie.	Inventory.dinky
-11970	^Pravděpodobně potřebuje zhruba %d smítek prachu.	^She probably needs around %d specks of dust.	Inventory.dinky
+11970	^Pravděpodobně bude potřeba zhruba %d smítek prachu.	^She probably needs around %d specks of dust.	Inventory.dinky
 11971	To je dobrá fotka!	That's a good shot!	Inventory.dinky
 11972	Tohle se Natalii bude líbit!	Natalie will love this one!	Inventory.dinky
 11973	To je pro článek perfektní!	This is perfect for the story!	Inventory.dinky
@@ -1325,7 +1325,7 @@ id	text	en	loc
 12327	Zvuk %d%%	Sound %d%%	Options.dinky
 12328	Rychlost textu %s	Text speed: %s	Options.dinky
 12329	Smažte veškerý pokrok a odejděte.	Delete all progress and quit	Options.dinky
-12330	Doručili jste %d z %d fotografií.	You've handed in %d out of %d photos	Options.dinky
+12330	Předáno %d z %d fotografií.	You've handed in %d out of %d photos	Options.dinky
 12331	OK	Ok	Options.dinky
 12332	Pomoc	Help	Options.dinky
 12333	Konec	Quit	Options.dinky
@@ -1408,7 +1408,7 @@ id	text	en	loc
 12410	zachycující	a	BookStore.dinky
 12411	zachycující	a	BookStore.dinky
 12412	báseň	poem	BookStore.dinky
-12413	poznámku	note	BookStore.dinky
+12413	cedulku	note	BookStore.dinky
 12414	zachycující	a	BookStore.dinky
 12415	zachycující	a	BookStore.dinky
 12416	zachycující	a	Bathroom.dinky
