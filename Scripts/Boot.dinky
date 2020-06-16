@@ -86,9 +86,12 @@ function main() {
 	defineAllYacks()
 
 	// Create new Translations_de.tsv, Translations_fr.tsv, Translations_it.tsv, etc files and switch to them using useTranslation("de")
-	// For extra credit, add an option to Options.dinky and switch on the fly.
 
-	//useTranslation("en")		// Uncomment to start using Translations_en.tsv
+	if (getuserpref("language")) {
+		useTranslation(getuserpref("language"))
+	} else {
+		// If no 'language' pref is found, this dev build will use the English text found in the source.
+	}
 
 	randomseed(null)
 	print("Running boot.dinky...")

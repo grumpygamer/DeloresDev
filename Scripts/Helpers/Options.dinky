@@ -312,7 +312,19 @@ function openOptions(save_state=YES) {
 		return format(TR(TEXT(12327,"Sound %d%%")), as_int(vol*100.0))
 	})
 
-	line += 2
+	local language_index = getLanguageInfo().index
+	local start_language_index = language_index
+
+	line += 1
+	makeSlider(point(0, linePos(line)), "", 180, 1.0, 0.0, @(inc_dec){
+		if (inc_dec > 0) language_index += 1
+		if (inc_dec < 0) language_index -= 1
+		local info = getLanguageInfo(language_index)
+		language_index = info.index
+		return info.langauge
+	})
+
+	line += 1
 	makeSlider(point(0, linePos(line)), "", 240, 1.0, 0.0, @(inc_dec) {
 		local s = gameprop("sayLineSpeed")
 		local v = 7
@@ -362,6 +374,9 @@ function openOptions(save_state=YES) {
 
 	line += 1
 	ok_button = makeButton(point(-panel_width/2+80, linePos(line)), TR(TEXT(12331,"Ok")), @() {
+		if (start_language_index != language_index) {
+			useTranslation(getLanguageInfo(language_index).code)
+		}
 		gameFullscreen(SETTING(fullscreen))
 		closeOptions()
 	})
