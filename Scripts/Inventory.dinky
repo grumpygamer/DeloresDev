@@ -22,11 +22,11 @@ DEFINE_ROOM("Inventory", {
 		icon = @filled_with?"glass_with_water":"glass"
 		name = @{
 			if (filled_with == "water") return looked_at ? TEXT(11976,"glass of polluted water") : TEXT(11977,"glass of water")
-			return "empty glass"
+			return TEXT(12484,"empty glass")
 		}
 		photo_name = @{
 			if (filled_with == "water") return looked_at ? TEXT(11978,"a glass of polluted water") : TEXT(11979,"a glass of water")
-			return "an empty glass"
+			return TEXT(12485,"an empty glass")
 		}
 
 		VERB(lookat) {
@@ -672,7 +672,7 @@ DEFINE_ROOM("Inventory", {
 			if (Note.isActiveStory("cleaning_up") && !Note.isStoryPhotographed("cleaning_up")) {
 				if (this.dust_count < SETTING(specks_of_dust_complete)) {
 					sayLine(SAY(11969,"I don't think this is enough dust for Natalie."),
-					        format(TR(SAY(11970,"^She probably needs around %d specks of dust."), SETTING(specks_of_dust_complete))))
+					        format(TR(SAY(11970,"^She probably needs around %d specks of dust.")), SETTING(specks_of_dust_complete)))
 				} else {
 					sayLine(randomfrom(SAY(11971,"That's a good shot!"),
 					                   SAY(11972,"Natalie will love this one!"),

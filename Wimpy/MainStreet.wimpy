@@ -901,7 +901,7 @@ objects: [
             {
                 name: "here"
                 frames: [
-                    "pillow_store"
+                    "pillow_store_en"
                 ]
             }
             {

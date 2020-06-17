@@ -49,6 +49,21 @@ Have fun!
 }}*/
 
 local translation_table = null
+local current_language = null
+
+// The follow lines should not be wrapped as it's better to have the raw language text
+// so the entire translation file doesn't need to be loaded while the player is cycling
+// through languages.
+
+// If you're adding a different translation for an existing language, use a new language code.
+//		{ index = 4, code = "de2" language = "Deutsch(Boris)"}
+
+local known_translations = [
+	{ index = 0, code = "en", langauge = "English" }
+	{ index = 1, code = "it" langauge = "Italiano" }
+	{ index = 2, code = "cz" langauge = "Česky" }
+	{ index = 3, code = "pt" langauge = "Português(Br)" }
+]
 
 /*{{ ------------------------------------------------------------------------------------
 @func useTranslation(language)
@@ -74,7 +89,13 @@ local translation_table = null
 function useTranslation(language) {
 	translation_table = language ? loadtsvtable("Translations_"+language+".tsv") : null
 	// dumpvar(translation_table)	// Uncomment to dump the table
-	setLanguage(translation_table ? language : "en")
+	if (translation_table == null) {
+		print("Unknown language: ",language)
+	}
+	current_language = translation_table ? language : "en"
+	setLanguage(current_language)
+	print("Using language file: ", "Translations_"+language+".tsv")
+	setuserpref("language", current_language)
 	return translation_table ? YES : NO
 }
 
@@ -115,4 +136,41 @@ function TR(text) {
 		return DEBUG(translation_markers) ? "*"+tr_text : tr_text
 	}
 	return DEBUG(translation_markers) ? "??"+text+"??" : text
+}
+
+/*{{ ------------------------------------------------------------------------------------
+@func currentLanguage(text)
+@desc Returns the language code for the current language
+}}*/
+
+function currentLanguage() {
+	return current_language ? current_language : "en"
+}
+
+/*{{ ------------------------------------------------------------------------------------
+@func getLanguageInfo(language)
+@desc Returns info on the language
+
+If `language` is `null`, then the current language is used.
+
+If `language` is a `string` the language code is used.
+
+If `language` is an `int`, it's an index into the known translations.
+}}*/
+
+function getLanguageInfo(index=null) {
+	if (index == null) index = currentLanguage()
+	if (is_string(index)) {
+		local lang_code = index
+		index = 0
+		foreach (local lang in known_translations) {
+			if (lang?.code == lang_code) {
+				break
+			}
+			index += 1
+		}
+	}
+	if (index < 0) index = sizeof(known_translations)-1
+	if (index >= sizeof(known_translations)) index = 0
+	return known_translations[index]
 }
