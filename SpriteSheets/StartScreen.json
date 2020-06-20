@@ -2,23 +2,31 @@
 
 "background":
 {
-	"frame": {"x":391,"y":1451,"w":3,"h":3},
+	"frame": {"x":3,"y":3,"w":3,"h":3},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":0,"y":0,"w":3,"h":3},
 	"sourceSize": {"w":1280,"h":720}
 },
-"click_to_continue":
+"click_to_continue_cz":
 {
-	"frame": {"x":204,"y":1451,"w":183,"h":13},
+	"frame": {"x":618,"y":3,"w":195,"h":17},
 	"rotated": false,
 	"trimmed": true,
-	"spriteSourceSize": {"x":117,"y":629,"w":183,"h":13},
+	"spriteSourceSize": {"x":135,"y":628,"w":195,"h":17},
+	"sourceSize": {"w":1280,"h":720}
+},
+"click_to_continue_de":
+{
+	"frame": {"x":197,"y":3,"w":216,"h":14},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":146,"y":628,"w":216,"h":14},
 	"sourceSize": {"w":1280,"h":720}
 },
 "click_to_continue_en":
 {
-	"frame": {"x":204,"y":1451,"w":183,"h":13},
+	"frame": {"x":10,"y":3,"w":183,"h":13},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":117,"y":629,"w":183,"h":13},
@@ -26,15 +34,23 @@
 },
 "click_to_continue_it":
 {
-	"frame": {"x":3,"y":1451,"w":197,"h":16},
+	"frame": {"x":417,"y":3,"w":197,"h":16},
 	"rotated": false,
 	"trimmed": true,
 	"spriteSourceSize": {"x":210,"y":629,"w":197,"h":16},
 	"sourceSize": {"w":1280,"h":720}
 },
-"refcard":
+"refcard_cz":
 {
-	"frame": {"x":3,"y":3,"w":1280,"h":720},
+	"frame": {"x":3,"y":24,"w":1280,"h":720},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":1280,"h":720},
+	"sourceSize": {"w":1280,"h":720}
+},
+"refcard_de":
+{
+	"frame": {"x":3,"y":748,"w":1280,"h":720},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":1280,"h":720},
@@ -42,7 +58,7 @@
 },
 "refcard_en":
 {
-	"frame": {"x":3,"y":3,"w":1280,"h":720},
+	"frame": {"x":3,"y":1472,"w":1280,"h":720},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":1280,"h":720},
@@ -50,7 +66,7 @@
 },
 "refcard_it":
 {
-	"frame": {"x":3,"y":727,"w":1280,"h":720},
+	"frame": {"x":3,"y":2196,"w":1280,"h":720},
 	"rotated": false,
 	"trimmed": false,
 	"spriteSourceSize": {"x":0,"y":0,"w":1280,"h":720},
@@ -61,8 +77,8 @@
 	"version": "1.0",
 	"image": "StartScreen.png",
 	"format": "RGBA8888",
-	"size": {"w":1286,"h":1470},
+	"size": {"w":1286,"h":2919},
 	"scale": "1",
-	"smartupdate": "$TexturePacker:SmartUpdate:7cb4674ade473bcf6d5897e2896cfd73:8b21af10a5d7abf320e79658438f5618:3e943be6eee09d3acd4814a998575058$"
+	"smartupdate": "$TexturePacker:SmartUpdate:4ba0f236467fb9e7f86b92d771f1f1c9:a8d2429e8e0d12054dab46a08786cef0:3e943be6eee09d3acd4814a998575058$"
 }
 }
