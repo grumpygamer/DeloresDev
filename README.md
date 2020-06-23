@@ -10,7 +10,7 @@ The Delores source is intended solely for personal use to learn and explore. Ple
 ## Directions
 Clone the repository to your local machine. It is assumed that these files are placed in a `DeloresDev` directory.
 
-Download and extract the DeloreDev engine executable from [here](https://thimbleweedpark.com/deloresdev). The engine executable can go anywhere.
+Download and extract the DeloresDev engine executable from [here](https://thimbleweedpark.com/deloresdev). The engine executable can go anywhere.
 
 Run it once. You will get an error, but that's expected.
 
