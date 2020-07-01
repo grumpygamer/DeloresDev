@@ -121,7 +121,7 @@ id	text	en	loc
 11117	puerta	door	Nickel.dinky
 11118	puerta del Nickel News	the Nickel News door	Nickel.dinky
 11119	Salir	Leave	Nickel.dinky
-11120	Salir de Nickel	Leave the Nickel	Nickel.dinky
+11120	Salir del Nickel	Leave the Nickel	Nickel.dinky
 11121	letrero	sign	Nickel.dinky
 11122	imprenta	printing press	Nickel.dinky
 11123	mapa	map	Nickel.dinky
@@ -167,12 +167,12 @@ id	text	en	loc
 11163	A Street	A Street	MainStreet.dinky
 11164	B Street	B Street	MainStreet.dinky
 11165	boca de incendio	fire hydrant	MainStreet.dinky
-11166	alley	alley	MainStreet.dinky
-11167	an alley	an alley	MainStreet.dinky
+11166	callejón	alley	MainStreet.dinky
+11167	un callejón	an alley	MainStreet.dinky
 11168	puerta	door	MainStreet.dinky
-11169	the Diner door	the Diner door	MainStreet.dinky
+11169	la puerta de la Cafetería	the Diner door	MainStreet.dinky
 11170	Entrar	Enter	MainStreet.dinky
-11171	Enter Diner	Enter Diner	MainStreet.dinky
+11171	Entrar a la Cafetería	Enter Diner	MainStreet.dinky
 11172	bank door	bank door	MainStreet.dinky
 11173	the bank door	the bank door	MainStreet.dinky
 11174	Entrar	Enter	MainStreet.dinky
@@ -220,7 +220,7 @@ id	text	en	loc
 11216	Yikes!	Yikes!	QuickiePal.dinky
 11217	Yikes!	Yikes!	QuickiePal.dinky
 11218	Drink up!	Drink up!	QuickiePal.dinky
-11219	Es un buzón de correos.	It's a mail drop.	QuickiePal.dinky
+11219	Es una ranura del correo.	It's a mail drop.	QuickiePal.dinky
 11220	It's a souvenir Thimbleweed Park T-shirt!	It's a souvenir Thimbleweed Park T-shirt!	QuickiePal.dinky
 11221	It says “Redeem bottles here, 5¢.”	It says “Redeem bottles here, 5¢.”	QuickiePal.dinky
 11222	No one cares about a bunch of boxes.	No one cares about a bunch of boxes.	QuickiePal.dinky
@@ -237,14 +237,14 @@ id	text	en	loc
 11233	the Quickie Pal door	the Quickie Pal door	QuickiePal.dinky
 11234	Salir	Leave	QuickiePal.dinky
 11235	Salir de Quickie Pal	Leave the Quickie Pal	QuickiePal.dinky
-11236	buzón de correos	mail drop	QuickiePal.dinky
+11236	ranura del correo	mail drop	QuickiePal.dinky
 11237	T-shirt	T-shirt	QuickiePal.dinky
-11238	sign	sign	QuickiePal.dinky
+11238	letrero	sign	QuickiePal.dinky
 11239	cajas	boxes	QuickiePal.dinky
 11240	cajas	boxes	QuickiePal.dinky
 11241	rata	rat	QuickiePal.dinky
 11242	Ransome candy dispensers	Ransome candy dispensers	QuickiePal.dinky
-11243	Lotto	Lotto	QuickiePal.dinky
+11243	Lotería	Lotto	QuickiePal.dinky
 11244	the Lotto sign	the Lotto sign	QuickiePal.dinky
 11245	Probablemente la solución a un puzle en otro juego.	Probably the solution to a puzzle in another game.	PostOffice.dinky
 11246	It's for weighing mail.	It's for weighing mail.	PostOffice.dinky
@@ -272,7 +272,7 @@ id	text	en	loc
 11268	cinta adhesiva	tape	PostOffice.dinky
 11269	cinta adhesiva	tape	PostOffice.dinky
 11270	báscula de correos	scale	PostOffice.dinky
-11271	buzón de correos	mail drop	PostOffice.dinky
+11271	ranura del correo	mail drop	PostOffice.dinky
 11272	calendario	calendar	PostOffice.dinky
 11273	important notice	important notice	PostOffice.dinky
 11274	an important notice	an important notice	PostOffice.dinky
@@ -292,7 +292,7 @@ id	text	en	loc
 11288	puerta	door	CityHall.dinky
 11289	Salir	Leave	CityHall.dinky
 11290	Salir del Ayuntamiento	Leave City Hall	CityHall.dinky
-11291	drinking fountain	drinking fountain	CityHall.dinky
+11291	fuente de agua	drinking fountain	CityHall.dinky
 11292	emblema de la ciudad	seal	CityHall.dinky
 11293	puerta de la Oficina del Sheriff	Sheriff's Office door	CityHall.dinky
 11294	la puerta de la Oficina del Sheriff	the Sheriff's Office door	CityHall.dinky
@@ -347,19 +347,19 @@ id	text	en	loc
 11343	It's a rusty old valve. It says “Thimbleweed Park Gas Company, Do Not Touch”.	It's a rusty old valve. It says “Thimbleweed Park Gas Company, Do Not Touch”.	Alleyway.dinky
 11344	It's stuck. I can't move it.	It's stuck. I can't move it.	Alleyway.dinky
 11345	It's stuck again.	It's stuck again.	Alleyway.dinky
-11346	poster	poster	Alleyway.dinky
+11346	cartel	poster	Alleyway.dinky
 11347	Ransome the Clown poster	Ransome the Clown poster	Alleyway.dinky
 11348	poster edge	poster edge	Alleyway.dinky
-11349	Ransome the Clown poster	Ransome the Clown poster	Alleyway.dinky
-11350	Ransome the Clown poster	Ransome the Clown poster	Alleyway.dinky
+11349	cartel del Payaso Ransome	Ransome the Clown poster	Alleyway.dinky
+11350	cartel del Payaso Ransome	Ransome the Clown poster	Alleyway.dinky
 11351	cubo de basura	trash can	Alleyway.dinky
 11352	caja	box	Alleyway.dinky
 11353	Main Street	Main Street	Alleyway.dinky
 11354	puerta	door	Alleyway.dinky
 11355	the Diner back door	the Diner back door	Alleyway.dinky
-11356	póster	poster	Alleyway.dinky
-11357	ThimbleCon poster	ThimbleCon poster	Alleyway.dinky
-11358	Ransome the Clown poster	Ransome the Clown poster	Alleyway.dinky
+11356	cartel	poster	Alleyway.dinky
+11357	cartel de la ThimbleCon	ThimbleCon poster	Alleyway.dinky
+11358	cartel del Payaso Ransome	Ransome the Clown poster	Alleyway.dinky
 11359	válvula	valve	Alleyway.dinky
 11360	válvula de gas	gas valve	Alleyway.dinky
 11361	It's time to do the ThimbleCon with ThimbleCon '88!	It's time to do the ThimbleCon with ThimbleCon '88!	AStreet.dinky
@@ -529,14 +529,14 @@ id	text	en	loc
 11525	la puerta del baño	the bathroom door	Bathroom.dinky
 11526	Salir	Leave	Bathroom.dinky
 11527	Salir del baño	Leave bathroom	Bathroom.dinky
-11528	light switch	light switch	Bathroom.dinky
+11528	interruptor de la luz	light switch	Bathroom.dinky
 11529	inodoro	toilet	Bathroom.dinky
 11530	algo	something	Bathroom.dinky
 11531	toilet handle	toilet handle	Bathroom.dinky
 11532	algo	something	Bathroom.dinky
-11533	grifo	sink	Bathroom.dinky
+11533	pila	sink	Bathroom.dinky
 11534	algo	something	Bathroom.dinky
-11535	pila	faucet	Bathroom.dinky
+11535	grifo	faucet	Bathroom.dinky
 11536	algo	something	Bathroom.dinky
 11537	papel higiénico	toilet paper	Bathroom.dinky
 11538	algo	something	Bathroom.dinky
@@ -565,18 +565,18 @@ id	text	en	loc
 11561	Fancy stuff! All kinds of gourmet hot dogs.	Fancy stuff! All kinds of gourmet hot dogs.	Diner.dinky
 11562	Quality sure has gone up since Dave and Sandy won all those awards.	Quality sure has gone up since Dave and Sandy won all those awards.	Diner.dinky
 11563	That's a lot of fire!	That's a lot of fire!	Diner.dinky
-11564	Parece peligroso! Anything for a story.	Looks dangerous! Anything for a story.	Diner.dinky
+11564	¡Parece peligroso! Algo para una historia.	Looks dangerous! Anything for a story.	Diner.dinky
 11565	puerta	door	Diner.dinky
 11566	la puerta de la Cafetería	the Diner door	Diner.dinky
 11567	Salir	Leave	Diner.dinky
 11568	Salir de la Cafetería	Leave the Diner	Diner.dinky
 11569	perrito caliente	hot dog	Diner.dinky
-11570	hot dog	hot dog	Diner.dinky
-11571	hot dog	hot dog	Diner.dinky
-11572	hot dog	hot dog	Diner.dinky
+11570	perrito caliente	hot dog	Diner.dinky
+11571	perrito caliente	hot dog	Diner.dinky
+11572	perrito caliente	hot dog	Diner.dinky
 11573	radio	radio	Diner.dinky
 11574	menú	menu	Diner.dinky
-11575	the Diner menu	the Diner menu	Diner.dinky
+11575	el menú de la Cafetería	the Diner menu	Diner.dinky
 11576	fireballs	fireballs	Diner.dinky
 11577	Dave and the fireballs	Dave and the fireballs	Diner.dinky
 11578	Solo un cajón.	Just a drawer.	SheriffsOffice.dinky
@@ -600,14 +600,14 @@ id	text	en	loc
 11596	What-the-a-reno!	What-the-a-reno!	SheriffsOffice.dinky
 11597	Dagnabbit-a-reno!	Dagnabbit-a-reno!	SheriffsOffice.dinky
 11598	I can't reach the radio-a-reno.	I can't reach the radio-a-reno.	SheriffsOffice.dinky
-11599	Delores!!	Delores!!	SheriffsOffice.dinky
+11599	¡¡Delores!!	Delores!!	SheriffsOffice.dinky
 11600	Kids-a-reno these days!	Kids-a-reno these days!	SheriffsOffice.dinky
 11601	Where's my key?	Where's my key?	SheriffsOffice.dinky
 11602	What-the-a-reno!	What-the-a-reno!	SheriffsOffice.dinky
 11603	Don't touch that-a-reno.	Don't touch that-a-reno.	SheriffsOffice.dinky
 11604	Humph!	Humph!	SheriffsOffice.dinky
 11605	Kids-a-reno these days!	Kids-a-reno these days!	SheriffsOffice.dinky
-11606	Why?	Why?	SheriffsOffice.dinky
+11606	¿Por qué?	Why?	SheriffsOffice.dinky
 11607	Please leave-a-reno.	Please leave-a-reno.	SheriffsOffice.dinky
 11608	What-the-a-reno!	What-the-a-reno!	SheriffsOffice.dinky
 11609	I don't see him-a-who?	I don't see him-a-who?	SheriffsOffice.dinky
@@ -811,7 +811,7 @@ id	text	en	loc
 11807	el CaraTron 3000™	the FaceTron 3000™	CoronersOffice.dinky
 11808	esqueleto	skeleton	CoronersOffice.dinky
 11809	diagrama	chart	CoronersOffice.dinky
-11810	certificate	certificate	CoronersOffice.dinky
+11810	certificado	certificate	CoronersOffice.dinky
 11811	Juego Pausado	Game Paused	SystemHelpers.dinky
 11812	NEVER SEEN	NEVER SEEN	VerbHelpers.dinky
 11813	Ir a	Walk to	VerbHelpers.dinky
@@ -1316,7 +1316,7 @@ id	text	en	loc
 12318	Business is booming.	Business is booming.	Willie.yack
 12319	Sorry I can't talk, I've got to get home.	Sorry I can't talk, I've got to get home.	Willie.yack
 12320	It's my night to cook dinner.	It's my night to cook dinner.	Willie.yack
-12321	Opcioncitas	Options-a-reno	Options.dinky
+12321	Opcionitas	Options-a-reno	Options.dinky
 12322	Hover beep	Hover beep	Options.dinky
 12323	Hover pop	Hover pop	Options.dinky
 12324	Pantalla completa	Fullscreen	Options.dinky
@@ -1357,116 +1357,116 @@ id	text	en	loc
 12359	a faucet with running water	a faucet with running water	Bathroom.dinky
 12360	a sink with running water	a sink with running water	Bathroom.dinky
 12361	a faucet	a faucet	Bathroom.dinky
-12362	a sink	a sink	Bathroom.dinky
+12362	una pila	a sink	Bathroom.dinky
 12363	Dave	Dave	Diner.dinky
 12364	Dave	Dave	Diner.dinky
 12365	Dave and the fireballs	Dave and the fireballs	Diner.dinky
 12366	un titular de un periódico	a newspaper headline	Nickel.dinky
 12367	He's definitely not an ex-president.	He's definitely not an ex-president.	CityHall.dinky
-12368	a	a	Nickel.dinky
-12369	a	a	Nickel.dinky
-12370	a	a	Nickel.dinky
-12371	a	a	Nickel.dinky
-12372	a	a	MainStreet.dinky
+12368	un	a	Nickel.dinky
+12369	una	a	Nickel.dinky
+12370	un	a	Nickel.dinky
+12371	un	a	Nickel.dinky
+12372	una	a	MainStreet.dinky
 12373	a	a	MainStreet.dinky
-12374	a	a	MainStreet.dinky
+12374	una	a	MainStreet.dinky
 12375	a	a	MainStreet.dinky
-12376	a	a	MainStreet.dinky
-12377	a	a	MainStreet.dinky
-12378	a	a	MainStreet.dinky
+12376	un	a	MainStreet.dinky
+12377	un	a	MainStreet.dinky
+12378	un	a	MainStreet.dinky
 12379	planta antropófaga	snapping plant	QuickiePal.dinky
 12380	planta	plant	QuickiePal.dinky
-12381	a	a	QuickiePal.dinky
-12382	a	a	QuickiePal.dinky
+12381	una	a	QuickiePal.dinky
+12382	una	a	QuickiePal.dinky
 12383	a	a	QuickiePal.dinky
 12384	a	a	QuickiePal.dinky
-12385	a	a	QuickiePal.dinky
-12386	a	a	QuickiePal.dinky
+12385	un	a	QuickiePal.dinky
+12386	una	a	QuickiePal.dinky
 12387	Ransome candy dispensers	Ransome candy dispensers	QuickiePal.dinky
-12388	a	a	PostOffice.dinky
+12388	una	a	PostOffice.dinky
 12389	a	a	PostOffice.dinky
-12390	a	a	PostOffice.dinky
+12390	un	a	PostOffice.dinky
 12391	a	a	PostOffice.dinky
 12392	a	a	PostOffice.dinky
-12393	a	a	CityHall.dinky
-12394	a	a	CityHall.dinky
-12395	a	a	CityHall.dinky
+12393	una	a	CityHall.dinky
+12394	una	a	CityHall.dinky
+12395	un	a	CityHall.dinky
 12396	a	a	CityHall.dinky
 12397	a	a	CityHall.dinky
 12398	a	a	Alleyway.dinky
 12399	a	a	Alleyway.dinky
-12400	a	a	Alleyway.dinky
-12401	a	a	Alleyway.dinky
+12400	un	a	Alleyway.dinky
+12401	una	a	Alleyway.dinky
 12402	a	a	Alleyway.dinky
-12403	a	a	Alleyway.dinky
-12404	a	a	AStreet.dinky
-12405	a	a	AStreet.dinky
-12406	a	a	AStreet.dinky
+12403	una	a	Alleyway.dinky
+12404	un	a	AStreet.dinky
+12405	una	a	AStreet.dinky
+12406	una	a	AStreet.dinky
 12407	a	a	AStreet.dinky
-12408	a	a	BookStore.dinky
-12409	a	a	BookStore.dinky
-12410	a	a	BookStore.dinky
-12411	a	a	BookStore.dinky
+12408	una	a	BookStore.dinky
+12409	una	a	BookStore.dinky
+12410	una	a	BookStore.dinky
+12411	una	a	BookStore.dinky
 12412	poema	poem	BookStore.dinky
 12413	nota	note	BookStore.dinky
-12414	a	a	BookStore.dinky
-12415	a	a	BookStore.dinky
+12414	un	a	BookStore.dinky
+12415	una	a	BookStore.dinky
 12416	a	a	Bathroom.dinky
-12417	a	a	Bathroom.dinky
+12417	un	a	Bathroom.dinky
 12418	a	a	Bathroom.dinky
 12419	a	a	Bathroom.dinky
-12420	a	a	Bathroom.dinky
-12421	a	a	Bathroom.dinky
-12422	a	a	Bathroom.dinky
-12423	a	a	Diner.dinky
-12424	a	a	Diner.dinky
-12425	a	a	Diner.dinky
-12426	a	a	Diner.dinky
-12427	a	a	Diner.dinky
-12428	a	a	SheriffsOffice.dinky
+12420	un	a	Bathroom.dinky
+12421	un	a	Bathroom.dinky
+12422	un	a	Bathroom.dinky
+12423	un	a	Diner.dinky
+12424	un	a	Diner.dinky
+12425	un	a	Diner.dinky
+12426	un	a	Diner.dinky
+12427	una	a	Diner.dinky
+12428	una	a	SheriffsOffice.dinky
 12429	a	a	SheriffsOffice.dinky
 12430	a	a	SheriffsOffice.dinky
 12431	a	a	SheriffsOffice.dinky
-12432	a	a	SheriffsOffice.dinky
+12432	un	a	SheriffsOffice.dinky
 12433	a	a	SheriffsOffice.dinky
 12434	a	a	SheriffsOffice.dinky
 12435	cajón	drawer	SheriffsOffice.dinky
-12436	a	a	SheriffsOffice.dinky
+12436	un	a	SheriffsOffice.dinky
 12437	cajón	drawer	SheriffsOffice.dinky
-12438	a	a	SheriffsOffice.dinky
+12438	un	a	SheriffsOffice.dinky
 12439	cajón	drawer	SheriffsOffice.dinky
-12440	a	a	SheriffsOffice.dinky
+12440	un	a	SheriffsOffice.dinky
 12441	cajón	drawer	SheriffsOffice.dinky
-12442	a	a	SheriffsOffice.dinky
+12442	un	a	SheriffsOffice.dinky
 12443	cajón	drawer	SheriffsOffice.dinky
-12444	a	a	SheriffsOffice.dinky
+12444	un	a	SheriffsOffice.dinky
 12445	cajón	drawer	SheriffsOffice.dinky
-12446	a	a	SheriffsOffice.dinky
-12447	a	a	SheriffsOffice.dinky
-12448	a	a	SheriffsOffice.dinky
-12449	a	a	Bank.dinky
+12446	un	a	SheriffsOffice.dinky
+12447	una	a	SheriffsOffice.dinky
+12448	una	a	SheriffsOffice.dinky
+12449	un	a	Bank.dinky
 12450	a	a	Bank.dinky
 12451	a	a	Bank.dinky
 12452	a	a	Bank.dinky
 12453	a	a	Bank.dinky
-12454	a	a	Bank.dinky
-12455	a	a	Vista.dinky
-12456	a	a	CoronersOffice.dinky
-12457	a	a	CoronersOffice.dinky
-12458	a	a	CoronersOffice.dinky
+12454	un	a	Bank.dinky
+12455	un	a	Vista.dinky
+12456	una	a	CoronersOffice.dinky
+12457	un	a	CoronersOffice.dinky
+12458	un	a	CoronersOffice.dinky
 12459	cajón	drawer	CoronersOffice.dinky
-12460	a	a	CoronersOffice.dinky
+12460	un	a	CoronersOffice.dinky
 12461	cajón	drawer	CoronersOffice.dinky
-12462	a	a	CoronersOffice.dinky
+12462	un	a	CoronersOffice.dinky
 12463	cajón	drawer	CoronersOffice.dinky
-12464	a	a	CoronersOffice.dinky
-12465	a	a	Inventory.dinky
-12466	an	an	Inventory.dinky
-12467	an	an	Inventory.dinky
-12468	a	a	Inventory.dinky
-12469	a	a	Inventory.dinky
-12470	a	a	Inventory.dinky
-12471	a	a	Inventory.dinky
+12464	un	a	CoronersOffice.dinky
+12465	una	a	Inventory.dinky
+12466	una	an	Inventory.dinky
+12467	una	an	Inventory.dinky
+12468	una	a	Inventory.dinky
+12469	una	a	Inventory.dinky
+12470	una	a	Inventory.dinky
+12471	un	a	Inventory.dinky
 12472	a	a	Inventory.dinky
 12473	a	a	Inventory.dinky
 12474	a	a	Inventory.dinky
