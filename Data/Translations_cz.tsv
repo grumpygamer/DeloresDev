@@ -1470,12 +1470,12 @@ id	text	en	loc
 12472	zachycující	a	Inventory.dinky
 12473	zachycující	a	Inventory.dinky
 12474	zachycující	a	Inventory.dinky
-12475	velmi nízká	slowest	Options.dinky
-12476	ještě nižší	slower	Options.dinky
+12475	nejnižší	slowest	Options.dinky
+12476	velmi nízká	slower	Options.dinky
 12477	nízká	slow	Options.dinky
 12478	normální	normal	Options.dinky
 12479	vysoká	fast	Options.dinky
-12480	ještě vyšší	faster	Options.dinky
+12480	velmi vysoká	faster	Options.dinky
 12481	nejvyšší	fastest	Options.dinky
 12482	To je nejspíš opravdu nebezpečné.	That's probably really dangerous.	Alleyway.dinky
 12483	Dělám počítačové hry už příliš dlouho.	I've been designing adventure games too long.	Alleyway.dinky
