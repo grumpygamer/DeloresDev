@@ -321,11 +321,11 @@ function openOptions(save_state=YES) {
 		if (inc_dec < 0) language_index -= 1
 		local info = getLanguageInfo(language_index)
 		language_index = info.index
-		return info.langauge
+		return info.language
 	})
 
 	line += 1
-	makeSlider(point(0, linePos(line)), "", 240, 1.0, 0.0, @(inc_dec) {
+	makeSlider(point(0, linePos(line)), "", 260, 1.0, 0.0, @(inc_dec) {
 		local s = gameprop("sayLineSpeed")
 		local v = 7
 		if (s <= 0.25 ) v = 1 else
