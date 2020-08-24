@@ -18,8 +18,8 @@ id	text	en	loc
 11014	Mi hermana pensará que es una celebridad, pero nadie más lo hace.	My sister might think she's a celebrity, but no one else does.	DefineActors.dinky
 11015	No aceptamos depósitos en forma de monedas.	We don't take deposits in the form of coins.	DefineActors.dinky
 11016	No quiero ni necesito tus lamentables cinco centavos.	I don't want or need your pity nickel.	DefineActors.dinky
-11017	Te dije que hablaras conmigo, not what's-his-face.	I told you to talk to me, not what's-his-face.	DefineActors.dinky
-11018	Si quieres hablar con él, habla conmigo!	You want to talk to him, you talk to me!	DefineActors.dinky
+11017	Te dije que hablaras conmigo, no con el cómo-se-llame.	I told you to talk to me, not what's-his-face.	DefineActors.dinky
+11018	¡Si quieres hablar con él, habla conmigo!	You want to talk to him, you talk to me!	DefineActors.dinky
 11019	Cinco centavos no comprarán un buen juguete. ¡Quiero un juguete!	A nickel won't buy a good toy. I want a toy!	DefineActors.dinky
 11020	¡No quiero eso!	I don't want that!	DefineActors.dinky
 11021	¡Quiero un juguete!	I want a toy!	DefineActors.dinky
@@ -51,11 +51,11 @@ id	text	en	loc
 11047	KSCUM va a cambiar estilos musicales...	KSCUM to change music styles...	Nickel.dinky
 11048	Atigua radio KSCUM decidida a cambiar formatos del rock eclético al rock esotérico.	Long standing KSCUM radio set to change formats from eclectic rock to esoteric rock.	Nickel.dinky
 11049	Cafetería S&D gana otro premio...	S&D Diner nets another award...	Nickel.dinky
-11050	Cafetería S&D recive otro premio por su asombrosa comida. Todos los críticos coinciden, es el mejor lugar para comer en el condado.	S&D Diner received another award for their amazing food. Critics all agree, it's the best place to eat in the county.	Nickel.dinky
+11050	Cafetería S&D recibe otro premio por su asombrosa comida. Todos los críticos coinciden, es el mejor lugar para comer en el condado.	S&D Diner received another award for their amazing food. Critics all agree, it's the best place to eat in the county.	Nickel.dinky
 11051	Vaso gratis conmemorativo en la cafetería S&D...	Free commemorative glass at S&D diner...	Nickel.dinky
 11052	Para celebrar su último premio, la Cafetería S&D está regalando vasos gratis conmemorativos con cada compra.	In celebration of their latest award, the S&D Diner is giving a free commemorative glass with every purchase.	Nickel.dinky
 11053	Arte por Eltron va a reabrir como tienda de PillowBear™...	Art by Eltron to re-open as PillowBear™ store...	Nickel.dinky
-11054	La tienda llamada por los lugareños Arte por Eltron reabrirá como tienda de PillowBear™ a principios de Mayo.	The store referred to by locals as Art by Eltron will re-open as a PillowBear™ factory outlet in early May.	Nickel.dinky
+11054	La tienda llamada por los lugareños como Arte por Eltron reabrirá como tienda de PillowBear™ a principios de Mayo.	The store referred to by locals as Art by Eltron will re-open as a PillowBear™ factory outlet in early May.	Nickel.dinky
 11055	El cuarto de baño de Quickie Pal un lugar tóxico...	Quickie Pal bathroom a toxic site...	Nickel.dinky
 11056	Agencias federales han designado el cuarto de baño de Quickie Pal como un lugar tóxico de Clase 5. La limpieza debería comenzar pronto.	Federal agencies have designated the Quickie Pal bathroom a Class 5 toxic site. Clean-up should begin soon.	Nickel.dinky
 11057	Lenore Edmund desahuciada...	Lenore Edmund evicted...	Nickel.dinky
@@ -117,7 +117,7 @@ id	text	en	loc
 11113	Aquí es donde encontré la cámara. El archivador está vacío ahora.	This is where I found the camera. The cabinet is empty now.	Nickel.dinky
 11114	Aquí es donde Natalie dijo que debería estar la cámara.	This is where Natalie said the camera should be.	Nickel.dinky
 11115	Debe de haber un tesoro de viejas historias ahí.	Must be a treasure trove of old stories in there.	Nickel.dinky
-11116	Debería mirar en el cajón y ver si la cámara está hay, como Natalie dijo.	I should look in the drawer and see if the camera is here, like Natalie said.	Nickel.dinky
+11116	Debería mirar en el cajón y ver si la cámara está hay, como dijo Natalie.	I should look in the drawer and see if the camera is here, like Natalie said.	Nickel.dinky
 11117	puerta	door	Nickel.dinky
 11118	puerta del Nickel News	the Nickel News door	Nickel.dinky
 11119	Salir	Leave	Nickel.dinky
@@ -227,7 +227,7 @@ id	text	en	loc
 11223	Todas dicen, “1 Docena de PillowBears™.”	They all say, “1 Dozen PillowBears™.”	QuickiePal.dinky
 11224	¡Estoy tan orgullosa de Papá por pensar en esta idea!	I'm so proud of Dad for thinking up this idea!	QuickiePal.dinky
 11225	¡Es Ratástico!	It's Ratastic!	QuickiePal.dinky
-11226	Definitivamente no es una nueva moda de juguetes. Tenía uno cuando era niña.	Definitely not a new toy craze. I had one when I was a kid.	QuickiePal.dinky
+11226	Definitivamente no es una nueva moda de juguetes. Tenía uno cuando era pequeña.	Definitely not a new toy craze. I had one when I was a kid.	QuickiePal.dinky
 11227	Es una cabeza de una celebridad, pero un poco menospreciable estando en un dispensadores de caramelos. Necesito una foto mejor.	It's a celebrity's head, but kind of demeaning being a candy dispenser. I need a better photo.	QuickiePal.dinky
 11228	Son un montón de dispensadores de caramelos de Ransome.	That's a lot of Ransome candy dispensers.	QuickiePal.dinky
 11229	Estamos regalándolos por la promoción de la Casa del Payaso Ransome para Niños Caprichosos. Coge uno.	Giving them away as a promotion for the Ransome the Clown House for Wayward Kids. Take one.	QuickiePal.dinky
@@ -249,12 +249,12 @@ id	text	en	loc
 11245	Probablemente la solución a un puzle en otro juego.	Probably the solution to a puzzle in another game.	PostOffice.dinky
 11246	Es para pesar el correo.	It's for weighing mail.	PostOffice.dinky
 11247	Aquí es donde podría enviar la factura de la electricidad de Leonard.	This is where I could mail Leonard's electricity bill.	PostOffice.dinky
-11248	Si tuviera alga que enviar, aquí es donde lo pondría.	If I had any mail, this is where I'd put it.	PostOffice.dinky
+11248	Si tuviera algo que enviar, aquí es donde lo pondría.	If I had any mail, this is where I'd put it.	PostOffice.dinky
 11249	Una imagen real de Jefferson sería mucho mejor.	An actual image of Jefferson would be much better.	PostOffice.dinky
 11250	Está mostrando el mes de Julio... That was a long time ago.	It's showing the month of July... That was a long time ago.	PostOffice.dinky
 11251	Parece que el vandalismo de la propiedad del gobierno es realmente un problema. I need to photograph an example of it.	Looks like government property vandalism really is a problem. I need to photograph an example of it.	PostOffice.dinky
 11252	“Por favor, dejad de intentar abrir los buzones.”	“Please stop trying to break into the mailboxes.”	PostOffice.dinky
-11253	Están cerradas.	They are locked.	PostOffice.dinky
+11253	Están cerrados.	They are locked.	PostOffice.dinky
 11254	No tengo la combinación.	I don't have the combination.	PostOffice.dinky
 11255	Eso son muchos buzones privados.	That's a lot of private mailboxes.	PostOffice.dinky
 11256	El daño del buzón es mínimo. Not good enough for the photo.	The mailbox damage is really minor. Not good enough for the photo.	PostOffice.dinky
@@ -286,9 +286,9 @@ id	text	en	loc
 11282	Incluso si funcionara, no bebería de ahí.	Even if it was working, I wouldn't drink from it.	CityHall.dinky
 11283	¡Es el emblema tricondal de Thimbleweed!	It's the Thimbleweed tri-county seal!	CityHall.dinky
 11284	¡Es majestuoso!	It's majestic!	CityHall.dinky
-11285	Ese es un tío vijo que estoy bastante segura de que está muerto. 	That's some old dude who I'm pretty sure is dead. 	CityHall.dinky
+11285	Ese es un tío viejo que estoy bastante segura de que está muerto. 	That's some old dude who I'm pretty sure is dead. 	CityHall.dinky
 11286	No sé quién es, pero no parece muy presidencial.	I don't know who he is, but he doesn't look very presidential.	CityHall.dinky
-11287	Estoy bastante segura de que eso vino con el marco..	Pretty sure that came with the frame.	CityHall.dinky
+11287	Estoy bastante segura de que eso vino con el marco.	Pretty sure that came with the frame.	CityHall.dinky
 11288	puerta	door	CityHall.dinky
 11289	Salir	Leave	CityHall.dinky
 11290	Salir del Ayuntamiento	Leave City Hall	CityHall.dinky
@@ -419,7 +419,7 @@ id	text	en	loc
 11415	un	a	AStreet.dinky
 11416	anuncio del banco	banking advertisement	AStreet.dinky
 11417	un	a	AStreet.dinky
-11418	anuncio de un servicio público	public service announcement	AStreet.dinky
+11418	anuncio de servicio público	public service announcement	AStreet.dinky
 11419	un	a	AStreet.dinky
 11420	anuncio de PillowBear™	PillowBear™ advertisement	AStreet.dinky
 11421	un	a	AStreet.dinky
@@ -429,7 +429,7 @@ id	text	en	loc
 11425	un	a	AStreet.dinky
 11426	anuncio antiguo	old advertisement	AStreet.dinky
 11427	un	an	AStreet.dinky
-11428	anuncio desgastado	weathered advertisement	AStreet.dinky
+11428	anuncio estropeado	weathered advertisement	AStreet.dinky
 11429	un	a	AStreet.dinky
 11430	anuncio de radio	radio advertisement	AStreet.dinky
 11431	un	a	AStreet.dinky
@@ -725,13 +725,13 @@ id	text	en	loc
 11721	⏎program circle⏎	⏎program circle⏎	Book.dinky
 11722	real r, area⏎	real r, area⏎	Book.dinky
 11723	⏎	⏎	Book.dinky
-11724	c Reads a number and prints⏎	c Reads a number and prints⏎	Book.dinky
-11725	c the area of a circle.⏎	c the area of a circle.⏎	Book.dinky
+11724	c Lee un número e imprime⏎	c Reads a number and prints⏎	Book.dinky
+11725	c el área de un círculo.⏎	c the area of a circle.⏎	Book.dinky
 11726	⏎	⏎	Book.dinky
-11727	write (*,*) 'Give radius r:'⏎	write (*,*) 'Give radius r:'⏎	Book.dinky
+11727	write (*,*) 'Introducir radio r:'⏎	write (*,*) 'Give radius r:'⏎	Book.dinky
 11728	read  (*,*) r⏎	read  (*,*) r⏎	Book.dinky
 11729	area = 3.14159*r*r⏎	area = 3.14159*r*r⏎	Book.dinky
-11730	write (*,*) 'Area = ', area⏎	write (*,*) 'Area = ', area⏎	Book.dinky
+11730	write (*,*) 'Área = ', area⏎	write (*,*) 'Area = ', area⏎	Book.dinky
 11731	⏎	⏎	Book.dinky
 11732	stop⏎	stop⏎	Book.dinky
 11733	end⏎	end⏎	Book.dinky
@@ -748,13 +748,13 @@ id	text	en	loc
 11744	...pero supongo que todo se está viniendo abajo ahora.	...but I guess it's all come crashing down now.	Ending.dinky
 11745	Vamos a ver si podemos aplicar un parche...	Let's go see if we can apply a patch...	Ending.dinky
 11746	...creo que sé justo el bueno.	...I might know just the one.	Ending.dinky
-11747	Delores: Gracias por unirte al Equipo de Fotoperiodismo de Thimbleweed Nickel.⏎	Delores: Thanks for joining the Thimbleweed Nickel Photojournalism Team.⏎	Note.dinky
+11747	Delores: Gracias por unirte al Equipo de Fotoperiodismo del Thimbleweed Nickel.⏎	Delores: Thanks for joining the Thimbleweed Nickel Photojournalism Team.⏎	Note.dinky
 11748	Para tu tarea, me gustaría que hicieras las siguientes fotos para próximos reportajes:⏎⏎	For your assignment, I'd like you to get the following photos for some upcoming stories:⏎⏎	Note.dinky
-11749	⏎P.S. Gracias por ayudar mientras estás en tus vacaciones de MMucasFlem Games.	⏎P.S. Thanks for helping out while you're on vacation from MMucasFlem Games.	Note.dinky
+11749	⏎P.D. Gracias por echar una mano mientras estás en tus vacaciones de MMucasFlem Games.	⏎P.S. Thanks for helping out while you're on vacation from MMucasFlem Games.	Note.dinky
 11750	Reportaje sobre el 4 de Julio	Story about the 4th of July	Note.dinky
 11751	Columna sobre el Thimbleweed County	Column about Thimbleweed County	Note.dinky
 11752	Reportaje sobre la pobreza infantil	Story about childhood poverty	Note.dinky
-11753	Foto de la editora de Nickel News	Photo of the editor of the Nickel News	Note.dinky
+11753	Foto de la editora del Nickel News	Photo of the editor of the Nickel News	Note.dinky
 11754	Foto de fauna peligrosa en acción	Action photo of dangerous wildlife	Note.dinky
 11755	Nuestra mala calidad de agua potable Thimbleweed	Our bad Thimbleweed drinking water quality	Note.dinky
 11756	Algo asqueroso	Something disgusting	Note.dinky
@@ -957,9 +957,9 @@ id	text	en	loc
 11959	Me rindo.	I give up.	Inventory.dinky
 11960	Menos mal que las baterías están agotadas. Tengo buenos recuerdos de haber crecido en la mansión Mansión.	Good thing its batteries are dead. I have fond memories of growing up in the Mansion mansion.	Inventory.dinky
 11961	Estoy segura de que será un coleccionable dentro de 30 años.	I'm sure it will be a collectible in 30 years.	Inventory.dinky
-11962	Definitivamente no es una nueva moda de juguetes. Tenía uno cuando era niña.	Definitely not a new toy craze. I had one when I was a kid.	Inventory.dinky
+11962	Definitivamente no es una nueva moda de juguetes. Tenía uno cuando era pequeña.	Definitely not a new toy craze. I had one when I was a kid.	Inventory.dinky
 11963	Es una cabeza de una celebridad, pero un poco menospreciable estando en un dispensadores de caramelos. Necesito una foto mejor.	It's a celebrity's head, but kind of demeaning being a candy dispenser. I need a better photo.	Inventory.dinky
-11964	Me encantaban estos cuando era niña.	I sure loved these when I was a kid.	Inventory.dinky
+11964	Me encantaban estos cuando era pequeña.	I sure loved these when I was a kid.	Inventory.dinky
 11965	¡¡Ouch!! ¡Mi diente!	Ouch!! My tooth!	Inventory.dinky
 11966	De ninguna manera. Un diente roto es suficiente.	No way. One broken tooth is enough.	Inventory.dinky
 11967	^%d motas de polvo	^%d specks of dust	Inventory.dinky
@@ -1009,11 +1009,11 @@ id	text	en	loc
 12011	¿Acaso leí algo sobre alguien llamado Boris asesinado?	Did I read about someone named Boris being murdered?	Coroner.yack
 12012	El Sheriff quiere verte.	Sheriff wants to see you.	Coroner.yack
 12013	El Sheriff quiere verte otra vez.	Sheriff wants to see you again.	Coroner.yack
-12014	Tengo qu irme... adiós.	Got to run... bye.	Coroner.yack
+12014	Tengo que irme... adiós.	Got to run... bye.	Coroner.yack
 12015	No realmente.	Not really.	Coroner.yack
 12016	No estoy seguro de por qué sigo teniendo un trabajo.	I'm not sure why I still have a job.	Coroner.yack
 12017	¡No entiedín de que estás hablando!	I don't understand-a-who what you're talking about!	Coroner.yack
-12018	¿Has estado bebiendo formaldehído? Trust me, just say-no-a-who.	Have you been drinking formaldehyde? Trust me, just say-no-a-who.	Coroner.yack
+12018	¿Has estado bebiendo formaldehído? Hazme caso, solo di que noín.	Have you been drinking formaldehyde? Trust me, just say-no-a-who.	Coroner.yack
 12019	¡Hey, la parte del '-ín' es mía!	Hey, the 'a-who' bit is mine!	Coroner.yack
 12020	¡Ha! ¡Te pillé!	Ha! Got ya!	Coroner.yack
 12021	Vosotros dos podríais abrir por el Payaso Ransome.	You two could open for Ransome the Clown.	Coroner.yack
@@ -1039,7 +1039,7 @@ id	text	en	loc
 12041	Somos hermanas, ¿no podemos ser amigas?	We're sisters, can't we be friends?	Lenore.yack
 12042	De repente se me han antojado unos s'mores.	I suddenly have a craving for s'mores.	Lenore.yack
 12043	¡Basta ya con las bromitas!	Enough with the wise-cracks!	Lenore.yack
-12044	Si hubieras dejado al Tío Chuck en el ordenador, hubiera muerto y you hubiera recibido la herencia.	If you'd left Uncle Chuck in the computer, he would have died and I'd have gotten my inheritance.	Lenore.yack
+12044	Si hubieras dejado al Tío Chuck en el ordenador, hubiera muerto y yo hubiera recibido la herencia.	If you'd left Uncle Chuck in the computer, he would have died and I'd have gotten my inheritance.	Lenore.yack
 12045	Pero sigue vivo y en un manicomio y legalmente fuera de alcance.	But he's still alive and in a sanitarium and legally out-of-reach.	Lenore.yack
 12046	¿Has sido desahuciada de la mansión Mansión?	You got evicted from the Mansion mansion?	Lenore.yack
 12047	¿No tienes a donde ir?	You have no place to go?	Lenore.yack
@@ -1058,7 +1058,7 @@ id	text	en	loc
 12060	El banco embargó la mansión Mansión Edmund y nos desahució a mí, al pequeño mocoso y a mi inútil esposo Peter.	The bank repossessed the Edmund Mansion mansion and evicted me and the little brat and my worthless husband Peter.	Lenore.yack
 12061	Hey.	Hey.	Lenore.yack
 12062	Lo único que me pude quedar fue esa horrible silla de la biblioteca.	All I got to take was that crappy chair from the library.	Lenore.yack
-12063	¡Ninguno! Estoy en la lista negra de todos los lugares de la alta sociedad en el área tricondal.	None! I've been blacklisted by all the high society places in the tri-county area.	Lenore.yack
+12063	¡No! Estoy en la lista negra de todos los lugares de la alta sociedad en el área tricondal.	None! I've been blacklisted by all the high society places in the tri-county area.	Lenore.yack
 12064	Le llamé así en honor al Tío Chuck y todo eso...	I named him after Uncle Chuck and everything...	Lenore.yack
 12065	... ¿qué bien hizo?	...what good did it do?	Lenore.yack
 12066	¡Ninguno! ¡Desahuciada!	Nothing! Evicted!	Lenore.yack
@@ -1074,7 +1074,7 @@ id	text	en	loc
 12076	Incluso si cayera tan bajo, no te creo.	Even if I was to stoop that low, I don't believe you.	Lenore.yack
 12077	¡¿¡Como qué!?!	Like what!?!	Lenore.yack
 12078	Barista. He oído que va a ser grande.	Barista. I hear it's going to be big.	Lenore.yack
-12079	¿Especialista en misiones del Transbordador Espacial de la NASA?	NASA Space Shuttle mission specialist?	Lenore.yack
+12079	¿Especialista en misiones de la NASA?	NASA Space Shuttle mission specialist?	Lenore.yack
 12080	¿Callejera?	Streetwalker?	Lenore.yack
 12081	¿Camarera de fin de semana en la Cafetería S&D?	Weekend waitress at the S&D Diner?	Lenore.yack
 12082	¿Cajera?	Bank teller?	Lenore.yack
@@ -1147,7 +1147,7 @@ id	text	en	loc
 12149	¿Has oído hablar del circo estando abandonado? 	Have you heard about the circus being abandoned? 	Morena.yack
 12150	¿Ya has visto el último show del Payaso Ransome?	Seen Ransome the Clown's latest show yet?	Morena.yack
 12151	¿Has notado algo extraño?	You noticed anything odd?	Morena.yack
-12152	El letrero de fuera dice que estás teniendo unas rebajas.	Sign out front says you're having a blow-out sale.	Morena.yack
+12152	El letrero fuera dice que estás teniendo unas rebajas.	Sign out front says you're having a blow-out sale.	Morena.yack
 12153	¡Nos vemos!	See ya!	Morena.yack
 12154	Ha pasado un tiempo desde que te vi por aquí, Delores.	Been a while since I've seen you around, Delores.	Morena.yack
 12155	Ese trabajo de diseñadora de videojuegos me ha mantenido bastante ocupada.	That game designer job has kept me pretty busy.	Morena.yack
@@ -1182,16 +1182,16 @@ id	text	en	loc
 12184	Si lo encuentras, te lo puedes quedar.	If you find it, you can take it.	Morena.yack
 12185	Las únicas lenguas muertas en las que necesitamos libros es en el capsipan antiguo.	The only dead languages we need books on is ancient capsipan.	Morena.yack
 12186	¡Estoy emocionada por mi nuevo trabajo!	I'm excited about my new job!	Natalie.yack
-12187	Natalie me ha contratado para ser la fotógrafa de Nickel News.	Natalie has hired me to be the Nickel News photographer.	Natalie.yack
+12187	Natalie me ha contratado para ser la fotógrafa del Nickel News.	Natalie has hired me to be the Nickel News photographer.	Natalie.yack
 12188	¡No puedo esperar para empezar!	I can't wait to get started!	Natalie.yack
-12189	¡Otra tarea emocionante como la fotógrafa de Nickel News!	Another exciting assignment as the Nickel News photographer!	Natalie.yack
+12189	¡Otra tarea emocionante como la fotógrafa del Nickel News!	Another exciting assignment as the Nickel News photographer!	Natalie.yack
 12190	¿Me pregunto qué tendrá Natalie para mí ahora?	I wonder what Natalie has for me now?	Natalie.yack
 12191	Dios mío, ¿no somos unas impacientes esta mañana?	My, aren't we the eager beaver this morning.	Natalie.yack
 12192	¡Estoy emocionada por empezar!	I'm excited to get started!	Natalie.yack
 12193	Será un buen descanso creativo de hacer videojuegos.	It will be a nice creative break from making games.	Natalie.yack
-12194	No es realmente por la mañana, solo es después de las 5pm.	It's not really the morning, it's just after 5pm.	Natalie.yack
+12194	No es realmente por la mañana, solo después de las 5pm.	It's not really the morning, it's just after 5pm.	Natalie.yack
 12195	Interesante.	Interesting.	Natalie.yack
-12196	Estoy trabajando en varios reportajes para las próximas ediciones de Thimbleweed Nickel, y necesitamos fotografías.	I'm working on several stories for upcoming editions of the Thimbleweed Nickel, and we need photographs.	Natalie.yack
+12196	Estoy trabajando en varios reportajes para las próximas ediciones del Thimbleweed Nickel, y necesitamos fotografías.	I'm working on several stories for upcoming editions of the Thimbleweed Nickel, and we need photographs.	Natalie.yack
 12197	He hecho una lista para ti, y la cámara está en el archivador junto a la puerta.	I've made a list for you, and the camera is in the file cabinet by the door.	Natalie.yack
 12198	Avísame si necesitas cualquier cosa. Más papel fotográfico, insumos de oficina, información sobre tu seguro de retiro.	Let me know if you need anything. More film, office supplies, info on your 401k.	Natalie.yack
 12199	Buena suerte en tu primer día como fotoperiodista.	Good luck on your first day as a photojournalist.	Natalie.yack
@@ -1274,15 +1274,15 @@ id	text	en	loc
 12276	Lleno de nuestra elegante agua filtrada. Y puedes quedarte el vaso como parte de nuestra promoción.	Filled with our fancy filtered water. And you can keep the glass as part of our promotion.	Sandy.yack
 12277	¡Gracias! Discúlpame.	Thanks! Excuse me.	Sandy.yack
 12278	¡Supongo que estaba muy sedienta!	I guess I was really thirsty!	Sandy.yack
-12279	Después, Delores.	Later, Delores.	Sandy.yack
+12279	Hasta luego, Delores.	Later, Delores.	Sandy.yack
 12280	¡No estoy de humorcito para hablar, solo déjame salir!	I'm not in a talking-a-reno mood, just let me out!	Sheriff.yack
-12281	Hola Sheriff!	Hi Sheriff!	Sheriff.yack
+12281	¡Hola Sheriff!	Hi Sheriff!	Sheriff.yack
 12282	Holita Delores.	Hello-a-reno Delores.	Sheriff.yack
 12283	¿Cuándo empezaste a añadir '-ito' después de todo?	When did you start adding 'a-reno' after everything?	Sheriff.yack
 12284	¡Justo ahí! ¡Lo has vuelto a hacer!	Just then! You did it again!	Sheriff.yack
 12285	Lo que seíta.	Whatever-a-reno.	Sheriff.yack
-12286	No hay mucho crimen en Thimbleweed Park, no?	Not a lot of crime in Thimbleweed Park, is there?	Sheriff.yack
-12287	¿Qué es eso que he leído sobre el circo estando abandonado?	What's that I read about the circus being abandoned?	Sheriff.yack
+12286	No hay mucho crimen en Thimbleweed Park, ¿no?	Not a lot of crime in Thimbleweed Park, is there?	Sheriff.yack
+12287	¿Qué es eso que he leído sobre el circo abandonado?	What's that I read about the circus being abandoned?	Sheriff.yack
 12288	Estaba pensando en convertirme en agente federal...	I was thinking about becoming a federal agent...	Sheriff.yack
 12289	Tengo que irme... adiós.	Got to run... bye.	Sheriff.yack
 12290	No realmente.	Not really.	Sheriff.yack
@@ -1291,7 +1291,7 @@ id	text	en	loc
 12293	Probablemente cayeron en tiempos difíciles.	Probably fell on hard times.	Sheriff.yack
 12294	O ella es una completa imbécil pomposa y merece todo lo que recibe.	Or she is a complete pompous jerk and deserves everything she gets.	Sheriff.yack
 12295	¿No entiendito lo que estás preguntando?	I don't understand-a-reno what you're asking?	Sheriff.yack
-12296	¿Estás drogadita? Solo di noíto.	Are you on drugs-a-reno? Just say no-a-reno.	Sheriff.yack
+12296	¿Estás drogadita? Solo di que noíto.	Are you on drugs-a-reno? Just say no-a-reno.	Sheriff.yack
 12297	¡Hey, la broma del '-ito' es mía!	Hey, the 'a-reno' gag is mine!	Sheriff.yack
 12298	¡Ha! ¡Te pillé!	Ha! Got ya!	Sheriff.yack
 12299	¡Queíto!	What-a-reno!	Sheriff.yack
