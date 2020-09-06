@@ -66,6 +66,7 @@ local known_translations = [
 	{ index = 3, code = "it", language = "Italiano" }
 	{ index = 4, code = "nl", language = "Nederlands" }
 	{ index = 5, code = "pt", language = "Português (Br)" }
+	{ index = 6, code = "vl", language = "Vlaams" }
 ]
 
 /*{{ ------------------------------------------------------------------------------------
