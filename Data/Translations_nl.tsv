@@ -1,11 +1,11 @@
 id	text	en	loc
 10000	Nederlands	Dutch	
-10001	Vertaald door Frenzie (Frans de Jonge), Sushi en Wolfinabigbox (Jadira Wolff)	Default	
+10001	Vertaald door Frenzie (Frans de Jonge), Sushi en Wolfinabigbox (Jadira Wolff)	Dutch translation by Frenzie, Sushi and Wolfinabigbox	
 11000	Ik denk dat ik klaar ben met de opdracht.	I think I'm done with the assignment.	DefineActors.dinky
 11001	Wil je mijn werk tot nu toe bekijken?	Want to take a look at my work so far?	DefineActors.dinky
 11002	De laatste keer dat de Sheriff iets gevaarlijks deed, was in de spiegel kijken.	The last time the Sheriff did anything dangerous was looking in the mirror.	DefineActors.dinky
-11003	Een foto van enkel de sheriff is niet genoeg voor Natalie.	A photo of the Sheriff by himself won't work for Natalie.	DefineActors.dinky
-11004	Een foto van enkel de lijkschouwer is niet genoeg voor Natalie.	A photo of the Coroner by himself won't work for Natalie.	DefineActors.dinky
+11003	Een foto van enkel de Sheriff is niet genoeg voor Natalie.	A photo of the Sheriff by himself won't work for Natalie.	DefineActors.dinky
+11004	Een foto van enkel de Lijkschouwer is niet genoeg voor Natalie.	A photo of the Coroner by himself won't work for Natalie.	DefineActors.dinky
 11005	Ik denk dat Natalie iemand wil die veel beroemder is, enkel aanmatigende voedselrecensenten denken dat hij een beroemdheid is.	I think Natalie will want someone much more famous, only pretentious food critics think he's a celebrity.	DefineActors.dinky
 11006	Sorry, te druk. Ik ben achter met sorteren.	Sorry, too busy now. I'm behind on my sorting.	DefineActors.dinky
 11007	Te druk om te stoppen, het zijn al die PillowBear™ bestellingen!	Too busy to stop, it's all these PillowBear™ orders!	DefineActors.dinky
@@ -20,7 +20,7 @@ id	text	en	loc
 11016	Ik wil of hoef jouw aalmoes niet.	I don't want or need your pity nickel.	DefineActors.dinky
 11017	Ik zei je toch om tegen mij te praten, niet tegen huppeldepup daar.	I told you to talk to me, not what's-his-face.	DefineActors.dinky
 11018	Als je met hem wil praten, praat je tegen mij!	You want to talk to him, you talk to me!	DefineActors.dinky
-11019	Voor een stuiver kan je geen leuk speeltje kopen. Ik wil een speeltje!	A nickel won't buy a good toy. I want a toy!	DefineActors.dinky
+11019	Met een nikkel kan ik geen leuk speeltje kopen. Ik wil een speeltje!	A nickel won't buy a good toy. I want a toy!	DefineActors.dinky
 11020	Dat wil ik niet hebben!	I don't want that!	DefineActors.dinky
 11021	Ik wil een speeltje.	I want a toy!	DefineActors.dinky
 11022	Kinderen willen dat niet!	Kids don't want that!	DefineActors.dinky
@@ -47,35 +47,35 @@ id	text	en	loc
 11043	Chuck Edmund in psychiatrisch instituut opgenomen...	Chuck Edmund committed to sanitarium...	Nickel.dinky
 11044	Chuck opgenomen na een psychotische inzinking omdat hij dacht dat hij deel was van een computer.	Chuck committed after a psychotic breakdown due to believing he was part of a computer.	Nickel.dinky
 11045	Willie's vioolreparatie behaalt recordwinst...	Willie's violin repair posts record profits...	Nickel.dinky
-11046	Willie's vioolreparatie heeft bloeiende handel door nieuwe BBS-bestellingen en reclame.	Willie's violin repair business is booming due to new BBS ordering and advertising.	Nickel.dinky
+11046	Willie's vioolreparatie kent gouden tijden door nieuwe BBS-bestellingen en reclame.	Willie's violin repair business is booming due to new BBS ordering and advertising.	Nickel.dinky
 11047	KSCUM gaat van muziekstijl veranderen...	KSCUM to change music styles...	Nickel.dinky
-11048	Lang gevestigde KSCUM-radio gaat van format veranderen, van eclectische rock naar esoterische rock.	Long standing KSCUM radio set to change formats from eclectic rock to esoteric rock.	Nickel.dinky
+11048	Lang gevestigde KSCUM-radio verandert van stijl - van eclectische rock naar esoterische rock.	Long standing KSCUM radio set to change formats from eclectic rock to esoteric rock.	Nickel.dinky
 11049	S&D Eetcafé wint weer een prijs...	S&D Diner nets another award...	Nickel.dinky
-11050	S&D Eetcafé ontvangt opnieuw een prijs voor hun heerlijke eten. Recensenten zijn het er allemaal over eens, het is de beste plek in de streek om uit eten te gaan.	S&D Diner received another award for their amazing food. Critics all agree, it's the best place to eat in the county.	Nickel.dinky
+11050	S&D Eetcafé kreeg weerom een prijs voor hun heerlijke eten. Recensenten zijn unaniem, het is de beste eetplek in de streek.	S&D Diner received another award for their amazing food. Critics all agree, it's the best place to eat in the county.	Nickel.dinky
 11051	Gratis glas als aandenken bij S&D Eetcafé...	Free commemorative glass at S&D diner...	Nickel.dinky
-11052	Het S&D Eetcafé geeft bij iedere aankoop een gratis glas weg als aandenken, ter ere van hun nieuwste prijs.	In celebration of their latest award, the S&D Diner is giving a free commemorative glass with every purchase.	Nickel.dinky
-11053	Art by Eltron heropent binnenkort als PillowBear™ winkel...	Art by Eltron to re-open as PillowBear™ store...	Nickel.dinky
-11054	De winkel die in de regio bekend stond als Art by Eltron zal begin mei opnieuw openen als een verkooppunt van de PillowBear™ fabriek.	The store referred to by locals as Art by Eltron will re-open as a PillowBear™ factory outlet in early May.	Nickel.dinky
+11052	Ter ere van hun nieuwste prijs geeft het S&D Eetcafé bij iedere aankoop een gratis glas cadeau als aandenken.	In celebration of their latest award, the S&D Diner is giving a free commemorative glass with every purchase.	Nickel.dinky
+11053	Art by Eltron heropent als PillowBear™ winkel...	Art by Eltron to re-open as PillowBear™ store...	Nickel.dinky
+11054	De winkel hier bekend als 'Art by Eltron', heropent begin mei zijn deuren als verkooppunt van de PillowBear™ fabriek.	The store referred to by locals as Art by Eltron will re-open as a PillowBear™ factory outlet in early May.	Nickel.dinky
 11055	Quickie Pal toiletten een giftige plaats...	Quickie Pal bathroom a toxic site...	Nickel.dinky
-11056	De overheid heeft de badkamer van de Quickie Pal bestempeld als een giftige plaats van klasse 5. De reiniging zou binnenkort moeten beginnen.	Federal agencies have designated the Quickie Pal bathroom a Class 5 toxic site. Clean-up should begin soon.	Nickel.dinky
-11057	Lenore Edmund uitgezet...	Lenore Edmund evicted...	Nickel.dinky
-11058	Nadat de bank het herenhuis van Chuck Edmund in beslag nam, werd Lenore Edmund eruit gezet terwijl ze schreeuwde “Weten jullie wel wie ik ben?”	After the bank repossessed Chuck Edmund's mansion, Lenore Edmund was evicted while screaming “Do you know who I am!”	Nickel.dinky
+11056	Overheden klasseren de toiletten van Quickie Pal als giftige plaats van klasse 5. Sanering spoedig gepland.	Federal agencies have designated the Quickie Pal bathroom a Class 5 toxic site. Clean-up should begin soon.	Nickel.dinky
+11057	Lenore Edmund uit huis gezet...	Lenore Edmund evicted...	Nickel.dinky
+11058	Toen de bank het herenhuis van Chuck Edmund in beslag kwam nemen, schreeuwde Leonere Edmund: “Weten jullie wel wie ik ben?”	After the bank repossessed Chuck Edmund's mansion, Lenore Edmund was evicted while screaming “Do you know who I am!”	Nickel.dinky
 11059	Zonderling met zesde zintuig Madame Morena vertelt...	Occult oddball Madame Morena tells town...	Nickel.dinky
 11060	Ik zou nooit iemand beheksen, zoiets zou zelfs mijn zwarte magie te boven gaan. Kom langs tijdens onze koopjesweek!	I would never curse anyone, that would go beyond even my black magic. Come for the big blow-out sale!	Nickel.dinky
 11061	Inwoner scoort een prestigieuze baan bij MmucasFlem Games...	Local nets prestigious job at MmucasFlem Games...	Nickel.dinky
-11062	Delores Edmund lijkt de recente strubbelingen in de familie van zich afgeschud te hebben en timmert aan haar weg naar de top van de gaming industrie!	Delores Edmund seems to have shaken recent family turmoil and is on her way to the top of the game industry!	Nickel.dinky
+11062	Delores Edmund schudt de recente strubbelingen in de familie van zich af en timmert aan haar weg naar de top van de gaming industrie!	Delores Edmund seems to have shaken recent family turmoil and is on her way to the top of the game industry!	Nickel.dinky
 11063	Mimespeler applaudisseert in stilte voor Ransome...	Mime applauds silently for Ransome...	Nickel.dinky
-11064	Terwijl hij uitbeeldt dat het de beste show was die hij ooit zag,  schuift deze mimespeler aan voor zijn 4e Ransome show op rij.	While miming that it was the best show he'd ever seen, local Mime stands in line for 4th Ransome show in a row.	Nickel.dinky
+11064	Terwijl hij gebaart dat het de beste show is die hij ooit zag,  schuift deze mimespeler aan voor zijn 4e Ransome show op rij.	While miming that it was the best show he'd ever seen, local Mime stands in line for 4th Ransome show in a row.	Nickel.dinky
 11065	Lokale terreinbeheerder krijgt een opdracht op het Witte Huis...	Local groundskeeper wins White House post...	Nickel.dinky
 11066	Lokale terreinbeheerder Doug Braverman is ingehuurd door het Witte Huis om gaten in de rozentuin te graven.	Local groundskeeper Doug Braverman is hired by the White House to dig holes in the rose garden.	Nickel.dinky
 11067	Geen kop vandaag...	No headline today...	Nickel.dinky
-11068	De Nikkel Krant zit zonder inkt en kan vandaag geen blad uitgeven.	The Nickel News ran out of ink and cannot publish today's pap	Nickel.dinky
+11068	Nickel News zit zonder inkt en kan vandaag geen krant uitgeven.	The Nickel News ran out of ink and cannot publish today's pap	Nickel.dinky
 11069	Fabrieksbewaker Reyes heeft weer promotie gekregen...	Factory security guard Reyes promoted again...	Nickel.dinky
 11070	Na vijf promoties is bewaker en trotse vader Reyes benoemd tot hoofd beveiliging bij de nieuwe PillowBear™ fabriek.	After five promotions, security guard and proud father Reyes has been made head of security at the new PillowBear™ factory.	Nickel.dinky
 11071	Franklins geest spookt rond in Edmund Hotel...	Ghost of Franklin haunts Edmund Hotel...	Nickel.dinky
 11072	Naar verluidt waart de geest van Franklin, de broer van Chuck Edmund rond in het Edmund Hotel. De Gebroeders Duif zitten op de zaak.	The ghost of Franklin, Chuck Edmund's brother, is said to haunt the local Edmund Hotel. Pigeon Brothers are on the case.	Nickel.dinky
 11073	Ransome zal liefdadigheidsprijs ontvangen...	Ransome to receive philanthropy award...	Nickel.dinky
-11074	Verwijzend naar zijn verschillende projecten ten voordele van kinderen over de gehele wereld, zal de prijs worden toegekend aan Ransome.	Citing his various projects benefiting children around the world, the award will be bestowed on Ransome.	Nickel.dinky
+11074	Verwijzend naar zijn vele projecten ten voordele van kinderen over de hele wereld, zal de ereprijs aan Ransome gegeven worden.	Citing his various projects benefiting children around the world, the award will be bestowed on Ransome.	Nickel.dinky
 11075	Laten we eens kijken...	Let's see what you've got...	Nickel.dinky
 11076	Laten we even naar je foto's kijken...	Let's take a look at your photos...	Nickel.dinky
 11077	Zullen we eens even naar je foto's kijken...	Why don't we take a quick look at your photos...	Nickel.dinky
@@ -97,12 +97,12 @@ id	text	en	loc
 11093	Er zitten hier een paar mooie plaatjes tussen!	There are some good shots in there!	Nickel.dinky
 11094	Ik zal de slechte weggooien.	Let me get rid of the bad ones.	Nickel.dinky
 11095	Hou jij de goede maar tot je klaar bent voor vandaag.	You keep the good ones until you've finished today's work.	Nickel.dinky
-11096	Je kan maar beter weer aan het werk gaan, we moeten een deadline halen.	Better get out there and take some more photos, we've got a deadline.	Nickel.dinky
+11096	Je kan maar beter weer aan het werk gaan, we hebben een deadline te halen.	Better get out there and take some more photos, we've got a deadline.	Nickel.dinky
 11097	Pa? Dood? Een spook?	Dad? Dead? A ghost?	Nickel.dinky
 11098	Dat kan niet, ik heb vanmorgen samen met hem ontbeten.	That can't be, I had breakfast with him this morning.	Nickel.dinky
 11099	Ik kan maar best de camera zoeken voor ik eropuit trek. Volgens Natalie ligt hij in de archiefkast.	I should find the camera before setting out. Natalie said it is in the file cabinet.	Nickel.dinky
-11100	Dat bord is vast even oud als de Nikkel Krant!	That sign must be as old as the Nickel News!	Nickel.dinky
-11101	Het is een ouderwets restant van een vervlogen tijd.	It's an old relic of a bygone era.	Nickel.dinky
+11100	Dat bord is vast even oud als het Nickel News!	That sign must be as old as the Nickel News!	Nickel.dinky
+11101	Het is een ouderwets restant uit een lang vervlogen tijd.	It's an old relic of a bygone era.	Nickel.dinky
 11102	Drukwerk is dood.	Print is dead.	Nickel.dinky
 11103	Op een dag zal het allemaal op computers staan.	Someday it will all be on computers.	Nickel.dinky
 11104	En Natalie zal failliet gaan.	And Natalie will be out of business.	Nickel.dinky
@@ -117,27 +117,27 @@ id	text	en	loc
 11113	Dit is waar ik de camera heb gevonden. De kast is nu leeg.	This is where I found the camera. The cabinet is empty now.	Nickel.dinky
 11114	Dit is waar de camera volgens Natalie zou moeten zijn.	This is where Natalie said the camera should be.	Nickel.dinky
 11115	Er zit hier vast een schat aan oude verhalen.	Must be a treasure trove of old stories in there.	Nickel.dinky
-11116	Ik zal maar in de la kijken of de camera er ligt, zoals Natalie zei.	I should look in the drawer and see if the camera is here, like Natalie said.	Nickel.dinky
+11116	Ik kan maar beter in de lade kijken of de camera er ligt, zoals Natalie zei.	I should look in the drawer and see if the camera is here, like Natalie said.	Nickel.dinky
 11117	deur	door	Nickel.dinky
-11118	de deur van de Nikkel Krant	the Nickel News door	Nickel.dinky
+11118	de deur van Nickel News	the Nickel News door	Nickel.dinky
 11119	Verlaat	Leave	Nickel.dinky
 11120	Verlaat de Nikkel	Leave the Nickel	Nickel.dinky
 11121	bord	sign	Nickel.dinky
 11122	drukpers	printing press	Nickel.dinky
 11123	kaart	map	Nickel.dinky
-11124	oude nieuws foto's	old news photos	Nickel.dinky
-11125	de oude nieuws foto's	the old news photos	Nickel.dinky
+11124	oude nieuwsfoto's	old news photos	Nickel.dinky
+11125	de oude nieuwsfoto's	the old news photos	Nickel.dinky
 11126	archiefkast	file cabinet	Nickel.dinky
 11127	De straat is blijkbaar afgesloten.	The street looks blocked off.	MainStreet.dinky
-11128	Dit stinkt echt wel, maar ik denk niet dat het er nog niet walgelijk genoeg uitziet voor Natalie.	It's really smelly, but I don't think this looks disgusting enough for Natalie.	MainStreet.dinky
-11129	Dit stinkt echt wel, maar ik denk niet dat het er nog niet walgelijk genoeg uitziet voor Natalie.	It's really smelly, but I don't think this looks disgusting enough for Natalie.	MainStreet.dinky
+11128	Dit stinkt echt wel, maar ik denk dat dit nog niet goor genoeg is voor Natalie.	It's really smelly, but I don't think this looks disgusting enough for Natalie.	MainStreet.dinky
+11129	Dit stinkt echt wel, maar ik denk dat dit nog niet goor genoeg is voor Natalie.	It's really smelly, but I don't think this looks disgusting enough for Natalie.	MainStreet.dinky
 11130	De foto moet beter dan water uit een lekkende brandkraan.	Photo needs to be better than water dripping from a fire hydrant.	MainStreet.dinky
 11131	Het is een erg lekkende brandkraan.	It's a very leaky fire hydrant.	MainStreet.dinky
 11132	Gedaan met lekken!	No more leaks!	MainStreet.dinky
 11133	Ik zou een vakantiejob bij de Zusjes Duif kunnen krijgen!	I could get a summer job with the Pigeon Sisters!	MainStreet.dinky
-11134	Dit stinkt echt wel, maar ik denk niet dat het er nog niet walgelijk genoeg uitziet voor Natalie.	It's really smelly, but I don't think this looks disgusting enough for Natalie.	MainStreet.dinky
+11134	Dit stinkt echt wel, maar ik denk dat dit nog niet goor genoeg is voor Natalie.	It's really smelly, but I don't think this looks disgusting enough for Natalie.	MainStreet.dinky
 11135	De foto moet beter dan water uit een lekkende brandkraan.	Photo needs to be better than water dripping from a fire hydrant.	MainStreet.dinky
-11136	Dit stinkt echt wel, maar ik denk niet dat het er nog niet walgelijk genoeg uitziet voor Natalie.	It's really smelly, but I don't think this looks disgusting enough for Natalie.	MainStreet.dinky
+11136	Dit stinkt echt wel, maar ik denk dat dit nog niet goor genoeg is voor Natalie.	It's really smelly, but I don't think this looks disgusting enough for Natalie.	MainStreet.dinky
 11137	Jakkes! Dat stinkt echt!	Yikes! That really stinks.	MainStreet.dinky
 11138	Gadver! Dat stinkt!	Gads! That smells!	MainStreet.dinky
 11139	Dat is nu nog eens een stank!	That sure is some stink!	MainStreet.dinky
@@ -148,21 +148,21 @@ id	text	en	loc
 11144	Het eetcafé is geopend.	The Diner is open for business.	MainStreet.dinky
 11145	Ze hebben geweldig eten, en een perfect staat van dienst op het gebied van hygiëne!	They have amazing food, and a perfect health record!	MainStreet.dinky
 11146	Dat is een indrukwekkende deur.	That is an impressive door.	MainStreet.dinky
-11147	Er staat: “Hulp gezocht: Bank bediende. Gesloten totdat we er een vinden.”	Sign says: “Help Wanted: Bank Teller. Closed until we find one.”	MainStreet.dinky
+11147	Er staat: “Hulp gezocht: Bankbediende. Gesloten totdat we er een vinden.”	Sign says: “Help Wanted: Bank Teller. Closed until we find one.”	MainStreet.dinky
 11148	Thimbleweed Park was een geweldige plek om op te groeien.	Thimbleweed Park was a great place to grow up.	MainStreet.dinky
 11149	De hoofdweg naar de stad is afgesloten.	The highway into town is closed.	MainStreet.dinky
 11150	Er staat “Willie's Horloge & Viool Reparaties...	It says “Willie's Watch & Violin Repairs...	MainStreet.dinky
-11151	“Reparatie van horloges en violen sinds 1957.”	“Repairing watches and violins since 1957.”	MainStreet.dinky
+11151	“Herstellingen van horloges en violen sinds 1957.”	“Repairing watches and violins since 1957.”	MainStreet.dinky
 11152	Ik denk dat de kleine klok nep is.	I think the little clock is fake.	MainStreet.dinky
-11153	Ziet er naar uit dat Willie's Horloge & Viool Reparaties gesloten is voor de nacht.	Looks like Willie's Watch & Violin Repairs is closed for the night.	MainStreet.dinky
+11153	Ziet er naar uit dat Willie's Horloge & Viool Reparaties voor de rest van de avond gesloten is.	Looks like Willie's Watch & Violin Repairs is closed for the night.	MainStreet.dinky
 11154	Goeienavond Willie!	Night Willie!	MainStreet.dinky
-11155	Er staan geen foto's van afgebroken huizen in.	There aren't any photos of demolished homes in there.	MainStreet.dinky
-11156	Wie zou hierheen willen verhuizen.	Who would want to move here.	MainStreet.dinky
+11155	Er zitten geen gesloopte huizen tussen.	There aren't any photos of demolished homes in there.	MainStreet.dinky
+11156	Wie zou hierheen willen verhuizen?	Who would want to move here.	MainStreet.dinky
 11157	Een van de vele slachtoffers van de economie.	One of the many casualties of the economy.	MainStreet.dinky
 11158	Ik kan niet wachten totdat de PillowBear™ winkel opent.	I can't wait for the new PillowBear™ store to open.	MainStreet.dinky
 11159	Ik ben zo trots op Pa.	I'm so proud of Dad.	MainStreet.dinky
 11160	Deze PillowBears™ zijn zo schattig!	These PillowBears™ are so cute!	MainStreet.dinky
-11161	Ze waren allemaal Pa z'n idee.	They were all Dad's idea.	MainStreet.dinky
+11161	Ze zijn helemaal Pa z'n idee.	They were all Dad's idea.	MainStreet.dinky
 11162	Het is een verkeerskegel. Ik zal hem laten staan.	It's a traffic cone. I'm going to leave it alone.	MainStreet.dinky
 11163	A Street	A Street	MainStreet.dinky
 11164	B Street	B Street	MainStreet.dinky
@@ -188,34 +188,34 @@ id	text	en	loc
 11184	het makelaarskantoor	the realtor's office	MainStreet.dinky
 11185	bloemenzaak	flower shop	MainStreet.dinky
 11186	de bloemenzaak	the flower shop	MainStreet.dinky
-11187	Binnenkort	Coming Soon	MainStreet.dinky
+11187	spandoek	Coming Soon	MainStreet.dinky
 11188	de nieuwe PillowBear™ winkel	the new PillowBear™ store	MainStreet.dinky
 11189	PillowBear™ bord	PillowBear™ sign	MainStreet.dinky
 11190	buitenwijken	outskirts	MainStreet.dinky
 11191	deur van het stadhuis	City Hall door	MainStreet.dinky
 11192	de deur van het stadhuis	the City Hall door	MainStreet.dinky
 11193	Stap binnen	Enter	MainStreet.dinky
-11194	Stap het Stadhuis binnen	Enter City Hall	MainStreet.dinky
+11194	Stap het stadhuis binnen	Enter City Hall	MainStreet.dinky
 11195	verkeerskegel	traffic cone	MainStreet.dinky
 11196	verkeerskegel	traffic cone	MainStreet.dinky
 11197	verkeerskegel	traffic cone	MainStreet.dinky
 11198	Welkom bij Quickie Pal. Kan ik je helpen?	Welcome to Quickie Pal. Can I help you find anything?	QuickiePal.dinky
-11199	Laat me maar weten als ik je iets moet helpen zoeken.	I personally am really fond of the chocolate bon bons.	QuickiePal.dinky
-11200	Laat me maar weten als ik je iets moet helpen zoeken.	Let me know if I can help you find anything.	QuickiePal.dinky
-11201	Laat me maar weten als ik je iets moet helpen zoeken.	Let me know if I can help you find anything.	QuickiePal.dinky
-11202	Laat me maar weten als ik je iets moet helpen zoeken.	Let me know if I can help you find anything.	QuickiePal.dinky
-11203	Laat me maar weten als ik je iets moet helpen zoeken.	Let me know if I can help you find anything.	QuickiePal.dinky
-11204	Laat me maar weten als ik je iets moet helpen zoeken.	Let me know if I can help you find anything.	QuickiePal.dinky
-11205	Laat me maar weten als ik je iets moet helpen zoeken.	Let me know if I can help you with anything.	QuickiePal.dinky
-11206	Laat me maar weten als ik je iets moet helpen zoeken.	Let me know if I can help you with anything.	QuickiePal.dinky
+11199	Ik ben zelf verzot op de chocolade bon bons.	I personally am really fond of the chocolate bon bons.	QuickiePal.dinky
+11200	Laat maar weten als ik je moet helpen zoeken.	Let me know if I can help you find anything.	QuickiePal.dinky
+11201	Laat maar weten als ik je moet helpen zoeken.	Let me know if I can help you find anything.	QuickiePal.dinky
+11202	Laat maar weten als ik je moet helpen zoeken.	Let me know if I can help you find anything.	QuickiePal.dinky
+11203	Laat maar weten als ik je moet helpen zoeken.	Let me know if I can help you find anything.	QuickiePal.dinky
+11204	Laat maar weten als ik je moet helpen zoeken.	Let me know if I can help you find anything.	QuickiePal.dinky
+11205	Laat maar weten als ik je moet helpen zoeken.	Let me know if I can help you with anything.	QuickiePal.dinky
+11206	Laat maar weten als ik je moet helpen zoeken.	Let me know if I can help you with anything.	QuickiePal.dinky
 11207	Hier tot uw dienst.	I'm here to serve.	QuickiePal.dinky
 11208	Hier tot uw dienst.	I'm here to serve.	QuickiePal.dinky
 11209	Hier tot uw dienst.	I'm here to serve.	QuickiePal.dinky
 11210	Wat een zonsondergang, hé?	How about that sunset?	QuickiePal.dinky
 11211	Die Ransome de Clown, toch? Hij is hilarisch.	How about that Ransome the Clown? He's so funny.	QuickiePal.dinky
 11212	Vergeet je corona-spuit niet.	Don't forget to get your flu shot.	QuickiePal.dinky
-11213	Wil je wat vervallen melk? Voor de heft van de prijs.	Want some expired milk? 50% off normal price.	QuickiePal.dinky
-11214	Zeker blij dat de Zusjes Duif ons rattenprobleem hebben opgelost!	Sure glad the Pigeon Sisters got rid of our rat problem!	QuickiePal.dinky
+11213	Wil je wat vervallen melk? Voor de helft van de prijs.	Want some expired milk? 50% off normal price.	QuickiePal.dinky
+11214	Ik ben maar wat blij dat de Zusjes Duif ons rattenprobleem hebben verholpen!	Sure glad the Pigeon Sisters got rid of our rat problem!	QuickiePal.dinky
 11215	Wil je een Mooie Leren Jas™ kopen?	Want to buy a Fine Leather Jacket™?	QuickiePal.dinky
 11216	Jakkes!	Yikes!	QuickiePal.dinky
 11217	Jakkes!	Yikes!	QuickiePal.dinky
@@ -224,7 +224,7 @@ id	text	en	loc
 11220	Het is een souvenir T-shirt van Thimbleweed Park!	It's a souvenir Thimbleweed Park T-shirt!	QuickiePal.dinky
 11221	Er staat “Leeggoed op flessen, 5¢.”	It says “Redeem bottles here, 5¢.”	QuickiePal.dinky
 11222	Niemand geeft wat om een stapel dozen.	No one cares about a bunch of boxes.	QuickiePal.dinky
-11223	Er staat overal op: “1 Dozijn PillowBears™.”	They all say, “1 Dozen PillowBears™.”	QuickiePal.dinky
+11223	Er staat telkens “1 Dozijn PillowBears™” op.	They all say, “1 Dozen PillowBears™.”	QuickiePal.dinky
 11224	Ik ben zo trots op Pa en zijn idee!	I'm so proud of Dad for thinking up this idea!	QuickiePal.dinky
 11225	Het is Ratastisch!	It's Ratastic!	QuickiePal.dinky
 11226	Absoluut geen nieuwe speelgoedrage. Ik had er een toen ik nog klein was.	Definitely not a new toy craze. I had one when I was a kid.	QuickiePal.dinky
@@ -232,7 +232,7 @@ id	text	en	loc
 11228	Dat zijn heel veel Ransome snoepjeshouders.	That's a lot of Ransome candy dispensers.	QuickiePal.dinky
 11229	Ik geef ze weg als promotie voor het Ransome de Clown Huis voor Koppige Kinderen. Neem er maar een.	Giving them away as a promotion for the Ransome the Clown House for Wayward Kids. Take one.	QuickiePal.dinky
 11230	Eén per klant. Bedrijfsregels.	It's one per customer. Corporate policy.	QuickiePal.dinky
-11231	Ik zou spelen als het een gewonnen zaak was.	I'd play if it were a sure thing.	QuickiePal.dinky
+11231	Ik zou spelen als het een zekere zaak was.	I'd play if it were a sure thing.	QuickiePal.dinky
 11232	deur van de Quickie Pal	Quickie Pal door	QuickiePal.dinky
 11233	de deur van de Quickie Pal	the Quickie Pal door	QuickiePal.dinky
 11234	Verlaat	Leave	QuickiePal.dinky
@@ -246,17 +246,17 @@ id	text	en	loc
 11242	Ransome snoepjeshouders	Ransome candy dispensers	QuickiePal.dinky
 11243	Lotto	Lotto	QuickiePal.dinky
 11244	het Lotto bord	the Lotto sign	QuickiePal.dinky
-11245	Waarschijnlijk de oplossing voor een puzzel in een ander spel.	Probably the solution to a puzzle in another game.	PostOffice.dinky
-11246	Dient om post te wegen.	It's for weighing mail.	PostOffice.dinky
+11245	Waarschijnlijk de oplossing voor een puzzel uit een ander spel.	Probably the solution to a puzzle in another game.	PostOffice.dinky
+11246	Om post mee te wegen.	It's for weighing mail.	PostOffice.dinky
 11247	Hier kan ik Leonards elektriciteitsrekening posten.	This is where I could mail Leonard's electricity bill.	PostOffice.dinky
 11248	Als ik post had, zou ik die hier insteken.	If I had any mail, this is where I'd put it.	PostOffice.dinky
 11249	Een echte afbeelding van het staatshoofd zou veel beter zijn.	An actual image of Jefferson would be much better.	PostOffice.dinky
 11250	Hij staat op de maand juli... Dat was lang geleden.	It's showing the month of July... That was a long time ago.	PostOffice.dinky
-11251	Vandalisme van overheidsbezit is blijkbaar echt een probleem. Ik moet er een voorbeeld van fotograferen.	Looks like government property vandalism really is a problem. I need to photograph an example of it.	PostOffice.dinky
+11251	Vandalisme van overheidseigendom is blijkbaar echt een probleem. Ik moet er een voorbeeld van fotograferen.	Looks like government property vandalism really is a problem. I need to photograph an example of it.	PostOffice.dinky
 11252	“Stop alstublieft met proberen om in de postbussen in te breken.”	“Please stop trying to break into the mailboxes.”	PostOffice.dinky
 11253	Ze zijn allemaal op slot.	They are locked.	PostOffice.dinky
 11254	Ik ken de code niet.	I don't have the combination.	PostOffice.dinky
-11255	Dat is een hoop privé postbussen.	That's a lot of private mailboxes.	PostOffice.dinky
+11255	Dat zijn veel privé postbussen.	That's a lot of private mailboxes.	PostOffice.dinky
 11256	De schade aan de postbus is maar klein. Niet genoeg voor de foto.	The mailbox damage is really minor. Not good enough for the photo.	PostOffice.dinky
 11257	Het is hier donker!	It's dark in there!	PostOffice.dinky
 11258	Ik ga zo hard in de problemen geraken!	I'm going to get in so much trouble for this.	PostOffice.dinky
@@ -305,7 +305,7 @@ id	text	en	loc
 11301	schilderij	painting	CityHall.dinky
 11302	schilderij	painting	CityHall.dinky
 11303	Die dingen waren akelig. Ik ben blij dat ze uitgeschakeld zijn.	These things were creepy. I'm glad they were deactivated.	QuickiePalOutside.dinky
-11304	Ik heb gehoord dat ze bijhielden welke films je huurde en die informatie met onbekende bedrijven deelden. **HUIVER**	I heard they actually tracked your movie rentals and shared the information with unknown companies. **SHIVER**	QuickiePalOutside.dinky
+11304	Ik heb gehoord dat ze bijhielden welke films je huurde en die informatie deelden met onbekende bedrijven. **HUIVER**	I heard they actually tracked your movie rentals and shared the information with unknown companies. **SHIVER**	QuickiePalOutside.dinky
 11305	deur van de Quickie Pal	Quickie Pal door	QuickiePalOutside.dinky
 11306	de deur van de Quickie Pal	the Quickie Pal door	QuickiePalOutside.dinky
 11307	Stap binnen	Enter	QuickiePalOutside.dinky
@@ -322,8 +322,8 @@ id	text	en	loc
 11318	Ik denk dat ik de briljante satire van zijn optredens het meest mis.	I think I miss his brilliant performance satire most of all.	Alleyway.dinky
 11319	Lichtjes artistiek, maar ik denk niet dat Natalie deze wil.	Kind of artsy, but I don't think Natalie will want this one.	Alleyway.dinky
 11320	Het is een Ransome de Clown poster!	It's a Ransome the Clown poster!	Alleyway.dinky
-11321	Dat is een behoorlijk slechte foto. Niemand kan weten dat het Ransome is.	That's a pretty crappy photo. No one's going to know it's Ransome.	Alleyway.dinky
-11322	Dat is een behoorlijk slechte foto. Niemand kan weten dat het Ransome is.	That's a pretty crappy photo. No one's going to know it's Ransome.	Alleyway.dinky
+11321	Dat is een behoorlijk slechte foto. Niemand gaat weten dat het Ransome is.	That's a pretty crappy photo. No one's going to know it's Ransome.	Alleyway.dinky
+11322	Dat is een behoorlijk slechte foto. Niemand gaat weten dat het Ransome is.	That's a pretty crappy photo. No one's going to know it's Ransome.	Alleyway.dinky
 11323	Lichtjes artistiek, maar ik denk niet dat Natalie deze wil.	Kind of artsy, but I don't think Natalie will want this one.	Alleyway.dinky
 11324	Ik denk niet dat dit rond genoeg is.	I don't think this is round enough.	Alleyway.dinky
 11325	Het is eigenlijk best schoon voor een vuilnisbak. Helemaal niet goor.	It's actually pretty clean for a trash can. Not disgusting at all.	Alleyway.dinky
@@ -339,17 +339,17 @@ id	text	en	loc
 11335	Het is erop gelijmd en ik kan het er niet aftrekken.	It's glued on and I can't pull it off.	Alleyway.dinky
 11336	Hoi Ransome!	Hi Ransome!	Alleyway.dinky
 11337	Misschien kan water de lijm oplossen.	Maybe the water will dissolve the glue.	Alleyway.dinky
-11338	Dat werkt! En zelfs zonder de poster te beschadigen.	That worked! And without damaging either poster.	Alleyway.dinky
+11338	Dat werkte! En zelfs zonder een van de posters te beschadigen.	That worked! And without damaging either poster.	Alleyway.dinky
 11339	Hoi Ransome!	Hi Ransome!	Alleyway.dinky
-11340	Het is terug naar zijn originele stand.	It's back to its original setting.	Alleyway.dinky
+11340	Het staat terug in zijn originele stand.	It's back to its original setting.	Alleyway.dinky
 11341	Ik denk dat Sandy of David het uitgedokterd heeft.	Guess Sandy or Dave figured it out.	Alleyway.dinky
 11342	Het ventiel is helemaal opengedraaid!	The valve is set to full on!	Alleyway.dinky
-11343	"t is een oud en roestig ventiel. Er staat “Thimbleweed Park Gas Maatschappij, Niet Aanraken”.	It's a rusty old valve. It says “Thimbleweed Park Gas Company, Do Not Touch”.	Alleyway.dinky
+11343	Het is een oud en roestig ventiel. Er staat “Thimbleweed Park Gas Maatschappij, Niet Aanraken”.	It's a rusty old valve. It says “Thimbleweed Park Gas Company, Do Not Touch”.	Alleyway.dinky
 11344	Het zit vast. Ik kan het niet bewegen.	It's stuck. I can't move it.	Alleyway.dinky
 11345	Het zit weer vast.	It's stuck again.	Alleyway.dinky
 11346	poster	poster	Alleyway.dinky
 11347	Ransome de Clown poster	Ransome the Clown poster	Alleyway.dinky
-11348	poster rand	poster edge	Alleyway.dinky
+11348	zijkant van poster	poster edge	Alleyway.dinky
 11349	Ransome de Clown poster	Ransome the Clown poster	Alleyway.dinky
 11350	Ransome de Clown poster	Ransome the Clown poster	Alleyway.dinky
 11351	vuilnisbak	trash can	Alleyway.dinky
@@ -392,13 +392,13 @@ id	text	en	loc
 11388	Zet je radioknop op KSCUM 198.7 FM voor de puikste hits van lokale artiesten!	Turn your dials to KSCUM 198.7 FM for the gnarliest hits from local artists!	AStreet.dinky
 11389	DJ Cassie zegt 'Ik hoop dat je Tuna Head leuk vindt!'	DJ Cassie says 'I hope you like Tuna Head!'	AStreet.dinky
 11390	Ceremonie bij het stadhuis	Ceremony at City Hall	AStreet.dinky
-11391	Het stadhuis wordt omgedoopt naar het Chuck E. Edmund Stadhuis...	City Hall is being renamed the Chuck E. Edmund City Hall...	AStreet.dinky
-11392	...ter ere van alles wat Chuck heeft gedaan voor de stad.	...in honor of everything Chuck has done for the town.	AStreet.dinky
+11391	Het stadhuis wordt omgedoopt tot het Chuck E. Edmund Stadhuis...	City Hall is being renamed the Chuck E. Edmund City Hall...	AStreet.dinky
+11392	...ter ere van alles wat Chuck voor de stad heeft gedaan.	...in honor of everything Chuck has done for the town.	AStreet.dinky
 11393	Veel beterschap, Chuck. We missen je.	Get better Chuck. We miss you.	AStreet.dinky
 11394	Dit is maar tekst. Ik heb wat meer indrukwekkends nodig voor een goede foto.	This is just text. I need something more impressive for a good photo.	AStreet.dinky
 11395	Ik heb wat meer fotogenieks nodig dan een briefje.	I need something more photographic than a note.	AStreet.dinky
 11396	Het is te verweerd om een goede foto van te maken.	It's too badly weathered for a good photo.	AStreet.dinky
-11397	Het is een beetje eng, maar niet echt walgelijk.	It's a bit scary, but not really disgusting.	AStreet.dinky
+11397	Het is een beetje eng, maar niet echt goor.	It's a bit scary, but not really disgusting.	AStreet.dinky
 11398	Het is een brandende vuilnisbak!	It's a burning trash can!	AStreet.dinky
 11399	Auw! Mijn teen!	Ouch! My toe!	AStreet.dinky
 11400	Dat is te heet om in m'n bodemloze handtas te stoppen.	That's too hot to put in my inventory-hole.	AStreet.dinky
@@ -439,10 +439,10 @@ id	text	en	loc
 11435	de deur van het Postkantoor	the Post Office door	AStreet.dinky
 11436	Stap binnen	Enter	AStreet.dinky
 11437	Stap het Postkantoor binnen	Enter Post Office	AStreet.dinky
-11438	deur van de Nikkel Krant	Nickel News door	AStreet.dinky
-11439	de deur van de Nikkel Krant	the Nickel News door	AStreet.dinky
+11438	deur van Nickel News redactie	Nickel News door	AStreet.dinky
+11439	de deur van Nickel News redactie	the Nickel News door	AStreet.dinky
 11440	Stap binnen	Enter	AStreet.dinky
-11441	Stap de Nikkel Krant binnen	Enter Nickel News	AStreet.dinky
+11441	Stap Nickel News redactie binnen	Enter Nickel News	AStreet.dinky
 11442	lijstje	note	AStreet.dinky
 11443	lijstje	note	AStreet.dinky
 11444	lijstje	note	AStreet.dinky
@@ -455,7 +455,7 @@ id	text	en	loc
 11451	lijstje	note	AStreet.dinky
 11452	lijstje	note	AStreet.dinky
 11453	lijstje	note	AStreet.dinky
-11454	Vuilnisbak	trash can	AStreet.dinky
+11454	vuilnisbak	trash can	AStreet.dinky
 11455	10 cent	dime	AStreet.dinky
 11456	Main Street	Main Street	AStreet.dinky
 11457	fles	bottle	AStreet.dinky
@@ -470,7 +470,7 @@ id	text	en	loc
 11466	Slechts een laddertje.	Just a small ladder.	BookStore.dinky
 11467	Slechts een lange, krakkemikkig uitziende ladder.	Just a tall, rickety-looking ladder.	BookStore.dinky
 11468	Die ziet eruit als dooie neef Ted uit die nieuwe game waar ik zo van hou.	Kind of looks like Dead Cousin Ted from that new game I love.	BookStore.dinky
-11469	Griezelig	Creepy.	BookStore.dinky
+11469	Griezelig.	Creepy.	BookStore.dinky
 11470	Ik weet niet zeker waarom iemand met poppen wil spelen.	Not sure why anyone wants to play with dolls.	BookStore.dinky
 11471	Het is dat boek over Fortran, een 30 jaar oude computertaal.	It's that book on Fortran, a 30-year-old computer language.	BookStore.dinky
 11472	Het is een boek over Fortran, een 30 jaar oude computertaal.	It's a book on Fortran, a 30-year-old computer language.	BookStore.dinky
@@ -496,9 +496,9 @@ id	text	en	loc
 11492	de stad	the town	BookStore.dinky
 11493	Het is bezet.	It's in use.	Bathroom.dinky
 11494	Ik denk niet dat de stroom is ingeschakeld.	I don't think the power is on.	Bathroom.dinky
-11495	Het is een smerig toilet	It's a gross toilet!	Bathroom.dinky
+11495	Het is een smerig toilet!	It's a gross toilet!	Bathroom.dinky
 11496	Het is te donker om iets te zien.	It's too dark to see.	Bathroom.dinky
-11497	Het is een smerige toilet hendel!	It's a gross toilet handle!	Bathroom.dinky
+11497	Het is een smerige toilethendel!	It's a gross toilet handle!	Bathroom.dinky
 11498	Het is te donker om iets te zien.	It's too dark to see.	Bathroom.dinky
 11499	Het is een vieze wastafel!	It's a gross sink!	Bathroom.dinky
 11500	Het is te donker om iets te zien.	It's too dark to see.	Bathroom.dinky
@@ -532,7 +532,7 @@ id	text	en	loc
 11528	lichtknop	light switch	Bathroom.dinky
 11529	toilet	toilet	Bathroom.dinky
 11530	iets	something	Bathroom.dinky
-11531	toilet door	toilet handle	Bathroom.dinky
+11531	toilethendel	toilet handle	Bathroom.dinky
 11532	iets	something	Bathroom.dinky
 11533	wastafel	sink	Bathroom.dinky
 11534	iets	something	Bathroom.dinky
@@ -550,21 +550,21 @@ id	text	en	loc
 11546	iets	something	Bathroom.dinky
 11547	^Je moet nog %d foto's indienen voordat je naar je baan als spelontwikkelaar bij MMucasFlem terug kunt keren.	^You need to turn in %d more photos before returning to your game developer job at MMucasFlem.	StartScreen.dinky
 11548	Laat me maar snel de camera vinden, de lijst bekijken en aan de slag gaan.	I better find that camera, take a look at the list, and get cracking.	StartScreen.dinky
-11549	Het gas staat te hoog aan!	Gas is on too high!	Diner.dinky
+11549	Het gas staat te hard aan!	Gas is on too high!	Diner.dinky
 11550	Argggg!	Agggg!	Diner.dinky
 11551	Jeetjemeneetje!	Man oh man oh man!	Diner.dinky
 11552	Nee!	Noooo!	Diner.dinky
-11553	Iemand draai het gas lager!	Someone turn down the gas!	Diner.dinky
+11553	Kan iemand het gas gaan dichtdraaien?!	Someone turn down the gas!	Diner.dinky
 11554	Blijf! Blijf liggen!	Down! Stay down!	Diner.dinky
 11555	Het is een Kobe rundvlees hotdog.	It's a Kobe beef hot dog.	Diner.dinky
 11556	Het is een Zwitserse varkenshotdog.	It's a Swiss pork hot dog.	Diner.dinky
 11557	Het is een kip met kruiden hotdog.	It's a herb and chicken hot dog.	Diner.dinky
-11558	Het is een Franse mosterd met boerenkool vega hotdog.	It's a French mustard and kale veggie dog.	Diner.dinky
+11558	Het is een vega dog met Franse mosterd en boerenkool.	It's a French mustard and kale veggie dog.	Diner.dinky
 11559	Hij is afgestemd op KSCUM. Zoals het hoort!	It's tuned to KSCUM. As it should be!	Diner.dinky
 11560	Heeft meer KSCUM nodig!	Needs more KSCUM!	Diner.dinky
 11561	Sjiek gedoe! Allerlei soorten fijnproevers hotdogs.	Fancy stuff! All kinds of gourmet hot dogs.	Diner.dinky
-11562	De kwaliteit is erop vooruit gegaan sinds Dave and Sandy allerlei prijzen hebben gewonnen.	Quality sure has gone up since Dave and Sandy won all those awards.	Diner.dinky
-11563	Dat is een heleboel vuur!	That's a lot of fire!	Diner.dinky
+11562	De kwaliteit is erop vooruit gegaan sinds Dave and Sandy al die prijzen hebben gewonnen.	Quality sure has gone up since Dave and Sandy won all those awards.	Diner.dinky
+11563	Dat is een hele hoop vuur!	That's a lot of fire!	Diner.dinky
 11564	Ziet er gevaarlijk uit! Alles voor een verhaal.	Looks dangerous! Anything for a story.	Diner.dinky
 11565	deur	door	Diner.dinky
 11566	de deur van het Eetcafé	the Diner door	Diner.dinky
@@ -623,12 +623,12 @@ id	text	en	loc
 11619	Ik heb de sleutel niet-e-hoe!	I don't have-a-who the key!	SheriffsOffice.dinky
 11620	Die dingen waren akelig. Ik ben blij dat ze uitgeschakeld zijn.	These things were creepy. I'm glad they were deactivated.	SheriffsOffice.dinky
 11621	Het is een Gezocht poster.	It's a wanted poster.	SheriffsOffice.dinky
-11622	Ik denk dat die in de doos kwam.	I think that one came in the box.	SheriffsOffice.dinky
+11622	Ik denk dat die mee in de doos zat.	I think that one came in the box.	SheriffsOffice.dinky
 11623	Gezocht: Een Gezocht poster. Geen beloning.	Wanted: One wanted poster. No reward.	SheriffsOffice.dinky
 11624	Het is een officiële politietelefoon.	It's an official police phone.	SheriffsOffice.dinky
-11625	Hee! Dat is een officiële politie-e-rino telefoon. Iemand kan bellen voor een noodsituatie-e-rino.	Hey! That's an official police-a-reno phone. Someone might call in with an emergency-a-reno.	SheriffsOffice.dinky
-11626	Dat is een officiële "politie-e-rino" telefoon. Iemand kan bellen voor een "noodsituatie-e-rino".	That's an official “police-a-reno” phone. Someone might call in with an “emergency-a-reno”.	SheriffsOffice.dinky
-11627	Dat is een officiële politietelefoon. Iemand kan bellen voor een noodsituatie.	That's an official police phone. Someone might call in with an emergency.	SheriffsOffice.dinky
+11625	Hee! Dat is een officiële politie-e-rino telefoon. Iemand kan bellen voor een noodgeval-e-rino.	Hey! That's an official police-a-reno phone. Someone might call in with an emergency-a-reno.	SheriffsOffice.dinky
+11626	Dat is een officiële "politie-e-rino" telefoon. Iemand kan bellen voor een "noodgeval-e-rino".	That's an official “police-a-reno” phone. Someone might call in with an “emergency-a-reno”.	SheriffsOffice.dinky
+11627	Dat is een officiële politietelefoon. Iemand kan bellen voor een noodgeval.	That's an official police phone. Someone might call in with an emergency.	SheriffsOffice.dinky
 11628	Het is een kast!	It's a cabinet!	SheriffsOffice.dinky
 11629	Het is een kast!	It's a cabinet!	SheriffsOffice.dinky
 11630	Het is een grote sleutel.	It's a large key.	SheriffsOffice.dinky
@@ -637,8 +637,8 @@ id	text	en	loc
 11633	Heeft meer KSCUM nodig!	Needs more KSCUM!	SheriffsOffice.dinky
 11634	Ik zou hier niet graag in opgesloten worden.	I'd hate to get locked up in here.	SheriffsOffice.dinky
 11635	Hij is gesloten.	It's locked.	SheriffsOffice.dinky
-11636	Ik wil hem niet vrijlaten nu ze zo boos zijn.	I don't want to let him out while they are so upset.	SheriffsOffice.dinky
-11637	Ze kijken boos.	They look upset.	SheriffsOffice.dinky
+11636	Ik wil hem niet vrijlaten zolang ze zo boos zijn.	I don't want to let him out while they are so upset.	SheriffsOffice.dinky
+11637	Ze kijken erg boos.	They look upset.	SheriffsOffice.dinky
 11638	ArresteerTron 3000™	ArrestTron 3000™	SheriffsOffice.dinky
 11639	de ArresteerTron 3000™	the ArrestTron 3000™	SheriffsOffice.dinky
 11640	deur	door	SheriffsOffice.dinky
@@ -657,14 +657,14 @@ id	text	en	loc
 11653	Sheriff en Lijkschouwer	Sheriff and Coroner	SheriffsOffice.dinky
 11654	de	the	SheriffsOffice.dinky
 11655	Het is iets over vijf.	It's just after five o'clock.	Bank.dinky
-11656	Ik heb dit schilderij al eens eerder gezien, denk ik.	I think I've seen this painting somewhere before.	Bank.dinky
+11656	Ik heb dit schilderij ergens eerder gezien, denk ik.	I think I've seen this painting somewhere before.	Bank.dinky
 11657	Indrukwekkend!	Impressive!	Bank.dinky
-11658	Het is een bank promotie flyer.	It's a promotional bank flyer.	Bank.dinky
-11659	Geen bank flyers meer.	No bank flyers left.	Bank.dinky
+11658	Het is een reclamebrochure van de bank.	It's a promotional bank flyer.	Bank.dinky
+11659	Geen brochures meer.	No bank flyers left.	Bank.dinky
 11660	Het is oom Chucks “Philipp's Gevaarlijke Gadget.”	It's Uncle Chuck's “Philipp's Dangerous Dövice.”	Bank.dinky
 11661	Ik denk dat de bankier het veilig bewaart zodat zijn onderpand niet in radioactief stof verandert.	I guess the banker is keeping it safe so his repossession doesn't turn to radioactive dust.	Bank.dinky
 11662	Het is een officiële banktelefoon.	It's an official bank phone.	Bank.dinky
-11663	Beter van niet, er zou iemand voor belangrijke bankzaken kunnen bellen.	I probably shouldn't, someone with important bank business might call.	Bank.dinky
+11663	Beter niet, er zou net iemand voor belangrijke bankzaken kunnen bellen.	I probably shouldn't, someone with important bank business might call.	Bank.dinky
 11664	Het is een brandende vuilnisbak!	It's a burning trash can!	Bank.dinky
 11665	In een bank!	In a bank!	Bank.dinky
 11666	Auw! Mijn teen!	Ouch! My toe!	Bank.dinky
@@ -719,9 +719,9 @@ id	text	en	loc
 11715	FORTRAN⏎	FORTRAN⏎	Book.dinky
 11716	Een introductie⏎	An introduction⏎	Book.dinky
 11717	⏎	⏎	Book.dinky
-11718	Hoewel veel programmeurs FORTRAN tegenwoordig als een dode programmeertaal beschouwen, is niets minder waar.⏎⏎	While many programmers today consider FORTRAN to be a dead programming language, nothing could be further from the truth.⏎⏎	Book.dinky
-11719	De auteurs twijfelen er niet aan dat FORTRAN tot ver in de jaren 2020 (en daarna) in de voorhoede van alle computertalen zal staan.⏎⏎	The authors have no doubt that well into the 2020's (and beyond) FORTRAN will be at the forefront of all computer languages.⏎⏎	Book.dinky
-11720	Dit boek moet dienen als een hulpmiddel voor de moderne programmeur die op zoek is naar een streepje voor in de toekomst van computerprogrammeren.	This book is to serve as a tool for the modern programmer looking for an edge in the future of computer programing.	Book.dinky
+11718	Hoewel veel programmeurs FORTRAN tegenwoordig als een dode programmeertaal beschouwen, is niets minder waar.⏎	While many programmers today consider FORTRAN to be a dead programming language, nothing could be further from the truth.⏎⏎	Book.dinky
+11719	De auteurs zijn zeker dat FORTRAN tot ver in de jaren 2020 (en daarna) in de voorhoede van alle computertalen zal staan.⏎	The authors have no doubt that well into the 2020's (and beyond) FORTRAN will be at the forefront of all computer languages.⏎⏎	Book.dinky
+11720	Dit boek geeft de moderne programmeur alvast een streepje voor in de toekomst van computerprogrammeren.	This book is to serve as a tool for the modern programmer looking for an edge in the future of computer programing.	Book.dinky
 11721	⏎program circle⏎	⏎program circle⏎	Book.dinky
 11722	real r, area⏎	real r, area⏎	Book.dinky
 11723	⏎	⏎	Book.dinky
@@ -748,29 +748,29 @@ id	text	en	loc
 11744	...maar ik denk dat het nu allemaal gaat instorten.	...but I guess it's all come crashing down now.	Ending.dinky
 11745	Laten we eens kijken of we het kunnen oplappen...	Let's go see if we can apply a patch...	Ending.dinky
 11746	...ik denk dat ik wel weet hoe.	...I might know just the one.	Ending.dinky
-11747	Delores: Bedankt voor het versterken van het Fotoreportage Team bij de Thimbleweed Nikkel.⏎	Delores: Thanks for joining the Thimbleweed Nickel Photojournalism Team.⏎	Note.dinky
-11748	Voor jouw opdracht, wil ik graag de volgende foto's krijgen voor wat aankomende stukken:⏎⏎	For your assignment, I'd like you to get the following photos for some upcoming stories:⏎⏎	Note.dinky
+11747	Delores, welkom bij het Fotoreportage Team van de Thimbleweed Nikkel.⏎	Delores: Thanks for joining the Thimbleweed Nickel Photojournalism Team.⏎	Note.dinky
+11748	Jouw opdracht - ik wil graag de volgende foto's voor een paar aankomende stukken:⏎⏎	For your assignment, I'd like you to get the following photos for some upcoming stories:⏎⏎	Note.dinky
 11749	⏎P.S. Bedankt voor je hulp tijdens je verlof bij MMucasFlem Games.	⏎P.S. Thanks for helping out while you're on vacation from MMucasFlem Games.	Note.dinky
 11750	Stuk over de zomervakantie	Story about the 4th of July	Note.dinky
 11751	Column over Thimbleweed County	Column about Thimbleweed County	Note.dinky
 11752	Artikel over kinderarmoede	Story about childhood poverty	Note.dinky
-11753	Foto van de redacteur van de Nikkel Krant	Photo of the editor of the Nickel News	Note.dinky
+11753	Foto van de Nickel News hoofdredacteur	Photo of the editor of the Nickel News	Note.dinky
 11754	Actiefoto van gevaarlijke natuur	Action photo of dangerous wildlife	Note.dinky
 11755	De slechte kwaliteit van ons drinkwater in Thimbleweed	Our bad Thimbleweed drinking water quality	Note.dinky
-11756	Iets walgelijks	Something disgusting	Note.dinky
+11756	Iets goors	Something disgusting	Note.dinky
 11757	Artikel over het staatshoofd	Story about President Thomas Jefferson	Note.dinky
 11758	Een kijk op dode talen uit de oudheid	A look at the dead languages of antiquity	Note.dinky
 11759	Exposé over de geneugten van samenleven met katten	Exposé on the humor of living with cats	Note.dinky
-11760	Vandalisme van Rijkseigendom	Government property vandalism	Note.dinky
+11760	Vandalisme van overheidseigendom	Government property vandalism	Note.dinky
 11761	Artikel over de sluiting van het Edmund Hotel	Piece on the closing of the Edmund Hotel	Note.dinky
-11762	Een goed voorbeeld van de voorste vingerkootjes	A good example of proximal phalanges	Note.dinky
-11763	Bijtend stuk over onbeschofte bankbedienden	Biting piece on rude bank employees	Note.dinky
-11764	Recensies van een aantal nieuwe adventure games	Reviews of some new adventure games	Note.dinky
-11765	Openbare dienstverleningsstuk over het opruimen van afval	Public service piece about picking up trash	Note.dinky
-11766	Opgeblazen artikel over ThimbleCon '88	Puff-piece on ThimbleCon '88	Note.dinky
-11767	Panoramisch uitzicht over de stad	Birds-eye view of the town	Note.dinky
+11762	Een duidelijk voorbeeld van de voorste vingerkootjes	A good example of proximal phalanges	Note.dinky
+11763	Bijtend stuk over onbeschoft bankpersoneel	Biting piece on rude bank employees	Note.dinky
+11764	Recensies van een paar nieuwe adventure games	Reviews of some new adventure games	Note.dinky
+11765	Sensibiliseringcampagne over het opruimen van afval	Public service piece about picking up trash	Note.dinky
+11766	Advertorial over ThimbleCon '88	Puff-piece on ThimbleCon '88	Note.dinky
+11767	De stad vanuit vogelperspectief	Birds-eye view of the town	Note.dinky
 11768	Maak een foto van onze nieuwste fotoreporter	Take a photo of our newest photojournalist	Note.dinky
-11769	Verhaal voor de gedichten sectie	Story for the poetry section	Note.dinky
+11769	Verhaal voor de gedichtensectie	Story for the poetry section	Note.dinky
 11770	Close up voor een verhaal over een bekendheid	Headshot for a story on a celebrity	Note.dinky
 11771	Foto van een persoon die een gevaarlijk beroep uitoefent	Photo of a person doing a dangerous job	Note.dinky
 11772	Verhaal over het slopen van huizen	Story on home demolition	Note.dinky
@@ -784,19 +784,19 @@ id	text	en	loc
 11780	Stuk over allergieën	Story about allergies	Note.dinky
 11781	Die dingen waren akelig. Ik ben blij dat ze uitgeschakeld zijn.	These things were creepy. I'm glad they were deactivated.	CoronersOffice.dinky
 11782	Ze zouden als waarschuwing moeten dienen tegen de gevaren van AI.	They should serve as a warning about the dangers of AI.	CoronersOffice.dinky
-11783	Griezelig om te bedenken dat Oom Chuck gedigitaliseerd werd en in zijn AI creatie gezogen.	Scary to think about Uncle Chuck getting digitized and sucked into his AI creation.	CoronersOffice.dinky
+11783	Griezelig om te bedenken hoe Oom Chuck gedigitaliseerd werd en in zijn AI creatie is gezogen.	Scary to think about Uncle Chuck getting digitized and sucked into his AI creation.	CoronersOffice.dinky
 11784	Ik ben blij dat ik en die twee federale agenten erin geslaagd zijn om hem eruit te krijgen.	I'm glad me and those two federal agents were able to get him out.	CoronersOffice.dinky
 11785	Natuurlijk, hij zal waarschijnlijk de rest van zijn leven in dat sanatorium zitten.	Of course, he will probably spend the rest of his life in that sanitarium.	CoronersOffice.dinky
 11786	Ik krijg rillingen als ik bedenk wat er met hem gebeurd zou zijn als we niet op tijd bij hem geraakt waren.	I shudder to think what would have happened if we hadn't gotten to him in time.	CoronersOffice.dinky
-11787	De Tron 3000™ machines beangstigen me meer dan het mortuarium.	The Tron 3000™ machines creep me out more than being in the morgue.	CoronersOffice.dinky
+11787	De Tron 3000™ machines bezorgen me meer kriebels dan het mortuarium.	The Tron 3000™ machines creep me out more than being in the morgue.	CoronersOffice.dinky
 11788	Gewoon een la.	Just a drawer.	CoronersOffice.dinky
 11789	Gewoon het toevallige lijkschouwersverslag over de moord op Boris.	Just the odd coroner report about the murder of Boris.	CoronersOffice.dinky
 11790	Wat niet gebeurd kan zijn.	Which couldn't have happened.	CoronersOffice.dinky
-11791	Vreemd? Er is een autopsierapport voor een moord van vorig jaar op iemand genaamd Boris?	Weird? There is an autopsy report for a murder last year of someone named Boris?	CoronersOffice.dinky
+11791	Vreemd... Er is een autopsierapport voor een moord van vorig jaar op iemand genaamd Boris?	Weird? There is an autopsy report for a murder last year of someone named Boris?	CoronersOffice.dinky
 11792	Er is al twintig jaar geen moord meer gepleegd in Thimbleweed Park.	There hasn't been a murder in Thimbleweed Park for twenty years.	CoronersOffice.dinky
 11793	Gewoon wat oude lijkschouwer dossiers.	Just some old coroner files.	CoronersOffice.dinky
 11794	Een hoop oude dossiers.	Lots of old files.	CoronersOffice.dinky
-11795	Stelletje slecht georganiseerde dossiers.	Bunch of badly organized files.	CoronersOffice.dinky
+11795	Boel slecht georganiseerde dossiers.	Bunch of badly organized files.	CoronersOffice.dinky
 11796	Het is een skelet!	It's a skeleton!	CoronersOffice.dinky
 11797	Taaie karamel kern.	Chewy Caramel Center.	CoronersOffice.dinky
 11798	Vreemd? Ik wist niet dat je een lijkschouwersdiploma via de post kon bestellen.	Odd? I didn't know you could mail order for coroner degrees.	CoronersOffice.dinky
@@ -832,7 +832,7 @@ id	text	en	loc
 11828	Breek open	Pry open	VerbHelpers.dinky
 11829	Raap op	Pick up	VerbHelpers.dinky
 11830	Neem	Take	VerbHelpers.dinky
-11831	Druk op	Flip	VerbHelpers.dinky
+11831	Flip	Flip	VerbHelpers.dinky
 11832	Gebruik	Dial	VerbHelpers.dinky
 11833	Druk op	Push	VerbHelpers.dinky
 11834	Trek aan	Pull	VerbHelpers.dinky
@@ -857,9 +857,9 @@ id	text	en	loc
 11853	Verbrand $NOUN1$ in $NOUN2$	Burn $NOUN1$ in $NOUN2$	VerbHelpers.dinky
 11854	Laat vallen in $NOUN2$	Drop in $NOUN2$	VerbHelpers.dinky
 11855	Vul $NOUN2$	Fill $NOUN2$	VerbHelpers.dinky
-11856	Leeg $NOUN2$ in $NOUN1$	Empty $NOUN2$ in $NOUN1$	VerbHelpers.dinky
+11856	Giet $NOUN2$ leeg in $NOUN1$	Empty $NOUN2$ in $NOUN1$	VerbHelpers.dinky
 11857	Maak foto van $NOUN2$	Take photo of $NOUN2$	VerbHelpers.dinky
-11858	Plak $NOUN1$ op $NOUN2$	Put $NOUN1$ on $NOUN2$	VerbHelpers.dinky
+11858	Zet $NOUN1$ op $NOUN2$	Put $NOUN1$ on $NOUN2$	VerbHelpers.dinky
 11859	Ontgrendel $NOUN1$ met $NOUN2$	Unlock $NOUN1$ with $NOUN2$	VerbHelpers.dinky
 11860	Verniel $NOUN1$ met $NOUN2$	Vandalize $NOUN1$ with $NOUN2$	VerbHelpers.dinky
 11861	Steek $NOUN2$ met $NOUN1$	Jab $NOUN2$ with $NOUN1$	VerbHelpers.dinky
@@ -879,8 +879,8 @@ id	text	en	loc
 11875	stofje	speck of dust	DustHelpers.dinky
 11882	Hoi, waar heb je leren programmeren?	Hi, were did you learn to program?	Defines.dinky
 11883	Een foto van een leeg glas is niet goed genoeg.	A photo of an empty glass isn't good enough.	Inventory.dinky
-11884	Het is een gas met vervuild water!	It's a glass of polluted water!	Inventory.dinky
-11885	Het is een leeg glas	It's an empty glass.	Inventory.dinky
+11884	Het is een glas met vervuild water!	It's a glass of polluted water!	Inventory.dinky
+11885	Het is een leeg glas.	It's an empty glass.	Inventory.dinky
 11886	Ik denk niet dat dat slim is.	I don't think that's smart.	Inventory.dinky
 11887	De stank is nauwelijks te harden!	I can barely stand the smell!	Inventory.dinky
 11888	Dat is geen goed idee.	That's not a good idea.	Inventory.dinky
@@ -923,7 +923,7 @@ id	text	en	loc
 11925	Klaar om te verzenden.	Ready to mail.	Inventory.dinky
 11926	Het heeft postzegels nodig.	It needs stamps.	Inventory.dinky
 11927	Zo! Alles verstuurd.	There! All mailed.	Inventory.dinky
-11928	Dit heeft postzegels nodig, anders komt het niet ver.	This needs stamps or it's not getting far.	Inventory.dinky
+11928	Er moeten postzegels op, anders geraakt het niet ver.	This needs stamps or it's not getting far.	Inventory.dinky
 11929	Het zijn wat postzegels van Natalie.	It's some stamps from Natalie.	Inventory.dinky
 11930	Gefrankeerd en klaar om te versturen.	It's stamped and ready to mail.	Inventory.dinky
 11931	Pepermunt! Lekker!	Peppermint! Yum!	Inventory.dinky
@@ -943,11 +943,11 @@ id	text	en	loc
 11945	De sloopfoto moet veel dramatischer uitvallen.	The demolition photo needs to be way more dramatic.	Inventory.dinky
 11946	Ik denk dat ik genoeg kapot heb gemaakt voor één dag.	I think I've caused enough destruction for one day.	Inventory.dinky
 11947	Geladen en klaar om te gaan!	Armed and ready to go!	Inventory.dinky
-11948	Ik voel me niet goed bij de aanpak. Ik heb mooie herinneringen aan opgroeien in het Elegante Landgoed.	I feel like this is a bad course of action. I had fond memories of growing up in the Mansion mansion.	Inventory.dinky
+11948	Dit lijkt me geen goed plan. Ik heb mooie herinneringen aan opgroeien in het Elegante Landgoed.	I feel like this is a bad course of action. I had fond memories of growing up in the Mansion mansion.	Inventory.dinky
 11949	Gelukkig zijn z'n batterijen dood. Ik heb mooie herinneringen aan opgroeien in het Elegante Landgoed.	Good thing its batteries are dead. I have fond memories of growing up in the Mansion mansion.	Inventory.dinky
 11950	Ik denk dat ik genoeg dingen opgeblazen heb voor vandaag.	I think I've blown up enough things for today.	Inventory.dinky
 11951	Oké, op hoop van zegen. Ik ga hem activeren.	OK, here goes nothing. I'm going to activate it.	Inventory.dinky
-11952	Daar zijn een heleboel herinneringen aan opgroeien in het Elegante Landgoed die in rook opgaan.	That's a lot of growing up in the Mansion mansion memories up in smoke.	Inventory.dinky
+11952	Daar gaan een hoop herinneringen aan opgroeien in het Elegante Landgoed in rook op.	That's a lot of growing up in the Mansion mansion memories up in smoke.	Inventory.dinky
 11953	*snik*	*sob*	Inventory.dinky
 11954	Maar dat is nu het probleem van de bank.	I guess it's the bank's problem now.	Inventory.dinky
 11955	Hmmm.	Hmmm.	Inventory.dinky
@@ -964,8 +964,8 @@ id	text	en	loc
 11966	Echt niet. Eén gebroken tand is genoeg.	No way. One broken tooth is enough.	Inventory.dinky
 11967	^%d stofjes	^%d specks of dust	Inventory.dinky
 11968	^%d stofjes	^%d specks of dust	Inventory.dinky
-11969	Ik denk dat dit niet genoeg stof is voor Natalie.	I don't think this is enough dust for Natalie.	Inventory.dinky
-11970	^Ze heeft waarschijnlijk ongeveer %d stofjes nodig.	^She probably needs around %d specks of dust.	Inventory.dinky
+11969	Ik denk niet dat dit genoeg stof is voor Natalie.	I don't think this is enough dust for Natalie.	Inventory.dinky
+11970	^Ze wil waarschijnlijk een stuk of %d stofjes.	^She probably needs around %d specks of dust.	Inventory.dinky
 11971	Dat is een mooi plaatje!	That's a good shot!	Inventory.dinky
 11972	Natalie zal deze fantastisch vinden!	Natalie will love this one!	Inventory.dinky
 11973	Dit is perfect voor het verhaal!	This is perfect for the story!	Inventory.dinky
@@ -1004,9 +1004,9 @@ id	text	en	loc
 12006	Wanneer bent u overal 'e-hoe' achter beginnen zetten?	When did you start adding 'a-who' after everything?	Coroner.yack
 12007	Zie je wel! U heeft het net weer gedaan!	Right there! You just did it again!	Coroner.yack
 12008	Laat maar-e-hoe.	Whatever-a-who.	Coroner.yack
-12009	U zou samen met de Sheriff een komisch duo moeten vormen.	You and the Sheriff should form a comedy team.	Coroner.yack
+12009	U zou met de Sheriff een komisch duo kunnen beginnen.	You and the Sheriff should form a comedy team.	Coroner.yack
 12010	Niet veel overlijdens in Thimbleweed Park, blijkbaar?	Not a lot of deaths in Thimbleweed Park, are there?	Coroner.yack
-12011	Heb ik nu iets gelezen over een zekere Boris die vermoord is?	Did I read about someone named Boris being murdered?	Coroner.yack
+12011	Las ik iets over een zekere Boris die vermoord is?	Did I read about someone named Boris being murdered?	Coroner.yack
 12012	Sheriff wil u spreken.	Sheriff wants to see you.	Coroner.yack
 12013	Sheriff wil u opnieuw spreken.	Sheriff wants to see you again.	Coroner.yack
 12014	'k Moet gaan... tot ziens.	Got to run... bye.	Coroner.yack
@@ -1022,9 +1022,9 @@ id	text	en	loc
 12024	Dat durf ik wedden.	I bet you do.	Coroner.yack
 12025	Wat-e-hoe!	What-a-who!	Coroner.yack
 12026	Waar heb je dat gelezen? We hebben nog nooit een moord gehad in Thimbleweed Park en ik ken niemand met de naam Boris.	Where did you read that? We've never had a murder in Thimbleweed Park, and I don't know anyone named Boris.	Coroner.yack
-12027	Ik heb het in uw vertrouwelijke schouwingsrapporten gelezen.	I read it in your confidential coroner files.	Coroner.yack
-12028	Ik heb het gelezen in dat roddelblad, de Nikkel Krant.	I read it in that trash-rag the Nickel News.	Coroner.yack
-12029	Ik heb het op een online BBS gelezen.	I read it on an on-line BBS.	Coroner.yack
+12027	In uw vertrouwelijke schouwingsrapporten.	I read it in your confidential coroner files.	Coroner.yack
+12028	In dat roddelblad, de Nikkel Krant.	I read it in that trash-rag the Nickel News.	Coroner.yack
+12029	Online, op een BBS.	I read it on an on-line BBS.	Coroner.yack
 12030	Weet ik niet meer.	I don't know. I can't remember.	Coroner.yack
 12031	Echt? Mij-e-hoe? Dat is spannend.	Really? Me-a-who? That's exciting.	Coroner.yack
 12032	Hei daar, Dave.	Hi there, Dave.	Dave.yack
@@ -1032,20 +1032,20 @@ id	text	en	loc
 12034	Kan niet praten. Druk druk druk!	Can't talk. Busy!	Dave.yack
 12035	Hoi Lenore.	Hi Lenore.	Lenore.yack
 12036	Wat doe jij hier? Rondhangend bij een brandende vuilnisbak als een landloper.	What are you doing here? Hanging out by a burning trash can like a bum.	Lenore.yack
-12037	Och, het is al goed met je bespottingen en jouw "Ik ben zo veel beter dan jij" opmerkingen.	Oh enough with the wise-cracks and “I'm so much better than you” remarks.	Lenore.yack
-12038	Ik was je niet aan het bespotten, het was een gemeende...	I wasn't mocking you, it was a real...	Lenore.yack
+12037	Och, hou op met je gespot en dat "Ik ben zo veel beter dan jij"-gedoe.	Oh enough with the wise-cracks and “I'm so much better than you” remarks.	Lenore.yack
+12038	Ik was je niet aan het uitlachen, het was een welgemeende...	I wasn't mocking you, it was a real...	Lenore.yack
 12039	Dit is allemaal jouw schuld.	This is all your doing.	Lenore.yack
 12040	Wat is allemaal mijn schuld?	What is all my doing?	Lenore.yack
 12041	We zijn zussen, kunnen we geen vriendinnen zijn?	We're sisters, can't we be friends?	Lenore.yack
 12042	Ik heb plots zin in marshmallows.	I suddenly have a craving for s'mores.	Lenore.yack
-12043	Genoeg met het geplaag!	Enough with the wise-cracks!	Lenore.yack
+12043	Genoeg met dat gepest!	Enough with the wise-cracks!	Lenore.yack
 12044	Als je Oom Chuck in de computer had gelaten, was hij gestorven en had ik mijn erfdeel gekregen.	If you'd left Uncle Chuck in the computer, he would have died and I'd have gotten my inheritance.	Lenore.yack
 12045	Maar hij leeft nog en zit in een gekkenhuis en wettelijk buiten schot.	But he's still alive and in a sanitarium and legally out-of-reach.	Lenore.yack
-12046	Ben jij uit het Elegante Landgoed gezet?	You got evicted from the Mansion mansion?	Lenore.yack
-12047	Heb je nergens waar je heen kan?	You have no place to go?	Lenore.yack
+12046	Zijn jullie uit het Elegante Landgoed gezet?	You got evicted from the Mansion mansion?	Lenore.yack
+12047	Kan je nergens terecht?	You have no place to go?	Lenore.yack
 12048	Je zou bij mij kunnen logeren?	You could bunk with me?	Lenore.yack
-12049	Ik heb een foto waarop een vacature bij de bank te zien is.	I have a photo that shows a job opening at the bank.	Lenore.yack
-12050	Ik heb een foto waarop een vacature bij de bank te zien is.	I have a photo that shows a job opening at the bank.	Lenore.yack
+12049	Ik heb een foto van een vacature bij de bank.	I have a photo that shows a job opening at the bank.	Lenore.yack
+12050	Ik heb een foto van een vacature bij de bank.	I have a photo that shows a job opening at the bank.	Lenore.yack
 12051	Er is een vacature bij de bank.	There is a job opening at the bank.	Lenore.yack
 12052	Heb je al geprobeerd een baan te vinden?	Have you tried to get a job?	Lenore.yack
 12053	Ik dacht dat je van kleine Chuckie hield?	I thought you loved little Chuckie?	Lenore.yack
@@ -1054,28 +1054,28 @@ id	text	en	loc
 12056	'k Zie je later, zus.	See ya around, sis.	Lenore.yack
 12057	Rot op.	Get lost.	Lenore.yack
 12058	Ja!	Yes!	Lenore.yack
-12059	Als je niet zo druk bezig was met het maken van moordsimulaties, had je het al geweten.	If you hadn't been so preoccupied with making murder simulators, you'd have known.	Lenore.yack
-12060	De bank heeft het Edmund Elegante Landgoed in beslag genomen en mij samen met die kleine snotaap en mijn waardeloze man Peter er uitgezet.	The bank repossessed the Edmund Mansion mansion and evicted me and the little brat and my worthless husband Peter.	Lenore.yack
-12061	Hé.	Hey.	Lenore.yack
-12062	Alles wat ik mee mocht nemen was die stomme stoel uit de bibliotheek.	All I got to take was that crappy chair from the library.	Lenore.yack
+12059	Als je niet steeds zo druk bezig was met het maken van moordsimulaties, had je het al geweten.	If you hadn't been so preoccupied with making murder simulators, you'd have known.	Lenore.yack
+12060	De bank heeft het Edmund Elegante Landgoed in beslag genomen en mij er samen met die kleine snotaap en mijn waardeloze man Peter uitgesmeten.	The bank repossessed the Edmund Mansion mansion and evicted me and the little brat and my worthless husband Peter.	Lenore.yack
+12061	Hela.	Hey.	Lenore.yack
+12062	Het enige wat ik mee kon nemen was die stomme stoel uit de bibliotheek.	All I got to take was that crappy chair from the library.	Lenore.yack
 12063	Neen! Ik sta op de zwarte lijst bij alle high society etablissementen in de wijde omgeving.	None! I've been blacklisted by all the high society places in the tri-county area.	Lenore.yack
 12064	Ik heb hem nota bene vernoemd naar Oom Chuck ...	I named him after Uncle Chuck and everything...	Lenore.yack
-12065	...wat heeft het uitgehaald?	...what good did it do?	Lenore.yack
+12065	...en wat heeft het opgeleverd?	...what good did it do?	Lenore.yack
 12066	Niks! Uit het huis gezet!	Nothing! Evicted!	Lenore.yack
 12067	Tuurlijk! Kan ik samen met al je nerd vriendjes D&E spelen.	Sure! Me and all your nerdy friends can play D&E together.	Lenore.yack
 12068	We zijn geen nerds!	We're not nerds!	Lenore.yack
 12069	Het is D&D. Staat voor Dungeons and Dragons.	It's called D&D. For Dungeons and Dragons.	Lenore.yack
 12070	We zijn geen nerds!	We're not nerds!	Lenore.yack
-12071	Ik denk dat je chaotisch slecht gaat spelen?	I'm thinking you play chaotic evil?	Lenore.yack
+12071	Chaotisch slecht, durf ik wedden?	I'm thinking you play chaotic evil?	Lenore.yack
 12072	We zijn geen nerds!	We're not nerds!	Lenore.yack
 12073	Ik hou ook van jou, zus.	Love you too sis.	Lenore.yack
-12074	Bank bediende?	Bank teller?	Lenore.yack
-12075	Je maakt een grapje zeker! Een Edmund van de prestigieuze Thimbleweed Edmunds een baan aannemen als bankbediende?	You've got to be kidding! An Edmund from the prestigious Thimbleweed Edmunds taking a teller job?	Lenore.yack
-12076	Zelfs als ik al zo laag zou zinken, ik geloof je niet.	Even if I was to stoop that low, I don't believe you.	Lenore.yack
+12074	Bankbediende?	Bank teller?	Lenore.yack
+12075	Je maakt vast een grapje! Een Edmund van de prestigieuze Thimbleweed Edmunds die als bediende werkt?	You've got to be kidding! An Edmund from the prestigious Thimbleweed Edmunds taking a teller job?	Lenore.yack
+12076	Zelfs als ik zo laag zou zinken,  geloof ik je niet.	Even if I was to stoop that low, I don't believe you.	Lenore.yack
 12077	Zoals wat!?!	Like what!?!	Lenore.yack
-12078	Barista. Ik hoor dat het een trend gaat worden.	Barista. I hear it's going to be big.	Lenore.yack
+12078	Barista. Gaat erg in worden naar het schijnt.	Barista. I hear it's going to be big.	Lenore.yack
 12079	NASA Space Shuttle missie specialist?	NASA Space Shuttle mission specialist?	Lenore.yack
-12080	Straatmadelief?	Streetwalker?	Lenore.yack
+12080	Meisje van plezier?	Streetwalker?	Lenore.yack
 12081	Serveerster bij het S&D Eetcafé in het weekend?	Weekend waitress at the S&D Diner?	Lenore.yack
 12082	Bankbediende?	Bank teller?	Lenore.yack
 12083	Ransome de Clown show kaartjesknipper.	Ransome the Clown show ticket taker.	Lenore.yack
@@ -1083,21 +1083,21 @@ id	text	en	loc
 12085	NEE TOCH NIET!	NO IT'S NOT!	Lenore.yack
 12086	Edmunds werken niet!	Edmunds don't work!	Lenore.yack
 12087	En daarom ben jij zo'n schande voor de familienaam.	That's why you're such a disgrace to the family name.	Lenore.yack
-12088	Wat? Je laat me een vacature zien? Jij denkt dat ik een baan nodig heb! Als een normale burger!	What?  You're showing me a job opening? You think I need a job! Like a common person!	Lenore.yack
+12088	Wat? Laat je me een vacature zien? Jij denkt dat ik een baan nodig heb! Als een gewoon iemand!	What?  You're showing me a job opening? You think I need a job! Like a common person!	Lenore.yack
 12089	Nou... Ik dacht nooit... Ja... Ik zal... Ik... Ik ga misschien langs...	Well... I never... Yeah... I'll... I... I might stop by...	Lenore.yack
 12090	Een vacature? Nou... Ik nooit... Ja... Ik zal... Ik... Ik ga misschien langs...	A job opening? Well... I never... Yeah... I'll... I... I might stop by...	Lenore.yack
 12091	Ja, dat heb je me al laten zien! Ik zal er over nadenken.	Yeah, you already showed me that! I'll think about it.	Lenore.yack
 12092	Interessant... Ja... Misschien zal ik... Nee... ik... ik zal misschien langs gaan... Misschien.	Interesting... Yeah... Maybe I'll... No... I... I might stop by... Might.	Lenore.yack
 12093	Ja, dat heb je al gezegd! Ik zal er over nadenken..	Yeah, you already said that! I'll think about it.	Lenore.yack
-12094	Oh ja! Hij is de beste!	Oh my! It is the best!	Lenore.yack
-12095	Ransome zien is de enige vreugde in mijn leven.	Seeing Ransome is the only joy left in my life.	Lenore.yack
+12094	Oh ja! Hij is echt top!	Oh my! It is the best!	Lenore.yack
+12095	Ransome gaan kijken is nog het enige leuke in mijn leven.	Seeing Ransome is the only joy left in my life.	Lenore.yack
 12096	Hoi Lenore.	Hi Lenore.	Lenore.yack
 12097	Gefeliciteerd met de nieuwe baan!	Congrats on the new job!	Lenore.yack
 12098	Sssstt... zeg m'n naam niet hardop. Iemand zou het kunnen horen.	Shhhhh... don't say my name out loud. Someone might hear.	Lenore.yack
 12099	Ik hoor het.	I hear.	Lenore.yack
-12100	Kun je m'n banksaldo checken?	Can you check my bank balance?	Lenore.yack
-12101	Kun je m'n banksaldo nog eens checken?	Can you check my bank balance again?	Lenore.yack
-12102	Mooi weer.	Nice weather.	Lenore.yack
+12100	Kun je m'n banksaldo nakijken?	Can you check my bank balance?	Lenore.yack
+12101	Kun je m'n banksaldo nog eens nakijken?	Can you check my bank balance again?	Lenore.yack
+12102	Mooi weer vandaag.	Nice weather.	Lenore.yack
 12103	Dus...	So...	Lenore.yack
 12104	Hoe gaat het met Chuckie?	How is Chuckie?	Lenore.yack
 12105	Tot ziens en bedankt.	Goodbye and thanks.	Lenore.yack
@@ -1106,12 +1106,12 @@ id	text	en	loc
 12108	NIKS!	NOTHING!	Lenore.yack
 12109	Noppes!	Zip squat!	Lenore.yack
 12110	Nul dollar en nul cent.	Zero dollars and zero cents.	Lenore.yack
-12111	Noppes!	Nada!	Lenore.yack
+12111	Nada!	Nada!	Lenore.yack
 12112	Een geweldige nul komma nul nul dollar.	A big zero point zero zero dollars.	Lenore.yack
-12113	Alsof het mij nog boeit.	Like I care anymore.	Lenore.yack
-12114	Over alles...	About anything...	Lenore.yack
-12115	Goed en slecht nieuws over het Elegante Landgoed... Laat maar zitten.	Good and bad news about the Mansion mansion... never mind.	Lenore.yack
-12116	Wat maakt het uit?	Who cares.	Lenore.yack
+12113	Alsof dat mij nog interesseert.	Like I care anymore.	Lenore.yack
+12114	Of eender wat...	About anything...	Lenore.yack
+12115	Goed en slecht nieuws over het Elegante Landgoed... ach, laat maar zitten.	Good and bad news about the Mansion mansion... never mind.	Lenore.yack
+12116	Onbelangrijk.	Who cares.	Lenore.yack
 12117	Oprotten!	Get lost.	Lenore.yack
 12118	Hoe gaat 't, D!	What's up D!	Leonard.yack
 12119	Hoe gaat 't, Delores!	What's up Delores!	Leonard.yack
@@ -1125,15 +1125,15 @@ id	text	en	loc
 12127	Hee terug naar jou!	Hey back at ya!	Leonard.yack
 12128	Ah ja. Daaromtrent.	Yeah. About that.	Leonard.yack
 12129	Het management vergat om de rekening te betalen, dus hebben ze de stroom afgesloten in het toilet.	Management forgot to pay the power bill, so they cut power to the bathroom.	Leonard.yack
-12130	Als het niet snel betaald wordt, zit het hele gebouw zonder stroom, man.	If it doesn't get paid soon, the whole building will lose power, man.	Leonard.yack
-12131	Vergat het management het, of ben jij vergeten de betaling te versturen?	Did management forget, or did you forget to mail the payment?	Leonard.yack
-12132	Ik denk niet dat dit het moment is om met de vinger te wijzen!	I don't think this is the time to be pointing fingers!	Leonard.yack
+12130	Als er niet snel betaald wordt, zit het hele gebouw zonder stroom, man.	If it doesn't get paid soon, the whole building will lose power, man.	Leonard.yack
+12131	Vergat het management dat, of ben jij de betaling vergeten te versturen?	Did management forget, or did you forget to mail the payment?	Leonard.yack
+12132	Dit is niet het moment om met de vinger te beginnen wijzen!	I don't think this is the time to be pointing fingers!	Leonard.yack
 12133	Hier is de betaling, wil jij hem op de bus doen voor mij... ik bedoel voor het management?	Here is the payment, can you drop it in a mailbox for me... I mean management?	Leonard.yack
 12134	Tuurlijk.	Sure.	Leonard.yack
 12135	Management vergat om de rekening die ik aan jou gaf te betalen.	Management forgot to pay the power bill I gave you.	Leonard.yack
 12136	Als het niet snel betaald wordt, zit het hele gebouw zonder stroom, man.	If it doesn't get paid soon, the whole building will lose power, man.	Leonard.yack
 12137	Wil jij de betaling op de bus doen voor mij... ik bedoel, voor het management?	Can you drop the payment in a mailbox for me... I mean management?	Leonard.yack
-12138	Tuurlijk	Sure.	Leonard.yack
+12138	Tuurlijk.	Sure.	Leonard.yack
 12139	Hallo Madame Morena.	Hello Madame Morena.	Morena.yack
 12140	Hoe is het hier geweest?	How have things been?	Morena.yack
 12141	Heb je wat salamanderoog?	Got any eye-of-newt?	Morena.yack
@@ -1144,8 +1144,8 @@ id	text	en	loc
 12146	Maar ik kan zien.	But I can see.	Morena.yack
 12147	Goed dan, ik kan niet zien.	Ok fine, I can't see.	Morena.yack
 12148	*zucht*	*sigh*	Morena.yack
-12149	Heb je iets gehoord over dat het circus verlaten zou zijn?	Have you heard about the circus being abandoned?	Morena.yack
-12150	Heb je de laatste show van Ransome de Clown al gezien?	Seen Ransome the Clown's latest show yet?	Morena.yack
+12149	Weet je iets over het circus dat verlaten zou zijn?	Have you heard about the circus being abandoned?	Morena.yack
+12150	Heb je Ransome de Clown's nieuwste show al gezien?	Seen Ransome the Clown's latest show yet?	Morena.yack
 12151	Heb je iets vreemds gemerkt?	You noticed anything odd?	Morena.yack
 12152	Op het bord buiten staat dat er koopjes zijn.	Sign out front says you're having a blow-out sale.	Morena.yack
 12153	Tot ziens!	See ya!	Morena.yack
@@ -1168,50 +1168,50 @@ id	text	en	loc
 12170	Ik denk niet dat je ziet.	I don't think you see.	Morena.yack
 12171	Ik wou dat je kon zien.	I wish you could see.	Morena.yack
 12172	Ik denk niet dat je kan zien.	I don't think you can see.	Morena.yack
-12173	Ik zei je toch dat je niet kan zien.	I told you, you can't see.	Morena.yack
+12173	Zie je wel.	I told you, you can't see.	Morena.yack
 12174	Ik heb vandaag wel wat vreemde rimpelingen in het weefsel van de werkelijkheid opgemerkt.	In the last day I've noticed some odd ripples in the fabric of reality.	Morena.yack
 12175	Als ik die hocus pocus zou geloven, zou dat eng klinken.	If I believed that mumbo-jumbo, that would sound scary.	Morena.yack
 12176	GELOOF!	BELIEVE!	Morena.yack
 12177	Beangstigende krachten zijn aan het werk.	Scary forces are at work.	Morena.yack
-12178	Vele jaren geleden was er een scheur die onopgemerkt gebleven is, tot een paar dagen geleden.	Many years ago, there was a tear that has gone unnoticed until a few days ago.	Morena.yack
+12178	Vele jaren geleden was er een scheur die onopgemerkt gebleven is...tot een paar dagen geleden.	Many years ago, there was a tear that has gone unnoticed until a few days ago.	Morena.yack
 12179	Ik vrees dat je op een manier verbonden bent.	I fear you might be connected.	Morena.yack
 12180	Slik een chill pil.	Take a chill-pill.	Morena.yack
 12181	En misschien wat pepermuntjes.	And maybe some breath mints.	Morena.yack
 12182	Heb je ook boeken over Fortran?	Got any books on Fortran?	Morena.yack
 12183	Misschien eentje helemaal bovenaan.	Might be one at the very top.	Morena.yack
-12184	Als je het kan vinden, mag je het meenemen.	If you find it, you can take it.	Morena.yack
+12184	Als je het vindt, mag je het meenemen.	If you find it, you can take it.	Morena.yack
 12185	De enige dode taal waar we boeken over nodig hebben is Oudcapsipaans.	The only dead languages we need books on is ancient capsipan.	Morena.yack
 12186	Ik ben superblij met mijn nieuwe baan!	I'm excited about my new job!	Natalie.yack
-12187	Natalie heeft me aangenomen als fotograaf bij de Nikkel Krant.	Natalie has hired me to be the Nickel News photographer.	Natalie.yack
+12187	Natalie heeft me aangenomen als fotograaf bij de Nickel News krant.	Natalie has hired me to be the Nickel News photographer.	Natalie.yack
 12188	Ik kan niet wachten om te beginnen!	I can't wait to get started!	Natalie.yack
-12189	Een nieuwe spannende opdracht als fotograaf bij de Nikkel Krant.	Another exciting assignment as the Nickel News photographer!	Natalie.yack
-12190	Ik vraag me af wat Natalie voor me in petto heeft.	I wonder what Natalie has for me now?	Natalie.yack
+12189	Een nieuwe spannende opdracht als fotograaf voor de Nikkel krant.	Another exciting assignment as the Nickel News photographer!	Natalie.yack
+12190	Ik ben benieuwd wat Natalie nu voor me in petto heeft...	I wonder what Natalie has for me now?	Natalie.yack
 12191	Nou, wat ben jij een vlijtig liesje zo 's morgensvroeg.	My, aren't we the eager beaver this morning.	Natalie.yack
 12192	Ik sta te popelen om te beginnen!	I'm excited to get started!	Natalie.yack
-12193	Het zal een leuke creatieve afwisseling zijn met het maken van games.	It will be a nice creative break from making games.	Natalie.yack
-12194	Het is niet echt 's morgensvroeg, het is net na 5 uur 's avonds.	It's not really the morning, it's just after 5pm.	Natalie.yack
+12193	Het is eens iets anders dan games maken. Leuk!	It will be a nice creative break from making games.	Natalie.yack
+12194	Het is geen ochtend, het is iets na 5 uur 's avonds.	It's not really the morning, it's just after 5pm.	Natalie.yack
 12195	Interessant.	Interesting.	Natalie.yack
-12196	Ik werk aan een aantal artikelen voor aankomende edities van de Thimbleweed Nikkel en we hebben foto's nodig.	I'm working on several stories for upcoming editions of the Thimbleweed Nickel, and we need photographs.	Natalie.yack
+12196	Ik werk aan een aantal stukken voor volgende edities van de Thimbleweed Nikkel en we hebben foto's nodig.	I'm working on several stories for upcoming editions of the Thimbleweed Nickel, and we need photographs.	Natalie.yack
 12197	Ik heb een lijst voor je gemaakt en de camera zit in de archiefkast bij de deur.	I've made a list for you, and the camera is in the file cabinet by the door.	Natalie.yack
-12198	Laat het me weten als je iets nodig hebt. Fotopapier, kantoorartikelen, informatie over je pensioen.	Let me know if you need anything. More film, office supplies, info on your 401k.	Natalie.yack
+12198	Laat me maar weten als je iets nodig hebt. Fotopapier, kantoorartikelen, informatie over je pensioen.	Let me know if you need anything. More film, office supplies, info on your 401k.	Natalie.yack
 12199	Succes op je eerste dag als fotojournalist.	Good luck on your first day as a photojournalist.	Natalie.yack
 12200	Fotojournalist! Zo klinkt het heel erg belangrijk!	Photojournalist! That makes it sound important!	Natalie.yack
 12201	^Je moet nog %d foto's aanleveren voordat je terug gaat naar je baan als game ontwikkelaar bij MMucasFlem.	^You need to turn in %d more photos before returning to your game developer job at MMucasFlem.	Natalie.yack
-12202	Ik ga maar snel op zoek naar die camera, de lijst bekijken en aan de slag.	I better find that camera, take a look at the list, and get cracking.	Natalie.yack
+12202	Ik kan maar best snel op zoek gaan naar die camera, de lijst bekijken en aan de slag gaan.	I better find that camera, take a look at the list, and get cracking.	Natalie.yack
 12203	Ik ben nog steeds bezig met die foto's.	Still working on those photos.	Natalie.yack
-12204	Waar zei je dat de camera ook alweer was?	Where did you say the camera was again?	Natalie.yack
-12205	Ik denk dat ik de opdracht volbracht heb.	I think I'm done with the assignment.	Natalie.yack
+12204	Waar zei je ook alweer dat de camera lag?	Where did you say the camera was again?	Natalie.yack
+12205	Ik denk dat ik klaar ben met mijn opdracht.	I think I'm done with the assignment.	Natalie.yack
 12206	Kan ik meer fotopapier krijgen?	Can I get some more film?	Natalie.yack
 12207	Wil je mijn werk tot nu toe zien?	Want to see my work so far?	Natalie.yack
 12208	Hoe lang duurt deze opdracht nog?	How long will this assignment last?	Natalie.yack
 12209	Kan ik wat kantoorartikelen krijgen?	Can I get some office supplies?	Natalie.yack
 12210	Wat kun je mij vertellen over mijn pensioen?	What can you tell me about my 401k?	Natalie.yack
-12211	Laat maar zitten...dag.	Never mind... bye.	Natalie.yack
+12211	Laat maar zitten... dag.	Never mind... bye.	Natalie.yack
 12212	Kijk in de archiefkast bij de deur.	Look in the filing cabinet by the door.	Natalie.yack
 12213	Je moet nog 1 originele foto aanleveren.	You need to turn in 1 more original photo.	Natalie.yack
 12214	^Je moet nog %d originele foto's aanleveren.	^You need to turn in %d more original photos.	Natalie.yack
 12215	En dan is het terug naar het maken van games bij MMucasFlem voor mij.	Then it's back to making games at MMucasFlem for me.	Natalie.yack
-12216	Zo te zien heb je er genoeg.	Looks like you've got plenty.	Natalie.yack
+12216	Zo te zien heb je er nog genoeg.	Looks like you've got plenty.	Natalie.yack
 12217	Hier zijn er nog een paar.	Here is a couple more.	Natalie.yack
 12218	Ik heb een paar paperclips nodig.	I need some paper clips!	Natalie.yack
 12219	Ik heb een paar dossiermappen nodig.	I need some manila folders.	Natalie.yack
@@ -1223,7 +1223,7 @@ id	text	en	loc
 12225	Oké.	Okay.	Natalie.yack
 12226	De beste weg naar je pensioen als een journalist is een andere baan zoeken.	Best path to retirement as a journalist is to get another job.	Natalie.yack
 12227	Net zoals bij game ontwikkeling, dus.	Kind of like game development.	Natalie.yack
-12228	Nee, dat heb je niet.	No you don't.	Natalie.yack
+12228	Nee, ik dacht het niet.	No you don't.	Natalie.yack
 12229	Deze zien er geweldig uit!	These look great!	Natalie.yack
 12230	De proefversie is klaar.	The prototype is now over.	Natalie.yack
 12231	Krijg ik salarisverhoging?	Do I get a raise?	Natalie.yack
@@ -1232,89 +1232,89 @@ id	text	en	loc
 12234	Kan ik stoppen met dit spel?	Can I quit the game?	Natalie.yack
 12235	Neen.	Nope.	Natalie.yack
 12236	Oké.	Ok.	Natalie.yack
-12237	Speel opnieuw en dan heb ik nog meer foto opdrachten voor je.	Play again and I'll have more photos for you to take.	Natalie.yack
+12237	Als je opnieuw speelt heb ik nog andere foto opdrachten voor je.	Play again and I'll have more photos for you to take.	Natalie.yack
 12238	Ik denk dat je hier klaar bent, Delores.	I think you're done here, Delores.	Natalie.yack
 12239	Trouwens...	By the way...	Natalie.yack
 12240	Weet jij iets over het lijk dat ze onder de brug hebben gevonden?	Do you know anything about the body they found under the bridge?	Natalie.yack
 12241	We hebben een deadline, dus niet lanterfanten.	We've got a deadline, so no dilly-dallying.	Natalie.yack
 12242	Welkom bij het S&D Eetcafé, Delores!	Welcome to the S&D Diner, Delores!	Sandy.yack
 12243	Lang geleden dat ik jou heb gezien.	Long time since I've seen you here.	Sandy.yack
-12244	Kan nu niet praten, het is gekkenhuis in de keuken!	Can't talk right now, things are crazy in the kitchen!	Sandy.yack
+12244	Kan nu niet praten, het is een gekkenhuis in de keuken!	Can't talk right now, things are crazy in the kitchen!	Sandy.yack
 12245	Welkom terug, Delores!	Welcome back, Delores!	Sandy.yack
 12246	Wat kan ik voor je doen?	What can I do for ya?	Sandy.yack
 12247	Hoe is het leven, Sandy?	How has life been treating you, Sandy?	Sandy.yack
 12248	Heb je Ransome nog gezien de laatste tijd?	You seen Ransome lately?	Sandy.yack
 12249	Ik ben uitgehongerd. Wat zijn de specials vandaag?	I'm starving. What are your specials today?	Sandy.yack
 12250	Tot ziens!	See ya!	Sandy.yack
-12251	Kan niet klagen. Dave en ik komen net terug van onze derde huwelijksreis.	Can't complain. Dave and I just came back from our third honeymoon.	Sandy.yack
+12251	Ik mag niet klagen. Dave en ik komen net terug van onze derde huwelijksreis.	Can't complain. Dave and I just came back from our third honeymoon.	Sandy.yack
 12252	Heb je het over mij?	You talking about me?	Sandy.yack
-12253	Ja, mijn appelgebakje, over wie anders moet ik het hebben?	Yes, snuggle cakes, who else would I be talking about?	Sandy.yack
+12253	Ja, mijn appelflapje, over wie anders zou ik het hebben?	Yes, snuggle cakes, who else would I be talking about?	Sandy.yack
 12254	Ah, muffinzoetje.	Ah, love muffin.	Sandy.yack
-12255	Dave en ik gaan elke zaterdag op ons avondje uit naar zijn show.	Dave and I see his show every Saturday on our date-night.	Sandy.yack
+12255	Dave en ik gaan iedere zaterdag op ons avondje uit naar zijn show kijken.	Dave and I see his show every Saturday on our date-night.	Sandy.yack
 12256	Hij slaagt er altijd in om ons te laten lachen. Zo'n goeie jongen.	He never fails to make us laugh. Such a good guy.	Sandy.yack
-12257	Alles staat op de menukaart, wat wil je hebben?	Everything is on the menu board, what do you want?	Sandy.yack
-12258	Ik wil graag een Kobe rund-hotdog.	I'll have a Kobe beef hot dog.	Sandy.yack
-12259	Ik wil graag een Zwitserse varkenshotdog.	I'll have a Swiss pork hot dog.	Sandy.yack
-12260	Ik wil graag een kip met kruiden hotdog.	I'll have a herb and chicken hot dog.	Sandy.yack
-12261	Ik wil graag een Franse mosterd met boerenkool vega dog.	I'll have a French mustard and kale veggie dog.	Sandy.yack
-12262	Ik wil graag de gebakken parelhoen met wilde paddenstoelen.	I'll have the Guinea chicken sauté with wild mushrooms.	Sandy.yack
-12263	Ik wil graag de boerenkool salade met chutney saus.	I'll have the kale salad with chutney sauce.	Sandy.yack
-12264	Ik wil graag de gefrituurde kikkerbilletjes met tartaar saus.	I'll have the fried frogs' legs, sauce tartare.	Sandy.yack
-12265	Ik wil graag de kersenvlaai.	I'll have the cherry pie.	Sandy.yack
-12266	Ik wil graag een glas water met geschaafd ijs.	I'll have the glass of water with chipped ice.	Sandy.yack
+12257	Alles staat op het menubord, wat wil je hebben?	Everything is on the menu board, what do you want?	Sandy.yack
+12258	Een Kobe rund-hotdog, graag.	I'll have a Kobe beef hot dog.	Sandy.yack
+12259	Een Zwitserse varkenshotdog, graag.	I'll have a Swiss pork hot dog.	Sandy.yack
+12260	Een kip met kruiden hotdog, graag.	I'll have a herb and chicken hot dog.	Sandy.yack
+12261	De vega dog met Franse mosterd en boerenkool, graag.	I'll have a French mustard and kale veggie dog.	Sandy.yack
+12262	Gebakken parelhoen met wilde paddenstoelen, graag.	I'll have the Guinea chicken sauté with wild mushrooms.	Sandy.yack
+12263	De boerenkool salade met chutney saus, graag.	I'll have the kale salad with chutney sauce.	Sandy.yack
+12264	De gefrituurde kikkerbilletjes met tartaar saus, graag.	I'll have the fried frogs' legs, sauce tartare.	Sandy.yack
+12265	Een kersenvlaai, graag.	I'll have the cherry pie.	Sandy.yack
+12266	Een glas water met geschaafd ijs, graag.	I'll have the glass of water with chipped ice.	Sandy.yack
 12267	Ik ben van gedachten veranderd. Ik heb geen honger.	I changed my mind. I'm not hungry.	Sandy.yack
 12268	Sorry, die heb ik net op de grill gelegd. Ze hebben nog niet de juiste temperatuur bereikt voor een veilige consumptie.	Sorry, I just put those on the grill. They haven't come up to the proper safe eating temperature yet.	Sandy.yack
-12269	Sorry, de paddenstoelen die ik vandaag heb verzameld lijken van het giftige soort te zijn.	Sorry, the mushrooms I gathered today look to be of the poisonous variety.	Sandy.yack
+12269	Sorry, de paddenstoelen die ik vandaag heb geplukt bleken er giftige te zijn.	Sorry, the mushrooms I gathered today look to be of the poisonous variety.	Sandy.yack
 12270	Sorry, vergeten om het bord bij te werken. De boerenkool is helemaal op...	Sorry, forgot to update the board. We're all out of kale...	Sandy.yack
-12271	...en chutney.	...and chutney.	Sandy.yack
-12272	Gaat hem niet worden, ik ben vergeten om op kikkerjacht te gaan vanmorgen.	No can do, I forgot to go frog hunting this morning.	Sandy.yack
+12271	...en de chutney ook.	...and chutney.	Sandy.yack
+12272	Gaat niet lukken, ik ben vergeten op kikkerjacht te gaan vanmorgen.	No can do, I forgot to go frog hunting this morning.	Sandy.yack
 12273	Sorry, een of andere lange gozer heeft net het laatste stuk opgegeten met een bakkie koffie.	Sorry, some tall guy just ate the last slice with a cup of joe.	Sandy.yack
 12274	Tuurlijk! Komt er meteen aan.	Sure thing! Coming right up.	Sandy.yack
 12275	Alsjeblieft.	Here you go.	Sandy.yack
-12276	Gevuld met ons luxe gefilterde water. En je kunt het glas houden als onderdeel van onze promotie.	Filled with our fancy filtered water. And you can keep the glass as part of our promotion.	Sandy.yack
-12277	Bedankt! Excuseer me.	Thanks! Excuse me.	Sandy.yack
-12278	Ik denk dat ik echt dorstig was!	I guess I was really thirsty!	Sandy.yack
+12276	Gevuld met ons luxe gefilterde water. En je mag het glas houden omwille van onze promotie.	Filled with our fancy filtered water. And you can keep the glass as part of our promotion.	Sandy.yack
+12277	Bedankt! Een ogenblikje.	Thanks! Excuse me.	Sandy.yack
+12278	Ik had erg veel dorst!	I guess I was really thirsty!	Sandy.yack
 12279	Tot ziens, Delores.	Later, Delores.	Sandy.yack
 12280	Ik ben niet in een klets-e-rino stemming, laat me er gewoon uit!	I'm not in a talking-a-reno mood, just let me out!	Sheriff.yack
 12281	Hoi Sheriff!	Hi Sheriff!	Sheriff.yack
 12282	Hallo-e-rino Delores.	Hello-a-reno Delores.	Sheriff.yack
-12283	Wanneer ben je overal 'e-rino' achter beginnen zetten?	When did you start adding 'a-reno' after everything?	Sheriff.yack
-12284	Zie je wel! Je hebt het net weer gedaan!	Just then! You did it again!	Sheriff.yack
+12283	Wanneer bent u overal 'e-rino' achter beginnen zetten?	When did you start adding 'a-reno' after everything?	Sheriff.yack
+12284	Zie je wel! U heeft het net weer gedaan!	Just then! You did it again!	Sheriff.yack
 12285	Laat maar-e-rino.	Whatever-a-reno.	Sheriff.yack
 12286	Niet veel misdaad in Thimbleweed Park, blijkbaar?	Not a lot of crime in Thimbleweed Park, is there?	Sheriff.yack
 12287	Wat heb ik gelezen over het circus dat verlaten is?	What's that I read about the circus being abandoned?	Sheriff.yack
-12288	Ik was aan het overwegen om federaal agent te worden...	I was thinking about becoming a federal agent...	Sheriff.yack
+12288	Ik was aan het denken om federaal agent te worden...	I was thinking about becoming a federal agent...	Sheriff.yack
 12289	'k Moet gaan... tot ziens.	Got to run... bye.	Sheriff.yack
 12290	Niet echt.	Not really.	Sheriff.yack
 12291	Er hangt een nieuwe zwerversfamilie rond op A Street.	A new vagrant family has been hanging out on A Street.	Sheriff.yack
-12292	Ze hebben nog geen overlast-e-rino bezorgd, dus ik laat ze met rust.	They haven't been causing any trouble-a-reno, so I leave them be.	Sheriff.yack
+12292	Ze hebben nog geen overlast-e-rino bezorgd, dus laat ik ze met rust.	They haven't been causing any trouble-a-reno, so I leave them be.	Sheriff.yack
 12293	Waarschijnlijk aan lager wal geraakt.	Probably fell on hard times.	Sheriff.yack
-12294	Of zij is een enorm opgeblazen trut die haar verdiende loon kreeg.	Or she is a complete pompous jerk and deserves everything she gets.	Sheriff.yack
+12294	Of... ze is een enorm opgeblazen trut die haar verdiende loon kreeg.	Or she is a complete pompous jerk and deserves everything she gets.	Sheriff.yack
 12295	Ik begrijp niet-e-rino wat je vraagt?	I don't understand-a-reno what you're asking?	Sheriff.yack
 12296	Zit je aan de drugs-e-rino? Zeg gewoon nee-e-rino.	Are you on drugs-a-reno? Just say no-a-reno.	Sheriff.yack
 12297	Hé, dat 'e-rino' grapje is van mij!	Hey, the 'a-reno' gag is mine!	Sheriff.yack
 12298	Ha! Betrapt!	Ha! Got ya!	Sheriff.yack
 12299	Wat-e-rino!	What-a-reno!	Sheriff.yack
-12300	Ransome is populairder dat ooit tevoren sinds hij al dat bespotten heeft laten vallen vele jaren geleden.	Ransome's more popular than ever since he dropped the insult bit many years ago.	Sheriff.yack
+12300	Ransome is populairder dan ooit tevoren nadat hij jaren geleden die uitlach-act heeft laten vallen.	Ransome's more popular than ever since he dropped the insult bit many years ago.	Sheriff.yack
 12301	Waar heb je dat gelezen?	Where did you read that?	Sheriff.yack
-12302	Ik heb het in uw vertrouwelijke politierapporten gelezen.	I read it in your confidential police files.	Sheriff.yack
-12303	Ik heb het gelezen in dat roddelblad, de Nikkel Krant.	I read it in that trash-rag the Nickel News.	Sheriff.yack
-12304	Ik heb het op een online BBS gelezen.	I read it on an on-line BBS.	Sheriff.yack
+12302	In uw vertrouwelijke politierapporten.	I read it in your confidential police files.	Sheriff.yack
+12303	In dat roddelblad, de Nikkel Krant.	I read it in that trash-rag the Nickel News.	Sheriff.yack
+12304	Online, op een BBS.	I read it on an on-line BBS.	Sheriff.yack
 12305	Weet ik niet meer.	I don't know. I can't remember.	Sheriff.yack
 12306	Er ooit al één ontmoet?	Ever met one?	Sheriff.yack
 12307	Niet dat ik weet-e-rino, nee.	Can't say-a-reno that I ever have.	Sheriff.yack
 12308	Misschien maak ik wel een game met een federaal agent erin.	Maybe I'll just make a game that has a federal agent in it.	Sheriff.yack
 12309	Klinkt gemakkelijker.	Sounds easier.	Sheriff.yack
 12310	Ow...	Oh...	Sheriff.yack
-12311	Kun jij de Lijkschouwer-e-rino voor me halen?	Can you go get the Coroner-a-reno for me?	Sheriff.yack
-12312	Tuurlijk, ik haal de Lijkschouwer voor je.	Sure, I'll go get the Coroner for you.	Sheriff.yack
-12313	Juist-e-rino, ik laat de Lijkschouwer weten dat hij naar je toe moet komen.	Right-a-reno, I'll let the Coroner know to come see you.	Sheriff.yack
+12311	Wil je voor mij de Lijkschouwer-e-rino gaan halen?	Can you go get the Coroner-a-reno for me?	Sheriff.yack
+12312	Tuurlijk, ik haal de Lijkschouwer voor u.	Sure, I'll go get the Coroner for you.	Sheriff.yack
+12313	Juist-e-rino, ik zal hem zeggen dat hij naar u moet komen.	Right-a-reno, I'll let the Coroner know to come see you.	Sheriff.yack
 12314	Hoi Willie.	Hi Willie.	Willie.yack
 12315	Hallo Delores.	Hello Delores.	Willie.yack
 12316	Je bent nog laat aan het afsluiten.	You're closing up late.	Willie.yack
 12317	Hoe gaan de zaken?	How's business?	Willie.yack
 12318	De zaken gaan geweldig.	Business is booming.	Willie.yack
-12319	Sorry geen tijd voor praatjes, ik moet naar huis.	Sorry I can't talk, I've got to get home.	Willie.yack
+12319	Sorry - geen tijd voor een praatje. Ik moet naar huis.	Sorry I can't talk, I've got to get home.	Willie.yack
 12320	Het is mijn beurt om te koken.	It's my night to cook dinner.	Willie.yack
 12321	Instellingen-e-rino	Options-a-reno	Options.dinky
 12322	Zweef piep	Hover beep	Options.dinky
@@ -1328,14 +1328,14 @@ id	text	en	loc
 12330	Je hebt %d van de %d foto's ingeleverd.	You've handed in %d out of %d photos	Options.dinky
 12331	Oké	Ok	Options.dinky
 12332	Help	Help	Options.dinky
-12333	Stoppen	Quit	Options.dinky
+12333	Stop	Quit	Options.dinky
 12334	Weet je zeker dat je ALLE voortgang wilt verwijderen en dat je wilt stoppen?	Are you sure you want to delete ALL progress and quit?	Options.dinky
-12335	VERWIJDEREN	DELETE	Options.dinky
-12336	Annuleer	Cancel	Options.dinky
+12335	DELETE	DELETE	Options.dinky
+12336	Terug	Cancel	Options.dinky
 12337	Help!	Help!	Options.dinky
 12338	● Linker muisknop om te doen wat de cursor regel zegt.	● Left-click to do what the cursor sentence says.	Options.dinky
 12339	● Rechter muisknop om meer acties te tonen.	● Right-click to show more verbs.	Options.dinky
-12340	● Sleep voorwerpern uit de inventaris bovenop andere dingen in de inventaris of op het scherm.	● Drag inventory onto other inventory or room objects.	Options.dinky
+12340	● Sleep inventaris over dingen in de inventaris of de kamer.	● Drag inventory onto other inventory or room objects.	Options.dinky
 12341	● Indien er bij het slepen geen zin verschijnt, kunnen ze niet	● When dragging, if no sentence appears, they can't	Options.dinky
 12342	samen gebruikt worden.	be used together.	Options.dinky
 12343	● Sleep Camera om foto's te maken.	● Drag Camera to take pictures.	Options.dinky
@@ -1478,6 +1478,6 @@ id	text	en	loc
 12480	sneller	faster	Options.dinky
 12481	snelst	fastest	Options.dinky
 12482	Dat is waarschijnlijk echt gevaarlijk.	That's probably really dangerous.	Alleyway.dinky
-12483	Ik ben al te lang bezig met het ontwerpen van adventurespellen.	I've been designing adventure games too long.	Alleyway.dinky
+12483	Ik ben te veel bezig met het ontwerpen van adventurespellen.	I've been designing adventure games too long.	Alleyway.dinky
 12484	leeg glas	empty glass	Inventory.dinky
 12485	een leeg glas	an empty glass	Inventory.dinky
