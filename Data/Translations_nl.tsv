@@ -859,7 +859,7 @@ id	text	en	loc
 11855	Vul $NOUN2$	Fill $NOUN2$	VerbHelpers.dinky
 11856	Giet $NOUN2$ leeg in $NOUN1$	Empty $NOUN2$ in $NOUN1$	VerbHelpers.dinky
 11857	Maak foto van $NOUN2$	Take photo of $NOUN2$	VerbHelpers.dinky
-11858	Zet $NOUN1$ op $NOUN2$	Put $NOUN1$ on $NOUN2$	VerbHelpers.dinky
+11858	Plak $NOUN1$ op $NOUN2$	Put $NOUN1$ on $NOUN2$	VerbHelpers.dinky
 11859	Ontgrendel $NOUN1$ met $NOUN2$	Unlock $NOUN1$ with $NOUN2$	VerbHelpers.dinky
 11860	Verniel $NOUN1$ met $NOUN2$	Vandalize $NOUN1$ with $NOUN2$	VerbHelpers.dinky
 11861	Steek $NOUN2$ met $NOUN1$	Jab $NOUN2$ with $NOUN1$	VerbHelpers.dinky
