@@ -65,7 +65,7 @@ id	text	en	loc
 11061	Inwoner scoort een prestigieuze baan bij MmucasFlem Games...	Local nets prestigious job at MmucasFlem Games...	Nickel.dinky
 11062	Delores Edmund schudt de recente strubbelingen in de familie van zich af en timmert aan haar weg naar de top van de gaming industrie!	Delores Edmund seems to have shaken recent family turmoil and is on her way to the top of the game industry!	Nickel.dinky
 11063	Mimespeler applaudisseert in stilte voor Ransome...	Mime applauds silently for Ransome...	Nickel.dinky
-11064	Terwijl hij gebaart dat het de beste show is die hij ooit zag,  schuift deze mimespeler aan voor zijn 4e Ransome show op rij.	While miming that it was the best show he'd ever seen, local Mime stands in line for 4th Ransome show in a row.	Nickel.dinky
+11064	Terwijl hij gebaart dat het de beste show is die hij ooit zag, schuift deze mimespeler aan voor zijn 4e Ransome show op rij.	While miming that it was the best show he'd ever seen, local Mime stands in line for 4th Ransome show in a row.	Nickel.dinky
 11065	Lokale terreinbeheerder krijgt een opdracht op het Witte Huis...	Local groundskeeper wins White House post...	Nickel.dinky
 11066	Lokale terreinbeheerder Doug Braverman is ingehuurd door het Witte Huis om gaten in de rozentuin te graven.	Local groundskeeper Doug Braverman is hired by the White House to dig holes in the rose garden.	Nickel.dinky
 11067	Geen kop vandaag...	No headline today...	Nickel.dinky
@@ -859,7 +859,7 @@ id	text	en	loc
 11855	Vul $NOUN2$	Fill $NOUN2$	VerbHelpers.dinky
 11856	Giet $NOUN2$ leeg in $NOUN1$	Empty $NOUN2$ in $NOUN1$	VerbHelpers.dinky
 11857	Maak foto van $NOUN2$	Take photo of $NOUN2$	VerbHelpers.dinky
-11858	Zet $NOUN1$ op $NOUN2$	Put $NOUN1$ on $NOUN2$	VerbHelpers.dinky
+11858	Plak $NOUN1$ op $NOUN2$	Put $NOUN1$ on $NOUN2$	VerbHelpers.dinky
 11859	Ontgrendel $NOUN1$ met $NOUN2$	Unlock $NOUN1$ with $NOUN2$	VerbHelpers.dinky
 11860	Verniel $NOUN1$ met $NOUN2$	Vandalize $NOUN1$ with $NOUN2$	VerbHelpers.dinky
 11861	Steek $NOUN2$ met $NOUN1$	Jab $NOUN2$ with $NOUN1$	VerbHelpers.dinky
@@ -957,7 +957,7 @@ id	text	en	loc
 11959	Ik geef het op.	I give up.	Inventory.dinky
 11960	Gelukkig zijn de batterijen dood. Ik heb mooie herinneringen aan opgroeien in het Elegante Landgoed.	Good thing its batteries are dead. I have fond memories of growing up in the Mansion mansion.	Inventory.dinky
 11961	Ik weet zeker dat het over 30 jaar een verzamelobject zal zijn.	I'm sure it will be a collectible in 30 years.	Inventory.dinky
-11962	Zeker geen nieuwe speelgoedrage. Ik had er een toen ik een kind  was.	Definitely not a new toy craze. I had one when I was a kid.	Inventory.dinky
+11962	Zeker geen nieuwe speelgoedrage. Ik had er een toen ik een kind was.	Definitely not a new toy craze. I had one when I was a kid.	Inventory.dinky
 11963	Het is wel de kop van een beroemdheid, maar nogal vernederend zo als snoepjeshouder. Ik heb een betere foto nodig.	It's a celebrity's head, but kind of demeaning being a candy dispenser. I need a better photo.	Inventory.dinky
 11964	Ik vind deze geweldig toen ik een kind was.	I sure loved these when I was a kid.	Inventory.dinky
 11965	Auw!! Mijn tand!	Ouch!! My tooth!	Inventory.dinky
@@ -1071,7 +1071,7 @@ id	text	en	loc
 12073	Ik hou ook van jou, zus.	Love you too sis.	Lenore.yack
 12074	Bankbediende?	Bank teller?	Lenore.yack
 12075	Niet zwansen, hé! Een Edmund van de prestigieuze Thimbleweed Edmunds die als bediende werkt?	You've got to be kidding! An Edmund from the prestigious Thimbleweed Edmunds taking a teller job?	Lenore.yack
-12076	Zelfs als ik zo laag zou zinken,  geloof ik u niet.	Even if I was to stoop that low, I don't believe you.	Lenore.yack
+12076	Zelfs als ik zo laag zou zinken, geloof ik u niet.	Even if I was to stoop that low, I don't believe you.	Lenore.yack
 12077	Zoals wat!?!	Like what!?!	Lenore.yack
 12078	Barista. Gaat erg in worden naar het schijnt.	Barista. I hear it's going to be big.	Lenore.yack
 12079	NASA Space Shuttle missie specialist?	NASA Space Shuttle mission specialist?	Lenore.yack
