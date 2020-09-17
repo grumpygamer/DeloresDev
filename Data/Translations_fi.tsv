@@ -755,13 +755,13 @@ id	text	en	loc
 11751	Palsta Thimbleweed-piirikunnasta	Column about Thimbleweed County	Note.dinky
 11752	Juttu lasten köyhyydestä	Story about childhood poverty	Note.dinky
 11753	Kuva Nickel News -lehden päätoimittajasta	Photo of the editor of the Nickel News	Note.dinky
-11754	Toimintakuva vaarallisesta villieläimestä	Action photo of dangerous wildlife	Note.dinky
-11755	Huono Thimbleweed-juomavedemme laatu	Our bad Thimbleweed drinking water quality	Note.dinky
+11754	Toimintakuva villin luonnon vaarallisuudesta	Action photo of dangerous wildlife	Note.dinky
+11755	Juomavetemme huono laatu	Our bad Thimbleweed drinking water quality	Note.dinky
 11756	Jotain ällöttävää	Something disgusting	Note.dinky
 11757	Juttu Presidentti Thomas Jeffersonista	Story about President Thomas Jefferson	Note.dinky
 11758	Katsaus antiikkisiin kuolleisiin kieliin	A look at the dead languages of antiquity	Note.dinky
-11759	Paljastusjuttu siitä kuinka hauskaa on elää kissojen kanssa	Exposé on the humor of living with cats	Note.dinky
-11760	Ilkivaltaa valtion omaisuutta kohtaan	Government property vandalism	Note.dinky
+11759	Hauska juttu kissojen kanssa elämisestä	Exposé on the humor of living with cats	Note.dinky
+11760	Ilkivalta valtion omaisuutta kohtaan	Government property vandalism	Note.dinky
 11761	Juttu Edmund-hotellin sulkemisesta	Piece on the closing of the Edmund Hotel	Note.dinky
 11762	Hyvä esimerkki proksimaalisista phalangeista	A good example of proximal phalanges	Note.dinky
 11763	Pureva juttu töykeistä pankkivirkailijoista	Biting piece on rude bank employees	Note.dinky
@@ -772,7 +772,7 @@ id	text	en	loc
 11768	Kuva uudesta valokuvajournalististamme	Take a photo of our newest photojournalist	Note.dinky
 11769	Juttu runonurkkaan	Story for the poetry section	Note.dinky
 11770	Kuva julkkiksesta	Headshot for a story on a celebrity	Note.dinky
-11771	Kuva vaarallista työstä tekevästä henkilöstä	Photo of a person doing a dangerous job	Note.dinky
+11771	Kuva vaarallista työtä tekevästä henkilöstä	Photo of a person doing a dangerous job	Note.dinky
 11772	Juttu talon purkamisesta	Story on home demolition	Note.dinky
 11773	Juttu tieturvallisuudesta	Story about road safety	Note.dinky
 11774	Artikkeli vanhanaikaisista mustavalkoisista valokuvista	Article on old-timey black and white photos	Note.dinky
@@ -1477,7 +1477,7 @@ id	text	en	loc
 12479	nopea	fast	Options.dinky
 12480	nopeampi	faster	Options.dinky
 12481	nopein	fastest	Options.dinky
-12482	Se on luultavasti todella vaarallista	That's probably really dangerous.	Alleyway.dinky
+12482	Taisi olla todella vaarallista	That's probably really dangerous.	Alleyway.dinky
 12483	Olen suunnitellut seikkailupelejä liian pitkään.	I've been designing adventure games too long.	Alleyway.dinky
 12484	tyhjää lasia	empty glass	Inventory.dinky
 12485	tyhjä lasi	an empty glass	Inventory.dinky
