@@ -40,7 +40,7 @@ DEBUG(pickup) <- getDebugSetting("debugPickup", NO)
 
 SETTING(verbmenu_offset) <- point(0, getSetting("verbMenuOffset", 25))
 SETTING(verbmenu_scale) <- max(min(getSetting("verbMenuScale", 3.0), 4.0), 1.0)
-SETTING(verbmenu_spacing) <- getSetting("verbMenuSpacing", 27)
+SETTING(verbmenu_spacing) <- getSetting("verbMenuSpacing", 33)
 
 SETTING(inventory_spacing) <- getSetting("inventorySpacing", point(10,70))
 

@@ -57,12 +57,17 @@ local current_language = null
 
 // If you're adding a different translation for an existing language, use a new language code.
 //		{ index = 4, code = "de2" language = "Deutsch(Boris)"}
+// 0 = English, the rest is sorted alphabetically.
 
 local known_translations = [
-	{ index = 0, code = "en", langauge = "English" }
-	{ index = 1, code = "it" langauge = "Italiano" }
-	{ index = 2, code = "cz" langauge = "Česky" }
-	{ index = 3, code = "pt" langauge = "Português(Br)" }
+	{ index = 0, code = "en", language = "English" }
+	{ index = 1, code = "cz", language = "Česky" }
+	{ index = 2, code = "de", language = "Deutsch" }
+	{ index = 3, code = "es", language = "Español" }
+	{ index = 4, code = "it", language = "Italiano" }
+	{ index = 5, code = "nl", language = "Nederlands" }
+	{ index = 6, code = "pt", language = "Português (Br)" }
+	{ index = 7, code = "vl", language = "Vlaams" }
 ]
 
 /*{{ ------------------------------------------------------------------------------------

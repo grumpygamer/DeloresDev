@@ -1,0 +1,1483 @@
+id	text	en	loc
+10000	Suomi	English	
+10001	Vakio	Default	
+11000	Toimeksiantoni taitaa olla valmis.	I think I'm done with the assignment.	DefineActors.dinky
+11001	Haluatko nähdä tähänastiset otokseni?	Want to take a look at my work so far?	DefineActors.dinky
+11002	Viimeisin vaarallinen asia, jonka sheriffi teki, oli peiliin katsominen.	The last time the Sheriff did anything dangerous was looking in the mirror.	DefineActors.dinky
+11003	Kuva ainoastaan sheriffistä ei kelpaa Natalielle.	A photo of the Sheriff by himself won't work for Natalie.	DefineActors.dinky
+11004	Kuva ainoastaan patologista ei kelpaa Natalielle.	A photo of the Coroner by himself won't work for Natalie.	DefineActors.dinky
+11005	Luulen että Natalie haluaa kuvan jostain paljon kuuluisammasta, ainoastaan tärkeilevät ruokakriitikot pitävät häntä julkkiksena.	I think Natalie will want someone much more famous, only pretentious food critics think he's a celebrity.	DefineActors.dinky
+11006	Sori, olen liian kiireinen juuri nyt. Lajitteluni on myöhässä.	Sorry, too busy now. I'm behind on my sorting.	DefineActors.dinky
+11007	Liian kiireinen kaikkien näiden PillowBear™-tilausten kanssa!	Too busy to stop, it's all these PillowBear™ orders!	DefineActors.dinky
+11008	Postityöntekijän työ ei ole koskaan valmis, en voi seisahtua.	A postman's work is never done, can't stop.	DefineActors.dinky
+11009	Täytyy lajitella kaikki nämä PillowBear™-tilaukset, en voi pysähtyä.	Have to keep sorting these PillowBear™ orders, can't stop.	DefineActors.dinky
+11010	En voi auttaa sinua juuri nyt.	Can't help you now.	DefineActors.dinky
+11011	Olen liian kiireinen auttamaan kirjeesi kanssa. Käytä postilaatikkoa.	I'm too busy to take your letter. Just use the mail drop.	DefineActors.dinky
+11012	Olen liian kiireinen auttamaan kirjeesi kanssa. Älä unohda postimerkkejä!	I'm too busy to take your letter. Don't forget to add stamps!	DefineActors.dinky
+11013	Liian kiireinen nyt, eikä palautuksia postimerkeistä.	Too busy now, and no returns on stamps.	DefineActors.dinky
+11014	Siskoni voi ajatella olevansa julkkis, mutta kukaan muu ei ajattele niin.	My sister might think she's a celebrity, but no one else does.	DefineActors.dinky
+11015	Emme ota talletuksia kolikoina.	We don't take deposits in the form of coins.	DefineActors.dinky
+11016	En halua tai tarvitse säälittävää 5-senttistäsi.	I don't want or need your pity nickel.	DefineActors.dinky
+11017	Käskin sinun puhua kanssani, ei tuon jonkun kanssa.	I told you to talk to me, not what's-his-face.	DefineActors.dinky
+11018	Jos haluat puhua hänelle, puhu minulle!	You want to talk to him, you talk to me!	DefineActors.dinky
+11019	5-senttisellä ei saa hyvää lelua. Haluan lelun!	A nickel won't buy a good toy. I want a toy!	DefineActors.dinky
+11020	En halua sitä!	I don't want that!	DefineActors.dinky
+11021	Haluan lelun!	I want a toy!	DefineActors.dinky
+11022	Lapset eivät halua sitä!	Kids don't want that!	DefineActors.dinky
+11023	Kiitos!	Thanks!	DefineActors.dinky
+11024	Älä anna niiden mädäntää hampaitasi, kuten minulle kävi.	Don't let them rot your teeth like they did mine.	DefineActors.dinky
+11025	Ei niin nopeasti Delores-täti.	Not so fast Aunt Delores.	DefineActors.dinky
+11026	Jos haluat ottaa kuvani, täytyy sinun antaa minulle lahja.	Gotta give me a present if you want to take my picture.	DefineActors.dinky
+11027	Muikku!	Smile!	DefineActors.dinky
+11028	Delores	Delores	DefineActors.dinky
+11029	Willielle	Willie	DefineActors.dinky
+11030	Natalielle	Natalie	DefineActors.dinky
+11031	Ransomelle	Ransome	DefineActors.dinky
+11032	Leonardille	Leonard	DefineActors.dinky
+11033	Sheriffi	Sheriff	DefineActors.dinky
+11034	patologi	Coroner	DefineActors.dinky
+11035	Davelle	Dave	DefineActors.dinky
+11036	Davelle	Dave	DefineActors.dinky
+11037	Sandylle	Sandy	DefineActors.dinky
+11038	Madame Morenalle	Madame Morena	DefineActors.dinky
+11039	Georgelle	George	DefineActors.dinky
+11040	Lenorelle	Lenore	DefineActors.dinky
+11041	Peterille	Peter	DefineActors.dinky
+11042	Pikku-Chuckille	Chuckie	DefineActors.dinky
+11043	Chuck Edmund toimitettu parantolaan...	Chuck Edmund committed to sanitarium...	Nickel.dinky
+11044	Chuck määrätty pakkohoitoon psykoottisen kohtauksen jälkeen. Hän uskoi olevansa osa tietokonetta.	Chuck committed after a psychotic breakdown due to believing he was part of a computer.	Nickel.dinky
+11045	Willien viulukorjaamo tekee ennätystulosta...	Willie's violin repair posts record profits...	Nickel.dinky
+11046	Willien viulunkorjausliiketoiminta kukoistaa uuden BBS-tilausjärjestelmän ja mainonnan ansiosta.	Willie's violin repair business is booming due to new BBS ordering and advertising.	Nickel.dinky
+11047	KSCUM muuttaa musiikkityylinsä...	KSCUM to change music styles...	Nickel.dinky
+11048	Pitkäikäinen KSCUM-radio muuttaa formaattinsa eklektisestä rockista esoteeriseksi rockiksi.	Long standing KSCUM radio set to change formats from eclectic rock to esoteric rock.	Nickel.dinky
+11049	S&D-ravintola saalistaa jälleen palkinnon...	S&D Diner nets another award...	Nickel.dinky
+11050	S&D-ravintola sai jälleen palkinnon hämmästyttävästä ruuastaan. Kriitikot ovat kaikki yhtä mieltä siitä, että se on piirikunnan paras paikka ruokailla.	S&D Diner received another award for their amazing food. Critics all agree, it's the best place to eat in the county.	Nickel.dinky
+11051	Ilmainen juhlalasi S&D-ravintolasta...	Free commemorative glass at S&D diner...	Nickel.dinky
+11052	Uusimman palkintonsa kunniaksi S&D-ravintola antaa ilmaisen juhlalasin jokaisen ostoksen yhteydessä.	In celebration of their latest award, the S&D Diner is giving a free commemorative glass with every purchase.	Nickel.dinky
+11053	Art by Eltron uudelleenavaa ovensa PillowBear™-liikkeenä...	Art by Eltron to re-open as PillowBear™ store...	Nickel.dinky
+11054	Kauppa, jota paikalliset kutsuvat nimellä Art by Eltron, avataan uudelleen PillowBear™-tehtaanmyymälänä toukokuun alussa.	The store referred to by locals as Art by Eltron will re-open as a PillowBear™ factory outlet in early May.	Nickel.dinky
+11055	Quickie Palin kylpyhuone myrkyllinen paikka...	Quickie Pal bathroom a toxic site...	Nickel.dinky
+11056	Liittovaltion virastot ovat nimenneet Quickie Pal -kylpyhuoneen 5. asteen myrkylliseksi alueeksi. Siivouksen pitäisi alkaa pian.	Federal agencies have designated the Quickie Pal bathroom a Class 5 toxic site. Clean-up should begin soon.	Nickel.dinky
+11057	Lenore Edmund häädetty...	Lenore Edmund evicted...	Nickel.dinky
+11058	Kun pankki pakkolunasti Chuck Edmundin kartanon, Lenore Edmund huusi häädettäessä "Ettekö tiedä kuka minä olen?!"	After the bank repossessed Chuck Edmund's mansion, Lenore Edmund was evicted while screaming “Do you know who I am!”	Nickel.dinky
+11059	Okkultistinen kummajainen Madame Morena kertoo kaupunkilaisille...	Occult oddball Madame Morena tells town...	Nickel.dinky
+11060	En koskaan kiroaisi ketään, se ylittäisi jopa minun mustan magian taitoni. Tule isoille tarjouskaupoille!	I would never curse anyone, that would go beyond even my black magic. Come for the big blow-out sale!	Nickel.dinky
+11061	Paikallinen saa halutun työpaikan MmucasFlem Gamesilla...	Local nets prestigious job at MmucasFlem Games...	Nickel.dinky
+11062	Delores Edmund näyttää ravistaneen viimeaikaisen sukusekamelskan ja on matkalla peliteollisuuden huipulle!	Delores Edmund seems to have shaken recent family turmoil and is on her way to the top of the game industry!	Nickel.dinky
+11063	Miimikko taputtaa hiljaisesti Ransomelle...	Mime applauds silently for Ransome...	Nickel.dinky
+11064	Paikallinen miimikko jonottaa 4. perättäiseen Ransome-esitykseensä, ja miimikoi että se on paras show jonka on koskaan nähnyt.	While miming that it was the best show he'd ever seen, local Mime stands in line for 4th Ransome show in a row.	Nickel.dinky
+11065	Paikallinen puutarhuri sai työpaikan Valkoisesta talosta...	Local groundskeeper wins White House post...	Nickel.dinky
+11066	Valkoinen talo on palkannut paikallisen puutarhurin Doug Bravermanin kaivamaan reikiä ruusutarhaan.	Local groundskeeper Doug Braverman is hired by the White House to dig holes in the rose garden.	Nickel.dinky
+11067	Ei pääotsikkoa tänään...	No headline today...	Nickel.dinky
+11068	Nickel Newsilta loppui muste eikä voi julkaista tämän päivän leh	The Nickel News ran out of ink and cannot publish today's pap	Nickel.dinky
+11069	Tehtaanvartija Reyes ylennettiin uudelleen...	Factory security guard Reyes promoted again...	Nickel.dinky
+11070	Viiden ylennyksen jälkeen vartija ja ylpeä isä Reyes on nimitetty uuden PillowBear™-tehtaan turvallisuuspäälliköksi.	After five promotions, security guard and proud father Reyes has been made head of security at the new PillowBear™ factory.	Nickel.dinky
+11071	Franklinin haamu kummittelee Edmund-hotellissa...	Ghost of Franklin haunts Edmund Hotel...	Nickel.dinky
+11072	Huhutaan että Chuck Edmundin veli Franklin kummittelee Edmund-hotellissa. Kyyhkysveljekset tutkivat.	The ghost of Franklin, Chuck Edmund's brother, is said to haunt the local Edmund Hotel. Pigeon Brothers are on the case.	Nickel.dinky
+11073	Ransome saa hyväntekeväisyyspalkinnon...	Ransome to receive philanthropy award...	Nickel.dinky
+11074	Ransome palkitaan lukuisten maailmanlaajuisesti lapsia hyödyttävien projektiensa vuoksi.	Citing his various projects benefiting children around the world, the award will be bestowed on Ransome.	Nickel.dinky
+11075	Katsotaanpa mitä sinulla on...	Let's see what you've got...	Nickel.dinky
+11076	Katsotaanpa valokuviasi...	Let's take a look at your photos...	Nickel.dinky
+11077	Katsotaanpa kuviasi...	Why don't we take a quick look at your photos...	Nickel.dinky
+11078	Hauska! Metatasoa! Pidän tästä.	Funny! Very meta! I like this one.	Nickel.dinky
+11079	Olen hyvin kuvauksellinen. Tosi hyvä kuva minusta.	I'm very photogenic. Nice one of me.	Nickel.dinky
+11080	Hyvä otos!	Good one!	Nickel.dinky
+11081	Tämä on kiva!	This is nice!	Nickel.dinky
+11082	Täydellinen artikkelia varten!	Perfect for the story!	Nickel.dinky
+11083	Hämmästyttävä!	Amazing!	Nickel.dinky
+11084	Epäselvä...	Blurry...	Nickel.dinky
+11085	Huono valaistus...	Poor lighting...	Nickel.dinky
+11086	Huonosti sommiteltu...	Not framed well...	Nickel.dinky
+11087	Epäkiinnostava...	Uninteresting...	Nickel.dinky
+11088	Arkipäiväinen...	Mundane...	Nickel.dinky
+11089	Amatöörimainen...	Amateurish...	Nickel.dinky
+11090	Painu ottamaan kuvia siitä.	Get out there kid and take some photos.	Nickel.dinky
+11091	Älä pahastu. Valokuvajournalismin hallitseminen vie jonkin aikaa.	Don't feel too bad. It takes a while to master photojournalism.	Nickel.dinky
+11092	Tässä on hyvä otos!	That's a good shot!	Nickel.dinky
+11093	Täällä on hyviä otoksia!	There are some good shots in there!	Nickel.dinky
+11094	Nakkaan huonot kuvat roskikseen.	Let me get rid of the bad ones.	Nickel.dinky
+11095	Pidä hyvät kuvat tallessa kunnes päivän työ on pulkassa.	You keep the good ones until you've finished today's work.	Nickel.dinky
+11096	Mene ottamaan lisää kuvia, meillä on deadline.	Better get out there and take some more photos, we've got a deadline.	Nickel.dinky
+11097	Isä? Kuollut? Aave?	Dad? Dead? A ghost?	Nickel.dinky
+11098	Ei voi olla, olin hänen kanssa aamiaisella tänä aamuna.	That can't be, I had breakfast with him this morning.	Nickel.dinky
+11099	Minun pitäisi löytää kamera ennen lähtöä. Natalie sanoi, että se on arkistokaapissa.	I should find the camera before setting out. Natalie said it is in the file cabinet.	Nickel.dinky
+11100	Kyltin täytyy olla yhtä vanha kuin Nickel News!	That sign must be as old as the Nickel News!	Nickel.dinky
+11101	Se on reliikki menneeltä aikakaudelta.	It's an old relic of a bygone era.	Nickel.dinky
+11102	Printti on kuollut.	Print is dead.	Nickel.dinky
+11103	Joskus kaikki tulee olemaan tietokoneella.	Someday it will all be on computers.	Nickel.dinky
+11104	Ja Natalie on konkurssissa.	And Natalie will be out of business.	Nickel.dinky
+11105	Mutta se on ok, koska sosiaalisesta mediasta tulee luotettavien uutisten lähde.	But that's OK because social media will take over as the trusted source of news.	Nickel.dinky
+11106	Kaupunki ei näyttäisi linnun perspektiivistä tältä.	This is not how the town would look to a bird.	Nickel.dinky
+11107	Se on Thimbleweed-piirikunnan kartta.	It's a map of Thimbleweed County.	Nickel.dinky
+11108	Luulen että näen taloni.	I think I can see my house.	Nickel.dinky
+11109	Nämä ovat vanhoja valokuvia Nickel Newsistä.	Those are old photos from the Nickel News.	Nickel.dinky
+11110	Niissä on paljon historiaa.	There is a lot of history in those.	Nickel.dinky
+11111	Se on tyhjä.	It's empty.	Nickel.dinky
+11112	Siellä oli kamera.	There's the camera.	Nickel.dinky
+11113	Täältä löysin kameran. Kaappi on nyt tyhjä.	This is where I found the camera. The cabinet is empty now.	Nickel.dinky
+11114	Natalie sanoi, että kameran pitäisi olla täällä.	This is where Natalie said the camera should be.	Nickel.dinky
+11115	Siellä täytyy olla vanhojen tarinoiden aarrearkku.	Must be a treasure trove of old stories in there.	Nickel.dinky
+11116	Kuten Natalie sanoi, minun pitäisi katsoa onko kamera laatikossa.	I should look in the drawer and see if the camera is here, like Natalie said.	Nickel.dinky
+11117	ovi	door	Nickel.dinky
+11118	Nickel Newsin ovi	the Nickel News door	Nickel.dinky
+11119	Poistu	Leave	Nickel.dinky
+11120	Poistu toimituksesta	Leave the Nickel	Nickel.dinky
+11121	kyltti	sign	Nickel.dinky
+11122	painokone	printing press	Nickel.dinky
+11123	kartta	map	Nickel.dinky
+11124	vanhojen uutisten kuvat	old news photos	Nickel.dinky
+11125	vanhojen uutisten kuvat	the old news photos	Nickel.dinky
+11126	arkistokaappi	file cabinet	Nickel.dinky
+11127	Näyttää siltä että katu on suljettu.	The street looks blocked off.	MainStreet.dinky
+11128	Se haisee pahalle, mutta en usko että tämä näyttää tarpeeksi inhottavalta Natalielle.	It's really smelly, but I don't think this looks disgusting enough for Natalie.	MainStreet.dinky
+11129	Se haisee pahalle, mutta en usko että tämä näyttää tarpeeksi inhottavalta Natalielle.	It's really smelly, but I don't think this looks disgusting enough for Natalie.	MainStreet.dinky
+11130	Valokuvan on oltava parempi kuin palopostista tippuva vesi.	Photo needs to be better than water dripping from a fire hydrant.	MainStreet.dinky
+11131	Se on pahasti vuotava paloposti.	It's a very leaky fire hydrant.	MainStreet.dinky
+11132	Ei vuoda enää!	No more leaks!	MainStreet.dinky
+11133	Voisin saada kesätyön Kyyhkyssiskojen kanssa!	I could get a summer job with the Pigeon Sisters!	MainStreet.dinky
+11134	Se haisee pahalle, mutta en usko että tämä näyttää tarpeeksi inhottavalta Natalielle.	It's really smelly, but I don't think this looks disgusting enough for Natalie.	MainStreet.dinky
+11135	Valokuvan on oltava parempi kuin palopostista tippuva vesi.	Photo needs to be better than water dripping from a fire hydrant.	MainStreet.dinky
+11136	Se haisee pahalle, mutta en usko että tämä näyttää tarpeeksi inhottavalta Natalielle.	It's really smelly, but I don't think this looks disgusting enough for Natalie.	MainStreet.dinky
+11137	Yöks! Se todella haisee.	Yikes! That really stinks.	MainStreet.dinky
+11138	Jösses! Se haisee!	Gads! That smells!	MainStreet.dinky
+11139	On kyllä tosi ällö löyhkä!	That sure is some stink!	MainStreet.dinky
+11140	Miksi haistan sen vieläkin!	Why do I keep smelling that!	MainStreet.dinky
+11141	Tuon pitäisi toimia.	That should do it.	MainStreet.dinky
+11142	Vau! Jokin haisee todella pahalta.	Wow! Something smells really bad.	MainStreet.dinky
+11143	Siellä näyttää melko pimeältä.	Looks pretty dark down there.	MainStreet.dinky
+11144	Ravintola on avoinna.	The Diner is open for business.	MainStreet.dinky
+11145	Heillä on uskomattoman hyvää ruokaa ja täydelliset terveysmerkinnät!	They have amazing food, and a perfect health record!	MainStreet.dinky
+11146	Se on vaikuttava ovi.	That is an impressive door.	MainStreet.dinky
+11147	Kyltissä lukee: ”Aputyövoimaa haetaan: Pankkivirkailija. Olemme suljettuna, kunnes löydämme sellaisen.”	Sign says: “Help Wanted: Bank Teller. Closed until we find one.”	MainStreet.dinky
+11148	Thimbleweed Park oli hieno paikka kasvaa.	Thimbleweed Park was a great place to grow up.	MainStreet.dinky
+11149	Moottoritie kaupunkiin on suljettu.	The highway into town is closed.	MainStreet.dinky
+11150	Siinä lukee: "Willien kello- ja viulukorjaukset ...	It says “Willie's Watch & Violin Repairs...	MainStreet.dinky
+11151	"Kellojen ja viulujen korjausta vuodesta 1957."	“Repairing watches and violins since 1957.”	MainStreet.dinky
+11152	Luulen että tuo pieni kello ei ole aito.	I think the little clock is fake.	MainStreet.dinky
+11153	Näyttää siltä, että Willien kello- ja viulukorjaamo on suljettu yöksi.	Looks like Willie's Watch & Violin Repairs is closed for the night.	MainStreet.dinky
+11154	Öitä Willie!	Night Willie!	MainStreet.dinky
+11155	Siellä ei ole kuvia puretuista kodeista.	There aren't any photos of demolished homes in there.	MainStreet.dinky
+11156	Kuka haluaisi muuttaa tänne.	Who would want to move here.	MainStreet.dinky
+11157	Yksi monista talouden uhreista.	One of the many casualties of the economy.	MainStreet.dinky
+11158	En malta odottaa uuden PillowBear™-kaupan avautumista.	I can't wait for the new PillowBear™ store to open.	MainStreet.dinky
+11159	Olen niin ylpeä isästä.	I'm so proud of Dad.	MainStreet.dinky
+11160	Nämä PillowBears-nallet™ ovat niin söpöjä!	These PillowBears™ are so cute!	MainStreet.dinky
+11161	Ne olivat täysin isän idea.	They were all Dad's idea.	MainStreet.dinky
+11162	Se on liikennekartio. Jätän sen rauhaan.	It's a traffic cone. I'm going to leave it alone.	MainStreet.dinky
+11163	A-kadulle	A Street	MainStreet.dinky
+11164	B-kadulle	B Street	MainStreet.dinky
+11165	palopostia	fire hydrant	MainStreet.dinky
+11166	kujaa	alley	MainStreet.dinky
+11167	kujaa	an alley	MainStreet.dinky
+11168	ovi	door	MainStreet.dinky
+11169	ravintolan ovi	the Diner door	MainStreet.dinky
+11170	Käy sisään	Enter	MainStreet.dinky
+11171	Käy sisään ravintolaan	Enter Diner	MainStreet.dinky
+11172	pankin ovi	bank door	MainStreet.dinky
+11173	pankin ovi	the bank door	MainStreet.dinky
+11174	Käy sisään	Enter	MainStreet.dinky
+11175	Käy sisään pankkiin	Enter bank	MainStreet.dinky
+11176	kyltti	sign	MainStreet.dinky
+11177	työpaikkailmoitus	a job posting	MainStreet.dinky
+11178	kyltti	sign	MainStreet.dinky
+11179	Thimbleweed Park -kyltti	the Thimbleweed Park sign	MainStreet.dinky
+11180	moottoritie	the highway	MainStreet.dinky
+11181	kellon korjaus -kyltti	watch repair sign	MainStreet.dinky
+11182	ovi	door	MainStreet.dinky
+11183	kiinteistönvälittäjän toimisto	realtor's office	MainStreet.dinky
+11184	kiinteistönvälittäjän toimisto	the realtor's office	MainStreet.dinky
+11185	kukkakauppaa	flower shop	MainStreet.dinky
+11186	kukkakauppa	the flower shop	MainStreet.dinky
+11187	Tulossa pian -lakanaa	Coming Soon	MainStreet.dinky
+11188	uusi PillowBear™-liike	the new PillowBear™ store	MainStreet.dinky
+11189	PillowBear™-kylttiä	PillowBear™ sign	MainStreet.dinky
+11190	laitamille	outskirts	MainStreet.dinky
+11191	Kaupungintalon ovi	City Hall door	MainStreet.dinky
+11192	Kaupungintalon ovi	the City Hall door	MainStreet.dinky
+11193	Käy sisään	Enter	MainStreet.dinky
+11194	Mene kaupungintaloon	Enter City Hall	MainStreet.dinky
+11195	liikennekartio	traffic cone	MainStreet.dinky
+11196	liikennekartio	traffic cone	MainStreet.dinky
+11197	liikennekartio	traffic cone	MainStreet.dinky
+11198	Tervetuloa Quickie Paliin. Voinko auttaa jotenkin?	Welcome to Quickie Pal. Can I help you find anything?	QuickiePal.dinky
+11199	itse tykkään kovasti suklaakonvehdeista.	I personally am really fond of the chocolate bon bons.	QuickiePal.dinky
+11200	Kerro jos voin auttaa sinua löytämään jotain.	Let me know if I can help you find anything.	QuickiePal.dinky
+11201	Kerro jos voin auttaa sinua löytämään jotain.	Let me know if I can help you find anything.	QuickiePal.dinky
+11202	Kerro jos voin auttaa sinua löytämään jotain.	Let me know if I can help you find anything.	QuickiePal.dinky
+11203	Kerro jos voin auttaa sinua löytämään jotain.	Let me know if I can help you find anything.	QuickiePal.dinky
+11204	Kerro jos voin auttaa sinua löytämään jotain.	Let me know if I can help you find anything.	QuickiePal.dinky
+11205	Kerro jos voin auttaa sinua löytämään jotain.	Let me know if I can help you with anything.	QuickiePal.dinky
+11206	Kerro jos voin auttaa sinua löytämään jotain.	Let me know if I can help you with anything.	QuickiePal.dinky
+11207	Olen täällä palvellakseni.	I'm here to serve.	QuickiePal.dinky
+11208	Olen täällä palvellakseni.	I'm here to serve.	QuickiePal.dinky
+11209	Olen täällä palvellakseni.	I'm here to serve.	QuickiePal.dinky
+11210	Mitä tykkäät auringonlaskusta?	How about that sunset?	QuickiePal.dinky
+11211	Mites se Ransome-klovni? Hän on tosi hauska.	How about that Ransome the Clown? He's so funny.	QuickiePal.dinky
+11212	Älä unohda hankkia flunssarokotetta.	Don't forget to get your flu shot.	QuickiePal.dinky
+11213	Haluaisitko vanhentunutta maitoa? 50 % alennus.	Want some expired milk? 50% off normal price.	QuickiePal.dinky
+11214	Onpa hyvä että Kyyhkyssiskokset saivat rotta-ongelmamme hoidettua!	Sure glad the Pigeon Sisters got rid of our rat problem!	QuickiePal.dinky
+11215	Haluatko ostaa Hienon Nahkatakin™?	Want to buy a Fine Leather Jacket™?	QuickiePal.dinky
+11216	Ääks!	Yikes!	QuickiePal.dinky
+11217	Ääks!	Yikes!	QuickiePal.dinky
+11218	Juo!	Drink up!	QuickiePal.dinky
+11219	Se on postituslaatikko.	It's a mail drop.	QuickiePal.dinky
+11220	Se on matkamuisto, Thimbleweed Park T-paita!	It's a souvenir Thimbleweed Park T-shirt!	QuickiePal.dinky
+11221	Siinä lukee “Lunasta 5 sentin pullopantti.”	It says “Redeem bottles here, 5¢.”	QuickiePal.dinky
+11222	Ketään ei kiinnosta kasa laatikoita.	No one cares about a bunch of boxes.	QuickiePal.dinky
+11223	Niissä kaikissa lukee, “Tusina PillowBearsejä™.”	They all say, “1 Dozen PillowBears™.”	QuickiePal.dinky
+11224	Olen niin ylpeä siitä, että isä keksi tämän idean!	I'm so proud of Dad for thinking up this idea!	QuickiePal.dinky
+11225	Se on rottavaa!	It's Ratastic!	QuickiePal.dinky
+11226	Ehdottomasti ei ole uusi leluvillitys. Minulla oli sellainen, kun olin lapsi.	Definitely not a new toy craze. I had one when I was a kid.	QuickiePal.dinky
+11227	Se on julkkiksen pää, mutta karkkiannostelijana tavallaan halventava. Tarvitsen paremman kuvan.	It's a celebrity's head, but kind of demeaning being a candy dispenser. I need a better photo.	QuickiePal.dinky
+11228	Onpa paljon Ransome-karkkiannostelijoita.	That's a lot of Ransome candy dispensers.	QuickiePal.dinky
+11229	Jaamme niitä "Ransome-klovnin Itsepäisten lasten talo"-kampanjan osana. Ota pois.	Giving them away as a promotion for the Ransome the Clown House for Wayward Kids. Take one.	QuickiePal.dinky
+11230	Vain yksi per asiakas. Kaupan käytäntö.	It's one per customer. Corporate policy.	QuickiePal.dinky
+11231	Pelaisin jos voitto olisi varma.	I'd play if it were a sure thing.	QuickiePal.dinky
+11232	Quickie Palin ovi	Quickie Pal door	QuickiePal.dinky
+11233	Quickie Palin ovi	the Quickie Pal door	QuickiePal.dinky
+11234	Poistu	Leave	QuickiePal.dinky
+11235	Poistu Quickie Palista	Leave the Quickie Pal	QuickiePal.dinky
+11236	postilaatikkoa	mail drop	QuickiePal.dinky
+11237	T-paita	T-shirt	QuickiePal.dinky
+11238	kyltti	sign	QuickiePal.dinky
+11239	laatikoita	boxes	QuickiePal.dinky
+11240	laatikoita	boxes	QuickiePal.dinky
+11241	rotta	rat	QuickiePal.dinky
+11242	Ransome-karkkiannostelija	Ransome candy dispensers	QuickiePal.dinky
+11243	Lotto	Lotto	QuickiePal.dinky
+11244	Lotto-kyltti	the Lotto sign	QuickiePal.dinky
+11245	Taitaa olla ratkaisu toisen pelin pulmaan.	Probably the solution to a puzzle in another game.	PostOffice.dinky
+11246	Sillä punnitaan postia.	It's for weighing mail.	PostOffice.dinky
+11247	Täältä voin postittaa Leonardin sähkölaskun.	This is where I could mail Leonard's electricity bill.	PostOffice.dinky
+11248	Jos minulla olisi postia, laittaisin sen tänne.	If I had any mail, this is where I'd put it.	PostOffice.dinky
+11249	Todellinen kuva Jeffersonista olisi paljon parempi.	An actual image of Jefferson would be much better.	PostOffice.dinky
+11250	Se näyttää heinäkuuta... Siitä on kauan aikaa.	It's showing the month of July... That was a long time ago.	PostOffice.dinky
+11251	Näyttää siltä, että valtion omaisuuden vandalisointi on todellinen ongelma. Minun täytyy kuvata esimerkki siitä.	Looks like government property vandalism really is a problem. I need to photograph an example of it.	PostOffice.dinky
+11252	"Olisitko hyvä etkä enää yrittäisi murtautua postilaatikoihin."	“Please stop trying to break into the mailboxes.”	PostOffice.dinky
+11253	Ne ovat lukittuja.	They are locked.	PostOffice.dinky
+11254	Minulla ei ole yhdistelmää.	I don't have the combination.	PostOffice.dinky
+11255	Paljon yksityisiä postilaatikoita.	That's a lot of private mailboxes.	PostOffice.dinky
+11256	Postilaatikon vauriot ovat todella vähäisiä. Ei tarpeeksi hyvä valokuvaan.	The mailbox damage is really minor. Not good enough for the photo.	PostOffice.dinky
+11257	Täällä on pimeää!	It's dark in there!	PostOffice.dinky
+11258	Joudun isoihin vaikeuksiin tästä.	I'm going to get in so much trouble for this.	PostOffice.dinky
+11259	Tämä postilaatikko näyttää hieman naarmuuntuneelta.	This mailbox looks a little scuffed up.	PostOffice.dinky
+11260	Tämä ei tainnut olla fiksu idea.	I'm not so sure this was a smart idea.	PostOffice.dinky
+11261	Ketään ei kiinnosta kasa laatikoita.	No one cares about a bunch of boxes.	PostOffice.dinky
+11262	Kasa PillowBearsejä™, jotka odottavat postitusta.	It's a bunch of PillowBears™, waiting to be mailed out.	PostOffice.dinky
+11263	Se oli isän idea!	That was Dad's idea!	PostOffice.dinky
+11264	ovi	door	PostOffice.dinky
+11265	Postikonttorin ovi	the Post Office door	PostOffice.dinky
+11266	Poistu	Leave	PostOffice.dinky
+11267	Poistu postitoimistosta	Leave the Post Office	PostOffice.dinky
+11268	nauhaa	tape	PostOffice.dinky
+11269	nauhaa	tape	PostOffice.dinky
+11270	vaakaa	scale	PostOffice.dinky
+11271	postilaatikkoa	mail drop	PostOffice.dinky
+11272	kalenteria	calendar	PostOffice.dinky
+11273	tärkeä ilmoitus	important notice	PostOffice.dinky
+11274	tärkeä huomautus	an important notice	PostOffice.dinky
+11275	postilaatikoita	mailboxes	PostOffice.dinky
+11276	postilaatikot	mailboxes	PostOffice.dinky
+11277	tuhottua postilaatikkoa	destroyed mailbox	PostOffice.dinky
+11278	naarmuuntunutta postilaatikkoa	scuffed up mailbox	PostOffice.dinky
+11279	laatikoita	boxes	PostOffice.dinky
+11280	laatikoita	boxes	PostOffice.dinky
+11281	Se on suljettu.	It's been shut off.	CityHall.dinky
+11282	Vaikka se toimisi, en joisi siitä.	Even if it was working, I wouldn't drink from it.	CityHall.dinky
+11283	Se on Thimbleweed-maakunnan sinetti!	It's the Thimbleweed tri-county seal!	CityHall.dinky
+11284	Se on majesteettinen!	It's majestic!	CityHall.dinky
+11285	Joku vanha tyyppi, joka on aika varmasti jo kuollut.	That's some old dude who I'm pretty sure is dead.	CityHall.dinky
+11286	En tiedä kuka hän on, mutta hän ei ole kovin presidentillinen.	I don't know who he is, but he doesn't look very presidential.	CityHall.dinky
+11287	Olen melko varma että se tuli kehysten mukana.	Pretty sure that came with the frame.	CityHall.dinky
+11288	ovi	door	CityHall.dinky
+11289	Poistu	Leave	CityHall.dinky
+11290	Poistu kaupungintalosta	Leave City Hall	CityHall.dinky
+11291	vesipiste	drinking fountain	CityHall.dinky
+11292	sinetti	seal	CityHall.dinky
+11293	Sheriffin toimiston ovi	Sheriff's Office door	CityHall.dinky
+11294	Sheriffin toimiston ovi	the Sheriff's Office door	CityHall.dinky
+11295	Käy sisään	Enter	CityHall.dinky
+11296	Käy sisään Sheriffin toimistoon	Enter the Sheriff's Office	CityHall.dinky
+11297	patologin toimiston ovi	Coroner's Office door	CityHall.dinky
+11298	patologin toimiston ovi	the Coroner's Office door	CityHall.dinky
+11299	Käy sisään	Enter	CityHall.dinky
+11300	Käy sisään patologin toimistoon	Enter the Coroner's Office	CityHall.dinky
+11301	maalaus	painting	CityHall.dinky
+11302	maalaus	painting	CityHall.dinky
+11303	Nämä laitteet olivat kammottavia. Olen iloinen, että ne poistettiin käytöstä.	These things were creepy. I'm glad they were deactivated.	QuickiePalOutside.dinky
+11304	Kuulin, että he seurasivat elokuvien vuokrausta ja jakoivat tietoja tuntemattomien yritysten kanssa. ** VÄRISTYS **	I heard they actually tracked your movie rentals and shared the information with unknown companies. **SHIVER**	QuickiePalOutside.dinky
+11305	Quickie Palin ovi	Quickie Pal door	QuickiePalOutside.dinky
+11306	Quickie Palin ovi	the Quickie Pal door	QuickiePalOutside.dinky
+11307	Käy sisään	Enter	QuickiePalOutside.dinky
+11308	Mene Quickie Paliin	Enter the Quickie Pal	QuickiePalOutside.dinky
+11309	pääkadulle	Main Street	QuickiePalOutside.dinky
+11310	kylpyhuoneen ovi	bathroom door	QuickiePalOutside.dinky
+11311	kylpyhuoneen ovi	the bathroom door	QuickiePalOutside.dinky
+11312	Käy sisään	Enter	QuickiePalOutside.dinky
+11313	Mene kylpyhuoneeseen	Enter bathroom	QuickiePalOutside.dinky
+11314	kukkula	vista	QuickiePalOutside.dinky
+11315	FilkkaTron 3000™	MovieTron 3000™	QuickiePalOutside.dinky
+11316	FilkkaTron 3000™	the MovieTron 3000™	QuickiePalOutside.dinky
+11317	Se on vanha Ransome-klovnin juliste.	It's an old Ransome the Clown poster.	Alleyway.dinky
+11318	Luulen että kaipaan ennen kaikkea hänen loistavaa performanssisatiiriaan.	I think I miss his brilliant performance satire most of all.	Alleyway.dinky
+11319	Aika taiteellinen, mutta en usko että Natalie haluaa tällaista.	Kind of artsy, but I don't think Natalie will want this one.	Alleyway.dinky
+11320	Se on Ransome-klovnin juliste!	It's a Ransome the Clown poster!	Alleyway.dinky
+11321	Aika surkea valokuva. Kukaan ei tule tunnistamaan häntä Ransomeksi.	That's a pretty crappy photo. No one's going to know it's Ransome.	Alleyway.dinky
+11322	Aika surkea valokuva. Kukaan ei tule tunnistamaan häntä Ransomeksi.	That's a pretty crappy photo. No one's going to know it's Ransome.	Alleyway.dinky
+11323	Aika taiteellinen, mutta en usko että Natalie haluaa tällaista.	Kind of artsy, but I don't think Natalie will want this one.	Alleyway.dinky
+11324	En usko, että tämä on tarpeeksi pyöreä.	I don't think this is round enough.	Alleyway.dinky
+11325	Se on itse asiassa yllättävän puhdas roskikseksi. Ei lainkaan ällöttävä.	It's actually pretty clean for a trash can. Not disgusting at all.	Alleyway.dinky
+11326	Tämä on toiseksi puhtain roskis, jonka olen koskaan nähnyt.	This is the second cleanest trash can I've ever seen.	Alleyway.dinky
+11327	Se voi olla puhdas, mutta en ole kiinnostunut katsomaan sisälle.	It may be clean, but I'm not interested in looking inside.	Alleyway.dinky
+11328	En usko että roskisten avaaminen on osa työkuvaani.	I don't think opening trash cans is part of my job description.	Alleyway.dinky
+11329	Siinä ei ole mitään hauskaa että kissa on laatikossa. Tai että kissaa ei ole laatikossa.	Nothing funny about a cat in a box. Or no cat in a box.	Alleyway.dinky
+11330	Se on edelleen vain tyhjä laatikko.	It's still just an empty box.	Alleyway.dinky
+11331	Se on ravintolan takaovi. Se on aina lukossa.	It's the back door to the Diner. It's always locked.	Alleyway.dinky
+11332	Se on lukossa.	It's locked.	Alleyway.dinky
+11333	Ooh, ThimbleCon 88 -juliste!	Ooh, a ThimbleCon 88 poster!	Alleyway.dinky
+11334	Tämä näyttäisi hienolta MMucasFlemin toimistohuoneessani, jos Jay Bane antaisi minun ripustaa sen.	This would look great in my MMucasFlem office, if Jay Bane will let me put it up.	Alleyway.dinky
+11335	Se on liimattu, enkä voi vetää sitä irti.	It's glued on and I can't pull it off.	Alleyway.dinky
+11336	Moi Ransome!	Hi Ransome!	Alleyway.dinky
+11337	Ehkä vesi liuottaa liiman.	Maybe the water will dissolve the glue.	Alleyway.dinky
+11338	Se toimi! Ja vahingoittamatta kumpaakaan julistetta.	That worked! And without damaging either poster.	Alleyway.dinky
+11339	Moi Ransome!	Hi Ransome!	Alleyway.dinky
+11340	Siinä on taas alkuperäiset säädöt.	It's back to its original setting.	Alleyway.dinky
+11341	Kaipa Sandy tai Dave selvitti sen.	Guess Sandy or Dave figured it out.	Alleyway.dinky
+11342	Venttiili on täysin auki!	The valve is set to full on!	Alleyway.dinky
+11343	Se on ruosteinen vanha venttiili. Siinä lukee “Thimbleweed Parkin kaasuyhtiö, älä koske”.	It's a rusty old valve. It says “Thimbleweed Park Gas Company, Do Not Touch”.	Alleyway.dinky
+11344	Se on jumissa. En voi liikuttaa sitä.	It's stuck. I can't move it.	Alleyway.dinky
+11345	Se on taas jumissa.	It's stuck again.	Alleyway.dinky
+11346	julistetta	poster	Alleyway.dinky
+11347	Ransome-klovnin juliste	Ransome the Clown poster	Alleyway.dinky
+11348	julisteen reuna	poster edge	Alleyway.dinky
+11349	Ransome-klovnin juliste	Ransome the Clown poster	Alleyway.dinky
+11350	Ransome-klovnin juliste	Ransome the Clown poster	Alleyway.dinky
+11351	roskista	trash can	Alleyway.dinky
+11352	laatikkoa	box	Alleyway.dinky
+11353	Pääkadulle	Main Street	Alleyway.dinky
+11354	ovea	door	Alleyway.dinky
+11355	ravintolan takaovi	the Diner back door	Alleyway.dinky
+11356	juliste	poster	Alleyway.dinky
+11357	ThimbleCon-juliste	ThimbleCon poster	Alleyway.dinky
+11358	Ransome-klovnin juliste	Ransome the Clown poster	Alleyway.dinky
+11359	venttiiliä	valve	Alleyway.dinky
+11360	kaasuventtiili	gas valve	Alleyway.dinky
+11361	On aika ThimbleConata ThimbleCon '88:ssa!	It's time to do the ThimbleCon with ThimbleCon '88!	AStreet.dinky
+11362	Sci-fi-sarjoja ja -elokuvia, sarjakuvia, ja viimeisintä tietokone- ja videopeli-teknologiaa!	Sci-fi shows and movies, comic books, and the latest computer and video game technology!	AStreet.dinky
+11363	Hanki lippusi ennen kuin ne loppuvat.	Get your tickets before they are all gone.	AStreet.dinky
+11364	Ole hyvä ja lopeta vanhojen tölkkien ja pullojen heittäminen kirjakauppani takapihalle.	Please stop throwing your old cans and bottles into the backyard of my bookstore.	AStreet.dinky
+11365	Tiedän kuinka kirota sinut!	I know how to curse you!	AStreet.dinky
+11366	Halutaan - Vaatelahjoituksia	Wanted - Clothes Donations	AStreet.dinky
+11367	Auta Lenorea tyylikkäillä vaatteilla.	Help Lenore out with some classy clothes.	AStreet.dinky
+11368	Olisi parempi jos et olisi pitänyt niitä, mutta minulla ei varmaan ole varaa olla nirso.	I'd rather you hadn't worn them, but I guess I can't be picky.	AStreet.dinky
+11369	Turvalliset Talletukset - Koska turvallinen talletus on fiksu talletus!	Safely First Savings - Where saving safely is saving smartly!	AStreet.dinky
+11370	Osakemarkkinat kiitävät, emmekä näe niiden tulevan alas pitkiin aikoihin!	The stock market is soaring, we don't see it coming down anytime soon!	AStreet.dinky
+11371	Sheriffisi haluaa sinun olevan vihreä ja notta-tuota-puhdas!	Your sheriff wants you to be green and clean-a-reno!	AStreet.dinky
+11372	Älä roskaa moottoritiellä tai vandalisoi kauppoja!	Don't litter on the highway or vandalize the storefronts!	AStreet.dinky
+11373	Uusimmat PillowBears-nallet™ ovat melkein täällä!	The latest PillowBears™ are almost here!	AStreet.dinky
+11374	Uusia värejä vuodelle 1988!	New colors for 1988!	AStreet.dinky
+11375	Kyyhkyssiskojen LVI	Pigeon Sisters Plumbing	AStreet.dinky
+11376	Fiksaamme putkistot	So let us fix your leaking waters'	AStreet.dinky
+11377	Nopeempaa ei olekaan	Nothing is faster'	AStreet.dinky
+11378	kuin Kyyhkyssiskot	than the Pigeon daughters'	AStreet.dinky
+11379	Rakkautta etsimässä	Looking for Love	AStreet.dinky
+11380	Etsin henkilöä joka oli kukkulalla viime yönä.	Seeking the person hanging out at the Vista last night.	AStreet.dinky
+11381	Meillä taisi olla yhteys.	I think we might have a connection.	AStreet.dinky
+11382	Razor ja Scummettes soittavat livenä The Hitchin' Post -ravintolassa!	Razor and the Scummettes playing live at The Hitchin' Post!	AStreet.dinky
+11383	Mukana myös VL ja Imukupit.	Support by GT and the Suction Cups.	AStreet.dinky
+11384	Mekaanisella härällä ratsastusta ilmaiseksi koko yön!	Mechanical bull rides free all night!	AStreet.dinky
+11385	Mahtavien Veljesten kiertävä sirkus	Stupendous Brothers Traveling Circus	AStreet.dinky
+11386	Pääesitys - Ransome-klovni!	Headline Act - Ransome the Clown!	AStreet.dinky
+11387	Perheystävällinen näytös alkaa klo 14.	Family show starts at 2pm.	AStreet.dinky
+11388	Käännä nupit asentoon KSCUM 198.7 ja kuule paikallisten artistien parhaat hitit!	Turn your dials to KSCUM 198.7 FM for the gnarliest hits from local artists!	AStreet.dinky
+11389	DJ Cassie sanoo "Toivottavasti pidät Tuna Headistä!"	DJ Cassie says 'I hope you like Tuna Head!'	AStreet.dinky
+11390	Seremonia kaupungintalolla	Ceremony at City Hall	AStreet.dinky
+11391	Kaupungintalo uudelleennimettiin Chuck E. Edmundin kaupungintaloksi...	City Hall is being renamed the Chuck E. Edmund City Hall...	AStreet.dinky
+11392	... kaiken sen kunniaksi, mitä Chuck on tehnyt kaupungin hyväksi.	...in honor of everything Chuck has done for the town.	AStreet.dinky
+11393	Parane pian Chuck. Kaipaamme sinua.	Get better Chuck. We miss you.	AStreet.dinky
+11394	Tämä on vain tekstiä. Tarvitsen jotain vaikuttavampaa.	This is just text. I need something more impressive for a good photo.	AStreet.dinky
+11395	Tarvitsen jotain kuvauksellisempaa kuin muistilapun.	I need something more photographic than a note.	AStreet.dinky
+11396	Liian huono sää hyvän kuvan ottamista varten.	It's too badly weathered for a good photo.	AStreet.dinky
+11397	Se on vähän pelottavaa, mutta ei oikeastaan inhottavaa.	It's a bit scary, but not really disgusting.	AStreet.dinky
+11398	Se on palava roskakori!	It's a burning trash can!	AStreet.dinky
+11399	Auts! Varpaani!	Ouch! My toe!	AStreet.dinky
+11400	Se on liian kuuma inventaariooni.	That's too hot to put in my inventory-hole.	AStreet.dinky
+11401	Olen rikas!	I'm rich!	AStreet.dinky
+11402	Toivoisin että ihmiset kierrättäisivät.	I wish people would recycle.	AStreet.dinky
+11403	Tiedän, että mikä tahansa planeetanlaajuinen ekologinen katastrofi on yli sadan vuoden päässä, mutta silti.	I know any planet-wide ecological catastrophe is a hundred or more years away, but still.	AStreet.dinky
+11404	Näyttää siltä, että Madame Morenalla on meneillään yksi hänen loputtomista okkultisista alennusmyynneistään.	Looks like Madame Morena is having one of her never ending occult sales.	AStreet.dinky
+11405	Näyttää siltä, että Madame Morena sammutti “karmaisevat” liiketunnistimensa.	Looks like Madame Morena turned off her “spooky” motion sensors.	AStreet.dinky
+11406	Hän ei huijaa niillä ketään.	She wasn't fooling anyone with those.	AStreet.dinky
+11407	Ja kyllä, käytin ilmahipsuja.	And yes, I was using air-quotes.	AStreet.dinky
+11408	En usko, että tämä on tarpeeksi inhottavaa Natalielle.	I don't think this is disgusting enough for Natalie.	AStreet.dinky
+11409	Täytetty reunaan asti haisevilla roskilla.	Filled to the brim with smelly trash.	AStreet.dinky
+11410	ThimbleCon-mainos	ThimbleCon advertisement	AStreet.dinky
+11411		a	AStreet.dinky
+11412	virallinen ilmoitus	official notice	AStreet.dinky
+11413		an	AStreet.dinky
+11414	henkilökohtainen ilmoitus	personals advertisement	AStreet.dinky
+11415		a	AStreet.dinky
+11416	pankin mainos	banking advertisement	AStreet.dinky
+11417		a	AStreet.dinky
+11418	kunnallisilmoitus	public service announcement	AStreet.dinky
+11419		a	AStreet.dinky
+11420	PillowBear™-mainos	PillowBear™ advertisement	AStreet.dinky
+11421		a	AStreet.dinky
+11422	mainos putkitöistä	plumbing advertisement	AStreet.dinky
+11423		a	AStreet.dinky
+11424	ilmoitus kadonneesta yhteydestä	missed connection ad	AStreet.dinky
+11425		a	AStreet.dinky
+11426	vanha mainos	old advertisement	AStreet.dinky
+11427		an	AStreet.dinky
+11428	haalistunut mainos	weathered advertisement	AStreet.dinky
+11429		a	AStreet.dinky
+11430	radion mainos	radio advertisement	AStreet.dinky
+11431		a	AStreet.dinky
+11432	virallinen tiedoksianto	official announcement	AStreet.dinky
+11433		an	AStreet.dinky
+11434	Postikonttorin ovi	Post Office door	AStreet.dinky
+11435	Postikonttorin ovi	the Post Office door	AStreet.dinky
+11436	Käy sisään	Enter	AStreet.dinky
+11437	Mene postitoimistoon	Enter Post Office	AStreet.dinky
+11438	Nickel Newsin ovi	Nickel News door	AStreet.dinky
+11439	Nickel Newsin ovi	the Nickel News door	AStreet.dinky
+11440	Käy sisään	Enter	AStreet.dinky
+11441	Käy sisään Nickel Newsiin	Enter Nickel News	AStreet.dinky
+11442	muistilappu	note	AStreet.dinky
+11443	muistilappu	note	AStreet.dinky
+11444	muistilappu	note	AStreet.dinky
+11445	muistilappu	note	AStreet.dinky
+11446	muistilappu	note	AStreet.dinky
+11447	muistilappu	note	AStreet.dinky
+11448	muistilappu	note	AStreet.dinky
+11449	muistilappu	note	AStreet.dinky
+11450	muistilappu	note	AStreet.dinky
+11451	muistilappu	note	AStreet.dinky
+11452	muistilappu	note	AStreet.dinky
+11453	muistilappu	note	AStreet.dinky
+11454	roskista	trash can	AStreet.dinky
+11455	10-senttinen	dime	AStreet.dinky
+11456	Pääkadulle	Main Street	AStreet.dinky
+11457	pulloa	bottle	AStreet.dinky
+11458	kylttiä	sign	AStreet.dinky
+11459	kirjakaupan ale-kyltti	the bookstore sale sign	AStreet.dinky
+11460	kirjakaupan ovi	bookstore door	AStreet.dinky
+11461	kirjakaupan ovi	the bookstore door	AStreet.dinky
+11462	Käy sisään	Enter	AStreet.dinky
+11463	Mene Okkultistiseen kirjakauppaan	Enter Occult Bookstore	AStreet.dinky
+11464	roskista	dumpster	AStreet.dinky
+11465	Älä koske kirjoihin, ellet tiedä mitä haluat!	Don't touch the books unless you know what you want!	BookStore.dinky
+11466	Vain pienet tikkaat.	Just a small ladder.	BookStore.dinky
+11467	Vain korkeat, huteran oloiset tikkaat.	Just a tall, rickety-looking ladder.	BookStore.dinky
+11468	Näyttää vähän kuolleelta Ted-serkulta siitä uudesta pelistä, jota rakastan.	Kind of looks like Dead Cousin Ted from that new game I love.	BookStore.dinky
+11469	Kammottava.	Creepy.	BookStore.dinky
+11470	En oikein ymmärrä miksi kukaan haluaisi leikkiä nukeilla.	Not sure why anyone wants to play with dolls.	BookStore.dinky
+11471	Se on se kirja Fortranista, 30-vuotiaasta tietokonekielestä.	It's that book on Fortran, a 30-year-old computer language.	BookStore.dinky
+11472	Se on kirja Fortranista, 30-vuotiaasta tietokonekielestä.	It's a book on Fortran, a 30-year-old computer language.	BookStore.dinky
+11473	Kaunis näkymä täältä ylhäältä. Näen S&D-ravintolan.	Nice view from up here. I can see the S&D Diner.	BookStore.dinky
+11474	Siinä lukee...	It reads...	BookStore.dinky
+11475	“Pelottavat silmät.”	“Creepy eyes.”	BookStore.dinky
+11476	“Pelottava nenä.”	“Creepy nose.”	BookStore.dinky
+11477	“Pelottavat jalat.”	“Creepy feet.”	BookStore.dinky
+11478	“Pelottavat varpaat.”	“Creepy toes.”	BookStore.dinky
+11479	“  - Hyvää Ystävänpäivää”	“  - Happy Valentine's Day”	BookStore.dinky
+11480	plaa plaa plaa plaa...	bla bla bla bla...	BookStore.dinky
+11481	ovi	door	BookStore.dinky
+11482	kirjakaupan ovi	the bookstore door	BookStore.dinky
+11483	Poistu	Leave	BookStore.dinky
+11484	Poistu kirjakaupasta	Leave the bookstore	BookStore.dinky
+11485	tikkaita	ladder	BookStore.dinky
+11486	tikkaita	ladder	BookStore.dinky
+11487	muumiota	mummy	BookStore.dinky
+11488	nukkea	doll	BookStore.dinky
+11489	Opi Fortrania -kirjaa	Learning Fortran	BookStore.dinky
+11490	Fortran-kirja	a Fortran book	BookStore.dinky
+11491	ikkunasta	window	BookStore.dinky
+11492	kaupunki	the town	BookStore.dinky
+11493	Se on käytössä.	It's in use.	Bathroom.dinky
+11494	Virta ei taida olla päällä.	I don't think the power is on.	Bathroom.dinky
+11495	Se on ällöttävä vessa!	It's a gross toilet!	Bathroom.dinky
+11496	On liian pimeää.	It's too dark to see.	Bathroom.dinky
+11497	Se on ällöttävä huuhtelukahva!	It's a gross toilet handle!	Bathroom.dinky
+11498	On liian pimeää.	It's too dark to see.	Bathroom.dinky
+11499	Se on ällöttävä pesuallas!	It's a gross sink!	Bathroom.dinky
+11500	On liian pimeää.	It's too dark to see.	Bathroom.dinky
+11501	Tämä on ollut rikki niin kauan kuin muistan.	This has been broken for as long as I can remember.	Bathroom.dinky
+11502	Rännistä alas.	Down the drain.	Bathroom.dinky
+11503	Se on ällöttävä hana!	It's a gross faucet!	Bathroom.dinky
+11504	On liian pimeää.	It's too dark to see.	Bathroom.dinky
+11505	Valokuvan on oltava parempi kuin ällöstä hanasta valuva vesi.	Photo needs to be better than water from a gross faucet.	Bathroom.dinky
+11506	Valokuvan on oltava parempi kuin ällössä pesualtaassa oleva vesi.	Photo needs to be better than water from a gross sink.	Bathroom.dinky
+11507	On liian pimeää.	It's too dark to see.	Bathroom.dinky
+11508	Tämä on ollut rikki niin kauan kuin muistan.	This has been broken for as long as I can remember.	Bathroom.dinky
+11509	Sen pitäisi toimia.	That should do it.	Bathroom.dinky
+11510	Se on vessapaperirulla ”kissoja ei kiinnosta” -asennossa.	It's a roll of toilet paper in the “boring for cats” position.	Bathroom.dinky
+11511	Se on vessapaperirulla ”kissat tykkää” -asennossa.	It's a roll of toilet paper in the “fun for cats” position.	Bathroom.dinky
+11512	Se on vessapaperirulla.	It's a roll of toilet paper.	Bathroom.dinky
+11513	On liian pimeää.	It's too dark to see.	Bathroom.dinky
+11514	Se on ruuvimeisseli!	It's a screwdriver!	Bathroom.dinky
+11515	On liian pimeää.	It's too dark to see.	Bathroom.dinky
+11516	On liian pimeää.	It's too dark to see.	Bathroom.dinky
+11517	On liian pimeää.	It's too dark to see.	Bathroom.dinky
+11518	Näen itseni lian läpi.	I can see myself through the grime.	Bathroom.dinky
+11519	Muikku!	Smile!	Bathroom.dinky
+11520	Muikku!	Smile!	Bathroom.dinky
+11521	En usko, että tämä on tarpeeksi inhottavaa Natalielle.	I don't think this is disgusting enough for Natalie.	Bathroom.dinky
+11522	En aio katsoa sinne, voin haistaa sen täältä!	No way am I going to look in there, I can smell it from here!	Bathroom.dinky
+11523	On liian pimeää.	It's too dark to see.	Bathroom.dinky
+11524	kylpyhuoneen ovi	bathroom door	Bathroom.dinky
+11525	kylpyhuoneen ovi	the bathroom door	Bathroom.dinky
+11526	Poistu	Leave	Bathroom.dinky
+11527	Poistu kylpyhuoneesta	Leave bathroom	Bathroom.dinky
+11528	valokatkaisinta	light switch	Bathroom.dinky
+11529	vessanpönttöä	toilet	Bathroom.dinky
+11530	jotain	something	Bathroom.dinky
+11531	vessapönttö	toilet handle	Bathroom.dinky
+11532	jotain	something	Bathroom.dinky
+11533	allas	sink	Bathroom.dinky
+11534	jotain	something	Bathroom.dinky
+11535	hana	faucet	Bathroom.dinky
+11536	jotain	something	Bathroom.dinky
+11537	vessapaperia	toilet paper	Bathroom.dinky
+11538	jotain	something	Bathroom.dinky
+11539	vessapaperia	toilet paper	Bathroom.dinky
+11540	ruuvimeisseliä	screwdriver	Bathroom.dinky
+11541	jotain	something	Bathroom.dinky
+11542	peiliä	mirror	Bathroom.dinky
+11543	jotain	something	Bathroom.dinky
+11544	minä	me	Bathroom.dinky
+11545	roskista	trash can	Bathroom.dinky
+11546	jotain	something	Bathroom.dinky
+11547	^Sinun täytyy luovuttaa vielä %d valokuvaa ennen kuin voit palata pelinkehittäjän työhösi MMucasFlemissä.	^You need to turn in %d more photos before returning to your game developer job at MMucasFlem.	StartScreen.dinky
+11548	Nyt olisi hyvä löytää kamera, vilkaista työlistaa, ja alkaa hommiin.	I better find that camera, take a look at the list, and get cracking.	StartScreen.dinky
+11549	Liikaa kaasua!	Gas is on too high!	Diner.dinky
+11550	Agggg!	Agggg!	Diner.dinky
+11551	Voi pojat voi pojat voi pojat!	Man oh man oh man!	Diner.dinky
+11552	Eiiii!	Noooo!	Diner.dinky
+11553	Joku voisi säätää kaasua pienemmälle!	Someone turn down the gas!	Diner.dinky
+11554	Alas! Pysy matalana!	Down! Stay down!	Diner.dinky
+11555	Se on Kobe-hodari.	It's a Kobe beef hot dog.	Diner.dinky
+11556	Se on svetsinleike-hodari.	It's a Swiss pork hot dog.	Diner.dinky
+11557	Se on yrttikana-hodari.	It's a herb and chicken hot dog.	Diner.dinky
+11558	Se on lehtikaali-hodari Dijon-sinapilla.	It's a French mustard and kale veggie dog.	Diner.dinky
+11559	Se on viritetty KSCUM-kanavalle. Kuten sen pitäisikin olla!	It's tuned to KSCUM. As it should be!	Diner.dinky
+11560	Tarvitsee enemmän KSCUMia!	Needs more KSCUM!	Diner.dinky
+11561	Hienoa tavaraa! Kaikenlaisia gourmet-hodareita.	Fancy stuff! All kinds of gourmet hot dogs.	Diner.dinky
+11562	Laatu on kyllä noussut sen jälkeen, kun Dave ja Sandy voittivat kaikki ne palkinnot.	Quality sure has gone up since Dave and Sandy won all those awards.	Diner.dinky
+11563	Onpa iso tuli!	That's a lot of fire!	Diner.dinky
+11564	Näyttääpä vaaralliselta! Mitä tahansa jutun vuoksi.	Looks dangerous! Anything for a story.	Diner.dinky
+11565	ovi	door	Diner.dinky
+11566	ravintolan ovi	the Diner door	Diner.dinky
+11567	Poistu	Leave	Diner.dinky
+11568	Poistu ravintolasta	Leave the Diner	Diner.dinky
+11569	hodaria	hot dog	Diner.dinky
+11570	hodaria	hot dog	Diner.dinky
+11571	hodaria	hot dog	Diner.dinky
+11572	hodaria	hot dog	Diner.dinky
+11573	radio	radio	Diner.dinky
+11574	ruokalista	menu	Diner.dinky
+11575	ravintolan ruokalista	the Diner menu	Diner.dinky
+11576	tulipallot	fireballs	Diner.dinky
+11577	Dave ja tulipallot	Dave and the fireballs	Diner.dinky
+11578	Vain vetolaatikko.	Just a drawer.	SheriffsOffice.dinky
+11579	Vain outo poliisiraportti hylätystä sirkuksesta. Joka ei ole hylätty.	Just the odd police report about the abandoned circus. Which isn't abandoned.	SheriffsOffice.dinky
+11580	Vain joitakin vanhoja poliisiasiakirjoja.	Just some old police files.	SheriffsOffice.dinky
+11581	Vain joitakin vanhoja poliisiraportteja.	Just some old police reports.	SheriffsOffice.dinky
+11582	Raportteja pienistä rikkomuksista.	Reports of minor infractions.	SheriffsOffice.dinky
+11583	Onpa omituista? Poliisiraportti ongelmista hylätyssä sirkuksessa?	That's odd? There is a police report for trouble at the abandoned circus?	SheriffsOffice.dinky
+11584	Sirkus ei ole hylätty? Ransome ei ole koskaan ollut suositumpi.	The circus isn't abandoned? Ransome has never been more popular.	SheriffsOffice.dinky
+11585	Vain joitakin vanhoja poliisiasiakirjoja.	Just some old police files.	SheriffsOffice.dinky
+11586	Vain joitakin vanhoja poliisiraportteja.	Just some old police reports.	SheriffsOffice.dinky
+11587	Raportteja pienistä rikkomuksista.	Reports of minor infractions.	SheriffsOffice.dinky
+11588	Avaa tämä ovi!	Open this door!	SheriffsOffice.dinky
+11589	Avaa tämä ovi nyt!	Open this door now!	SheriffsOffice.dinky
+11590	Avaa notta-tuota tämä ovi!	Open this door-a-reno!	SheriffsOffice.dinky
+11591	Olen lain-notta-tuota-valvoja!	I'm an officer of the law-a-reno!	SheriffsOffice.dinky
+11592	Voisin notta-tuota-sakoittaa sinua tästä.	I could write-a-reno you a ticket for this.	SheriffsOffice.dinky
+11593	notta-tuota! notta-tuota! notta-tuota-hälytys-notta-tuota!	A-reno! A-reno! A-reno-alert-a-reno!	SheriffsOffice.dinky
+11594	Miksi en ottanut tänään mukaani virka-notta-tuota-asetta?	Why didn't I bring my service-revolver-a-reno today?	SheriffsOffice.dinky
+11595	Himskatti-notta-tuota!	Dagnabbit-a-reno!	SheriffsOffice.dinky
+11596	Mitä-notta-tuota-hittoa!	What-the-a-reno!	SheriffsOffice.dinky
+11597	Himskatti-notta-tuota!	Dagnabbit-a-reno!	SheriffsOffice.dinky
+11598	En yletä notta-tuota-radioon.	I can't reach the radio-a-reno.	SheriffsOffice.dinky
+11599	Delores!!	Delores!!	SheriffsOffice.dinky
+11600	Nykyajan pennut-notta-tuota.	Kids-a-reno these days!	SheriffsOffice.dinky
+11601	Missä on avaimeni?	Where's my key?	SheriffsOffice.dinky
+11602	Mitä-notta-tuota-hittoa!	What-the-a-reno!	SheriffsOffice.dinky
+11603	Älä notta-tuota koske siihen.	Don't touch that-a-reno.	SheriffsOffice.dinky
+11604	Pöh!	Humph!	SheriffsOffice.dinky
+11605	Nykyajan pennut-notta-tuota.	Kids-a-reno these days!	SheriffsOffice.dinky
+11606	Miksi?	Why?	SheriffsOffice.dinky
+11607	Ole hyvä ja notta-tuota-poistu.	Please leave-a-reno.	SheriffsOffice.dinky
+11608	Mitä-notta-tuota-hittoa!	What-the-a-reno!	SheriffsOffice.dinky
+11609	En näe häntä-juu-tuota	I don't see him-a-who?	SheriffsOffice.dinky
+11610	Sheriffi ei ole juu-tuota-täällä?	Sheriff's not here-a-who?	SheriffsOffice.dinky
+11611	Sheriffi on tainnut juu-tuota-lähteä käymään jossakin?	Sheriff must have stepped-a-who out-a-who?	SheriffsOffice.dinky
+11612	Missä on notta-tuota-avaimeni?	Where is the key-a-reno?	SheriffsOffice.dinky
+11613	Onko sinulla notta-tuota avain?	Do you have-a-reno the key?	SheriffsOffice.dinky
+11614	Minun täytyy päästä notta-tuota-ulos.	I need to get out-a-reno.	SheriffsOffice.dinky
+11615	Minulla ei ole notta-tuota-avainta!	I don't have-a-reno the key!	SheriffsOffice.dinky
+11616	Missä on juu-tuota-avain?	Where is the key-a-who?	SheriffsOffice.dinky
+11617	Onko sinulla juu-tuota avain?	Do you have-a-who the key?	SheriffsOffice.dinky
+11618	Sinun täytyy päästä juu-tuota-ulos.	You need to get out-a-who.	SheriffsOffice.dinky
+11619	Minulla ei ole juu-tuota-avainta!	I don't have-a-who the key!	SheriffsOffice.dinky
+11620	Nämä olivat kammottavia. Olen iloinen siitä, että ne on poistettu käytöstä.	These things were creepy. I'm glad they were deactivated.	SheriffsOffice.dinky
+11621	Se on etsintäkuulutusjuliste.	It's a wanted poster.	SheriffsOffice.dinky
+11622	Se taisi tulla laatikossa.	I think that one came in the box.	SheriffsOffice.dinky
+11623	Etsintäkuulutus: etsintäkuulutus-juliste. Ei palkkiota.	Wanted: One wanted poster. No reward.	SheriffsOffice.dinky
+11624	Se on poliisin virallinen puhelin.	It's an official police phone.	SheriffsOffice.dinky
+11625	Hei! Se on virallinen poliisin-notta-tuota-puhelin. Joku saattaa soittaa hätäpuhelun.	Hey! That's an official police-a-reno phone. Someone might call in with an emergency-a-reno.	SheriffsOffice.dinky
+11626	Se on virallinen “poliisi-notta-tuota”-puhelin. Joku voi soittaa “hätä-notta-tuota”-puhelun.	That's an official “police-a-reno” phone. Someone might call in with an “emergency-a-reno”.	SheriffsOffice.dinky
+11627	Se on virallinen poliisipuhelin. Joku voi soittaa hätäpuhelun.	That's an official police phone. Someone might call in with an emergency.	SheriffsOffice.dinky
+11628	Se on arkistokaappi!	It's a cabinet!	SheriffsOffice.dinky
+11629	Se on arkistokaappi!	It's a cabinet!	SheriffsOffice.dinky
+11630	Se on iso avain.	It's a large key.	SheriffsOffice.dinky
+11631	Älä notta-tuota koske avaimeen.	Don't touch the key-a-reno.	SheriffsOffice.dinky
+11632	Se on viritetty KSCUM-kanavalle. Kuten sen pitäisikin olla!	It's tuned to KSCUM. As it should be!	SheriffsOffice.dinky
+11633	Tarvitsee enemmän KSCUMia!	Needs more KSCUM!	SheriffsOffice.dinky
+11634	Olisi inhottavaa tulla vangituksi tänne.	I'd hate to get locked up in here.	SheriffsOffice.dinky
+11635	Se on lukossa.	It's locked.	SheriffsOffice.dinky
+11636	En halua päästää häntä ulos, kun he ovat niin kiihdyksissä.	I don't want to let him out while they are so upset.	SheriffsOffice.dinky
+11637	He näyttävät järkyttyneiltä.	They look upset.	SheriffsOffice.dinky
+11638	PidätysBotti 3000™	ArrestTron 3000™	SheriffsOffice.dinky
+11639	PidätysBotti 3000™	the ArrestTron 3000™	SheriffsOffice.dinky
+11640	ovi	door	SheriffsOffice.dinky
+11641	Poistu	Leave	SheriffsOffice.dinky
+11642	Poistu sheriffin toimistosta	Leave the Sheriff's Office	SheriffsOffice.dinky
+11643	juliste	poster	SheriffsOffice.dinky
+11644	juliste	poster	SheriffsOffice.dinky
+11645	juliste	poster	SheriffsOffice.dinky
+11646	puhelin	phone	SheriffsOffice.dinky
+11647	kaappi	cabinet	SheriffsOffice.dinky
+11648	kaappi	cabinet	SheriffsOffice.dinky
+11649	avain	key	SheriffsOffice.dinky
+11650	radio	radio	SheriffsOffice.dinky
+11651	sellin ovi	jail door	SheriffsOffice.dinky
+11652	sellin ovi	the jail door	SheriffsOffice.dinky
+11653	Sheriffi ja patologi	Sheriff and Coroner	SheriffsOffice.dinky
+11654		the	SheriffsOffice.dinky
+11655	Se on vähän päälle kello viisi.	It's just after five o'clock.	Bank.dinky
+11656	Olen tainnut nähdä tämän maalauksen jossakin aiemmin.	I think I've seen this painting somewhere before.	Bank.dinky
+11657	Vaikuttavaa!	Impressive!	Bank.dinky
+11658	Se on pankin mainoslehtinen.	It's a promotional bank flyer.	Bank.dinky
+11659	Pankin esitteet ovat lopussa.	No bank flyers left.	Bank.dinky
+11660	Se on Chuck-sedän “Philippin Vaarallinen Läite.”	It's Uncle Chuck's “Philipp's Dangerous Dövice.”	Bank.dinky
+11661	Pankkiiri taitaa pitää sen turvassa, joten hänen omistuksensa ei muutu radioaktiiviseksi pölyksi.	I guess the banker is keeping it safe so his repossession doesn't turn to radioactive dust.	Bank.dinky
+11662	Se on pankin virallinen puhelin.	It's an official bank phone.	Bank.dinky
+11663	Minun ei ehkä pitäisi. Jollakin, jolla on tärkeä pankkiasia, saattaa soittaa.	I probably shouldn't, someone with important bank business might call.	Bank.dinky
+11664	Se on palava roskakori!	It's a burning trash can!	Bank.dinky
+11665	Pankissa!	In a bank!	Bank.dinky
+11666	Auts! Varpaani!	Ouch! My toe!	Bank.dinky
+11667	Se on liian kuuma inventaariooni.	That's too hot to put in my inventory-hole.	Bank.dinky
+11668	kello	clock	Bank.dinky
+11669	En usko, että tämä kello on tarpeeksi pieni.	I don't think that clock is tiny enough.	Bank.dinky
+11670	maalaus	painting	Bank.dinky
+11671	kyltti	sign	Bank.dinky
+11672	ovi	door	Bank.dinky
+11673	pankin ovi	the bank door	Bank.dinky
+11674	Poistu	Leave	Bank.dinky
+11675	Poistu pankista	Leave the bank	Bank.dinky
+11676	pankin esitteitä	bank flyers	Bank.dinky
+11677	pankin esitteitä	bank flyers	Bank.dinky
+11678	“Philippin Vaarallinen Läite”	“Philipp's Dangerous Dövice”	Bank.dinky
+11679	purkukuvan täytyy olla paljon dramaattisempi.	The demolition photo needs to be way more dramatic.	Bank.dinky
+11680	pankin puhelin	bank phone	Bank.dinky
+11681	roskis	trash can	Bank.dinky
+11682	Se on vähän pelottavaa, mutta ei oikeastaan inhottavaa.	It's a bit scary, but not really disgusting.	Bank.dinky
+11683	Tuolla alhaalla vilkkuu Quickie Pal.	There's the Quickie Pal down there, flashing away.	Vista.dinky
+11684	Minun ei pitäisi kuhnailla juoksentelemalla pitkin piirikuntaa.	I shouldn't dilly-dally by walking down into the country.	Vista.dinky
+11685	Natalie luottaa että saan hyviä valokuvia.	Natalie is counting on me for those photographs.	Vista.dinky
+11686	Rakastan sirkusta!	I love the circus!	Vista.dinky
+11687	Minun pitää huolehtia että näen Ransome-klovnin näytöksen ennen kuin palaan töihin MMucasFlem Gamesille.	I need to make sure I see Ransome the Clown's show before I go back to MMucasFlem Games.	Vista.dinky
+11688	Se on vanha Edmund-hotelli.	It's the old Edmund Hotel.	Vista.dinky
+11689	Se oli Chuck-setän ilo ja ylpeys, kunnes pankki pakkolunasti sen hänen jouduttua parantolaan.	That was Uncle Chuck's pride and joy until the bank repossessed it when he was committed to the sanitarium.	Vista.dinky
+11690	Siellä tehdään PillowBears™-nalleja, mutta mielestäni otos PillowBearista™ olisi parempi valokuva.	That's where they'll make PillowBears™, but I think an image of a PillowBear™ is a better photo.	Vista.dinky
+11691	On mukava nähdä että tehdas taas käynnistyy ja alkaa valmistamaan PillowBearsejä™.	It's nice to see the factory ramping up again to make PillowBears™.	Vista.dinky
+11692	Kartano-kartano on loistokunnossa. Tarvitsen kuvan talon purkamisesta.	The Mansion mansion is in great shape. I need a photo for home demolition.	Vista.dinky
+11693	Se on kuin Thimbleweedin oma yksityinen Tšernobyl.	It's like Thimbleweed's own private Chernobyl.	Vista.dinky
+11694	Vanha kotini ennen kuin pankki pakkolunasti sen.	My old home before it was repossessed by the bank.	Vista.dinky
+11695	KSCUM soittaa kaikki hitit.	KSCUM plays all the hits.	Vista.dinky
+11696	kaupunki	town	Vista.dinky
+11697	maaseutu	country	Vista.dinky
+11698	liikennekartio	traffic cone	Vista.dinky
+11699	sirkus	circus	Vista.dinky
+11700	sirkus	the circus	Vista.dinky
+11701	sirkus	circus	Vista.dinky
+11702	sirkus	the circus	Vista.dinky
+11703	hotelli	hotel	Vista.dinky
+11704	Edmund-hotelli	the Edmund Hotel	Vista.dinky
+11705	hotelli	hotel	Vista.dinky
+11706	Edmund-hotelli	the Edmund Hotel	Vista.dinky
+11707	tehdas	factory	Vista.dinky
+11708	tehdas	the factory	Vista.dinky
+11709	radioaktiivinen kraatteri	radioactive crater	Vista.dinky
+11710	Edmundin Kartano -kartano	Edmund Mansion mansion	Vista.dinky
+11711	radioaktiivinen kraatteri	a radioactive crater	Vista.dinky
+11712	vanha Kartano-kartanomme	our old Mansion mansion	Vista.dinky
+11713	radioasema	radio station	Vista.dinky
+11714	radioasema	the radio station	Vista.dinky
+11715	FORTRAN⏎	FORTRAN⏎	Book.dinky
+11716	Esittely⏎	An introduction⏎	Book.dinky
+11717	⏎	⏎	Book.dinky
+11718	Vaikka monet ohjelmoijat pitävät nykyään FORTRANia kuolleena ohjelmointikielenä, niin mikään ei voisi olla kauempana totuudesta.⏎⏎	While many programmers today consider FORTRAN to be a dead programming language, nothing could be further from the truth.⏎⏎	Book.dinky
+11719	Kirjoittajat ovat varmoja, että vuoteen 2020 (ja sen jälkeenkin) FORTRAN tulee olemaan ohjelmointikielien etulinjassa.⏎⏎	The authors have no doubt that well into the 2020's (and beyond) FORTRAN will be at the forefront of all computer languages.⏎⏎	Book.dinky
+11720	Tämä kirja toimii työkaluna nykyaikaiselle ohjelmoijalle joka etsii saumaa ohjelmoinnin tulevaisuudessa.	This book is to serve as a tool for the modern programmer looking for an edge in the future of computer programing.	Book.dinky
+11721	⏎program circle⏎	⏎program circle⏎	Book.dinky
+11722	real r, area⏎	real r, area⏎	Book.dinky
+11723	⏎	⏎	Book.dinky
+11724	c Lukee numeron ja tulostaa⏎	c Reads a number and prints⏎	Book.dinky
+11725	c ympyrän pinta-alan.⏎	c the area of a circle.⏎	Book.dinky
+11726	⏎	⏎	Book.dinky
+11727	kirjoita (*,*) 'Give radius r:'⏎	write (*,*) 'Give radius r:'⏎	Book.dinky
+11728	lue  (*,*) r⏎	read  (*,*) r⏎	Book.dinky
+11729	alue = 3.14159*r*r⏎	area = 3.14159*r*r⏎	Book.dinky
+11730	kirjoita (*,*) 'Area = ', area⏎	write (*,*) 'Area = ', area⏎	Book.dinky
+11731	⏎	⏎	Book.dinky
+11732	stop⏎	stop⏎	Book.dinky
+11733	loppu⏎	end⏎	Book.dinky
+11734	Ei!	No!	Ending.dinky
+11735	En voi hyvin...	I don't feel well...	Ending.dinky
+11736	Menen haukkaamaan happea...	I'm going to get fresh air...	Ending.dinky
+11737	Voi ei... kaikki alkaa palautumaan mieleen.	Oh no... it's all coming back.	Ending.dinky
+11738	Niin...	So...	Ending.dinky
+11739	...luulen, että tämä on ihan minun syytäni.	...I guess this is all my fault.	Ending.dinky
+11740	Se on varmaan ollut bugi hakkeroidussa pelitallennuksessani.	It must have been a bug in my hacked savegame.	Ending.dinky
+11741	Minulla ei ole samoja taitoja kuin sinulla.	I don't have the same skills you do.	Ending.dinky
+11742	Kenelläpä olisi.	Who does.	Ending.dinky
+11743	Sinun ei olisi pitänyt nähdä tälle puolen...	You weren't supposed to see through to this side...	Ending.dinky
+11744	...mutta kaipa kaikki kaatuu nyt.	...but I guess it's all come crashing down now.	Ending.dinky
+11745	Käydäänpä katsomassa voidaanko tehdä korjauspäivitys...	Let's go see if we can apply a patch...	Ending.dinky
+11746	...saatan tietää juuri oikeanlaisen.	...I might know just the one.	Ending.dinky
+11747	Delores: Kiitos kun liityit Thimbleweed Nickel valokuvajournalismi -tiimiin.⏎	Delores: Thanks for joining the Thimbleweed Nickel Photojournalism Team.⏎	Note.dinky
+11748	Toimeksiantonasi on ottaa valokuvat seuraavista tulevista jutuista:⏎⏎	For your assignment, I'd like you to get the following photos for some upcoming stories:⏎⏎	Note.dinky
+11749	⏎P.S. Kiitos kun autat lomallasi MMucasFlem Gamesistä.	⏎P.S. Thanks for helping out while you're on vacation from MMucasFlem Games.	Note.dinky
+11750	Juttu itsenäisyyspäivästä	Story about the 4th of July	Note.dinky
+11751	Palsta Thimbleweed-piirikunnasta	Column about Thimbleweed County	Note.dinky
+11752	Juttu lasten köyhyydestä	Story about childhood poverty	Note.dinky
+11753	Kuva Nickel News -lehden päätoimittajasta	Photo of the editor of the Nickel News	Note.dinky
+11754	Toimintakuva vaarallisesta villieläimestä	Action photo of dangerous wildlife	Note.dinky
+11755	Huono Thimbleweed-juomavedemme laatu	Our bad Thimbleweed drinking water quality	Note.dinky
+11756	Jotain ällöttävää	Something disgusting	Note.dinky
+11757	Juttu Presidentti Thomas Jeffersonista	Story about President Thomas Jefferson	Note.dinky
+11758	Katsaus antiikkisiin kuolleisiin kieliin	A look at the dead languages of antiquity	Note.dinky
+11759	Paljastusjuttu siitä kuinka hauskaa on elää kissojen kanssa	Exposé on the humor of living with cats	Note.dinky
+11760	Ilkivaltaa valtion omaisuutta kohtaan	Government property vandalism	Note.dinky
+11761	Juttu Edmund-hotellin sulkemisesta	Piece on the closing of the Edmund Hotel	Note.dinky
+11762	Hyvä esimerkki proksimaalisista phalangeista	A good example of proximal phalanges	Note.dinky
+11763	Pureva juttu töykeistä pankkivirkailijoista	Biting piece on rude bank employees	Note.dinky
+11764	Seikkailupeliarvosteluita	Reviews of some new adventure games	Note.dinky
+11765	Kunnallispalvelu-artikkeli roskien keräämisestä	Public service piece about picking up trash	Note.dinky
+11766	ThimbleCon '88:n mainosartikkeli	Puff-piece on ThimbleCon '88	Note.dinky
+11767	Lintuperspektiivi kaupungista	Birds-eye view of the town	Note.dinky
+11768	Kuva uudesta valokuvajournalististamme	Take a photo of our newest photojournalist	Note.dinky
+11769	Juttu runonurkkaan	Story for the poetry section	Note.dinky
+11770	Kuva julkkiksesta	Headshot for a story on a celebrity	Note.dinky
+11771	Kuva vaarallista työstä tekevästä henkilöstä	Photo of a person doing a dangerous job	Note.dinky
+11772	Juttu talon purkamisesta	Story on home demolition	Note.dinky
+11773	Juttu tieturvallisuudesta	Story about road safety	Note.dinky
+11774	Artikkeli vanhanaikaisista mustavalkoisista valokuvista	Article on old-timey black and white photos	Note.dinky
+11775	Suosikkijuttu puhelimen historiasta	A hit-piece on the history of the phone	Note.dinky
+11776	Pienten kellojen historia	History of tiny clocks	Note.dinky
+11777	Juttu tuplana näkemisestä	A story about seeing double	Note.dinky
+11778	Paljastusjuttu Thimbleweedin uhkapeli-ongelmasta	An exposé on Thimbleweed's gambling problem	Note.dinky
+11779	Juttu viimeisimmästä leluhullutuksesta	Story about the latest toy craze	Note.dinky
+11780	Juttu allergioista	Story about allergies	Note.dinky
+11781	Nämä olivat kammottavia. Olen iloinen siitä, että ne on poistettu käytöstä.	These things were creepy. I'm glad they were deactivated.	CoronersOffice.dinky
+11782	Ne voisivat toimia varoituksena tekoälyn vaaroista.	They should serve as a warning about the dangers of AI.	CoronersOffice.dinky
+11783	Pelottavaa ajatella, että Chuck-setä olisi tullut digitoiduksi ja imaistuksi tekoäly-luomukseensa.	Scary to think about Uncle Chuck getting digitized and sucked into his AI creation.	CoronersOffice.dinky
+11784	Olen iloinen, että minä ja ne kaksi liittovaltion edustajaa pystyimme päästämään hänet ulos.	I'm glad me and those two federal agents were able to get him out.	CoronersOffice.dinky
+11785	Toki, hän viettää loppuelämänsä parantolassa.	Of course, he will probably spend the rest of his life in that sanitarium.	CoronersOffice.dinky
+11786	Vapisen ajatellessani, mitä olisi tapahtunut, jos emme olisi saapuneet ajoissa.	I shudder to think what would have happened if we hadn't gotten to him in time.	CoronersOffice.dinky
+11787	Botti 3000™ -laitteet kammottavat minua enemmän kuin ruumishuoneella oleminen.	The Tron 3000™ machines creep me out more than being in the morgue.	CoronersOffice.dinky
+11788	Vain laatikko.	Just a drawer.	CoronersOffice.dinky
+11789	Vain outo kuolinsyytodistus Boriksen murhasta.	Just the odd coroner report about the murder of Boris.	CoronersOffice.dinky
+11790	Joka ei ole voinut tapahtua.	Which couldn't have happened.	CoronersOffice.dinky
+11791	Outoa? Täällä on jonkun viime vuonna murhatun Boriksen ruumiinavausraportti?	Weird? There is an autopsy report for a murder last year of someone named Boris?	CoronersOffice.dinky
+11792	There hasn't been a murder in Thimbleweed Park for twenty years.	There hasn't been a murder in Thimbleweed Park for twenty years.	CoronersOffice.dinky
+11793	Vain joitakin vanhoja ruumiinavaus-dokumentteja.	Just some old coroner files.	CoronersOffice.dinky
+11794	Paljon vanhoja asiakirjoja.	Lots of old files.	CoronersOffice.dinky
+11795	Kasa huonosti järjestettyjä asiakirjoja.	Bunch of badly organized files.	CoronersOffice.dinky
+11796	Se on luuranko!	It's a skeleton!	CoronersOffice.dinky
+11797	Sitkeä karkkisisältö	Chewy Caramel Center.	CoronersOffice.dinky
+11798	Outoa? En tiennyt että patologin tutkinnon voi saada kirjekoulutuksena.	Odd? I didn't know you could mail order for coroner degrees.	CoronersOffice.dinky
+11799	ovi	door	CoronersOffice.dinky
+11800	Poistu	Leave	CoronersOffice.dinky
+11801	Poistu ruumishuoneelta	Leave the Coroner's Office	CoronersOffice.dinky
+11802	NäppiBotti 3000™	FingerTron 3000™	CoronersOffice.dinky
+11803	NäppiBotti 3000™	the FingerTron 3000™	CoronersOffice.dinky
+11804	VeriBotti 3000™	BloodTron 3000™	CoronersOffice.dinky
+11805	VeriBotti 3000™	the BloodTron 3000™	CoronersOffice.dinky
+11806	NaamaBotti 3000™	FaceTron 3000™	CoronersOffice.dinky
+11807	NaamaBotti 3000™	the FaceTron 3000™	CoronersOffice.dinky
+11808	luuranko	skeleton	CoronersOffice.dinky
+11809	kartta	chart	CoronersOffice.dinky
+11810	sertifikaatti	certificate	CoronersOffice.dinky
+11811	Peli on tauolla	Game Paused	SystemHelpers.dinky
+11812	ENNENNÄKEMÄTÖN	NEVER SEEN	VerbHelpers.dinky
+11813	Kävele	Walk to	VerbHelpers.dinky
+11814	Katso	Look at	VerbHelpers.dinky
+11815	Käytä	Use	VerbHelpers.dinky
+11816	Katso	Look in	VerbHelpers.dinky
+11817	Tarkista	Check	VerbHelpers.dinky
+11818	Katso	Look at	VerbHelpers.dinky
+11819	Tutki	Examine	VerbHelpers.dinky
+11820	Poistu	Leave	VerbHelpers.dinky
+11821	Käy sisään	Enter	VerbHelpers.dinky
+11822	Lue	Read	VerbHelpers.dinky
+11823	Puhu	Talk to	VerbHelpers.dinky
+11824	Avaa lukitus	Unlock	VerbHelpers.dinky
+11825	Potkaise	Kick	VerbHelpers.dinky
+11826	Avaa	Open	VerbHelpers.dinky
+11827	Sulje	Close	VerbHelpers.dinky
+11828	Väännä auki	Pry open	VerbHelpers.dinky
+11829	Poimi	Pick up	VerbHelpers.dinky
+11830	Ota	Take	VerbHelpers.dinky
+11831	Käännä	Flip	VerbHelpers.dinky
+11832	Valitse numero	Dial	VerbHelpers.dinky
+11833	Työnnä	Push	VerbHelpers.dinky
+11834	Vedä	Pull	VerbHelpers.dinky
+11835	Vedä alas	Pull down	VerbHelpers.dinky
+11836	Työnnä oikealle	Push right	VerbHelpers.dinky
+11837	Työnnä vasemmalle	Push left	VerbHelpers.dinky
+11838	Laita päälle	Turn on	VerbHelpers.dinky
+11839	Laita pois päältä	Turn off	VerbHelpers.dinky
+11840	Kiive	Climb	VerbHelpers.dinky
+11841	Pyöritä	Spin	VerbHelpers.dinky
+11842	Käännä	Turn	VerbHelpers.dinky
+11843	Vedä	Flush	VerbHelpers.dinky
+11844	Haista	Smell	VerbHelpers.dinky
+11845	Aktivoi	Activate	VerbHelpers.dinky
+11846	Juo	Drink	VerbHelpers.dinky
+11847	Nuole	Lick	VerbHelpers.dinky
+11848	Syö	Eat	VerbHelpers.dinky
+11849	Tanssi	Dance	VerbHelpers.dinky
+11850			VerbHelpers.dinky
+11851	Anna $NOUN1$lle	Give to $NOUN1$	VerbHelpers.dinky
+11852	Anna $NOUN2$lle	Give to $NOUN2$	VerbHelpers.dinky
+11853	Polta $NOUN1$ $NOUN2$ssa	Burn $NOUN1$ in $NOUN2$	VerbHelpers.dinky
+11854	Käytä $NOUN2$	Drop in $NOUN2$	VerbHelpers.dinky
+11855	Täytä $NOUN2$	Fill $NOUN2$	VerbHelpers.dinky
+11856	Tyhjä $NOUN2$ $NOUN1$ssa	Empty $NOUN2$ in $NOUN1$	VerbHelpers.dinky
+11857	Valokuvaa $NOUN2$	Take photo of $NOUN2$	VerbHelpers.dinky
+11858	Laita $NOUN1$ $NOUN2$lle	Put $NOUN1$ on $NOUN2$	VerbHelpers.dinky
+11859	Avaa $NOUN1$:n lukitus $NOUN2$llä	Unlock $NOUN1$ with $NOUN2$	VerbHelpers.dinky
+11860	Särje $NOUN1$ $NOUN2$llä	Vandalize $NOUN1$ with $NOUN2$	VerbHelpers.dinky
+11861	Tökkää $NOUN2$ $NOUN1$ kanssa	Jab $NOUN2$ with $NOUN1$	VerbHelpers.dinky
+11862	Liuota julisteliima $NOUN2$llä	Dissolve poster glue with $NOUN2$	VerbHelpers.dinky
+11863	Löysää $NOUN1$ $NOUN2$llä	Loosen $NOUN1$ with $NOUN2$	VerbHelpers.dinky
+11864	Kiristä $NOUN1$ $NOUN2$llä	Tighten $NOUN1$ with $NOUN2$	VerbHelpers.dinky
+11865	Näytä $NOUN1$ $NOUN2$lle	Show $NOUN1$ the $NOUN2$	VerbHelpers.dinky
+11866	Raaputa $NOUN1$ $NOUN2$llä	Scrape $NOUN1$ with $NOUN2$	VerbHelpers.dinky
+11867	Heitä $NOUN1$ $NOUN2$een	Toss $NOUN1$ in $NOUN2$	VerbHelpers.dinky
+11868	Korjaa $NOUN1$ $NOUN2$llä	Repair $NOUN1$ with $NOUN2$	VerbHelpers.dinky
+11869	En yletä.	I can't reach that.	ActorHelpers.dinky
+11870	Mielestäni tässä ei ole tarpeeksi pölyä Natalielle.	I don't think this is enough dust for Natalie.	DustHelpers.dinky
+11871	On liian pimeää.	It's too dark to see	DustHelpers.dinky
+11872	Se on pölyhiukkanen.	It's a speck of dust.	DustHelpers.dinky
+11873	On liian pimeää.	It's too dark to see.	DustHelpers.dinky
+11874	jotain	something	DustHelpers.dinky
+11875	pölyhiukkanen	speck of dust	DustHelpers.dinky
+11882	Hei, missä opit ohjelmoimaan?	Hi, were did you learn to program?	Defines.dinky
+11883	Valokuva tyhjästä lasista ei ole riittävä.	A photo of an empty glass isn't good enough.	Inventory.dinky
+11884	Se on lasillinen pilaantunutta vettä!	It's a glass of polluted water!	Inventory.dinky
+11885	Se on tyhjä lasi.	It's an empty glass.	Inventory.dinky
+11886	Ei taida olla fiksua.	I don't think that's smart.	Inventory.dinky
+11887	Tuskin kestän hajua!	I can barely stand the smell!	Inventory.dinky
+11888	Se ei ole hyvä idea.	That's not a good idea.	Inventory.dinky
+11889	Ok, tästä lähtee.	Ok, here goes.	Inventory.dinky
+11890	*huurrrll*	*huurrrll*	Inventory.dinky
+11891	*yöööörrrggghh*	*bleeeuuurrrggghh*	Inventory.dinky
+11892	*raaaaaallllllllllffff*	*raaaaaallllllllllffff*	Inventory.dinky
+11893	*huoh*	*sigh*	Inventory.dinky
+11894	Voin jo paremmin.	I feel better now.	Inventory.dinky
+11895	Valokuva tyhjästä lasista ei ole riittävä.	A photo of an empty glass isn't good enough.	Inventory.dinky
+11896	Filmi on loppu! Pitäisi varmaan puhua Natalielle.	I don't have any film left! Maybe I should go see Natalie.	Inventory.dinky
+11897	Jopa salaman kanssa kuvan ottamiseen ei olisi tarpeeksi valoa.	Even with the flash, there isn't enough light to take a picture.	Inventory.dinky
+11898	Olen jo ottanut kuvan niistä.	I already took a photo of them.	Inventory.dinky
+11899	Olen jo ottanut kuvan siitä.	I already took a photo of that.	Inventory.dinky
+11900	Tämä on hyvä otos!	That's a good shot!	Inventory.dinky
+11901	Natalie tulee rakastamaan tätä!	Natalie will love this one!	Inventory.dinky
+11902	Tämä on täydellinen artikkelia varten!	This is perfect for the story!	Inventory.dinky
+11903	Minulla on vain kaksi ruutua jäljellä.	I only have two shots left.	Inventory.dinky
+11904	Minulla on vain yksi ruutu jäljellä, parempi onnistua.	I only have one shot left, I better make it count.	Inventory.dinky
+11905	Se on minun luotettava SnapTron3000™.	It's my trusting SnapTron3000™.	Inventory.dinky
+11906	Kymmenen ruutua jäljellä.	I have ten shots left.	Inventory.dinky
+11907	Yhdeksän ruutua jäljellä.	I have nine shots left.	Inventory.dinky
+11908	Kahdeksan ruutua jäljellä.	I have eight shots left.	Inventory.dinky
+11909	Seitsemän ruutua jäljellä.	I have seven shots left.	Inventory.dinky
+11910	Kuusi ruutua jäljellä.	I have six shots left.	Inventory.dinky
+11911	Viisi ruutua jäljellä.	I have five shots left.	Inventory.dinky
+11912	Neljä ruutua jäljellä.	I have four shots left.	Inventory.dinky
+11913	Kolme ruutua jäljellä.	I have three shots left.	Inventory.dinky
+11914	Kaksi ruutua jäljellä.	I have two shots left.	Inventory.dinky
+11915	Yksi ruutu jäljellä.	I have one shot left.	Inventory.dinky
+11916	Filmi on loppu! Pitäisi varmaan puhua Natalielle.	I'm out of film. Maybe I should go see Natalie.	Inventory.dinky
+11917	^Se on valokuva aiheesta %s.	^It's a photo of %s.	Inventory.dinky
+11918	Minun on parempi pitää tämä tallessa.	I'd better hold onto this one.	Inventory.dinky
+11919	Minun on parempi pitää tämä tallessa.	I'd better hold onto this one.	Inventory.dinky
+11920	Natalie tulee rakastamaan tätä!	Natalie will want this one.	Inventory.dinky
+11921	Se oli hieno esitys. Pidän tämän itselläni.	This was a great shot. I'm keeping it.	Inventory.dinky
+11922	Täällä on liian pimeää lukea.	It's too dark to read in here.	Inventory.dinky
+11923	En halua polttaa tätä, tarvitsen sitä suorittaakseni tehtäväni.	I don't want to burn this, I need it to complete my assignment.	Inventory.dinky
+11924	Se on Leonardin sähkölasku.	It's the electricity bill from Leonard.	Inventory.dinky
+11925	Valmis postitettavaksi.	Ready to mail.	Inventory.dinky
+11926	Siinä ei ole postimerkkejä.	It needs stamps.	Inventory.dinky
+11927	Postitettu!	There! All mailed.	Inventory.dinky
+11928	Tämä tarvitsee postimerkin. Muuten se ei matkaa kovin kauas.	This needs stamps or it's not getting far.	Inventory.dinky
+11929	Muutama postimerkki Natalielta.	It's some stamps from Natalie.	Inventory.dinky
+11930	Siinä on postimerkit ja se on valmis postitettavaksi.	It's stamped and ready to mail.	Inventory.dinky
+11931	Piparminttua! Nami!	Peppermint! Yum!	Inventory.dinky
+11932	Haisee pummilta.	Smells like bum.	Inventory.dinky
+11933	Kiitos kun kierrätät! Tässä viiden sentin panttisi.	Thanks for recycling! Here is your nickel deposit back.	Inventory.dinky
+11934	En ymmärrä miksi kolikoissa on presidenttejä coolien ihmisten, kuten Ada Lovelacen, sijaan.	I wonder why they put presidents' heads on these and not cool people like Ada Lovelace.	Inventory.dinky
+11935	Se on sinun 5-senttisesi, ansaitsit sen auttamalla ympäristön siivoamisessa!	It's your nickel, you earned it by helping to clean up the environment!	Inventory.dinky
+11936	Täällä on liian pimeää lukea.	It's too dark to read in here.	Inventory.dinky
+11937	Se on iso avain.	It's a large key.	Inventory.dinky
+11938	Se on ruuvimeisseli.	It's a screwdriver.	Inventory.dinky
+11939	On liian pimeää.	It's too dark to see.	Inventory.dinky
+11940	Auts! “Philippin Vaarallinen Läite” näyttää aktivoituneen.	Ouch! “Philipp's Dangerous Dövice” seems to have come alive.	Inventory.dinky
+11941	Auts!	Ouch!	Inventory.dinky
+11942	Auts! Miksi tein sen taas!	Ouch! Why did I do that again!	Inventory.dinky
+11943	Auts! Miksi teen sitä jatkuvasti?	Ouch! Why do I keep doing that?	Inventory.dinky
+11944	Auts! Auts! Auts!	Ouch! Ouch! Ouch!	Inventory.dinky
+11945	Purkuvideon täytyy olla todella paljon dramaattisempi.	The demolition photo needs to be way more dramatic.	Inventory.dinky
+11946	Olen tainnut tuhota jo tarpeeksi yhden päivän osalta.	I think I've caused enough destruction for one day.	Inventory.dinky
+11947	Aseistettu ja valmis!	Armed and ready to go!	Inventory.dinky
+11948	Minusta näin ei pitäisi tehdä. Minulla on ihania muistoja Kartano-kartanosta.	I feel like this is a bad course of action. I had fond memories of growing up in the Mansion mansion.	Inventory.dinky
+11949	Onpa hyvä että akku on tyhjä. Minulla on hyviä muistoja ajastani Kartano-kartanossa.	Good thing its batteries are dead. I have fond memories of growing up in the Mansion mansion.	Inventory.dinky
+11950	Olen tainnut räjäyttää jo tarpeeksi asioita tänään.	I think I've blown up enough things for today.	Inventory.dinky
+11951	Syteen tai saveen, painan nappulaa.	OK, here goes nothing. I'm going to activate it.	Inventory.dinky
+11952	Siinä meni paljon muistoja Kartano-kartanossa kasvamisesta savuna ilmaan.	That's a lot of growing up in the Mansion mansion memories up in smoke.	Inventory.dinky
+11953	*nyyh*	*sob*	Inventory.dinky
+11954	Taitaa olla pankin ongelma nyt.	I guess it's the bank's problem now.	Inventory.dinky
+11955	Hmmm.	Hmmm.	Inventory.dinky
+11956	Siinä on voimaa.	It has power.	Inventory.dinky
+11957	Mitä unohdan?	What am I forgetting?	Inventory.dinky
+11958	Enkö ole tarpeeksi lähellä?	Am I not close enough?	Inventory.dinky
+11959	Annan periksi.	I give up.	Inventory.dinky
+11960	Onpa hyvä että akku on tyhjä. Minulla on hyviä muistoja kasvamisesta Kartano-kartanossa.	Good thing its batteries are dead. I have fond memories of growing up in the Mansion mansion.	Inventory.dinky
+11961	Olen varma, että siitä tulee 30 vuodessa keräilyharvinaisuus.	I'm sure it will be a collectible in 30 years.	Inventory.dinky
+11962	Ehdottomasti ei ole uusi leluvillitys. Minulla oli sellainen, kun olin lapsi.	Definitely not a new toy craze. I had one when I was a kid.	Inventory.dinky
+11963	Se on julkkiksen pää, mutta karkkiannostelijana tavallaan halventava. Tarvitsen paremman kuvan.	It's a celebrity's head, but kind of demeaning being a candy dispenser. I need a better photo.	Inventory.dinky
+11964	Rakatin näitä todella paljon lapsena.	I sure loved these when I was a kid.	Inventory.dinky
+11965	Auts!! Hampaani!	Ouch!! My tooth!	Inventory.dinky
+11966	Ei tod. Yksi rikkoutunut hammas riittää.	No way. One broken tooth is enough.	Inventory.dinky
+11967	^%d pölyhiukkasta	^%d specks of dust	Inventory.dinky
+11968	^%d pölyhiukkasta	^%d specks of dust	Inventory.dinky
+11969	Mielestäni tässä ei ole tarpeeksi pölyä Natalielle.	I don't think this is enough dust for Natalie.	Inventory.dinky
+11970	^Hän tarvinnee %d pölyhiukkasta.	^She probably needs around %d specks of dust.	Inventory.dinky
+11971	Tämä on hieno otos!	That's a good shot!	Inventory.dinky
+11972	Natalie tulee rakastamaan tätä!	Natalie will love this one!	Inventory.dinky
+11973	Tämä on täydellinen kuva artikkeliin!	This is perfect for the story!	Inventory.dinky
+11974	Minulla on yksi pölyhiukkanen.	I have 1 speck of dust.	Inventory.dinky
+11975	^Minulla on %d pölyhiukkasta.	^I have %d specks of dust.	Inventory.dinky
+11976	lasi pilaantunutta vettä	glass of polluted water	Inventory.dinky
+11977	lasi vettä	glass of water	Inventory.dinky
+11978	lasillinen pilaantunutta vettä	a glass of polluted water	Inventory.dinky
+11979	lasi vettä	a glass of water	Inventory.dinky
+11980	kamera	camera	Inventory.dinky
+11981		a	Inventory.dinky
+11982	valokuvaa	photo	Inventory.dinky
+11983	toimeksiantoni	my assignment	Inventory.dinky
+11984	sähkölaskua postimerkeillä	electricity bill with stamps	Inventory.dinky
+11985	sähkölaskua	electricity bill	Inventory.dinky
+11986	postimerkkejä	stamps	Inventory.dinky
+11987	pullo	bottle	Inventory.dinky
+11988	viisisenttinen	nickel	Inventory.dinky
+11989	Fortran-kirjaa	Fortran book	Inventory.dinky
+11990	Fortran-kirja	a Fortran book	Inventory.dinky
+11991	avain	key	Inventory.dinky
+11992	ruuvimeisseli	screwdriver	Inventory.dinky
+11993	“Philippin Vaarallinen Läite”	“Philipp's Dangerous Dövice”	Inventory.dinky
+11994	ThimbleCon-juliste	ThimbleCon poster	Inventory.dinky
+11995	karkkiannostelija	candy dispenser	Inventory.dinky
+11996	pölyhiukkanen	speck of dust	Inventory.dinky
+11997	pölyhiukkanen	a speck of dust	Inventory.dinky
+11998	Moikka	Hi there	BLANK.yack
+11999	Hei sullekin	Hi back	BLANK.yack
+12000	Hei Delores-täti.	Hi Aunt Delores.	Chuckie.yack
+12001	Lenoren mukaan olemme menossa retkeilemään.	Lenore says we're going camping.	Chuckie.yack
+12002	Lenoren mukaan jonain päivänä meillä on taas rahaa.	Lenore says someday we'll have money again.	Chuckie.yack
+12003	Kiva juttu.	That's nice.	Chuckie.yack
+12004	Hei patologi!	Hi Coroner!	Coroner.yack
+12005	Hei-juu-tuota Delores.	Hello-a-who Delores.	Coroner.yack
+12006	Milloin aloit lisätä 'juu-tuota' kaikkeen?	When did you start adding 'a-who' after everything?	Coroner.yack
+12007	Just nyt! Teit sen taas!	Right there! You just did it again!	Coroner.yack
+12008	Kuinka-vaan-juu-tuota.	Whatever-a-who.	Coroner.yack
+12009	Voisitte sheriffin kanssa muodostaa komedia-duon.	You and the Sheriff should form a comedy team.	Coroner.yack
+12010	Thimbleweed Parkissa ei taida olla juurikaan kuolleisuutta?	Not a lot of deaths in Thimbleweed Park, are there?	Coroner.yack
+12011	Luinko että joku Boris-niminen oli murhattu?	Did I read about someone named Boris being murdered?	Coroner.yack
+12012	Sheriffi haluaa nähdä sinut.	Sheriff wants to see you.	Coroner.yack
+12013	Sheriffi haluaa nähdä sinut jälleen.	Sheriff wants to see you again.	Coroner.yack
+12014	Täytyy mennä... moi.	Got to run... bye.	Coroner.yack
+12015	Eipä juuri.	Not really.	Coroner.yack
+12016	En ole varma miksi olen edelleen virassa.	I'm not sure why I still have a job.	Coroner.yack
+12017	En ymmärrä juu-tuota mistä puhut!	I don't understand-a-who what you're talking about!	Coroner.yack
+12018	Oletko juonut formaldehydiä? Luota minuun, sano vain juu-tuota-ei.	Have you been drinking formaldehyde? Trust me, just say-no-a-who.	Coroner.yack
+12019	Hei, 'juu-tuota'-sanonta on minun juttu!	Hey, the 'a-who' bit is mine!	Coroner.yack
+12020	Hah! Sainpas!	Ha! Got ya!	Coroner.yack
+12021	Te kaksi voisitte toimia Ransome-klovnin lämppärinä.	You two could open for Ransome the Clown.	Coroner.yack
+12022	Juttelen juu-tuota-hänen kanssaan siitä.	I'll talk to him-a-who about it.	Coroner.yack
+12023	Minulla on hienoa materiaalia aivojen irrottamisesta.	I have some great material about extracting a brain.	Coroner.yack
+12024	Aivan varmasti on.	I bet you do.	Coroner.yack
+12025	Mitä-juu-tuota?	What-a-who!	Coroner.yack
+12026	Mistä luit siitä? Thimbleweed Parkissa ei ole koskaan tapahtunut murhaa, enkä tiedä ketään Boris-nimistä.	Where did you read that? We've never had a murder in Thimbleweed Park, and I don't know anyone named Boris.	Coroner.yack
+12027	Luin sen luottamuksellisista patologin muistiinpanoistasi.	I read it in your confidential coroner files.	Coroner.yack
+12028	Luin sen siitä Nickel News -roskalehdestä.	I read it in that trash-rag the Nickel News.	Coroner.yack
+12029	Luin sen purkista modeemilla.	I read it on an on-line BBS.	Coroner.yack
+12030	En tiedä. En muista.	I don't know. I can't remember.	Coroner.yack
+12031	Oikeasti? Minä-juu-tuota? Jännittävää.	Really? Me-a-who? That's exciting.	Coroner.yack
+12032	Moikka, Dave.	Hi there, Dave.	Dave.yack
+12033	Hei Delores. Tervetuloa takaisin!	Hi Delores. Welcome back!	Dave.yack
+12034	En voi puhua. Kiire!	Can't talk. Busy!	Dave.yack
+12035	Moi Lenore.	Hi Lenore.	Lenore.yack
+12036	Mitä te täällä teette? Hengailette palavan roskiksen vieressä kuin pummit.	What are you doing here? Hanging out by a burning trash can like a bum.	Lenore.yack
+12037	Loppuu ne näsäviisaudet ja "olen niin paljon parempi kuin sinä"-huomautukset.	Oh enough with the wise-cracks and “I'm so much better than you” remarks.	Lenore.yack
+12038	En pilkannut sinua, olin tosissani...	I wasn't mocking you, it was a real...	Lenore.yack
+12039	Se on sinun syytäsi.	This is all your doing.	Lenore.yack
+12040	Mikä on minun syytäni?	What is all my doing?	Lenore.yack
+12041	Olemme siskoksia, emmekö voisi olla ystäviä?	We're sisters, can't we be friends?	Lenore.yack
+12042	Yhtäkkiä tekee mieli s'mores-keksejä.	I suddenly have a craving for s'mores.	Lenore.yack
+12043	Loppuu se näsäviisailu!	Enough with the wise-cracks!	Lenore.yack
+12044	Jos olisit jättänyt Chuck-sedän tietokoneeseen, olisi hän kuollut ja olisin saanut perintöni.	If you'd left Uncle Chuck in the computer, he would have died and I'd have gotten my inheritance.	Lenore.yack
+12045	Mutta hän on edelleen elossa, parantolassa ja laillisesti ulottumattomissa.	But he's still alive and in a sanitarium and legally out-of-reach.	Lenore.yack
+12046	Häädettiinkö sinut Kartano-kartanosta?	You got evicted from the Mansion mansion?	Lenore.yack
+12047	Eikä sinulla ole paikkaa mihin mennä?	You have no place to go?	Lenore.yack
+12048	Voisit punkata minun luonani?	You could bunk with me?	Lenore.yack
+12049	Minulla on valokuva, jossa lukee että pankki hakee työntekijää.	I have a photo that shows a job opening at the bank.	Lenore.yack
+12050	Minulla on valokuva, joka näyttää työn avautumisen pankissa.	I have a photo that shows a job opening at the bank.	Lenore.yack
+12051	Pankissa on paikka auki.	There is a job opening at the bank.	Lenore.yack
+12052	Oletko yrittänyt saada työtä?	Have you tried to get a job?	Lenore.yack
+12053	Luulin että rakastat Pikku-Chuckia?	I thought you loved little Chuckie?	Lenore.yack
+12054	Nätti ilma.	Nice weather.	Lenore.yack
+12055	Oletko jo nähnyt Ransomen uuden esityksen?	Seen the new Ransome show yet?	Lenore.yack
+12056	Törmäillään, sisko.	See ya around, sis.	Lenore.yack
+12057	Häivy.	Get lost.	Lenore.yack
+12058	Kyllä!	Yes!	Lenore.yack
+12059	Jos et olisi ollut niin uppoutunut tekemään murhasimulaattoreita, olisit tiennyt.	If you hadn't been so preoccupied with making murder simulators, you'd have known.	Lenore.yack
+12060	Pankki pakkolunasti Edmundin kartano -kartanon ja karkoitti minut, tuon pikku-riiviön ja arvottoman aviomieheni Peterin.	The bank repossessed the Edmund Mansion mansion and evicted me and the little brat and my worthless husband Peter.	Lenore.yack
+12061	Hei.	Hey.	Lenore.yack
+12062	Ainoa mitä sain ottaa, oli tuo kurja tuoli kirjastosta.	All I got to take was that crappy chair from the library.	Lenore.yack
+12063	Ei ainuttakaan! Kaikki piirikunnan seurapiirit ovat laittaneet minut mustalle listalle.	None! I've been blacklisted by all the high society places in the tri-county area.	Lenore.yack
+12064	Nimesin hänet Chuck-sedän mukaan ja kaikkea...	I named him after Uncle Chuck and everything...	Lenore.yack
+12065	...mitä hyötyä siitä oli?	...what good did it do?	Lenore.yack
+12066	Ei mitään! Häädetty!	Nothing! Evicted!	Lenore.yack
+12067	Just! Minä ja kaikki sinun nörttikaverisi pelaamassa D&E:tä yhdessä.	Sure! Me and all your nerdy friends can play D&E together.	Lenore.yack
+12068	Emme ole nörttejä!	We're not nerds!	Lenore.yack
+12069	Sitä kutsutaan D&D:ksi. Dungeons & Dragonsin mukaan.	It's called D&D. For Dungeons and Dragons.	Lenore.yack
+12070	Emme ole nörttejä!	We're not nerds!	Lenore.yack
+12071	Mielestäni olet kaoottinen pahuus?	I'm thinking you play chaotic evil?	Lenore.yack
+12072	Emme ole nörttejä!	We're not nerds!	Lenore.yack
+12073	Minäkin tykkään sinusta sisko.	Love you too sis.	Lenore.yack
+12074	Pankkivirkailija?	Bank teller?	Lenore.yack
+12075	Sinun täytyy pilailla! Arvokkaan Edmund-suvun edustaja työskentelemässä virkailijana?	You've got to be kidding! An Edmund from the prestigious Thimbleweed Edmunds taking a teller job?	Lenore.yack
+12076	Jos vaikka haluaisin alentua niin alas, niin en usko sinua.	Even if I was to stoop that low, I don't believe you.	Lenore.yack
+12077	Kuten mitä!?!	Like what!?!	Lenore.yack
+12078	Barista. Olen kuullut että siitä tulee iso juttu.	Barista. I hear it's going to be big.	Lenore.yack
+12079	NASAn avaruussukkulatehtäväspesialisti?	NASA Space Shuttle mission specialist?	Lenore.yack
+12080	Katutyttö?	Streetwalker?	Lenore.yack
+12081	Viikonloppu-tuuraaja S&D-ravintolassa?	Weekend waitress at the S&D Diner?	Lenore.yack
+12082	Pankkivirkailija?	Bank teller?	Lenore.yack
+12083	Ransome-klovinin lipun kerääjä.	Ransome the Clown show ticket taker.	Lenore.yack
+12084	Joo, se on mielenkiintoinen...	Yeah, that's an interesting...	Lenore.yack
+12085	EI TODELLAKAAN OLE!	NO IT'S NOT!	Lenore.yack
+12086	Edmundit eivät työskentele!	Edmunds don't work!	Lenore.yack
+12087	Siksi olet häpäissyt sukumme nimen.	That's why you're such a disgrace to the family name.	Lenore.yack
+12088	Täh? Näytät minulle työpaikkailmoitusta? Niinkuin tarvitsisin työtä! Kuin tavis!	What?  You're showing me a job opening? You think I need a job! Like a common person!	Lenore.yack
+12089	No... En koskaan... Juu... Minä voin... Minä... Ehkä poikkean paikalla...	Well... I never... Yeah... I'll... I... I might stop by...	Lenore.yack
+12090	Työtarjous? No... En koskaan... Joo... Voin... Minä... Voi olla että poikkean paikalla...	A job opening? Well... I never... Yeah... I'll... I... I might stop by...	Lenore.yack
+12091	Joo, näytit sen jo minulle! Ajattelen asiaa.	Yeah, you already showed me that! I'll think about it.	Lenore.yack
+12092	Mielenkiintoista... Joo... Ehkä minä... Ei... Minä... Minä saatan poiketa paikalla... Ehkä.	Interesting... Yeah... Maybe I'll... No... I... I might stop by... Might.	Lenore.yack
+12093	Juu, sanoit sen jo! Ajattalen asiaa.	Yeah, you already said that! I'll think about it.	Lenore.yack
+12094	Voi luoja, se on parasta!	Oh my! It is the best!	Lenore.yack
+12095	Ransomen näkeminen on elämäni viimeinen ilo.	Seeing Ransome is the only joy left in my life.	Lenore.yack
+12096	Moi Lenore.	Hi Lenore.	Lenore.yack
+12097	Onnittelut uudesta työstä!	Congrats on the new job!	Lenore.yack
+12098	Hys... älä sano nimeäni ääneen. Joku voi kuulla.	Shhhhh... don't say my name out loud. Someone might hear.	Lenore.yack
+12099	Ymmärrän.	I hear.	Lenore.yack
+12100	Voitko tarkistaa pankkitilini saldon?	Can you check my bank balance?	Lenore.yack
+12101	Voitko tarkistaa pankkitilini saldon uudelleen?	Can you check my bank balance again?	Lenore.yack
+12102	Nätti ilma.	Nice weather.	Lenore.yack
+12103	Eli...	So...	Lenore.yack
+12104	Kuinka Pikku-Chuck voi?	How is Chuckie?	Lenore.yack
+12105	Kiitti moi.	Goodbye and thanks.	Lenore.yack
+12106	Katsotaanpas...	Let me see...	Lenore.yack
+12107	Sinulla on...	You have...	Lenore.yack
+12108	EI MITÄÄN!	NOTHING!	Lenore.yack
+12109	Tyhjää täynnä!	Zip squat!	Lenore.yack
+12110	Nolla euroa ja nolla senttiä.	Zero dollars and zero cents.	Lenore.yack
+12111	Nada!	Nada!	Lenore.yack
+12112	Massiivinen nolla pilkku nolla nolla dollaria.	A big zero point zero zero dollars.	Lenore.yack
+12113	Ihan kuin vielä välittäisin.	Like I care anymore.	Lenore.yack
+12114	Mistä tahansa...	About anything...	Lenore.yack
+12115	Hyviä ja huonoja uutisia Kartano-kartanosta ... tai antaa olla.	Good and bad news about the Mansion mansion... never mind.	Lenore.yack
+12116	Ketä kiinnostaa.	Who cares.	Lenore.yack
+12117	Häivy.	Get lost.	Lenore.yack
+12118	Miten menee D!	What's up D!	Leonard.yack
+12119	Miten menee Delores!	What's up Delores!	Leonard.yack
+12120	Kiitos kun postitit sen kirjeen.	Thanks for mailing that letter.	Leonard.yack
+12121	Älä kutsu minua D:ksi.	Don't call me D.	Leonard.yack
+12122	Moi Leonard.	Hey Leonard.	Leonard.yack
+12123	Kylpyhuoneen valokatkaisija ei toimi.	Bathroom light switch doesn't work.	Leonard.yack
+12124	Kylpyhuoneen valokatkaisija ei toimi edelleenkään.	Bathroom light switch still doesn't work.	Leonard.yack
+12125	Nähään!	See ya!	Leonard.yack
+12126	Hyvä homma D... Tarkoitan Delores.	OK, sure thing D... I mean Delores.	Leonard.yack
+12127	Samat sulle!	Hey back at ya!	Leonard.yack
+12128	Joo. Se.	Yeah. About that.	Leonard.yack
+12129	Johto unohti maksaa sähkölaskun, joten kylpyhuoneen sähköt katkaistiin.	Management forgot to pay the power bill, so they cut power to the bathroom.	Leonard.yack
+12130	Jos sitä ei makseta pian, koko rakennuksesta katoaa sähköt, kaveri.	If it doesn't get paid soon, the whole building will lose power, man.	Leonard.yack
+12131	Unohtiko johtokunta vai unohditko postittaa maksun?	Did management forget, or did you forget to mail the payment?	Leonard.yack
+12132	En usko, että nyt on aika osoitella sormella!	I don't think this is the time to be pointing fingers!	Leonard.yack
+12133	Tässä on maksu, voitko pudottaa sen puolestani postilaatikkoon ... tarkoitan hoitaa asian?	Here is the payment, can you drop it in a mailbox for me... I mean management?	Leonard.yack
+12134	Toki.	Sure.	Leonard.yack
+12135	Johto unohti maksaa sinulle antamani sähkölaskun.	Management forgot to pay the power bill I gave you.	Leonard.yack
+12136	Jos sitä ei makseta pian, koko rakennuksesta katoaa sähköt.	If it doesn't get paid soon, the whole building will lose power, man.	Leonard.yack
+12137	Voitko laittaa maksun puolestani postilaatikkoon... Tarkoitan järjestää?	Can you drop the payment in a mailbox for me... I mean management?	Leonard.yack
+12138	Toki.	Sure.	Leonard.yack
+12139	Hei Madame Morena.	Hello Madame Morena.	Morena.yack
+12140	Miten on mennyt?	How have things been?	Morena.yack
+12141	Onko liskonsilmiä?	Got any eye-of-newt?	Morena.yack
+12142	Kyllä, ymmärrän.	Yes, I see.	Morena.yack
+12143	Kyllä, todella ymmärrän.	Yes, I really see.	Morena.yack
+12144	Tosissaan todella ymmärrän!	I really really see!	Morena.yack
+12145	Ymmärrän!	I can see!	Morena.yack
+12146	Mutta minä ymmärrän.	But I can see.	Morena.yack
+12147	Olkoon, en ymmärrä.	Ok fine, I can't see.	Morena.yack
+12148	*huoh*	*sigh*	Morena.yack
+12149	Oletko kuullut että sirkus olisi hylätty?	Have you heard about the circus being abandoned?	Morena.yack
+12150	Oletko jo nähnyt Ransome-klovnin uusimman esityksen?	Seen Ransome the Clown's latest show yet?	Morena.yack
+12151	Oletko huomannut mitään omituista?	You noticed anything odd?	Morena.yack
+12152	Ulkona oleva kyltti sanoo että täällä on tyhjennysmyynti.	Sign out front says you're having a blow-out sale.	Morena.yack
+12153	Nähdään taas!	See ya!	Morena.yack
+12154	Siitä on aikaa kun olen nähnyt sinut täällä, Delores.	Been a while since I've seen you around, Delores.	Morena.yack
+12155	Pelinkehittäjän työni on pitänyt minut melko kiireisenä.	That game designer job has kept me pretty busy.	Morena.yack
+12156	Olen rutistuksen jälkeisellä lomalla auttamassa Nataliea.	I'm on my post-crunch vacation, helping Natalie out.	Morena.yack
+12157	Kyllä! Paras show tähän mennessä. Katson sen joka viikko.	Yes! It's his best show yet. I go every week.	Morena.yack
+12158	Toivottavasti näen sen ennen kuin lähden.	I hope to see it before I leave.	Morena.yack
+12159	Ei mitään...	Nothing...	Morena.yack
+12160	...Ja sinun pitäisi jättää riittävästi rauhaan kultaseni.	...And you should leave well enough alone my dear.	Morena.yack
+12161	Se ajattelumalli tuo vain kurjuutta.	Only misery lies down that path of thought.	Morena.yack
+12162	Sitä paitsi, en tiedä mitä tekisin ilman viikottaista Ransome-annosta!	Besides, I don't know what I'd do without my weekly hit of Ransome!	Morena.yack
+12163	Oikeasti nyt!	Please!	Morena.yack
+12164	Liskonsilmiä on vain sarjakuvissa!	Eye of Newt is right out of the back of comic books!	Morena.yack
+12165	Ei se ole oikeaa taikuutta.	It's not real magic.	Morena.yack
+12166	Ymmärrän.	I see.	Morena.yack
+12167	Ymmärrätkö?	Do you see?	Morena.yack
+12168	Ymmärrätkö todella?	Do you really see?	Morena.yack
+12169	Ymmärrätkö todella oikeasti?	Do you really really see?	Morena.yack
+12170	En usko että ymmärrät.	I don't think you see.	Morena.yack
+12171	Toivoisin että ymmärtäisit.	I wish you could see.	Morena.yack
+12172	Et taida ymmärtää.	I don't think you can see.	Morena.yack
+12173	Sanoinhan, et ymmärrä.	I told you, you can't see.	Morena.yack
+12174	Viimeisen päivän aikana olen huomannut outoja väreilyjä todellisuuden kankaassa.	In the last day I've noticed some odd ripples in the fabric of reality.	Morena.yack
+12175	Jos uskoisin voodoo-höpinään, tuo kuulostaisi pelottavalta.	If I believed that mumbo-jumbo, that would sound scary.	Morena.yack
+12176	USKO!	BELIEVE!	Morena.yack
+12177	Pelottavat voimat ovat liikkeellä.	Scary forces are at work.	Morena.yack
+12178	Vuosia sitten tuli repeämä, joka huomattiin vasta muutama päivä sitten.	Many years ago, there was a tear that has gone unnoticed until a few days ago.	Morena.yack
+12179	Pelkäänpä, että saatat olla yhteydessä.	I fear you might be connected.	Morena.yack
+12180	Chillaa vähän.	Take a chill-pill.	Morena.yack
+12181	Ja ehkä minttupastilleja.	And maybe some breath mints.	Morena.yack
+12182	Onko kirjoja Fortranista?	Got any books on Fortran?	Morena.yack
+12183	Ihan ylhäällä saattaa olla yksi.	Might be one at the very top.	Morena.yack
+12184	Jos sellainen löytyy, voit ottaa sen.	If you find it, you can take it.	Morena.yack
+12185	Ainoat kuolleet kielet, joista tarvitsemme kirjoja, on muinainen capsipan.	The only dead languages we need books on is ancient capsipan.	Morena.yack
+12186	Olen innoissani uudesta työstäni!	I'm excited about my new job!	Natalie.yack
+12187	Natalie on palkannut minut Nickel News -valokuvaajaksi.	Natalie has hired me to be the Nickel News photographer.	Natalie.yack
+12188	En malta odottaa että voin aloittaa!	I can't wait to get started!	Natalie.yack
+12189	Jälleen uusi mielenkiintoinen tehtävä Nickel News -kuvaajana!	Another exciting assignment as the Nickel News photographer!	Natalie.yack
+12190	Mitähän Nataliella on minun varalleni nyt?	I wonder what Natalie has for me now?	Natalie.yack
+12191	Ollaanpas sitä innokkaana tänä aamuna.	My, aren't we the eager beaver this morning.	Natalie.yack
+12192	En malta odottaa että voin aloittaa!	I'm excited to get started!	Natalie.yack
+12193	Tämä on mukava luova tauko pelien tekemisestä.	It will be a nice creative break from making games.	Natalie.yack
+12194	Ei nyt oikeasti ole aamu. Kello on vähän päälle 17.00.	It's not really the morning, it's just after 5pm.	Natalie.yack
+12195	Mielenkiintoista.	Interesting.	Natalie.yack
+12196	Työskentelen useiden juttujen parissa tuleviin Thimbleweed Nickel -julkaisuihin, ja tarvitsemme valokuvia.	I'm working on several stories for upcoming editions of the Thimbleweed Nickel, and we need photographs.	Natalie.yack
+12197	Olen tehnyt sinulle listan, ja kamera on arkistokaapissa oven vieressä.	I've made a list for you, and the camera is in the file cabinet by the door.	Natalie.yack
+12198	Kerro jos tarvitset jotain. Lisää filmiä, toimistotarvikkeita, tietoa eläkekertymästäsi...	Let me know if you need anything. More film, office supplies, info on your 401k.	Natalie.yack
+12199	Onnea ensimmäiselle päivällesi valokuvajournalistina.	Good luck on your first day as a photojournalist.	Natalie.yack
+12200	Valokuvajournalisti! Todella tärkeän kuuloinen titteli!	Photojournalist! That makes it sound important!	Natalie.yack
+12201	^Sinun täytyy luovuttaa vielä %d valokuvaa ennen kuin voit palata pelinkehittäjän työhösi MMucasFlemissä.	^You need to turn in %d more photos before returning to your game developer job at MMucasFlem.	Natalie.yack
+12202	Nyt olisi hyvä löytää kamera, vilkaista työlistaa, ja alkaa hommiin.	I better find that camera, take a look at the list, and get cracking.	Natalie.yack
+12203	Minulla on edelleen tekemistä kuvien kanssa.	Still working on those photos.	Natalie.yack
+12204	Missä sanoitkaan kameran olevan?	Where did you say the camera was again?	Natalie.yack
+12205	Luulen, että olen suorittanut tehtävän.	I think I'm done with the assignment.	Natalie.yack
+12206	Saisinko lisää filmiä?	Can I get some more film?	Natalie.yack
+12207	Haluatko nähdä mitä olen saanut aikaiseksi?	Want to see my work so far?	Natalie.yack
+12208	Kuinka kauan tämä toimeksianto kestää?	How long will this assignment last?	Natalie.yack
+12209	Saisinko lisää toimistotarvikkeita?	Can I get some office supplies?	Natalie.yack
+12210	Mitä voit kertoa eläkekehityksestäni?	What can you tell me about my 401k?	Natalie.yack
+12211	Ei mitään... moi.	Never mind... bye.	Natalie.yack
+12212	Katso oven vieressä olevaan arkistokaappiin.	Look in the filing cabinet by the door.	Natalie.yack
+12213	Sinun täytyy luovuttaa vielä yksi omaperäinen valokuva.	You need to turn in 1 more original photo.	Natalie.yack
+12214	^Sinun täytyy luovuttaa vielä %d omaperäistä valokuvaa.	^You need to turn in %d more original photos.	Natalie.yack
+12215	Sen jälkeen palaan MMucasFlemiin tekemään pelejä.	Then it's back to making games at MMucasFlem for me.	Natalie.yack
+12216	Sinulla näyttäisi olevan riittävästi.	Looks like you've got plenty.	Natalie.yack
+12217	Tässä on pari lisää.	Here is a couple more.	Natalie.yack
+12218	Tarvitsen paperiliittimiä!	I need some paper clips!	Natalie.yack
+12219	Tarvitsen pahvikansioita.	I need some manila folders.	Natalie.yack
+12220	Tarvitsen postimerkkejä.	I need some stamps.	Natalie.yack
+12221	Tarvitsen nro 2:n lyijykyniä.	I need some no. 2 pencils.	Natalie.yack
+12222	Tarvitsen tekstinkorjauskynän.	I need some whiteout.	Natalie.yack
+12223	Anteeksi, en oikeastaan tarvitse mitään juuri nyt.	Sorry, I actually don't need anything right now.	Natalie.yack
+12224	Minulla on kirje joka pitäisi postittaa. Voi olla tärkeä tehtäväni kannalta.	I have a letter that needs mailing. Might be important to my assignment.	Natalie.yack
+12225	Okei.	Okay.	Natalie.yack
+12226	Paras tapa eläköityä toimittajana on saada uusi työpaikka.	Best path to retirement as a journalist is to get another job.	Natalie.yack
+12227	Vähän kuin pelinkehitys.	Kind of like game development.	Natalie.yack
+12228	Etkä tarvitse.	No you don't.	Natalie.yack
+12229	Nämä näyttävät upeilta!	These look great!	Natalie.yack
+12230	Prototyyppi on nyt valmis.	The prototype is now over.	Natalie.yack
+12231	Saanko palkankorotuksen?	Do I get a raise?	Natalie.yack
+12232	Saanko ylennyksen?	Do I get a promotion?	Natalie.yack
+12233	Saanko jatkaa ympäriinsä vaeltelua?	Do I get to keep wandering around?	Natalie.yack
+12234	Voinko lopettaa pelin?	Can I quit the game?	Natalie.yack
+12235	Noup.	Nope.	Natalie.yack
+12236	Ok.	Ok.	Natalie.yack
+12237	Pelaa uudestaan, niin minulla on sinulle uusia aiheita kuvattavaksi.	Play again and I'll have more photos for you to take.	Natalie.yack
+12238	Ehkä tämä oli tässä, Delores.	I think you're done here, Delores.	Natalie.yack
+12239	Muuten...	By the way...	Natalie.yack
+12240	Tiedätkö mitään sillan alta löytyneestä ruumiista?	Do you know anything about the body they found under the bridge?	Natalie.yack
+12241	Meillä on deadline, joten ei lorvimista.	We've got a deadline, so no dilly-dallying.	Natalie.yack
+12242	Tervetuloa S&D-ravintolaan Delores!	Welcome to the S&D Diner, Delores!	Sandy.yack
+12243	En ole nähnyt sinua täällä aikoihin.	Long time since I've seen you here.	Sandy.yack
+12244	En voi puhua just nyt, keittiössä on helvetti irti!	Can't talk right now, things are crazy in the kitchen!	Sandy.yack
+12245	Tervetuloa takaisin Delores!	Welcome back, Delores!	Sandy.yack
+12246	Kuinkas voin auttaa?	What can I do for ya?	Sandy.yack
+12247	Miten elämä on sinua kohdellut Sandy?	How has life been treating you, Sandy?	Sandy.yack
+12248	Oletko nähnyt Ransomea viime aikoina?	You seen Ransome lately?	Sandy.yack
+12249	Näännyn nälkään. Mitkä ovat tämän päivän erikoisuudet?	I'm starving. What are your specials today?	Sandy.yack
+12250	Nähdään!	See ya!	Sandy.yack
+12251	En voi valittaa. Dave ja minä tulimme juuri takaisin kolmannelta häämatkaltamme.	Can't complain. Dave and I just came back from our third honeymoon.	Sandy.yack
+12252	Puhutko minusta?	You talking about me?	Sandy.yack
+12253	Kyllä namuraksu, kenestä muustakaan?	Yes, snuggle cakes, who else would I be talking about?	Sandy.yack
+12254	Aah, hanipallero.	Ah, love muffin.	Sandy.yack
+12255	Dave ja minä näemme hänen esityksensä joka lauantai deitti-iltana.	Dave and I see his show every Saturday on our date-night.	Sandy.yack
+12256	Hän saa aina meidät nauramaan. Tosi hyvä tyyppi.	He never fails to make us laugh. Such a good guy.	Sandy.yack
+12257	Kaikki on listalla, mitä haluaisit?	Everything is on the menu board, what do you want?	Sandy.yack
+12258	Otan Kobe-hodarin.	I'll have a Kobe beef hot dog.	Sandy.yack
+12259	Otan svetsinleike-hodarin.	I'll have a Swiss pork hot dog.	Sandy.yack
+12260	Otan yrttikana-hodarin.	I'll have a herb and chicken hot dog.	Sandy.yack
+12261	Otan lehtikaali-hodarin Dijon-sinapilla.	I'll have a French mustard and kale veggie dog.	Sandy.yack
+12262	Otan Guinean kana-sautéen villisienillä.	I'll have the Guinea chicken sauté with wild mushrooms.	Sandy.yack
+12263	Otan lehtikaalisalaatin chutney-kastikkeella.	I'll have the kale salad with chutney sauce.	Sandy.yack
+12264	Otan paistetut sammakonreidet tartarkastikkeella.	I'll have the fried frogs' legs, sauce tartare.	Sandy.yack
+12265	Otan kirsikkapiiraan.	I'll have the cherry pie.	Sandy.yack
+12266	Otan lasin vettä jäähileellä.	I'll have the glass of water with chipped ice.	Sandy.yack
+12267	Muutin mieleni. En ole nälkäinen.	I changed my mind. I'm not hungry.	Sandy.yack
+12268	Sori, laitoin ne just grilliin. Ne eivät ole vielä turvallisessa kypsyysasteessa.	Sorry, I just put those on the grill. They haven't come up to the proper safe eating temperature yet.	Sandy.yack
+12269	Anteeksi, tänään poimimani sienet vaikuttavat olevan myrkyllisiä.	Sorry, the mushrooms I gathered today look to be of the poisonous variety.	Sandy.yack
+12270	Anteeksi, olen unohtanut päivittää taulun. Lehtikaali on lopussa...	Sorry, forgot to update the board. We're all out of kale...	Sandy.yack
+12271	...ja chutney.	...and chutney.	Sandy.yack
+12272	Ei mahda mitään, unohdin metsästää sammakoita tänä aamuna.	No can do, I forgot to go frog hunting this morning.	Sandy.yack
+12273	Sori, joku pitkä tyyppi söi juuri viimeisen palan kahvikupposen kera.	Sorry, some tall guy just ate the last slice with a cup of joe.	Sandy.yack
+12274	Totta kai! Tulee tuossa tuokiossa.	Sure thing! Coming right up.	Sandy.yack
+12275	Ole hyvä.	Here you go.	Sandy.yack
+12276	Täynnä hienoa suodatettua vettämme. Ja voit pitää lasin joka on osa mainoskampanjaamme.	Filled with our fancy filtered water. And you can keep the glass as part of our promotion.	Sandy.yack
+12277	Kiitos! Anteeksi.	Thanks! Excuse me.	Sandy.yack
+12278	Taisin olla tosi janoinen!	I guess I was really thirsty!	Sandy.yack
+12279	Nähdään Delores.	Later, Delores.	Sandy.yack
+12280	En ole notta-tuota-juttutuulella! Päästä minut ulos!	I'm not in a talking-a-reno mood, just let me out!	Sheriff.yack
+12281	Hei Sheriffi!	Hi Sheriff!	Sheriff.yack
+12282	Hei-notta-tuota Delores.	Hello-a-reno Delores.	Sheriff.yack
+12283	Milloin aloit lisätä 'notta-tuota' kaikkeen?	When did you start adding 'a-reno' after everything?	Sheriff.yack
+12284	Just nyt! Teit sen taas!	Just then! You did it again!	Sheriff.yack
+12285	Kuinka-vaan-notta-tuota.	Whatever-a-reno.	Sheriff.yack
+12286	Thimbleweed Parkissa ei taida olla juurikaan rikollisuutta?	Not a lot of crime in Thimbleweed Park, is there?	Sheriff.yack
+12287	Luin että sirkus on muka hylätty?	What's that I read about the circus being abandoned?	Sheriff.yack
+12288	Ajattelin kouluttautua liittovaltion agentiksi...	I was thinking about becoming a federal agent...	Sheriff.yack
+12289	Täytyy mennä... moi.	Got to run... bye.	Sheriff.yack
+12290	Eipä juuri.	Not really.	Sheriff.yack
+12291	Uusi irtolaisperhe on hengaillut A-kadulla.	A new vagrant family has been hanging out on A Street.	Sheriff.yack
+12292	He eivät ole aiheuttaneet ongelmia-notta-tuota, joten olen antanut heidän olla.	They haven't been causing any trouble-a-reno, so I leave them be.	Sheriff.yack
+12293	Huonot ajat taisivat iskeä.	Probably fell on hard times.	Sheriff.yack
+12294	Tai hän on täydellisen mahtipontinen ääliö ja ansaitsee kaiken mitä tapahtuu.	Or she is a complete pompous jerk and deserves everything she gets.	Sheriff.yack
+12295	En ymmärrä notta-tuota kysymystäsi?	I don't understand-a-reno what you're asking?	Sheriff.yack
+12296	Oletko huumeissa-notta-tuota? Sano vain notta-tuota-ei.	Are you on drugs-a-reno? Just say no-a-reno.	Sheriff.yack
+12297	Hei, 'notta-tuota'-sanonta on minun juttu!	Hey, the 'a-reno' gag is mine!	Sheriff.yack
+12298	Hah! Sainpas!	Ha! Got ya!	Sheriff.yack
+12299	Mitä-notta-tuota!	What-a-reno!	Sheriff.yack
+12300	Ransome on suositumpi kuin koskaan, sen jälkeen kun hän lopetti solvaukset vuosia sitten.	Ransome's more popular than ever since he dropped the insult bit many years ago.	Sheriff.yack
+12301	Mistä luit sen?	Where did you read that?	Sheriff.yack
+12302	Luin sen luottamuksellisista poliisin muistiinpanoista.	I read it in your confidential police files.	Sheriff.yack
+12303	Luin sen siitä Nickel News -roskalehdestä.	I read it in that trash-rag the Nickel News.	Sheriff.yack
+12304	Luin sen purkista modeemilla.	I read it on an on-line BBS.	Sheriff.yack
+12305	En tiedä. En muista.	I don't know. I can't remember.	Sheriff.yack
+12306	Oletko koskaan tavannut sellaista?	Ever met one?	Sheriff.yack
+12307	En kyllä notta-tuota voi sanoa että ikinä olisin.	Can't say-a-reno that I ever have.	Sheriff.yack
+12308	Ehkä vain teen pelin, jossa on liittovaltion agentti.	Maybe I'll just make a game that has a federal agent in it.	Sheriff.yack
+12309	Kuulostaa helpommalta.	Sounds easier.	Sheriff.yack
+12310	Oi...	Oh...	Sheriff.yack
+12311	Voitko kutsua patologin-notta-tuota tänne?	Can you go get the Coroner-a-reno for me?	Sheriff.yack
+12312	Toki, noudan patologin tänne.	Sure, I'll go get the Coroner for you.	Sheriff.yack
+12313	Jep-notta-tuota, kerron patologille että tulee tapaamaan sinua.	Right-a-reno, I'll let the Coroner know to come see you.	Sheriff.yack
+12314	Hei Willie.	Hi Willie.	Willie.yack
+12315	Moi Delores.	Hello Delores.	Willie.yack
+12316	Suljet myöhään.	You're closing up late.	Willie.yack
+12317	Kuis bisnekset?	How's business?	Willie.yack
+12318	Bisneksillä menee lujaa.	Business is booming.	Willie.yack
+12319	Anteeksi, en ehdi jutella, täytyy rientää kotiin.	Sorry I can't talk, I've got to get home.	Willie.yack
+12320	On minun vuoroni valmistaa päivällinen.	It's my night to cook dinner.	Willie.yack
+12321	notta-tuota-asetukset	Options-a-reno	Options.dinky
+12322	Hover beep	Hover beep	Options.dinky
+12323	Hover pop	Hover pop	Options.dinky
+12324	Koko näyttö	Fullscreen	Options.dinky
+12325	Pieni kirjasin	Small font	Options.dinky
+12326	Musiikki %d%%	Music %d%%	Options.dinky
+12327	Ääni %d%%	Sound %d%%	Options.dinky
+12328	Tekstin nopeus: %s	Text speed: %s	Options.dinky
+12329	Poista kaikki edistyminen ja lopeta	Delete all progress and quit	Options.dinky
+12330	Olet luovuttanut %d / %d valokuvaa	You've handed in %d out of %d photos	Options.dinky
+12331	Ok	Ok	Options.dinky
+12332	Apua	Help	Options.dinky
+12333	Lopeta	Quit	Options.dinky
+12334	Haluatko varmasti poistaa kaiken edistymisen ja lopettaa?	Are you sure you want to delete ALL progress and quit?	Options.dinky
+12335	POISTA	DELETE	Options.dinky
+12336	Peruuta	Cancel	Options.dinky
+12337	Apua!	Help!	Options.dinky
+12338	● Klikkaa hiiren vasenta näppäintä lauseen toteuttamiseksi.	● Left-click to do what the cursor sentence says.	Options.dinky
+12339	● Klikkaa hiiren oikeaa näppäintä nähdäksesi toimintolistan.	● Right-click to show more verbs.	Options.dinky
+12340	● Raahaa inventaarion objekteja toisten objektien päälle.	● Drag inventory onto other inventory or room objects.	Options.dinky
+12341	● Jos raahatessa ei ilmesty lausetta, 	● When dragging, if no sentence appears, they can't	Options.dinky
+12342	niitä ei voi käyttää yhdessä.	be used together.	Options.dinky
+12343	● Raahaa kameraa ottaaksesi kuvia.	● Drag Camera to take pictures.	Options.dinky
+12344	● Paina #{FFFF00}i#{} piilottaaksesi tai näyttääksesi inventaarion.	● Use #{FFFF00}i#{} to show/hide inventory.	Options.dinky
+12345	● Paina #{FFFF00}o#{} nähdäksesi tai piilottaaksesi optiot.	● Use #{FFFF00}o#{} to show/hide options.	Options.dinky
+12346	● Paina #{FFFF00}.#{} hypätäksesi dialogin yli.	● Use #{FFFF00}.#{} to skip dialog.	Options.dinky
+12347	● Paina #{FFFF00}ctrl-Q/cmd-Q#{} -yhdistelmää lopettaaksesi pelin.	● Use #{FFFF00}ctrl-Q/cmd-Q#{} to quit.	Options.dinky
+12348	Ok	Ok	Options.dinky
+12349	Lopetetaanko nyt? Menetät edistymisesi näiden viiden kuvan osalta.	Quit now and lose progress on these five photographs?	Options.dinky
+12350	EI!	NO!	Options.dinky
+12351	Lopeta	Quit	Options.dinky
+12352		the	DefineActors.dinky
+12353		the	DefineActors.dinky
+12354		a	CoronersOffice.dinky
+12355	Näyttää siltä, että isä työskentelee taas myöhään.	Looks like Dad is working late again.	Vista.dinky
+12356	Lenore työskentelee	Lenore working	DefineActors.dinky
+12357	Lenore	Lenore	DefineActors.dinky
+12358	Ransome-klovnin juliste	Ransome the Clown poster	Alleyway.dinky
+12359	hana juoksevalla vedellä	a faucet with running water	Bathroom.dinky
+12360	pesuallas juoksevalla vedellä	a sink with running water	Bathroom.dinky
+12361	hana	a faucet	Bathroom.dinky
+12362	pesuallas	a sink	Bathroom.dinky
+12363	Dave	Dave	Diner.dinky
+12364	Dave	Dave	Diner.dinky
+12365	Dave ja tulipallot	Dave and the fireballs	Diner.dinky
+12366	sanomalehden otsikko	a newspaper headline	Nickel.dinky
+12367	Hän ei todellakaan ole ex-presidentti.	He's definitely not an ex-president.	CityHall.dinky
+12368		a	Nickel.dinky
+12369		a	Nickel.dinky
+12370		a	Nickel.dinky
+12371		a	Nickel.dinky
+12372		a	MainStreet.dinky
+12373		a	MainStreet.dinky
+12374		a	MainStreet.dinky
+12375		a	MainStreet.dinky
+12376		a	MainStreet.dinky
+12377		a	MainStreet.dinky
+12378		a	MainStreet.dinky
+12379	napsauttelevaa kasvia	snapping plant	QuickiePal.dinky
+12380	kasvia	plant	QuickiePal.dinky
+12381		a	QuickiePal.dinky
+12382		a	QuickiePal.dinky
+12383		a	QuickiePal.dinky
+12384		a	QuickiePal.dinky
+12385		a	QuickiePal.dinky
+12386		a	QuickiePal.dinky
+12387	Ransome-karkkiannostelija	Ransome candy dispensers	QuickiePal.dinky
+12388		a	PostOffice.dinky
+12389		a	PostOffice.dinky
+12390		a	PostOffice.dinky
+12391		a	PostOffice.dinky
+12392		a	PostOffice.dinky
+12393		a	CityHall.dinky
+12394		a	CityHall.dinky
+12395		a	CityHall.dinky
+12396		a	CityHall.dinky
+12397		a	CityHall.dinky
+12398		a	Alleyway.dinky
+12399		a	Alleyway.dinky
+12400		a	Alleyway.dinky
+12401		a	Alleyway.dinky
+12402		a	Alleyway.dinky
+12403		a	Alleyway.dinky
+12404		a	AStreet.dinky
+12405		a	AStreet.dinky
+12406		a	AStreet.dinky
+12407		a	AStreet.dinky
+12408		a	BookStore.dinky
+12409		a	BookStore.dinky
+12410		a	BookStore.dinky
+12411		a	BookStore.dinky
+12412	runo	poem	BookStore.dinky
+12413	muistilappu	note	BookStore.dinky
+12414		a	BookStore.dinky
+12415		a	BookStore.dinky
+12416		a	Bathroom.dinky
+12417		a	Bathroom.dinky
+12418		a	Bathroom.dinky
+12419		a	Bathroom.dinky
+12420		a	Bathroom.dinky
+12421		a	Bathroom.dinky
+12422		a	Bathroom.dinky
+12423		a	Diner.dinky
+12424		a	Diner.dinky
+12425		a	Diner.dinky
+12426		a	Diner.dinky
+12427		a	Diner.dinky
+12428		a	SheriffsOffice.dinky
+12429		a	SheriffsOffice.dinky
+12430		a	SheriffsOffice.dinky
+12431		a	SheriffsOffice.dinky
+12432		a	SheriffsOffice.dinky
+12433		a	SheriffsOffice.dinky
+12434		a	SheriffsOffice.dinky
+12435	vetolaatikko	drawer	SheriffsOffice.dinky
+12436		a	SheriffsOffice.dinky
+12437	vetolaatikko	drawer	SheriffsOffice.dinky
+12438		a	SheriffsOffice.dinky
+12439	vetolaatikko	drawer	SheriffsOffice.dinky
+12440		a	SheriffsOffice.dinky
+12441	vetolaatikko	drawer	SheriffsOffice.dinky
+12442		a	SheriffsOffice.dinky
+12443	vetolaatikko	drawer	SheriffsOffice.dinky
+12444		a	SheriffsOffice.dinky
+12445	vetolaatikko	drawer	SheriffsOffice.dinky
+12446		a	SheriffsOffice.dinky
+12447		a	SheriffsOffice.dinky
+12448		a	SheriffsOffice.dinky
+12449		a	Bank.dinky
+12450		a	Bank.dinky
+12451		a	Bank.dinky
+12452		a	Bank.dinky
+12453		a	Bank.dinky
+12454		a	Bank.dinky
+12455		a	Vista.dinky
+12456		a	CoronersOffice.dinky
+12457		a	CoronersOffice.dinky
+12458		a	CoronersOffice.dinky
+12459	vetolaatikko	drawer	CoronersOffice.dinky
+12460		a	CoronersOffice.dinky
+12461	vetolaatikko	drawer	CoronersOffice.dinky
+12462		a	CoronersOffice.dinky
+12463	vetolaatikko	drawer	CoronersOffice.dinky
+12464		a	CoronersOffice.dinky
+12465		a	Inventory.dinky
+12466		an	Inventory.dinky
+12467		an	Inventory.dinky
+12468		a	Inventory.dinky
+12469		a	Inventory.dinky
+12470		a	Inventory.dinky
+12471		a	Inventory.dinky
+12472		a	Inventory.dinky
+12473		a	Inventory.dinky
+12474		a	Inventory.dinky
+12475	hitain	slowest	Options.dinky
+12476	hitaampi	slower	Options.dinky
+12477	hidas	slow	Options.dinky
+12478	normaali	normal	Options.dinky
+12479	nopea	fast	Options.dinky
+12480	nopeampi	faster	Options.dinky
+12481	nopein	fastest	Options.dinky
+12482	Se on luultavasti todella vaarallista	That's probably really dangerous.	Alleyway.dinky
+12483	Olen suunnitellut seikkailupelejä liian pitkään.	I've been designing adventure games too long.	Alleyway.dinky
+12484	tyhjää lasia	empty glass	Inventory.dinky
+12485	tyhjä lasi	an empty glass	Inventory.dinky

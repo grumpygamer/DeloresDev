@@ -19,6 +19,7 @@ def mungeImages(game_root, options):
 		print ("Environment var TEXTURE_PACKER_CMD needs to be set and point to TextturePacker commandline executable")
 		exit(1)
 
+	max_size = "4096"
 	sheet_folder=game_root+"/SpriteSheets"
 	image_dir=game_root+"/Images/"
 	for filename in os.listdir(image_dir):
@@ -41,6 +42,7 @@ def mungeImages(game_root, options):
 			subprocess.call([TEXTURE_PACKER_CMD, png_folder,
 				"--sheet", png_file,
 				"--data", json_file,
+				"--max-size", max_size,
 				"--png-opt-level", "0",
 				"--trim-sprite-names",
 				"--allow-free-size",
@@ -54,6 +56,7 @@ def mungeImages(game_root, options):
 			subprocess.call([TEXTURE_PACKER_CMD, png_folder,
 				"--sheet", png_file,
 				"--data", json_file,
+				"--max-size", max_size,
 				"--png-opt-level", "0",
 				"--trim-sprite-names",
 				"--allow-free-size",
