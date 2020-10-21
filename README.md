@@ -24,6 +24,10 @@ On Mac:
 ```
 ~/Library/Application Support/Terrible Toybox/DeloresDev/Prefs.json
 ```
+On Linux:
+```
+~/.local/share/Terrible\ Toybox/Delores/Prefs.json
+```
 Add the following line to the `Prefs.json` file:
 ```
 devPath: "/Path/To/DeloresDev"
